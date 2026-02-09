@@ -8,8 +8,16 @@ import type { DebateOutput } from '@/lib/types'
 export const dynamic = 'force-dynamic'
 
 export default async function DebatesPage() {
-  const [rows, personas] = await Promise.all([listDebates(50), getPersonas()])
+  const [allRows, personas] = await Promise.all([listDebates(50), getPersonas()])
   const personaMap = new Map(personas.map(p => [p.id, p]))
+
+  // Keep only the most recent debate per topic (allRows is already sorted by created_at DESC)
+  const seen = new Set<string>()
+  const rows = allRows.filter(row => {
+    if (seen.has(row.topic)) return false
+    seen.add(row.topic)
+    return true
+  })
 
   const suitOrder = ['spade', 'heart', 'diamond', 'club'] as const
 

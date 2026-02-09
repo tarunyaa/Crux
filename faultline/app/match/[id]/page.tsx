@@ -32,7 +32,7 @@ export default async function MatchPage({ params, searchParams }: MatchPageProps
             href="/setup"
             className="inline-block rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-accent/90 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]"
           >
-            Return to Setup
+            Return to Debate
           </Link>
         </div>
       </div>

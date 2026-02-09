@@ -39,7 +39,7 @@ export default async function SetupPage() {
           <div>
             <span className="text-xs font-semibold uppercase tracking-wider text-muted flex items-center gap-1.5 mb-1">
               <SuitIcon suit="spade" className="text-xs" />
-              Setup
+              Debate
             </span>
             <h1 className="text-3xl font-bold tracking-tight">Build Your Hand</h1>
           </div>

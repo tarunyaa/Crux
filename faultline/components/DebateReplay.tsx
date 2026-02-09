@@ -219,58 +219,6 @@ export default function DebateReplay({ topic, mode, personaMetas, state, created
               </div>
             )}
           </div>
-
-          {/* Agent Polygon + Convergence summary below results */}
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-            {personaMetas.length >= 2 && (
-              <div className="rounded-xl border border-card-border bg-surface p-4">
-                <h2 className="text-xs font-semibold uppercase tracking-wider text-accent mb-1">
-                  Agent Dynamics
-                </h2>
-                <p className="text-xs text-muted/60 mb-2">How agents are positioned relative to each other based on stance alignment.</p>
-                <AgentPolygon
-                  agents={personaMetas}
-                  messages={state.messages}
-                  activeSpeakerId={null}
-                />
-              </div>
-            )}
-
-            <div className="rounded-xl border border-card-border bg-surface p-4 space-y-2">
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-accent">
-                Convergence
-              </h2>
-              <p className="text-xs text-muted/60">Tracks whether agents are moving toward agreement or drifting apart.</p>
-              {state.convergence ? (
-                <div className="space-y-1.5 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-muted">Entropy</span>
-                    <span className="font-mono text-xs">{state.convergence.entropy.toFixed(3)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted">Confidence dist.</span>
-                    <span className="font-mono text-xs">{state.convergence.confidenceWeightedDistance.toFixed(3)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted">Unresolved cruxes</span>
-                    <span className="font-mono text-xs">{state.convergence.unresolvedCruxCount}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted">Events</span>
-                    <span className="font-mono text-xs">{state.convergence.eventCount} / {state.convergence.maxEvents}</span>
-                  </div>
-                  {state.convergence.converged && (
-                    <p className="text-accent text-xs font-semibold pt-1">Converged</p>
-                  )}
-                  {state.convergence.diverged && (
-                    <p className="text-danger text-xs font-semibold pt-1">Diverged</p>
-                  )}
-                </div>
-              ) : (
-                <p className="text-muted text-sm">No data</p>
-              )}
-            </div>
-          </div>
         </div>
       )}
 

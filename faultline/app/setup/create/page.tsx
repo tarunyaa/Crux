@@ -15,7 +15,7 @@ export default function CreateDeckPage() {
             <h1 className="text-3xl font-bold tracking-tight">Build a New Deck</h1>
           </div>
           <Link href="/setup" className="text-muted hover:text-foreground text-sm transition-colors">
-            &larr; Setup
+            &larr; Debate
           </Link>
         </div>
 

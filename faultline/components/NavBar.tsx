@@ -6,7 +6,7 @@ import Logo from '@/components/Logo'
 
 const NAV_LINKS = [
   { href: '/cards', label: 'Decks' },
-  { href: '/setup', label: 'Setup' },
+  { href: '/setup', label: 'Debate' },
   { href: '/debates', label: 'Past Debates' },
   { href: '/whitepaper', label: 'Whitepaper' },
 ]
