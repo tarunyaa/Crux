@@ -283,33 +283,51 @@ export default function DebateReplay({ topic, mode, personaMetas, state, created
               className="rounded-xl border border-card-border bg-card-bg p-4 space-y-4 overflow-y-auto"
               style={{ minHeight: '400px' }}
             >
-              {/* Initial stances */}
+              {/* Initial stances, organized by claim */}
               {state.initialStances.length > 0 && state.messages.length === 0 && (
-                <div className="space-y-3">
+                <div className="space-y-6">
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted">Opening Positions</p>
-                  {state.initialStances.map((entry) => {
-                    const meta = metaMap.get(entry.personaId)
+                  {state.claims.map((claim, claimIdx) => {
+                    const suits = ['spade', 'heart', 'diamond', 'club'] as const
+                    const entries = state.initialStances
+                      .map(entry => {
+                        const stance = entry.stances.find(s => s.claimId === claim.id)
+                        const reasoning = entry.reasonings.find(r => r.claimId === claim.id)?.reasoning
+                        if (!stance) return null
+                        return { personaId: entry.personaId, stance, reasoning }
+                      })
+                      .filter(Boolean) as { personaId: string; stance: typeof state.initialStances[0]['stances'][0]; reasoning: string | undefined }[]
+                    if (entries.length === 0) return null
                     return (
-                      <div key={entry.personaId} className="flex items-start gap-3">
-                        <HexAvatar
-                          src={meta?.picture || undefined}
-                          alt={meta?.name ?? entry.personaId}
-                          size={36}
-                          fallbackInitial={(meta?.name ?? entry.personaId).charAt(0)}
-                          className="mt-0.5"
-                        />
-                        <div className="min-w-0 flex-1">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="font-semibold text-sm">{meta?.name ?? entry.personaId}</span>
-                            {entry.stances.map(s => (
-                              <span key={s.claimId} className="inline-flex items-center gap-1">
-                                {stanceBadge(s.stance)}
-                                <span className="text-xs text-muted font-mono">{(s.confidence * 100).toFixed(0)}%</span>
-                              </span>
-                            ))}
-                          </div>
-                          <p className="text-sm text-foreground/70 whitespace-pre-wrap">{entry.reasonings.map(r => r.reasoning).join('\n\n')}</p>
+                      <div key={claim.id} className="space-y-3">
+                        <div className="flex items-start gap-2 pb-1 border-b border-card-border">
+                          <SuitIcon suit={suits[claimIdx % 4]} className="text-sm mt-0.5 shrink-0" />
+                          <p className="text-sm font-medium text-foreground/90">{claim.text}</p>
                         </div>
+                        {entries.map(({ personaId, stance, reasoning }) => {
+                          const meta = metaMap.get(personaId)
+                          return (
+                            <div key={personaId} className="flex items-start gap-3 pl-4">
+                              <HexAvatar
+                                src={meta?.picture || undefined}
+                                alt={meta?.name ?? personaId}
+                                size={36}
+                                fallbackInitial={(meta?.name ?? personaId).charAt(0)}
+                                className="mt-0.5"
+                              />
+                              <div className="min-w-0 flex-1">
+                                <div className="flex items-center gap-2 mb-1">
+                                  <span className="font-semibold text-sm">{meta?.name ?? personaId}</span>
+                                  {stanceBadge(stance.stance)}
+                                  <span className="text-xs text-muted font-mono">{(stance.confidence * 100).toFixed(0)}%</span>
+                                </div>
+                                {reasoning && (
+                                  <p className="text-sm text-foreground/70 whitespace-pre-wrap">{reasoning}</p>
+                                )}
+                              </div>
+                            </div>
+                          )
+                        })}
                       </div>
                     )
                   })}

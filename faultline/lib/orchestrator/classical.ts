@@ -116,7 +116,7 @@ export async function* runClassical(config: ClassicalConfig): AsyncGenerator<SSE
         type: 'initial_stance',
         personaId: result.personaId,
         stances: result.stances,
-        reasoning: result.reasoning,
+        reasonings: result.reasonings,
       }
     }
 

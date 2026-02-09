@@ -1,8 +1,12 @@
-import Link from "next/link";
+import { cookies } from "next/headers";
 import Logo from "@/components/Logo";
 import SuitIcon from "@/components/SuitIcon";
+import InviteGate from "@/components/InviteGate";
 
-export default function LobbyPage() {
+export default async function LobbyPage() {
+  const isAuthenticated =
+    (await cookies()).get("crux-invite")?.value === "valid";
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-4 hex-pattern">
       <div className="text-center space-y-8 max-w-lg animate-fade-in">
@@ -29,13 +33,8 @@ export default function LobbyPage() {
           <SuitIcon suit="club" />
         </div>
 
-        {/* CTA */}
-        <Link
-          href="/cards"
-          className="inline-block rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-accent/90 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]"
-        >
-          Play Plato&apos;s Poker
-        </Link>
+        {/* CTA / Invite Gate */}
+        <InviteGate isAuthenticated={isAuthenticated} />
       </div>
     </div>
   );
