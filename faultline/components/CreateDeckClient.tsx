@@ -103,7 +103,7 @@ export default function CreateDeckClient() {
               type="text"
               value={entry.name}
               onChange={(e) => updateEntry(entry.id, { name: e.target.value })}
-              placeholder="Display name (e.g. Dylan Patel)"
+              placeholder="Display name (e.g. Andreessen Horowitz)"
               className="w-full rounded-lg border border-card-border bg-card-bg px-3 py-2 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
             />
 

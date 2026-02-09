@@ -1,4 +1,4 @@
-import { db } from './index'
+import { getDb } from './index'
 import { debates } from './schema'
 import { eq, desc } from 'drizzle-orm'
 import type { SSEEvent, DebateOutput } from '@/lib/types'
@@ -14,6 +14,7 @@ interface SaveDebateParams {
 }
 
 export async function saveDebate(params: SaveDebateParams) {
+  const db = getDb()
   await db.insert(debates).values({
     id: params.id,
     topic: params.topic,
@@ -27,6 +28,7 @@ export async function saveDebate(params: SaveDebateParams) {
 
 /** List debates without the heavy `events` column */
 export async function listDebates(limit = 50, offset = 0) {
+  const db = getDb()
   return db
     .select({
       id: debates.id,
@@ -44,10 +46,12 @@ export async function listDebates(limit = 50, offset = 0) {
 }
 
 export async function getDebateById(id: string) {
+  const db = getDb()
   const rows = await db.select().from(debates).where(eq(debates.id, id)).limit(1)
   return rows[0] ?? null
 }
 
 export async function deleteErroredDebates() {
+  const db = getDb()
   return db.delete(debates).where(eq(debates.status, 'error'))
 }

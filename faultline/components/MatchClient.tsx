@@ -88,24 +88,19 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex items-start justify-between gap-4">
-        <div className="min-w-0">
-          <h1 className="text-2xl font-bold truncate">{topic}</h1>
-          <div className="flex items-center gap-3">
-            <p className={`text-sm flex items-center ${statusColor}`}>
-              {state.status === 'streaming' && (
-                <span className="inline-block w-2 h-2 rounded-full bg-accent mr-2 animate-pulse" />
-              )}
-              {statusLabel}
-            </p>
-            <span className="text-xs px-2 py-0.5 rounded-full bg-card-border text-muted uppercase tracking-wider">
-              {mode}
-            </span>
-          </div>
+      <div>
+        <h1 className="text-2xl font-bold truncate">{topic}</h1>
+        <div className="flex items-center gap-3">
+          <p className={`text-sm flex items-center ${statusColor}`}>
+            {state.status === 'streaming' && (
+              <span className="inline-block w-2 h-2 rounded-full bg-accent mr-2 animate-pulse" />
+            )}
+            {statusLabel}
+          </p>
+          <span className="text-xs px-2 py-0.5 rounded-full bg-card-border text-muted uppercase tracking-wider">
+            {mode}
+          </span>
         </div>
-        <Link href="/setup" className="text-muted hover:text-foreground text-sm shrink-0 transition-colors">
-          &larr; Setup
-        </Link>
       </div>
 
       {/* Claims */}
@@ -384,12 +379,6 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
         <div className="rounded-xl border border-danger/50 bg-danger/10 p-4 space-y-2">
           <h2 className="text-sm font-semibold text-danger">Error</h2>
           <p className="text-sm text-foreground/80">{state.error}</p>
-          <Link
-            href="/setup"
-            className="inline-block text-sm text-accent hover:underline"
-          >
-            Return to setup
-          </Link>
         </div>
       )}
 
