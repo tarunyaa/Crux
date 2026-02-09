@@ -276,8 +276,8 @@ function processEvent(
         ...prev,
         status: 'completed',
         output: event.output,
-        cruxes: event.output.cruxes,
-        flipConditions: event.output.flipConditions,
+        cruxes: event.output.cruxes ?? [],
+        flipConditions: event.output.flipConditions ?? [],
       }))
       break
 

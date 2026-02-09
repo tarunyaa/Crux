@@ -157,7 +157,7 @@ export type SSEEvent =
   | { type: 'status'; phase: string; message: string }
   | { type: 'debate_start'; debateId: string; claims: Claim[] }
   | { type: 'table_assigned'; tableId: number; personaIds: PersonaId[] }
-  | { type: 'agent_turn'; personaId: PersonaId; tableId: number; content: string; stance: AgentStance }
+  | { type: 'agent_turn'; personaId: PersonaId; tableId: number; content: string; stance: AgentStance; stances: AgentStance[]; round: number }
   | { type: 'blackboard_update'; tableId: number; summary: string }
   | { type: 'convergence_update'; metrics: ConvergenceState }
   | { type: 'merge_start'; round: number }
@@ -175,6 +175,8 @@ export interface AgentMessage {
   tableId: number
   content: string
   stance: AgentStance
+  stances: AgentStance[]
+  round: number
   timestamp: number
 }
 

@@ -30,20 +30,12 @@ export default function LobbyPage() {
         </div>
 
         {/* CTA */}
-        <div className="flex flex-col items-center gap-3">
-          <Link
-            href="/cards"
-            className="inline-block rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-accent/90 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]"
-          >
-            Play Plato&apos;s Poker
-          </Link>
-          <Link
-            href="/debates"
-            className="inline-block rounded-full border border-card-border px-6 py-2 text-sm text-muted transition-all hover:border-accent/40 hover:text-foreground"
-          >
-            Past Debates
-          </Link>
-        </div>
+        <Link
+          href="/cards"
+          className="inline-block rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-accent/90 hover:shadow-[0_0_20px_rgba(220,38,38,0.3)]"
+        >
+          Play Plato&apos;s Poker
+        </Link>
       </div>
     </div>
   );

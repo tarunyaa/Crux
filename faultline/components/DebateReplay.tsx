@@ -279,11 +279,11 @@ export default function DebateReplay({ topic, mode, personaMetas, state, created
           </h2>
 
           {/* Cruxes */}
-          {state.output.cruxes.length > 0 && (
+          {(state.output.cruxes?.length ?? 0) > 0 && (
             <div className="space-y-2">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Key Cruxes</h3>
               <ul className="space-y-2">
-                {state.output.cruxes.map((crux) => (
+                {state.output.cruxes?.map((crux) => (
                   <li key={crux.id} className="text-sm">
                     <span className={crux.resolved ? 'text-muted' : 'text-foreground/90'}>
                       {crux.proposition}
@@ -298,11 +298,11 @@ export default function DebateReplay({ topic, mode, personaMetas, state, created
           )}
 
           {/* Fault Lines */}
-          {state.output.faultLines.length > 0 && (
+          {(state.output.faultLines?.length ?? 0) > 0 && (
             <div className="space-y-2">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Fault Lines</h3>
               <ul className="space-y-3">
-                {state.output.faultLines.map((fl, i) => (
+                {state.output.faultLines?.map((fl, i) => (
                   <li key={i} className="text-sm">
                     <span className="text-xs uppercase tracking-wider text-accent/70">{fl.category.replace('_', ' ')}</span>
                     <p className="text-foreground/90 mt-0.5">{fl.description}</p>
@@ -313,10 +313,10 @@ export default function DebateReplay({ topic, mode, personaMetas, state, created
           )}
 
           {/* Evidence Ledger */}
-          {state.output.evidenceLedger.length > 0 && (
+          {(state.output.evidenceLedger?.length ?? 0) > 0 && (
             <div className="space-y-2">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Evidence Ledger</h3>
-              {state.output.evidenceLedger.map((entry, i) => {
+              {state.output.evidenceLedger?.map((entry, i) => {
                 const meta = metaMap.get(entry.personaId)
                 return (
                   <div key={i} className="text-sm space-y-1">
@@ -346,11 +346,11 @@ export default function DebateReplay({ topic, mode, personaMetas, state, created
           )}
 
           {/* Resolution Paths */}
-          {state.output.resolutionPaths.length > 0 && (
+          {(state.output.resolutionPaths?.length ?? 0) > 0 && (
             <div className="space-y-2">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Resolution Paths</h3>
               <ul className="space-y-2">
-                {state.output.resolutionPaths.map((rp, i) => (
+                {state.output.resolutionPaths?.map((rp, i) => (
                   <li key={i} className="text-sm text-foreground/90">{rp.description}</li>
                 ))}
               </ul>

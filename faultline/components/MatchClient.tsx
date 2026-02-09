@@ -360,7 +360,7 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
           </h2>
 
           {/* Cruxes */}
-          {state.output.cruxes.length > 0 && (
+          {state.output.cruxes?.length > 0 && (
             <div className="space-y-2">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Key Cruxes</h3>
               <ul className="space-y-2">
@@ -379,7 +379,7 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
           )}
 
           {/* Fault Lines */}
-          {state.output.faultLines.length > 0 && (
+          {state.output.faultLines?.length > 0 && (
             <div className="space-y-2">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Fault Lines</h3>
               <ul className="space-y-3">
@@ -394,7 +394,7 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
           )}
 
           {/* Evidence Ledger */}
-          {state.output.evidenceLedger.length > 0 && (
+          {state.output.evidenceLedger?.length > 0 && (
             <div className="space-y-2">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Evidence Ledger</h3>
               {state.output.evidenceLedger.map((entry, i) => {
@@ -427,7 +427,7 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
           )}
 
           {/* Resolution Paths */}
-          {state.output.resolutionPaths.length > 0 && (
+          {state.output.resolutionPaths?.length > 0 && (
             <div className="space-y-2">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Resolution Paths</h3>
               <ul className="space-y-2">

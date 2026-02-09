@@ -68,6 +68,45 @@
       ],
       "locked": false,
       "createdAt": "2026-02-09T10:00:00.000Z"
+    },
+    {
+      "id": "climate-energy",
+      "name": "Climate & Energy",
+      "slug": "climate-energy",
+      "personaIds": [
+        "Vaclav Smil",
+        "Alex Epstein",
+        "Michael Shellenberger",
+        "Jigar Shah"
+      ],
+      "locked": true,
+      "createdAt": "2026-02-09T10:00:00.000Z"
+    },
+    {
+      "id": "geopolitics",
+      "name": "Geopolitics & Trade",
+      "slug": "geopolitics",
+      "personaIds": [
+        "Peter Zeihan",
+        "Ray Dalio",
+        "Ian Bremmer",
+        "Kishore Mahbubani"
+      ],
+      "locked": true,
+      "createdAt": "2026-02-09T10:00:00.000Z"
+    },
+    {
+      "id": "longevity-biotech",
+      "name": "Longevity & Biotech",
+      "slug": "longevity-biotech",
+      "personaIds": [
+        "Peter Attia",
+        "Bryan Johnson",
+        "Vinay Prasad",
+        "Eric Topol"
+      ],
+      "locked": true,
+      "createdAt": "2026-02-09T10:00:00.000Z"
     }
   ],
   "personas": [
@@ -76,7 +115,9 @@
       "name": "Serenity",
       "twitterHandle": "@aleabitoreddit",
       "twitterPicture": "https://pbs.twimg.com/profile_images/1996176688414367744/LXfA_lIx_400x400.jpg",
-      "deckIds": ["memory-supercycle"],
+      "deckIds": [
+        "memory-supercycle"
+      ],
       "suite": null,
       "locked": false
     },
@@ -85,7 +126,9 @@
       "name": "Jukan",
       "twitterHandle": "@jukan05",
       "twitterPicture": "https://pbs.twimg.com/profile_images/2004846121634660353/kfyL9P7U_400x400.jpg",
-      "deckIds": ["memory-supercycle"],
+      "deckIds": [
+        "memory-supercycle"
+      ],
       "suite": null,
       "locked": false
     },
@@ -94,7 +137,9 @@
       "name": "SemiAnalysis",
       "twitterHandle": "@SemiAnalysis_",
       "twitterPicture": "https://pbs.twimg.com/profile_images/1947370460192378882/rA6oRuv-_400x400.jpg",
-      "deckIds": ["memory-supercycle"],
+      "deckIds": [
+        "memory-supercycle"
+      ],
       "suite": null,
       "locked": false
     },
@@ -103,7 +148,9 @@
       "name": "Austin Lyons",
       "twitterHandle": "@chipstrat",
       "twitterPicture": "https://substack-post-media.s3.amazonaws.com/public/images/c180a750-7572-4aff-88e4-317aa435d533_1203x902.jpeg",
-      "deckIds": ["memory-supercycle"],
+      "deckIds": [
+        "memory-supercycle"
+      ],
       "suite": null,
       "locked": false
     },
@@ -112,7 +159,9 @@
       "name": "Global Semi Research",
       "twitterHandle": "",
       "twitterPicture": "",
-      "deckIds": ["memory-supercycle"],
+      "deckIds": [
+        "memory-supercycle"
+      ],
       "suite": null,
       "locked": false
     },
@@ -120,8 +169,10 @@
       "id": "Chamath Palihapitiya",
       "name": "Chamath Palihapitiya",
       "twitterHandle": "@chamath",
-      "twitterPicture": "",
-      "deckIds": ["macroeconomic-trends"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1883600182165848064/-9LbG3md_400x400.jpg",
+      "deckIds": [
+        "macroeconomic-trends"
+      ],
       "suite": null,
       "locked": false
     },
@@ -129,8 +180,10 @@
       "id": "Jordi Visser",
       "name": "Jordi Visser",
       "twitterHandle": "@jvisserlabs",
-      "twitterPicture": "",
-      "deckIds": ["macroeconomic-trends"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1516468783006863364/t4Fux8Aj_400x400.jpg",
+      "deckIds": [
+        "macroeconomic-trends"
+      ],
       "suite": null,
       "locked": false
     },
@@ -138,8 +191,10 @@
       "id": "Michael Burry",
       "name": "Michael Burry",
       "twitterHandle": "@michaeljburry",
-      "twitterPicture": "",
-      "deckIds": ["macroeconomic-trends"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/2006801568948191232/0vJBWEyL_400x400.jpg",
+      "deckIds": [
+        "macroeconomic-trends"
+      ],
       "suite": null,
       "locked": false
     },
@@ -147,8 +202,10 @@
       "id": "Robert Kiyosaki",
       "name": "Robert Kiyosaki",
       "twitterHandle": "@theRealKiyosaki",
-      "twitterPicture": "",
-      "deckIds": ["macroeconomic-trends"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/472421066007015424/MHUJj15g_400x400.jpeg",
+      "deckIds": [
+        "macroeconomic-trends"
+      ],
       "suite": null,
       "locked": false
     },
@@ -156,8 +213,10 @@
       "id": "Aswath Damodaran",
       "name": "Aswath Damodaran",
       "twitterHandle": "@AswathDamodaran",
-      "twitterPicture": "",
-      "deckIds": ["macroeconomic-trends"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/378800000557074315/275249c4889ec856ed268feef4abb00e_400x400.jpeg",
+      "deckIds": [
+        "macroeconomic-trends"
+      ],
       "suite": null,
       "locked": false
     },
@@ -165,8 +224,10 @@
       "id": "Cathie Wood",
       "name": "Cathie Wood",
       "twitterHandle": "@CathieDWood",
-      "twitterPicture": "",
-      "deckIds": ["macroeconomic-trends"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1782845672829423617/xuyhQIY5_400x400.jpg",
+      "deckIds": [
+        "macroeconomic-trends"
+      ],
       "suite": null,
       "locked": false
     },
@@ -174,8 +235,10 @@
       "id": "Michael Saylor",
       "name": "Michael Saylor",
       "twitterHandle": "@saylor",
-      "twitterPicture": "",
-      "deckIds": ["crypto"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1485632175932383235/8t0DGo6V_400x400.jpg",
+      "deckIds": [
+        "crypto"
+      ],
       "suite": null,
       "locked": false
     },
@@ -183,8 +246,10 @@
       "id": "Arthur Hayes",
       "name": "Arthur Hayes",
       "twitterHandle": "@CryptoHayes",
-      "twitterPicture": "",
-      "deckIds": ["crypto"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1945370420191875072/o5Ep8CTf_400x400.png",
+      "deckIds": [
+        "crypto"
+      ],
       "suite": null,
       "locked": false
     },
@@ -192,8 +257,10 @@
       "id": "Brian Armstrong",
       "name": "Brian Armstrong",
       "twitterHandle": "@brian_armstrong",
-      "twitterPicture": "",
-      "deckIds": ["crypto"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1516832438818770944/n77EwnKU_400x400.png",
+      "deckIds": [
+        "crypto"
+      ],
       "suite": null,
       "locked": false
     },
@@ -201,8 +268,10 @@
       "id": "Vitalik Buterin",
       "name": "Vitalik Buterin",
       "twitterHandle": "@VitalikButerin",
-      "twitterPicture": "",
-      "deckIds": ["crypto"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/2006515705223516160/wGIa8vCp_400x400.png",
+      "deckIds": [
+        "crypto"
+      ],
       "suite": null,
       "locked": false
     },
@@ -210,8 +279,10 @@
       "id": "Elon Musk",
       "name": "Elon Musk",
       "twitterHandle": "@elonmusk",
-      "twitterPicture": "",
-      "deckIds": ["famous-personalities"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/2008546467615580160/57KcqsTA_400x400.jpg",
+      "deckIds": [
+        "famous-personalities"
+      ],
       "suite": null,
       "locked": false
     },
@@ -219,8 +290,10 @@
       "id": "Sam Altman",
       "name": "Sam Altman",
       "twitterHandle": "@sama",
-      "twitterPicture": "",
-      "deckIds": ["famous-personalities"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1904933748015255552/k43GMz63_400x400.jpg",
+      "deckIds": [
+        "famous-personalities"
+      ],
       "suite": null,
       "locked": false
     },
@@ -228,8 +301,10 @@
       "id": "Satya Nadella",
       "name": "Satya Nadella",
       "twitterHandle": "@satyanadella",
-      "twitterPicture": "",
-      "deckIds": ["famous-personalities"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1221837516816306177/_Ld4un5A_400x400.jpg",
+      "deckIds": [
+        "famous-personalities"
+      ],
       "suite": null,
       "locked": false
     },
@@ -237,8 +312,10 @@
       "id": "Mark Zuckerberg",
       "name": "Mark Zuckerberg",
       "twitterHandle": "@finkd",
-      "twitterPicture": "",
-      "deckIds": ["famous-personalities"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/77846223/profile_400x400.jpg",
+      "deckIds": [
+        "famous-personalities"
+      ],
       "suite": null,
       "locked": false
     },
@@ -246,8 +323,10 @@
       "id": "Bill Gates",
       "name": "Bill Gates",
       "twitterHandle": "@BillGates",
-      "twitterPicture": "",
-      "deckIds": ["famous-personalities"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1879013694367252480/Gxa-Pspq_400x400.jpg",
+      "deckIds": [
+        "famous-personalities"
+      ],
       "suite": null,
       "locked": false
     },
@@ -255,8 +334,10 @@
       "id": "Jim Fan",
       "name": "Jim Fan",
       "twitterHandle": "@DrJimFan",
-      "twitterPicture": "",
-      "deckIds": ["ai"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1554922493101559808/SYSZhbcd_400x400.jpg",
+      "deckIds": [
+        "ai"
+      ],
       "suite": null,
       "locked": false
     },
@@ -264,8 +345,10 @@
       "id": "Garry Tan",
       "name": "Garry Tan",
       "twitterHandle": "@garrytan",
-      "twitterPicture": "",
-      "deckIds": ["ai"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1922894268403941377/-dGWAt3N_400x400.jpg",
+      "deckIds": [
+        "ai"
+      ],
       "suite": null,
       "locked": false
     },
@@ -273,8 +356,10 @@
       "id": "Yann LeCun",
       "name": "Yann LeCun",
       "twitterHandle": "@ylecun",
-      "twitterPicture": "",
-      "deckIds": ["ai"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1483577865056702469/rWA-3_T7_400x400.jpg",
+      "deckIds": [
+        "ai"
+      ],
       "suite": null,
       "locked": false
     },
@@ -282,10 +367,120 @@
       "id": "Andrej Karpathy",
       "name": "Andrej Karpathy",
       "twitterHandle": "@karpathy",
-      "twitterPicture": "",
-      "deckIds": ["ai"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1296667294148382721/9Pr6XrPB_400x400.jpg",
+      "deckIds": [
+        "ai"
+      ],
       "suite": null,
       "locked": false
+    },
+    {
+      "id": "Vaclav Smil",
+      "name": "Vaclav Smil",
+      "twitterHandle": "",
+      "twitterPicture": "",
+      "deckIds": ["climate-energy"],
+      "suite": null,
+      "locked": true
+    },
+    {
+      "id": "Alex Epstein",
+      "name": "Alex Epstein",
+      "twitterHandle": "@AlexEpstein",
+      "twitterPicture": "",
+      "deckIds": ["climate-energy"],
+      "suite": null,
+      "locked": true
+    },
+    {
+      "id": "Michael Shellenberger",
+      "name": "Michael Shellenberger",
+      "twitterHandle": "@shellaborger",
+      "twitterPicture": "",
+      "deckIds": ["climate-energy"],
+      "suite": null,
+      "locked": true
+    },
+    {
+      "id": "Jigar Shah",
+      "name": "Jigar Shah",
+      "twitterHandle": "@JigarShahDC",
+      "twitterPicture": "",
+      "deckIds": ["climate-energy"],
+      "suite": null,
+      "locked": true
+    },
+    {
+      "id": "Peter Zeihan",
+      "name": "Peter Zeihan",
+      "twitterHandle": "@PeterZeihan",
+      "twitterPicture": "",
+      "deckIds": ["geopolitics"],
+      "suite": null,
+      "locked": true
+    },
+    {
+      "id": "Ray Dalio",
+      "name": "Ray Dalio",
+      "twitterHandle": "@RayDalio",
+      "twitterPicture": "",
+      "deckIds": ["geopolitics"],
+      "suite": null,
+      "locked": true
+    },
+    {
+      "id": "Ian Bremmer",
+      "name": "Ian Bremmer",
+      "twitterHandle": "@ianbremmer",
+      "twitterPicture": "",
+      "deckIds": ["geopolitics"],
+      "suite": null,
+      "locked": true
+    },
+    {
+      "id": "Kishore Mahbubani",
+      "name": "Kishore Mahbubani",
+      "twitterHandle": "@mahaborni",
+      "twitterPicture": "",
+      "deckIds": ["geopolitics"],
+      "suite": null,
+      "locked": true
+    },
+    {
+      "id": "Peter Attia",
+      "name": "Peter Attia",
+      "twitterHandle": "@PeterAttiaMD",
+      "twitterPicture": "",
+      "deckIds": ["longevity-biotech"],
+      "suite": null,
+      "locked": true
+    },
+    {
+      "id": "Bryan Johnson",
+      "name": "Bryan Johnson",
+      "twitterHandle": "@bryan_johnson",
+      "twitterPicture": "",
+      "deckIds": ["longevity-biotech"],
+      "suite": null,
+      "locked": true
+    },
+    {
+      "id": "Vinay Prasad",
+      "name": "Vinay Prasad",
+      "twitterHandle": "@VPrasadMDMPH",
+      "twitterPicture": "",
+      "deckIds": ["longevity-biotech"],
+      "suite": null,
+      "locked": true
+    },
+    {
+      "id": "Eric Topol",
+      "name": "Eric Topol",
+      "twitterHandle": "@EricTopol",
+      "twitterPicture": "",
+      "deckIds": ["longevity-biotech"],
+      "suite": null,
+      "locked": true
     }
   ]
 }
