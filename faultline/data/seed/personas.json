@@ -379,7 +379,9 @@
       "name": "Vaclav Smil",
       "twitterHandle": "",
       "twitterPicture": "",
-      "deckIds": ["climate-energy"],
+      "deckIds": [
+        "climate-energy"
+      ],
       "suite": null,
       "locked": true
     },
@@ -387,17 +389,21 @@
       "id": "Alex Epstein",
       "name": "Alex Epstein",
       "twitterHandle": "@AlexEpstein",
-      "twitterPicture": "",
-      "deckIds": ["climate-energy"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/811769028335333376/3gp7leXu_400x400.jpg",
+      "deckIds": [
+        "climate-energy"
+      ],
       "suite": null,
       "locked": true
     },
     {
       "id": "Michael Shellenberger",
       "name": "Michael Shellenberger",
-      "twitterHandle": "@shellaborger",
-      "twitterPicture": "",
-      "deckIds": ["climate-energy"],
+      "twitterHandle": "@shellenberger",
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1854404312174141443/VlpFKk9m_400x400.jpg",
+      "deckIds": [
+        "climate-energy"
+      ],
       "suite": null,
       "locked": true
     },
@@ -405,8 +411,10 @@
       "id": "Jigar Shah",
       "name": "Jigar Shah",
       "twitterHandle": "@JigarShahDC",
-      "twitterPicture": "",
-      "deckIds": ["climate-energy"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1884410263182409728/fNcYELrf_400x400.jpg",
+      "deckIds": [
+        "climate-energy"
+      ],
       "suite": null,
       "locked": true
     },
@@ -414,8 +422,10 @@
       "id": "Peter Zeihan",
       "name": "Peter Zeihan",
       "twitterHandle": "@PeterZeihan",
-      "twitterPicture": "",
-      "deckIds": ["geopolitics"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1507110965489328134/8RCtD0Hh_400x400.jpg",
+      "deckIds": [
+        "geopolitics"
+      ],
       "suite": null,
       "locked": true
     },
@@ -423,8 +433,10 @@
       "id": "Ray Dalio",
       "name": "Ray Dalio",
       "twitterHandle": "@RayDalio",
-      "twitterPicture": "",
-      "deckIds": ["geopolitics"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1465691046747283461/3ZtnoH5-_400x400.jpg",
+      "deckIds": [
+        "geopolitics"
+      ],
       "suite": null,
       "locked": true
     },
@@ -432,17 +444,21 @@
       "id": "Ian Bremmer",
       "name": "Ian Bremmer",
       "twitterHandle": "@ianbremmer",
-      "twitterPicture": "",
-      "deckIds": ["geopolitics"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1669005424467628033/Unv6Q_Va_400x400.jpg",
+      "deckIds": [
+        "geopolitics"
+      ],
       "suite": null,
       "locked": true
     },
     {
       "id": "Kishore Mahbubani",
       "name": "Kishore Mahbubani",
-      "twitterHandle": "@mahaborni",
-      "twitterPicture": "",
-      "deckIds": ["geopolitics"],
+      "twitterHandle": "@mahbubani_k",
+      "twitterPicture": "https://pbs.twimg.com/profile_images/579857350674100224/Bmr_R9vF_400x400.jpg",
+      "deckIds": [
+        "geopolitics"
+      ],
       "suite": null,
       "locked": true
     },
@@ -450,8 +466,10 @@
       "id": "Peter Attia",
       "name": "Peter Attia",
       "twitterHandle": "@PeterAttiaMD",
-      "twitterPicture": "",
-      "deckIds": ["longevity-biotech"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1887223171494948864/upGIlnVZ_400x400.jpg",
+      "deckIds": [
+        "longevity-biotech"
+      ],
       "suite": null,
       "locked": true
     },
@@ -459,8 +477,10 @@
       "id": "Bryan Johnson",
       "name": "Bryan Johnson",
       "twitterHandle": "@bryan_johnson",
-      "twitterPicture": "",
-      "deckIds": ["longevity-biotech"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1888004001872101378/jVNJQ-iu_400x400.jpg",
+      "deckIds": [
+        "longevity-biotech"
+      ],
       "suite": null,
       "locked": true
     },
@@ -468,8 +488,10 @@
       "id": "Vinay Prasad",
       "name": "Vinay Prasad",
       "twitterHandle": "@VPrasadMDMPH",
-      "twitterPicture": "",
-      "deckIds": ["longevity-biotech"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1699454162738860032/xZ8J1KhL_400x400.jpg",
+      "deckIds": [
+        "longevity-biotech"
+      ],
       "suite": null,
       "locked": true
     },
@@ -477,8 +499,10 @@
       "id": "Eric Topol",
       "name": "Eric Topol",
       "twitterHandle": "@EricTopol",
-      "twitterPicture": "",
-      "deckIds": ["longevity-biotech"],
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1589325138960318464/2OwvQAWC_400x400.jpg",
+      "deckIds": [
+        "longevity-biotech"
+      ],
       "suite": null,
       "locked": true
     }

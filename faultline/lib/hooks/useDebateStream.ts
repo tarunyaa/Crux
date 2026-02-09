@@ -39,7 +39,7 @@ interface DebateStreamState {
 }
 
 interface DebateStreamControls {
-  start: (params: { topic: string; personaIds: string[]; mode?: DebateMode }) => void
+  start: (params: { topic: string; personaIds: string[]; mode?: DebateMode; save?: boolean }) => void
   abort: () => void
 }
 
@@ -71,7 +71,7 @@ export function useDebateStream(): [DebateStreamState, DebateStreamControls] {
   }, [])
 
   const start = useCallback(
-    (params: { topic: string; personaIds: string[]; mode?: DebateMode }) => {
+    (params: { topic: string; personaIds: string[]; mode?: DebateMode; save?: boolean }) => {
       // Abort any existing stream
       abort()
 
@@ -82,6 +82,11 @@ export function useDebateStream(): [DebateStreamState, DebateStreamControls] {
 
       ;(async () => {
         try {
+          // Timeout if no response headers within 20s
+          const timeoutId = setTimeout(() => {
+            controller.abort()
+          }, 20_000)
+
           const res = await fetch('/api/debate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -89,9 +94,12 @@ export function useDebateStream(): [DebateStreamState, DebateStreamControls] {
               topic: params.topic,
               personaIds: params.personaIds,
               mode: params.mode ?? 'blitz',
+              save: params.save ?? false,
             }),
             signal: controller.signal,
           })
+
+          clearTimeout(timeoutId)
 
           if (!res.ok) {
             const errBody = await res.text()
@@ -170,7 +178,15 @@ export function useDebateStream(): [DebateStreamState, DebateStreamControls] {
           })
         } catch (err: unknown) {
           if (err instanceof DOMException && err.name === 'AbortError') {
-            return // User aborted
+            // Check if this was our timeout vs user abort
+            if (abortRef.current === controller) {
+              setState(prev => ({
+                ...prev,
+                status: 'error',
+                error: 'Connection timed out — try reloading the page',
+              }))
+            }
+            return
           }
           setState(prev => ({
             ...prev,
@@ -251,6 +267,8 @@ function processEvent(
             tableId: event.tableId,
             content: event.content,
             stance: event.stance,
+            stances: event.stances,
+            round: event.round,
             timestamp: Date.now(),
           },
         ],

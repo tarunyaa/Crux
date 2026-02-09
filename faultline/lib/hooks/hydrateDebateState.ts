@@ -65,6 +65,8 @@ export function hydrateDebateState(events: SSEEvent[]): HydratedDebateState {
           tableId: event.tableId,
           content: event.content,
           stance: event.stance,
+          stances: event.stances,
+          round: event.round,
           timestamp: 0,
         })
         break

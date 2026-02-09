@@ -47,3 +47,7 @@ export async function getDebateById(id: string) {
   const rows = await db.select().from(debates).where(eq(debates.id, id)).limit(1)
   return rows[0] ?? null
 }
+
+export async function deleteErroredDebates() {
+  return db.delete(debates).where(eq(debates.status, 'error'))
+}

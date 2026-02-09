@@ -30,6 +30,7 @@ export default function SetupClient({ decks, personas }: SetupClientProps) {
   const [selectedPersonas, setSelectedPersonas] = useState<Set<string>>(new Set())
   const [topic, setTopic] = useState('')
   const [mode, setMode] = useState<DebateMode>('blitz')
+  const [saveGame, setSaveGame] = useState(false)
 
   const deck = decks.find(d => d.id === selectedDeckId)
   const deckPersonaIds = deck?.personaIds ?? []
@@ -55,7 +56,7 @@ export default function SetupClient({ decks, personas }: SetupClientProps) {
       .join(',')
     const topicParam = encodeURIComponent(topic.trim())
     const deckParam = encodeURIComponent(deck.id)
-    router.push(`/match/new?deck=${deckParam}&personas=${personaParam}&topic=${topicParam}&mode=${mode}`)
+    router.push(`/match/new?deck=${deckParam}&personas=${personaParam}&topic=${topicParam}&mode=${mode}${saveGame ? '&save=1' : ''}`)
   }
 
   return (
@@ -179,6 +180,26 @@ export default function SetupClient({ decks, personas }: SetupClientProps) {
           </button>
         </div>
       </div>
+
+      {/* Save toggle */}
+      <label className="flex items-center gap-3 cursor-pointer select-none">
+        <button
+          type="button"
+          role="switch"
+          aria-checked={saveGame}
+          onClick={() => setSaveGame(prev => !prev)}
+          className={`relative inline-flex h-6 w-11 shrink-0 rounded-full border-2 border-transparent transition-colors ${
+            saveGame ? 'bg-accent' : 'bg-card-border'
+          }`}
+        >
+          <span
+            className={`pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transition-transform ${
+              saveGame ? 'translate-x-5' : 'translate-x-0'
+            }`}
+          />
+        </button>
+        <span className="text-sm text-foreground">Save to archive</span>
+      </label>
 
       {/* Deal button */}
       <button

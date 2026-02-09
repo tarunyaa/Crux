@@ -27,9 +27,15 @@ const TABLE_ID = 0 // single table for V1
 
 // ─── Agent Turn Response Schema ──────────────────────────────
 
-interface AgentTurnResponse {
+interface ClaimResponse {
+  claimId: string
   response: string
-  stances: { claimId: string; stance: Stance; confidence: number }[]
+  stance: Stance
+  confidence: number
+}
+
+interface AgentTurnResponse {
+  claimResponses: ClaimResponse[]
   newCruxes: string[]
   flipTriggers: string[]
 }
@@ -137,30 +143,45 @@ export async function* runBlitz(config: BlitzConfig): AsyncGenerator<SSEEvent> {
         // Update blackboard
         blackboard = updateBlackboard(blackboard, result.turnResult)
 
-        // Record message
+        // Record message (concatenate per-claim responses for context assembly)
+        const fullContent = result.claimResponses
+          .map(cr => `[${cr.claimId}] ${cr.response}`)
+          .join('\n\n')
         messages.push({
           personaId: result.turnResult.personaId,
           round,
-          content: result.response,
+          content: fullContent,
         })
 
-        // Yield agent turn event
-        const latestStance = result.turnResult.stances[0]
-        yield {
-          type: 'agent_turn',
+        // Build all stances for this agent's turn
+        const allStances = result.claimResponses.map(cr => ({
           personaId: result.turnResult.personaId,
-          tableId: TABLE_ID,
-          content: result.response,
-          stance: {
-            personaId: result.turnResult.personaId,
-            claimId: latestStance?.claimId ?? claims[0].id,
-            stance: latestStance?.stance ?? 'uncertain',
-            confidence: latestStance?.confidence ?? 0.5,
-            round,
-          },
-        }
+          claimId: cr.claimId,
+          stance: cr.stance,
+          confidence: cr.confidence,
+          round,
+        }))
 
-        eventCount++
+        // Yield one agent_turn event per claim response
+        for (const cr of result.claimResponses) {
+          yield {
+            type: 'agent_turn',
+            personaId: result.turnResult.personaId,
+            tableId: TABLE_ID,
+            content: cr.response,
+            stance: {
+              personaId: result.turnResult.personaId,
+              claimId: cr.claimId,
+              stance: cr.stance,
+              confidence: Math.max(0, Math.min(1, cr.confidence)),
+              round,
+            },
+            stances: allStances,
+            round,
+          }
+
+          eventCount++
+        }
       }
 
       // Yield blackboard update
@@ -208,7 +229,7 @@ export async function* runBlitz(config: BlitzConfig): AsyncGenerator<SSEEvent> {
 // ─── Single Agent Turn ───────────────────────────────────────
 
 interface AgentTurnResult {
-  response: string
+  claimResponses: ClaimResponse[]
   turnResult: TurnResult
 }
 
@@ -242,14 +263,21 @@ async function executeAgentTurn(
       temperature: 0.7,
     })
 
+    const claimResponses = (result.claimResponses ?? []).map(cr => ({
+      claimId: cr.claimId,
+      response: cr.response,
+      stance: cr.stance,
+      confidence: Math.max(0, Math.min(1, cr.confidence)),
+    }))
+
     return {
-      response: result.response,
+      claimResponses,
       turnResult: {
         personaId,
-        stances: result.stances.map(s => ({
-          claimId: s.claimId,
-          stance: s.stance,
-          confidence: Math.max(0, Math.min(1, s.confidence)),
+        stances: claimResponses.map(cr => ({
+          claimId: cr.claimId,
+          stance: cr.stance,
+          confidence: cr.confidence,
         })),
         newCruxes: result.newCruxes ?? [],
         flipTriggers: result.flipTriggers ?? [],

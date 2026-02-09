@@ -11,6 +11,7 @@ interface DebateRequest {
   topic: string
   personaIds: string[]
   mode?: 'blitz' | 'classical'
+  save?: boolean
 }
 
 export async function POST(req: NextRequest) {
@@ -39,6 +40,9 @@ export async function POST(req: NextRequest) {
 
   const stream = new ReadableStream({
     async start(controller) {
+      // Flush an SSE comment immediately to unblock the HTTP response
+      controller.enqueue(encoder.encode(': connected\n\n'))
+
       const collectedEvents: SSEEvent[] = []
       let finalOutput: DebateOutput | null = null
       let debateStatus: 'completed' | 'error' = 'completed'
@@ -67,18 +71,19 @@ export async function POST(req: NextRequest) {
         controller.enqueue(encoder.encode(formatSSE(errorEvent)))
       } finally {
         controller.close()
-        // Fire-and-forget save to DB
-        saveDebate({
-          id: debateId,
-          topic,
-          mode,
-          personaIds,
-          events: collectedEvents,
-          output: finalOutput,
-          status: debateStatus,
-        }).catch(err => {
-          console.error('[debate/save] Failed to persist debate:', err)
-        })
+        if (save && debateStatus === 'completed') {
+          saveDebate({
+            id: debateId,
+            topic,
+            mode,
+            personaIds,
+            events: collectedEvents,
+            output: finalOutput,
+            status: debateStatus,
+          }).catch(err => {
+            console.error('[debate/save] Failed to persist debate:', err)
+          })
+        }
       }
     },
   })

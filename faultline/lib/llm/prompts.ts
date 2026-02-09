@@ -57,16 +57,14 @@ ${ctx.blackboardSummary}
 ${ctx.localNeighborhood || '(opening round)'}
 
 ## Instructions
-Engage with the claims directly. Reference specific evidence. Address disagreements with other participants. Update your stance if new arguments warrant it.
-
-Keep your response concise — aim for 2-3 short paragraphs, ~100-150 words total. Be direct, not exhaustive.
+Respond to EACH claim individually. For each claim, write a focused 1-2 sentence response (~40-60 words) that engages with that specific claim. Reference specific evidence. Address disagreements with other participants on that point. Update your stance if new arguments warrant it.
 
 Respond with ONLY valid JSON matching this schema:
 {
-  "response": "Your debate contribution (2-3 short paragraphs, ~100-150 words). Plain text ONLY — no markdown, no asterisks, no bold/italic formatting. Do NOT repeat your stance or confidence in the response text — those go in the stances array.",
-  "stances": [
+  "claimResponses": [
     {
       "claimId": "claim id",
+      "response": "Your 1-2 sentence response addressing this specific claim (~40-60 words). Plain text ONLY — no markdown, no asterisks, no bold/italic formatting.",
       "stance": "pro" | "con" | "uncertain",
       "confidence": 0.0-1.0
     }
@@ -75,7 +73,7 @@ Respond with ONLY valid JSON matching this schema:
   "flipTriggers": ["any of your flip conditions that were triggered this round"]
 }
 
-Be specific and concise. No text outside the JSON. No markdown formatting anywhere.`
+You MUST include one entry in claimResponses for EVERY claim listed above. Be specific and concise. No text outside the JSON. No markdown formatting anywhere.`
 }
 
 // ─── Blackboard Summary ──────────────────────────────────────
@@ -276,16 +274,14 @@ ${ctx.blackboardSummary}
 ${ctx.localNeighborhood || '(opening round)'}
 
 ## Instructions
-Deliver your contribution, staying focused on your stated intent. Engage with the claims directly. Reference specific evidence. Address disagreements with other participants. Update your stance if new arguments warrant it.
-
-Keep your response concise — aim for 2-3 short paragraphs, ~100-150 words total. Be direct, not exhaustive.
+Deliver your contribution, staying focused on your stated intent. Respond to EACH claim individually. For each claim, write a focused 1-2 sentence response (~40-60 words) that engages with that specific claim. Reference specific evidence. Address disagreements with other participants on that point. Update your stance if new arguments warrant it.
 
 Respond with ONLY valid JSON matching this schema:
 {
-  "response": "Your debate contribution (2-3 short paragraphs, ~100-150 words). Plain text ONLY — no markdown, no asterisks, no bold/italic formatting. Do NOT repeat your stance or confidence in the response text — those go in the stances array.",
-  "stances": [
+  "claimResponses": [
     {
       "claimId": "claim id",
+      "response": "Your 1-2 sentence response addressing this specific claim (~40-60 words). Plain text ONLY — no markdown, no asterisks, no bold/italic formatting.",
       "stance": "pro" | "con" | "uncertain",
       "confidence": 0.0-1.0
     }
@@ -294,5 +290,5 @@ Respond with ONLY valid JSON matching this schema:
   "flipTriggers": ["any of your flip conditions that were triggered this round"]
 }
 
-Be specific and concise. No text outside the JSON. No markdown formatting anywhere.`
+You MUST include one entry in claimResponses for EVERY claim listed above. Be specific and concise. No text outside the JSON. No markdown formatting anywhere.`
 }

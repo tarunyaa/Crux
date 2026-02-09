@@ -16,15 +16,9 @@ export default async function DebatesPage() {
   return (
     <div className="min-h-screen px-6 py-12">
       <div className="mx-auto max-w-5xl space-y-8">
-        <div className="flex items-center justify-between">
-          <h1 className="text-3xl font-bold tracking-tight">
-            <span className="uppercase tracking-wider text-sm text-muted block mb-1">Archive</span>
-            Past Debates
-          </h1>
-          <Link href="/" className="text-muted hover:text-foreground text-sm transition-colors">
-            &#8592; Lobby
-          </Link>
-        </div>
+        <h1 className="text-3xl font-bold tracking-tight">
+          Debate Archive
+        </h1>
 
         {/* Suit divider */}
         <div className="flex items-center gap-2">

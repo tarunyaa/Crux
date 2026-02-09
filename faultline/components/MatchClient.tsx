@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import { useDebateStream } from '@/lib/hooks/useDebateStream'
 import type { DebateMode } from '@/lib/types'
@@ -19,6 +19,7 @@ interface MatchClientProps {
   personaIds: string[]
   personaMetas: PersonaMeta[]
   mode?: DebateMode
+  save?: boolean
 }
 
 function stripMarkdown(text: string): string {
@@ -38,20 +39,18 @@ function stanceBadge(stance: string) {
   )
 }
 
-export default function MatchClient({ topic, personaIds, personaMetas, mode = 'blitz' }: MatchClientProps) {
+export default function MatchClient({ topic, personaIds, personaMetas, mode = 'blitz', save = false }: MatchClientProps) {
   const [state, { start, abort }] = useDebateStream()
   const feedRef = useRef<HTMLDivElement>(null)
   const [autoScroll, setAutoScroll] = useState(true)
-  const startedRef = useRef(false)
 
   const metaMap = new Map(personaMetas.map(p => [p.id, p]))
 
-  // Auto-start the debate on mount
+  // Auto-start the debate on mount.
+  // start() internally calls abort() first, so it's safe to re-invoke
+  // (e.g. React StrictMode double-fires effects in dev).
   useEffect(() => {
-    if (!startedRef.current) {
-      startedRef.current = true
-      start({ topic, personaIds, mode })
-    }
+    start({ topic, personaIds, mode, save })
     return () => { abort() }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -115,6 +114,7 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
           <h2 className="text-xs font-semibold uppercase tracking-wider text-muted">
             Claims Under Debate
           </h2>
+          <p className="text-xs text-muted/60">Specific propositions the agents are arguing for or against.</p>
           <ul className="space-y-1">
             {state.claims.map((claim, idx) => {
               const suits = ['spade', 'heart', 'diamond', 'club'] as const
@@ -206,30 +206,49 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
               </div>
             )}
 
-            {state.messages.map((msg, i) => {
-              const meta = metaMap.get(msg.personaId)
-              return (
-                <div key={i} className="flex items-start gap-3 animate-fade-in">
-                  <HexAvatar
-                    src={meta?.picture || undefined}
-                    alt={meta?.name ?? msg.personaId}
-                    size={36}
-                    fallbackInitial={(meta?.name ?? msg.personaId).charAt(0)}
-                    className="mt-0.5"
-                  />
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-semibold text-sm">{meta?.name ?? msg.personaId}</span>
-                      {stanceBadge(msg.stance.stance)}
-                      <span className="text-xs text-muted font-mono">
-                        {(msg.stance.confidence * 100).toFixed(0)}%
-                      </span>
+            {state.claims.length > 0 && state.messages.length > 0 && (
+              <div className="space-y-6">
+                {state.claims.map((claim, claimIdx) => {
+                  const suits = ['spade', 'heart', 'diamond', 'club'] as const
+                  const claimMessages = state.messages.filter(
+                    msg => msg.stance.claimId === claim.id
+                  )
+                  if (claimMessages.length === 0) return null
+                  return (
+                    <div key={claim.id} className="space-y-3">
+                      <div className="flex items-start gap-2 pb-1 border-b border-card-border">
+                        <SuitIcon suit={suits[claimIdx % 4]} className="text-sm mt-0.5 shrink-0" />
+                        <p className="text-sm font-medium text-foreground/90">{claim.text}</p>
+                      </div>
+                      {claimMessages.map((msg, i) => {
+                        const meta = metaMap.get(msg.personaId)
+                        return (
+                          <div key={i} className="flex items-start gap-3 pl-4 animate-fade-in">
+                            <HexAvatar
+                              src={meta?.picture || undefined}
+                              alt={meta?.name ?? msg.personaId}
+                              size={36}
+                              fallbackInitial={(meta?.name ?? msg.personaId).charAt(0)}
+                              className="mt-0.5"
+                            />
+                            <div className="min-w-0 flex-1">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="font-semibold text-sm">{meta?.name ?? msg.personaId}</span>
+                                {stanceBadge(msg.stance.stance)}
+                                <span className="text-xs text-muted font-mono">
+                                  {(msg.stance.confidence * 100).toFixed(0)}%
+                                </span>
+                              </div>
+                              <p className="text-sm text-foreground/85 whitespace-pre-wrap">{stripMarkdown(msg.content)}</p>
+                            </div>
+                          </div>
+                        )
+                      })}
                     </div>
-                    <p className="text-sm text-foreground/85 whitespace-pre-wrap">{stripMarkdown(msg.content)}</p>
-                  </div>
-                </div>
-              )
-            })}
+                  )
+                })}
+              </div>
+            )}
 
           </div>
         </div>
@@ -239,9 +258,10 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
           {/* Agent Polygon */}
           {personaMetas.length >= 2 && (
             <div className="rounded-xl border border-card-border bg-surface p-4">
-              <h2 className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-accent mb-1">
                 Agent Dynamics
               </h2>
+              <p className="text-xs text-muted/60 mb-2">How agents are positioned relative to each other based on stance alignment.</p>
               <AgentPolygon
                 agents={personaMetas}
                 messages={state.messages}
@@ -255,18 +275,19 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
             <h2 className="text-xs font-semibold uppercase tracking-wider text-accent">
               Convergence
             </h2>
+            <p className="text-xs text-muted/60">Tracks whether agents are moving toward agreement or drifting apart.</p>
             {state.convergence ? (
               <div className="space-y-1.5 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-muted">Entropy</span>
+                  <span className="text-muted" title="How spread out the agents' positions are. Lower = more agreement.">Entropy</span>
                   <span className="font-mono text-xs">{state.convergence.entropy.toFixed(3)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted">Confidence dist.</span>
+                  <span className="text-muted" title="Gap between agents' confidence levels, weighted by stance. Lower = closer to consensus.">Confidence dist.</span>
                   <span className="font-mono text-xs">{state.convergence.confidenceWeightedDistance.toFixed(3)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted">Unresolved cruxes</span>
+                  <span className="text-muted" title="Key questions that haven't been settled yet.">Unresolved cruxes</span>
                   <span className="font-mono text-xs">{state.convergence.unresolvedCruxCount}</span>
                 </div>
                 <div className="flex justify-between">
@@ -290,6 +311,7 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
             <h2 className="text-xs font-semibold uppercase tracking-wider text-accent">
               Cruxes
             </h2>
+            <p className="text-xs text-muted/60">Key factual questions where the answer would change someone{"'"}s mind.</p>
             {state.cruxes.length > 0 ? (
               <ul className="space-y-2">
                 {state.cruxes.map((crux) => (
@@ -297,7 +319,7 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
                     <span className={crux.resolved ? 'line-through text-muted' : 'text-foreground/90'}>
                       {crux.proposition}
                     </span>
-                    <span className="text-xs text-muted ml-2 font-mono">
+                    <span className="text-xs text-muted ml-2 font-mono" title="Weight: how central this crux is to the disagreement. Higher = more decisive.">
                       w={crux.weight.toFixed(2)}
                     </span>
                   </li>
@@ -313,6 +335,7 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
             <h2 className="text-xs font-semibold uppercase tracking-wider text-accent">
               Flip Conditions
             </h2>
+            <p className="text-xs text-muted/60">What evidence would make each agent change their position.</p>
             {state.flipConditions.length > 0 ? (
               <ul className="space-y-2">
                 {state.flipConditions.map((fc, i) => {
@@ -351,92 +374,43 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
         </div>
       )}
 
-      {/* Output panel — shown on debate_complete */}
+      {/* Completion banner — shown on debate_complete */}
       {state.output && (
-        <div className="rounded-xl border border-accent/30 bg-accent-dim/10 p-6 space-y-6 card-shadow">
-          <h2 className="text-xl font-bold text-accent flex items-center gap-2">
-            <SuitIcon suit="diamond" className="text-lg" />
-            Debate Results
-          </h2>
-
-          {/* Cruxes */}
-          {state.output.cruxes?.length > 0 && (
-            <div className="space-y-2">
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Key Cruxes</h3>
-              <ul className="space-y-2">
-                {state.output.cruxes.map((crux) => (
-                  <li key={crux.id} className="text-sm">
-                    <span className={crux.resolved ? 'text-muted' : 'text-foreground/90'}>
-                      {crux.proposition}
-                    </span>
-                    <span className="text-xs text-muted ml-2 font-mono">
-                      weight: {crux.weight.toFixed(2)} {crux.resolved ? '(resolved)' : ''}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+        <div className="rounded-xl border border-accent/30 bg-accent-dim/10 p-5 card-shadow">
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-accent/20 shrink-0">
+                <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div className="min-w-0">
+                <h2 className="text-base font-bold text-accent">Debate Complete</h2>
+                <div className="flex flex-wrap gap-3 text-xs text-muted mt-0.5">
+                  {(state.output.cruxes?.length ?? 0) > 0 && (
+                    <span>{state.output.cruxes.length} crux{state.output.cruxes.length !== 1 ? 'es' : ''}</span>
+                  )}
+                  {(state.output.faultLines?.length ?? 0) > 0 && (
+                    <span>{state.output.faultLines.length} fault line{state.output.faultLines.length !== 1 ? 's' : ''}</span>
+                  )}
+                  {(state.output.resolutionPaths?.length ?? 0) > 0 && (
+                    <span>{state.output.resolutionPaths.length} resolution path{state.output.resolutionPaths.length !== 1 ? 's' : ''}</span>
+                  )}
+                </div>
+              </div>
             </div>
-          )}
-
-          {/* Fault Lines */}
-          {state.output.faultLines?.length > 0 && (
-            <div className="space-y-2">
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Fault Lines</h3>
-              <ul className="space-y-3">
-                {state.output.faultLines.map((fl, i) => (
-                  <li key={i} className="text-sm">
-                    <span className="text-xs uppercase tracking-wider text-accent/70">{fl.category.replace('_', ' ')}</span>
-                    <p className="text-foreground/90 mt-0.5">{fl.description}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* Evidence Ledger */}
-          {state.output.evidenceLedger?.length > 0 && (
-            <div className="space-y-2">
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Evidence Ledger</h3>
-              {state.output.evidenceLedger.map((entry, i) => {
-                const meta = metaMap.get(entry.personaId)
-                return (
-                  <div key={i} className="text-sm space-y-1">
-                    <p className="font-medium">{meta?.name ?? entry.personaId}</p>
-                    {entry.accepted.length > 0 && (
-                      <div className="pl-3">
-                        <span className="text-xs text-accent">Accepted:</span>
-                        <ul className="list-disc list-inside text-foreground/80">
-                          {entry.accepted.map((a, j) => <li key={j}>{a}</li>)}
-                        </ul>
-                      </div>
-                    )}
-                    {entry.rejected.length > 0 && (
-                      <div className="pl-3">
-                        <span className="text-xs text-danger">Rejected:</span>
-                        <ul className="list-disc list-inside text-foreground/80">
-                          {entry.rejected.map((r, j) => (
-                            <li key={j}>{r.evidence} — <span className="text-muted italic">{r.reason}</span></li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                )
-              })}
-            </div>
-          )}
-
-          {/* Resolution Paths */}
-          {state.output.resolutionPaths?.length > 0 && (
-            <div className="space-y-2">
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-muted">Resolution Paths</h3>
-              <ul className="space-y-2">
-                {state.output.resolutionPaths.map((rp, i) => (
-                  <li key={i} className="text-sm text-foreground/90">{rp.description}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+            {state.debateId && (
+              <Link
+                href={`/debates/${state.debateId}`}
+                className="shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-black text-sm font-semibold hover:bg-accent/90 transition-colors"
+              >
+                View Full Analysis
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            )}
+          </div>
         </div>
       )}
     </div>

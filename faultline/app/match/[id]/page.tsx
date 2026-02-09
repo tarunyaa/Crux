@@ -4,7 +4,7 @@ import Link from "next/link";
 
 interface MatchPageProps {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ deck?: string; personas?: string; topic?: string; mode?: string }>;
+  searchParams: Promise<{ deck?: string; personas?: string; topic?: string; mode?: string; save?: string }>;
 }
 
 export default async function MatchPage({ params, searchParams }: MatchPageProps) {
@@ -13,6 +13,7 @@ export default async function MatchPage({ params, searchParams }: MatchPageProps
 
   const topic = sp.topic ? decodeURIComponent(sp.topic) : null;
   const mode = sp.mode === 'classical' ? 'classical' : 'blitz';
+  const save = sp.save === '1';
   const personaIdsRaw = sp.personas ?? '';
   const personaIds = personaIdsRaw
     .split(',')
@@ -58,6 +59,7 @@ export default async function MatchPage({ params, searchParams }: MatchPageProps
           personaIds={personaIds}
           personaMetas={personaMetas}
           mode={mode}
+          save={save}
         />
       </div>
     </div>
