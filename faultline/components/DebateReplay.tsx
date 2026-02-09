@@ -21,6 +21,8 @@ interface DebateReplayProps {
   state: HydratedDebateState
   createdAt: string
   hasError: boolean
+  /** When true, only show results — no header, claims, or log tab */
+  inline?: boolean
 }
 
 type ViewMode = 'results' | 'log'
@@ -38,39 +40,41 @@ function stanceBadge(stance: string) {
   )
 }
 
-export default function DebateReplay({ topic, mode, personaMetas, state, createdAt, hasError }: DebateReplayProps) {
+export default function DebateReplay({ topic, mode, personaMetas, state, createdAt, hasError, inline = false }: DebateReplayProps) {
   const metaMap = new Map(personaMetas.map(p => [p.id, p]))
   const hasOutput = !!state.output
   const [view, setView] = useState<ViewMode>(hasOutput ? 'results' : 'log')
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-start justify-between gap-4">
-        <div className="min-w-0">
-          <h1 className="text-2xl font-bold truncate">{topic}</h1>
-          <div className="flex items-center gap-3">
-            <p className={`text-sm ${hasError ? 'text-danger' : 'text-accent'}`}>
-              {hasError ? 'Error' : 'Debate complete'}
-            </p>
-            <span className="text-xs px-2 py-0.5 rounded-full bg-card-border text-muted uppercase tracking-wider">
-              {mode}
-            </span>
-            <span className="text-xs text-muted">
-              {new Date(createdAt).toLocaleDateString(undefined, {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-              })}
-            </span>
+      {/* Header — hidden in inline mode */}
+      {!inline && (
+        <div className="flex items-start justify-between gap-4">
+          <div className="min-w-0">
+            <h1 className="text-2xl font-bold truncate">{topic}</h1>
+            <div className="flex items-center gap-3">
+              <p className={`text-sm ${hasError ? 'text-danger' : 'text-accent'}`}>
+                {hasError ? 'Error' : 'Debate complete'}
+              </p>
+              <span className="text-xs px-2 py-0.5 rounded-full bg-card-border text-muted uppercase tracking-wider">
+                {mode}
+              </span>
+              <span className="text-xs text-muted">
+                {new Date(createdAt).toLocaleDateString(undefined, {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                  hour: '2-digit',
+                  minute: '2-digit',
+                })}
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
-      {/* View toggle */}
-      {hasOutput && (
+      {/* View toggle — hidden in inline mode */}
+      {!inline && hasOutput && (
         <div className="flex gap-2">
           <button
             type="button"
@@ -97,8 +101,8 @@ export default function DebateReplay({ topic, mode, personaMetas, state, created
         </div>
       )}
 
-      {/* Claims — visible in both views */}
-      {state.claims.length > 0 && (
+      {/* Claims — hidden in inline mode (already visible in MatchClient) */}
+      {!inline && state.claims.length > 0 && (
         <div className="rounded-xl border border-card-border bg-surface p-4 space-y-2">
           <h2 className="text-xs font-semibold uppercase tracking-wider text-muted">
             Claims Under Debate
@@ -222,8 +226,8 @@ export default function DebateReplay({ topic, mode, personaMetas, state, created
         </div>
       )}
 
-      {/* ── Debate Log View ── */}
-      {view === 'log' && (
+      {/* ── Debate Log View — hidden in inline mode ── */}
+      {!inline && view === 'log' && (
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           {/* Message feed */}
           <div className="lg:col-span-2">

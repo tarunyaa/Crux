@@ -441,6 +441,7 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
           }}
           createdAt={new Date().toISOString()}
           hasError={state.status === 'error'}
+          inline
         />
       )}
     </div>
