@@ -4,6 +4,7 @@ import type {
   PersonaId,
   BlackboardState,
   Stance,
+  DebateOutput,
 } from '@/lib/types'
 import { decomposeClaims } from './claims'
 import { initializeAgents, generateInitialStancesWithReasoning } from './agents'
@@ -210,8 +211,14 @@ export async function* runBlitz(config: BlitzConfig): AsyncGenerator<SSEEvent> {
       }
     }
 
-    // 5. Extract final output
-    const output = await extractOutput(blackboard)
+    // 5. Extract final output (with fallback if LLM call times out)
+    let output: DebateOutput
+    try {
+      output = await extractOutput(blackboard)
+    } catch (extractErr) {
+      console.error('[blitz] extractOutput failed, using fallback:', extractErr)
+      output = buildFallbackOutput(blackboard)
+    }
 
     yield {
       type: 'debate_complete',
@@ -287,6 +294,21 @@ async function executeAgentTurn(
   } catch (err: unknown) {
     console.error(`Agent turn failed for ${personaId}:`, err)
     return null
+  }
+}
+
+// ─── Fallback Output (when extractOutput LLM call fails) ────
+
+function buildFallbackOutput(board: BlackboardState): DebateOutput {
+  return {
+    cruxes: board.cruxCandidates.map(c => ({
+      ...c,
+      surfacedByTables: c.surfacedByTables ?? [0],
+    })),
+    faultLines: [],
+    flipConditions: board.flipConditions,
+    evidenceLedger: [],
+    resolutionPaths: [],
   }
 }
 
