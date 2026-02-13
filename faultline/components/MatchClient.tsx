@@ -39,6 +39,32 @@ function stanceBadge(stance: string) {
   )
 }
 
+function attackTypeBadge(type: string) {
+  const styles: Record<string, string> = {
+    rebut: 'bg-red-900/40 text-red-400',
+    undermine: 'bg-yellow-900/40 text-yellow-400',
+    undercut: 'bg-purple-900/40 text-purple-400',
+  }
+  return (
+    <span className={`inline-block text-xs px-1.5 py-0.5 rounded ${styles[type] ?? 'bg-card-border text-muted'}`}>
+      {type}
+    </span>
+  )
+}
+
+function graphLabelBadge(label: string) {
+  const styles: Record<string, string> = {
+    IN: 'text-green-400',
+    OUT: 'text-red-400',
+    UNDEC: 'text-yellow-400',
+  }
+  return (
+    <span className={`text-xs font-mono ${styles[label] ?? 'text-muted'}`}>
+      {label}
+    </span>
+  )
+}
+
 export default function MatchClient({ topic, personaIds, personaMetas, mode = 'blitz', save = false }: MatchClientProps) {
   const [state, { start, abort }] = useDebateStream()
   const feedRef = useRef<HTMLDivElement>(null)
@@ -47,21 +73,21 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
 
   const metaMap = new Map(personaMetas.map(p => [p.id, p]))
 
-  // Auto-start the debate on mount.
-  // start() internally calls abort() first, so it's safe to re-invoke
-  // (e.g. React StrictMode double-fires effects in dev).
   useEffect(() => {
     start({ topic, personaIds, mode, save })
     return () => { abort() }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Auto-scroll feed
+  // Auto-scroll feed — use graph arguments for graph mode, messages for others
+  const scrollTrigger = mode === 'graph'
+    ? state.graph?.arguments.length ?? 0
+    : state.messages.length
   useEffect(() => {
     if (autoScroll && feedRef.current) {
       feedRef.current.scrollTop = feedRef.current.scrollHeight
     }
-  }, [state.messages, autoScroll])
+  }, [scrollTrigger, autoScroll])
 
   function handleFeedScroll() {
     if (!feedRef.current) return
@@ -85,6 +111,9 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
     completed: 'text-accent',
     error: 'text-danger',
   }[state.status]
+
+  // Build threaded graph view data
+  const graphThreads = mode === 'graph' && state.graph ? buildGraphThreads(state.graph) : null
 
   return (
     <div className="space-y-6">
@@ -150,7 +179,8 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
             className="rounded-xl border border-card-border bg-card-bg p-4 space-y-4 overflow-y-auto"
             style={{ minHeight: '400px' }}
           >
-            {(state.status === 'connecting' || (state.status === 'streaming' && state.messages.length === 0 && state.initialStances.length === 0)) && (
+            {/* Loading state */}
+            {(state.status === 'connecting' || (state.status === 'streaming' && state.messages.length === 0 && state.initialStances.length === 0 && !graphThreads)) && (
               <div className="flex flex-col items-center justify-center h-40 text-muted gap-3">
                 <svg className="animate-spin h-6 w-6" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
@@ -160,109 +190,202 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
               </div>
             )}
 
-            {/* Initial stances (shown before debate rounds begin), organized by claim */}
-            {state.initialStances.length > 0 && state.messages.length === 0 && (
-              <div className="space-y-6">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted">Opening Positions</p>
-                {state.claims.map((claim, claimIdx) => {
-                  const suits = ['spade', 'heart', 'diamond', 'club'] as const
-                  // Collect each persona's stance + reasoning for this claim
-                  const entries = state.initialStances
-                    .map(entry => {
-                      const stance = entry.stances.find(s => s.claimId === claim.id)
-                      const reasoning = entry.reasonings.find(r => r.claimId === claim.id)?.reasoning
-                      if (!stance) return null
-                      return { personaId: entry.personaId, stance, reasoning }
-                    })
-                    .filter(Boolean) as { personaId: string; stance: typeof state.initialStances[0]['stances'][0]; reasoning: string | undefined }[]
-                  if (entries.length === 0) return null
+            {/* ── GRAPH MODE FEED ── */}
+            {mode === 'graph' && graphThreads && graphThreads.length > 0 && (
+              <div className="space-y-5">
+                {graphThreads.map((thread) => {
+                  const argMeta = metaMap.get(thread.argument.speakerId)
+                  const label = thread.label
                   return (
-                    <div key={claim.id} className="space-y-3 animate-fade-in">
-                      <div className="flex items-start gap-2 pb-1 border-b border-card-border">
-                        <SuitIcon suit={suits[claimIdx % 4]} className="text-sm mt-0.5 shrink-0" />
-                        <p className="text-sm font-medium text-foreground/90">{claim.text}</p>
+                    <div key={thread.argument.id} className="animate-fade-in">
+                      {/* The argument */}
+                      <div className={`rounded-lg border p-3 space-y-1.5 ${
+                        label === 'OUT'
+                          ? 'border-red-900/30 bg-red-950/10 opacity-60'
+                          : label === 'IN'
+                            ? 'border-green-900/30 bg-green-950/10'
+                            : 'border-card-border bg-surface'
+                      }`}>
+                        <div className="flex items-center gap-2">
+                          <HexAvatar
+                            src={argMeta?.picture || undefined}
+                            alt={argMeta?.name ?? thread.argument.speakerId}
+                            size={28}
+                            fallbackInitial={(argMeta?.name ?? thread.argument.speakerId).charAt(0)}
+                          />
+                          <span className="font-semibold text-sm">{argMeta?.name ?? thread.argument.speakerId}</span>
+                          {graphLabelBadge(label)}
+                          {thread.argument.round > 0 && (
+                            <span className="text-xs text-muted font-mono">R{thread.argument.round}</span>
+                          )}
+                        </div>
+                        <p className="text-sm text-foreground/90">{stripMarkdown(thread.argument.claim)}</p>
+                        {thread.argument.premises.length > 0 && (
+                          <ul className="pl-4 space-y-0.5">
+                            {thread.argument.premises.map((p, i) => (
+                              <li key={i} className="text-xs text-muted flex items-start gap-1.5">
+                                <span className="text-muted/50 shrink-0">&#8627;</span>
+                                {p}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
-                      {entries.map(({ personaId, stance, reasoning }) => {
-                        const meta = metaMap.get(personaId)
-                        return (
-                          <div key={personaId} className="flex items-start gap-3 pl-4">
-                            <HexAvatar
-                              src={meta?.picture || undefined}
-                              alt={meta?.name ?? personaId}
-                              size={36}
-                              fallbackInitial={(meta?.name ?? personaId).charAt(0)}
-                              className="mt-0.5"
-                            />
-                            <div className="min-w-0 flex-1">
-                              <div className="flex items-center gap-2 mb-1">
-                                <span className="font-semibold text-sm">{meta?.name ?? personaId}</span>
-                                {stanceBadge(stance.stance)}
-                                <span className="text-xs text-muted font-mono">{(stance.confidence * 100).toFixed(0)}%</span>
+
+                      {/* Attacks on this argument */}
+                      {thread.attacks.length > 0 && (
+                        <div className="ml-6 mt-1 space-y-1.5 border-l-2 border-card-border pl-3">
+                          {thread.attacks.map((atk) => {
+                            const atkMeta = metaMap.get(atk.attack.speakerId)
+                            return (
+                              <div key={atk.attack.id} className="flex items-start gap-2 py-1.5 animate-fade-in">
+                                <HexAvatar
+                                  src={atkMeta?.picture || undefined}
+                                  alt={atkMeta?.name ?? atk.attack.speakerId}
+                                  size={24}
+                                  fallbackInitial={(atkMeta?.name ?? atk.attack.speakerId).charAt(0)}
+                                />
+                                <div className="min-w-0 flex-1">
+                                  <div className="flex items-center gap-2 mb-0.5">
+                                    <span className="font-medium text-xs">{atkMeta?.name ?? atk.attack.speakerId}</span>
+                                    {attackTypeBadge(atk.attack.type)}
+                                    {atk.valid !== undefined && (
+                                      <span className={`text-xs ${atk.valid ? 'text-green-400/60' : 'text-red-400/60 line-through'}`}>
+                                        {atk.valid ? '' : 'invalid'}
+                                      </span>
+                                    )}
+                                  </div>
+                                  <p className="text-xs text-foreground/80">{stripMarkdown(atk.attack.counterProposition)}</p>
+                                </div>
                               </div>
-                              {reasoning && (
-                                <p className="text-sm text-foreground/70 whitespace-pre-wrap">{stripMarkdown(reasoning)}</p>
-                              )}
-                            </div>
-                          </div>
-                        )
-                      })}
+                            )
+                          })}
+                        </div>
+                      )}
                     </div>
                   )
                 })}
+
+                {/* Streaming indicator */}
                 {state.status === 'streaming' && (
                   <div className="flex items-center gap-2 text-muted text-sm pt-2">
                     <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                     </svg>
-                    <span>{state.statusMessage ?? 'Starting debate...'}</span>
+                    <span>{state.statusMessage ?? 'Processing...'}</span>
                   </div>
                 )}
               </div>
             )}
 
-            {state.claims.length > 0 && state.messages.length > 0 && (
-              <div className="space-y-6">
-                {state.claims.map((claim, claimIdx) => {
-                  const suits = ['spade', 'heart', 'diamond', 'club'] as const
-                  const claimMessages = state.messages.filter(
-                    msg => msg.stance.claimId === claim.id
-                  )
-                  if (claimMessages.length === 0) return null
-                  return (
-                    <div key={claim.id} className="space-y-3">
-                      <div className="flex items-start gap-2 pb-1 border-b border-card-border">
-                        <SuitIcon suit={suits[claimIdx % 4]} className="text-sm mt-0.5 shrink-0" />
-                        <p className="text-sm font-medium text-foreground/90">{claim.text}</p>
-                      </div>
-                      {claimMessages.map((msg, i) => {
-                        const meta = metaMap.get(msg.personaId)
-                        return (
-                          <div key={i} className="flex items-start gap-3 pl-4 animate-fade-in">
-                            <HexAvatar
-                              src={meta?.picture || undefined}
-                              alt={meta?.name ?? msg.personaId}
-                              size={36}
-                              fallbackInitial={(meta?.name ?? msg.personaId).charAt(0)}
-                              className="mt-0.5"
-                            />
-                            <div className="min-w-0 flex-1">
-                              <div className="flex items-center gap-2 mb-1">
-                                <span className="font-semibold text-sm">{meta?.name ?? msg.personaId}</span>
-                                {stanceBadge(msg.stance.stance)}
-                                <span className="text-xs text-muted font-mono">
-                                  {(msg.stance.confidence * 100).toFixed(0)}%
-                                </span>
-                              </div>
-                              <p className="text-sm text-foreground/85 whitespace-pre-wrap">{stripMarkdown(msg.content)}</p>
-                            </div>
+            {/* ── BLITZ / CLASSICAL MODE FEED ── */}
+            {mode !== 'graph' && (
+              <>
+                {/* Initial stances (shown before debate rounds begin), organized by claim */}
+                {state.initialStances.length > 0 && state.messages.length === 0 && (
+                  <div className="space-y-6">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted">Opening Positions</p>
+                    {state.claims.map((claim, claimIdx) => {
+                      const suits = ['spade', 'heart', 'diamond', 'club'] as const
+                      const entries = state.initialStances
+                        .map(entry => {
+                          const stance = entry.stances.find(s => s.claimId === claim.id)
+                          const reasoning = entry.reasonings.find(r => r.claimId === claim.id)?.reasoning
+                          if (!stance) return null
+                          return { personaId: entry.personaId, stance, reasoning }
+                        })
+                        .filter(Boolean) as { personaId: string; stance: typeof state.initialStances[0]['stances'][0]; reasoning: string | undefined }[]
+                      if (entries.length === 0) return null
+                      return (
+                        <div key={claim.id} className="space-y-3 animate-fade-in">
+                          <div className="flex items-start gap-2 pb-1 border-b border-card-border">
+                            <SuitIcon suit={suits[claimIdx % 4]} className="text-sm mt-0.5 shrink-0" />
+                            <p className="text-sm font-medium text-foreground/90">{claim.text}</p>
                           </div>
-                        )
-                      })}
-                    </div>
-                  )
-                })}
-              </div>
+                          {entries.map(({ personaId, stance, reasoning }) => {
+                            const meta = metaMap.get(personaId)
+                            return (
+                              <div key={personaId} className="flex items-start gap-3 pl-4">
+                                <HexAvatar
+                                  src={meta?.picture || undefined}
+                                  alt={meta?.name ?? personaId}
+                                  size={36}
+                                  fallbackInitial={(meta?.name ?? personaId).charAt(0)}
+                                  className="mt-0.5"
+                                />
+                                <div className="min-w-0 flex-1">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <span className="font-semibold text-sm">{meta?.name ?? personaId}</span>
+                                    {stanceBadge(stance.stance)}
+                                    <span className="text-xs text-muted font-mono">{(stance.confidence * 100).toFixed(0)}%</span>
+                                  </div>
+                                  {reasoning && (
+                                    <p className="text-sm text-foreground/70 whitespace-pre-wrap">{stripMarkdown(reasoning)}</p>
+                                  )}
+                                </div>
+                              </div>
+                            )
+                          })}
+                        </div>
+                      )
+                    })}
+                    {state.status === 'streaming' && (
+                      <div className="flex items-center gap-2 text-muted text-sm pt-2">
+                        <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                        </svg>
+                        <span>{state.statusMessage ?? 'Starting debate...'}</span>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {state.claims.length > 0 && state.messages.length > 0 && (
+                  <div className="space-y-6">
+                    {state.claims.map((claim, claimIdx) => {
+                      const suits = ['spade', 'heart', 'diamond', 'club'] as const
+                      const claimMessages = state.messages.filter(
+                        msg => msg.stance.claimId === claim.id
+                      )
+                      if (claimMessages.length === 0) return null
+                      return (
+                        <div key={claim.id} className="space-y-3">
+                          <div className="flex items-start gap-2 pb-1 border-b border-card-border">
+                            <SuitIcon suit={suits[claimIdx % 4]} className="text-sm mt-0.5 shrink-0" />
+                            <p className="text-sm font-medium text-foreground/90">{claim.text}</p>
+                          </div>
+                          {claimMessages.map((msg, i) => {
+                            const meta = metaMap.get(msg.personaId)
+                            return (
+                              <div key={i} className="flex items-start gap-3 pl-4 animate-fade-in">
+                                <HexAvatar
+                                  src={meta?.picture || undefined}
+                                  alt={meta?.name ?? msg.personaId}
+                                  size={36}
+                                  fallbackInitial={(meta?.name ?? msg.personaId).charAt(0)}
+                                  className="mt-0.5"
+                                />
+                                <div className="min-w-0 flex-1">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <span className="font-semibold text-sm">{meta?.name ?? msg.personaId}</span>
+                                    {stanceBadge(msg.stance.stance)}
+                                    <span className="text-xs text-muted font-mono">
+                                      {(msg.stance.confidence * 100).toFixed(0)}%
+                                    </span>
+                                  </div>
+                                  <p className="text-sm text-foreground/85 whitespace-pre-wrap">{stripMarkdown(msg.content)}</p>
+                                </div>
+                              </div>
+                            )
+                          })}
+                        </div>
+                      )
+                    })}
+                  </div>
+                )}
+              </>
             )}
 
           </div>
@@ -321,91 +444,56 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
             )}
           </div>
 
-          {/* Graph sidebar (graph mode) */}
+          {/* Graph sidebar (graph mode) — just the status panel, no attack log */}
           {mode === 'graph' && state.graph && (
-            <>
-              <div className="rounded-xl border border-card-border bg-surface p-4 space-y-2">
-                <h2 className="text-xs font-semibold uppercase tracking-wider text-accent">
-                  Argumentation Graph
-                </h2>
-                <p className="text-xs text-muted/60">Formal argument status computed via Dung{"'"}s semantics.</p>
-                <div className="space-y-1.5 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-muted">Arguments</span>
-                    <span className="font-mono text-xs">{state.graph.arguments.length}</span>
-                  </div>
-                  {state.graph.labelling && (() => {
-                    const labels = state.graph.labelling.labels
-                    const labelValues: string[] = labels instanceof Map
-                      ? [...labels.values()]
-                      : Object.values(labels as Record<string, string>)
-                    const inCount = labelValues.filter(l => l === 'IN').length
-                    const outCount = labelValues.filter(l => l === 'OUT').length
-                    const undecCount = labelValues.filter(l => l === 'UNDEC').length
-                    return (
-                      <>
-                        <div className="flex justify-between">
-                          <span className="text-green-400">IN (accepted)</span>
-                          <span className="font-mono text-xs">{inCount}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-red-400">OUT (defeated)</span>
-                          <span className="font-mono text-xs">{outCount}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-yellow-400">UNDEC</span>
-                          <span className="font-mono text-xs">{undecCount}</span>
-                        </div>
-                      </>
-                    )
-                  })()}
-                  <div className="flex justify-between">
-                    <span className="text-muted">Camps</span>
-                    <span className="font-mono text-xs">{state.graph.preferredCount}</span>
-                  </div>
-                  {state.graph.graphConverged && (
-                    <p className="text-accent text-xs font-semibold pt-1">Graph Stable</p>
-                  )}
+            <div className="rounded-xl border border-card-border bg-surface p-4 space-y-2">
+              <h2 className="text-xs font-semibold uppercase tracking-wider text-accent">
+                Argumentation Graph
+              </h2>
+              <p className="text-xs text-muted/60">Formal argument status computed via Dung{"'"}s semantics.</p>
+              <div className="space-y-1.5 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-muted">Arguments</span>
+                  <span className="font-mono text-xs">{state.graph.arguments.length}</span>
                 </div>
-              </div>
-
-              {/* Attack log */}
-              <div className="rounded-xl border border-card-border bg-surface p-4 space-y-2">
-                <h2 className="text-xs font-semibold uppercase tracking-wider text-accent">
-                  Recent Attacks
-                </h2>
-                <p className="text-xs text-muted/60">Latest attacks with type and validation status.</p>
-                {state.graph.attacks.length > 0 ? (
-                  <ul className="space-y-2">
-                    {state.graph.attacks.slice(-6).reverse().map((atk) => {
-                      const validation = state.graph!.validationResults.find(v => v.attackId === atk.id)
-                      const typeBadge: Record<string, string> = {
-                        rebut: 'bg-red-900/40 text-red-400',
-                        undermine: 'bg-yellow-900/40 text-yellow-400',
-                        undercut: 'bg-purple-900/40 text-purple-400',
-                      }
-                      return (
-                        <li key={atk.id} className="text-sm space-y-0.5">
-                          <div className="flex items-center gap-2">
-                            <span className={`text-xs px-1.5 py-0.5 rounded ${typeBadge[atk.type] ?? 'bg-card-border text-muted'}`}>
-                              {atk.type}
-                            </span>
-                            {validation && (
-                              <span className={`text-xs ${validation.valid ? 'text-green-400' : 'text-red-400'}`}>
-                                {validation.valid ? 'valid' : 'invalid'}
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-xs text-foreground/70 truncate">{atk.counterProposition}</p>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                ) : (
-                  <p className="text-muted text-sm">No attacks yet</p>
+                {state.graph.labelling && (() => {
+                  const labels = state.graph.labelling.labels
+                  const labelValues: string[] = labels instanceof Map
+                    ? [...labels.values()]
+                    : Object.values(labels as Record<string, string>)
+                  const inCount = labelValues.filter(l => l === 'IN').length
+                  const outCount = labelValues.filter(l => l === 'OUT').length
+                  const undecCount = labelValues.filter(l => l === 'UNDEC').length
+                  return (
+                    <>
+                      <div className="flex justify-between">
+                        <span className="text-green-400">IN (accepted)</span>
+                        <span className="font-mono text-xs">{inCount}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-red-400">OUT (defeated)</span>
+                        <span className="font-mono text-xs">{outCount}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-yellow-400">UNDEC</span>
+                        <span className="font-mono text-xs">{undecCount}</span>
+                      </div>
+                    </>
+                  )
+                })()}
+                <div className="flex justify-between">
+                  <span className="text-muted">Attacks</span>
+                  <span className="font-mono text-xs">{state.graph.attacks.length}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted">Camps</span>
+                  <span className="font-mono text-xs">{state.graph.preferredCount}</span>
+                </div>
+                {state.graph.graphConverged && (
+                  <p className="text-accent text-xs font-semibold pt-1">Graph Stable</p>
                 )}
               </div>
-            </>
+            </div>
           )}
 
           {/* Cruxes (non-graph modes) */}
@@ -538,4 +626,76 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
       )}
     </div>
   )
+}
+
+// ─── Graph Thread Builder ───────────────────────────────────
+
+interface GraphThread {
+  argument: {
+    id: string
+    speakerId: string
+    claim: string
+    premises: string[]
+    round: number
+  }
+  label: string
+  attacks: {
+    attack: {
+      id: string
+      speakerId: string
+      type: string
+      counterProposition: string
+    }
+    valid?: boolean
+  }[]
+}
+
+function buildGraphThreads(graph: NonNullable<ReturnType<typeof useDebateStream>[0]['graph']>): GraphThread[] {
+  // Only show initial arguments (round 0) as top-level threads.
+  // Counter-arguments created by attacks are shown inline under their target.
+  const initialArgs = graph.arguments.filter(a => a.round === 0)
+
+  // Build a lookup for labels
+  const labelMap: Map<string, string> = graph.labelling?.labels instanceof Map
+    ? graph.labelling.labels as Map<string, string>
+    : graph.labelling?.labels
+      ? new Map(Object.entries(graph.labelling.labels as Record<string, string>))
+      : new Map()
+
+  // Build attack index: targetArgId → attacks on it
+  const attacksByTarget = new Map<string, typeof graph.attacks>()
+  for (const atk of graph.attacks) {
+    if (!attacksByTarget.has(atk.toArgId)) attacksByTarget.set(atk.toArgId, [])
+    attacksByTarget.get(atk.toArgId)!.push(atk)
+  }
+
+  // Validation lookup
+  const validationMap = new Map(graph.validationResults.map(v => [v.attackId, v]))
+
+  return initialArgs.map(arg => {
+    const attacks = (attacksByTarget.get(arg.id) ?? []).map(atk => {
+      const validation = validationMap.get(atk.id)
+      return {
+        attack: {
+          id: atk.id,
+          speakerId: atk.speakerId,
+          type: atk.type,
+          counterProposition: atk.counterProposition,
+        },
+        valid: validation?.valid,
+      }
+    })
+
+    return {
+      argument: {
+        id: arg.id,
+        speakerId: arg.speakerId,
+        claim: arg.claim,
+        premises: arg.premises ?? [],
+        round: arg.round,
+      },
+      label: labelMap.get(arg.id) ?? 'UNDEC',
+      attacks,
+    }
+  })
 }

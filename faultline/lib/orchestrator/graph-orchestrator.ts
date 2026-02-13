@@ -401,8 +401,7 @@ export async function* runGraph(config: GraphConfig): AsyncGenerator<SSEEvent> {
       )
 
       for (const atk of validAttacks) {
-        const typeBadge = `[${atk.type.toUpperCase()}]`
-        const content = `${typeBadge} ${atk.counterProposition}`
+        const content = atk.counterProposition
 
         // Find the most relevant claim for this attack
         const targetClaimId = argClaimMap.get(atk.toArgId)
