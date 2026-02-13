@@ -34,11 +34,22 @@ For each argument:
 
 Each argument should address one or more of the claims above. Be specific and decisive.
 
+Also provide your initial stance on EACH claim under debate.
+
 Respond with ONLY valid JSON:
 {
+  "stances": [
+    {
+      "claimId": "claim id",
+      "stance": "pro" | "con" | "uncertain",
+      "confidence": 0.0-1.0,
+      "reasoning": "one sentence explaining your position"
+    }
+  ],
   "arguments": [
     {
       "claim": "your proposition",
+      "relatedClaimId": "the claim ID this argument most directly addresses",
       "premises": ["premise 1", "premise 2"],
       "assumptions": ["assumption if any"],
       "evidence": ["specific evidence if any"]
@@ -46,7 +57,7 @@ Respond with ONLY valid JSON:
   ]
 }
 
-Return 2-4 arguments. No text outside the JSON.`
+You MUST include one stance entry for EVERY claim. Return 2-4 arguments. No text outside the JSON.`
 }
 
 // ─── Attack Generation ──────────────────────────────────────

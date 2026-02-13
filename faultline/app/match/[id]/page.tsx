@@ -12,7 +12,7 @@ export default async function MatchPage({ params, searchParams }: MatchPageProps
   const sp = await searchParams;
 
   const topic = sp.topic ? decodeURIComponent(sp.topic) : null;
-  const mode = sp.mode === 'classical' ? 'classical' : 'blitz';
+  const mode = sp.mode === 'classical' ? 'classical' : sp.mode === 'graph' ? 'graph' : 'blitz';
   const save = sp.save === '1';
   const personaIdsRaw = sp.personas ?? '';
   const personaIds = personaIdsRaw
