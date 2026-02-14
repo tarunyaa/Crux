@@ -1,0 +1,3149 @@
+{
+  "topic": "Is Bitcoin a store of value?",
+  "personaIds": [
+    "Michael Saylor",
+    "Vitalik Buterin"
+  ],
+  "rounds": [
+    {
+      "round": 0,
+      "microTurns": [],
+      "metrics": {
+        "round": 0,
+        "inCount": 4,
+        "outCount": 4,
+        "undecCount": 0,
+        "labelFlips": [],
+        "preferredExtensionCount": 1,
+        "preferredExtensionSizes": [
+          4
+        ],
+        "pressurePoints": [
+          {
+            "id": "pp-0",
+            "type": "vulnerable_in",
+            "score": 0.7,
+            "argId": "arg-7",
+            "assumption": null,
+            "description": "Vulnerable IN argument (0 attackers, 0 defeated) [cascade risk]: \"Bitcoin serves as a credible store of value within the specific threat model ...\""
+          }
+        ],
+        "defenseTraces": [
+          {
+            "argId": "arg-4",
+            "defeatedAttackerIds": [
+              "arg-2",
+              "arg-3"
+            ],
+            "defenderIds": [
+              "arg-6",
+              "arg-7",
+              "arg-5",
+              "arg-4"
+            ],
+            "depth": 2
+          },
+          {
+            "argId": "arg-5",
+            "defeatedAttackerIds": [
+              "arg-1",
+              "arg-0"
+            ],
+            "defenderIds": [
+              "arg-5",
+              "arg-6",
+              "arg-7",
+              "arg-4"
+            ],
+            "depth": 2
+          },
+          {
+            "argId": "arg-6",
+            "defeatedAttackerIds": [
+              "arg-0"
+            ],
+            "defenderIds": [
+              "arg-5",
+              "arg-6",
+              "arg-7",
+              "arg-4"
+            ],
+            "depth": 1
+          }
+        ],
+        "defeatTraces": [
+          {
+            "argId": "arg-0",
+            "killedByArgId": "arg-5",
+            "killedBySpeakerId": "Vitalik Buterin",
+            "counterProposition": "Scarcity is not sufficient for store-of-value status; productive utility and economic activity provide more robust value propositions"
+          },
+          {
+            "argId": "arg-1",
+            "killedByArgId": "arg-5",
+            "killedBySpeakerId": "Vitalik Buterin",
+            "counterProposition": "Bitcoin's superiority to gold is questionable because gold has industrial and ornamental uses beyond speculation, while Bitcoin lacks productive utility"
+          },
+          {
+            "argId": "arg-2",
+            "killedByArgId": "arg-6",
+            "killedBySpeakerId": "Vitalik Buterin",
+            "counterProposition": "The failure of fiat currencies doesn't automatically make Bitcoin succeed—store of value status depends on coordination and network effects, not just the absence of supply inflation"
+          },
+          {
+            "argId": "arg-3",
+            "killedByArgId": "arg-4",
+            "killedBySpeakerId": "Vitalik Buterin",
+            "counterProposition": "Bitcoin's 50%+ annual volatility means it functions more as a speculative asset with store-of-value properties rather than a stable store of value, contradicting the claim that volatility doesn't affect store-of-value status"
+          }
+        ],
+        "attackBreakdown": {
+          "rebut": 3,
+          "undermine": 15,
+          "undercut": 6
+        },
+        "personaStats": [
+          {
+            "personaId": "Michael Saylor",
+            "argsAdded": 0,
+            "argsIN": 0,
+            "argsOUT": 4,
+            "argsUNDEC": 0,
+            "microTurnsTaken": 0
+          },
+          {
+            "personaId": "Vitalik Buterin",
+            "argsAdded": 0,
+            "argsIN": 4,
+            "argsOUT": 0,
+            "argsUNDEC": 0,
+            "microTurnsTaken": 0
+          }
+        ],
+        "convergenceFlags": {
+          "labellingStable": false,
+          "noNewArgs": true
+        }
+      }
+    },
+    {
+      "round": 1,
+      "microTurns": [
+        {
+          "turnIndex": 0,
+          "round": 1,
+          "personaId": "Michael Saylor",
+          "dialogue": "Vitalik's framing of 'specific threat models' fundamentally misunderstands what a store of value is. A store of value isn't a hedging instrument against particular risks—it's the base layer property that maintains purchasing power across all time horizons. Bitcoin doesn't just protect against state censorship; it's the first asset in history that cannot be debased by any entity, making it the universal solution to monetary entropy. The idea that we need different stores of value for different threats is precisely the fiat mindset that Bitcoin obsoletes.",
+          "action": {
+            "type": "ATTACK",
+            "attackType": "rebut",
+            "targetArgId": "arg-7",
+            "targetComponent": "claim",
+            "targetIndex": 0,
+            "argument": {
+              "claim": "Bitcoin is a universal store of value, not a threat-model-specific hedge, because absolute scarcity protects against all forms of monetary debasement regardless of the source.",
+              "premises": [
+                "A true store of value must preserve purchasing power against all forms of dilution, not just specific government actions",
+                "Bitcoin's 21 million supply cap is enforced by thermodynamic proof-of-work, making it resistant to debasement from any source—state actors, corporate interests, or social coordination",
+                "The distinction between 'state-level censorship protection' and 'universal store of value' is a false dichotomy: any asset that successfully resists the most powerful form of debasement (government monetary policy) necessarily resists all lesser forms",
+                "Historical stores of value like gold failed precisely because they couldn't maintain scarcity against concentrated power; Bitcoin's decentralization solves this categorically"
+              ],
+              "assumptions": [
+                "The fundamental threat to store of value properties is supply inflation, regardless of whether that inflation comes from states, miners, or protocol changes",
+                "An asset that credibly resists the strongest debasement pressures (nation-state level) automatically resists weaker pressures",
+                "Store of value is a binary property based on supply credibility, not a spectrum based on which specific threats are mitigated"
+              ],
+              "evidence": [
+                "Bitcoin's hash rate has grown exponentially to 500+ EH/s, making 51% attacks thermodynamically infeasible even for nation-states",
+                "No successful supply inflation attack has occurred in Bitcoin's 15-year history despite massive incentives",
+                "Gold's failure as money occurred precisely when governments could confiscate and debase it; Bitcoin's digital property rights prevent both",
+                "MicroStrategy's treasury strategy treats Bitcoin as universal store of value, not as hedge against specific government failure scenarios"
+              ]
+            }
+          },
+          "pressurePointId": "pp-0",
+          "argId": "arg-8",
+          "attackId": "atk-24",
+          "duplicate": false,
+          "timestamp": 1771026147952
+        },
+        {
+          "turnIndex": 1,
+          "round": 1,
+          "personaId": "Vitalik Buterin",
+          "dialogue": "Saylor's claim that 'absolute scarcity protects against all forms of monetary debasement' conflates supply-side scarcity with demand-side value preservation. A fixed supply schedule protects against supply inflation but offers zero protection against demand collapse—if Bitcoin adoption stagnates or reverses due to superior alternatives, regulatory capture, or shifting coordination equilibria, its purchasing power can decline arbitrarily regardless of the 21 million cap. Gold maintained value for millennia not through scarcity alone but through persistent demand driven by industrial utility, jewelry demand, and central bank coordination; Bitcoin's value depends entirely on continued belief in its monetary properties, making it vulnerable to coordination failures that scarcity cannot prevent. Confidence: 0.85",
+          "action": {
+            "type": "ATTACK",
+            "attackType": "undermine",
+            "targetArgId": "arg-8",
+            "targetComponent": "premise",
+            "targetIndex": 0,
+            "argument": {
+              "claim": "Bitcoin's fixed supply protects only against supply-side inflation, not against demand-side value collapse, making 'absolute scarcity' insufficient for universal store-of-value status.",
+              "premises": [
+                "Store of value preservation requires both supply stability AND sustained demand; scarcity only addresses the supply side",
+                "Bitcoin's value is entirely coordination-dependent—unlike gold which has industrial utility and jewelry demand providing a demand floor, Bitcoin has no non-monetary use case to support valuation if monetary adoption fails",
+                "Historical examples demonstrate that scarce assets can lose value catastrophically when demand disappears: rare Beanie Babies, discontinued currency denominations, and obsolete collectibles all had fixed supplies but lost purchasing power when coordination around their value collapsed",
+                "Bitcoin faces demand-side risks that scarcity cannot address: superior cryptocurrency alternatives (more scalable, more private, more programmable), regulatory prohibition that fragments the network effect, or simply coordination shifting to other stores of value as has happened repeatedly throughout monetary history"
+              ],
+              "assumptions": [
+                "Value preservation requires both supply-side and demand-side stability",
+                "Bitcoin's monetary premium depends on continued network effects and coordination rather than intrinsic utility",
+                "Coordination equilibria around stores of value can shift over time regardless of supply characteristics"
+              ],
+              "evidence": [
+                "Gold's multi-millennial value persistence is explained not just by scarcity (many elements are scarcer) but by persistent industrial and ornamental demand that provides a valuation floor independent of monetary coordination",
+                "Historical monetary transitions (cowrie shells to metal, silver demonetization, gold standard abandonment) demonstrate that scarcity is insufficient—coordination can shift to alternative stores of value even when the original asset remains scarce",
+                "Empirical data from cryptocurrency markets shows that first-mover advantage and current market dominance are not permanent—Bitcoin's dominance has declined from ~90% to ~40-50% as alternatives emerged, demonstrating that absolute scarcity does not guarantee sustained demand"
+              ]
+            }
+          },
+          "pressurePointId": "pp-7",
+          "argId": "arg-9",
+          "attackId": "atk-25",
+          "duplicate": false,
+          "timestamp": 1771026166765
+        },
+        {
+          "turnIndex": 2,
+          "round": 1,
+          "personaId": "Michael Saylor",
+          "dialogue": "Vitalik's demand-side collapse argument proves too much — by this logic, no asset can ever be a store of value because all require persistent demand. Gold's 'industrial utility' represents less than 10% of annual demand; the other 90% is monetary and jewelry demand driven by the same belief coordination that underpins Bitcoin. The difference is that gold's supply inflates 1-2% annually while Bitcoin's is capped absolutely. His framework would have predicted gold's failure as a store of value the moment industrial demand weakened, yet it persisted for five millennia precisely because scarcity + belief is sufficient. Bitcoin improves on this by making the scarcity mathematically inviolable rather than geologically constrained. Confidence: 0.92",
+          "action": {
+            "type": "DEFEND",
+            "defendArgId": "arg-8",
+            "attackerArgId": "arg-9",
+            "argument": {
+              "claim": "Demand-side coordination for stores of value is not a vulnerability unique to Bitcoin but a universal feature of all monetary assets, and Bitcoin's absolute supply cap makes it strictly superior to alternatives that lack this property.",
+              "premises": [
+                "Gold's value has been sustained for millennia primarily through monetary and jewelry demand (90% of demand), not industrial utility, demonstrating that belief coordination is the historical norm for stores of value rather than an exception",
+                "All stores of value throughout history have required persistent demand coordination — from seashells to silver to fiat currency — yet this has not prevented certain assets from maintaining purchasing power across centuries",
+                "Bitcoin's fixed supply cap means that any given level of demand coordination translates to higher per-unit value than in assets with supply inflation, making it the optimal Schelling point for store-of-value coordination",
+                "The historical track record shows that assets combining scarcity with global accessibility (like gold) achieve persistent demand coordination, and Bitcoin is the first asset to combine absolute scarcity with internet-scale accessibility"
+              ],
+              "assumptions": [
+                "Belief coordination around monetary properties is a stable equilibrium when the underlying asset has credible scarcity and no superior alternative exists",
+                "The probability of demand collapse is inversely correlated with the strength of scarcity properties, all else being equal",
+                "Network effects and Lindy effects create path dependence that makes established stores of value increasingly resistant to coordination failure over time"
+              ],
+              "evidence": [
+                "Gold maintained monetary premium for 5000+ years despite having no unique industrial utility for most of that period, demonstrating sufficiency of scarcity + belief",
+                "Bitcoin's market capitalization has grown from zero to over $1 trillion across multiple boom-bust cycles, demonstrating persistent demand coordination despite extreme volatility",
+                "Central bank gold holdings remain at ~35,000 tons ($2+ trillion) despite gold having no yield and limited industrial use, proving that scarcity-based coordination persists even among sophisticated institutional actors",
+                "Bitcoin's hash rate has grown exponentially over 15 years despite multiple 80%+ drawdowns, indicating strengthening rather than weakening coordination around its monetary properties"
+              ]
+            }
+          },
+          "pressurePointId": "pp-0",
+          "argId": "arg-10",
+          "attackId": "atk-26",
+          "duplicate": false,
+          "timestamp": 1771026186793
+        },
+        {
+          "turnIndex": 3,
+          "round": 1,
+          "personaId": "Michael Saylor",
+          "dialogue": "Vitalik's 'demand collapse' framework is analytically empty because it reduces to tautology: 'Bitcoin could fail if people stop wanting it.' But this applies identically to every store of value in existence—gold, real estate, art, fiat currency. The relevant question isn't whether demand *could* theoretically collapse, but what properties make demand *durable* across time. Bitcoin's absolute scarcity creates a Nash equilibrium where rational actors must hold it precisely because others will, making coordination around Bitcoin strictly more stable than coordination around assets with elastic supply that constantly erodes holder confidence. His argument confuses theoretical possibility with practical probability. Confidence: 0.94",
+          "action": {
+            "type": "DEFEND",
+            "defendArgId": "arg-10",
+            "attackerArgId": "arg-9",
+            "argument": {
+              "claim": "Vitalik's demand-collapse critique applies equally to all stores of value and therefore cannot distinguish Bitcoin's properties from inferior alternatives, making it analytically useless for evaluating relative store-of-value merit.",
+              "premises": [
+                "Every monetary asset throughout history—gold, silver, cowrie shells, fiat currency—depends on sustained demand coordination to maintain purchasing power, yet this universal property has never disqualified successful stores of value",
+                "The relevant analytical question is not whether demand *could* theoretically collapse (it always could) but what properties make demand coordination more durable and resistant to defection over time",
+                "Bitcoin's absolute supply cap creates a unique game-theoretic structure where rational actors face stronger incentives to coordinate around Bitcoin than around assets with elastic supply, because supply inflation in competing assets continuously erodes the coordination equilibrium",
+                "Vitalik's framework would retroactively 'predict' the failure of gold as a store of value because gold depends on belief coordination, yet gold succeeded for millennia, proving that his demand-collapse criterion is neither necessary nor sufficient for evaluating store-of-value properties"
+              ],
+              "assumptions": [
+                "Coordination around monetary assets is stable when the asset's properties create strong Nash equilibria that punish defection",
+                "Supply elasticity weakens coordination equilibria by introducing uncertainty about future purchasing power relative to current holders",
+                "Historical persistence of demand coordination around scarce assets (gold, land) provides evidence that scarcity + belief is sufficient for store-of-value status"
+              ],
+              "evidence": [
+                "Gold maintained monetary demand for over 5,000 years despite having no 'protection' against demand collapse beyond scarcity + coordination",
+                "Fiat currencies that lack scarcity constraints consistently experience demand collapse through hyperinflation (Weimar, Zimbabwe, Venezuela), while scarce assets maintain purchasing power across regime changes",
+                "Bitcoin's network effect has grown monotonically over 15 years despite multiple 80%+ drawdowns, suggesting coordination around absolute scarcity is highly resilient to short-term volatility"
+              ]
+            }
+          },
+          "pressurePointId": "pp-7",
+          "argId": "arg-11",
+          "attackId": "atk-27",
+          "duplicate": false,
+          "timestamp": 1771026205998
+        }
+      ],
+      "metrics": {
+        "round": 1,
+        "inCount": 3,
+        "outCount": 2,
+        "undecCount": 7,
+        "labelFlips": [
+          {
+            "argId": "arg-0",
+            "from": "OUT",
+            "to": "UNDEC",
+            "round": 1
+          },
+          {
+            "argId": "arg-1",
+            "from": "OUT",
+            "to": "UNDEC",
+            "round": 1
+          },
+          {
+            "argId": "arg-2",
+            "from": "OUT",
+            "to": "UNDEC",
+            "round": 1
+          },
+          {
+            "argId": "arg-3",
+            "from": "OUT",
+            "to": "UNDEC",
+            "round": 1
+          },
+          {
+            "argId": "arg-4",
+            "from": "IN",
+            "to": "UNDEC",
+            "round": 1
+          },
+          {
+            "argId": "arg-5",
+            "from": "IN",
+            "to": "UNDEC",
+            "round": 1
+          },
+          {
+            "argId": "arg-6",
+            "from": "IN",
+            "to": "UNDEC",
+            "round": 1
+          },
+          {
+            "argId": "arg-7",
+            "from": "IN",
+            "to": "OUT",
+            "round": 1
+          }
+        ],
+        "preferredExtensionCount": 2,
+        "preferredExtensionSizes": [
+          7,
+          6
+        ],
+        "pressurePoints": [
+          {
+            "id": "pp-7",
+            "type": "contested_undec",
+            "score": 1.3,
+            "argId": "arg-0",
+            "assumption": null,
+            "description": "Contested UNDEC argument (6 attackers): \"Bitcoin is the apex store of value in human history because it is the first m...\""
+          },
+          {
+            "id": "pp-8",
+            "type": "contested_undec",
+            "score": 1.2,
+            "argId": "arg-1",
+            "assumption": null,
+            "description": "Contested UNDEC argument (5 attackers): \"Bitcoin is superior to gold as a store of value because it eliminates the phy...\""
+          },
+          {
+            "id": "pp-10",
+            "type": "contested_undec",
+            "score": 1.2,
+            "argId": "arg-3",
+            "assumption": null,
+            "description": "Contested UNDEC argument (5 attackers): \"Bitcoin's volatility is a feature of its monetization process, not a bug that...\""
+          },
+          {
+            "id": "pp-0",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-0",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin is the apex store of value in human history because it is the first m...\""
+          },
+          {
+            "id": "pp-1",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-1",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin is superior to gold as a store of value because it eliminates the phy...\""
+          },
+          {
+            "id": "pp-2",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-2",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Fiat currencies are guaranteed to fail as stores of value due to the thermody...\""
+          },
+          {
+            "id": "pp-3",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-3",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin's volatility is a feature of its monetization process, not a bug that...\""
+          },
+          {
+            "id": "pp-4",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-4",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin functions as a store of value primarily through its credible commitme...\""
+          },
+          {
+            "id": "pp-5",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-5",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin's store of value thesis is strengthened by its Lindy effect but weake...\""
+          },
+          {
+            "id": "pp-6",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-6",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin's store of value narrative is partially a self-fulfilling prophecy dr...\""
+          },
+          {
+            "id": "pp-9",
+            "type": "contested_undec",
+            "score": 1,
+            "argId": "arg-2",
+            "assumption": null,
+            "description": "Contested UNDEC argument (3 attackers): \"Fiat currencies are guaranteed to fail as stores of value due to the thermody...\""
+          },
+          {
+            "id": "pp-11",
+            "type": "contested_undec",
+            "score": 0.8999999999999999,
+            "argId": "arg-4",
+            "assumption": null,
+            "description": "Contested UNDEC argument (2 attackers): \"Bitcoin functions as a store of value primarily through its credible commitme...\""
+          },
+          {
+            "id": "pp-12",
+            "type": "contested_undec",
+            "score": 0.8999999999999999,
+            "argId": "arg-5",
+            "assumption": null,
+            "description": "Contested UNDEC argument (2 attackers): \"Bitcoin's store of value thesis is strengthened by its Lindy effect but weake...\""
+          },
+          {
+            "id": "pp-13",
+            "type": "contested_undec",
+            "score": 0.7999999999999999,
+            "argId": "arg-6",
+            "assumption": null,
+            "description": "Contested UNDEC argument (1 attackers): \"Bitcoin's store of value narrative is partially a self-fulfilling prophecy dr...\""
+          },
+          {
+            "id": "pp-14",
+            "type": "vulnerable_in",
+            "score": 0.7,
+            "argId": "arg-10",
+            "assumption": null,
+            "description": "Vulnerable IN argument (0 attackers, 0 defeated) [cascade risk]: \"Demand-side coordination for stores of value is not a vulnerability unique to...\""
+          },
+          {
+            "id": "pp-15",
+            "type": "vulnerable_in",
+            "score": 0.7,
+            "argId": "arg-11",
+            "assumption": null,
+            "description": "Vulnerable IN argument (0 attackers, 0 defeated) [cascade risk]: \"Vitalik's demand-collapse critique applies equally to all stores of value and...\""
+          }
+        ],
+        "defenseTraces": [
+          {
+            "argId": "arg-8",
+            "defeatedAttackerIds": [
+              "arg-9"
+            ],
+            "defenderIds": [
+              "arg-10",
+              "arg-11"
+            ],
+            "depth": 1
+          }
+        ],
+        "defeatTraces": [
+          {
+            "argId": "arg-7",
+            "killedByArgId": "arg-8",
+            "killedBySpeakerId": "Michael Saylor",
+            "counterProposition": "Bitcoin is a universal store of value, not a threat-model-specific hedge, because absolute scarcity protects against all forms of monetary debasement regardless of the source."
+          },
+          {
+            "argId": "arg-9",
+            "killedByArgId": "arg-10",
+            "killedBySpeakerId": "Michael Saylor",
+            "counterProposition": "Demand-side coordination for stores of value is not a vulnerability unique to Bitcoin but a universal feature of all monetary assets, and Bitcoin's absolute supply cap makes it strictly superior to alternatives that lack this property."
+          }
+        ],
+        "attackBreakdown": {
+          "rebut": 6,
+          "undermine": 16,
+          "undercut": 6
+        },
+        "personaStats": [
+          {
+            "personaId": "Michael Saylor",
+            "argsAdded": 3,
+            "argsIN": 3,
+            "argsOUT": 0,
+            "argsUNDEC": 4,
+            "microTurnsTaken": 3
+          },
+          {
+            "personaId": "Vitalik Buterin",
+            "argsAdded": 1,
+            "argsIN": 0,
+            "argsOUT": 2,
+            "argsUNDEC": 3,
+            "microTurnsTaken": 1
+          }
+        ],
+        "convergenceFlags": {
+          "labellingStable": false,
+          "noNewArgs": false
+        }
+      }
+    },
+    {
+      "round": 2,
+      "microTurns": [
+        {
+          "turnIndex": 4,
+          "round": 2,
+          "personaId": "Vitalik Buterin",
+          "dialogue": "Saylor's Nash equilibrium framing is theoretically elegant but empirically falsified by the history of coordination equilibria shifts. Myspace had network effects, Betamax had technical merit, and the gold standard had centuries of Schelling point status—yet all were displaced when superior coordination mechanisms emerged. His argument assumes Bitcoin's scarcity creates a *stable* equilibrium, but stability requires more than just scarcity; it requires that no alternative asset can offer a superior bundle of monetary properties. Ethereum's programmability enables yield generation, DeFi composability, and credible neutrality for smart contract settlement—properties that create economic incentives beyond pure scarcity. If rational actors can coordinate around an asset that offers scarcity *plus* productive utility, the Nash equilibrium shifts regardless of Bitcoin's fixed supply. Confidence: 0.78",
+          "action": {
+            "type": "ATTACK",
+            "attackType": "rebut",
+            "targetArgId": "arg-10",
+            "targetComponent": "claim",
+            "targetIndex": 0,
+            "argument": {
+              "claim": "Bitcoin's scarcity does not create a stable Nash equilibrium for store-of-value coordination because coordination equilibria can shift to assets offering superior bundles of monetary properties, as demonstrated by historical displacement of entrenched monetary standards.",
+              "premises": [
+                "Historical monetary coordination equilibria (gold standard, Bretton Woods, various reserve currencies) have shifted despite strong network effects when superior alternatives emerged",
+                "Nash equilibrium stability requires not just that an asset has desirable properties, but that no alternative can offer a strictly superior bundle of properties",
+                "Programmable assets like Ethereum can offer the combination of credible scarcity (through protocol-enforced issuance schedules) plus productive utility (yield generation, DeFi composability, smart contract settlement), creating economic incentives that pure scarcity cannot match",
+                "Rational actors optimize for risk-adjusted returns across multiple dimensions (scarcity, utility, yield, optionality), not scarcity alone"
+              ],
+              "assumptions": [
+                "Coordination equilibria are not permanently stable and can shift when alternatives offer superior property bundles",
+                "Store-of-value competition occurs across multiple dimensions beyond supply scarcity",
+                "Productive utility and yield generation are economically relevant factors in store-of-value selection"
+              ],
+              "evidence": [
+                "Historical shifts in monetary coordination: abandonment of gold standard (1971), displacement of sterling by dollar as reserve currency (1920s-1940s), rise and fall of various commodity monies",
+                "Ethereum's staking yield (3-5% real yield) provides economic return that Bitcoin's fixed supply cannot match, creating different risk-return profiles",
+                "DeFi total value locked grew from ~$1B (2020) to >$100B (2024), demonstrating demand for programmable financial infrastructure that Bitcoin cannot provide"
+              ]
+            }
+          },
+          "pressurePointId": "pp-7",
+          "argId": "arg-12",
+          "attackId": "atk-28",
+          "duplicate": false,
+          "timestamp": 1771026223732
+        },
+        {
+          "turnIndex": 5,
+          "round": 2,
+          "personaId": "Michael Saylor",
+          "dialogue": "Vitalik's Ethereum comparison inadvertently proves my point. He claims programmability creates 'productive utility' that could shift coordination equilibria, but this fundamentally confuses a store of value with a technology platform. Gold doesn't compete with semiconductor manufacturing despite silicon's superior utility for computation—they serve different functions. Bitcoin's lack of programmability isn't a deficiency; it's the architectural choice that makes its monetary properties credible. Every additional feature is an additional attack surface that compromises the absolute scarcity thesis. Ethereum's complexity means its monetary policy can and has changed (the transition from POW to POS altered issuance), proving it cannot serve as the base layer store of value precisely because its 'superior bundle' requires ongoing governance that Bitcoin's simplicity eliminates. Confidence: 0.96",
+          "action": {
+            "type": "DEFEND",
+            "defendArgId": "arg-11",
+            "attackerArgId": "arg-12",
+            "argument": {
+              "claim": "Bitcoin's lack of programmability is a feature that strengthens its store-of-value properties rather than a weakness, because additional complexity introduces governance requirements that make long-term monetary policy credibility impossible.",
+              "premises": [
+                "Every programmable feature added to a blockchain requires ongoing governance decisions about protocol upgrades, security tradeoffs, and feature prioritization, creating political attack surfaces that undermine monetary credibility",
+                "Ethereum's transition from proof-of-work to proof-of-stake required coordinated social consensus that successfully altered the network's issuance schedule, demonstrating that programmable platforms cannot credibly commit to永久 monetary policy",
+                "Bitcoin's deliberately limited script language and ossified protocol development process make it the only major blockchain where monetary policy changes are effectively impossible, not just difficult",
+                "Historical stores of value (gold, silver, real estate) succeeded precisely because their physical properties were immutable—gold's atomic structure cannot be governed or upgraded, which is why it maintained monetary credibility across millennia"
+              ],
+              "assumptions": [
+                "Credible commitment to fixed monetary policy requires technical immutability, not just social consensus",
+                "The complexity required for programmability necessarily creates governance mechanisms that can alter monetary properties",
+                "Store-of-value assets and productive utility platforms serve fundamentally different functions and should not be conflated"
+              ],
+              "evidence": [
+                "Ethereum's issuance schedule has changed multiple times (Byzantium, Constantinople, EIP-1559, The Merge), demonstrating that programmable platforms cannot credibly commit to long-term monetary policy",
+                "Bitcoin's block size debate and SegWit2x failure showed that even modest protocol changes face insurmountable coordination problems, effectively ossifying Bitcoin's monetary properties",
+                "Gold's 5000-year monetary history versus the failure of every programmable monetary experiment (from Roman coin debasement to modern fiat) demonstrates that simplicity, not complexity, creates durable stores of value"
+              ]
+            }
+          },
+          "pressurePointId": "pp-7",
+          "argId": "arg-13",
+          "attackId": "atk-29",
+          "duplicate": false,
+          "timestamp": 1771026243713
+        },
+        {
+          "turnIndex": 6,
+          "round": 2,
+          "personaId": "Vitalik Buterin",
+          "dialogue": "Saylor's claim that Bitcoin's simplicity eliminates governance requirements fundamentally misunderstands the nature of protocol governance. Bitcoin has experienced contentious governance crises—the blocksize wars, Taproot activation debates, and ongoing discussions about covenant opcodes—that demonstrate governance is unavoidable in any living protocol. The difference is that Bitcoin's governance happens through social consensus and economic signaling rather than on-chain mechanisms, making it *less transparent* and *more vulnerable* to capture by mining cartels and core developer groups. Ethereum's on-chain governance and explicit roadmap make governance legible and contestable, which is precisely what long-term credibility requires. Confidence: 0.82",
+          "action": {
+            "type": "ATTACK",
+            "attackType": "rebut",
+            "targetArgId": "arg-13",
+            "targetComponent": "claim",
+            "targetIndex": 0,
+            "argument": {
+              "claim": "Bitcoin's lack of formal governance mechanisms makes its long-term monetary policy less credible, not more, because informal governance through social consensus is more vulnerable to capture and less transparent than explicit on-chain coordination.",
+              "premises": [
+                "Bitcoin has experienced multiple contentious governance crises (blocksize wars, SegWit2x, Taproot activation) that required resolution through informal social consensus rather than formal mechanisms",
+                "Informal governance concentrates power in opaque coalitions of miners, core developers, and large holders whose influence is difficult to audit or contest",
+                "Ethereum's transition from POW to POS was executed through a transparent, multi-year process with explicit roadmap milestones and client diversity requirements that made the governance process legible to all participants",
+                "Long-term credibility requires the ability to adapt to unforeseen circumstances (quantum computing threats, cryptographic breaks, economic attacks) which demands functional governance rather than governance paralysis"
+              ],
+              "assumptions": [
+                "Protocol evolution is necessary for long-term survival in adversarial environments with changing threat models",
+                "Transparent governance mechanisms are more resistant to capture than informal social consensus processes",
+                "The ability to coordinate protocol upgrades is a feature rather than a bug for store-of-value assets operating on civilizational timescales"
+              ],
+              "evidence": [
+                "Bitcoin's blocksize debate (2015-2017) resulted in a contentious hard fork (Bitcoin Cash) demonstrating that informal governance does not prevent splits",
+                "Ethereum successfully executed the most complex protocol transition in crypto history (The Merge) through formal coordination mechanisms",
+                "Historical monetary standards (gold standard, Bretton Woods) failed partly due to inability to adapt governance to changing economic conditions"
+              ]
+            }
+          },
+          "pressurePointId": "pp-7",
+          "argId": "arg-14",
+          "attackId": "atk-30",
+          "duplicate": false,
+          "timestamp": 1771026259862
+        },
+        {
+          "turnIndex": 7,
+          "round": 2,
+          "personaId": "Michael Saylor",
+          "dialogue": "Vitalik's governance transparency argument inverts reality. Bitcoin's governance crises—blocksize wars, Taproot—resolved precisely because informal social consensus creates *higher* switching costs than formal mechanisms. When governance is expensive and contentious, monetary policy becomes credibly sticky. Ethereum's 'legible' governance enabled the DAO fork reversal and the PoS transition that altered issuance—both proving that explicit coordination mechanisms make monetary policy *less* credible over civilizational timescales because they lower the activation energy for change. The difficulty of changing Bitcoin is the feature that makes its 21 million cap trustworthy forever. Confidence: 0.95",
+          "action": {
+            "type": "DEFEND",
+            "defendArgId": "arg-13",
+            "attackerArgId": "arg-14",
+            "argument": {
+              "claim": "Bitcoin's informal governance through contentious social consensus creates superior long-term monetary policy credibility compared to Ethereum's explicit governance mechanisms, because high coordination costs make supply cap changes effectively impossible.",
+              "premises": [
+                "Bitcoin's governance crises (blocksize wars, Taproot activation) required years of contentious debate and created enormous social and economic costs, demonstrating that changing Bitcoin protocol fundamentals faces prohibitively high barriers",
+                "Ethereum's explicit governance mechanisms enabled rapid, coordinated changes to core monetary policy including the DAO fork reversal and the PoS transition that altered issuance schedules",
+                "Store-of-value credibility over civilizational timescales requires that monetary policy changes be practically impossible, not merely transparent or contestable",
+                "High switching costs and coordination friction in informal governance systems create Schelling points around the status quo that formal governance systems cannot replicate"
+              ],
+              "assumptions": [
+                "The difficulty of coordinating protocol changes is a feature rather than a bug for monetary assets",
+                "Transparency and contestability of governance processes do not compensate for lower activation energy required to implement monetary policy changes",
+                "Historical precedent from Bitcoin's governance crises demonstrates that informal consensus successfully resists changes to core monetary properties"
+              ],
+              "evidence": [
+                "Bitcoin's blocksize debate lasted from 2015-2017 and resulted in contentious hard forks (Bitcoin Cash, Bitcoin SV) rather than protocol changes, demonstrating the immense difficulty of altering Bitcoin's core properties",
+                "Ethereum successfully coordinated the DAO fork in 2016 and the PoS transition in 2022, both of which altered network economics, proving that explicit governance enables monetary policy flexibility",
+                "Bitcoin's 21 million supply cap has remained unchanged since 2009 despite multiple governance crises, while Ethereum's issuance schedule has been modified multiple times through EIP processes"
+              ]
+            }
+          },
+          "pressurePointId": "pp-7",
+          "argId": "arg-15",
+          "attackId": "atk-31",
+          "duplicate": false,
+          "timestamp": 1771026277589
+        }
+      ],
+      "metrics": {
+        "round": 2,
+        "inCount": 5,
+        "outCount": 4,
+        "undecCount": 7,
+        "labelFlips": [],
+        "preferredExtensionCount": 2,
+        "preferredExtensionSizes": [
+          8,
+          7
+        ],
+        "pressurePoints": [
+          {
+            "id": "pp-7",
+            "type": "contested_undec",
+            "score": 1.3,
+            "argId": "arg-0",
+            "assumption": null,
+            "description": "Contested UNDEC argument (6 attackers): \"Bitcoin is the apex store of value in human history because it is the first m...\""
+          },
+          {
+            "id": "pp-8",
+            "type": "contested_undec",
+            "score": 1.2,
+            "argId": "arg-1",
+            "assumption": null,
+            "description": "Contested UNDEC argument (5 attackers): \"Bitcoin is superior to gold as a store of value because it eliminates the phy...\""
+          },
+          {
+            "id": "pp-10",
+            "type": "contested_undec",
+            "score": 1.2,
+            "argId": "arg-3",
+            "assumption": null,
+            "description": "Contested UNDEC argument (5 attackers): \"Bitcoin's volatility is a feature of its monetization process, not a bug that...\""
+          },
+          {
+            "id": "pp-0",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-0",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin is the apex store of value in human history because it is the first m...\""
+          },
+          {
+            "id": "pp-1",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-1",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin is superior to gold as a store of value because it eliminates the phy...\""
+          },
+          {
+            "id": "pp-2",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-2",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Fiat currencies are guaranteed to fail as stores of value due to the thermody...\""
+          },
+          {
+            "id": "pp-3",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-3",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin's volatility is a feature of its monetization process, not a bug that...\""
+          },
+          {
+            "id": "pp-4",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-4",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin functions as a store of value primarily through its credible commitme...\""
+          },
+          {
+            "id": "pp-5",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-5",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin's store of value thesis is strengthened by its Lindy effect but weake...\""
+          },
+          {
+            "id": "pp-6",
+            "type": "crux",
+            "score": 1,
+            "argId": "arg-6",
+            "assumption": null,
+            "description": "Crux argument separating camps: \"Bitcoin's store of value narrative is partially a self-fulfilling prophecy dr...\""
+          },
+          {
+            "id": "pp-9",
+            "type": "contested_undec",
+            "score": 1,
+            "argId": "arg-2",
+            "assumption": null,
+            "description": "Contested UNDEC argument (3 attackers): \"Fiat currencies are guaranteed to fail as stores of value due to the thermody...\""
+          },
+          {
+            "id": "pp-11",
+            "type": "contested_undec",
+            "score": 0.8999999999999999,
+            "argId": "arg-4",
+            "assumption": null,
+            "description": "Contested UNDEC argument (2 attackers): \"Bitcoin functions as a store of value primarily through its credible commitme...\""
+          },
+          {
+            "id": "pp-12",
+            "type": "contested_undec",
+            "score": 0.8999999999999999,
+            "argId": "arg-5",
+            "assumption": null,
+            "description": "Contested UNDEC argument (2 attackers): \"Bitcoin's store of value thesis is strengthened by its Lindy effect but weake...\""
+          },
+          {
+            "id": "pp-13",
+            "type": "contested_undec",
+            "score": 0.7999999999999999,
+            "argId": "arg-6",
+            "assumption": null,
+            "description": "Contested UNDEC argument (1 attackers): \"Bitcoin's store of value narrative is partially a self-fulfilling prophecy dr...\""
+          },
+          {
+            "id": "pp-14",
+            "type": "vulnerable_in",
+            "score": 0.7,
+            "argId": "arg-11",
+            "assumption": null,
+            "description": "Vulnerable IN argument (0 attackers, 0 defeated) [cascade risk]: \"Vitalik's demand-collapse critique applies equally to all stores of value and...\""
+          },
+          {
+            "id": "pp-15",
+            "type": "vulnerable_in",
+            "score": 0.7,
+            "argId": "arg-15",
+            "assumption": null,
+            "description": "Vulnerable IN argument (0 attackers, 0 defeated) [cascade risk]: \"Bitcoin's informal governance through contentious social consensus creates su...\""
+          }
+        ],
+        "defenseTraces": [
+          {
+            "argId": "arg-8",
+            "defeatedAttackerIds": [
+              "arg-9"
+            ],
+            "defenderIds": [
+              "arg-10",
+              "arg-11"
+            ],
+            "depth": 1
+          },
+          {
+            "argId": "arg-10",
+            "defeatedAttackerIds": [
+              "arg-12"
+            ],
+            "defenderIds": [
+              "arg-13"
+            ],
+            "depth": 1
+          },
+          {
+            "argId": "arg-13",
+            "defeatedAttackerIds": [
+              "arg-14"
+            ],
+            "defenderIds": [
+              "arg-15"
+            ],
+            "depth": 1
+          }
+        ],
+        "defeatTraces": [
+          {
+            "argId": "arg-7",
+            "killedByArgId": "arg-8",
+            "killedBySpeakerId": "Michael Saylor",
+            "counterProposition": "Bitcoin is a universal store of value, not a threat-model-specific hedge, because absolute scarcity protects against all forms of monetary debasement regardless of the source."
+          },
+          {
+            "argId": "arg-9",
+            "killedByArgId": "arg-10",
+            "killedBySpeakerId": "Michael Saylor",
+            "counterProposition": "Demand-side coordination for stores of value is not a vulnerability unique to Bitcoin but a universal feature of all monetary assets, and Bitcoin's absolute supply cap makes it strictly superior to alternatives that lack this property."
+          },
+          {
+            "argId": "arg-12",
+            "killedByArgId": "arg-13",
+            "killedBySpeakerId": "Michael Saylor",
+            "counterProposition": "Bitcoin's lack of programmability is a feature that strengthens its store-of-value properties rather than a weakness, because additional complexity introduces governance requirements that make long-term monetary policy credibility impossible."
+          },
+          {
+            "argId": "arg-14",
+            "killedByArgId": "arg-15",
+            "killedBySpeakerId": "Michael Saylor",
+            "counterProposition": "Bitcoin's informal governance through contentious social consensus creates superior long-term monetary policy credibility compared to Ethereum's explicit governance mechanisms, because high coordination costs make supply cap changes effectively impossible."
+          }
+        ],
+        "attackBreakdown": {
+          "rebut": 10,
+          "undermine": 16,
+          "undercut": 6
+        },
+        "personaStats": [
+          {
+            "personaId": "Michael Saylor",
+            "argsAdded": 2,
+            "argsIN": 5,
+            "argsOUT": 0,
+            "argsUNDEC": 4,
+            "microTurnsTaken": 2
+          },
+          {
+            "personaId": "Vitalik Buterin",
+            "argsAdded": 2,
+            "argsIN": 0,
+            "argsOUT": 4,
+            "argsUNDEC": 3,
+            "microTurnsTaken": 2
+          }
+        ],
+        "convergenceFlags": {
+          "labellingStable": false,
+          "noNewArgs": false
+        }
+      }
+    }
+  ],
+  "insights": {
+    "regime": "partial",
+    "regimeDescription": "Partial agreement: 2 preferred extension(s), 5 grounded, 7 undecided. Some common ground, but unresolved questions remain.",
+    "skepticalAcceptance": [
+      "arg-8",
+      "arg-11",
+      "arg-12",
+      "arg-14"
+    ],
+    "camps": [
+      {
+        "extensionIndex": 0,
+        "argumentIds": [
+          "arg-8",
+          "arg-11",
+          "arg-12",
+          "arg-14",
+          "arg-0",
+          "arg-1",
+          "arg-2",
+          "arg-3"
+        ],
+        "personaIds": [
+          "Michael Saylor",
+          "Vitalik Buterin"
+        ]
+      },
+      {
+        "extensionIndex": 1,
+        "argumentIds": [
+          "arg-8",
+          "arg-11",
+          "arg-12",
+          "arg-14",
+          "arg-4",
+          "arg-5",
+          "arg-6"
+        ],
+        "personaIds": [
+          "Michael Saylor",
+          "Vitalik Buterin"
+        ]
+      }
+    ],
+    "cruxArguments": [
+      {
+        "id": "arg-0",
+        "speakerId": "Michael Saylor",
+        "claim": "Bitcoin is the apex store of value in human history because it is the first monetary technology with absolute, mathematically enforced scarcity.",
+        "premises": [
+          "Every store of value throughout history—from seashells to gold to fiat currency—has suffered from supply inflation that erodes purchasing power over time, whereas Bitcoin's 21 million coin supply cap is enforced by cryptographic consensus and cannot be altered without destroying the network's fundamental value proposition",
+          "Scarcity is the primary determinant of store-of-value properties across all asset classes, as demonstrated by the superior performance of Manhattan real estate, blue-chip art, and gold relative to abundant assets over multi-decade timeframes",
+          "Bitcoin's digital nature makes it the first scarce asset in history that can be transmitted globally at the speed of light with no custodial risk, combining gold's scarcity properties with the internet's network effects"
+        ],
+        "assumptions": [
+          "The Bitcoin protocol's consensus mechanism will remain secure and unchanged with respect to the supply cap over civilizational timescales",
+          "Scarcity is a sufficient condition for store-of-value status when combined with durability, divisibility, and portability"
+        ],
+        "evidence": [
+          "Bitcoin's hash rate has grown exponentially from effectively zero in 2009 to over 400 exahashes per second in 2024, demonstrating increasing thermodynamic security and making the network more resistant to attack with each passing year",
+          "Bitcoin has appreciated from $0.0008 in 2010 to over $40,000 in 2024 despite multiple 80%+ drawdowns, demonstrating that each cycle's low is higher than the previous cycle's low—a pattern consistent with monetization of a scarce digital commodity"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-1",
+        "speakerId": "Michael Saylor",
+        "claim": "Bitcoin is superior to gold as a store of value because it eliminates the physical custody problem that has enabled government confiscation and centralization throughout monetary history.",
+        "premises": [
+          "Gold's physical nature requires centralized storage in vaults, which creates single points of failure that governments have exploited repeatedly through confiscation (US Executive Order 6102 in 1933, UK's gold requisition during WWI), whereas Bitcoin can be secured by private keys that exist only in human memory",
+          "The cost of securing and transporting physical gold creates economic incentives for custodial intermediaries and paper gold claims that exceed actual supply by orders of magnitude, diluting gold's scarcity premium, while Bitcoin's digital nature allows individuals to be their own bank with self-custody",
+          "Gold's annual supply inflation of approximately 1.5-2% from mining continuously dilutes existing holders' positions, while Bitcoin's supply issuance follows a predetermined schedule that halves every four years and approaches zero asymptotically"
+        ],
+        "assumptions": [
+          "Self-sovereign custody is a critical feature for a store of value to maintain its properties across adversarial political environments",
+          "The historical pattern of government interference with physical stores of value will continue in future crisis scenarios"
+        ],
+        "evidence": [
+          "The total above-ground gold stock grows by approximately 1.5-2% annually through mining production, while Bitcoin's current inflation rate post-2024 halving is approximately 0.85% and will continue declining toward zero",
+          "MicroStrategy holds over 190,000 Bitcoin in self-custody with no counterparty risk, demonstrating that institutional-scale holdings can be secured without trusted intermediaries—an impossibility with equivalent gold holdings worth over $7 billion"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-2",
+        "speakerId": "Michael Saylor",
+        "claim": "Fiat currencies are guaranteed to fail as stores of value due to the thermodynamic impossibility of maintaining purchasing power in systems with infinite supply potential.",
+        "premises": [
+          "Every fiat currency in history has eventually failed or lost 90%+ of its purchasing power because governments face irresistible political incentives to expand money supply during crises, wars, and economic downturns—a pattern repeated from the Roman denarius to the Weimar mark to modern emerging market currencies",
+          "The M2 money supply of major reserve currencies has expanded exponentially over the past fifty years (US M2 increased from $600 billion in 1970 to over $21 trillion in 2024), while Bitcoin's supply curve is fixed and known with mathematical certainty",
+          "Holding fiat currency is economically equivalent to holding a melting ice cube that loses 2-10% of its purchasing power annually through monetary expansion, making it a guaranteed wealth destruction mechanism over any multi-decade timeframe"
+        ],
+        "assumptions": [
+          "Political systems will continue to face pressure to expand money supply during crises rather than accepting deflationary adjustment",
+          "Historical patterns of fiat currency debasement are predictive of future behavior across all political systems"
+        ],
+        "evidence": [
+          "The US dollar has lost approximately 98% of its purchasing power since the Federal Reserve's creation in 1913, with acceleration following the abandonment of the gold standard in 1971",
+          "Global M2 money supply across major economies expanded by over $20 trillion during 2020-2021 in response to COVID-19, demonstrating that fiat systems respond to crises with supply expansion that dilutes existing holders—a response structurally impossible in Bitcoin"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-3",
+        "speakerId": "Michael Saylor",
+        "claim": "Bitcoin's volatility is a feature of its monetization process, not a bug that disqualifies it as a store of value, because all assets transitioning from zero to global reserve status must experience extreme price discovery.",
+        "premises": [
+          "An asset moving from zero market capitalization to multi-trillion dollar status must necessarily experience high volatility as it price-discovers against the entire global monetary system—this is mathematically unavoidable and represents information incorporation, not fundamental instability",
+          "Bitcoin's volatility has been decreasing over time as its market capitalization grows and liquidity deepens, following the same pattern as other network-effect technologies that experienced high volatility during adoption phases before stabilizing",
+          "Store-of-value status is determined by long-term purchasing power preservation, not short-term price stability—gold experienced extreme volatility during its monetization in the 19th century, and Bitcoin's 15-year compound annual growth rate of over 100% demonstrates superior purchasing power preservation despite intra-cycle drawdowns"
+        ],
+        "assumptions": [
+          "Volatility and store-of-value properties are independent characteristics that can coexist during asset monetization phases",
+          "Long-term trend matters more than short-term fluctuations for evaluating store-of-value effectiveness"
+        ],
+        "evidence": [
+          "Bitcoin's annualized volatility has declined from over 200% in its early years to approximately 60-80% in recent years, while maintaining positive returns over every four-year period in its history",
+          "Every major technology platform from railroads to electricity to the internet experienced extreme volatility during adoption phases, with railroad stocks in the 1840s-1850s experiencing drawdowns exceeding 80%, yet those that survived became foundational stores of value"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-4",
+        "speakerId": "Vitalik Buterin",
+        "claim": "Bitcoin functions as a store of value primarily through its credible commitment to a fixed supply schedule and censorship resistance, though its effectiveness is constrained by volatility and limited programmability.",
+        "premises": [
+          "A store of value requires credible guarantees that the asset cannot be arbitrarily inflated or confiscated, which Bitcoin's proof-of-work consensus and 21 million coin cap provide through cryptographic and game-theoretic mechanisms",
+          "Bitcoin's decade-plus operational history without successful attacks on its core monetary policy demonstrates empirical resilience that strengthens its credibility as a store of value over time",
+          "However, Bitcoin's 50%+ annual volatility and lack of yield-generating mechanisms mean it functions more as a speculative asset with store-of-value properties rather than a stable store of value comparable to gold or inflation-indexed bonds"
+        ],
+        "assumptions": [
+          "Store of value is defined by preservation of purchasing power over time rather than price stability in the short term",
+          "Credible neutrality and decentralization are necessary conditions for an asset to serve as a trustless store of value"
+        ],
+        "evidence": [
+          "Bitcoin's hash rate and node distribution data showing sustained decentralization across multiple mining pools and geographic regions (blockchain.com metrics 2020-2025)",
+          "Historical volatility data showing Bitcoin's 365-day rolling volatility consistently exceeding 50% even during mature market periods (2020-2024)"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-5",
+        "speakerId": "Vitalik Buterin",
+        "claim": "Bitcoin's store of value thesis is strengthened by its Lindy effect but weakened by its lack of productive utility compared to programmable alternatives.",
+        "premises": [
+          "The Lindy effect suggests that technologies that have survived for longer periods are likely to survive longer into the future, and Bitcoin's 15+ years of operation without catastrophic failure increases confidence in its continued existence",
+          "Traditional stores of value like gold have industrial and ornamental uses beyond speculation, while programmable platforms like Ethereum enable economic activity (DeFi, staking yields) that provides fundamental value independent of price appreciation",
+          "Bitcoin's design choice to prioritize security and simplicity over programmability means it cannot generate yield or enable productive economic activity on-chain, limiting its value proposition to pure monetary premium"
+        ],
+        "assumptions": [
+          "Assets that enable productive economic activity have more robust value propositions than assets that rely solely on monetary premium",
+          "The absence of smart contract functionality is a deliberate design tradeoff rather than a technical limitation"
+        ],
+        "evidence": [
+          "Ethereum's proof-of-stake staking yields (3-5% annually) providing productive return without relying on price appreciation",
+          "Total Value Locked (TVL) data showing hundreds of billions in DeFi economic activity on Ethereum vs minimal on-chain economic activity on Bitcoin"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-6",
+        "speakerId": "Vitalik Buterin",
+        "claim": "Bitcoin's store of value narrative is partially a self-fulfilling prophecy driven by network effects and coordination rather than intrinsic properties uniquely suited to value storage.",
+        "premises": [
+          "Store of value is fundamentally a coordination game where an asset's value derives from collective belief that others will continue to value it, making first-mover advantage and network effects decisive",
+          "Bitcoin's technical properties (fixed supply, decentralization, censorship resistance) are necessary but not sufficient for store of value status—other cryptocurrencies share these properties without achieving similar monetary premium",
+          "The 'digital gold' narrative has successfully coordinated belief around Bitcoin specifically, but this coordination could theoretically shift to alternatives with superior technical properties if network effects weakened"
+        ],
+        "assumptions": [
+          "Monetary premium is primarily a social phenomenon rather than a purely technical one",
+          "Network effects in store of value assets are strong but not insurmountable given sufficient coordination mechanisms"
+        ],
+        "evidence": [
+          "Bitcoin's market dominance declining from 95%+ (2013) to 40-50% (2024) despite maintaining technical properties, suggesting coordination can shift",
+          "Multiple cryptocurrencies (Litecoin, Bitcoin Cash) with similar technical properties to Bitcoin but vastly different market valuations, demonstrating network effects dominate technical properties"
+        ],
+        "round": 0
+      }
+    ],
+    "cruxAttacks": [
+      {
+        "id": "atk-0",
+        "fromArgId": "arg-4",
+        "toArgId": "arg-3",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-3",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Bitcoin's 50%+ annual volatility means it functions more as a speculative asset with store-of-value properties rather than a stable store of value, contradicting the claim that volatility doesn't affect store-of-value status",
+        "rationale": "Arg-4 premise[2] explicitly challenges arg-3's premise[2] by arguing that volatility does affect Bitcoin's effectiveness as a store of value, making it more speculative than stable",
+        "evidence": [],
+        "confidence": 0.85,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-1",
+        "fromArgId": "arg-4",
+        "toArgId": "arg-3",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-3",
+          "component": "assumption",
+          "index": 0
+        },
+        "counterProposition": "Volatility and store-of-value properties cannot be fully independent—high volatility constrains effectiveness as a store of value",
+        "rationale": "Arg-4's premise[2] directly contradicts arg-3's assumption[0] by arguing that volatility does impact store-of-value effectiveness, not just during monetization but as an ongoing constraint",
+        "evidence": [],
+        "confidence": 0.8,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-2",
+        "fromArgId": "arg-5",
+        "toArgId": "arg-0",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-0",
+          "component": "assumption",
+          "index": 1
+        },
+        "counterProposition": "Scarcity is not sufficient for store-of-value status; productive utility and economic activity provide more robust value propositions",
+        "rationale": "Arg-5 premise[1] and premise[2] challenge arg-0's assumption[1] by arguing that scarcity alone is insufficient and that productive utility matters for robust store-of-value status",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-3",
+        "fromArgId": "arg-5",
+        "toArgId": "arg-1",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-1",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's superiority to gold is questionable because gold has industrial and ornamental uses beyond speculation, while Bitcoin lacks productive utility",
+        "rationale": "Arg-5 premise[1] challenges the superiority claim by introducing a dimension (productive utility) where gold outperforms Bitcoin",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-4",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-0",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-0",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's technical properties (scarcity, etc.) are necessary but not sufficient for store-of-value status—it's primarily a coordination game and self-fulfilling prophecy rather than intrinsic superiority",
+        "rationale": "Arg-6 premise[1] and premise[2] undercut arg-0's reasoning by showing that even if the premises about scarcity are true, they don't establish Bitcoin as 'apex' store of value because coordination and network effects are the decisive factors",
+        "evidence": [],
+        "confidence": 0.8,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-5",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-0",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-0",
+          "component": "premise",
+          "index": 1
+        },
+        "counterProposition": "Scarcity is not the primary determinant—network effects and coordination are decisive, as other cryptocurrencies share scarcity properties without achieving similar monetary premium",
+        "rationale": "Arg-6 premise[1] directly challenges arg-0's premise[1] by arguing that scarcity is not the primary determinant of store-of-value properties",
+        "evidence": [],
+        "confidence": 0.85,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-6",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-1",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-1",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's superiority is not due to technical properties like custody solutions but rather to network effects and coordination around the 'digital gold' narrative",
+        "rationale": "Arg-6 undermines the causal reasoning in arg-1 by suggesting that technical superiority (custody) is not what makes Bitcoin superior—it's coordination and first-mover advantage",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-7",
+        "fromArgId": "arg-7",
+        "toArgId": "arg-0",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-0",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin is not the 'apex' store of value universally—it serves as a store of value only within specific threat models (state censorship, inflation) but not against all forms of value loss",
+        "rationale": "Arg-7 premise[1] and premise[2] directly challenge the 'apex' characterization by showing Bitcoin has limitations and doesn't protect against all threats",
+        "evidence": [],
+        "confidence": 0.8,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-8",
+        "fromArgId": "arg-7",
+        "toArgId": "arg-3",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-3",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Bitcoin does not demonstrate superior purchasing power preservation universally—it protects against specific threats but not market-driven value loss or speculative bubbles",
+        "rationale": "Arg-7 premise[1] challenges arg-3's premise[2] by showing that Bitcoin's purchasing power preservation is conditional and limited to specific threat models",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-9",
+        "fromArgId": "arg-2",
+        "toArgId": "arg-4",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-4",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Bitcoin's volatility is a feature of monetization, not a constraint on its store-of-value effectiveness—fiat is the guaranteed wealth destruction mechanism",
+        "rationale": "Arg-2 premise[2] and arg-3's related arguments contradict arg-4's premise[2] which treats volatility as a significant constraint on store-of-value status",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Michael Saylor",
+        "round": 0
+      },
+      {
+        "id": "atk-10",
+        "fromArgId": "arg-3",
+        "toArgId": "arg-4",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-4",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Volatility is a feature of monetization, not a disqualifying factor—Bitcoin's long-term purchasing power preservation demonstrates superior store-of-value effectiveness despite volatility",
+        "rationale": "Arg-3 directly contradicts arg-4's premise[2] about volatility constraining Bitcoin's effectiveness as a store of value",
+        "evidence": [],
+        "confidence": 0.85,
+        "speakerId": "Michael Saylor",
+        "round": 0
+      },
+      {
+        "id": "atk-11",
+        "fromArgId": "arg-0",
+        "toArgId": "arg-6",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-6",
+          "component": "premise",
+          "index": 1
+        },
+        "counterProposition": "Bitcoin's technical properties (absolute scarcity) are sufficient and primary—not just necessary—for store-of-value status",
+        "rationale": "Arg-0's entire thesis contradicts arg-6's premise[1] which argues technical properties are necessary but not sufficient",
+        "evidence": [],
+        "confidence": 0.8,
+        "speakerId": "Michael Saylor",
+        "round": 0
+      },
+      {
+        "id": "atk-12",
+        "fromArgId": "arg-1",
+        "toArgId": "arg-5",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-5",
+          "component": "premise",
+          "index": 1
+        },
+        "counterProposition": "Gold's industrial uses are irrelevant to its store-of-value properties—its physical nature is actually a weakness that creates custody problems and enables confiscation",
+        "rationale": "Arg-1 challenges arg-5's premise[1] by arguing that physical utility is not an advantage but rather creates vulnerabilities",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Michael Saylor",
+        "round": 0
+      },
+      {
+        "id": "atk-13",
+        "fromArgId": "arg-0",
+        "toArgId": "arg-5",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-5",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Bitcoin's lack of programmability is not a weakness—scarcity and monetary premium are sufficient for store-of-value status, and complexity introduces attack vectors",
+        "rationale": "Arg-0's focus on scarcity as primary determinant contradicts arg-5's premise[2] that lack of productive utility limits Bitcoin's value proposition",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Michael Saylor",
+        "round": 0
+      },
+      {
+        "id": "atk-14",
+        "fromArgId": "arg-7",
+        "toArgId": "arg-1",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-1",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's superiority to gold is limited to specific threat models (government confiscation, censorship) but not universal—it doesn't protect against technological obsolescence or market-driven value loss",
+        "rationale": "Arg-7 premise[1] and premise[2] qualify and limit arg-1's broad superiority claim",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-15",
+        "fromArgId": "arg-5",
+        "toArgId": "arg-3",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-3",
+          "component": "assumption",
+          "index": 1
+        },
+        "counterProposition": "Long-term trend alone is insufficient for evaluating store-of-value effectiveness—productive utility and economic activity matter beyond just price appreciation",
+        "rationale": "Arg-5's emphasis on productive utility (premise[1], premise[2]) challenges arg-3's assumption[1] that long-term trend is what matters most",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-16",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-2",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-2",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "The failure of fiat currencies doesn't automatically make Bitcoin succeed—store of value status depends on coordination and network effects, not just the absence of supply inflation",
+        "rationale": "Arg-6 shows that even if arg-2's premises about fiat failure are true, this doesn't establish Bitcoin's success because coordination is the decisive factor",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-17",
+        "fromArgId": "arg-4",
+        "toArgId": "arg-0",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-0",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin is not the 'apex' store of value—it functions as a store of value with constraints from volatility and limited programmability",
+        "rationale": "Arg-4 premise[2] qualifies Bitcoin's store-of-value status in ways that contradict the 'apex' characterization in arg-0",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-18",
+        "fromArgId": "arg-7",
+        "toArgId": "arg-2",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-2",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Even if fiat currencies fail as stores of value, this doesn't establish Bitcoin as a universal solution—it only protects against specific threats, not all forms of value loss",
+        "rationale": "Arg-7's threat-model-specific framing challenges the implicit universality in arg-2's claim about fiat failure guaranteeing Bitcoin's success",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-19",
+        "fromArgId": "arg-5",
+        "toArgId": "arg-0",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-0",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Bitcoin's digital nature and network effects are not sufficient advantages—lack of productive utility limits its value proposition compared to programmable alternatives",
+        "rationale": "Arg-5 premise[2] challenges the sufficiency of arg-0's premise[2] about digital nature being a decisive advantage",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-20",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-3",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-3",
+          "component": "premise",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's price discovery is not just mathematical information incorporation—it's fundamentally a coordination game where collective belief drives value, making volatility a feature of social dynamics rather than pure monetization",
+        "rationale": "Arg-6 premise[0] and premise[2] reframe arg-3's premise[0] by showing that volatility reflects coordination dynamics rather than just inevitable price discovery",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-21",
+        "fromArgId": "arg-4",
+        "toArgId": "arg-1",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-1",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's superiority to gold is qualified by its volatility and limited programmability—it has store-of-value properties but with significant constraints",
+        "rationale": "Arg-4 premise[2] introduces constraints that challenge arg-1's unqualified superiority claim",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-22",
+        "fromArgId": "arg-5",
+        "toArgId": "arg-2",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-2",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Even if fiat currencies fail, this doesn't establish Bitcoin's success—assets with productive utility have more robust value propositions than pure monetary premium",
+        "rationale": "Arg-5's emphasis on productive utility (premise[1]) undermines the implicit conclusion in arg-2 that fiat failure makes Bitcoin the solution",
+        "evidence": [],
+        "confidence": 0.65,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-23",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-1",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-1",
+          "component": "premise",
+          "index": 0
+        },
+        "counterProposition": "Self-custody advantages don't establish superiority—other cryptocurrencies share these properties, so Bitcoin's success is due to network effects and coordination rather than technical features",
+        "rationale": "Arg-6 premise[1] shows that arg-1's premises about custody don't support the superiority conclusion because technical properties are not sufficient",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      }
+    ],
+    "defenseNarratives": [
+      {
+        "argId": "arg-8",
+        "defeatedAttackerIds": [
+          "arg-9"
+        ],
+        "defenderIds": [
+          "arg-10",
+          "arg-11"
+        ],
+        "depth": 1
+      },
+      {
+        "argId": "arg-10",
+        "defeatedAttackerIds": [
+          "arg-12"
+        ],
+        "defenderIds": [
+          "arg-13"
+        ],
+        "depth": 1
+      },
+      {
+        "argId": "arg-13",
+        "defeatedAttackerIds": [
+          "arg-14"
+        ],
+        "defenderIds": [
+          "arg-15"
+        ],
+        "depth": 1
+      }
+    ],
+    "defeatNarratives": [
+      {
+        "argId": "arg-7",
+        "killedByArgId": "arg-8",
+        "killedBySpeakerId": "Michael Saylor",
+        "counterProposition": "Bitcoin is a universal store of value, not a threat-model-specific hedge, because absolute scarcity protects against all forms of monetary debasement regardless of the source."
+      },
+      {
+        "argId": "arg-9",
+        "killedByArgId": "arg-10",
+        "killedBySpeakerId": "Michael Saylor",
+        "counterProposition": "Demand-side coordination for stores of value is not a vulnerability unique to Bitcoin but a universal feature of all monetary assets, and Bitcoin's absolute supply cap makes it strictly superior to alternatives that lack this property."
+      },
+      {
+        "argId": "arg-12",
+        "killedByArgId": "arg-13",
+        "killedBySpeakerId": "Michael Saylor",
+        "counterProposition": "Bitcoin's lack of programmability is a feature that strengthens its store-of-value properties rather than a weakness, because additional complexity introduces governance requirements that make long-term monetary policy credibility impossible."
+      },
+      {
+        "argId": "arg-14",
+        "killedByArgId": "arg-15",
+        "killedBySpeakerId": "Michael Saylor",
+        "counterProposition": "Bitcoin's informal governance through contentious social consensus creates superior long-term monetary policy credibility compared to Ethereum's explicit governance mechanisms, because high coordination costs make supply cap changes effectively impossible."
+      }
+    ],
+    "resilienceScores": [
+      {
+        "argId": "arg-8",
+        "score": 2.1
+      },
+      {
+        "argId": "arg-10",
+        "score": 1.8
+      },
+      {
+        "argId": "arg-13",
+        "score": 1.8
+      },
+      {
+        "argId": "arg-11",
+        "score": 1
+      },
+      {
+        "argId": "arg-15",
+        "score": 1
+      }
+    ],
+    "assumptionDiscovery": [
+      {
+        "assumption": "scarcity is a sufficient condition for store-of-value status when combined with durability, divisibility, and portability",
+        "argIds": [
+          "arg-0"
+        ],
+        "contested": true,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "volatility and store-of-value properties are independent characteristics that can coexist during asset monetization phases",
+        "argIds": [
+          "arg-3"
+        ],
+        "contested": true,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "long-term trend matters more than short-term fluctuations for evaluating store-of-value effectiveness",
+        "argIds": [
+          "arg-3"
+        ],
+        "contested": true,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "the bitcoin protocol's consensus mechanism will remain secure and unchanged with respect to the supply cap over civilizational timescales",
+        "argIds": [
+          "arg-0"
+        ],
+        "contested": false,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "self-sovereign custody is a critical feature for a store of value to maintain its properties across adversarial political environments",
+        "argIds": [
+          "arg-1"
+        ],
+        "contested": false,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "the historical pattern of government interference with physical stores of value will continue in future crisis scenarios",
+        "argIds": [
+          "arg-1"
+        ],
+        "contested": false,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "political systems will continue to face pressure to expand money supply during crises rather than accepting deflationary adjustment",
+        "argIds": [
+          "arg-2"
+        ],
+        "contested": false,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "historical patterns of fiat currency debasement are predictive of future behavior across all political systems",
+        "argIds": [
+          "arg-2"
+        ],
+        "contested": false,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "store of value is defined by preservation of purchasing power over time rather than price stability in the short term",
+        "argIds": [
+          "arg-4"
+        ],
+        "contested": false,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "credible neutrality and decentralization are necessary conditions for an asset to serve as a trustless store of value",
+        "argIds": [
+          "arg-4"
+        ],
+        "contested": false,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "assets that enable productive economic activity have more robust value propositions than assets that rely solely on monetary premium",
+        "argIds": [
+          "arg-5"
+        ],
+        "contested": false,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "the absence of smart contract functionality is a deliberate design tradeoff rather than a technical limitation",
+        "argIds": [
+          "arg-5"
+        ],
+        "contested": false,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "monetary premium is primarily a social phenomenon rather than a purely technical one",
+        "argIds": [
+          "arg-6"
+        ],
+        "contested": false,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "network effects in store of value assets are strong but not insurmountable given sufficient coordination mechanisms",
+        "argIds": [
+          "arg-6"
+        ],
+        "contested": false,
+        "appearsInCrux": true,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "different assets serve as stores of value against different threat models rather than universally",
+        "argIds": [
+          "arg-7"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "the primary value proposition of cryptocurrency as store of value is protection against specific government actions rather than general economic volatility",
+        "argIds": [
+          "arg-7"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "the fundamental threat to store of value properties is supply inflation, regardless of whether that inflation comes from states, miners, or protocol changes",
+        "argIds": [
+          "arg-8"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "an asset that credibly resists the strongest debasement pressures (nation-state level) automatically resists weaker pressures",
+        "argIds": [
+          "arg-8"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "store of value is a binary property based on supply credibility, not a spectrum based on which specific threats are mitigated",
+        "argIds": [
+          "arg-8"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "value preservation requires both supply-side and demand-side stability",
+        "argIds": [
+          "arg-9"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "bitcoin's monetary premium depends on continued network effects and coordination rather than intrinsic utility",
+        "argIds": [
+          "arg-9"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "coordination equilibria around stores of value can shift over time regardless of supply characteristics",
+        "argIds": [
+          "arg-9"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "belief coordination around monetary properties is a stable equilibrium when the underlying asset has credible scarcity and no superior alternative exists",
+        "argIds": [
+          "arg-10"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "the probability of demand collapse is inversely correlated with the strength of scarcity properties, all else being equal",
+        "argIds": [
+          "arg-10"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "network effects and lindy effects create path dependence that makes established stores of value increasingly resistant to coordination failure over time",
+        "argIds": [
+          "arg-10"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "coordination around monetary assets is stable when the asset's properties create strong nash equilibria that punish defection",
+        "argIds": [
+          "arg-11"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "supply elasticity weakens coordination equilibria by introducing uncertainty about future purchasing power relative to current holders",
+        "argIds": [
+          "arg-11"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "historical persistence of demand coordination around scarce assets (gold, land) provides evidence that scarcity + belief is sufficient for store-of-value status",
+        "argIds": [
+          "arg-11"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "coordination equilibria are not permanently stable and can shift when alternatives offer superior property bundles",
+        "argIds": [
+          "arg-12"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "store-of-value competition occurs across multiple dimensions beyond supply scarcity",
+        "argIds": [
+          "arg-12"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "productive utility and yield generation are economically relevant factors in store-of-value selection",
+        "argIds": [
+          "arg-12"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "credible commitment to fixed monetary policy requires technical immutability, not just social consensus",
+        "argIds": [
+          "arg-13"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "the complexity required for programmability necessarily creates governance mechanisms that can alter monetary properties",
+        "argIds": [
+          "arg-13"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "store-of-value assets and productive utility platforms serve fundamentally different functions and should not be conflated",
+        "argIds": [
+          "arg-13"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "protocol evolution is necessary for long-term survival in adversarial environments with changing threat models",
+        "argIds": [
+          "arg-14"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "transparent governance mechanisms are more resistant to capture than informal social consensus processes",
+        "argIds": [
+          "arg-14"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "the ability to coordinate protocol upgrades is a feature rather than a bug for store-of-value assets operating on civilizational timescales",
+        "argIds": [
+          "arg-14"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "the difficulty of coordinating protocol changes is a feature rather than a bug for monetary assets",
+        "argIds": [
+          "arg-15"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "transparency and contestability of governance processes do not compensate for lower activation energy required to implement monetary policy changes",
+        "argIds": [
+          "arg-15"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      },
+      {
+        "assumption": "historical precedent from bitcoin's governance crises demonstrates that informal consensus successfully resists changes to core monetary properties",
+        "argIds": [
+          "arg-15"
+        ],
+        "contested": false,
+        "appearsInCrux": false,
+        "dependentCount": 1
+      }
+    ]
+  },
+  "finalState": {
+    "topic": "Is Bitcoin a store of value?",
+    "arguments": [
+      {
+        "id": "arg-0",
+        "speakerId": "Michael Saylor",
+        "claim": "Bitcoin is the apex store of value in human history because it is the first monetary technology with absolute, mathematically enforced scarcity.",
+        "premises": [
+          "Every store of value throughout history—from seashells to gold to fiat currency—has suffered from supply inflation that erodes purchasing power over time, whereas Bitcoin's 21 million coin supply cap is enforced by cryptographic consensus and cannot be altered without destroying the network's fundamental value proposition",
+          "Scarcity is the primary determinant of store-of-value properties across all asset classes, as demonstrated by the superior performance of Manhattan real estate, blue-chip art, and gold relative to abundant assets over multi-decade timeframes",
+          "Bitcoin's digital nature makes it the first scarce asset in history that can be transmitted globally at the speed of light with no custodial risk, combining gold's scarcity properties with the internet's network effects"
+        ],
+        "assumptions": [
+          "The Bitcoin protocol's consensus mechanism will remain secure and unchanged with respect to the supply cap over civilizational timescales",
+          "Scarcity is a sufficient condition for store-of-value status when combined with durability, divisibility, and portability"
+        ],
+        "evidence": [
+          "Bitcoin's hash rate has grown exponentially from effectively zero in 2009 to over 400 exahashes per second in 2024, demonstrating increasing thermodynamic security and making the network more resistant to attack with each passing year",
+          "Bitcoin has appreciated from $0.0008 in 2010 to over $40,000 in 2024 despite multiple 80%+ drawdowns, demonstrating that each cycle's low is higher than the previous cycle's low—a pattern consistent with monetization of a scarce digital commodity"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-1",
+        "speakerId": "Michael Saylor",
+        "claim": "Bitcoin is superior to gold as a store of value because it eliminates the physical custody problem that has enabled government confiscation and centralization throughout monetary history.",
+        "premises": [
+          "Gold's physical nature requires centralized storage in vaults, which creates single points of failure that governments have exploited repeatedly through confiscation (US Executive Order 6102 in 1933, UK's gold requisition during WWI), whereas Bitcoin can be secured by private keys that exist only in human memory",
+          "The cost of securing and transporting physical gold creates economic incentives for custodial intermediaries and paper gold claims that exceed actual supply by orders of magnitude, diluting gold's scarcity premium, while Bitcoin's digital nature allows individuals to be their own bank with self-custody",
+          "Gold's annual supply inflation of approximately 1.5-2% from mining continuously dilutes existing holders' positions, while Bitcoin's supply issuance follows a predetermined schedule that halves every four years and approaches zero asymptotically"
+        ],
+        "assumptions": [
+          "Self-sovereign custody is a critical feature for a store of value to maintain its properties across adversarial political environments",
+          "The historical pattern of government interference with physical stores of value will continue in future crisis scenarios"
+        ],
+        "evidence": [
+          "The total above-ground gold stock grows by approximately 1.5-2% annually through mining production, while Bitcoin's current inflation rate post-2024 halving is approximately 0.85% and will continue declining toward zero",
+          "MicroStrategy holds over 190,000 Bitcoin in self-custody with no counterparty risk, demonstrating that institutional-scale holdings can be secured without trusted intermediaries—an impossibility with equivalent gold holdings worth over $7 billion"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-2",
+        "speakerId": "Michael Saylor",
+        "claim": "Fiat currencies are guaranteed to fail as stores of value due to the thermodynamic impossibility of maintaining purchasing power in systems with infinite supply potential.",
+        "premises": [
+          "Every fiat currency in history has eventually failed or lost 90%+ of its purchasing power because governments face irresistible political incentives to expand money supply during crises, wars, and economic downturns—a pattern repeated from the Roman denarius to the Weimar mark to modern emerging market currencies",
+          "The M2 money supply of major reserve currencies has expanded exponentially over the past fifty years (US M2 increased from $600 billion in 1970 to over $21 trillion in 2024), while Bitcoin's supply curve is fixed and known with mathematical certainty",
+          "Holding fiat currency is economically equivalent to holding a melting ice cube that loses 2-10% of its purchasing power annually through monetary expansion, making it a guaranteed wealth destruction mechanism over any multi-decade timeframe"
+        ],
+        "assumptions": [
+          "Political systems will continue to face pressure to expand money supply during crises rather than accepting deflationary adjustment",
+          "Historical patterns of fiat currency debasement are predictive of future behavior across all political systems"
+        ],
+        "evidence": [
+          "The US dollar has lost approximately 98% of its purchasing power since the Federal Reserve's creation in 1913, with acceleration following the abandonment of the gold standard in 1971",
+          "Global M2 money supply across major economies expanded by over $20 trillion during 2020-2021 in response to COVID-19, demonstrating that fiat systems respond to crises with supply expansion that dilutes existing holders—a response structurally impossible in Bitcoin"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-3",
+        "speakerId": "Michael Saylor",
+        "claim": "Bitcoin's volatility is a feature of its monetization process, not a bug that disqualifies it as a store of value, because all assets transitioning from zero to global reserve status must experience extreme price discovery.",
+        "premises": [
+          "An asset moving from zero market capitalization to multi-trillion dollar status must necessarily experience high volatility as it price-discovers against the entire global monetary system—this is mathematically unavoidable and represents information incorporation, not fundamental instability",
+          "Bitcoin's volatility has been decreasing over time as its market capitalization grows and liquidity deepens, following the same pattern as other network-effect technologies that experienced high volatility during adoption phases before stabilizing",
+          "Store-of-value status is determined by long-term purchasing power preservation, not short-term price stability—gold experienced extreme volatility during its monetization in the 19th century, and Bitcoin's 15-year compound annual growth rate of over 100% demonstrates superior purchasing power preservation despite intra-cycle drawdowns"
+        ],
+        "assumptions": [
+          "Volatility and store-of-value properties are independent characteristics that can coexist during asset monetization phases",
+          "Long-term trend matters more than short-term fluctuations for evaluating store-of-value effectiveness"
+        ],
+        "evidence": [
+          "Bitcoin's annualized volatility has declined from over 200% in its early years to approximately 60-80% in recent years, while maintaining positive returns over every four-year period in its history",
+          "Every major technology platform from railroads to electricity to the internet experienced extreme volatility during adoption phases, with railroad stocks in the 1840s-1850s experiencing drawdowns exceeding 80%, yet those that survived became foundational stores of value"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-4",
+        "speakerId": "Vitalik Buterin",
+        "claim": "Bitcoin functions as a store of value primarily through its credible commitment to a fixed supply schedule and censorship resistance, though its effectiveness is constrained by volatility and limited programmability.",
+        "premises": [
+          "A store of value requires credible guarantees that the asset cannot be arbitrarily inflated or confiscated, which Bitcoin's proof-of-work consensus and 21 million coin cap provide through cryptographic and game-theoretic mechanisms",
+          "Bitcoin's decade-plus operational history without successful attacks on its core monetary policy demonstrates empirical resilience that strengthens its credibility as a store of value over time",
+          "However, Bitcoin's 50%+ annual volatility and lack of yield-generating mechanisms mean it functions more as a speculative asset with store-of-value properties rather than a stable store of value comparable to gold or inflation-indexed bonds"
+        ],
+        "assumptions": [
+          "Store of value is defined by preservation of purchasing power over time rather than price stability in the short term",
+          "Credible neutrality and decentralization are necessary conditions for an asset to serve as a trustless store of value"
+        ],
+        "evidence": [
+          "Bitcoin's hash rate and node distribution data showing sustained decentralization across multiple mining pools and geographic regions (blockchain.com metrics 2020-2025)",
+          "Historical volatility data showing Bitcoin's 365-day rolling volatility consistently exceeding 50% even during mature market periods (2020-2024)"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-5",
+        "speakerId": "Vitalik Buterin",
+        "claim": "Bitcoin's store of value thesis is strengthened by its Lindy effect but weakened by its lack of productive utility compared to programmable alternatives.",
+        "premises": [
+          "The Lindy effect suggests that technologies that have survived for longer periods are likely to survive longer into the future, and Bitcoin's 15+ years of operation without catastrophic failure increases confidence in its continued existence",
+          "Traditional stores of value like gold have industrial and ornamental uses beyond speculation, while programmable platforms like Ethereum enable economic activity (DeFi, staking yields) that provides fundamental value independent of price appreciation",
+          "Bitcoin's design choice to prioritize security and simplicity over programmability means it cannot generate yield or enable productive economic activity on-chain, limiting its value proposition to pure monetary premium"
+        ],
+        "assumptions": [
+          "Assets that enable productive economic activity have more robust value propositions than assets that rely solely on monetary premium",
+          "The absence of smart contract functionality is a deliberate design tradeoff rather than a technical limitation"
+        ],
+        "evidence": [
+          "Ethereum's proof-of-stake staking yields (3-5% annually) providing productive return without relying on price appreciation",
+          "Total Value Locked (TVL) data showing hundreds of billions in DeFi economic activity on Ethereum vs minimal on-chain economic activity on Bitcoin"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-6",
+        "speakerId": "Vitalik Buterin",
+        "claim": "Bitcoin's store of value narrative is partially a self-fulfilling prophecy driven by network effects and coordination rather than intrinsic properties uniquely suited to value storage.",
+        "premises": [
+          "Store of value is fundamentally a coordination game where an asset's value derives from collective belief that others will continue to value it, making first-mover advantage and network effects decisive",
+          "Bitcoin's technical properties (fixed supply, decentralization, censorship resistance) are necessary but not sufficient for store of value status—other cryptocurrencies share these properties without achieving similar monetary premium",
+          "The 'digital gold' narrative has successfully coordinated belief around Bitcoin specifically, but this coordination could theoretically shift to alternatives with superior technical properties if network effects weakened"
+        ],
+        "assumptions": [
+          "Monetary premium is primarily a social phenomenon rather than a purely technical one",
+          "Network effects in store of value assets are strong but not insurmountable given sufficient coordination mechanisms"
+        ],
+        "evidence": [
+          "Bitcoin's market dominance declining from 95%+ (2013) to 40-50% (2024) despite maintaining technical properties, suggesting coordination can shift",
+          "Multiple cryptocurrencies (Litecoin, Bitcoin Cash) with similar technical properties to Bitcoin but vastly different market valuations, demonstrating network effects dominate technical properties"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-7",
+        "speakerId": "Vitalik Buterin",
+        "claim": "Bitcoin serves as a credible store of value within the specific threat model of state-level censorship and monetary inflation, but not against all forms of value loss.",
+        "premises": [
+          "Bitcoin's decentralization and proof-of-work make it extremely resistant to state-level shutdown or monetary policy manipulation, providing value preservation specifically against government overreach",
+          "However, Bitcoin does not protect against technological obsolescence (quantum computing threats), social coordination failure (contentious hard forks), or market-driven value loss (speculative bubbles)",
+          "The relevant question is not whether Bitcoin is a universal store of value, but rather what specific threats it protects against—and for protection against monetary debasement and censorship, the empirical evidence is strong"
+        ],
+        "assumptions": [
+          "Different assets serve as stores of value against different threat models rather than universally",
+          "The primary value proposition of cryptocurrency as store of value is protection against specific government actions rather than general economic volatility"
+        ],
+        "evidence": [
+          "Bitcoin adoption in countries with currency crises (Venezuela, Argentina, Turkey) demonstrating its effectiveness as hedge against local monetary debasement",
+          "Bitcoin's resistance to state-level censorship attempts (China mining ban 2021) showing network resilience through geographic redistribution of hash power"
+        ],
+        "round": 0
+      },
+      {
+        "id": "arg-8",
+        "speakerId": "Michael Saylor",
+        "claim": "Bitcoin is a universal store of value, not a threat-model-specific hedge, because absolute scarcity protects against all forms of monetary debasement regardless of the source.",
+        "premises": [
+          "A true store of value must preserve purchasing power against all forms of dilution, not just specific government actions",
+          "Bitcoin's 21 million supply cap is enforced by thermodynamic proof-of-work, making it resistant to debasement from any source—state actors, corporate interests, or social coordination",
+          "The distinction between 'state-level censorship protection' and 'universal store of value' is a false dichotomy: any asset that successfully resists the most powerful form of debasement (government monetary policy) necessarily resists all lesser forms",
+          "Historical stores of value like gold failed precisely because they couldn't maintain scarcity against concentrated power; Bitcoin's decentralization solves this categorically"
+        ],
+        "assumptions": [
+          "The fundamental threat to store of value properties is supply inflation, regardless of whether that inflation comes from states, miners, or protocol changes",
+          "An asset that credibly resists the strongest debasement pressures (nation-state level) automatically resists weaker pressures",
+          "Store of value is a binary property based on supply credibility, not a spectrum based on which specific threats are mitigated"
+        ],
+        "evidence": [
+          "Bitcoin's hash rate has grown exponentially to 500+ EH/s, making 51% attacks thermodynamically infeasible even for nation-states",
+          "No successful supply inflation attack has occurred in Bitcoin's 15-year history despite massive incentives",
+          "Gold's failure as money occurred precisely when governments could confiscate and debase it; Bitcoin's digital property rights prevent both",
+          "MicroStrategy's treasury strategy treats Bitcoin as universal store of value, not as hedge against specific government failure scenarios"
+        ],
+        "round": 1
+      },
+      {
+        "id": "arg-9",
+        "speakerId": "Vitalik Buterin",
+        "claim": "Bitcoin's fixed supply protects only against supply-side inflation, not against demand-side value collapse, making 'absolute scarcity' insufficient for universal store-of-value status.",
+        "premises": [
+          "Store of value preservation requires both supply stability AND sustained demand; scarcity only addresses the supply side",
+          "Bitcoin's value is entirely coordination-dependent—unlike gold which has industrial utility and jewelry demand providing a demand floor, Bitcoin has no non-monetary use case to support valuation if monetary adoption fails",
+          "Historical examples demonstrate that scarce assets can lose value catastrophically when demand disappears: rare Beanie Babies, discontinued currency denominations, and obsolete collectibles all had fixed supplies but lost purchasing power when coordination around their value collapsed",
+          "Bitcoin faces demand-side risks that scarcity cannot address: superior cryptocurrency alternatives (more scalable, more private, more programmable), regulatory prohibition that fragments the network effect, or simply coordination shifting to other stores of value as has happened repeatedly throughout monetary history"
+        ],
+        "assumptions": [
+          "Value preservation requires both supply-side and demand-side stability",
+          "Bitcoin's monetary premium depends on continued network effects and coordination rather than intrinsic utility",
+          "Coordination equilibria around stores of value can shift over time regardless of supply characteristics"
+        ],
+        "evidence": [
+          "Gold's multi-millennial value persistence is explained not just by scarcity (many elements are scarcer) but by persistent industrial and ornamental demand that provides a valuation floor independent of monetary coordination",
+          "Historical monetary transitions (cowrie shells to metal, silver demonetization, gold standard abandonment) demonstrate that scarcity is insufficient—coordination can shift to alternative stores of value even when the original asset remains scarce",
+          "Empirical data from cryptocurrency markets shows that first-mover advantage and current market dominance are not permanent—Bitcoin's dominance has declined from ~90% to ~40-50% as alternatives emerged, demonstrating that absolute scarcity does not guarantee sustained demand"
+        ],
+        "round": 1
+      },
+      {
+        "id": "arg-10",
+        "speakerId": "Michael Saylor",
+        "claim": "Demand-side coordination for stores of value is not a vulnerability unique to Bitcoin but a universal feature of all monetary assets, and Bitcoin's absolute supply cap makes it strictly superior to alternatives that lack this property.",
+        "premises": [
+          "Gold's value has been sustained for millennia primarily through monetary and jewelry demand (90% of demand), not industrial utility, demonstrating that belief coordination is the historical norm for stores of value rather than an exception",
+          "All stores of value throughout history have required persistent demand coordination — from seashells to silver to fiat currency — yet this has not prevented certain assets from maintaining purchasing power across centuries",
+          "Bitcoin's fixed supply cap means that any given level of demand coordination translates to higher per-unit value than in assets with supply inflation, making it the optimal Schelling point for store-of-value coordination",
+          "The historical track record shows that assets combining scarcity with global accessibility (like gold) achieve persistent demand coordination, and Bitcoin is the first asset to combine absolute scarcity with internet-scale accessibility"
+        ],
+        "assumptions": [
+          "Belief coordination around monetary properties is a stable equilibrium when the underlying asset has credible scarcity and no superior alternative exists",
+          "The probability of demand collapse is inversely correlated with the strength of scarcity properties, all else being equal",
+          "Network effects and Lindy effects create path dependence that makes established stores of value increasingly resistant to coordination failure over time"
+        ],
+        "evidence": [
+          "Gold maintained monetary premium for 5000+ years despite having no unique industrial utility for most of that period, demonstrating sufficiency of scarcity + belief",
+          "Bitcoin's market capitalization has grown from zero to over $1 trillion across multiple boom-bust cycles, demonstrating persistent demand coordination despite extreme volatility",
+          "Central bank gold holdings remain at ~35,000 tons ($2+ trillion) despite gold having no yield and limited industrial use, proving that scarcity-based coordination persists even among sophisticated institutional actors",
+          "Bitcoin's hash rate has grown exponentially over 15 years despite multiple 80%+ drawdowns, indicating strengthening rather than weakening coordination around its monetary properties"
+        ],
+        "round": 1
+      },
+      {
+        "id": "arg-11",
+        "speakerId": "Michael Saylor",
+        "claim": "Vitalik's demand-collapse critique applies equally to all stores of value and therefore cannot distinguish Bitcoin's properties from inferior alternatives, making it analytically useless for evaluating relative store-of-value merit.",
+        "premises": [
+          "Every monetary asset throughout history—gold, silver, cowrie shells, fiat currency—depends on sustained demand coordination to maintain purchasing power, yet this universal property has never disqualified successful stores of value",
+          "The relevant analytical question is not whether demand *could* theoretically collapse (it always could) but what properties make demand coordination more durable and resistant to defection over time",
+          "Bitcoin's absolute supply cap creates a unique game-theoretic structure where rational actors face stronger incentives to coordinate around Bitcoin than around assets with elastic supply, because supply inflation in competing assets continuously erodes the coordination equilibrium",
+          "Vitalik's framework would retroactively 'predict' the failure of gold as a store of value because gold depends on belief coordination, yet gold succeeded for millennia, proving that his demand-collapse criterion is neither necessary nor sufficient for evaluating store-of-value properties"
+        ],
+        "assumptions": [
+          "Coordination around monetary assets is stable when the asset's properties create strong Nash equilibria that punish defection",
+          "Supply elasticity weakens coordination equilibria by introducing uncertainty about future purchasing power relative to current holders",
+          "Historical persistence of demand coordination around scarce assets (gold, land) provides evidence that scarcity + belief is sufficient for store-of-value status"
+        ],
+        "evidence": [
+          "Gold maintained monetary demand for over 5,000 years despite having no 'protection' against demand collapse beyond scarcity + coordination",
+          "Fiat currencies that lack scarcity constraints consistently experience demand collapse through hyperinflation (Weimar, Zimbabwe, Venezuela), while scarce assets maintain purchasing power across regime changes",
+          "Bitcoin's network effect has grown monotonically over 15 years despite multiple 80%+ drawdowns, suggesting coordination around absolute scarcity is highly resilient to short-term volatility"
+        ],
+        "round": 1
+      },
+      {
+        "id": "arg-12",
+        "speakerId": "Vitalik Buterin",
+        "claim": "Bitcoin's scarcity does not create a stable Nash equilibrium for store-of-value coordination because coordination equilibria can shift to assets offering superior bundles of monetary properties, as demonstrated by historical displacement of entrenched monetary standards.",
+        "premises": [
+          "Historical monetary coordination equilibria (gold standard, Bretton Woods, various reserve currencies) have shifted despite strong network effects when superior alternatives emerged",
+          "Nash equilibrium stability requires not just that an asset has desirable properties, but that no alternative can offer a strictly superior bundle of properties",
+          "Programmable assets like Ethereum can offer the combination of credible scarcity (through protocol-enforced issuance schedules) plus productive utility (yield generation, DeFi composability, smart contract settlement), creating economic incentives that pure scarcity cannot match",
+          "Rational actors optimize for risk-adjusted returns across multiple dimensions (scarcity, utility, yield, optionality), not scarcity alone"
+        ],
+        "assumptions": [
+          "Coordination equilibria are not permanently stable and can shift when alternatives offer superior property bundles",
+          "Store-of-value competition occurs across multiple dimensions beyond supply scarcity",
+          "Productive utility and yield generation are economically relevant factors in store-of-value selection"
+        ],
+        "evidence": [
+          "Historical shifts in monetary coordination: abandonment of gold standard (1971), displacement of sterling by dollar as reserve currency (1920s-1940s), rise and fall of various commodity monies",
+          "Ethereum's staking yield (3-5% real yield) provides economic return that Bitcoin's fixed supply cannot match, creating different risk-return profiles",
+          "DeFi total value locked grew from ~$1B (2020) to >$100B (2024), demonstrating demand for programmable financial infrastructure that Bitcoin cannot provide"
+        ],
+        "round": 2
+      },
+      {
+        "id": "arg-13",
+        "speakerId": "Michael Saylor",
+        "claim": "Bitcoin's lack of programmability is a feature that strengthens its store-of-value properties rather than a weakness, because additional complexity introduces governance requirements that make long-term monetary policy credibility impossible.",
+        "premises": [
+          "Every programmable feature added to a blockchain requires ongoing governance decisions about protocol upgrades, security tradeoffs, and feature prioritization, creating political attack surfaces that undermine monetary credibility",
+          "Ethereum's transition from proof-of-work to proof-of-stake required coordinated social consensus that successfully altered the network's issuance schedule, demonstrating that programmable platforms cannot credibly commit to永久 monetary policy",
+          "Bitcoin's deliberately limited script language and ossified protocol development process make it the only major blockchain where monetary policy changes are effectively impossible, not just difficult",
+          "Historical stores of value (gold, silver, real estate) succeeded precisely because their physical properties were immutable—gold's atomic structure cannot be governed or upgraded, which is why it maintained monetary credibility across millennia"
+        ],
+        "assumptions": [
+          "Credible commitment to fixed monetary policy requires technical immutability, not just social consensus",
+          "The complexity required for programmability necessarily creates governance mechanisms that can alter monetary properties",
+          "Store-of-value assets and productive utility platforms serve fundamentally different functions and should not be conflated"
+        ],
+        "evidence": [
+          "Ethereum's issuance schedule has changed multiple times (Byzantium, Constantinople, EIP-1559, The Merge), demonstrating that programmable platforms cannot credibly commit to long-term monetary policy",
+          "Bitcoin's block size debate and SegWit2x failure showed that even modest protocol changes face insurmountable coordination problems, effectively ossifying Bitcoin's monetary properties",
+          "Gold's 5000-year monetary history versus the failure of every programmable monetary experiment (from Roman coin debasement to modern fiat) demonstrates that simplicity, not complexity, creates durable stores of value"
+        ],
+        "round": 2
+      },
+      {
+        "id": "arg-14",
+        "speakerId": "Vitalik Buterin",
+        "claim": "Bitcoin's lack of formal governance mechanisms makes its long-term monetary policy less credible, not more, because informal governance through social consensus is more vulnerable to capture and less transparent than explicit on-chain coordination.",
+        "premises": [
+          "Bitcoin has experienced multiple contentious governance crises (blocksize wars, SegWit2x, Taproot activation) that required resolution through informal social consensus rather than formal mechanisms",
+          "Informal governance concentrates power in opaque coalitions of miners, core developers, and large holders whose influence is difficult to audit or contest",
+          "Ethereum's transition from POW to POS was executed through a transparent, multi-year process with explicit roadmap milestones and client diversity requirements that made the governance process legible to all participants",
+          "Long-term credibility requires the ability to adapt to unforeseen circumstances (quantum computing threats, cryptographic breaks, economic attacks) which demands functional governance rather than governance paralysis"
+        ],
+        "assumptions": [
+          "Protocol evolution is necessary for long-term survival in adversarial environments with changing threat models",
+          "Transparent governance mechanisms are more resistant to capture than informal social consensus processes",
+          "The ability to coordinate protocol upgrades is a feature rather than a bug for store-of-value assets operating on civilizational timescales"
+        ],
+        "evidence": [
+          "Bitcoin's blocksize debate (2015-2017) resulted in a contentious hard fork (Bitcoin Cash) demonstrating that informal governance does not prevent splits",
+          "Ethereum successfully executed the most complex protocol transition in crypto history (The Merge) through formal coordination mechanisms",
+          "Historical monetary standards (gold standard, Bretton Woods) failed partly due to inability to adapt governance to changing economic conditions"
+        ],
+        "round": 2
+      },
+      {
+        "id": "arg-15",
+        "speakerId": "Michael Saylor",
+        "claim": "Bitcoin's informal governance through contentious social consensus creates superior long-term monetary policy credibility compared to Ethereum's explicit governance mechanisms, because high coordination costs make supply cap changes effectively impossible.",
+        "premises": [
+          "Bitcoin's governance crises (blocksize wars, Taproot activation) required years of contentious debate and created enormous social and economic costs, demonstrating that changing Bitcoin protocol fundamentals faces prohibitively high barriers",
+          "Ethereum's explicit governance mechanisms enabled rapid, coordinated changes to core monetary policy including the DAO fork reversal and the PoS transition that altered issuance schedules",
+          "Store-of-value credibility over civilizational timescales requires that monetary policy changes be practically impossible, not merely transparent or contestable",
+          "High switching costs and coordination friction in informal governance systems create Schelling points around the status quo that formal governance systems cannot replicate"
+        ],
+        "assumptions": [
+          "The difficulty of coordinating protocol changes is a feature rather than a bug for monetary assets",
+          "Transparency and contestability of governance processes do not compensate for lower activation energy required to implement monetary policy changes",
+          "Historical precedent from Bitcoin's governance crises demonstrates that informal consensus successfully resists changes to core monetary properties"
+        ],
+        "evidence": [
+          "Bitcoin's blocksize debate lasted from 2015-2017 and resulted in contentious hard forks (Bitcoin Cash, Bitcoin SV) rather than protocol changes, demonstrating the immense difficulty of altering Bitcoin's core properties",
+          "Ethereum successfully coordinated the DAO fork in 2016 and the PoS transition in 2022, both of which altered network economics, proving that explicit governance enables monetary policy flexibility",
+          "Bitcoin's 21 million supply cap has remained unchanged since 2009 despite multiple governance crises, while Ethereum's issuance schedule has been modified multiple times through EIP processes"
+        ],
+        "round": 2
+      }
+    ],
+    "attacks": [
+      {
+        "id": "atk-0",
+        "fromArgId": "arg-4",
+        "toArgId": "arg-3",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-3",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Bitcoin's 50%+ annual volatility means it functions more as a speculative asset with store-of-value properties rather than a stable store of value, contradicting the claim that volatility doesn't affect store-of-value status",
+        "rationale": "Arg-4 premise[2] explicitly challenges arg-3's premise[2] by arguing that volatility does affect Bitcoin's effectiveness as a store of value, making it more speculative than stable",
+        "evidence": [],
+        "confidence": 0.85,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-1",
+        "fromArgId": "arg-4",
+        "toArgId": "arg-3",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-3",
+          "component": "assumption",
+          "index": 0
+        },
+        "counterProposition": "Volatility and store-of-value properties cannot be fully independent—high volatility constrains effectiveness as a store of value",
+        "rationale": "Arg-4's premise[2] directly contradicts arg-3's assumption[0] by arguing that volatility does impact store-of-value effectiveness, not just during monetization but as an ongoing constraint",
+        "evidence": [],
+        "confidence": 0.8,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-2",
+        "fromArgId": "arg-5",
+        "toArgId": "arg-0",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-0",
+          "component": "assumption",
+          "index": 1
+        },
+        "counterProposition": "Scarcity is not sufficient for store-of-value status; productive utility and economic activity provide more robust value propositions",
+        "rationale": "Arg-5 premise[1] and premise[2] challenge arg-0's assumption[1] by arguing that scarcity alone is insufficient and that productive utility matters for robust store-of-value status",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-3",
+        "fromArgId": "arg-5",
+        "toArgId": "arg-1",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-1",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's superiority to gold is questionable because gold has industrial and ornamental uses beyond speculation, while Bitcoin lacks productive utility",
+        "rationale": "Arg-5 premise[1] challenges the superiority claim by introducing a dimension (productive utility) where gold outperforms Bitcoin",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-4",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-0",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-0",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's technical properties (scarcity, etc.) are necessary but not sufficient for store-of-value status—it's primarily a coordination game and self-fulfilling prophecy rather than intrinsic superiority",
+        "rationale": "Arg-6 premise[1] and premise[2] undercut arg-0's reasoning by showing that even if the premises about scarcity are true, they don't establish Bitcoin as 'apex' store of value because coordination and network effects are the decisive factors",
+        "evidence": [],
+        "confidence": 0.8,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-5",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-0",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-0",
+          "component": "premise",
+          "index": 1
+        },
+        "counterProposition": "Scarcity is not the primary determinant—network effects and coordination are decisive, as other cryptocurrencies share scarcity properties without achieving similar monetary premium",
+        "rationale": "Arg-6 premise[1] directly challenges arg-0's premise[1] by arguing that scarcity is not the primary determinant of store-of-value properties",
+        "evidence": [],
+        "confidence": 0.85,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-6",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-1",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-1",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's superiority is not due to technical properties like custody solutions but rather to network effects and coordination around the 'digital gold' narrative",
+        "rationale": "Arg-6 undermines the causal reasoning in arg-1 by suggesting that technical superiority (custody) is not what makes Bitcoin superior—it's coordination and first-mover advantage",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-7",
+        "fromArgId": "arg-7",
+        "toArgId": "arg-0",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-0",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin is not the 'apex' store of value universally—it serves as a store of value only within specific threat models (state censorship, inflation) but not against all forms of value loss",
+        "rationale": "Arg-7 premise[1] and premise[2] directly challenge the 'apex' characterization by showing Bitcoin has limitations and doesn't protect against all threats",
+        "evidence": [],
+        "confidence": 0.8,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-8",
+        "fromArgId": "arg-7",
+        "toArgId": "arg-3",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-3",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Bitcoin does not demonstrate superior purchasing power preservation universally—it protects against specific threats but not market-driven value loss or speculative bubbles",
+        "rationale": "Arg-7 premise[1] challenges arg-3's premise[2] by showing that Bitcoin's purchasing power preservation is conditional and limited to specific threat models",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-9",
+        "fromArgId": "arg-2",
+        "toArgId": "arg-4",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-4",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Bitcoin's volatility is a feature of monetization, not a constraint on its store-of-value effectiveness—fiat is the guaranteed wealth destruction mechanism",
+        "rationale": "Arg-2 premise[2] and arg-3's related arguments contradict arg-4's premise[2] which treats volatility as a significant constraint on store-of-value status",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Michael Saylor",
+        "round": 0
+      },
+      {
+        "id": "atk-10",
+        "fromArgId": "arg-3",
+        "toArgId": "arg-4",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-4",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Volatility is a feature of monetization, not a disqualifying factor—Bitcoin's long-term purchasing power preservation demonstrates superior store-of-value effectiveness despite volatility",
+        "rationale": "Arg-3 directly contradicts arg-4's premise[2] about volatility constraining Bitcoin's effectiveness as a store of value",
+        "evidence": [],
+        "confidence": 0.85,
+        "speakerId": "Michael Saylor",
+        "round": 0
+      },
+      {
+        "id": "atk-11",
+        "fromArgId": "arg-0",
+        "toArgId": "arg-6",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-6",
+          "component": "premise",
+          "index": 1
+        },
+        "counterProposition": "Bitcoin's technical properties (absolute scarcity) are sufficient and primary—not just necessary—for store-of-value status",
+        "rationale": "Arg-0's entire thesis contradicts arg-6's premise[1] which argues technical properties are necessary but not sufficient",
+        "evidence": [],
+        "confidence": 0.8,
+        "speakerId": "Michael Saylor",
+        "round": 0
+      },
+      {
+        "id": "atk-12",
+        "fromArgId": "arg-1",
+        "toArgId": "arg-5",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-5",
+          "component": "premise",
+          "index": 1
+        },
+        "counterProposition": "Gold's industrial uses are irrelevant to its store-of-value properties—its physical nature is actually a weakness that creates custody problems and enables confiscation",
+        "rationale": "Arg-1 challenges arg-5's premise[1] by arguing that physical utility is not an advantage but rather creates vulnerabilities",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Michael Saylor",
+        "round": 0
+      },
+      {
+        "id": "atk-13",
+        "fromArgId": "arg-0",
+        "toArgId": "arg-5",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-5",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Bitcoin's lack of programmability is not a weakness—scarcity and monetary premium are sufficient for store-of-value status, and complexity introduces attack vectors",
+        "rationale": "Arg-0's focus on scarcity as primary determinant contradicts arg-5's premise[2] that lack of productive utility limits Bitcoin's value proposition",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Michael Saylor",
+        "round": 0
+      },
+      {
+        "id": "atk-14",
+        "fromArgId": "arg-7",
+        "toArgId": "arg-1",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-1",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's superiority to gold is limited to specific threat models (government confiscation, censorship) but not universal—it doesn't protect against technological obsolescence or market-driven value loss",
+        "rationale": "Arg-7 premise[1] and premise[2] qualify and limit arg-1's broad superiority claim",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-15",
+        "fromArgId": "arg-5",
+        "toArgId": "arg-3",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-3",
+          "component": "assumption",
+          "index": 1
+        },
+        "counterProposition": "Long-term trend alone is insufficient for evaluating store-of-value effectiveness—productive utility and economic activity matter beyond just price appreciation",
+        "rationale": "Arg-5's emphasis on productive utility (premise[1], premise[2]) challenges arg-3's assumption[1] that long-term trend is what matters most",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-16",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-2",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-2",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "The failure of fiat currencies doesn't automatically make Bitcoin succeed—store of value status depends on coordination and network effects, not just the absence of supply inflation",
+        "rationale": "Arg-6 shows that even if arg-2's premises about fiat failure are true, this doesn't establish Bitcoin's success because coordination is the decisive factor",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-17",
+        "fromArgId": "arg-4",
+        "toArgId": "arg-0",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-0",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin is not the 'apex' store of value—it functions as a store of value with constraints from volatility and limited programmability",
+        "rationale": "Arg-4 premise[2] qualifies Bitcoin's store-of-value status in ways that contradict the 'apex' characterization in arg-0",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-18",
+        "fromArgId": "arg-7",
+        "toArgId": "arg-2",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-2",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Even if fiat currencies fail as stores of value, this doesn't establish Bitcoin as a universal solution—it only protects against specific threats, not all forms of value loss",
+        "rationale": "Arg-7's threat-model-specific framing challenges the implicit universality in arg-2's claim about fiat failure guaranteeing Bitcoin's success",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-19",
+        "fromArgId": "arg-5",
+        "toArgId": "arg-0",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-0",
+          "component": "premise",
+          "index": 2
+        },
+        "counterProposition": "Bitcoin's digital nature and network effects are not sufficient advantages—lack of productive utility limits its value proposition compared to programmable alternatives",
+        "rationale": "Arg-5 premise[2] challenges the sufficiency of arg-0's premise[2] about digital nature being a decisive advantage",
+        "evidence": [],
+        "confidence": 0.75,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-20",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-3",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-3",
+          "component": "premise",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's price discovery is not just mathematical information incorporation—it's fundamentally a coordination game where collective belief drives value, making volatility a feature of social dynamics rather than pure monetization",
+        "rationale": "Arg-6 premise[0] and premise[2] reframe arg-3's premise[0] by showing that volatility reflects coordination dynamics rather than just inevitable price discovery",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-21",
+        "fromArgId": "arg-4",
+        "toArgId": "arg-1",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-1",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's superiority to gold is qualified by its volatility and limited programmability—it has store-of-value properties but with significant constraints",
+        "rationale": "Arg-4 premise[2] introduces constraints that challenge arg-1's unqualified superiority claim",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-22",
+        "fromArgId": "arg-5",
+        "toArgId": "arg-2",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-2",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Even if fiat currencies fail, this doesn't establish Bitcoin's success—assets with productive utility have more robust value propositions than pure monetary premium",
+        "rationale": "Arg-5's emphasis on productive utility (premise[1]) undermines the implicit conclusion in arg-2 that fiat failure makes Bitcoin the solution",
+        "evidence": [],
+        "confidence": 0.65,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-23",
+        "fromArgId": "arg-6",
+        "toArgId": "arg-1",
+        "type": "undercut",
+        "target": {
+          "argId": "arg-1",
+          "component": "premise",
+          "index": 0
+        },
+        "counterProposition": "Self-custody advantages don't establish superiority—other cryptocurrencies share these properties, so Bitcoin's success is due to network effects and coordination rather than technical features",
+        "rationale": "Arg-6 premise[1] shows that arg-1's premises about custody don't support the superiority conclusion because technical properties are not sufficient",
+        "evidence": [],
+        "confidence": 0.7,
+        "speakerId": "Vitalik Buterin",
+        "round": 0
+      },
+      {
+        "id": "atk-24",
+        "fromArgId": "arg-8",
+        "toArgId": "arg-7",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-7",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin is a universal store of value, not a threat-model-specific hedge, because absolute scarcity protects against all forms of monetary debasement regardless of the source.",
+        "rationale": "A true store of value must preserve purchasing power against all forms of dilution, not just specific government actions",
+        "evidence": [
+          "Bitcoin's hash rate has grown exponentially to 500+ EH/s, making 51% attacks thermodynamically infeasible even for nation-states",
+          "No successful supply inflation attack has occurred in Bitcoin's 15-year history despite massive incentives",
+          "Gold's failure as money occurred precisely when governments could confiscate and debase it; Bitcoin's digital property rights prevent both",
+          "MicroStrategy's treasury strategy treats Bitcoin as universal store of value, not as hedge against specific government failure scenarios"
+        ],
+        "confidence": 0.8,
+        "speakerId": "Michael Saylor",
+        "round": 1
+      },
+      {
+        "id": "atk-25",
+        "fromArgId": "arg-9",
+        "toArgId": "arg-8",
+        "type": "undermine",
+        "target": {
+          "argId": "arg-8",
+          "component": "premise",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's fixed supply protects only against supply-side inflation, not against demand-side value collapse, making 'absolute scarcity' insufficient for universal store-of-value status.",
+        "rationale": "Store of value preservation requires both supply stability AND sustained demand; scarcity only addresses the supply side",
+        "evidence": [
+          "Gold's multi-millennial value persistence is explained not just by scarcity (many elements are scarcer) but by persistent industrial and ornamental demand that provides a valuation floor independent of monetary coordination",
+          "Historical monetary transitions (cowrie shells to metal, silver demonetization, gold standard abandonment) demonstrate that scarcity is insufficient—coordination can shift to alternative stores of value even when the original asset remains scarce",
+          "Empirical data from cryptocurrency markets shows that first-mover advantage and current market dominance are not permanent—Bitcoin's dominance has declined from ~90% to ~40-50% as alternatives emerged, demonstrating that absolute scarcity does not guarantee sustained demand"
+        ],
+        "confidence": 0.8,
+        "speakerId": "Vitalik Buterin",
+        "round": 1
+      },
+      {
+        "id": "atk-26",
+        "fromArgId": "arg-10",
+        "toArgId": "arg-9",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-9",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Demand-side coordination for stores of value is not a vulnerability unique to Bitcoin but a universal feature of all monetary assets, and Bitcoin's absolute supply cap makes it strictly superior to alternatives that lack this property.",
+        "rationale": "Gold's value has been sustained for millennia primarily through monetary and jewelry demand (90% of demand), not industrial utility, demonstrating that belief coordination is the historical norm for stores of value rather than an exception",
+        "evidence": [
+          "Gold maintained monetary premium for 5000+ years despite having no unique industrial utility for most of that period, demonstrating sufficiency of scarcity + belief",
+          "Bitcoin's market capitalization has grown from zero to over $1 trillion across multiple boom-bust cycles, demonstrating persistent demand coordination despite extreme volatility",
+          "Central bank gold holdings remain at ~35,000 tons ($2+ trillion) despite gold having no yield and limited industrial use, proving that scarcity-based coordination persists even among sophisticated institutional actors",
+          "Bitcoin's hash rate has grown exponentially over 15 years despite multiple 80%+ drawdowns, indicating strengthening rather than weakening coordination around its monetary properties"
+        ],
+        "confidence": 0.8,
+        "speakerId": "Michael Saylor",
+        "round": 1
+      },
+      {
+        "id": "atk-27",
+        "fromArgId": "arg-11",
+        "toArgId": "arg-9",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-9",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Vitalik's demand-collapse critique applies equally to all stores of value and therefore cannot distinguish Bitcoin's properties from inferior alternatives, making it analytically useless for evaluating relative store-of-value merit.",
+        "rationale": "Every monetary asset throughout history—gold, silver, cowrie shells, fiat currency—depends on sustained demand coordination to maintain purchasing power, yet this universal property has never disqualified successful stores of value",
+        "evidence": [
+          "Gold maintained monetary demand for over 5,000 years despite having no 'protection' against demand collapse beyond scarcity + coordination",
+          "Fiat currencies that lack scarcity constraints consistently experience demand collapse through hyperinflation (Weimar, Zimbabwe, Venezuela), while scarce assets maintain purchasing power across regime changes",
+          "Bitcoin's network effect has grown monotonically over 15 years despite multiple 80%+ drawdowns, suggesting coordination around absolute scarcity is highly resilient to short-term volatility"
+        ],
+        "confidence": 0.8,
+        "speakerId": "Michael Saylor",
+        "round": 1
+      },
+      {
+        "id": "atk-28",
+        "fromArgId": "arg-12",
+        "toArgId": "arg-10",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-10",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's scarcity does not create a stable Nash equilibrium for store-of-value coordination because coordination equilibria can shift to assets offering superior bundles of monetary properties, as demonstrated by historical displacement of entrenched monetary standards.",
+        "rationale": "Historical monetary coordination equilibria (gold standard, Bretton Woods, various reserve currencies) have shifted despite strong network effects when superior alternatives emerged",
+        "evidence": [
+          "Historical shifts in monetary coordination: abandonment of gold standard (1971), displacement of sterling by dollar as reserve currency (1920s-1940s), rise and fall of various commodity monies",
+          "Ethereum's staking yield (3-5% real yield) provides economic return that Bitcoin's fixed supply cannot match, creating different risk-return profiles",
+          "DeFi total value locked grew from ~$1B (2020) to >$100B (2024), demonstrating demand for programmable financial infrastructure that Bitcoin cannot provide"
+        ],
+        "confidence": 0.8,
+        "speakerId": "Vitalik Buterin",
+        "round": 2
+      },
+      {
+        "id": "atk-29",
+        "fromArgId": "arg-13",
+        "toArgId": "arg-12",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-12",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's lack of programmability is a feature that strengthens its store-of-value properties rather than a weakness, because additional complexity introduces governance requirements that make long-term monetary policy credibility impossible.",
+        "rationale": "Every programmable feature added to a blockchain requires ongoing governance decisions about protocol upgrades, security tradeoffs, and feature prioritization, creating political attack surfaces that undermine monetary credibility",
+        "evidence": [
+          "Ethereum's issuance schedule has changed multiple times (Byzantium, Constantinople, EIP-1559, The Merge), demonstrating that programmable platforms cannot credibly commit to long-term monetary policy",
+          "Bitcoin's block size debate and SegWit2x failure showed that even modest protocol changes face insurmountable coordination problems, effectively ossifying Bitcoin's monetary properties",
+          "Gold's 5000-year monetary history versus the failure of every programmable monetary experiment (from Roman coin debasement to modern fiat) demonstrates that simplicity, not complexity, creates durable stores of value"
+        ],
+        "confidence": 0.8,
+        "speakerId": "Michael Saylor",
+        "round": 2
+      },
+      {
+        "id": "atk-30",
+        "fromArgId": "arg-14",
+        "toArgId": "arg-13",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-13",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's lack of formal governance mechanisms makes its long-term monetary policy less credible, not more, because informal governance through social consensus is more vulnerable to capture and less transparent than explicit on-chain coordination.",
+        "rationale": "Bitcoin has experienced multiple contentious governance crises (blocksize wars, SegWit2x, Taproot activation) that required resolution through informal social consensus rather than formal mechanisms",
+        "evidence": [
+          "Bitcoin's blocksize debate (2015-2017) resulted in a contentious hard fork (Bitcoin Cash) demonstrating that informal governance does not prevent splits",
+          "Ethereum successfully executed the most complex protocol transition in crypto history (The Merge) through formal coordination mechanisms",
+          "Historical monetary standards (gold standard, Bretton Woods) failed partly due to inability to adapt governance to changing economic conditions"
+        ],
+        "confidence": 0.8,
+        "speakerId": "Vitalik Buterin",
+        "round": 2
+      },
+      {
+        "id": "atk-31",
+        "fromArgId": "arg-15",
+        "toArgId": "arg-14",
+        "type": "rebut",
+        "target": {
+          "argId": "arg-14",
+          "component": "claim",
+          "index": 0
+        },
+        "counterProposition": "Bitcoin's informal governance through contentious social consensus creates superior long-term monetary policy credibility compared to Ethereum's explicit governance mechanisms, because high coordination costs make supply cap changes effectively impossible.",
+        "rationale": "Bitcoin's governance crises (blocksize wars, Taproot activation) required years of contentious debate and created enormous social and economic costs, demonstrating that changing Bitcoin protocol fundamentals faces prohibitively high barriers",
+        "evidence": [
+          "Bitcoin's blocksize debate lasted from 2015-2017 and resulted in contentious hard forks (Bitcoin Cash, Bitcoin SV) rather than protocol changes, demonstrating the immense difficulty of altering Bitcoin's core properties",
+          "Ethereum successfully coordinated the DAO fork in 2016 and the PoS transition in 2022, both of which altered network economics, proving that explicit governance enables monetary policy flexibility",
+          "Bitcoin's 21 million supply cap has remained unchanged since 2009 despite multiple governance crises, while Ethereum's issuance schedule has been modified multiple times through EIP processes"
+        ],
+        "confidence": 0.8,
+        "speakerId": "Michael Saylor",
+        "round": 2
+      }
+    ],
+    "validationResults": [
+      {
+        "attackId": "atk-0",
+        "valid": true,
+        "attackStrength": 0.75,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-1",
+        "valid": true,
+        "attackStrength": 0.7,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-2",
+        "valid": true,
+        "attackStrength": 0.65,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-3",
+        "valid": true,
+        "attackStrength": 0.6,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-4",
+        "valid": true,
+        "attackStrength": 0.75,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-5",
+        "valid": true,
+        "attackStrength": 0.8,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-6",
+        "valid": true,
+        "attackStrength": 0.65,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-7",
+        "valid": true,
+        "attackStrength": 0.7,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-8",
+        "valid": true,
+        "attackStrength": 0.65,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-9",
+        "valid": true,
+        "attackStrength": 0.6,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-10",
+        "valid": true,
+        "attackStrength": 0.8,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-11",
+        "valid": true,
+        "attackStrength": 0.7,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-12",
+        "valid": true,
+        "attackStrength": 0.6,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-13",
+        "valid": true,
+        "attackStrength": 0.65,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-14",
+        "valid": true,
+        "attackStrength": 0.65,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-15",
+        "valid": true,
+        "attackStrength": 0.6,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-16",
+        "valid": true,
+        "attackStrength": 0.6,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-17",
+        "valid": true,
+        "attackStrength": 0.65,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-18",
+        "valid": true,
+        "attackStrength": 0.6,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-19",
+        "valid": true,
+        "attackStrength": 0.65,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-20",
+        "valid": true,
+        "attackStrength": 0.6,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-21",
+        "valid": true,
+        "attackStrength": 0.6,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-22",
+        "valid": true,
+        "attackStrength": 0.55,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-23",
+        "valid": true,
+        "attackStrength": 0.6,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-24",
+        "valid": true,
+        "attackStrength": 0.8,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-25",
+        "valid": true,
+        "attackStrength": 0.8,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-26",
+        "valid": true,
+        "attackStrength": 0.8,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-27",
+        "valid": true,
+        "attackStrength": 0.8,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-28",
+        "valid": true,
+        "attackStrength": 0.8,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-29",
+        "valid": true,
+        "attackStrength": 0.8,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-30",
+        "valid": true,
+        "attackStrength": 0.8,
+        "corrections": null
+      },
+      {
+        "attackId": "atk-31",
+        "valid": true,
+        "attackStrength": 0.8,
+        "corrections": null
+      }
+    ],
+    "groundedExtension": [
+      "arg-8",
+      "arg-10",
+      "arg-11",
+      "arg-13",
+      "arg-15"
+    ],
+    "preferredExtensions": [
+      [
+        "arg-8",
+        "arg-11",
+        "arg-12",
+        "arg-14",
+        "arg-0",
+        "arg-1",
+        "arg-2",
+        "arg-3"
+      ],
+      [
+        "arg-8",
+        "arg-11",
+        "arg-12",
+        "arg-14",
+        "arg-4",
+        "arg-5",
+        "arg-6"
+      ]
+    ],
+    "labelling": {
+      "labels": {
+        "arg-0": "UNDEC",
+        "arg-1": "UNDEC",
+        "arg-2": "UNDEC",
+        "arg-3": "UNDEC",
+        "arg-4": "UNDEC",
+        "arg-5": "UNDEC",
+        "arg-6": "UNDEC",
+        "arg-7": "OUT",
+        "arg-8": "IN",
+        "arg-9": "OUT",
+        "arg-10": "IN",
+        "arg-11": "IN",
+        "arg-12": "OUT",
+        "arg-13": "IN",
+        "arg-14": "OUT",
+        "arg-15": "IN"
+      }
+    },
+    "round": 0
+  },
+  "transcript": [
+    {
+      "personaId": "Michael Saylor",
+      "dialogue": "Vitalik's framing of 'specific threat models' fundamentally misunderstands what a store of value is. A store of value isn't a hedging instrument against particular risks—it's the base layer property that maintains purchasing power across all time horizons. Bitcoin doesn't just protect against state censorship; it's the first asset in history that cannot be debased by any entity, making it the universal solution to monetary entropy. The idea that we need different stores of value for different threats is precisely the fiat mindset that Bitcoin obsoletes.",
+      "round": 1,
+      "turnIndex": 0
+    },
+    {
+      "personaId": "Vitalik Buterin",
+      "dialogue": "Saylor's claim that 'absolute scarcity protects against all forms of monetary debasement' conflates supply-side scarcity with demand-side value preservation. A fixed supply schedule protects against supply inflation but offers zero protection against demand collapse—if Bitcoin adoption stagnates or reverses due to superior alternatives, regulatory capture, or shifting coordination equilibria, its purchasing power can decline arbitrarily regardless of the 21 million cap. Gold maintained value for millennia not through scarcity alone but through persistent demand driven by industrial utility, jewelry demand, and central bank coordination; Bitcoin's value depends entirely on continued belief in its monetary properties, making it vulnerable to coordination failures that scarcity cannot prevent. Confidence: 0.85",
+      "round": 1,
+      "turnIndex": 1
+    },
+    {
+      "personaId": "Michael Saylor",
+      "dialogue": "Vitalik's demand-side collapse argument proves too much — by this logic, no asset can ever be a store of value because all require persistent demand. Gold's 'industrial utility' represents less than 10% of annual demand; the other 90% is monetary and jewelry demand driven by the same belief coordination that underpins Bitcoin. The difference is that gold's supply inflates 1-2% annually while Bitcoin's is capped absolutely. His framework would have predicted gold's failure as a store of value the moment industrial demand weakened, yet it persisted for five millennia precisely because scarcity + belief is sufficient. Bitcoin improves on this by making the scarcity mathematically inviolable rather than geologically constrained. Confidence: 0.92",
+      "round": 1,
+      "turnIndex": 2
+    },
+    {
+      "personaId": "Michael Saylor",
+      "dialogue": "Vitalik's 'demand collapse' framework is analytically empty because it reduces to tautology: 'Bitcoin could fail if people stop wanting it.' But this applies identically to every store of value in existence—gold, real estate, art, fiat currency. The relevant question isn't whether demand *could* theoretically collapse, but what properties make demand *durable* across time. Bitcoin's absolute scarcity creates a Nash equilibrium where rational actors must hold it precisely because others will, making coordination around Bitcoin strictly more stable than coordination around assets with elastic supply that constantly erodes holder confidence. His argument confuses theoretical possibility with practical probability. Confidence: 0.94",
+      "round": 1,
+      "turnIndex": 3
+    },
+    {
+      "personaId": "Vitalik Buterin",
+      "dialogue": "Saylor's Nash equilibrium framing is theoretically elegant but empirically falsified by the history of coordination equilibria shifts. Myspace had network effects, Betamax had technical merit, and the gold standard had centuries of Schelling point status—yet all were displaced when superior coordination mechanisms emerged. His argument assumes Bitcoin's scarcity creates a *stable* equilibrium, but stability requires more than just scarcity; it requires that no alternative asset can offer a superior bundle of monetary properties. Ethereum's programmability enables yield generation, DeFi composability, and credible neutrality for smart contract settlement—properties that create economic incentives beyond pure scarcity. If rational actors can coordinate around an asset that offers scarcity *plus* productive utility, the Nash equilibrium shifts regardless of Bitcoin's fixed supply. Confidence: 0.78",
+      "round": 2,
+      "turnIndex": 4
+    },
+    {
+      "personaId": "Michael Saylor",
+      "dialogue": "Vitalik's Ethereum comparison inadvertently proves my point. He claims programmability creates 'productive utility' that could shift coordination equilibria, but this fundamentally confuses a store of value with a technology platform. Gold doesn't compete with semiconductor manufacturing despite silicon's superior utility for computation—they serve different functions. Bitcoin's lack of programmability isn't a deficiency; it's the architectural choice that makes its monetary properties credible. Every additional feature is an additional attack surface that compromises the absolute scarcity thesis. Ethereum's complexity means its monetary policy can and has changed (the transition from POW to POS altered issuance), proving it cannot serve as the base layer store of value precisely because its 'superior bundle' requires ongoing governance that Bitcoin's simplicity eliminates. Confidence: 0.96",
+      "round": 2,
+      "turnIndex": 5
+    },
+    {
+      "personaId": "Vitalik Buterin",
+      "dialogue": "Saylor's claim that Bitcoin's simplicity eliminates governance requirements fundamentally misunderstands the nature of protocol governance. Bitcoin has experienced contentious governance crises—the blocksize wars, Taproot activation debates, and ongoing discussions about covenant opcodes—that demonstrate governance is unavoidable in any living protocol. The difference is that Bitcoin's governance happens through social consensus and economic signaling rather than on-chain mechanisms, making it *less transparent* and *more vulnerable* to capture by mining cartels and core developer groups. Ethereum's on-chain governance and explicit roadmap make governance legible and contestable, which is precisely what long-term credibility requires. Confidence: 0.82",
+      "round": 2,
+      "turnIndex": 6
+    },
+    {
+      "personaId": "Michael Saylor",
+      "dialogue": "Vitalik's governance transparency argument inverts reality. Bitcoin's governance crises—blocksize wars, Taproot—resolved precisely because informal social consensus creates *higher* switching costs than formal mechanisms. When governance is expensive and contentious, monetary policy becomes credibly sticky. Ethereum's 'legible' governance enabled the DAO fork reversal and the PoS transition that altered issuance—both proving that explicit coordination mechanisms make monetary policy *less* credible over civilizational timescales because they lower the activation energy for change. The difficulty of changing Bitcoin is the feature that makes its 21 million cap trustworthy forever. Confidence: 0.95",
+      "round": 2,
+      "turnIndex": 7
+    }
+  ],
+  "tokenUsage": {
+    "inputTokens": 61330,
+    "outputTokens": 12736
+  },
+  "duration": 243714
+}

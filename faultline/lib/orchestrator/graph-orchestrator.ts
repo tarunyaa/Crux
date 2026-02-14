@@ -1,7 +1,6 @@
 import type {
   SSEEvent,
   PersonaId,
-  AgentStance,
 } from '@/lib/types'
 import type {
   Argument,
@@ -9,9 +8,7 @@ import type {
   ValidationResult,
   Labelling,
 } from '@/lib/types/graph'
-import { decomposeClaims } from './claims'
 import { initializeAgents } from './agents'
-import type { Agent } from './agents'
 import { completeJSON } from '@/lib/llm/client'
 import {
   initialArgumentPrompt,
@@ -35,15 +32,8 @@ const TABLE_ID = 0
 // ─── LLM Response Schemas ───────────────────────────────────
 
 interface InitialArgResponse {
-  stances: {
-    claimId: string
-    stance: 'pro' | 'con' | 'uncertain'
-    confidence: number
-    reasoning: string
-  }[]
   arguments: {
     claim: string
-    relatedClaimId?: string
     premises: string[]
     assumptions: string[]
     evidence: string[]
@@ -91,25 +81,20 @@ export async function* runGraph(config: GraphConfig): AsyncGenerator<SSEEvent> {
   const { topic, personaIds, debateId, maxRounds = MAX_ROUNDS } = config
 
   try {
-    // ── Step 1: Decompose topic ──
-    yield { type: 'status', phase: 'claims', message: 'Decomposing topic into testable claims...' }
-    const claims = await decomposeClaims(topic, debateId)
-    yield { type: 'debate_start', debateId, claims }
-
-    // ── Step 2: Initialize agents ──
+    // ── Step 1: Initialize agents ──
     yield { type: 'status', phase: 'agents', message: `Loading ${personaIds.length} persona contracts...` }
     const agents = await initializeAgents(personaIds)
+    yield { type: 'debate_start', debateId, claims: [] }
     yield { type: 'table_assigned', tableId: TABLE_ID, personaIds }
 
-    // ── Step 3: Round 0 — Initial arguments ──
+    // ── Step 2: Round 0 — Initial arguments ──
     yield { type: 'status', phase: 'arguments', message: 'Generating initial arguments...' }
 
     let graphState = createGraphState(topic)
     let argCounter = 0
     let attackCounter = 0
-    const argClaimMap = new Map<string, string>() // argId → most relevant claimId
 
-    // Parallel: each persona generates initial arguments
+    // Parallel: each persona generates initial arguments directly from the topic
     const initPromises = personaIds.map(async (pid) => {
       const agent = agents.get(pid)!
       const excerpts = agent.contract.anchorExcerpts ?? []
@@ -118,20 +103,17 @@ export async function* runGraph(config: GraphConfig): AsyncGenerator<SSEEvent> {
         system: agent.systemPrompt,
         messages: [{
           role: 'user',
-          content: initialArgumentPrompt(topic, claims, excerpts),
+          content: initialArgumentPrompt(topic, excerpts),
         }],
         model: 'sonnet',
         maxTokens: 2048,
         temperature: 0.7,
       })
 
-      return { personaId: pid, arguments: result.arguments, stances: result.stances ?? [] }
+      return { personaId: pid, arguments: result.arguments }
     })
 
     const initResults = await Promise.all(initPromises)
-
-    // Track per-persona stances across rounds
-    const personaStances = new Map<PersonaId, Map<string, AgentStance>>()
 
     for (const result of initResults) {
       const newArgs: Argument[] = result.arguments.map(a => ({
@@ -144,50 +126,13 @@ export async function* runGraph(config: GraphConfig): AsyncGenerator<SSEEvent> {
         round: 0,
       }))
 
-      // Map arguments to their related claims
-      for (const [i, a] of result.arguments.entries()) {
-        if (a.relatedClaimId && newArgs[i]) {
-          argClaimMap.set(newArgs[i].id, a.relatedClaimId)
-        }
-      }
-
       graphState = addArguments(graphState, newArgs)
 
-      // Emit arguments_submitted
       yield {
         type: 'arguments_submitted',
         personaId: result.personaId,
         arguments: newArgs,
         round: 0,
-      }
-
-      // Build stances from LLM response
-      const stances: AgentStance[] = claims.map(claim => {
-        const llmStance = result.stances.find(s => s.claimId === claim.id)
-        return {
-          personaId: result.personaId,
-          claimId: claim.id,
-          stance: llmStance?.stance ?? 'uncertain' as const,
-          confidence: Math.max(0, Math.min(1, llmStance?.confidence ?? 0.5)),
-          round: 0,
-        }
-      })
-
-      // Store stances for later use during attacks
-      const stanceMap = new Map<string, AgentStance>()
-      for (const s of stances) stanceMap.set(s.claimId, s)
-      personaStances.set(result.personaId, stanceMap)
-
-      const reasonings = result.stances.map(s => ({
-        claimId: s.claimId,
-        reasoning: s.reasoning ?? '',
-      }))
-
-      yield {
-        type: 'initial_stance',
-        personaId: result.personaId,
-        stances,
-        reasonings,
       }
     }
 
@@ -195,7 +140,7 @@ export async function* runGraph(config: GraphConfig): AsyncGenerator<SSEEvent> {
     graphState = recomputeSemantics(graphState)
     graphState = { ...graphState, round: 0 }
 
-    // ── Step 4: Attack rounds ──
+    // ── Step 3: Attack rounds ──
     let previousLabellingSnapshot = serializeLabelling(graphState.labelling)
 
     for (let round = 1; round <= maxRounds; round++) {
@@ -395,55 +340,10 @@ export async function* runGraph(config: GraphConfig): AsyncGenerator<SSEEvent> {
         round,
       }
 
-      // ── 4e. Backward compat: emit agent_turn per validated attack ──
+      // ── 4e. Convergence check ──
       const validAttacks = dedupedAttacks.filter(atk =>
         validations.some(v => v.attackId === atk.id && v.valid)
       )
-
-      for (const atk of validAttacks) {
-        const content = atk.counterProposition
-
-        // Find the most relevant claim for this attack
-        const targetClaimId = argClaimMap.get(atk.toArgId)
-          ?? argClaimMap.get(atk.fromArgId)
-          ?? claims[0]?.id ?? ''
-
-        // Use this persona's actual stance, not hardcoded 'con'
-        const speakerStanceMap = personaStances.get(atk.speakerId)
-        const speakerStance = speakerStanceMap?.get(targetClaimId)
-
-        const allStances = claims.map(c => {
-          const s = speakerStanceMap?.get(c.id)
-          return {
-            personaId: atk.speakerId,
-            claimId: c.id,
-            stance: s?.stance ?? ('uncertain' as const),
-            confidence: s?.confidence ?? 0.5,
-            round,
-          }
-        })
-
-        yield {
-          type: 'agent_turn',
-          personaId: atk.speakerId,
-          tableId: TABLE_ID,
-          content,
-          stance: {
-            personaId: atk.speakerId,
-            claimId: targetClaimId,
-            stance: speakerStance?.stance ?? 'uncertain',
-            confidence: atk.confidence,
-            round,
-          },
-          stances: allStances,
-          round,
-        }
-
-        // Map counter-argument to same claim
-        argClaimMap.set(atk.fromArgId, targetClaimId)
-      }
-
-      // ── 4f. Convergence check ──
       const newLabellingSnapshot = serializeLabelling(graphState.labelling)
       const labellingStable = newLabellingSnapshot === previousLabellingSnapshot
       const validEdgeCount = validAttacks.length
@@ -486,7 +386,7 @@ export async function* runGraph(config: GraphConfig): AsyncGenerator<SSEEvent> {
       if (converged) break
     }
 
-    // ── Step 5: Extract output (pure code, no LLM) ──
+    // ── Step 4: Extract output (pure code, no LLM) ──
     yield { type: 'status', phase: 'output', message: 'Computing debate results from graph...' }
 
     const graphOutput = extractGraphOutput(graphState)

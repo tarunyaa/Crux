@@ -2,10 +2,12 @@
 
 import { useEffect, useState, useRef } from 'react'
 import { useDebateStream } from '@/lib/hooks/useDebateStream'
+import { useDebateV2Stream } from '@/lib/hooks/useDebateV2Stream'
 import type { DebateMode } from '@/lib/types'
 import HexAvatar from '@/components/HexAvatar'
 import SuitIcon from '@/components/SuitIcon'
 import AgentPolygon from '@/components/AgentPolygon'
+import ArgumentGraph from '@/components/ArgumentGraph'
 import DebateReplay from '@/components/DebateReplay'
 
 interface PersonaMeta {
@@ -66,10 +68,16 @@ function graphLabelBadge(label: string) {
 }
 
 export default function MatchClient({ topic, personaIds, personaMetas, mode = 'blitz', save = false }: MatchClientProps) {
+  // Use v2 for v2 mode
+  if (mode === 'v2') {
+    return <MatchClientV2 topic={topic} personaIds={personaIds} personaMetas={personaMetas} />
+  }
+
   const [state, { start, abort }] = useDebateStream()
   const feedRef = useRef<HTMLDivElement>(null)
   const [autoScroll, setAutoScroll] = useState(true)
   const [showAnalysis, setShowAnalysis] = useState(false)
+  const [graphView, setGraphView] = useState<'thread' | 'graph'>('thread')
 
   const metaMap = new Map(personaMetas.map(p => [p.id, p]))
 
@@ -179,6 +187,32 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
             className="rounded-xl border border-card-border bg-card-bg p-4 space-y-4 overflow-y-auto"
             style={{ minHeight: '400px' }}
           >
+            {/* Graph mode view tabs */}
+            {mode === 'graph' && state.graph && state.graph.arguments.length > 0 && (
+              <div className="flex items-center gap-1 mb-3 border-b border-card-border pb-2">
+                <button
+                  onClick={() => setGraphView('thread')}
+                  className={`px-3 py-1 text-xs font-semibold rounded-t transition-colors ${
+                    graphView === 'thread'
+                      ? 'text-accent border-b-2 border-accent'
+                      : 'text-muted hover:text-foreground/70'
+                  }`}
+                >
+                  Thread
+                </button>
+                <button
+                  onClick={() => setGraphView('graph')}
+                  className={`px-3 py-1 text-xs font-semibold rounded-t transition-colors ${
+                    graphView === 'graph'
+                      ? 'text-accent border-b-2 border-accent'
+                      : 'text-muted hover:text-foreground/70'
+                  }`}
+                >
+                  Graph
+                </button>
+              </div>
+            )}
+
             {/* Loading state */}
             {(state.status === 'connecting' || (state.status === 'streaming' && state.messages.length === 0 && state.initialStances.length === 0 && !graphThreads)) && (
               <div className="flex flex-col items-center justify-center h-40 text-muted gap-3">
@@ -190,8 +224,21 @@ export default function MatchClient({ topic, personaIds, personaMetas, mode = 'b
               </div>
             )}
 
-            {/* ── GRAPH MODE FEED ── */}
-            {mode === 'graph' && graphThreads && graphThreads.length > 0 && (
+            {/* ── GRAPH MODE: Visual Graph ── */}
+            {mode === 'graph' && graphView === 'graph' && state.graph && state.graph.arguments.length > 0 && (
+              <div style={{ height: 500 }}>
+                <ArgumentGraph
+                  arguments={state.graph.arguments}
+                  attacks={state.graph.attacks}
+                  validationResults={state.graph.validationResults}
+                  labelling={state.graph.labelling}
+                  personaMetas={personaMetas}
+                />
+              </div>
+            )}
+
+            {/* ── GRAPH MODE FEED (Thread view) ── */}
+            {mode === 'graph' && graphView === 'thread' && graphThreads && graphThreads.length > 0 && (
               <div className="space-y-5">
                 {graphThreads.map((thread) => {
                   const argMeta = metaMap.get(thread.argument.speakerId)
@@ -698,4 +745,265 @@ function buildGraphThreads(graph: NonNullable<ReturnType<typeof useDebateStream>
       attacks,
     }
   })
+}
+
+// ─── V2 Match Client ────────────────────────────────────────
+
+const PHASE_LABELS: Record<number, string> = {
+  1: 'Opening Statements',
+  2: 'Free Exchange',
+  3: 'Crux Seeking',
+  4: 'Resolution'
+}
+
+const MOVE_COLORS: Record<string, string> = {
+  CLAIM: 'text-blue-400',
+  CHALLENGE: 'text-red-400',
+  CLARIFY: 'text-purple-400',
+  CONCEDE: 'text-green-400',
+  REFRAME: 'text-yellow-400',
+  PROPOSE_CRUX: 'text-orange-400',
+}
+
+function MatchClientV2({ topic, personaIds, personaMetas }: { topic: string; personaIds: string[]; personaMetas: PersonaMeta[] }) {
+  const [state, { start, abort }] = useDebateV2Stream()
+  const chatRef = useRef<HTMLDivElement>(null)
+  const [autoScroll, setAutoScroll] = useState(true)
+
+  const personaMap = new Map(personaMetas.map(p => [p.id, p]))
+
+  useEffect(() => {
+    start({ topic, personaIds, maxTurns: 30 })
+    return () => { abort() }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // Auto-scroll
+  useEffect(() => {
+    if (autoScroll && chatRef.current) {
+      chatRef.current.scrollTop = chatRef.current.scrollHeight
+    }
+  }, [state.transcript.length, autoScroll])
+
+  const handleScroll = () => {
+    if (!chatRef.current) return
+    const { scrollTop, scrollHeight, clientHeight } = chatRef.current
+    const atBottom = scrollHeight - scrollTop - clientHeight < 60
+    setAutoScroll(atBottom)
+  }
+
+  const statusLabel = state.running ? 'Debate in progress' : state.complete ? 'Debate complete' : state.error ? 'Error' : 'Ready'
+  const statusColor = state.running ? 'text-accent' : state.complete ? 'text-accent' : state.error ? 'text-danger' : 'text-muted'
+
+  return (
+    <div className="space-y-6">
+      {/* Header */}
+      <div>
+        <h1 className="text-2xl font-bold truncate">{topic}</h1>
+        <div className="flex items-center gap-3">
+          <p className={`text-sm flex items-center ${statusColor}`}>
+            {state.running && (
+              <span className="inline-block w-2 h-2 rounded-full bg-accent mr-2 animate-pulse" />
+            )}
+            {statusLabel}
+          </p>
+          <span className="text-xs px-2 py-0.5 rounded-full bg-card-border text-muted uppercase tracking-wider">
+            v2
+          </span>
+          {state.currentPhase && (
+            <span className="text-xs px-2 py-0.5 rounded-full bg-primary/20 text-primary">
+              Phase {state.currentPhase}: {PHASE_LABELS[state.currentPhase]}
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* Main grid: chat + sidebar */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        {/* Chat Area */}
+        <div className="lg:col-span-2">
+          <div
+            ref={chatRef}
+            onScroll={handleScroll}
+            className="rounded-xl border border-card-border bg-card-bg p-4 space-y-4 overflow-y-auto"
+            style={{ minHeight: '500px', maxHeight: '70vh' }}
+          >
+            {state.transcript.length === 0 && !state.running && (
+              <div className="h-full flex items-center justify-center text-muted">
+                Waiting to start debate...
+              </div>
+            )}
+
+            {state.transcript.map((turn, idx) => {
+              const persona = personaMap.get(turn.personaId)
+              const isPhaseStart = idx === 0 || state.transcript[idx - 1].phase !== turn.phase
+
+              return (
+                <div key={turn.turnIndex}>
+                  {/* Phase Marker */}
+                  {isPhaseStart && (
+                    <div className="flex items-center gap-3 my-6">
+                      <div className="h-px flex-1 bg-card-border" />
+                      <span className="text-sm font-medium text-primary px-3 py-1 bg-primary/10 rounded-full">
+                        Phase {turn.phase}: {PHASE_LABELS[turn.phase]}
+                      </span>
+                      <div className="h-px flex-1 bg-card-border" />
+                    </div>
+                  )}
+
+                  {/* Steering Hint */}
+                  {turn.steeringHint && (
+                    <div className="mb-3 px-4 py-2 bg-yellow-900/20 border border-yellow-800/30 rounded-lg">
+                      <p className="text-xs text-yellow-400/80">
+                        <span className="font-semibold">Moderator:</span> {turn.steeringHint}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Chat Message */}
+                  <div className="flex gap-3">
+                    <div className="flex-shrink-0">
+                      <HexAvatar src={persona?.picture ?? ''} alt={persona?.name ?? turn.personaId} size={40} />
+                    </div>
+
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-baseline gap-2 mb-1">
+                        <span className="font-semibold text-sm">{persona?.name ?? turn.personaId}</span>
+                        <span className={`text-xs font-mono ${MOVE_COLORS[turn.move] ?? 'text-muted'}`}>
+                          {turn.move}
+                        </span>
+                      </div>
+                      <div className="bg-card border border-card-border rounded-lg px-4 py-3">
+                        <p className="text-sm leading-relaxed">{turn.dialogue}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+
+            {state.running && (
+              <div className="flex items-center gap-2 text-muted text-sm py-4">
+                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                <span>Thinking...</span>
+              </div>
+            )}
+          </div>
+
+          {!autoScroll && (
+            <button
+              onClick={() => {
+                setAutoScroll(true)
+                if (chatRef.current) {
+                  chatRef.current.scrollTop = chatRef.current.scrollHeight
+                }
+              }}
+              className="mt-2 px-4 py-2 bg-primary/20 text-primary text-sm rounded-lg hover:bg-primary/30 transition-colors"
+            >
+              ↓ Scroll to latest
+            </button>
+          )}
+        </div>
+
+        {/* Sidebar - Insights */}
+        <div className="space-y-4">
+          {/* Graph Stats */}
+          {state.graph && (
+            <div className="bg-card border border-card-border rounded-lg p-4">
+              <h3 className="font-semibold mb-3">Argument Graph</h3>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-muted">Arguments</span>
+                  <span>{state.graph.arguments.length}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted">Attacks</span>
+                  <span>{state.graph.attacks.length}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-green-400">IN</span>
+                  <span className="text-green-400">{state.graphStats.inCount}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-red-400">OUT</span>
+                  <span className="text-red-400">{state.graphStats.outCount}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-yellow-400">UNDEC</span>
+                  <span className="text-yellow-400">{state.graphStats.undecCount}</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Concessions */}
+          {state.concessions.length > 0 && (
+            <div className="bg-card border border-card-border rounded-lg p-4">
+              <h3 className="font-semibold mb-3">Concessions</h3>
+              <div className="space-y-3">
+                {state.concessions.slice(-3).reverse().map((c, idx) => (
+                  <div key={idx} className="text-xs">
+                    <div className="font-semibold text-green-400">{personaMap.get(c.personaId)?.name}</div>
+                    <div className="text-muted mt-1">{c.effect}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Crux */}
+          {state.cruxProposals.length > 0 && (
+            <div className="bg-card border border-card-border rounded-lg p-4">
+              <h3 className="font-semibold mb-3">Proposed Crux</h3>
+              <div className="space-y-3">
+                {state.cruxProposals.slice(-1).map((crux, idx) => (
+                  <div key={idx} className="text-xs">
+                    <div className="font-semibold text-orange-400">{personaMap.get(crux.personaId)?.name}</div>
+                    <div className="text-muted mt-1 italic">"{crux.statement.slice(0, 120)}..."</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Final Results */}
+          {state.complete && state.output && (
+            <div className="bg-card border border-card-border rounded-lg p-4">
+              <h3 className="font-semibold mb-3">Results</h3>
+              <div className="space-y-3 text-sm">
+                <div>
+                  <div className="text-muted mb-1">Regime</div>
+                  <div className="font-mono text-xs">{state.output.regime}</div>
+                  <div className="text-muted text-xs mt-1">{state.output.regimeDescription}</div>
+                </div>
+
+                {state.output.crux && (
+                  <div>
+                    <div className="text-muted mb-1">Crux</div>
+                    <div className="text-xs italic">"{state.output.crux.statement.slice(0, 150)}..."</div>
+                  </div>
+                )}
+
+                <div>
+                  <div className="text-muted mb-1">Performance</div>
+                  <div className="text-xs space-y-1">
+                    <div>Duration: {(state.output.duration / 1000).toFixed(1)}s</div>
+                    <div>Turns: {state.transcript.length}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Error */}
+      {state.error && (
+        <div className="rounded-xl border border-danger/50 bg-danger/10 p-4">
+          <h2 className="text-sm font-semibold text-danger">Error</h2>
+          <p className="text-sm text-foreground/80 mt-2">{state.error}</p>
+        </div>
+      )}
+    </div>
+  )
 }

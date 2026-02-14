@@ -52,6 +52,53 @@ export function addAttacks(
   }
 }
 
+// ─── Update Argument ────────────────────────────────────────
+
+export function updateArgument(
+  state: ArgumentationGraphState,
+  id: string,
+  updates: { claim?: string; assumptions?: string[]; premises?: string[]; evidence?: string[] },
+): ArgumentationGraphState {
+  return {
+    ...state,
+    arguments: state.arguments.map(a =>
+      a.id === id ? { ...a, ...updates } : a
+    ),
+  }
+}
+
+// ─── Remove Argument ────────────────────────────────────────
+
+export function removeArgument(
+  state: ArgumentationGraphState,
+  argId: string,
+): ArgumentationGraphState {
+  const removedAttackIds = new Set(
+    state.attacks
+      .filter(atk => atk.fromArgId === argId || atk.toArgId === argId)
+      .map(atk => atk.id)
+  )
+  return {
+    ...state,
+    arguments: state.arguments.filter(a => a.id !== argId),
+    attacks: state.attacks.filter(atk => !removedAttackIds.has(atk.id)),
+    validationResults: state.validationResults.filter(v => !removedAttackIds.has(v.attackId)),
+  }
+}
+
+// ─── Remove Attack ──────────────────────────────────────────
+
+export function removeAttack(
+  state: ArgumentationGraphState,
+  attackId: string,
+): ArgumentationGraphState {
+  return {
+    ...state,
+    attacks: state.attacks.filter(atk => atk.id !== attackId),
+    validationResults: state.validationResults.filter(v => v.attackId !== attackId),
+  }
+}
+
 // ─── Deduplicate Attacks ────────────────────────────────────
 
 /**

@@ -5,7 +5,7 @@ import type { Argument, Attack, ValidationResult, Labelling } from './graph'
 export type PersonaId = string
 export type DeckId = string
 export type Stance = 'pro' | 'con' | 'uncertain'
-export type DebateMode = 'blitz' | 'classical' | 'graph'
+export type DebateMode = 'blitz' | 'classical' | 'graph' | 'v2'
 
 // ─── Personas ─────────────────────────────────────────────────
 

@@ -12,10 +12,12 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:seed": "tsx scripts/seed-db.ts",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "debate": "tsx scripts/run-debate.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.74.0",
+    "d3-force": "^3.0.0",
     "dotenv": "^17.2.4",
     "drizzle-orm": "^0.45.1",
     "next": "16.1.6",
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/d3-force": "^3.0.10",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

@@ -1,4 +1,3 @@
-import type { Claim } from '@/lib/types'
 import type { AnchorExcerpt } from '@/lib/types'
 import type { Argument, Labelling, Label } from '@/lib/types/graph'
 
@@ -6,24 +5,16 @@ import type { Argument, Labelling, Label } from '@/lib/types/graph'
 
 export function initialArgumentPrompt(
   topic: string,
-  claims: Claim[],
   anchorExcerpts: AnchorExcerpt[],
 ): string {
-  const claimList = claims
-    .map((c, i) => `  ${i + 1}. [${c.id}] ${c.text}`)
-    .join('\n')
-
   const excerptBlock = anchorExcerpts.length > 0
     ? `\n## Your Prior Statements (for reference)\n${anchorExcerpts.slice(0, 3).map(e => `- "${e.content}" (${e.source}, ${e.date})`).join('\n')}\n`
     : ''
 
-  return `You are participating in a structured argumentation debate. Generate 2-4 formal arguments addressing the claims below.
+  return `You are participating in a structured argumentation debate. Generate 2-4 formal arguments on the topic below, drawing on your personality, experience, and beliefs.
 
 ## Topic
 "${topic}"
-
-## Claims Under Debate
-${claimList}
 ${excerptBlock}
 ## Instructions
 For each argument:
@@ -32,24 +23,13 @@ For each argument:
 - **assumptions**: 0-2 underlying assumptions your argument rests on
 - **evidence**: 0-2 specific pieces of evidence (name sources)
 
-Each argument should address one or more of the claims above. Be specific and decisive.
-
-Also provide your initial stance on EACH claim under debate.
+Be specific, decisive, and true to your perspective. Each argument should present a distinct point.
 
 Respond with ONLY valid JSON:
 {
-  "stances": [
-    {
-      "claimId": "claim id",
-      "stance": "pro" | "con" | "uncertain",
-      "confidence": 0.0-1.0,
-      "reasoning": "one sentence explaining your position"
-    }
-  ],
   "arguments": [
     {
       "claim": "your proposition",
-      "relatedClaimId": "the claim ID this argument most directly addresses",
       "premises": ["premise 1", "premise 2"],
       "assumptions": ["assumption if any"],
       "evidence": ["specific evidence if any"]
@@ -57,7 +37,7 @@ Respond with ONLY valid JSON:
   ]
 }
 
-You MUST include one stance entry for EVERY claim. Return 2-4 arguments. No text outside the JSON.`
+Return 2-4 arguments. No text outside the JSON.`
 }
 
 // ─── Attack Generation ──────────────────────────────────────
