@@ -112,7 +112,7 @@ export default function PersonaCard({
           bg-card-bg card-shadow relative overflow-hidden
           ${borderClass}
         `}
-        style={{ aspectRatio: '3/4' }}
+        style={{ aspectRatio: '5/7' }}
         onClick={() => {
           if (selectable && !locked && !disabled && onToggle) {
             onToggle(id)
@@ -125,44 +125,44 @@ export default function PersonaCard({
         )}
 
         {/* Card face inner area */}
-        <div className={`card-face rounded-lg h-full flex flex-col items-center justify-between p-3 relative ${locked ? 'opacity-60' : ''}`}>
+        <div className={`card-face rounded-lg h-full flex flex-col items-center justify-between p-2 relative ${locked ? 'opacity-60' : ''}`}>
           {/* Top-left corner: rank + suit */}
-          <div className="absolute top-2 left-2.5 flex flex-col items-center leading-none">
-            <span className={`text-xs font-bold ${isRed ? 'text-accent' : 'text-foreground/50'}`}>
+          <div className="absolute top-1.5 left-2 flex flex-col items-center leading-none">
+            <span className={`text-[11px] font-bold ${isRed ? 'text-accent' : 'text-foreground/50'}`}>
               {rank}
             </span>
-            <span className={`text-[10px] ${isRed ? 'text-accent' : 'text-foreground/50'}`}>
+            <span className={`text-[9px] ${isRed ? 'text-accent' : 'text-foreground/50'}`}>
               {suit}
             </span>
           </div>
 
           {/* Bottom-right corner: rank + suit (inverted) */}
-          <div className="absolute bottom-2 right-2.5 flex flex-col items-center leading-none rotate-180">
-            <span className={`text-xs font-bold ${isRed ? 'text-accent' : 'text-foreground/50'}`}>
+          <div className="absolute bottom-1.5 right-2 flex flex-col items-center leading-none rotate-180">
+            <span className={`text-[11px] font-bold ${isRed ? 'text-accent' : 'text-foreground/50'}`}>
               {rank}
             </span>
-            <span className={`text-[10px] ${isRed ? 'text-accent' : 'text-foreground/50'}`}>
+            <span className={`text-[9px] ${isRed ? 'text-accent' : 'text-foreground/50'}`}>
               {suit}
             </span>
           </div>
 
           {/* Center content */}
-          <div className="flex-1 flex flex-col items-center justify-center gap-2 py-4">
+          <div className="flex-1 flex flex-col items-center justify-center gap-1.5 py-3">
             <HexAvatar
               src={locked ? undefined : picture || undefined}
               alt={locked ? 'Locked' : name}
-              size={56}
+              size={44}
               fallbackInitial={locked ? '?' : name.charAt(0)}
             />
             <div className="text-center min-w-0 w-full px-1">
-              <p className="font-semibold text-sm truncate">
+              <p className="font-semibold text-[11px] leading-tight line-clamp-2">
                 {locked ? 'Locked' : name}
               </p>
               {handle && !locked && (
-                <p className="text-muted text-xs truncate">{handle}</p>
+                <p className="text-muted text-[9px] truncate mt-0.5">{handle}</p>
               )}
               {locked && (
-                <p className="text-muted text-xs">Unavailable</p>
+                <p className="text-muted text-[10px] mt-0.5">Unavailable</p>
               )}
             </div>
           </div>

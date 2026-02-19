@@ -73,7 +73,7 @@ export interface AgentStance {
   round: number
 }
 
-// ─── Blackboard ───────────────────────────────────────────────
+// ─── Debate Results ───────────────────────────────────────────
 
 export interface Crux {
   id: string
@@ -88,21 +88,6 @@ export interface FlipCondition {
   condition: string
   claimId: string
   triggered: boolean
-}
-
-export interface Dispute {
-  claimId: string
-  sides: { personaId: PersonaId; stance: Stance; confidence: number }[]
-}
-
-export interface BlackboardState {
-  topic: string
-  claims: Claim[]
-  cruxCandidates: Crux[]
-  disputes: Dispute[]
-  flipConditions: FlipCondition[]
-  openQuestions: string[]
-  stances: AgentStance[]
 }
 
 // ─── Convergence ──────────────────────────────────────────────
@@ -142,15 +127,6 @@ export interface DebateOutput {
   flipConditions: FlipCondition[]
   evidenceLedger: EvidenceLedgerEntry[]
   resolutionPaths: ResolutionPath[]
-}
-
-// ─── Action Plans (Classical Mode) ───────────────────────────
-
-export interface ActionPlan {
-  personaId: PersonaId
-  action: 'speak' | 'interrupt' | 'listen'
-  urgency: number
-  intent: string
 }
 
 // ─── SSE Events ───────────────────────────────────────────────

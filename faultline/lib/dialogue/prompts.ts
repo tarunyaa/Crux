@@ -24,6 +24,7 @@ export function microTurnPrompt(
   intent: TurnIntent,
   personaNames: Map<string, string>,
   chatStyleHint: string,
+  recentHistory: string,
 ): string {
   const targetName = replyToMessage
     ? personaNames.get(replyToMessage.personaId) ?? 'them'
@@ -43,9 +44,13 @@ export function microTurnPrompt(
 
   const lengthGuide = TURN_LENGTH_GUIDE[turnType]
 
+  const historyBlock = recentHistory
+    ? `Recent thread:\n${recentHistory}\n\n---\n`
+    : ''
+
   return `Group chat.
 
-${replyContext}
+${historyBlock}${replyContext}
 
 Your style: ${chatStyleHint}
 Your move: ${intentInstruction}

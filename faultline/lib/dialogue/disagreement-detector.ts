@@ -11,6 +11,7 @@ interface DetectionResult {
   hasDisagreement: boolean
   personas: string[]
   topic: string
+  shortLabel: string
   confidence: number
 }
 
@@ -20,6 +21,7 @@ interface DetectionResult {
 interface CandidateRecord {
   personas: string[]          // Normalized pair (sorted)
   topic: string
+  shortLabel: string
   consecutiveWindows: number  // How many consecutive checks detected this
   confidence: number          // Latest confidence score
   firstSeenAt: number
@@ -47,6 +49,7 @@ export class CandidateRegistry {
   update(
     detectedPersonas: string[],
     topic: string,
+    shortLabel: string,
     confidence: number,
     activeRoomPairs: Set<string>,
   ): CandidateRecord | null {
@@ -54,8 +57,8 @@ export class CandidateRegistry {
     const existing = this.records.get(key)
 
     const record: CandidateRecord = existing
-      ? { ...existing, consecutiveWindows: existing.consecutiveWindows + 1, confidence, topic, lastSeenAt: Date.now() }
-      : { personas: [...detectedPersonas].sort(), topic, consecutiveWindows: 1, confidence, firstSeenAt: Date.now(), lastSeenAt: Date.now() }
+      ? { ...existing, consecutiveWindows: existing.consecutiveWindows + 1, confidence, topic, shortLabel, lastSeenAt: Date.now() }
+      : { personas: [...detectedPersonas].sort(), topic, shortLabel, consecutiveWindows: 1, confidence, firstSeenAt: Date.now(), lastSeenAt: Date.now() }
 
     this.records.set(key, record)
 
@@ -118,7 +121,7 @@ export class CandidateRegistry {
 export async function detectDisagreements(
   messages: DialogueMessage[],
   personaNames: Map<string, string>,
-): Promise<{ personas: string[]; topic: string; confidence: number } | null> {
+): Promise<{ personas: string[]; topic: string; shortLabel: string; confidence: number } | null> {
   if (messages.length < 4) return null
 
   // 10-message window (up from 6)
@@ -144,6 +147,7 @@ RESPOND WITH JSON:
   "hasDisagreement": boolean,
   "personas": ["name1", "name2"],
   "topic": "specific claim they disagree on (not vague like 'Bitcoin')",
+  "shortLabel": "2-4 word label e.g. 'Yield timeline risk' or 'Adoption vs price'",
   "confidence": 0.0-1.0
 }`
 
@@ -171,7 +175,7 @@ RESPOND WITH JSON:
 
     if (personaIds.length < 2) return null
 
-    return { personas: personaIds, topic: result.topic, confidence: result.confidence }
+    return { personas: personaIds, topic: result.topic, shortLabel: result.shortLabel ?? result.topic.split(' ').slice(0, 4).join(' '), confidence: result.confidence }
   } catch (error) {
     console.error('[detector] Error:', error)
     return null

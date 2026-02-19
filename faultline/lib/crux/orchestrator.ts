@@ -52,7 +52,7 @@ export async function* runCruxRoom(
   const entryMsg: CruxMessage = {
     id: `${roomId}-sys-entry`,
     type: 'system',
-    content: `You disagree on "${question}". Figure out why. You can leave when you both know what the real disagreement is.`,
+    content: `"${question}"`,
     timestamp: Date.now(),
   }
   room.messages.push(entryMsg)
@@ -78,7 +78,7 @@ export async function* runCruxRoom(
           content: `You're entering the crux room about: "${question}"\n\nState your position clearly in 2-3 sentences. What do you believe and why?\n\nRESPOND WITH JSON:\n{\n  "content": "your position statement"\n}`,
         }],
         model: 'sonnet',
-        maxTokens: 250,
+        maxTokens: 150,
         temperature: 0.9,
       })
 
@@ -133,7 +133,7 @@ export async function* runCruxRoom(
           content: cruxTurnPrompt(question, history, lastOpponentMsg.content, listenerName),
         }],
         model: 'sonnet',
-        maxTokens: 300,
+        maxTokens: 200,
         temperature: 0.9,
       })
 
@@ -162,7 +162,7 @@ export async function* runCruxRoom(
           system: 'You analyze debate conversations to determine if the core disagreement has been surfaced.',
           messages: [{ role: 'user', content: cruxExitCheckPrompt(question, conversationText) }],
           model: 'haiku',
-          maxTokens: 100,
+          maxTokens: 200,
           temperature: 0.2,
         })
 
@@ -170,7 +170,7 @@ export async function* runCruxRoom(
           const doneMsg: CruxMessage = {
             id: `${roomId}-sys-done`,
             type: 'system',
-            content: `Crux identified. ${exitCheck.reason}`,
+            content: `Crux surfaced. Closing room.`,
             timestamp: Date.now(),
           }
           room.messages.push(doneMsg)

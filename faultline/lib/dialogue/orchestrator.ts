@@ -93,6 +93,7 @@ export async function* runDialogue(
       replyToMessage,
       turn.intent,
       personaNames,
+      state.messages.slice(-5, -1),
     )
 
     if (!content) {
@@ -125,6 +126,7 @@ export async function* runDialogue(
         const readyCandidate = registry.update(
           detected.personas,
           detected.topic,
+          detected.shortLabel,
           detected.confidence,
           activeRoomPairs,
         )
@@ -150,6 +152,7 @@ export async function* runDialogue(
             type: 'crux_room_spawning',
             roomId,
             question: readyCandidate.topic,
+            label: readyCandidate.shortLabel,
             personas: readyCandidate.personas,
           }
 

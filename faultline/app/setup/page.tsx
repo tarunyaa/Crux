@@ -6,7 +6,6 @@ import SuitIcon from "@/components/SuitIcon";
 export default async function SetupPage() {
   const [decks, personas] = await Promise.all([getDecks(), getPersonas()]);
 
-  // Check contract availability for each persona
   const personaInfos = await Promise.all(
     personas.map(async (p) => {
       let hasContract = false;

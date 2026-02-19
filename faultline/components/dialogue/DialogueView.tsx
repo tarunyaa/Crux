@@ -38,7 +38,7 @@ export function DialogueView({ topic, personaIds, personaNames, personaAvatars }
 
   if (error) {
     return (
-      <div className="h-screen flex items-center justify-center bg-background">
+      <div className="px-6 py-8 max-w-7xl mx-auto">
         <div className="max-w-md p-6 bg-card-bg border border-accent/40 rounded-xl text-accent">
           <h2 className="font-bold mb-2">Error</h2>
           <p className="text-sm text-muted">{error}</p>
@@ -48,16 +48,19 @@ export function DialogueView({ topic, personaIds, personaNames, personaAvatars }
   }
 
   return (
-    <ThreeColumnLayout
-      topic={topic}
-      messages={messages}
-      cruxCards={cruxCards}
-      activeCruxRooms={activeCruxRooms}
-      completedRooms={completedRooms}
-      personaNames={personaNames}
-      personaAvatars={personaAvatars}
-      isRunning={isRunning}
-      isComplete={isComplete}
-    />
+    <div className="px-6 py-8 max-w-7xl mx-auto">
+      <ThreeColumnLayout
+        topic={topic}
+        personaIds={personaIds}
+        messages={messages}
+        cruxCards={cruxCards}
+        activeCruxRooms={activeCruxRooms}
+        completedRooms={completedRooms}
+        personaNames={personaNames}
+        personaAvatars={personaAvatars}
+        isRunning={isRunning}
+        isComplete={isComplete}
+      />
+    </div>
   )
 }

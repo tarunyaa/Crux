@@ -19,6 +19,7 @@ export async function generateMicroTurn(
   replyToMessage: DialogueMessage | null,
   intent: TurnIntent,
   personaNames: Map<string, string>,
+  recentMessages: DialogueMessage[] = [],
 ): Promise<string | null> {
   const fullPersonality = buildSystemPrompt(contract, persona)
   const voiceConstraints = buildVoiceConstraints(persona.name)
@@ -28,7 +29,11 @@ export async function generateMicroTurn(
 
 ${CHAT_TONE_EXAMPLES}`
 
-  const prompt = microTurnPrompt(replyToMessage, intent, personaNames, chatStyleHint)
+  const recentHistory = recentMessages
+    .map(m => `> ${personaNames.get(m.personaId) ?? m.personaId}: "${m.content}"`)
+    .join('\n')
+
+  const prompt = microTurnPrompt(replyToMessage, intent, personaNames, chatStyleHint, recentHistory)
 
   try {
     const response = await completeJSON<{ utterance: string }>({

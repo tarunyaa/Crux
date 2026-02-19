@@ -1,8 +1,7 @@
 'use client'
 
 // ─── Message Thread ───────────────────────────────────────────
-// Flat list with inline @mention for replies.
-// Uses project CSS vars (black/red/white theme).
+// Compact group-chat style. Avatar + name + message, tight rows.
 
 import type { DialogueMessage } from '@/lib/dialogue/types'
 
@@ -14,9 +13,9 @@ interface MessageThreadProps {
 
 export function MessageThread({ messages, personaNames, personaAvatars }: MessageThreadProps) {
   return (
-    <div className="space-y-3">
+    <div className="space-y-1.5">
       {messages.map(msg => (
-        <MessageBubble
+        <MessageRow
           key={msg.id}
           message={msg}
           messages={messages}
@@ -28,18 +27,17 @@ export function MessageThread({ messages, personaNames, personaAvatars }: Messag
   )
 }
 
-interface MessageBubbleProps {
+interface MessageRowProps {
   message: DialogueMessage
   messages: DialogueMessage[]
   personaNames: Map<string, string>
   personaAvatars: Map<string, string>
 }
 
-function MessageBubble({ message, messages, personaNames, personaAvatars }: MessageBubbleProps) {
+function MessageRow({ message, messages, personaNames, personaAvatars }: MessageRowProps) {
   const name = personaNames.get(message.personaId) ?? message.personaId
   const avatarUrl = personaAvatars.get(message.personaId)
 
-  // If this is a reply, find who they replied to
   const replyTarget = message.replyTo
     ? messages.find(m => m.id === message.replyTo)
     : null
@@ -48,39 +46,36 @@ function MessageBubble({ message, messages, personaNames, personaAvatars }: Mess
     : null
 
   return (
-    <div className="group flex gap-3">
-      {/* Avatar */}
-      <div className="flex-shrink-0 pt-0.5">
+    <div className="group flex gap-2 px-3 py-1 hover:bg-surface rounded-md transition-colors">
+      {/* Avatar — 24px compact */}
+      <div className="flex-shrink-0 mt-0.5">
         {avatarUrl ? (
           <img
             src={avatarUrl}
             alt={name}
-            className="w-8 h-8 rounded-full object-cover border border-card-border"
+            className="w-6 h-6 rounded-full object-cover border border-card-border"
           />
         ) : (
-          <div className="w-8 h-8 rounded-full bg-card-bg border border-card-border flex items-center justify-center">
-            <span className="text-xs font-bold text-accent">{name.charAt(0).toUpperCase()}</span>
+          <div className="w-6 h-6 rounded-full bg-card-bg border border-card-border flex items-center justify-center">
+            <span className="text-[10px] font-bold text-accent">{name.charAt(0).toUpperCase()}</span>
           </div>
         )}
       </div>
 
-      {/* Message */}
-      <div className="flex-1 min-w-0 rounded-lg p-3 bg-card-bg border border-card-border hover:border-muted/40 transition-colors">
-        {/* Header */}
-        <div className="flex items-baseline gap-2 mb-1.5">
-          <span className="text-sm font-semibold text-accent">{name}</span>
+      {/* Content */}
+      <div className="flex-1 min-w-0">
+        {/* Name row */}
+        <div className="flex items-baseline gap-1.5">
+          <span className="text-xs font-semibold text-accent leading-none">{name}</span>
           {replyTargetName && (
-            <span className="text-xs text-muted">
-              → {replyTargetName}
-            </span>
+            <span className="text-[10px] text-muted">→ {replyTargetName}</span>
           )}
-          <span className="text-xs text-muted opacity-50 ml-auto">
+          <span className="text-[10px] text-muted opacity-40 ml-auto">
             {formatTime(message.timestamp)}
           </span>
         </div>
-
-        {/* Content */}
-        <p className="text-foreground text-sm leading-relaxed">
+        {/* Message text — tight line height */}
+        <p className="text-xs text-foreground leading-snug mt-0.5">
           {message.content}
         </p>
       </div>

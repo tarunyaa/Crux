@@ -32,7 +32,7 @@ export type DialogueEvent =
   | { type: 'dialogue_start'; topic: string; personas: PersonaId[] }
   | { type: 'message_posted'; message: DialogueMessage }
   | { type: 'disagreement_detected'; candidate: DisagreementCandidate }
-  | { type: 'crux_room_spawning'; roomId: string; question: string; personas: PersonaId[] }
+  | { type: 'crux_room_spawning'; roomId: string; question: string; label: string; personas: PersonaId[] }
   | { type: 'crux_message'; roomId: string; message: CruxMessage }
   | { type: 'crux_card_posted'; card: CruxCard }
   | { type: 'dialogue_complete'; finalState: DialogueState }

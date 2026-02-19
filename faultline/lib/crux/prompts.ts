@@ -24,11 +24,11 @@ As you argue, push toward:
 When you think you've found the core of it, name it directly.
 
 Rules:
+- Keep every message to 2-3 sentences MAX — no monologues
 - Be direct and combative — this is where you REALLY argue
-- Challenge specific claims, bring evidence, ask pointed questions
-- Don't accept vague answers — push for precision
+- Challenge specific claims, ask pointed questions
 - Respond to what was just said, don't repeat your whole position
-- No politeness, no "I understand your perspective", no hedging
+- No politeness, no hedging
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`
 }
 
@@ -49,11 +49,11 @@ ${conversationHistory}
 ${opponentName} just said:
 "${lastMessage}"
 
-Argue back. Push toward understanding WHY you disagree.
+Argue back in 2-3 sentences. Push toward WHY you disagree.
 
 RESPOND WITH JSON:
 {
-  "content": "your response (direct, specific, combative)"
+  "content": "your response (2-3 sentences, direct, specific)"
 }`
 }
 
@@ -73,7 +73,7 @@ Has the core disagreement been surfaced? A crux is surfaced when:
 RESPOND WITH JSON:
 {
   "cruxSurfaced": boolean,
-  "reason": "brief explanation"
+  "reason": "5 words max"
 }`
 }
 
@@ -105,7 +105,7 @@ Extract faithfully from what was actually said — don't invent positions.
 
 RESPOND WITH JSON:
 {
-  "cruxStatement": "the core disagreement in one sentence",
+  "cruxStatement": "3-5 word noun phrase naming the crux — like a debate motion title, not a question (e.g. 'Bitcoin as reserve asset', 'AI capex bubble risk', 'Crypto regulatory capture')",
   "disagreementType": "horizon|evidence|values|definition|claim|premise",
   "diagnosis": "1-2 sentence explanation of root cause",
   "resolved": boolean,

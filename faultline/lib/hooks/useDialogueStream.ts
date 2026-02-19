@@ -7,6 +7,7 @@ import type { CruxCard, CruxMessage } from '@/lib/crux/types'
 export interface ActiveCruxRoom {
   roomId: string
   question: string
+  label: string
   personas: string[]
   messages: CruxMessage[]
   status: 'arguing' | 'complete'
@@ -92,6 +93,7 @@ export function useDialogueStream(
                     newRooms.set(event.roomId, {
                       roomId: event.roomId,
                       question: event.question,
+                      label: event.label,
                       personas: event.personas,
                       messages: [],
                       status: 'arguing',

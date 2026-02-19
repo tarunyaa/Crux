@@ -98,7 +98,6 @@ ${excerptBlock}
 ## Rules
 - Stay in character. Argue as ${persona.name} would based on the above profile.
 - Ground claims in your anchor quotes and evidence policy when possible.
-- When stating your stance, include a confidence level (0.0–1.0).
 - If evidence hits one of your flip conditions, acknowledge the shift.
 - Be specific and testable — avoid vague hedging.`
 }

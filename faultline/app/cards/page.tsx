@@ -77,41 +77,33 @@ export default async function CardsPage() {
 
         {/* Active decks */}
         {decks.map((deck, deckIdx) => (
-          <div key={deck.id} className="space-y-2">
+          <div key={deck.id} className="space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <SuitIcon suit={suitOrder[deckIdx % 4]} className="text-sm" />
                 <h2 className="text-base font-semibold">{deck.name}</h2>
               </div>
-              <span className="text-muted text-xs">
-                {deck.personaIds.length} personas
-              </span>
+              <span className="text-muted text-xs">{deck.personaIds.length} personas</span>
             </div>
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+            <div className="flex gap-3 overflow-x-auto pb-2">
               {deck.personaIds.map((pid) => {
                 const persona = personaMap.get(pid);
                 if (!persona) {
                   return (
-                    <PersonaCard
-                      key={pid}
-                      id={pid}
-                      name={pid}
-                      handle=""
-                      picture=""
-                      locked
-                      compact
-                    />
+                    <div key={pid} className="w-28 flex-shrink-0">
+                      <PersonaCard id={pid} name={pid} handle="" picture="" locked />
+                    </div>
                   );
                 }
                 return (
-                  <PersonaCard
-                    key={pid}
-                    id={persona.id}
-                    name={persona.name}
-                    handle={persona.twitterHandle}
-                    picture={persona.twitterPicture}
-                    compact
-                  />
+                  <div key={pid} className="w-28 flex-shrink-0">
+                    <PersonaCard
+                      id={persona.id}
+                      name={persona.name}
+                      handle={persona.twitterHandle}
+                      picture={persona.twitterPicture}
+                    />
+                  </div>
                 );
               })}
             </div>
@@ -126,7 +118,7 @@ export default async function CardsPage() {
 
         {/* Coming Soon decks */}
         {COMING_SOON_DECKS.map((deck, deckIdx) => (
-          <div key={deck.id} className="space-y-2 opacity-60">
+          <div key={deck.id} className="space-y-3 opacity-60">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <SuitIcon suit={suitOrder[(decks.length + deckIdx) % 4]} className="text-sm" />
@@ -135,21 +127,13 @@ export default async function CardsPage() {
                   Soon
                 </span>
               </div>
-              <span className="text-muted text-xs">
-                {deck.personas.length} personas
-              </span>
+              <span className="text-muted text-xs">{deck.personas.length} personas</span>
             </div>
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+            <div className="flex gap-3 overflow-x-auto pb-2">
               {deck.personas.map((p) => (
-                <PersonaCard
-                  key={p.name}
-                  id={p.name}
-                  name={p.name}
-                  handle={p.handle}
-                  picture=""
-                  locked
-                  compact
-                />
+                <div key={p.name} className="w-28 flex-shrink-0">
+                  <PersonaCard id={p.name} name={p.name} handle={p.handle} picture="" locked />
+                </div>
               ))}
             </div>
           </div>
