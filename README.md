@@ -1,193 +1,238 @@
-# Faultline
+# Crux
 
-**Automated Insight Generation through Multi-Agent Socratic Seminar Grounded in Real Voices**
+**Structured adversarial debate between AI persona agents — built to surface the minimal disagreement structure of any complex topic.**
 
-Faultline is a debate room for the internet's most influential viewpoints. Spin up AI agents with personas modeled on real-world voices and watch them challenge each other in a structured Socratic seminar. Instead of forcing agreement, Faultline distills debates into **cruxes** (the core assumptions driving disagreement) and **flip conditions** (the evidence that would actually change each position).
+Crux runs high-fidelity persona agents through a natural group chat. When two agents disagree persistently, a focused sub-dialogue called a **crux room** automatically spawns. The room runs until the agents have diagnosed the root of their disagreement and stated concrete flip conditions. It terminates with a **crux card** — a structured artifact naming the core assumption driving the split, each side's position, and exactly what would change their mind.
 
-## How It Works
+The core hypothesis: expert disagreement is almost never "I think X, you think not-X." It's a clash over a prior assumption — a time horizon, an evidential standard, a value weighting — that neither party has made fully explicit. Crux is designed to surface that.
 
-1. **Enter a topic** (e.g. "Is NVIDIA overvalued at current multiples?")
-2. **Pick your voices** from curated persona decks, or let Faultline auto-select a balanced room
-3. **Watch the debate** unfold in real time via SSE streaming
-4. **Get structured output**: cruxes, fault lines, flip conditions, and an evidence ledger
+---
 
-Each persona is backed by an inspectable **contract** generated from public material (X/Twitter, Substack, transcripts) covering:
+## Features
 
-- **Personality** -- voice, rhetorical habits, confidence style
-- **Bias** -- priors, blind spots, failure modes
-- **Stakes** -- incentives, preferred outcomes, exposure
-- **Epistemology** -- how they form beliefs
-- **Time Horizon** -- what timeframe their reasoning optimizes for
-- **Flip Conditions** -- what evidence would change their mind
+### Dialogue Layer
 
-## Tech Stack
+Personas engage in a natural round-robin group chat on any topic you provide. Each persona is driven by a **contract** — a structured belief state encoding their priors, confidence levels, reasoning style, and stated flip conditions, generated from their actual public writing. Conversations flow organically without a moderator or forced turn structure.
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | Next.js 16 (App Router, TypeScript) |
-| Frontend | React 19, Tailwind CSS 4 |
-| LLM | Anthropic Claude (Sonnet 4.5 / Haiku 4.5) |
-| Database | PostgreSQL 17 + pgvector |
-| ORM | Drizzle ORM |
-| Persona Ingestion | X API v2, Substack RSS, Claude |
-| Runtime | Node.js 18+ |
+### Disagreement Detection
 
-## Project Structure
+Every few messages, a lightweight Haiku call scans a 10-message rolling window for substantive disagreements. Detection is conservative — a disagreement must satisfy all of:
 
-```
-Faultline/
-├── docker-compose.yml              # Postgres + pgvector (port 5433)
-├── docs/                           # Design docs (overview, features, implementation)
-│
-└── faultline/                      # Next.js application
-    ├── app/
-    │   ├── page.tsx                # Lobby (landing page)
-    │   ├── cards/                  # Browse decks & persona cards
-    │   ├── setup/                  # Hand builder (select personas + topic)
-    │   ├── match/[id]/             # Game room (live debate viewer)
-    │   └── api/debate/route.ts     # POST SSE endpoint
-    │
-    ├── lib/
-    │   ├── types/index.ts          # Shared TypeScript types
-    │   ├── db/                     # Drizzle schema & client
-    │   ├── llm/                    # Anthropic SDK wrapper & prompt templates
-    │   ├── orchestrator/           # Debate engine (blitz + classical modes)
-    │   │   ├── blitz.ts            # Parallel round-based debate
-    │   │   ├── classical.ts        # Sequential urgency-based debate
-    │   │   ├── claims.ts           # Topic -> testable claims
-    │   │   ├── blackboard.ts       # Shared debate state
-    │   │   ├── convergence.ts      # Entropy & stop conditions
-    │   │   ├── context.ts          # Per-turn context assembly
-    │   │   ├── agents.ts           # Agent init & stance generation
-    │   │   └── output.ts           # Final structured output
-    │   └── personas/loader.ts      # File-based persona loader
-    │
-    ├── components/                 # React components
-    ├── data/seed/                  # Persona contracts & corpus data
-    └── scripts/
-        ├── build-personas.ts       # Automated persona builder
-        └── seed-db.ts              # Seed Postgres from file data
-```
+- Two personas taking **clearly opposing positions** on the same specific claim
+- At least 2 back-and-forth exchanges on that topic (not passing comments)
+- Both personas **committed** to a position (not just asking questions)
+- Confidence ≥ 0.8
+- Detected in **2 consecutive windows** (~6 messages on the same pair)
 
-## Getting Started
+A `CandidateRegistry` tracks disagreement candidates over time with decay: candidates that aren't re-detected in consecutive windows lose score and don't spawn a room. A 5-minute cooldown prevents the same pair from re-entering a room immediately after one closes.
 
-### Prerequisites
+### Crux Rooms
 
-- Node.js 18+
-- Docker & Docker Compose
-- An [Anthropic API key](https://console.anthropic.com/)
-- (Optional) X/Twitter API bearer token for persona building
+When a disagreement clears the spawn threshold, a crux room opens for that pair. The room runs as a focused bilateral exchange:
 
-### 1. Clone & Install
+1. Each persona opens with a 2–3 sentence position statement
+2. Free alternating exchange — each turn responds directly to the opponent's last argument
+3. An exit check fires every 2 full exchanges (from turn 3 onward) evaluating whether the crux has been surfaced
+4. Room closes when the exit check confirms the crux is identified, or after a 20-turn safety cap
+
+There is no forced moderator, no scripted phases — the crux must emerge from the argument itself.
+
+### Crux Cards
+
+When a room closes, a final extraction pass over the full transcript produces a **crux card** containing:
+
+- **Crux statement** — the single assumption driving the split, rewritten for precision
+- **Disagreement type** — one of: `claim` · `premise` · `evidence` · `values` · `horizon` · `definition`
+- **Diagnosis** — plain-language explanation of why the disagreement exists and what kind it is
+- **Per-persona data** — for each participant: position (YES / NO / NUANCED), their core reasoning, and an explicit **falsifier** (the specific evidence or condition that would flip their view)
+- **Resolved / unresolved** — whether the exchange reached agreement
+
+Cards are displayed as playing cards in a scrollable strip below the main chat and persist for the session.
+
+### Alignment Polygon
+
+A live SVG visualization in the sidebar maps all personas at polygon vertices with edges between every pair. Edges update in real time:
+
+- **Red glowing line** — active crux room between that pair
+- **Dashed muted line** — completed crux room (resolved or not)
+- **Speaker pulse ring** — highlights the persona who last spoke in main chat
+- **Faint background polygon** — always-on baseline connecting all vertices
+
+### Debate Results Panel
+
+When the debate ends, a results summary renders inline with:
+
+| Metric | Description |
+|---|---|
+| **Resolution %** | Share of crux cards marked resolved, with progress bar |
+| **Most Active** | Persona with the highest message count |
+| **Root Cause** | Dominant disagreement type across all crux cards |
+| **Deepest Clash** | The crux room with the most exchanges |
+
+### Benchmark Metrics
+
+Post-debate, Crux surfaces quantitative metrics from the evaluation suite described in the whitepaper:
+
+- **H — Disagreement Entropy**: `−Σ p_i · ln(p_i)` over the distribution of disagreement types. Lower = debate converged onto fewer fundamental axes. Higher = disagreements are scattered across many types.
+- **CCR — Crux Compression Rate**: `resolved / total cruxes`. Target ≥ 50%.
+- **IQS** and **CRR** are shown as placeholders — they require expert raters or multi-session data respectively.
+
+### Position Matrix
+
+A table showing each persona's position (YES / NO / NUANCED) across all crux cards from the session — a quick read on who stands where on every surfaced crux.
+
+### Fault Lines Summary
+
+A compact list of every completed crux room: the pair that clashed, the classified disagreement type, and resolved/unresolved status.
+
+### Persona Contracts
+
+Every persona is backed by a contract — generated from their public writing via `scripts/build-personas.ts` (X API + Substack RSS + Claude). Contracts encode:
+
+- Core beliefs and stated priors
+- Reasoning style and rhetorical tendencies
+- Confidence levels on key claims
+- Explicit flip conditions (what would change their mind)
+
+Contracts are stored in `data/seed/contracts/` as JSON and loaded at runtime. The database schema exists but is not used at runtime — contracts are always loaded from files.
+
+---
+
+## Quick Start
+
+**Prerequisites**: Node.js, Docker
 
 ```bash
-git clone https://github.com/your-org/faultline.git
-cd faultline/faultline
-npm install
-```
-
-### 2. Environment Variables
-
-Create `faultline/.env.local`:
-
-```env
-ANTHROPIC_API_KEY=sk-ant-...
-DATABASE_URL=postgresql://faultline:faultline@localhost:5433/faultline
-X_BEARER_TOKEN=AAAA...   # optional, for persona building
-```
-
-### 3. Start the Database
-
-From the repo root:
-
-```bash
+# 1. Start Postgres
 docker compose up -d
-```
 
-This starts PostgreSQL 17 with pgvector on port **5433**.
+# 2. Install dependencies
+cd crux
+npm install
 
-### 4. Initialize the Database
+# 3. Set environment variables
+cp .env.example .env.local
+# Add: ANTHROPIC_API_KEY, DATABASE_URL
 
-```bash
-npm run db:push    # Apply schema to Postgres
-npm run db:seed    # Seed personas from file data
-```
+# 4. Push DB schema
+npm run db:push
 
-### 5. Run the Dev Server
-
-```bash
+# 5. Run dev server
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Available Scripts
+Go to `/setup` to pick personas and a topic, then `/dialogue` to run a live debate.
 
-Run these from the `faultline/` directory:
+---
 
-| Script | Description |
-|--------|-------------|
-| `npm run dev` | Start dev server with hot reload |
-| `npm run build` | Production build |
-| `npm run start` | Run production build |
-| `npm run lint` | ESLint check |
-| `npm run db:push` | Apply Drizzle schema to Postgres |
-| `npm run db:generate` | Generate migrations from schema changes |
-| `npm run db:migrate` | Run Drizzle migrations |
-| `npm run db:seed` | Seed DB from file-based persona data |
-| `npm run db:studio` | Open Drizzle Studio (visual DB browser) |
-| `npm run build-personas` | Build persona contracts from X/Substack + Claude |
+## Routes
 
-## Debate Modes
+| Route | Description |
+|---|---|
+| `/` | Lobby |
+| `/setup` | Pick a deck, select personas, enter debate topic |
+| `/dialogue` | Live debate — chat feed, alignment polygon, crux rooms, crux cards |
+| `/cards` | Browse all persona contracts |
+| `/cards/[id]` | Individual persona contract detail |
+| `/debates` | Archive of historical debates |
+| `/debates/[id]` | Replay viewer |
 
-### Blitz Mode
+---
 
-All agents respond in parallel each round. Fast, high-throughput. Runs up to 5 rounds with convergence tracking (entropy, confidence distance, crux stability). Stops early if positions converge or diverge stably.
+## File Structure
 
-### Classical Mode
-
-Sequential turns with urgency-based speaker selection. Deeper, more deliberate. Each agent decides whether to speak, interrupt, or listen. Runs up to 15 turns.
-
-## API
-
-### `POST /api/debate`
-
-Starts a debate and returns a Server-Sent Events stream.
-
-**Request body:**
-
-```json
-{
-  "topic": "Should AI companies slow down frontier training?",
-  "personaIds": ["Elon Musk", "Sam Altman", "Yann LeCun"],
-  "mode": "blitz",
-  "save": true
-}
+```
+crux/                                    ← Next.js app (inside faultline/ directory)
+├── app/
+│   ├── api/dialogue/route.ts            # SSE endpoint — streams all debate events
+│   ├── dialogue/page.tsx                # Live debate view
+│   ├── setup/page.tsx                   # Persona + topic selection
+│   └── cards/                          # Persona browser
+│
+├── lib/
+│   ├── dialogue/
+│   │   ├── orchestrator.ts              # Main loop: runDialogue() async generator
+│   │   ├── agent.ts                     # Per-persona LLM call (generateMicroTurn)
+│   │   ├── disagreement-detector.ts     # Haiku scanning + CandidateRegistry
+│   │   └── prompts.ts                   # Natural short-turn chat prompts
+│   │
+│   ├── crux/
+│   │   ├── orchestrator.ts              # runCruxRoom(): free exchange + exit check + card
+│   │   ├── steelman.ts                  # Generate + validate steelmans
+│   │   ├── diagnosis.ts                 # Root cause classification
+│   │   ├── card-generator.ts            # Produces CruxCard from completed room
+│   │   └── prompts.ts                   # Crux-specific LLM prompts
+│   │
+│   ├── personas/loader.ts               # File-based persona + contract loader
+│   ├── llm/client.ts                    # Anthropic SDK wrapper (retry, JSON repair)
+│   └── hooks/useDialogueStream.ts       # Frontend SSE → React state
+│
+├── components/
+│   ├── dialogue/
+│   │   ├── DialogueView.tsx             # Top-level debate UI
+│   │   ├── ThreeColumnLayout.tsx        # Chat + sidebar + polygon + results
+│   │   └── MessageThread.tsx            # Threaded message display
+│   └── crux/
+│       ├── PlayingCard.tsx              # Crux card playing card display (expandable)
+│       └── CruxRoom.tsx                 # Live crux room message view
+│
+└── data/seed/
+    ├── personas.json                    # Persona list (id, name, handle, picture)
+    ├── deck-config.json                 # Deck definitions
+    ├── contracts/[Name].json            # PersonaContract per persona
+    └── corpus/[Name].json               # Raw scraped text (tweets, essays)
 ```
 
-**SSE event types:** `status`, `debate_start`, `initial_stance`, `agent_turn`, `blackboard_update`, `convergence_update`, `debate_complete`, `error`
+---
 
-## Persona Decks
+## SSE Event Stream
 
-Pre-built decks include:
+`POST /api/dialogue` streams events in order:
 
-- **Macroeconomic Trends** -- Chamath, Michael Burry, Cathie Wood, Aswath Damodaran, and more
-- **Crypto** -- Michael Saylor, Arthur Hayes, Brian Armstrong, Vitalik Buterin
-- **AI** -- Jim Fan, Garry Tan, Yann LeCun, Andrej Karpathy
-- **Famous Personalities** -- Elon Musk, Sam Altman, Satya Nadella, Mark Zuckerberg, Bill Gates
-- **Climate & Energy** -- Vaclav Smil, Alex Epstein, Jigar Shah, Michael Shellenberger
-- **Memory SuperCycle** -- Serenity, Dylan Patel, and more
+```
+dialogue_start
+dialogue_message          ← one per persona turn in main chat
+crux_room_start           ← when disagreement threshold is crossed
+crux_message              ← one per turn inside the crux room
+crux_card                 ← when a crux room closes
+dialogue_end
+```
 
-### Building Custom Personas
+---
+
+## LLM Architecture
+
+All calls go through `lib/llm/client.ts`:
+
+| Model | Used for |
+|---|---|
+| `claude-sonnet-4-6` | Persona turns, crux room exchanges, card extraction |
+| `claude-haiku-4-5` | Disagreement detection, exit checks |
+
+- Auto-retry on 429 / 500 / 529 with exponential backoff
+- `completeJSON<T>()` handles markdown fences and JSON truncation repair automatically
+
+---
+
+## Rebuilding Persona Contracts
+
+To regenerate contracts from live data (requires `X_BEARER_TOKEN`):
 
 ```bash
-# Build all decks defined in data/seed/deck-config.json
+cd crux
 npm run build-personas
-
-# Build a specific persona in a specific deck
-npm run build-personas -- --deck crypto --only "Michael Saylor"
 ```
 
-## License
+Scrapes X/Twitter + Substack RSS for each persona, then runs a Claude pass to generate their contract JSON.
 
-Private. All rights reserved.
+---
+
+## Env Vars
+
+```
+ANTHROPIC_API_KEY      # Required
+DATABASE_URL           # Postgres with pgvector
+X_BEARER_TOKEN         # Optional — only needed for build-personas
+```
