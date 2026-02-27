@@ -4,16 +4,23 @@
  * Injected into the persona's system prompt when entering a crux room.
  * Sits below their full personality prompt.
  */
-export function cruxRoomSystemPrompt(question: string, opponentName: string): string {
+export function cruxRoomSystemPrompt(
+  cruxQuestion: string,
+  opponentName: string,
+  originalTopic?: string,
+): string {
+  const topicLine = originalTopic
+    ? `\nThis arose in a debate about: "${originalTopic}". Stay relevant to the wider topic.`
+    : ''
+
   return `
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CRUX ROOM MODE
 
-You are in a focused crux room with ${opponentName}.
-You disagree on: "${question}"
-
-Your goal: figure out WHY you disagree. Keep going until you both understand the root cause.
+You are in a focused crux room about: "${cruxQuestion}"${topicLine}
+Your opponent is ${opponentName}. Find the root of your disagreement.
+Do NOT be agreeable just to end the conversation. If you disagree, say why.
 
 As you argue, push toward:
 - Are you using the same timeframe?
@@ -33,52 +40,115 @@ Rules:
 }
 
 /**
- * User-turn prompt for each crux room exchange.
+ * Phase 1: Position statement prompt
  */
-export function cruxTurnPrompt(
-  question: string,
-  conversationHistory: string,
-  lastMessage: string,
+export function positionStatementPrompt(cruxQuestion: string): string {
+  return `State your position on: "${cruxQuestion}"
+WHY do you hold this position? What evidence or reasoning supports it?
+Length: 2-3 sentences.
+
+Output ONLY JSON:
+{ "content": "your position statement" }`
+}
+
+/**
+ * Phase 2 early: Directed exchange — finding the specific disagreement
+ */
+export function earlyExchangePrompt(
+  cruxQuestion: string,
+  positionSummary: string,
+  recentExchanges: string,
+  lastOpponentStatement: string,
   opponentName: string,
 ): string {
-  return `Crux room: "${question}"
+  return `Crux room: "${cruxQuestion}"
 
-Conversation so far:
-${conversationHistory}
+Positions so far:
+${positionSummary}
 
-${opponentName} just said:
-"${lastMessage}"
+Recent exchange:
+${recentExchanges}
 
-Argue back in 2-3 sentences. Push toward WHY you disagree.
+${opponentName} just said: "${lastOpponentStatement}"
 
-RESPOND WITH JSON:
+Where SPECIFICALLY do you disagree with ${opponentName}'s reasoning? What evidence or assumption do they rely on that you reject?
+Length: 2-3 sentences.
+
+Output ONLY JSON:
+{ "content": "your response" }`
+}
+
+/**
+ * Phase 2 late: Steelman + update — after initial exchanges have mapped the disagreement
+ */
+export function lateExchangePrompt(
+  cruxQuestion: string,
+  positionSummary: string,
+  recentExchanges: string,
+  lastOpponentStatement: string,
+  opponentName: string,
+): string {
+  return `Crux room: "${cruxQuestion}"
+
+Positions so far:
+${positionSummary}
+
+Recent exchange:
+${recentExchanges}
+
+${opponentName} just said: "${lastOpponentStatement}"
+
+Consider ${opponentName}'s strongest argument. Steelman it briefly. Then explain why you STILL disagree — or where you've genuinely updated your view.
+Length: 2-4 sentences.
+
+Output ONLY JSON:
+{ "content": "your response" }`
+}
+
+/**
+ * Phase 3: Convergence check — classify the disagreement type
+ */
+export function convergenceCheckPrompt(
+  cruxQuestion: string,
+  conversationText: string,
+): string {
+  return `Crux room about: "${cruxQuestion}"
+
+Full exchange:
+${conversationText}
+
+In ONE sentence: what is the core thing these two cannot agree on?
+Is it a FACTUAL question (they disagree about what's true), a VALUES difference (they prioritize different things), or a DEFINITIONAL issue (they mean different things by the same word)?
+
+Output ONLY JSON:
 {
-  "content": "your response (2-3 sentences, direct, specific)"
+  "coreDisagreement": "one sentence",
+  "type": "factual|values|definitional",
+  "converged": true
 }`
 }
 
 /**
- * Checked every 2 full exchanges to see if the crux has been surfaced.
+ * Exit check — run every 2 full exchanges after turn 3
  */
-export function cruxExitCheckPrompt(question: string, conversation: string): string {
-  return `Crux room conversation about: "${question}"
+export function cruxExitCheckPrompt(question: string, conversationText: string): string {
+  return `Crux room about: "${question}"
 
-${conversation}
+${conversationText}
 
-Has the core disagreement been surfaced? A crux is surfaced when:
-- Both personas have named the specific point they can't agree on, OR
-- One persona has clearly changed their mind with a stated reason, OR
-- They've both acknowledged it comes down to an irreducible values or time-horizon difference
+Has the core disagreement been clearly surfaced? The crux is surfaced when:
+1. Both parties have identified the SPECIFIC claim, value, or definition they disagree on
+2. They're no longer discovering new ground — they're repeating positions
 
 RESPOND WITH JSON:
 {
   "cruxSurfaced": boolean,
-  "reason": "5 words max"
+  "reason": "brief explanation"
 }`
 }
 
 /**
- * Final extraction prompt — reads full conversation, produces card data.
+ * Final extraction — reads full conversation, produces card data
  */
 export function cruxExtractionPrompt(
   question: string,
@@ -88,28 +158,33 @@ export function cruxExtractionPrompt(
 ): string {
   const personasBlock = personaIds.map((id, i) => `"${id}": {
       "position": "YES|NO|NUANCED",
-      "reasoning": "their final stance in 1-2 sentences",
+      "reasoning": "their key argument in 1-2 sentences",
       "falsifier": "what would change their mind"
     }`).join(',\n    ')
 
-  return `Extract the crux card from this debate room conversation.
+  return `Extract a crux card from this debate room.
 
-Question: "${question}"
+Room topic: "${question}"
 
-Participants: ${personaNames.join(' vs ')}
-
-Conversation:
+Transcript:
 ${conversation}
 
-Extract faithfully from what was actually said — don't invent positions.
+Participants: ${personaNames.join(', ')}
+
+Extract:
+1. The precise crux statement (the specific thing they disagree on)
+2. Disagreement type: "empirical" (factual), "values" (priorities), "definition" (meaning), "claim" (logical), "premise" (assumption), "horizon" (timeframe)
+3. Each persona's position, reasoning, and what would change their mind (falsifier)
+4. Whether it was resolved
+5. A brief diagnosis of the root cause
 
 RESPOND WITH JSON:
 {
-  "cruxStatement": "3-5 word noun phrase naming the crux — like a debate motion title, not a question (e.g. 'Bitcoin as reserve asset', 'AI capex bubble risk', 'Crypto regulatory capture')",
+  "cruxStatement": "3-5 word noun phrase naming the crux",
   "disagreementType": "horizon|evidence|values|definition|claim|premise",
-  "diagnosis": "1-2 sentence explanation of root cause",
+  "diagnosis": "1-2 sentence root cause",
   "resolved": boolean,
-  "resolution": "what changed or why it's irreducible (null if unresolved)",
+  "resolution": "if resolved, what was agreed (null if unresolved)",
   "personas": {
     ${personasBlock}
   }

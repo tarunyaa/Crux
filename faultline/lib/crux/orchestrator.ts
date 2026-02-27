@@ -1,6 +1,6 @@
 // ─── Crux Room Orchestrator ──────────────────────────────────
-// Personas argue freely until the crux is surfaced or cap reached.
-// No phases, no external moderator — the crux must emerge from the conversation.
+// Three-phase crux room: position statements → directed exchange → convergence + card.
+// Bounded context (last 4 exchanges + position summary) instead of full history.
 
 import type { CruxRoom, CruxMessage, CruxCard, CruxEvent, PersonaId, DisagreementType, Position } from './types'
 import type { PersonaContract, Persona } from '@/lib/types'
@@ -8,12 +8,15 @@ import { loadContract, getPersona, buildSystemPrompt } from '@/lib/personas/load
 import { completeJSON } from '@/lib/llm/client'
 import {
   cruxRoomSystemPrompt,
-  cruxTurnPrompt,
+  positionStatementPrompt,
+  earlyExchangePrompt,
+  lateExchangePrompt,
+  convergenceCheckPrompt,
   cruxExitCheckPrompt,
   cruxExtractionPrompt,
 } from './prompts'
 
-const MAX_TURNS = 20  // Safety cap — room runs until crux surfaced or this limit
+const MAX_TURNS = 16  // Reduced from 20 — phases should converge faster
 
 export async function* runCruxRoom(
   roomId: string,
@@ -21,6 +24,7 @@ export async function* runCruxRoom(
   personaIds: PersonaId[],
   sourceMessages: string[],
   personaNames: Map<PersonaId, string>,
+  originalTopic?: string,
 ): AsyncGenerator<CruxEvent> {
   const room: CruxRoom = {
     id: roomId,
@@ -58,7 +62,10 @@ export async function* runCruxRoom(
   room.messages.push(entryMsg)
   yield { type: 'crux_message', roomId, message: entryMsg }
 
-  // ─── Opening Statements ─────────────────────────────────────
+  // Track positions for bounded context
+  const positions: Map<string, string> = new Map()
+
+  // ─── Phase 1: Position Statements ─────────────────────────
 
   for (const personaId of personaIds) {
     const contract = contracts.get(personaId)
@@ -68,19 +75,22 @@ export async function* runCruxRoom(
     const opponentId = personaIds.find(id => id !== personaId) ?? personaIds[0]
     const opponentName = personaNames.get(opponentId) ?? opponentId
 
-    const systemPrompt = buildSystemPrompt(contract, persona) + cruxRoomSystemPrompt(question, opponentName)
+    const systemPrompt = buildSystemPrompt(contract, persona) +
+      cruxRoomSystemPrompt(question, opponentName, originalTopic)
 
     try {
       const result = await completeJSON<{ content: string }>({
         system: systemPrompt,
         messages: [{
           role: 'user',
-          content: `You're entering the crux room about: "${question}"\n\nState your position clearly in 2-3 sentences. What do you believe and why?\n\nRESPOND WITH JSON:\n{\n  "content": "your position statement"\n}`,
+          content: positionStatementPrompt(question),
         }],
         model: 'sonnet',
-        maxTokens: 150,
+        maxTokens: 200,
         temperature: 0.75,
       })
+
+      positions.set(personaId, result.content)
 
       const msg: CruxMessage = {
         id: `${roomId}-${personaId}-opening`,
@@ -96,12 +106,12 @@ export async function* runCruxRoom(
     }
   }
 
-  // ─── Free Exchange Loop ──────────────────────────────────────
+  // ─── Phase 2: Directed Exchange ────────────────────────────
 
   let turn = 0
-  let speakerIdx = 0  // alternates 0/1
+  let speakerIdx = 0
 
-  while (turn < MAX_TURNS) {
+  while (turn < MAX_TURNS - 2) {  // Reserve 2 turns for convergence
     const speakerId = personaIds[speakerIdx]
     const listenerId = personaIds[1 - speakerIdx] ?? personaIds[0]
     const listenerName = personaNames.get(listenerId) ?? listenerId
@@ -117,25 +127,36 @@ export async function* runCruxRoom(
 
     if (!lastOpponentMsg) { speakerIdx = 1 - speakerIdx; turn++; continue }
 
-    // Build readable history
-    const history = room.messages
+    // Build BOUNDED context: position summary + last 4 exchanges only
+    const recentExchanges = room.messages
       .filter(m => m.type === 'persona')
+      .slice(-4)
       .map(m => `${personaNames.get(m.personaId!) ?? m.personaId!}: ${m.content}`)
       .join('\n\n')
 
-    const systemPrompt = buildSystemPrompt(contract, persona) + cruxRoomSystemPrompt(question, listenerName)
+    const positionSummary = Array.from(positions.entries())
+      .map(([id, pos]) => `${personaNames.get(id) ?? id}: ${pos}`)
+      .join('\n')
+
+    // Choose prompt based on turn number
+    const prompt = turn < 4
+      ? earlyExchangePrompt(question, positionSummary, recentExchanges, lastOpponentMsg.content, listenerName)
+      : lateExchangePrompt(question, positionSummary, recentExchanges, lastOpponentMsg.content, listenerName)
+
+    const systemPrompt = buildSystemPrompt(contract, persona) +
+      cruxRoomSystemPrompt(question, listenerName, originalTopic)
 
     try {
       const result = await completeJSON<{ content: string }>({
         system: systemPrompt,
-        messages: [{
-          role: 'user',
-          content: cruxTurnPrompt(question, history, lastOpponentMsg.content, listenerName),
-        }],
+        messages: [{ role: 'user', content: prompt }],
         model: 'sonnet',
-        maxTokens: 200,
+        maxTokens: 250,
         temperature: 0.75,
       })
+
+      // Update position tracking with latest statement
+      positions.set(speakerId, result.content)
 
       const msg: CruxMessage = {
         id: `${roomId}-${speakerId}-t${turn}`,
@@ -152,15 +173,16 @@ export async function* runCruxRoom(
 
     // ─── Exit check every 2 full exchanges (after turn 3) ──────
     if (turn >= 3 && turn % 2 === 1) {
-      const conversationText = room.messages
+      const recentForCheck = room.messages
         .filter(m => m.type === 'persona')
+        .slice(-6)
         .map(m => `${personaNames.get(m.personaId!) ?? m.personaId!}: ${m.content}`)
         .join('\n\n')
 
       try {
         const exitCheck = await completeJSON<{ cruxSurfaced: boolean; reason: string }>({
           system: 'You analyze debate conversations to determine if the core disagreement has been surfaced.',
-          messages: [{ role: 'user', content: cruxExitCheckPrompt(question, conversationText) }],
+          messages: [{ role: 'user', content: cruxExitCheckPrompt(question, recentForCheck) }],
           model: 'haiku',
           maxTokens: 200,
           temperature: 0.2,
@@ -186,14 +208,43 @@ export async function* runCruxRoom(
     turn++
   }
 
-  // ─── Extract Card from Conversation ─────────────────────────
+  // ─── Phase 3: Convergence Check ────────────────────────────
 
-  room.status = 'complete'
-
-  const conversationText = room.messages
+  const fullConversationText = room.messages
     .filter(m => m.type === 'persona')
     .map(m => `${personaNames.get(m.personaId!) ?? m.personaId!}: ${m.content}`)
     .join('\n\n')
+
+  try {
+    const convergence = await completeJSON<{
+      coreDisagreement: string
+      type: string
+      converged: boolean
+    }>({
+      system: 'You analyze debate conversations to identify the core disagreement.',
+      messages: [{ role: 'user', content: convergenceCheckPrompt(question, fullConversationText) }],
+      model: 'haiku',
+      maxTokens: 200,
+      temperature: 0.2,
+    })
+
+    if (convergence.converged) {
+      const convergenceMsg: CruxMessage = {
+        id: `${roomId}-sys-convergence`,
+        type: 'system',
+        content: `Core disagreement identified: ${convergence.coreDisagreement}`,
+        timestamp: Date.now(),
+      }
+      room.messages.push(convergenceMsg)
+      yield { type: 'crux_message', roomId, message: convergenceMsg }
+    }
+  } catch (_) {
+    // Continue to card extraction even if convergence check fails
+  }
+
+  // ─── Card Extraction ───────────────────────────────────────
+
+  room.status = 'complete'
 
   const personaNamesList = personaIds.map(id => personaNames.get(id) ?? id)
 
@@ -211,7 +262,7 @@ export async function* runCruxRoom(
       system: 'You extract crux cards from debate transcripts. Be precise and faithful to what was said.',
       messages: [{
         role: 'user',
-        content: cruxExtractionPrompt(question, conversationText, personaIds, personaNamesList),
+        content: cruxExtractionPrompt(question, fullConversationText, personaIds, personaNamesList),
       }],
       model: 'sonnet',
       maxTokens: 600,

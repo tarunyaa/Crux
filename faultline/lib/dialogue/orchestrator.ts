@@ -161,6 +161,7 @@ export async function* runDialogue(
             readyCandidate.personas,
             state.messages.slice(-6).map(m => m.id),
             personaNames,
+            topic,  // Pass original debate topic for wider context
           )) {
             if (cruxEvent.type === 'crux_message') {
               yield { type: 'crux_message', roomId: cruxEvent.roomId, message: cruxEvent.message }
