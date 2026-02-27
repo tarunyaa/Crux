@@ -127,7 +127,6 @@ export async function* runDialogue(
           detected.personas,
           detected.topic,
           detected.shortLabel,
-          detected.confidence,
           activeRoomPairs,
         )
 
@@ -138,7 +137,7 @@ export async function* runDialogue(
             messages: state.messages.slice(-6).map(m => m.id),
             personas: detected.personas,
             topic: detected.topic,
-            confidence: detected.confidence,
+            confidence: 1,  // Kept for type compat; boolean decomposition replaces confidence
           },
         }
 
