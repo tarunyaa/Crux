@@ -151,6 +151,31 @@ export type SSEEvent =
   | { type: 'graph_convergence'; stable: boolean; newEdges: number; round: number }
   | { type: 'error'; message: string }
 
+// ─── Belief Graph ─────────────────────────────────────────────
+
+export interface BeliefNode {
+  id: string
+  concept: string
+  type: 'core_value' | 'factual_claim' | 'inference' | 'assumption'
+  grounding: string[]  // corpus chunk IDs (e.g., "tweet_42", "essay_3")
+}
+
+export interface BeliefEdge {
+  from: string  // node ID
+  to: string    // node ID
+  polarity: 1 | -1
+  confidence: number  // 0-1
+  sourceChunks: string[]
+}
+
+export interface BeliefGraph {
+  personaId: string
+  personaName: string
+  nodes: BeliefNode[]
+  edges: BeliefEdge[]
+  extractedAt: string  // ISO date
+}
+
 // ─── Agent Messages (shared with hooks & replay) ─────────────
 
 export interface AgentMessage {

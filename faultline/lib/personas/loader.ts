@@ -1,6 +1,6 @@
 import fs from 'fs/promises'
 import path from 'path'
-import type { Persona, PersonaContract, Deck } from '@/lib/types'
+import type { Persona, PersonaContract, Deck, BeliefGraph } from '@/lib/types'
 
 const SEED_DIR = path.join(process.cwd(), 'data/seed')
 
@@ -49,6 +49,16 @@ export async function loadContract(personaId: string): Promise<PersonaContract> 
   const filePath = path.join(SEED_DIR, 'contracts', `${personaId}.json`)
   const raw = await fs.readFile(filePath, 'utf-8')
   return JSON.parse(raw) as PersonaContract
+}
+
+export async function loadBeliefGraph(personaId: string): Promise<BeliefGraph | null> {
+  const filePath = path.join(SEED_DIR, 'beliefs', `${personaId}.json`)
+  try {
+    const raw = await fs.readFile(filePath, 'utf-8')
+    return JSON.parse(raw) as BeliefGraph
+  } catch {
+    return null
+  }
 }
 
 export async function loadContracts(personaIds: string[]): Promise<Map<string, PersonaContract>> {
