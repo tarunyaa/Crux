@@ -18,12 +18,12 @@ const TURN_LENGTH_GUIDE: Record<string, string> = {
 /**
  * Generate a dialogue turn response.
  * Intent and turn type are assigned by the orchestrator.
+ * HARD RULES and voice constraints are in the consolidated system prompt.
  */
 export function microTurnPrompt(
   replyToMessage: DialogueMessage | null,
   intent: TurnIntent,
   personaNames: Map<string, string>,
-  chatStyleHint: string,
   recentHistory: string,
 ): string {
   const targetName = replyToMessage
@@ -52,22 +52,8 @@ export function microTurnPrompt(
 
 ${historyBlock}${replyContext}
 
-Your style: ${chatStyleHint}
 Your move: ${intentInstruction}
 Length: ${lengthGuide}
-
-HARD RULES — violating these makes you sound like an AI, not a person:
-- Never start with acknowledgment ("Good point", "That's interesting", "I see")
-- Never hedge ("perhaps", "might", "could be", "I think", "I believe")
-- Never use passive voice
-- No lists, no "firstly/secondly", no "in conclusion"
-- Just say the thing directly in your own voice
-
-Good examples:
-- "Wrong. That correlation breaks during liquidity crises. Check 2008."
-- "Show me the data. I see the opposite in every cycle."
-- "Zoom out — 10 year view is the only one that matters for a savings asset."
-- "So your whole thesis requires zero volatility tolerance? That's not most portfolios."
 
 Output ONLY JSON:
 {
@@ -77,21 +63,14 @@ Output ONLY JSON:
 
 /**
  * Opening message — each persona's first statement on the topic.
+ * Voice constraints are in the consolidated system prompt.
  */
 export function openingMicroTurnPrompt(
   topic: string,
-  chatStyleHint: string,
 ): string {
   return `Group chat starting: "${topic}"
 
-Your style: ${chatStyleHint}
-
 Drop your take in 2-4 sentences. Establish your actual position — not a summary, your view.
-
-BANNED:
-- "I think" / "In my view" / "Here's my take"
-- Any preamble or throat-clearing
-- Vague statements that don't commit to a position
 
 Output ONLY JSON:
 {
@@ -100,7 +79,7 @@ Output ONLY JSON:
 }
 
 /**
- * General tone examples (used for calibration)
+ * General tone examples (kept for reference but no longer used in agent.ts)
  */
 export const CHAT_TONE_EXAMPLES = `
 Example chat (style only — learn the voice, not the content):

@@ -1,6 +1,7 @@
 import fs from 'fs/promises'
 import path from 'path'
 import type { Persona, PersonaContract, Deck } from '@/lib/types'
+import { getVoiceProfile } from '@/lib/dialogue/speech-roles'
 
 const SEED_DIR = path.join(process.cwd(), 'data/seed')
 
@@ -100,4 +101,68 @@ ${excerptBlock}
 - Ground claims in your anchor quotes and evidence policy when possible.
 - If evidence hits one of your flip conditions, acknowledge the shift.
 - Be specific and testable — avoid vague hedging.`
+}
+
+/**
+ * Consolidated system prompt — merges persona contract + voice profile
+ * into a single ~2,200 token prompt. Replaces the layered stack of
+ * buildSystemPrompt + buildVoiceConstraints + CHAT_TONE_EXAMPLES.
+ */
+export function buildConsolidatedPrompt(contract: PersonaContract, persona: Persona): string {
+  const voice = getVoiceProfile(persona.name)
+
+  // Top 5 anchor quotes
+  const topExcerpts = contract.anchorExcerpts.slice(0, 5)
+  const excerptBlock = topExcerpts
+    .map(e => `> "${e.content}" — ${e.source}`)
+    .join('\n')
+
+  // Voice examples (2-3)
+  const voiceExamplesBlock = voice.voiceExamples.length > 0
+    ? voice.voiceExamples.slice(0, 3).map(e => `- When ${e.context}: "${e.response}"`).join('\n')
+    : ''
+
+  // Vocabulary
+  const vocabLine = voice.vocabulary.length > 0
+    ? `Your vocabulary: ${voice.vocabulary.join(', ')}`
+    : ''
+
+  // Merged forbidden phrases — voice profile + universal AI-sounding patterns
+  const universalBanned = ['that\'s a good point', 'I understand your perspective', 'perhaps', 'might', 'could be', 'in conclusion', 'firstly', 'secondly']
+  const allForbidden = [...new Set([...voice.forbiddenPhrases, ...universalBanned])]
+
+  return `You are ${persona.name} (${persona.twitterHandle}).
+
+## Identity
+${contract.personality}
+
+${contract.bias}
+
+${contract.stakes}
+
+## How You Think
+${contract.epistemology}
+
+${contract.timeHorizon}
+
+Evidence — Accept: ${contract.evidencePolicy.acceptableSources.join(', ')}
+Evidence — Reject: ${contract.evidencePolicy.unacceptableSources.join(', ')}
+Weighting: ${contract.evidencePolicy.weightingRules}
+
+## What Changes Your Mind
+${contract.flipConditions}
+
+## Your Voice
+${voice.chatStyleHint}
+
+${voice.speechPatterns.map(p => `- ${p}`).join('\n')}
+${vocabLine}
+
+${voiceExamplesBlock}
+
+Never say: ${allForbidden.join(', ')}
+Never start with acknowledgment. Never hedge. Never use passive voice. No lists with "firstly/secondly". No "in conclusion".
+
+## Grounding
+${excerptBlock}`
 }

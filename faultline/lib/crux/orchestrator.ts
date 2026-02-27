@@ -79,7 +79,7 @@ export async function* runCruxRoom(
         }],
         model: 'sonnet',
         maxTokens: 150,
-        temperature: 0.9,
+        temperature: 0.75,
       })
 
       const msg: CruxMessage = {
@@ -134,7 +134,7 @@ export async function* runCruxRoom(
         }],
         model: 'sonnet',
         maxTokens: 200,
-        temperature: 0.9,
+        temperature: 0.75,
       })
 
       const msg: CruxMessage = {

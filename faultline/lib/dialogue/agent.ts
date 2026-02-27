@@ -1,16 +1,15 @@
 // ─── Dialogue Agent ────────────────────────────────────────────
 
-import type { DialogueMessage, PersonaId } from './types'
+import type { DialogueMessage } from './types'
 import type { TurnIntent } from './turn-manager'
 import { completeJSON } from '@/lib/llm/client'
-import { microTurnPrompt, openingMicroTurnPrompt, CHAT_TONE_EXAMPLES } from './prompts'
-import { buildVoiceConstraints, getChatStyleHint } from './speech-roles'
+import { microTurnPrompt, openingMicroTurnPrompt } from './prompts'
 import type { PersonaContract, Persona } from '@/lib/types'
-import { buildSystemPrompt } from '@/lib/personas/loader'
+import { buildConsolidatedPrompt } from '@/lib/personas/loader'
 
 /**
  * Generate a dialogue turn.
- * Uses the full persona system prompt + voice constraints.
+ * Uses the consolidated persona system prompt (identity + voice + grounding).
  * No hard character cap — length is guided by turn type in the prompt.
  */
 export async function generateMicroTurn(
@@ -21,19 +20,13 @@ export async function generateMicroTurn(
   personaNames: Map<string, string>,
   recentMessages: DialogueMessage[] = [],
 ): Promise<string | null> {
-  const fullPersonality = buildSystemPrompt(contract, persona)
-  const voiceConstraints = buildVoiceConstraints(persona.name)
-  const chatStyleHint = getChatStyleHint(persona.name)
-
-  const systemPrompt = `${fullPersonality}${voiceConstraints}
-
-${CHAT_TONE_EXAMPLES}`
+  const systemPrompt = buildConsolidatedPrompt(contract, persona)
 
   const recentHistory = recentMessages
     .map(m => `> ${personaNames.get(m.personaId) ?? m.personaId}: "${m.content}"`)
     .join('\n')
 
-  const prompt = microTurnPrompt(replyToMessage, intent, personaNames, chatStyleHint, recentHistory)
+  const prompt = microTurnPrompt(replyToMessage, intent, personaNames, recentHistory)
 
   try {
     const response = await completeJSON<{ utterance: string }>({
@@ -41,7 +34,7 @@ ${CHAT_TONE_EXAMPLES}`
       messages: [{ role: 'user', content: prompt }],
       model: 'haiku',
       maxTokens: 200,
-      temperature: 1.0,
+      temperature: 0.85,
     })
 
     if (!response.utterance || response.utterance.trim().length === 0) {
@@ -79,13 +72,9 @@ export async function generateOpeningMicroTurn(
   persona: Persona,
   topic: string,
 ): Promise<string | null> {
-  const fullPersonality = buildSystemPrompt(contract, persona)
-  const voiceConstraints = buildVoiceConstraints(persona.name)
-  const chatStyleHint = getChatStyleHint(persona.name)
+  const systemPrompt = buildConsolidatedPrompt(contract, persona)
 
-  const systemPrompt = `${fullPersonality}${voiceConstraints}`
-
-  const prompt = openingMicroTurnPrompt(topic, chatStyleHint)
+  const prompt = openingMicroTurnPrompt(topic)
 
   try {
     const response = await completeJSON<{ utterance: string }>({
@@ -93,7 +82,7 @@ export async function generateOpeningMicroTurn(
       messages: [{ role: 'user', content: prompt }],
       model: 'haiku',
       maxTokens: 200,
-      temperature: 1.0,
+      temperature: 0.85,
     })
 
     if (!response.utterance || response.utterance.trim().length === 0) {

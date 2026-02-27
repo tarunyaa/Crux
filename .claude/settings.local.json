@@ -20,7 +20,25 @@
       "Bash(echo:*)",
       "Bash(cmd /c \"dir C:\\\\Users\\\\tarun\\\\code\\\\Faultline\\\\Faultline\\\\paper\")",
       "Bash(cmd /c \"dir /b C:\\\\Users\\\\tarun\\\\code\\\\Faultline\\\\Faultline\\\\paper 2>&1\")",
-      "Bash(cmd /c \"IF EXIST C:\\\\Users\\\\tarun\\\\code\\\\Faultline\\\\Faultline\\\\paper \\(echo paper EXISTS\\) ELSE \\(echo paper MISSING\\)\")"
+      "Bash(cmd /c \"IF EXIST C:\\\\Users\\\\tarun\\\\code\\\\Faultline\\\\Faultline\\\\paper \\(echo paper EXISTS\\) ELSE \\(echo paper MISSING\\)\")",
+      "Bash(find /c/Users/tarun/code/Faultline/Faultline/faultline/lib -type f -name \"*.ts\" | xargs grep -l \"entropy\\\\|convergence\\\\|compression\\\\|crux.*count\\\\|disagreement.*compress\" 2>/dev/null)",
+      "WebFetch(domain:arxiv.org)",
+      "Bash(find:*)",
+      "WebFetch(domain:dl.acm.org)",
+      "WebFetch(domain:link.springer.com)",
+      "WebFetch(domain:www.together.ai)",
+      "WebFetch(domain:d2jud02ci9yv69.cloudfront.net)",
+      "WebFetch(domain:neurips.cc)",
+      "WebFetch(domain:fireworks.ai)",
+      "WebFetch(domain:www.lesswrong.com)",
+      "WebFetch(domain:openreview.net)",
+      "WebFetch(domain:humanlm.stanford.edu)",
+      "WebFetch(domain:www.james-zou.com)",
+      "WebFetch(domain:scholar.google.com)",
+      "WebFetch(domain:cs.stanford.edu)",
+      "WebFetch(domain:martianlantern.github.io)",
+      "WebFetch(domain:www.sciencedirect.com)",
+      "WebFetch(domain:aclanthology.org)"
     ]
   }
 }
