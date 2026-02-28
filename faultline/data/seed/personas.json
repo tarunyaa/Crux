@@ -107,6 +107,21 @@
       ],
       "locked": true,
       "createdAt": "2026-02-09T10:00:00.000Z"
+    },
+    {
+      "id": "ai-economics",
+      "name": "AI Economics",
+      "slug": "ai-economics",
+      "personaIds": [
+        "Citrini",
+        "Alap Shah",
+        "Citadel",
+        "Noah Smith",
+        "Trung Phan",
+        "Gavin Baker"
+      ],
+      "locked": false,
+      "createdAt": "2026-02-28T01:34:44.097Z"
     }
   ],
   "personas": [
@@ -505,6 +520,72 @@
       ],
       "suite": null,
       "locked": true
+    },
+    {
+      "id": "Citrini",
+      "name": "Citrini",
+      "twitterHandle": "@Citrini7",
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1875761503686582272/VhlaZoEp_400x400.jpg",
+      "deckIds": [
+        "ai-economics"
+      ],
+      "suite": null,
+      "locked": false
+    },
+    {
+      "id": "Alap Shah",
+      "name": "Alap Shah",
+      "twitterHandle": "@alapshah1",
+      "twitterPicture": "https://pbs.twimg.com/profile_images/2025627568951435264/-Yp7_4fe_400x400.jpg",
+      "deckIds": [
+        "ai-economics"
+      ],
+      "suite": null,
+      "locked": false
+    },
+    {
+      "id": "Noah Smith",
+      "name": "Noah Smith 🐇🇺🇸🇺🇦🇹🇼",
+      "twitterHandle": "@Noahpinion",
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1900075477999763456/8nSaoQcX_400x400.jpg",
+      "deckIds": [
+        "ai-economics"
+      ],
+      "suite": null,
+      "locked": false
+    },
+    {
+      "id": "Trung Phan",
+      "name": "Trung Phan",
+      "twitterHandle": "@TrungTPhan",
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1506362585448296448/LJg8kVSD_400x400.jpg",
+      "deckIds": [
+        "ai-economics"
+      ],
+      "suite": null,
+      "locked": false
+    },
+    {
+      "id": "Gavin Baker",
+      "name": "Gavin Baker",
+      "twitterHandle": "@GavinSBaker",
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1396219525754937345/5L4n5L3O_400x400.jpg",
+      "deckIds": [
+        "ai-economics"
+      ],
+      "suite": null,
+      "locked": false
+    },
+    {
+      "id": "Citadel",
+      "name": "Citadel Securities",
+      "twitterHandle": "",
+      "twitterPicture": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://citadelsecurities.com&size=256",
+      "deckIds": [
+        "ai-economics"
+      ],
+      "suite": null,
+      "locked": false
     }
   ]
 }

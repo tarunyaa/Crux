@@ -131,13 +131,15 @@ export function PlayingCard({ card, personaNames, index = 0 }: PlayingCardProps)
 
   if (expanded) {
     return (
-      <ExpandedDetail
-        card={card}
-        personaNames={personaNames}
-        suit={suit}
-        rank={rank}
-        onCollapse={() => setExpanded(false)}
-      />
+      <div className="w-72 flex-shrink-0">
+        <ExpandedDetail
+          card={card}
+          personaNames={personaNames}
+          suit={suit}
+          rank={rank}
+          onCollapse={() => setExpanded(false)}
+        />
+      </div>
     )
   }
 
@@ -154,7 +156,13 @@ export function PlayingCard({ card, personaNames, index = 0 }: PlayingCardProps)
       {/* Top-left corner */}
       <div className="absolute top-2 left-2.5 flex flex-col items-center leading-none gap-[2px]">
         <span className={`text-sm font-bold leading-none ${suit.color}`}>{suit.symbol}</span>
-        <span className="text-[8px] text-muted uppercase tracking-wide leading-none">{rank.slice(0, 4)}</span>
+        <span className="text-[7px] text-muted uppercase tracking-wide leading-none">{rank.charAt(0)}</span>
+      </div>
+
+      {/* Bottom-right corner (rotated 180°) */}
+      <div className="absolute bottom-2 right-2.5 flex flex-col items-center leading-none gap-[2px] rotate-180">
+        <span className={`text-sm font-bold leading-none ${suit.color}`}>{suit.symbol}</span>
+        <span className="text-[7px] text-muted uppercase tracking-wide leading-none">{rank.charAt(0)}</span>
       </div>
 
       {/* Watermark suit symbol */}
@@ -164,7 +172,7 @@ export function PlayingCard({ card, personaNames, index = 0 }: PlayingCardProps)
 
       {/* Question — centered in the card body */}
       <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-        <p className="text-[11px] font-medium text-foreground leading-snug line-clamp-4">{card.question}</p>
+        <p className="text-[9px] font-medium text-foreground leading-snug line-clamp-5">{card.question}</p>
       </div>
 
       {/* Persona positions — pinned just above the bottom corner */}

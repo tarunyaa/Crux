@@ -151,8 +151,8 @@ RESPOND WITH JSON:
   "has_specific_claim": boolean,
   "topic_relevant": boolean,
   "personas": ["name1", "name2"],
-  "topic": "the specific claim they disagree on",
-  "shortLabel": "2-4 word label"
+  "topic": "yes/no question, max 12 words (e.g. 'Should central banks raise rates to fight inflation?')",
+  "shortLabel": "2-4 word label (e.g. 'Rate Hike Debate')"
 }`
 
   try {
@@ -160,18 +160,21 @@ RESPOND WITH JSON:
       system: 'You detect substantive disagreements in conversations. Be conservative — only flag clear, committed opposing positions.',
       messages: [{ role: 'user', content: prompt }],
       model: 'haiku',
-      maxTokens: 150,
+      maxTokens: 300,
       temperature: 0.2,
     })
 
     if (!result.has_direct_opposition || !result.has_specific_claim || !result.topic_relevant) return null
     if (result.personas.length < 2) return null
 
-    // Map names back to IDs
+    // Map names back to IDs (fuzzy: match full name, first name, or case-insensitive contains)
     const personaIds = result.personas
       .map(name => {
+        const lower = name.toLowerCase()
         for (const [id, pName] of personaNames.entries()) {
           if (pName === name) return id
+          if (pName.toLowerCase().startsWith(lower)) return id
+          if (pName.split(' ')[0].toLowerCase() === lower) return id
         }
         return null
       })
@@ -228,8 +231,8 @@ RESPOND WITH JSON:
   "has_specific_claim": boolean,
   "topic_relevant": boolean,
   "personas": ["name1", "name2"],
-  "topic": "specific claim they disagree on",
-  "shortLabel": "2-4 word label"
+  "topic": "yes/no question, max 12 words (e.g. 'Should central banks raise rates to fight inflation?')",
+  "shortLabel": "2-4 word label (e.g. 'Rate Hike Debate')"
 }`
 
   try {
@@ -237,18 +240,21 @@ RESPOND WITH JSON:
       system: 'You detect substantive disagreements between parallel debate responses. Be conservative — only flag clear opposing positions.',
       messages: [{ role: 'user', content: prompt }],
       model: 'haiku',
-      maxTokens: 150,
+      maxTokens: 300,
       temperature: 0.2,
     })
 
     if (!result.has_direct_opposition || !result.has_specific_claim || !result.topic_relevant) return null
     if (result.personas.length < 2) return null
 
-    // Map names back to IDs
+    // Map names back to IDs (fuzzy: match full name, first name, or case-insensitive contains)
     const personaIds = result.personas
       .map(name => {
+        const lower = name.toLowerCase()
         for (const [id, pName] of personaNames.entries()) {
           if (pName === name) return id
+          if (pName.toLowerCase().startsWith(lower)) return id
+          if (pName.split(' ')[0].toLowerCase() === lower) return id
         }
         return null
       })

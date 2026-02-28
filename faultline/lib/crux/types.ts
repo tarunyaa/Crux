@@ -45,6 +45,7 @@ export interface CruxMessage {
   personaId?: PersonaId
   content: string
   timestamp: number
+  phase?: 'position' | 'exchange' | 'convergence'
 }
 
 /**

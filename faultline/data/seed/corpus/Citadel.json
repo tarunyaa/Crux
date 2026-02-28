@@ -1,0 +1,58 @@
+[
+  {
+    "id": "article-citadel-2026-global-intelligence-crisis",
+    "content": "The year is 2026. The unemployment rate just printed 4.28%, AI capex is 2% of GDP (650bn), AI adjacent commodities are up 65% since Jan-23 and approximately 2,800 data centers are planned for construction in the US. In spite of the current displacement narrative – job postings for software engineers are rising rapidly, up 11% YoY. Despite the macroeconomic community struggling to forecast 2-month-forward payroll growth with any reliable accuracy, the forward path of labor destruction can apparently be inferred with significant certainty from a hypothetical scenario posted on Substack: The 2028 Global Intelligence Crisis.",
+    "source": "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+    "date": "2026-02-01T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citadel-recursive-adoption",
+    "content": "The current debate around artificial intelligence conflates the recursive potential of the technology with expectations of recursive economic deployment. Technological diffusion has historically followed an S-curve. Early adoption is slow and expensive. Growth accelerates as costs fall, and complementary infrastructure develops. Eventually, saturation sets in, and the marginal adopter is less productive or less profitable which causes growth to decelerate. Recursive capability does not imply recursive adoption.",
+    "source": "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+    "date": "2026-02-01T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citadel-compute-constraints",
+    "content": "Displacing white collar work would require orders of magnitude more compute intensity than the current level utilization. If automation expands rapidly, demand for compute definitionally rises, pushing up its marginal cost. If the marginal cost of compute rises above the marginal cost of human labor for certain tasks, substitution will not occur, creating a natural economic boundary. Even if algorithms improve recursively, economic deployment remains bounded by physical capital, energy availability, regulatory approvals, and organizational change.",
+    "source": "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+    "date": "2026-02-01T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citadel-productivity-shocks",
+    "content": "At its core, AI-driven automation is a productivity shock. Productivity shocks are positive supply shocks: they lower marginal costs, expand potential output, and increase real income. They are in isolation disinflationary and growth-enhancing in the medium term. Historically, every major technological advance: steam power, electrification, the internal combustion engine, computing, has followed this pattern. A scenario in which productivity surges but aggregate demand collapses while measured output rises violates accounting identities.",
+    "source": "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+    "date": "2026-02-01T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citadel-substitution-elasticity",
+    "content": "The critical variable in AI displacement is the elasticity of substitution between AI capital and labor. If that elasticity is extremely high, then labor's share of income could collapse. But even here, aggregate demand does not automatically implode. Capital income has a lower marginal propensity to consume than wage income, but it does not have zero spending velocity. Profits can be reinvested, distributed, taxed, or spent. For demand to fall structurally, redistribution mechanisms would need to fail persistently, and investment opportunities would need to dry up simultaneously.",
+    "source": "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+    "date": "2026-02-01T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citadel-complement-not-substitute",
+    "content": "It seems more likely that AI will be a complement rather than a substitute for labor in many areas. Historically, technological revolutions have altered task composition rather than eliminated labor as an input. To produce a negative demand shock large enough to overwhelm output expansion, one must assume near-total automation of economically relevant labor combined with extremely weak redistributive responses. To frame this debate correctly one can simply ask, was the advent of Microsoft Office a complement or substitute for office workers? Ex-ante the concern skewed towards substitution, ex post it appears a clear complement.",
+    "source": "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+    "date": "2026-02-01T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citadel-keynes-15-hour",
+    "content": "In 1930, John Maynard Keynes wrote 'Economic Possibilities for our Grandchildren,' predicting that productivity growth would be so powerful that by the early twenty-first century the workweek would fall to fifteen hours. He was directionally correct about productivity growth, but profoundly wrong about labor market implications. Rather than working dramatically less, societies consumed dramatically more. History suggests productivity gains do not automatically translate into labor withdrawal or demand collapse as they alter the composition of demand, expand real incomes and generate new industries. Keynes underestimated the elasticity of human wants.",
+    "source": "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+    "date": "2026-02-01T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citadel-conclusion",
+    "content": "For AI to produce a sustained negative demand shock, the economy must see a material acceleration in adoption, experience near-total labor substitution, no fiscal response, negligible investment absorption, and unconstrained scaling of compute. Over the past century, successive waves of technological change have not produced runaway exponential growth, nor have they rendered labor obsolete. Instead, they have been just sufficient to keep long-term trend growth in advanced economies near 2%. Today's secular forces of ageing populations, climate change and deglobalization exert downward pressure on potential growth and productivity, perhaps AI is just enough to offset these headwinds.",
+    "source": "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+    "date": "2026-02-01T00:00:00.000Z",
+    "platform": "substack"
+  }
+]

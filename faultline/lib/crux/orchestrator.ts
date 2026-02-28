@@ -4,7 +4,7 @@
 
 import type { CruxRoom, CruxMessage, CruxCard, CruxEvent, PersonaId, DisagreementType, Position } from './types'
 import type { PersonaContract, Persona } from '@/lib/types'
-import { loadContract, getPersona, buildSystemPrompt } from '@/lib/personas/loader'
+import { loadContract, getPersona, buildConsolidatedPrompt } from '@/lib/personas/loader'
 import { completeJSON } from '@/lib/llm/client'
 import {
   cruxRoomSystemPrompt,
@@ -75,7 +75,7 @@ export async function* runCruxRoom(
     const opponentId = personaIds.find(id => id !== personaId) ?? personaIds[0]
     const opponentName = personaNames.get(opponentId) ?? opponentId
 
-    const systemPrompt = buildSystemPrompt(contract, persona) +
+    const systemPrompt = buildConsolidatedPrompt(contract, persona) +
       cruxRoomSystemPrompt(question, opponentName, originalTopic)
 
     try {
@@ -98,6 +98,7 @@ export async function* runCruxRoom(
         personaId,
         content: result.content,
         timestamp: Date.now(),
+        phase: 'position',
       }
       room.messages.push(msg)
       yield { type: 'crux_message', roomId, message: msg }
@@ -143,7 +144,7 @@ export async function* runCruxRoom(
       ? earlyExchangePrompt(question, positionSummary, recentExchanges, lastOpponentMsg.content, listenerName)
       : lateExchangePrompt(question, positionSummary, recentExchanges, lastOpponentMsg.content, listenerName)
 
-    const systemPrompt = buildSystemPrompt(contract, persona) +
+    const systemPrompt = buildConsolidatedPrompt(contract, persona) +
       cruxRoomSystemPrompt(question, listenerName, originalTopic)
 
     try {
@@ -164,6 +165,7 @@ export async function* runCruxRoom(
         personaId: speakerId,
         content: result.content,
         timestamp: Date.now(),
+        phase: 'exchange',
       }
       room.messages.push(msg)
       yield { type: 'crux_message', roomId, message: msg }
@@ -194,6 +196,7 @@ export async function* runCruxRoom(
             type: 'system',
             content: `Crux surfaced. Closing room.`,
             timestamp: Date.now(),
+            phase: 'convergence',
           }
           room.messages.push(doneMsg)
           yield { type: 'crux_message', roomId, message: doneMsg }
@@ -234,6 +237,7 @@ export async function* runCruxRoom(
         type: 'system',
         content: `Core disagreement identified: ${convergence.coreDisagreement}`,
         timestamp: Date.now(),
+        phase: 'convergence',
       }
       room.messages.push(convergenceMsg)
       yield { type: 'crux_message', roomId, message: convergenceMsg }

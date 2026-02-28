@@ -193,5 +193,25 @@
       "maxSubstackPosts": 20,
       "maxAnchorExcerpts": 15
     }
+  },
+  {
+    "deck": {
+      "id": "ai-economics",
+      "name": "AI Economics",
+      "slug": "ai-economics"
+    },
+    "topic": "AI Economic Impact — Will AI cause mass unemployment and economic crisis, or drive productivity growth?",
+    "personas": [
+      { "id": "Citrini", "twitterHandle": "Citrini7", "substackUrl": "https://www.citriniresearch.com" },
+      { "id": "Alap Shah", "twitterHandle": "alapshah1", "substackUrl": "https://alapshah1.substack.com" },
+      { "id": "Noah Smith", "twitterHandle": "Noahpinion", "substackUrl": "https://noahpinion.substack.com" },
+      { "id": "Trung Phan", "twitterHandle": "TrungTPhan", "substackUrl": "https://www.readtrung.com" },
+      { "id": "Gavin Baker", "twitterHandle": "GavinSBaker", "substackUrl": "https://gavinbaker.substack.com" }
+    ],
+    "settings": {
+      "maxTweets": 100,
+      "maxSubstackPosts": 20,
+      "maxAnchorExcerpts": 15
+    }
   }
 ]

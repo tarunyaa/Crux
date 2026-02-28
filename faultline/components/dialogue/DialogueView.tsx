@@ -19,6 +19,7 @@ export function DialogueView({ topic, personaIds, personaNames, personaAvatars }
     cruxCards,
     activeCruxRooms,
     completedRooms,
+    cruxTriggerMap,
     isRunning,
     isComplete,
     error,
@@ -26,6 +27,7 @@ export function DialogueView({ topic, personaIds, personaNames, personaAvatars }
     currentRound,
     currentPhase,
     shifts,
+    summary,
     start,
   } = useDialogueStream(topic, personaIds)
 
@@ -60,6 +62,7 @@ export function DialogueView({ topic, personaIds, personaNames, personaAvatars }
         cruxCards={cruxCards}
         activeCruxRooms={activeCruxRooms}
         completedRooms={completedRooms}
+        cruxTriggerMap={cruxTriggerMap}
         personaNames={personaNames}
         personaAvatars={personaAvatars}
         isRunning={isRunning}
@@ -68,6 +71,7 @@ export function DialogueView({ topic, personaIds, personaNames, personaAvatars }
         currentRound={currentRound}
         currentPhase={currentPhase}
         shifts={shifts}
+        summary={summary}
       />
     </div>
   )

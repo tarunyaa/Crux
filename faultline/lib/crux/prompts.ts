@@ -172,15 +172,15 @@ ${conversation}
 Participants: ${personaNames.join(', ')}
 
 Extract:
-1. The precise crux statement (the specific thing they disagree on)
+1. The precise crux as a YES/NO QUESTION (e.g. "Will HBM demand exceed supply through 2027?"). It must be answerable with yes or no.
 2. Disagreement type: "empirical" (factual), "values" (priorities), "definition" (meaning), "claim" (logical), "premise" (assumption), "horizon" (timeframe)
-3. Each persona's position, reasoning, and what would change their mind (falsifier)
+3. Each persona's position (YES/NO/NUANCED relative to the question), reasoning, and what would change their mind (falsifier)
 4. Whether it was resolved
 5. A brief diagnosis of the root cause
 
 RESPOND WITH JSON:
 {
-  "cruxStatement": "3-5 word noun phrase naming the crux",
+  "cruxStatement": "a yes/no question capturing the crux (max 15 words)",
   "disagreementType": "horizon|evidence|values|definition|claim|premise",
   "diagnosis": "1-2 sentence root cause",
   "resolved": boolean,

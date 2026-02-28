@@ -1,8 +1,15 @@
 // ─── Hook for Dialogue SSE Stream ────────────────────────────
 
 import { useState, useCallback, useRef } from 'react'
-import type { DialogueEvent, DialogueMessage, DebateAspect, PositionShift } from '@/lib/dialogue/types'
-import type { CruxCard, CruxMessage } from '@/lib/crux/types'
+import type { DialogueEvent, DialogueMessage, DebateAspect, PositionShift, DebateSummary } from '@/lib/dialogue/types'
+import type { CruxCard, CruxMessage, DisagreementType } from '@/lib/crux/types'
+
+export interface CruxTriggerInfo {
+  roomId: string
+  topic: string
+  label: string
+  disagreementType?: DisagreementType
+}
 
 export interface ActiveCruxRoom {
   roomId: string
@@ -18,6 +25,7 @@ export interface DialogueStreamState {
   cruxCards: CruxCard[]
   activeCruxRooms: Map<string, ActiveCruxRoom>
   completedRooms: Map<string, ActiveCruxRoom>
+  cruxTriggerMap: Map<string, CruxTriggerInfo>
   isRunning: boolean
   isComplete: boolean
   error: string | null
@@ -26,6 +34,7 @@ export interface DialogueStreamState {
   currentRound: number | null
   currentPhase: 'opening' | 'take' | 'clash' | 'closing' | null
   shifts: PositionShift[]
+  summary: DebateSummary | null
 }
 
 export function useDialogueStream(
@@ -37,6 +46,7 @@ export function useDialogueStream(
     cruxCards: [],
     activeCruxRooms: new Map(),
     completedRooms: new Map(),
+    cruxTriggerMap: new Map(),
     isRunning: false,
     isComplete: false,
     error: null,
@@ -44,6 +54,7 @@ export function useDialogueStream(
     currentRound: null,
     currentPhase: null,
     shifts: [],
+    summary: null,
   })
 
   // useRef guard prevents double-invocation from React StrictMode
@@ -58,6 +69,7 @@ export function useDialogueStream(
       cruxCards: [],
       activeCruxRooms: new Map(),
       completedRooms: new Map(),
+      cruxTriggerMap: new Map(),
       isRunning: true,
       isComplete: false,
       error: null,
@@ -65,6 +77,7 @@ export function useDialogueStream(
       currentRound: null,
       currentPhase: null,
       shifts: [],
+      summary: null,
     })
 
     fetch('/api/dialogue', {
@@ -116,7 +129,16 @@ export function useDialogueStream(
                     currentPhase: event.phase ?? prev.currentPhase,
                   }))
 
+                } else if (event.type === 'disagreement_detected') {
+                  // No-op for trigger tracking — handled in crux_room_spawning which has roomId + sourceMessages
+
                 } else if (event.type === 'crux_room_spawning') {
+                  console.log('[trigger-debug] crux_room_spawning received:', {
+                    roomId: event.roomId,
+                    label: event.label,
+                    sourceMessages: event.sourceMessages,
+                    hasSourceMessages: 'sourceMessages' in event,
+                  })
                   setState(prev => {
                     const newRooms = new Map(prev.activeCruxRooms)
                     newRooms.set(event.roomId, {
@@ -127,7 +149,16 @@ export function useDialogueStream(
                       messages: [],
                       status: 'arguing',
                     })
-                    return { ...prev, activeCruxRooms: newRooms }
+                    const newTriggerMap = new Map(prev.cruxTriggerMap)
+                    for (const msgId of event.sourceMessages) {
+                      newTriggerMap.set(msgId, {
+                        roomId: event.roomId,
+                        topic: event.question,
+                        label: event.label,
+                      })
+                    }
+                    console.log('[trigger-debug] triggerMap after update:', Array.from(newTriggerMap.entries()))
+                    return { ...prev, activeCruxRooms: newRooms, cruxTriggerMap: newTriggerMap }
                   })
 
                 } else if (event.type === 'crux_message') {
@@ -152,11 +183,19 @@ export function useDialogueStream(
                       newActive.delete(event.card.cruxRoomId)
                       newCompleted.set(event.card.cruxRoomId, { ...room, status: 'complete' })
                     }
+                    // Retroactively enrich trigger messages with disagreement type
+                    const newTriggerMap = new Map(prev.cruxTriggerMap)
+                    for (const [msgId, info] of newTriggerMap) {
+                      if (info.roomId === event.card.cruxRoomId) {
+                        newTriggerMap.set(msgId, { ...info, disagreementType: event.card.disagreementType })
+                      }
+                    }
                     return {
                       ...prev,
                       cruxCards: [...prev.cruxCards, event.card],
                       activeCruxRooms: newActive,
                       completedRooms: newCompleted,
+                      cruxTriggerMap: newTriggerMap,
                     }
                   })
 
@@ -166,6 +205,7 @@ export function useDialogueStream(
                     isRunning: false,
                     isComplete: true,
                     shifts: event.shifts ?? [],
+                    summary: event.summary ?? null,
                   }))
 
                 } else if (event.type === 'error') {

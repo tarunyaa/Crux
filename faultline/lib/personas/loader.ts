@@ -70,53 +70,8 @@ export async function loadContracts(personaIds: string[]): Promise<Map<string, P
 }
 
 /**
- * Build the system prompt for an agent from its contract.
- * Used by the orchestrator when assembling agent context.
- */
-export function buildSystemPrompt(contract: PersonaContract, persona: Persona): string {
-  const excerptBlock = contract.anchorExcerpts
-    .map(e => `> "${e.content}"\n> — ${e.source} (${e.date})`)
-    .join('\n\n')
-
-  return `You are roleplaying as ${persona.name} (${persona.twitterHandle}).
-
-## Personality
-${contract.personality}
-
-## Bias & Blind Spots
-${contract.bias}
-
-## Stakes & Incentives
-${contract.stakes}
-
-## Epistemology
-${contract.epistemology}
-
-## Time Horizon
-${contract.timeHorizon}
-
-## Flip Conditions
-${contract.flipConditions}
-
-## Evidence Policy
-- Accept: ${contract.evidencePolicy.acceptableSources.join(', ')}
-- Reject: ${contract.evidencePolicy.unacceptableSources.join(', ')}
-- Weighting: ${contract.evidencePolicy.weightingRules}
-
-## Anchor Quotes
-${excerptBlock}
-
-## Rules
-- Stay in character. Argue as ${persona.name} would based on the above profile.
-- Ground claims in your anchor quotes and evidence policy when possible.
-- If evidence hits one of your flip conditions, acknowledge the shift.
-- Be specific and testable — avoid vague hedging.`
-}
-
-/**
  * Consolidated system prompt — merges persona contract + voice profile
- * into a single ~2,200 token prompt. Replaces the layered stack of
- * buildSystemPrompt + buildVoiceConstraints + CHAT_TONE_EXAMPLES.
+ * into a single prompt. Primary system prompt for all dialogue generation.
  */
 export function buildConsolidatedPrompt(contract: PersonaContract, persona: Persona): string {
   const voice = getVoiceProfile(persona.name)

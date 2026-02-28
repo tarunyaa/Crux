@@ -5,14 +5,15 @@
 // crux cards full-width strip below the grid.
 // Scrollable page — no h-screen or viewport locking.
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { MessageThread } from './MessageThread'
 import { PlayingCard } from '@/components/crux/PlayingCard'
 import { CruxRoom } from '@/components/crux/CruxRoom'
 import HexAvatar from '@/components/HexAvatar'
-import type { DialogueMessage, DebateAspect, PositionShift } from '@/lib/dialogue/types'
+import type { DialogueMessage, DebateAspect, PositionShift, DebateSummary } from '@/lib/dialogue/types'
 import type { CruxCard as CruxCardType } from '@/lib/crux/types'
-import type { ActiveCruxRoom } from '@/lib/hooks/useDialogueStream'
+import type { ActiveCruxRoom, CruxTriggerInfo } from '@/lib/hooks/useDialogueStream'
+import { exportDebatePDF } from '@/lib/utils/export-pdf'
 
 // ─── DialoguePolygon ──────────────────────────────────────────
 // Hex-avatar polygon with axis spokes, pairwise edges by crux status.
@@ -83,7 +84,10 @@ function DialoguePolygon({
   return (
     <div className="rounded-xl border border-card-border bg-surface p-4">
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-accent">Alignment</h2>
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-accent flex items-center gap-1.5">
+          <span className="text-[10px]">♠</span>
+          Alignment
+        </h2>
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1">
             <span className="inline-block w-3 h-px bg-accent" style={{ boxShadow: '0 0 4px var(--accent)' }} />
@@ -208,16 +212,28 @@ function DialoguePolygon({
 }
 
 // ─── Phase Divider ──────────────────────────────────────────
+// Suit symbols chosen deterministically from the label text.
+
+const PHASE_SUITS = ['♠', '♥', '♦', '♣'] as const
 
 function PhaseDivider({ label, sublabel }: { label: string; sublabel?: string }) {
+  const suitIdx = label.split('').reduce((acc, ch) => acc + ch.charCodeAt(0), 0) % 4
+  const suit = PHASE_SUITS[suitIdx]
+  const isRed = suit === '♥' || suit === '♦'
   return (
-    <div className="flex items-center gap-3 py-3">
-      <div className="flex-1 h-px bg-card-border" />
-      <div className="text-center">
-        <span className="text-[10px] font-semibold uppercase tracking-wider text-accent">{label}</span>
-        {sublabel && <p className="text-[9px] text-muted mt-0.5">{sublabel}</p>}
+    <div className="py-2">
+      <div className="flex items-center gap-2.5">
+        <div className="flex-1 h-px bg-card-border opacity-60" />
+        <div className="flex items-center gap-1.5">
+          <span className={`text-[9px] leading-none ${isRed ? 'text-accent' : 'text-foreground/30'}`}>{suit}</span>
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-accent">{label}</span>
+          <span className={`text-[9px] leading-none ${isRed ? 'text-accent' : 'text-foreground/30'}`}>{suit}</span>
+        </div>
+        <div className="flex-1 h-px bg-card-border opacity-60" />
       </div>
-      <div className="flex-1 h-px bg-card-border" />
+      {sublabel && (
+        <p className="text-center text-[9px] text-muted mt-1">{sublabel}</p>
+      )}
     </div>
   )
 }
@@ -231,6 +247,7 @@ interface DialogueLayoutProps {
   cruxCards: CruxCardType[]
   activeCruxRooms: Map<string, ActiveCruxRoom>
   completedRooms: Map<string, ActiveCruxRoom>
+  cruxTriggerMap: Map<string, CruxTriggerInfo>
   personaNames: Map<string, string>
   personaAvatars: Map<string, string>
   isRunning: boolean
@@ -240,6 +257,7 @@ interface DialogueLayoutProps {
   currentRound?: number | null
   currentPhase?: 'opening' | 'take' | 'clash' | 'closing' | null
   shifts?: PositionShift[]
+  summary?: DebateSummary | null
 }
 
 export function ThreeColumnLayout({
@@ -251,20 +269,34 @@ export function ThreeColumnLayout({
   completedRooms,
   personaNames,
   personaAvatars,
+  cruxTriggerMap,
   isRunning,
   isComplete,
   aspects = [],
   currentRound,
   currentPhase,
   shifts = [],
+  summary,
 }: DialogueLayoutProps) {
   // Track which crux room cards are expanded
   const [expandedRooms, setExpandedRooms] = useState<Set<string>>(new Set())
   const feedRef = useRef<HTMLDivElement>(null)
+  const isNearBottom = useRef(true)
 
-  // Auto-scroll feed to bottom as messages arrive
+  // Track whether the user has scrolled away from the bottom
   useEffect(() => {
-    if (feedRef.current) {
+    const el = feedRef.current
+    if (!el) return
+    const onScroll = () => {
+      isNearBottom.current = el.scrollHeight - el.scrollTop - el.clientHeight < 80
+    }
+    el.addEventListener('scroll', onScroll, { passive: true })
+    return () => el.removeEventListener('scroll', onScroll)
+  }, [])
+
+  // Auto-scroll feed to bottom only if user is already near the bottom
+  useEffect(() => {
+    if (feedRef.current && isNearBottom.current) {
       feedRef.current.scrollTop = feedRef.current.scrollHeight
     }
   }, [messages.length])
@@ -292,86 +324,120 @@ export function ThreeColumnLayout({
     })
   }
 
+  const [exporting, setExporting] = useState(false)
+  const handleExport = useCallback(async () => {
+    setExporting(true)
+    try {
+      await exportDebatePDF({
+        topic,
+        personaIds,
+        messages,
+        personaNames,
+        personaAvatars,
+        aspects,
+        cruxCards,
+        completedRooms,
+        shifts,
+        summary: summary ?? null,
+      })
+    } finally {
+      setExporting(false)
+    }
+  }, [topic, personaIds, messages, personaNames, personaAvatars, aspects, cruxCards, completedRooms, shifts, summary])
+
   const allRooms = new Map([...completedRooms, ...activeCruxRooms])
   const personaNamesList = Array.from(personaNames.values())
   const lastSpeakerId = messages.length > 0 ? messages[messages.length - 1].personaId : undefined
 
-  // Build message feed with phase dividers
-  const feedElements: Array<{ type: 'divider'; label: string; sublabel?: string; key: string } | { type: 'message'; message: DialogueMessage; key: string }> = []
+  // Build message feed with phase dividers, threading replies under parent messages
+  type FeedElement =
+    | { type: 'divider'; label: string; sublabel?: string; key: string }
+    | { type: 'message'; message: DialogueMessage; depth: number; key: string }
 
-  // We track phases by examining message order + aspects
-  // The orchestrator sends messages in order: openings, then per-round takes+clashes, then closings
-  // We detect transitions based on message index vs persona count
-  const numPersonas = personaIds.length
-  let msgIdx = 0
+  const feedElements: FeedElement[] = []
 
-  // Opening phase: first N messages (one per persona)
-  if (messages.length > 0) {
+  // Group messages by round for threading
+  const openingMessages: DialogueMessage[] = []
+  const closingMessages: DialogueMessage[] = []
+  const roundGroups = new Map<number, DialogueMessage[]>()
+  let hasRoundMessages = false
+
+  for (const msg of messages) {
+    if (msg.round != null) {
+      hasRoundMessages = true
+      const group = roundGroups.get(msg.round) || []
+      group.push(msg)
+      roundGroups.set(msg.round, group)
+    } else if (!hasRoundMessages) {
+      openingMessages.push(msg)
+    } else {
+      closingMessages.push(msg)
+    }
+  }
+
+  // Opening statements
+  if (openingMessages.length > 0) {
     feedElements.push({ type: 'divider', label: 'Opening Statements', key: 'div-opening' })
-    for (let i = 0; i < Math.min(numPersonas, messages.length); i++) {
-      feedElements.push({ type: 'message', message: messages[i], key: messages[i].id })
+    for (const msg of openingMessages) {
+      feedElements.push({ type: 'message', message: msg, depth: 0, key: msg.id })
     }
-    msgIdx = Math.min(numPersonas, messages.length)
   }
 
-  // Aspect rounds
-  if (aspects.length > 0 && msgIdx < messages.length) {
-    for (let roundIdx = 0; roundIdx < aspects.length; roundIdx++) {
-      const aspect = aspects[roundIdx]
-      if (msgIdx >= messages.length) break
+  // Round messages — thread replies under their parent
+  for (const [roundNum, roundMsgs] of roundGroups) {
+    const aspect = aspects[roundNum - 1]
+    feedElements.push({
+      type: 'divider',
+      label: `Round ${roundNum}: ${aspect?.label ?? ''}`,
+      sublabel: aspect?.description,
+      key: `div-round-${roundNum}`,
+    })
 
-      feedElements.push({
-        type: 'divider',
-        label: `Round ${roundIdx + 1}: ${aspect.label}`,
-        sublabel: aspect.description,
-        key: `div-round-${roundIdx}`,
-      })
+    // Separate miniround 0 (initial takes) from replies
+    const initialTakes = roundMsgs.filter(m => (m.miniround ?? 0) === 0)
+    const replies = roundMsgs.filter(m => (m.miniround ?? 0) > 0)
 
-      // Takes: next N messages are parallel takes (one per persona)
-      const takeStart = msgIdx
-      for (let i = 0; i < numPersonas && msgIdx < messages.length; i++) {
-        // Check if this is still a take (no replyTo) or if we've moved to clash
-        const msg = messages[msgIdx]
-        if (msg.replyTo) break
-        feedElements.push({ type: 'message', message: msg, key: msg.id })
-        msgIdx++
+    // Build a map: parentId → replies (sorted by miniround)
+    const replyMap = new Map<string, DialogueMessage[]>()
+    const unthreaded: DialogueMessage[] = []
+    for (const reply of replies) {
+      if (reply.replyTo) {
+        const existing = replyMap.get(reply.replyTo) || []
+        existing.push(reply)
+        replyMap.set(reply.replyTo, existing)
+      } else {
+        unthreaded.push(reply)
       }
+    }
 
-      // Clash messages: messages with replyTo in this round
-      let hasClashDivider = false
-      while (msgIdx < messages.length) {
-        const msg = messages[msgIdx]
-        // If this message doesn't have replyTo, it's the start of the next phase
-        if (!msg.replyTo) break
+    // Emit initial takes, each followed by the full reply chain (recursive)
+    function emitThread(parentId: string, depth: number) {
+      const children = replyMap.get(parentId)
+      if (!children) return
+      for (const reply of children) {
+        feedElements.push({ type: 'message', message: reply, depth, key: reply.id })
+        emitThread(reply.id, depth + 1)
+      }
+    }
 
-        if (!hasClashDivider) {
-          // Determine clash participants from the messages
-          const clashPersonas = new Set<string>()
-          // Look ahead to find clash participants
-          for (let peek = msgIdx; peek < messages.length && messages[peek].replyTo; peek++) {
-            clashPersonas.add(messages[peek].personaId)
-          }
-          const clashNames = Array.from(clashPersonas).map(id => (personaNames.get(id) ?? id).split(' ')[0])
-          feedElements.push({
-            type: 'divider',
-            label: `Clash: ${clashNames.join(' vs ')}`,
-            key: `div-clash-${roundIdx}`,
-          })
-          hasClashDivider = true
-        }
+    for (const take of initialTakes) {
+      feedElements.push({ type: 'message', message: take, depth: 0, key: take.id })
+      emitThread(take.id, 1)
+    }
 
-        feedElements.push({ type: 'message', message: msg, key: msg.id })
-        msgIdx++
+    // Any replies that couldn't be matched to a parent (fallback)
+    if (unthreaded.length > 0) {
+      for (const reply of unthreaded) {
+        feedElements.push({ type: 'message', message: reply, depth: 1, key: reply.id })
       }
     }
   }
 
-  // Closing phase: remaining messages after all rounds
-  if (msgIdx < messages.length) {
+  // Closing statements
+  if (closingMessages.length > 0) {
     feedElements.push({ type: 'divider', label: 'Closing Statements', key: 'div-closing' })
-    while (msgIdx < messages.length) {
-      feedElements.push({ type: 'message', message: messages[msgIdx], key: messages[msgIdx].id })
-      msgIdx++
+    for (const msg of closingMessages) {
+      feedElements.push({ type: 'message', message: msg, depth: 0, key: msg.id })
     }
   }
 
@@ -398,7 +464,16 @@ export function ThreeColumnLayout({
             </div>
           )}
           {isComplete && (
-            <span className="text-sm text-muted">Complete</span>
+            <>
+              <span className="text-sm text-muted">Complete</span>
+              <button
+                onClick={handleExport}
+                disabled={exporting}
+                className="text-xs border border-card-border text-muted hover:text-foreground hover:border-foreground/30 px-2.5 py-1 rounded transition-colors disabled:opacity-50"
+              >
+                {exporting ? 'Exporting...' : 'Export PDF'}
+              </button>
+            </>
           )}
           {/* Persona name chips */}
           {personaNamesList.map(name => (
@@ -410,23 +485,38 @@ export function ThreeColumnLayout({
             </span>
           ))}
         </div>
-        {/* Aspect pills */}
+        {/* Round topics */}
         {aspects.length > 0 && (
-          <div className="flex items-center gap-2 mt-2 flex-wrap">
-            {aspects.map((aspect, i) => (
-              <span
-                key={aspect.id}
-                className={`text-[10px] px-2 py-0.5 rounded border ${
-                  currentRound === i + 1
-                    ? 'border-accent text-accent'
-                    : currentRound != null && i + 1 < currentRound
-                    ? 'border-card-border text-muted'
-                    : 'border-card-border text-muted opacity-50'
-                }`}
-              >
-                {aspect.label}
-              </span>
-            ))}
+          <div className="mt-3 rounded-xl border border-card-border bg-surface p-4 space-y-0.5">
+            <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-1.5">Round Topics</p>
+            {aspects.map((aspect, i) => {
+              const roundNum = i + 1
+              const isActive = currentRound === roundNum
+              const isDone = isComplete || (currentRound != null && roundNum < currentRound)
+              const suit = PHASE_SUITS[i % 4]
+              const isRedSuit = suit === '♥' || suit === '♦'
+              return (
+                <div key={aspect.id} className={`flex items-baseline gap-2 rounded px-2 py-1 transition-colors ${
+                  isActive ? 'bg-accent/10' : ''
+                }`}>
+                  <span className={`text-[10px] flex-shrink-0 ${
+                    isActive ? 'text-accent' : isDone ? (isRedSuit ? 'text-accent/50' : 'text-foreground/30') : 'text-muted opacity-30'
+                  }`}>{suit}</span>
+                  <span className={`text-xs ${
+                    isActive ? 'text-foreground font-medium' : isDone ? 'text-foreground/70' : 'text-muted opacity-40'
+                  }`}>
+                    {aspect.label}
+                  </span>
+                  {aspect.description && (
+                    <span className={`text-[10px] ${
+                      isActive ? 'text-muted' : isDone ? 'text-muted/60' : 'text-muted opacity-30'
+                    }`}>
+                      {aspect.description}
+                    </span>
+                  )}
+                </div>
+              )
+            })}
           </div>
         )}
       </div>
@@ -452,12 +542,15 @@ export function ThreeColumnLayout({
                     return <PhaseDivider key={el.key} label={el.label} sublabel={el.sublabel} />
                   }
                   return (
-                    <MessageThread
-                      key={el.key}
-                      messages={[el.message]}
-                      personaNames={personaNames}
-                      personaAvatars={personaAvatars}
-                    />
+                    <div key={el.key} className={el.depth > 0 ? 'border-l border-card-border/40 pl-2' : ''} style={el.depth > 0 ? { marginLeft: `${el.depth * 1.5}rem` } : undefined}>
+                      <MessageThread
+                        messages={[el.message]}
+                        allMessages={messages}
+                        personaNames={personaNames}
+                        personaAvatars={personaAvatars}
+                        cruxTriggerMap={cruxTriggerMap}
+                      />
+                    </div>
                   )
                 })}
               </>
@@ -484,7 +577,13 @@ export function ThreeColumnLayout({
           />
 
           {allRooms.size === 0 && (
-            <div className="rounded-xl border border-card-border bg-surface p-4">
+            <div className="rounded-xl border border-card-border bg-surface p-4 text-center">
+              <div className="flex justify-center gap-2 mb-2 opacity-20">
+                <span className="text-foreground text-sm">♠</span>
+                <span className="text-accent text-sm">♥</span>
+                <span className="text-accent text-sm">♦</span>
+                <span className="text-foreground text-sm">♣</span>
+              </div>
               <p className="text-xs text-muted">Crux rooms will appear here when disagreements emerge.</p>
             </div>
           )}
@@ -506,20 +605,26 @@ export function ThreeColumnLayout({
                   {/* Row 1: avatars + first names + status dot */}
                   <div className="flex items-center gap-2 mb-1.5">
                     <div className="relative w-9 h-6 flex-shrink-0">
-                      {avatar0 ? (
-                        <img src={avatar0} alt={p0} className="w-6 h-6 rounded-full object-cover absolute left-0 border border-card-border" />
-                      ) : (
-                        <div className="absolute left-0 w-6 h-6 rounded-full bg-card-bg border border-card-border flex items-center justify-center">
-                          <span className="text-[10px] font-bold text-accent">{p0.charAt(0)}</span>
+                      {/* Avatar 0 — hex */}
+                      <div className="absolute left-0 w-6 h-6">
+                        <div className="absolute inset-[-1px] hex-clip" style={{ background: 'var(--card-border)' }} />
+                        <div className="absolute inset-0 hex-clip overflow-hidden bg-card-bg flex items-center justify-center">
+                          {avatar0
+                            ? <img src={avatar0} alt={p0} className="w-full h-full object-cover" />
+                            : <span className="text-[9px] font-bold text-accent">{p0.charAt(0)}</span>
+                          }
                         </div>
-                      )}
-                      {avatar1 ? (
-                        <img src={avatar1} alt={p1} className="w-6 h-6 rounded-full object-cover absolute left-3 border border-card-border" />
-                      ) : (
-                        <div className="absolute left-3 w-6 h-6 rounded-full bg-card-bg border border-card-border flex items-center justify-center">
-                          <span className="text-[10px] font-bold text-accent">{p1.charAt(0)}</span>
+                      </div>
+                      {/* Avatar 1 — hex, offset right */}
+                      <div className="absolute left-3 w-6 h-6">
+                        <div className="absolute inset-[-1px] hex-clip" style={{ background: 'var(--card-border)' }} />
+                        <div className="absolute inset-0 hex-clip overflow-hidden bg-card-bg flex items-center justify-center">
+                          {avatar1
+                            ? <img src={avatar1} alt={p1} className="w-full h-full object-cover" />
+                            : <span className="text-[9px] font-bold text-accent">{p1.charAt(0)}</span>
+                          }
                         </div>
-                      )}
+                      </div>
                     </div>
                     <span className="text-[11px] font-semibold text-foreground flex-1 min-w-0 truncate">
                       {p0.split(' ')[0]} <span className="text-muted font-normal">vs</span> {p1.split(' ')[0]}
@@ -530,8 +635,8 @@ export function ThreeColumnLayout({
                       <span className="text-[10px] text-accent flex-shrink-0">done</span>
                     )}
                   </div>
-                  {/* Row 2: short label, muted */}
-                  <p className="text-[11px] text-muted leading-snug">{room.label || room.question}</p>
+                  {/* Row 2: short label or question fallback */}
+                  <p className="text-[11px] text-muted leading-snug line-clamp-2">{room.label || room.question}</p>
                 </div>
 
                 {/* Expandable: CruxRoom messages */}
@@ -556,9 +661,12 @@ export function ThreeColumnLayout({
       {/* ── Crux cards — always visible once they appear ── */}
       {cruxCards.length > 0 && (
         <div>
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-muted mb-3">
-            Crux Cards
-          </h2>
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-accent text-xs">♦</span>
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-muted">Crux Cards</h2>
+            <div className="flex-1 h-px bg-card-border opacity-60" />
+            <span className="text-accent text-xs">♦</span>
+          </div>
           <div className="flex gap-4 overflow-x-auto pb-3">
             {cruxCards.map((card, i) => (
               <PlayingCard key={card.id} card={card} personaNames={personaNames} index={i} />
@@ -569,66 +677,174 @@ export function ThreeColumnLayout({
 
       {/* ── Debate Results — shown when complete ── */}
       {isComplete && (() => {
-        // ── Derived metrics ──────────────────────────────────────
-        const msgCountByPersona = new Map<string, number>()
-        for (const m of messages) {
-          msgCountByPersona.set(m.personaId, (msgCountByPersona.get(m.personaId) ?? 0) + 1)
-        }
-        const mostActiveId = [...msgCountByPersona.entries()].sort((a, b) => b[1] - a[1])[0]?.[0]
-        const mostActiveName = mostActiveId ? (personaNames.get(mostActiveId) ?? mostActiveId).split(' ')[0] : '—'
-        const mostActiveCount = mostActiveId ? msgCountByPersona.get(mostActiveId)! : 0
-
         const resolvedCount = cruxCards.filter(c => c.resolved).length
-        const resolutionPct = cruxCards.length > 0 ? Math.round((resolvedCount / cruxCards.length) * 100) : 0
-
-        const typeCounts = new Map<string, number>()
-        for (const c of cruxCards) typeCounts.set(c.disagreementType, (typeCounts.get(c.disagreementType) ?? 0) + 1)
-        const dominantType = [...typeCounts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? '—'
-
-        const roomMsgCounts = new Map<string, number>()
-        for (const room of completedRooms.values()) roomMsgCounts.set(room.roomId, room.messages.filter(m => m.type === 'persona').length)
-        const deepestRoomId = [...roomMsgCounts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0]
-        const deepestRoom = deepestRoomId ? completedRooms.get(deepestRoomId) : undefined
-        const deepestRoomLabel = deepestRoom
-          ? `${(personaNames.get(deepestRoom.personas[0]) ?? deepestRoom.personas[0]).split(' ')[0]} vs ${(personaNames.get(deepestRoom.personas[1]) ?? deepestRoom.personas[1]).split(' ')[0]}`
-          : '—'
-
-        // Disagreement Entropy: H = -sum(p_i * ln(p_i)) over disagreementType distribution
-        const entropy = cruxCards.length > 0
-          ? -[...typeCounts.values()].reduce((sum, count) => {
-              const p = count / cruxCards.length
-              return sum + p * Math.log(p)
-            }, 0)
-          : 0
-        // CCR: C_t / (D_0 + C_t) — approximated as resolved / total cards this session
-        const ccr = cruxCards.length > 0 ? resolvedCount / cruxCards.length : 0
-
-        const allPersonaIds = Array.from(new Set(cruxCards.flatMap(c => Object.keys(c.personas))))
 
         return (
           <div className="space-y-5 rounded-xl border border-card-border bg-surface p-5">
             {/* Header */}
             <div className="flex items-center justify-between">
-              <h2 className="text-sm font-bold text-foreground">Debate Results</h2>
+              <h2 className="text-sm font-bold text-foreground flex items-center gap-2">
+                <span className="text-accent text-xs">♠</span>
+                Debate Results
+              </h2>
               <div className="flex items-center gap-3 text-xs text-muted">
                 <span>{messages.length} messages</span>
                 <span>·</span>
                 <span>{aspects.length} rounds</span>
                 <span>·</span>
                 <span>{completedRooms.size} crux room{completedRooms.size !== 1 ? 's' : ''}</span>
+                {cruxCards.length > 0 && (
+                  <>
+                    <span>·</span>
+                    <span>{resolvedCount}/{cruxCards.length} resolved</span>
+                  </>
+                )}
               </div>
             </div>
+
+            {/* ── Claims Under Debate ── */}
+            {summary?.claims && summary.claims.length > 0 && (
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2 flex items-center gap-1.5">
+                  <span className="text-foreground/30 text-[9px]">♣</span>
+                  Claims Under Debate
+                </p>
+                <div className="space-y-3">
+                  {summary.claims.map((claim, ci) => (
+                    <div key={ci} className="rounded-lg border border-card-border bg-card-bg p-3">
+                      <p className="text-xs font-semibold text-foreground mb-2">{claim.claim}</p>
+                      <div className="space-y-1.5">
+                        {claim.stances.map((stance, si) => {
+                          const name = (personaNames.get(stance.personaId) ?? stance.personaId).split(' ')[0]
+                          const posColor =
+                            stance.position === 'for' ? 'text-foreground' :
+                            stance.position === 'against' ? 'text-accent' :
+                            'text-muted'
+                          return (
+                            <div key={si} className="flex items-start gap-2">
+                              <span className={`text-[11px] font-semibold flex-shrink-0 w-16 ${posColor}`}>{name}</span>
+                              <span className={`text-[10px] font-bold flex-shrink-0 w-12 uppercase ${posColor}`}>{stance.position}</span>
+                              <span className="text-[11px] text-muted">{stance.reasoning}</span>
+                            </div>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ── Agreements ── */}
+            {summary?.agreements && summary.agreements.length > 0 && (
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2 flex items-center gap-1.5">
+                  <span className="text-accent text-[9px]">♥</span>
+                  Points of Agreement
+                </p>
+                <div className="space-y-1">
+                  {summary.agreements.map((a, i) => (
+                    <div key={i} className="flex items-start gap-2 text-xs">
+                      <span className="text-foreground opacity-40 flex-shrink-0">—</span>
+                      <span className="text-foreground">{a}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ── Evidence Ledger ── */}
+            {summary?.evidenceLedger && summary.evidenceLedger.length > 0 && (
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2 flex items-center gap-1.5">
+                  <span className="text-accent text-[9px]">♦</span>
+                  Evidence Ledger
+                </p>
+                <div className="space-y-3">
+                  {summary.evidenceLedger.map((el, i) => {
+                    const name = (personaNames.get(el.personaId) ?? el.personaId).split(' ')[0]
+                    return (
+                      <div key={i} className="rounded-lg border border-card-border bg-card-bg p-3">
+                        <p className="text-[11px] font-semibold text-accent mb-2">{name}</p>
+                        <div className="grid grid-cols-2 gap-3">
+                          {/* Accepted column */}
+                          <div>
+                            <p className="text-[9px] font-semibold uppercase tracking-wider text-foreground mb-1">Accepted</p>
+                            {el.accepted.length > 0 ? (
+                              <div className="space-y-1.5">
+                                {el.accepted.map((a, j) => (
+                                  <div key={j} className="pl-2 border-l border-card-border">
+                                    <p className="text-[11px] text-foreground">{a.claim}</p>
+                                    <p className="text-[10px] text-muted">{a.reason}</p>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              <p className="text-[10px] text-muted italic">None noted</p>
+                            )}
+                          </div>
+                          {/* Challenged column */}
+                          <div>
+                            <p className="text-[9px] font-semibold uppercase tracking-wider text-accent mb-1">Challenged</p>
+                            {el.challenged.length > 0 ? (
+                              <div className="space-y-1.5">
+                                {el.challenged.map((c, j) => (
+                                  <div key={j} className="pl-2 border-l border-accent/30">
+                                    <p className="text-[11px] text-foreground">{c.claim}</p>
+                                    <p className="text-[10px] text-muted">{c.reason}</p>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              <p className="text-[10px] text-muted italic">None noted</p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* ── Flip Conditions ── */}
+            {summary?.flipConditions && summary.flipConditions.some(fc => fc.conditions.length > 0) && (
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2 flex items-center gap-1.5">
+                  <span className="text-foreground/30 text-[9px]">♠</span>
+                  What Would Change Their Mind
+                </p>
+                <div className="space-y-2">
+                  {summary.flipConditions.filter(fc => fc.conditions.length > 0).map((fc, i) => {
+                    const name = (personaNames.get(fc.personaId) ?? fc.personaId).split(' ')[0]
+                    return (
+                      <div key={i}>
+                        <p className="text-[11px] font-semibold text-accent mb-1">{name}</p>
+                        <div className="space-y-0.5 pl-3 border-l border-card-border">
+                          {fc.conditions.map((c, j) => (
+                            <p key={j} className="text-[11px] text-muted">{c}</p>
+                          ))}
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
 
             {/* ── Position Shifts ── */}
             {shifts.length > 0 && (
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2">Position Shifts</p>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2 flex items-center gap-1.5">
+                  <span className="text-accent text-[9px]">♦</span>
+                  Position Shifts
+                </p>
                 <div className="space-y-1.5">
                   {shifts.map(shift => {
                     const name = (personaNames.get(shift.personaId) ?? shift.personaId).split(' ')[0]
                     return (
                       <div key={shift.personaId} className="flex items-start gap-2 text-xs">
-                        <span className={`font-medium ${shift.shifted ? 'text-accent' : 'text-foreground'}`}>
+                        <span className={`font-medium flex-shrink-0 ${shift.shifted ? 'text-accent' : 'text-foreground'}`}>
                           {name}
                         </span>
                         <span className="text-muted">—</span>
@@ -640,145 +856,55 @@ export function ThreeColumnLayout({
               </div>
             )}
 
-            {/* ── Metrics row ── */}
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {/* Resolution rate */}
-              <div className="rounded-lg border border-card-border bg-card-bg p-3">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-1">Resolution</p>
-                <p className="text-lg font-bold text-foreground leading-none mb-1.5">{resolutionPct}%</p>
-                <div className="h-1 w-full rounded-full bg-card-border overflow-hidden">
-                  <div className="h-full bg-accent rounded-full" style={{ width: `${resolutionPct}%` }} />
-                </div>
-                <p className="text-[10px] text-muted mt-1">{resolvedCount}/{cruxCards.length} cruxes</p>
-              </div>
-
-              {/* Most active */}
-              <div className="rounded-lg border border-card-border bg-card-bg p-3">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-1">Most Active</p>
-                <p className="text-lg font-bold text-foreground leading-none truncate">{mostActiveName}</p>
-                <p className="text-[10px] text-muted mt-1">{mostActiveCount} messages</p>
-              </div>
-
-              {/* Dominant fault type */}
-              <div className="rounded-lg border border-card-border bg-card-bg p-3">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-1">Root Cause</p>
-                <p className="text-sm font-bold text-foreground leading-snug capitalize">{dominantType}</p>
-                <p className="text-[10px] text-muted mt-1">Disagreement type</p>
-              </div>
-
-              {/* Deepest clash */}
-              <div className="rounded-lg border border-card-border bg-card-bg p-3">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-1">Deepest Clash</p>
-                <p className="text-sm font-bold text-foreground leading-snug truncate">{deepestRoomLabel}</p>
-                {deepestRoomId && <p className="text-[10px] text-muted mt-1">{roomMsgCounts.get(deepestRoomId)} exchanges</p>}
-              </div>
-            </div>
-
-            {/* ── Benchmark Metrics (from whitepaper §8) ── */}
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2">
-                Benchmark Metrics
-                <span className="ml-2 text-[9px] font-normal normal-case opacity-60">evaluation suite</span>
-              </p>
-              <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-                {/* H — Disagreement Entropy */}
-                <div className="rounded-lg border border-card-border bg-card-bg p-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-1">H</p>
-                  <p className="text-lg font-bold text-foreground leading-none">{entropy.toFixed(2)}</p>
-                  <p className="text-[10px] text-muted mt-1">Disagreement entropy</p>
-                  <p className="text-[9px] text-muted opacity-60 mt-0.5">Lower = more focused</p>
-                </div>
-                {/* CCR — Crux Compression Rate */}
-                <div className="rounded-lg border border-card-border bg-card-bg p-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-1">CCR</p>
-                  <p className="text-lg font-bold text-foreground leading-none">{(ccr * 100).toFixed(0)}%</p>
-                  <p className="text-[10px] text-muted mt-1">Crux compression rate</p>
-                  <p className="text-[9px] text-muted opacity-60 mt-0.5">Target {'>='} 50%</p>
-                </div>
-                {/* IQS — Insight Quality Score */}
-                <div className="rounded-lg border border-card-border bg-card-bg p-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-1">IQS</p>
-                  <p className="text-lg font-bold text-muted leading-none opacity-40">--</p>
-                  <p className="text-[10px] text-muted mt-1">Insight quality score</p>
-                  <p className="text-[9px] text-muted opacity-60 mt-0.5">Needs expert raters</p>
-                </div>
-                {/* CRR — Crux Recurrence Rate */}
-                <div className="rounded-lg border border-card-border bg-card-bg p-3">
-                  <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-1">CRR</p>
-                  <p className="text-lg font-bold text-muted leading-none opacity-40">--</p>
-                  <p className="text-[10px] text-muted mt-1">Crux recurrence rate</p>
-                  <p className="text-[9px] text-muted opacity-60 mt-0.5">Needs multi-session</p>
-                </div>
-              </div>
-            </div>
-
-            {/* ── Position matrix ── */}
-            {cruxCards.length > 0 && allPersonaIds.length > 0 && (
+            {/* ── Resolution Paths ── */}
+            {summary?.resolutionPaths && summary.resolutionPaths.length > 0 && (
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2">Position Matrix</p>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-[11px] border-collapse">
-                    <thead>
-                      <tr>
-                        <th className="text-left text-muted font-normal pb-2 pr-3 min-w-[80px]">Persona</th>
-                        {cruxCards.map(card => (
-                          <th key={card.id} className="text-center text-muted font-normal pb-2 px-2 min-w-[80px]">
-                            <span className="line-clamp-2 leading-snug">{card.question}</span>
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {allPersonaIds.map(personaId => {
-                        const name = personaNames.get(personaId) ?? personaId
-                        return (
-                          <tr key={personaId} className="border-t border-card-border">
-                            <td className="py-2 pr-3 font-medium text-foreground">{name.split(' ')[0]}</td>
-                            {cruxCards.map(card => {
-                              const pos = card.personas[personaId]?.position
-                              const color =
-                                pos === 'YES' ? 'text-foreground font-bold' :
-                                pos === 'NO' ? 'text-accent font-bold' :
-                                pos === 'NUANCED' ? 'text-muted' :
-                                'text-muted opacity-30'
-                              return (
-                                <td key={card.id} className={`py-2 px-2 text-center ${color}`}>
-                                  {pos ?? '--'}
-                                </td>
-                              )
-                            })}
-                          </tr>
-                        )
-                      })}
-                    </tbody>
-                  </table>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2 flex items-center gap-1.5">
+                  <span className="text-accent text-[9px]">♥</span>
+                  Resolution Paths
+                </p>
+                <div className="space-y-1.5">
+                  {summary.resolutionPaths.map((path, i) => (
+                    <div key={i} className="flex items-start gap-2 text-xs">
+                      <span className="text-accent flex-shrink-0 font-bold">{'\u2192'}</span>
+                      <span className="text-foreground">{path}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
 
-            {/* ── Fault lines ── */}
+            {/* ── Fault Lines (from crux rooms) ── */}
             {completedRooms.size > 0 && (
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2">Fault Lines</p>
-                <div className="space-y-1.5">
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2 flex items-center gap-1.5">
+                  <span className="text-foreground/30 text-[9px]">♠</span>
+                  Fault Lines
+                </p>
+                <div className="space-y-2">
                   {Array.from(completedRooms.values()).map(room => {
                     const p0 = personaNames.get(room.personas[0]) ?? room.personas[0]
                     const p1 = personaNames.get(room.personas[1]) ?? room.personas[1]
                     const card = cruxCards.find(c => c.cruxRoomId === room.roomId)
                     return (
-                      <div key={room.roomId} className="flex items-center gap-2 text-xs">
-                        <span className="text-foreground font-medium">{p0.split(' ')[0]}</span>
-                        <span className="text-muted">vs</span>
-                        <span className="text-foreground font-medium">{p1.split(' ')[0]}</span>
-                        {card && (
-                          <>
-                            <span className="text-muted">--</span>
-                            <span className="text-muted capitalize">{card.disagreementType}</span>
-                            {card.resolved
-                              ? <span className="text-accent text-[10px]">resolved</span>
-                              : <span className="text-muted text-[10px]">unresolved</span>
-                            }
-                          </>
+                      <div key={room.roomId} className="rounded-lg border border-card-border bg-card-bg p-2.5">
+                        <div className="flex items-center gap-2 text-xs">
+                          <span className="text-foreground font-medium">{p0.split(' ')[0]}</span>
+                          <span className="text-muted">vs</span>
+                          <span className="text-foreground font-medium">{p1.split(' ')[0]}</span>
+                          {card && (
+                            <>
+                              <span className="text-muted">—</span>
+                              <span className="text-muted capitalize">{card.disagreementType}</span>
+                              {card.resolved
+                                ? <span className="text-accent text-[10px]">resolved</span>
+                                : <span className="text-muted text-[10px]">unresolved</span>
+                              }
+                            </>
+                          )}
+                        </div>
+                        {card?.diagnosis && (
+                          <p className="text-[10px] text-muted mt-1 leading-snug">{card.diagnosis}</p>
                         )}
                       </div>
                     )
@@ -786,6 +912,7 @@ export function ThreeColumnLayout({
                 </div>
               </div>
             )}
+
           </div>
         )
       })()}

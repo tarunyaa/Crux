@@ -9,6 +9,8 @@ export interface DialogueMessage {
   personaId: PersonaId
   content: string
   replyTo?: string        // Message ID being replied to (for @mention display)
+  round?: number          // 1-indexed round number (0 = opening, undefined = closing)
+  miniround?: number      // 0-indexed miniround within the round
   timestamp: number
 }
 
@@ -63,6 +65,35 @@ export interface PositionShift {
   summary: string
 }
 
+// ─── Debate Summary (post-debate extraction) ────────────────
+
+export interface DebateSummary {
+  /** Key claims argued, with per-persona stance */
+  claims: Array<{
+    claim: string
+    stances: Array<{
+      personaId: string
+      position: 'for' | 'against' | 'mixed'
+      reasoning: string   // What they actually said to support this
+    }>
+  }>
+  /** Points all personas agreed on */
+  agreements: string[]
+  /** Per-persona: what evidence they accepted vs challenged, with reasons */
+  evidenceLedger: Array<{
+    personaId: string
+    accepted: Array<{ claim: string; reason: string }>
+    challenged: Array<{ claim: string; reason: string }>
+  }>
+  /** Per-persona: what they said would change their mind */
+  flipConditions: Array<{
+    personaId: string
+    conditions: string[]
+  }>
+  /** Specific testable conditions that would settle each remaining dispute */
+  resolutionPaths: string[]
+}
+
 // SSE Events
 export type DialogueEvent =
   | { type: 'dialogue_start'; topic: string; personas: PersonaId[] }
@@ -72,8 +103,8 @@ export type DialogueEvent =
   | { type: 'clash_start'; personas: string[]; aspect: string }
   | { type: 'round_end'; aspect: DebateAspect }
   | { type: 'disagreement_detected'; candidate: DisagreementCandidate }
-  | { type: 'crux_room_spawning'; roomId: string; question: string; label: string; personas: PersonaId[] }
+  | { type: 'crux_room_spawning'; roomId: string; question: string; label: string; personas: PersonaId[]; sourceMessages: string[] }
   | { type: 'crux_message'; roomId: string; message: CruxMessage }
   | { type: 'crux_card_posted'; card: CruxCard }
-  | { type: 'dialogue_complete'; finalState?: DialogueState; shifts?: PositionShift[] }
+  | { type: 'dialogue_complete'; finalState?: DialogueState; shifts?: PositionShift[]; summary?: DebateSummary }
   | { type: 'error'; error: string }

@@ -1,14 +1,14 @@
 import { getDb } from './index'
 import { debates } from './schema'
 import { eq, desc } from 'drizzle-orm'
-import type { SSEEvent, DebateOutput } from '@/lib/types'
+import type { DebateOutput } from '@/lib/types'
 
 interface SaveDebateParams {
   id: string
   topic: string
   mode: string
   personaIds: string[]
-  events: SSEEvent[]
+  events: unknown[]
   output: DebateOutput | null
   status: 'completed' | 'error'
 }
