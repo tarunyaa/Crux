@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { getPersona, loadContract } from "@/lib/personas/loader";
+import { getPersona, loadContract, loadBeliefGraph } from "@/lib/personas/loader";
 import { notFound } from "next/navigation";
 import type { PersonaContract } from "@/lib/types";
 import HexAvatar from "@/components/HexAvatar";
 import SuitIcon from "@/components/SuitIcon";
+import { BeliefGraphSection } from "@/components/belief-graph/BeliefGraphSection";
 
 interface CardDetailPageProps {
   params: Promise<{ id: string }>;
@@ -38,6 +39,8 @@ export default async function CardDetailPage({ params }: CardDetailPageProps) {
   } catch {
     // Contract not available
   }
+
+  const beliefGraph = await loadBeliefGraph(decodedId);
 
   return (
     <div className="min-h-screen px-6 py-12">
@@ -112,6 +115,13 @@ export default async function CardDetailPage({ params }: CardDetailPageProps) {
             </p>
           )}
         </div>
+
+        {/* Belief Graph */}
+        {beliefGraph && beliefGraph.nodes.length > 0 && (
+          <div className="rounded-xl border border-card-border bg-card-bg p-8 card-shadow">
+            <BeliefGraphSection graph={beliefGraph} />
+          </div>
+        )}
       </div>
     </div>
   );

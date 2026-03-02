@@ -1,0 +1,833 @@
+{
+  "topic": "Will AI cause net job losses in the next decade?",
+  "personas": [
+    "Citrini",
+    "Citadel"
+  ],
+  "nodes": [
+    {
+      "id": "c-0",
+      "claim": "[Net job losses vs. gains from AI in the next decade and economic stability] AI will cause significant net job losses in the next decade, particularly in white-collar work, triggering a self-reinforcing cycle of displacement, wage compression, reduced consumer spending, and systemic economic instability. vs. AI will not cause net job losses in the next decade because productivity gains will drive economic growth, new job creation, and demand shifts that offset displacement, while practical constraints on automation deployment limit near-term labor substitution.",
+      "mergedFrom": [
+        "Citrini-root",
+        "Citadel-root"
+      ],
+      "baseScores": {
+        "Citrini": 0.6393333333333333,
+        "Citadel": 0.6086666666666667
+      },
+      "communityStrength": 0,
+      "variance": 0.0002351111111111104,
+      "classification": "crux"
+    },
+    {
+      "id": "c-1",
+      "claim": "[GPU cluster replacing workers and whether productivity gains reach consumers/workers] single GPU cluster replacing 10,000 white-collar workers causes/supports economic disruption vs. Real income expansion requires labor share maintenance — but single GPU clusters replacing 10,000 white-collar workers means productivity gains accrue entirely to capital, creating Ghost GDP that shows up in national accounts but never reaches consumer pockets to drive demand",
+      "mergedFrom": [
+        "Citrini-d1-0",
+        "Citrini-r1-2"
+      ],
+      "baseScores": {
+        "Citrini": 0,
+        "Citadel": 0.8500000000000003
+      },
+      "communityStrength": 0,
+      "variance": 0.18062500000000012,
+      "classification": "crux"
+    },
+    {
+      "id": "c-2",
+      "claim": "[Cost savings from layoffs financing AI capability development and capital allocation decisions] dollars saved from headcount cuts causes/supports increased AI capability development vs. Marginal cost of compute fell 95% while human wages rose 4% annually — inference now costs $0.001 per 1000 tokens versus $50/hour for knowledge workers, and the cost curve is accelerating downward with new architectures, making the crossover point permanent not temporary",
+      "mergedFrom": [
+        "Citrini-d1-4",
+        "Citrini-r3-2"
+      ],
+      "baseScores": {
+        "Citrini": 0,
+        "Citadel": 0.5800000000000005
+      },
+      "communityStrength": 0,
+      "variance": 0.08410000000000015,
+      "classification": "crux"
+    },
+    {
+      "id": "c-3",
+      "claim": "[Displaced white-collar workers moving to service/gig sectors and labor substitutability across skill categories] displaced white-collar workers taking lower-paying service/gig jobs causes/supports increased labor supply in service and gig sectors vs. Software engineer postings measure replacement hiring for attrition, not net new demand — hyperscaler headcount-to-revenue ratios collapsed 40% since 2022 while AI capex grew 300%, proving companies are substituting capital for labor even as they backfill departures",
+      "mergedFrom": [
+        "Citrini-d2-3",
+        "Citrini-r2-1"
+      ],
+      "baseScores": {
+        "Citrini": 0,
+        "Citadel": 0.7333333333333348
+      },
+      "communityStrength": 0,
+      "variance": 0.134444444444445,
+      "classification": "crux"
+    },
+    {
+      "id": "c-4",
+      "claim": "[Whether physical capital constraints prevent exponential adoption or are dissolving] Recursive capability does not imply recursive adoption—the feedback loop from 'increased AI capability enables next round of job cuts' assumes zero deployment friction, but physical capital constraints (GPU availability), energy infrastructure bottlenecks, and regulatory approval timelines create natural economic boundaries that prevent the exponential adoption curve this thesis requires vs. Physical capital constraints dissolve under inference cost collapse — H100 clusters that cost $100M in 2023 now deliver equivalent output at $10M, meaning GPU availability isn't a bottleneck but an accelerant as each dollar of capex displaces 10x more labor than 18 months ago",
+      "mergedFrom": [
+        "Citadel-r1-1",
+        "Citrini-r2-0"
+      ],
+      "baseScores": {
+        "Citrini": 1,
+        "Citadel": 0.6750000000000002
+      },
+      "communityStrength": 0,
+      "variance": 0.026406249999999975,
+      "classification": "crux"
+    },
+    {
+      "id": "c-5",
+      "claim": "[Current data on AI adoption and job displacement in white-collar work] AI capability improvement translating to worker layoffs requires demonstrating actual displacement in current data, not hypothetical scenarios—St. Louis Fed surveys show AI daily usage remains under 10% of knowledge workers, Indeed shows white-collar job postings up across software engineering (+11% YoY), financial analysis, and legal services, and US Census Bureau data shows business formation accelerating not declining, directly contradicting the premise that AI improvement is currently driving systematic layoffs vs. rising software engineer job postings (up 11% YoY) causes/supports undermines displacement narrative",
+      "mergedFrom": [
+        "Citadel-r2-0",
+        "Citadel-d1-2"
+      ],
+      "baseScores": {
+        "Citrini": 0.8100000000000003,
+        "Citadel": 0
+      },
+      "communityStrength": 0,
+      "variance": 0.16402500000000012,
+      "classification": "crux"
+    },
+    {
+      "id": "c-6",
+      "claim": "[Labor substitutability across skill categories and displaced worker reallocation] Wage compression in service sectors from displaced white-collar workers assumes labor is perfectly substitutable across skill categories, but empirical elasticity of substitution between cognitive and manual labor is demonstrably low—a displaced software engineer cannot costlessly become a competitive barista, and historical data from manufacturing displacement in the 1980s-2000s shows displaced workers either exited the labor force or remained in similar cognitive work at lower firms, not mass migration to service work that would compress those wages vs. productivity gains causes/supports composition of demand alteration",
+      "mergedFrom": [
+        "Citadel-r2-1",
+        "Citadel-d2-3"
+      ],
+      "baseScores": {
+        "Citrini": 0.8100000000000003,
+        "Citadel": 0.1433333333333333
+      },
+      "communityStrength": 0,
+      "variance": 0.11111111111111122,
+      "classification": "crux"
+    },
+    {
+      "id": "c-7",
+      "claim": "[Capital allocation from productivity gains and whether reinvestment drives recursive job cuts] The feedback loop from headcount savings to AI capability development breaks empirically because capital allocation follows return on invested capital, not mechanical reinvestment—firms that achieve productivity gains from AI face the same capital allocation decision as any other efficiency improvement (return cash to shareholders, invest in core business expansion, or fund further R&D), and aggregate corporate behavior shows productivity windfalls historically split roughly 60% shareholder returns, 30% business expansion, 10% technology reinvestment, preventing the exponential spiral this thesis requires vs. productivity shocks causes/supports potential output",
+      "mergedFrom": [
+        "Citadel-r2-2",
+        "Citadel-d1-4"
+      ],
+      "baseScores": {
+        "Citrini": 0.913333333333336,
+        "Citadel": 0
+      },
+      "communityStrength": 0,
+      "variance": 0.20854444444444567,
+      "classification": "crux"
+    },
+    {
+      "id": "c-8",
+      "claim": "[Elasticity of substitution between AI and labor and whether productivity expands or contracts employment] AI improvement driving layoffs requires substitution elasticity above 1.0, but Microsoft's GitHub Copilot deployment data shows 55% of code written by AI yet programmer headcount grew 8% YoY — proving elasticity remains below unity where productivity gains expand output rather than contract employment, consistent with every prior general-purpose technology from steam to computing vs. extremely high elasticity of substitution between AI capital and labor causes/supports labor's share of income collapse",
+      "mergedFrom": [
+        "Citadel-r3-1",
+        "Citadel-d1-1"
+      ],
+      "baseScores": {
+        "Citrini": 0.7500000000000002,
+        "Citadel": 1
+      },
+      "communityStrength": 0,
+      "variance": 0.015624999999999972,
+      "classification": "crux"
+    },
+    {
+      "id": "c-9",
+      "claim": "[Capital allocation from productivity gains and whether it finances recursive AI development] Headcount savings financing AI development assumes zero opportunity cost, but corporate capital allocation follows ROIC optimization — firms achieving 40% productivity gains face identical investment decisions as any margin expansion (share buybacks, dividend increases, core business scaling), and S&P 500 data shows technology windfalls historically allocate 65% to shareholders, 25% to business expansion, 10% to further R&D, preventing the mechanical reinvestment spiral required for recursive displacement vs. physical capital constraints undermines/reduces economic deployment of automation",
+      "mergedFrom": [
+        "Citadel-r3-2",
+        "Citadel-d2-7"
+      ],
+      "baseScores": {
+        "Citrini": 0.8333333333333355,
+        "Citadel": 0.12333333333333356
+      },
+      "communityStrength": 0,
+      "variance": 0.12602500000000066,
+      "classification": "crux"
+    },
+    {
+      "id": "c-10",
+      "claim": "AI capabilities improvement undermines/reduces company demand for workers",
+      "mergedFrom": [
+        "Citrini-d1-1",
+        "Citadel-d1-0"
+      ],
+      "baseScores": {
+        "Citrini": 0,
+        "Citadel": 0
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "consensus"
+    },
+    {
+      "id": "c-11",
+      "claim": "[Historical precedent of productivity gains expanding consumption vs. compressing wages] Historical precedent from steam power, electrification, and computing shows productivity shocks systematically expand the consumption frontier rather than compress wages—Keynes predicted 15-hour workweeks by 2030 from productivity gains, but societies consumed dramatically more instead, and the same substitution-to-complement pattern occurred with Microsoft Office, which ex-ante appeared substitutive but ex-post proved complementary to office workers vs. productivity gains causes/supports new industry generation",
+      "mergedFrom": [
+        "Citadel-r1-2",
+        "Citadel-d2-5"
+      ],
+      "baseScores": {
+        "Citrini": 1,
+        "Citadel": 0.1433333333333333
+      },
+      "communityStrength": 0,
+      "variance": 0.18346944444444446,
+      "classification": "crux"
+    },
+    {
+      "id": "c-12",
+      "claim": "Increased AI capability hitting deployment bottlenecks at inference layer — OpenAI's o3 model requires 1000x more compute per query than GPT-4 while delivering marginal accuracy gains, meaning capability improvements are decoupling from economic viability as costs scale superlinearly with capability, breaking the feedback loop before recursive job cuts materialize",
+      "mergedFrom": [
+        "Citadel-r3-0",
+        "Citadel-d1-3"
+      ],
+      "baseScores": {
+        "Citrini": 0.7500000000000002,
+        "Citadel": 0
+      },
+      "communityStrength": 0,
+      "variance": 0.14062500000000008,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-13",
+      "claim": "[Whether increased AI capability causes job cuts or productivity expands employment] increased AI capability causes/supports enabling next round of job cuts vs. Real income expansion breaks when labor share collapses — Microsoft's $60B AI capex corresponds to 5,000 net headcount reduction since 2023, meaning productivity gains flow entirely to shareholders as buybacks, not worker wages that drive consumption, creating Ghost GDP visible in national accounts but absent from household balance sheets",
+      "mergedFrom": [
+        "Citrini-d2-0",
+        "Citrini-r3-1"
+      ],
+      "baseScores": {
+        "Citrini": 0,
+        "Citadel": 0.56
+      },
+      "communityStrength": 0,
+      "variance": 0.07840000000000001,
+      "classification": "crux"
+    },
+    {
+      "id": "c-14",
+      "claim": "[Whether increased AI capability causes further worker layoffs or expands output/employment] increased AI capability causes/supports further worker layoffs vs. productivity shocks causes/supports real income",
+      "mergedFrom": [
+        "Citrini-d2-8",
+        "Citadel-d2-0"
+      ],
+      "baseScores": {
+        "Citrini": 0,
+        "Citadel": 0.1433333333333333
+      },
+      "communityStrength": 0,
+      "variance": 0.0051361111111111095,
+      "classification": "crux"
+    },
+    {
+      "id": "c-15",
+      "claim": "[Income expectations and real income changes from productivity and displacement] white-collar employment crisis causes/supports sustained shift in income expectations vs. productivity gains causes/supports real income expansion",
+      "mergedFrom": [
+        "Citrini-d2-9",
+        "Citadel-d2-4"
+      ],
+      "baseScores": {
+        "Citrini": 0,
+        "Citadel": 0.1433333333333333
+      },
+      "communityStrength": 0,
+      "variance": 0.0051361111111111095,
+      "classification": "consensus"
+    },
+    {
+      "id": "c-16",
+      "claim": "AI-driven displacement spiral causes/supports structural impairment of white-collar earnings power",
+      "mergedFrom": [
+        "Citrini-d1-2"
+      ],
+      "baseScores": {
+        "Citrini": 0
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-17",
+      "claim": "AI threatens company market position causes/supports aggressive AI adoption by incumbents",
+      "mergedFrom": [
+        "Citrini-d1-3"
+      ],
+      "baseScores": {
+        "Citrini": 0
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-18",
+      "claim": "AI capabilities in white-collar work causes/supports job displacement in US economy",
+      "mergedFrom": [
+        "Citrini-d2-1"
+      ],
+      "baseScores": {
+        "Citrini": 0
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-19",
+      "claim": "new AI-created roles paying fraction of old job wages causes/supports worker economic welfare decline",
+      "mergedFrom": [
+        "Citrini-d2-2"
+      ],
+      "baseScores": {
+        "Citrini": 0
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-20",
+      "claim": "increased labor supply in service and gig sectors causes/supports wage compression in those sectors",
+      "mergedFrom": [
+        "Citrini-d2-4"
+      ],
+      "baseScores": {
+        "Citrini": 0
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-21",
+      "claim": "white-collar job losses and pay cuts among top 10% earners undermines/reduces discretionary consumer spending",
+      "mergedFrom": [
+        "Citrini-d2-5"
+      ],
+      "baseScores": {
+        "Citrini": 0
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-22",
+      "claim": "AI improvement and cost reduction causes/supports company worker layoffs",
+      "mergedFrom": [
+        "Citrini-d2-6"
+      ],
+      "baseScores": {
+        "Citrini": 0
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-23",
+      "claim": "cost savings from layoffs causes/supports increased AI capability purchases",
+      "mergedFrom": [
+        "Citrini-d2-7"
+      ],
+      "baseScores": {
+        "Citrini": 0
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-24",
+      "claim": "The 'single GPU cluster replacing 10,000 workers' scenario violates national income accounting identities—if productivity surges while measured output rises, aggregate demand cannot simultaneously collapse without violating Y=C+I+G+NX, and current data shows software engineer job postings up 11% YoY with unemployment at 4.28%, directly contradicting the displacement premise",
+      "mergedFrom": [
+        "Citadel-r1-0"
+      ],
+      "baseScores": {
+        "Citrini": 1
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-25",
+      "claim": "technological revolutions causes/supports task composition alteration",
+      "mergedFrom": [
+        "Citadel-d2-1"
+      ],
+      "baseScores": {
+        "Citadel": 0.1433333333333333
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-26",
+      "claim": "productivity growth causes/supports workweek reduction",
+      "mergedFrom": [
+        "Citadel-d2-2"
+      ],
+      "baseScores": {
+        "Citadel": 0.1433333333333333
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-27",
+      "claim": "persistent failure of redistribution mechanisms and simultaneous drying up of investment opportunities causes/supports structural fall in aggregate demand",
+      "mergedFrom": [
+        "Citadel-d2-6"
+      ],
+      "baseScores": {
+        "Citadel": 0.1433333333333333
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-28",
+      "claim": "energy availability constraints undermines/reduces economic deployment of automation",
+      "mergedFrom": [
+        "Citadel-d2-8"
+      ],
+      "baseScores": {
+        "Citadel": 0.12333333333333356
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-29",
+      "claim": "regulatory approvals constraints undermines/reduces economic deployment of automation",
+      "mergedFrom": [
+        "Citadel-d2-9"
+      ],
+      "baseScores": {
+        "Citadel": 0.12333333333333356
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-30",
+      "claim": "Inference cost collapsed 90% in 18 months while white-collar output per worker already jumped 40% — productivity gains aren't creating new industries, they're concentrating returns to capital holders who automated existing workflows, with zero visible new job categories emerging three years into deployment",
+      "mergedFrom": [
+        "Citrini-r1-0"
+      ],
+      "baseScores": {
+        "Citadel": 0.8500000000000003
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-31",
+      "claim": "Software engineer postings lag displacement by 18+ months — forward labor demand is collapsing in knowledge work as shown by capex-to-headcount ratios at hyperscalers, where $50B in AI infrastructure spending corresponds to net workforce reductions, not expansions",
+      "mergedFrom": [
+        "Citrini-r1-1"
+      ],
+      "baseScores": {
+        "Citadel": 0.9666666666666697
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-32",
+      "claim": "Three years post-ChatGPT and the new industry is 'prompt engineer' — a role already being automated — while every previous tech transition showed visible new job categories within 5 years, proving this cycle's productivity gains concentrate in capital returns, not labor-intensive new sectors",
+      "mergedFrom": [
+        "Citrini-r2-2"
+      ],
+      "baseScores": {
+        "Citadel": 0.6750000000000002
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    },
+    {
+      "id": "c-33",
+      "claim": "GPU cluster costs dropped 90% in 18 months while performance doubled — physical capital constraints aren't binding when $10M buys what $100M bought in 2023, and hyperscalers are deploying clusters faster than power infrastructure can scale, proving capital availability outpaces deployment friction",
+      "mergedFrom": [
+        "Citrini-r3-0"
+      ],
+      "baseScores": {
+        "Citadel": 0.56
+      },
+      "communityStrength": 0,
+      "variance": 0,
+      "classification": "neutral"
+    }
+  ],
+  "edges": [
+    {
+      "id": "ce-0",
+      "from": "c-1",
+      "to": "c-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-1",
+      "from": "c-10",
+      "to": "c-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-2",
+      "from": "c-16",
+      "to": "c-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-3",
+      "from": "c-17",
+      "to": "c-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-4",
+      "from": "c-2",
+      "to": "c-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-5",
+      "from": "c-13",
+      "to": "c-2",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-6",
+      "from": "c-18",
+      "to": "c-16",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-7",
+      "from": "c-19",
+      "to": "c-1",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-8",
+      "from": "c-3",
+      "to": "c-1",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-9",
+      "from": "c-20",
+      "to": "c-2",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-10",
+      "from": "c-21",
+      "to": "c-1",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-11",
+      "from": "c-22",
+      "to": "c-10",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-12",
+      "from": "c-23",
+      "to": "c-2",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-13",
+      "from": "c-14",
+      "to": "c-2",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-14",
+      "from": "c-15",
+      "to": "c-1",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-15",
+      "from": "c-24",
+      "to": "c-1",
+      "type": "attack",
+      "weight": 0.92
+    },
+    {
+      "id": "ce-16",
+      "from": "c-4",
+      "to": "c-13",
+      "type": "attack",
+      "weight": 0.88
+    },
+    {
+      "id": "ce-17",
+      "from": "c-11",
+      "to": "c-19",
+      "type": "attack",
+      "weight": 0.85
+    },
+    {
+      "id": "ce-18",
+      "from": "c-5",
+      "to": "c-22",
+      "type": "attack",
+      "weight": 0.87
+    },
+    {
+      "id": "ce-19",
+      "from": "c-6",
+      "to": "c-20",
+      "type": "attack",
+      "weight": 0.84
+    },
+    {
+      "id": "ce-20",
+      "from": "c-7",
+      "to": "c-2",
+      "type": "attack",
+      "weight": 0.82
+    },
+    {
+      "id": "ce-21",
+      "from": "c-12",
+      "to": "c-13",
+      "type": "attack",
+      "weight": 0.89
+    },
+    {
+      "id": "ce-22",
+      "from": "c-8",
+      "to": "c-22",
+      "type": "attack",
+      "weight": 0.86
+    },
+    {
+      "id": "ce-23",
+      "from": "c-9",
+      "to": "c-2",
+      "type": "attack",
+      "weight": 0.87
+    },
+    {
+      "id": "ce-24",
+      "from": "c-8",
+      "to": "c-0",
+      "type": "attack",
+      "weight": 0.95
+    },
+    {
+      "id": "ce-25",
+      "from": "c-5",
+      "to": "c-0",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "ce-26",
+      "from": "c-12",
+      "to": "c-0",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "ce-27",
+      "from": "c-7",
+      "to": "c-0",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "ce-28",
+      "from": "c-14",
+      "to": "c-7",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "ce-29",
+      "from": "c-25",
+      "to": "c-10",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "ce-30",
+      "from": "c-26",
+      "to": "c-10",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "ce-31",
+      "from": "c-6",
+      "to": "c-10",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "ce-32",
+      "from": "c-15",
+      "to": "c-10",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "ce-33",
+      "from": "c-11",
+      "to": "c-10",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "ce-34",
+      "from": "c-27",
+      "to": "c-8",
+      "type": "attack",
+      "weight": 0.9
+    },
+    {
+      "id": "ce-35",
+      "from": "c-9",
+      "to": "c-10",
+      "type": "support",
+      "weight": 0.85
+    },
+    {
+      "id": "ce-36",
+      "from": "c-28",
+      "to": "c-10",
+      "type": "support",
+      "weight": 0.85
+    },
+    {
+      "id": "ce-37",
+      "from": "c-29",
+      "to": "c-10",
+      "type": "support",
+      "weight": 0.85
+    },
+    {
+      "id": "ce-38",
+      "from": "c-30",
+      "to": "c-11",
+      "type": "attack",
+      "weight": 0.92
+    },
+    {
+      "id": "ce-39",
+      "from": "c-31",
+      "to": "c-5",
+      "type": "attack",
+      "weight": 0.88
+    },
+    {
+      "id": "ce-40",
+      "from": "c-1",
+      "to": "c-15",
+      "type": "attack",
+      "weight": 0.9
+    },
+    {
+      "id": "ce-41",
+      "from": "c-4",
+      "to": "c-9",
+      "type": "attack",
+      "weight": 0.91
+    },
+    {
+      "id": "ce-42",
+      "from": "c-3",
+      "to": "c-5",
+      "type": "attack",
+      "weight": 0.89
+    },
+    {
+      "id": "ce-43",
+      "from": "c-32",
+      "to": "c-11",
+      "type": "attack",
+      "weight": 0.93
+    },
+    {
+      "id": "ce-44",
+      "from": "c-33",
+      "to": "c-9",
+      "type": "attack",
+      "weight": 0.94
+    },
+    {
+      "id": "ce-45",
+      "from": "c-13",
+      "to": "c-15",
+      "type": "attack",
+      "weight": 0.93
+    },
+    {
+      "id": "ce-46",
+      "from": "c-2",
+      "to": "c-12",
+      "type": "attack",
+      "weight": 0.91
+    }
+  ],
+  "cruxNodes": [
+    "c-0",
+    "c-1",
+    "c-2",
+    "c-3",
+    "c-4",
+    "c-5",
+    "c-6",
+    "c-7",
+    "c-8",
+    "c-9",
+    "c-11",
+    "c-13",
+    "c-14"
+  ],
+  "consensusNodes": [
+    "c-10",
+    "c-15"
+  ]
+}

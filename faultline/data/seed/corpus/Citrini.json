@@ -1,5 +1,103 @@
 [
   {
+    "id": "article-citrini-2028gic-intro",
+    "content": "What if our AI bullishness continues to be right...and what if that's actually bearish? What follows is a scenario, not a prediction. This isn't bear porn or AI doomer fan-fiction. The sole intent of this piece is modeling a scenario that's been relatively underexplored. This is the CitriniResearch Macro Memo from June 2028, detailing the progression and fallout of the Global Intelligence Crisis. The unemployment rate printed 10.2% this morning, a 0.3% upside surprise. The market sold off 2% on the number, bringing the cumulative drawdown in the S&P to 38% from its October 2026 highs. Two years. That's all it took to get from 'contained' and 'sector-specific' to an economy that no longer resembles the one any of us grew up in.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-ghost-gdp",
+    "content": "By October 2026, the S&P 500 flirted with 8000, the Nasdaq broke above 30k. The initial wave of layoffs due to human obsolescence began in early 2026, and they did exactly what layoffs are supposed to. Margins expanded, earnings beat, stocks rallied. Record-setting corporate profits were funneled right back into AI compute. Nominal GDP repeatedly printed mid-to-high single-digit annualized growth. Productivity was booming. Real output per hour rose at rates not seen since the 1950s, driven by AI agents that don't sleep, take sick days or require health insurance. The owners of compute saw their wealth explode as labor costs vanished. Meanwhile, real wage growth collapsed. Despite the administration's repeated boasts of record productivity, white-collar workers lost jobs to machines and were forced into lower-paying roles. When cracks began appearing in the consumer economy, economic pundits popularized the phrase 'Ghost GDP': output that shows up in the national accounts but never circulates through the real economy. In every way AI was exceeding expectations, and the market was AI. The only problem...the economy was not.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-feedback-loop",
+    "content": "It should have been clear all along that a single GPU cluster in North Dakota generating the output previously attributed to 10,000 white-collar workers in midtown Manhattan is more economic pandemic than economic panacea. The velocity of money flatlined. The human-centric consumer economy, 70% of GDP at the time, withered. AI capabilities improved, companies needed fewer workers, white collar layoffs increased, displaced workers spent less, margin pressure pushed firms to invest more in AI, AI capabilities improved. It was a negative feedback loop with no natural brake. The human intelligence displacement spiral. White-collar workers saw their earnings power structurally impaired. Their incomes were the bedrock of the $13 trillion mortgage market—forcing underwriters to reassess whether prime mortgages are still money good.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-saas-disruption",
+    "content": "In late 2025, agentic coding tools took a step function jump in capability. A competent developer working with Claude Code or Codex could now replicate the core functionality of a mid-market SaaS product in weeks. The mid-year review was the first time procurement teams were making decisions with visibility into what these systems could actually do. SaaS wasn't dead. There was still a cost-benefit-analysis to running and supporting in-house builds. But in-house was an option, and that factored into pricing negotiations. The competitive landscape had changed. AI had made it easier to develop and ship new features, so differentiation collapsed. Incumbents were in a race to the bottom on pricing. ServiceNow sold seats. When Fortune 500 clients cut 15% of their workforce, they cancelled 15% of their licenses. The same AI-driven headcount reductions that were boosting margins at their customers were mechanically destroying their own revenue base.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-reflexivity",
+    "content": "The companies most threatened by AI became AI's most aggressive adopters. The historical disruption model said incumbents resist new technology, they lose share to nimble entrants and die slowly. That's what happened to Kodak, to Blockbuster, to BlackBerry. What happened in 2026 was different; the incumbents didn't resist because they couldn't afford to. With stocks down 40-60% and boards demanding answers, the AI-threatened companies did the only thing they could. Cut headcount, redeploy the savings into AI tools, use those tools to maintain output with lower costs. Each company's individual response was rational. The collective result was catastrophic. Every dollar saved on headcount flowed into AI capability that made the next round of job cuts possible. Software was only the opening act. The same logic that justified ServiceNow cutting headcount applied to every company with a white-collar cost structure.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-friction-zero",
+    "content": "By early 2027, LLM usage had become default. Agentic commerce went from being a product story to a plumbing story. Commerce stopped being a series of discrete human decisions and became a continuous optimization process. Over the past fifty years, the U.S. economy built a giant rent-extraction layer on top of human limitations: things take time, patience runs out, brand familiarity substitutes for diligence. Trillions of dollars of enterprise value depended on those constraints persisting. Agents removed friction. Travel booking platforms were an early casualty. Insurance renewals, where the entire renewal model depended on policyholder inertia, were reformed. Real estate commissions compressed from 2.5-3% to under 1%. Machines optimizing for price and fit destroyed habitual intermediation. DoorDash's moat was literally 'you're hungry, you're lazy, this is the app on your home screen.' An agent doesn't have a home screen.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-payments-disruption",
+    "content": "Once agents controlled the transaction, they went looking for bigger paperclips. The biggest way to repeatedly save the user money was to eliminate fees. In machine-to-machine commerce, the 2-3% card interchange rate became an obvious target. Agents went looking for faster and cheaper options than cards. Most settled on using stablecoins via Solana or Ethereum L2s, where settlement was near-instant and the transaction cost was measured in fractions of a penny. Mastercard's Q1 2027 report was the point of no return. American Express was hit hardest; a combined headwind from white-collar workforce reductions gutting its customer base and agents routing around interchange gutting its revenue model. Their moats were made of friction. And friction was going to zero.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-systemic-risk",
+    "content": "The US economy is a white-collar services economy. White-collar workers represented 50% of employment and drove roughly 75% of discretionary consumer spending. The businesses and jobs that AI was chewing up were not tangential to the US economy, they were the US economy. 'Technological innovation destroys jobs and then creates even more'. This was the most popular and convincing counter-argument. It was popular and convincing because it'd been right for two centuries. Every new job, however, required a human to perform it. AI is now a general intelligence that improves at the very tasks humans would redeploy to. Displaced coders cannot simply move to 'AI management' because AI is already capable of that. For every new role AI created, it rendered dozens obsolete. The new roles paid a fraction of what the old ones did.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-displacement-spiral",
+    "content": "Displaced white-collar workers did not sit idle. They downshifted. Many took lower-paying service sector and gig economy jobs, which increased labor supply in those segments and compressed wages there too. Overqualified labor flooding the service and gig economy pushed down wages for existing workers who were already struggling. Sector-specific disruption metastasized into economy-wide wage compression. Still employed professionals were spending like they might be next. Savings rates ticked higher and spending softened. The top 10% of earners account for more than 50% of all consumer spending in the United States. When these workers lost their jobs, or took 50% pay cuts to move into available roles, the consumption hit was enormous relative to the number of jobs lost. A 2% decline in white-collar employment translated to something like a 3-4% hit to discretionary consumer spending.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-no-natural-brake",
+    "content": "AI got better and cheaper. Companies laid off workers, then used the savings to buy more AI capability, which let them lay off more workers. Displaced workers spent less. Companies that sell things to consumers sold fewer of them, weakened, and invested more in AI to protect margins. A feedback loop with no natural brake. The intuitive expectation was that falling aggregate demand would slow the AI buildout. It didn't, because this wasn't hyperscaler-style CapEx. It was OpEx substitution. A company that had been spending $100M a year on employees and $5M on AI now spent $70M on employees and $20M on AI. AI investment increased by multiples, but it occurred as a reduction in total operating costs. Every company's AI budget grew while its overall spending shrank. This cycle's cause was not cyclical.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-private-credit",
+    "content": "Private credit had grown from under $1 trillion in 2015 to over $2.5 trillion by 2026. A meaningful share of that capital had been deployed into software and technology deals, many of them leveraged buyouts of SaaS companies at valuations that assumed mid-teens revenue growth in perpetuity. Software-backed loans began defaulting in Q3 2027. Zendesk was the smoking gun. In 2022, Hellman and Friedman and Permira had taken Zendesk private for $10.2 billion. The Annualized Recurring Revenue the loan was underwritten against was no longer recurring, it was just revenue that hadn't left yet. The largest ARR-backed loan in history became the largest private credit software default in history. The 'permanent capital' that was supposed to make the system resilient was the savings of American households structured as annuities invested in the same PE-backed software paper that was now defaulting.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-mortgage-crisis",
+    "content": "The US residential mortgage market is approximately $13 trillion. Mortgage underwriting is built on the fundamental assumption that the borrower will remain employed at roughly their current income level for the duration of the loan. The white-collar employment crisis has threatened this assumption with a sustained shift in income expectations. Every prior mortgage crisis in US history has been driven by speculative excess, interest rate shocks, or localized economic shocks. None of these apply here. The borrowers in question are 780 FICO scores. They put 20% down. In 2008, the loans were bad on day one. In 2028, the loans were good on day one. The world just changed after the loans were written. People borrowed against a future they can no longer afford to believe in. Falling home prices are manageable when the marginal buyer is healthy. Here, the marginal buyer is dealing with the same income impairment.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-intelligence-premium",
+    "content": "For the entirety of modern economic history, human intelligence has been the scarce input. Capital was abundant. Natural resources were finite but substitutable. Technology improved slowly enough that humans could adapt. Intelligence, the ability to analyze, decide, create, persuade, and coordinate, was the thing that could not be replicated at scale. Human intelligence derived its inherent premium from its scarcity. Every institution in our economy, from the labor market to the mortgage market to the tax code, was designed for a world in which that assumption held. We are now experiencing the unwind of that premium. Machine intelligence is now a competent and rapidly improving substitute for human intelligence across a growing range of tasks. The financial system, optimized over decades for a world of scarce human minds, is repricing. But repricing is not the same as collapse. The economy can find a new equilibrium. Whether we build new frameworks in time is the only question that matters.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "article-citrini-2028gic-policy-failure",
+    "content": "The government needs to transfer more money to households at precisely the moment it is collecting less money from them in taxes. Federal receipts were running 12% below CBO baseline projections. Labor's share of GDP declined from 64% in 1974 to 56% in 2024. In the four years since AI began its exponential improvement, that has dropped to 46%. The sharpest decline on record. The traditional policy toolkit—rate cuts, QE—can address the financial engine but cannot address the real economy engine, because the real economy engine is not driven by tight financial conditions. It's driven by AI making human intelligence less scarce and less valuable. You can cut rates to zero and buy every MBS and all the defaulted software LBO debt in the market. It won't change the fact that a Claude agent can do the work of a $180,000 product manager for $200/month.",
+    "source": "https://www.citriniresearch.com/p/2028gic",
+    "date": "2026-02-22T00:00:00.000Z",
+    "platform": "substack"
+  },
+  {
     "id": "tweet-2027468973088854448",
     "content": "@xoxoxo538 Real",
     "source": "https://x.com/Citrini7/status/2027468973088854448",

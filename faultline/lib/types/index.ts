@@ -5,7 +5,7 @@ import type { Argument, Attack, ValidationResult, Labelling } from './graph'
 export type PersonaId = string
 export type DeckId = string
 export type Stance = 'pro' | 'con' | 'uncertain'
-export type DebateMode = 'blitz' | 'classical' | 'graph' | 'v2' | 'dialogue'
+export type DebateMode = 'blitz' | 'classical' | 'graph' | 'v2' | 'dialogue' | 'belief-graph'
 
 // ─── Personas ─────────────────────────────────────────────────
 
@@ -150,6 +150,16 @@ export type SSEEvent =
   | { type: 'graph_update'; labelling: Labelling; groundedSize: number; preferredCount: number; round: number }
   | { type: 'graph_convergence'; stable: boolean; newEdges: number; round: number }
   | { type: 'error'; message: string }
+
+// ─── Corpus ──────────────────────────────────────────────────
+
+export interface CorpusExcerpt {
+  id: string
+  content: string
+  source: string
+  date?: string
+  platform: 'twitter' | 'substack'
+}
 
 // ─── Belief Graph ─────────────────────────────────────────────
 

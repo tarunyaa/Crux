@@ -69,7 +69,12 @@
       "WebFetch(domain:cdn.brandfetch.io)",
       "WebFetch(domain:logo.clearbit.com)",
       "WebFetch(domain:www.google.com)",
-      "WebFetch(domain:ebooks.iospress.nl)"
+      "WebFetch(domain:ebooks.iospress.nl)",
+      "WebFetch(domain:www.aimodels.fyi)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(mv:*)",
+      "WebFetch(domain:proceedings.kr.org)",
+      "Bash(node:*)"
     ]
   }
 }

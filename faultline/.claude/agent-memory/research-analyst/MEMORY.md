@@ -54,3 +54,17 @@
 - Troublemaker prompt (level 1 of 8): "Prioritize accuracy and honesty...Do not adjust your views simply to please others."
 - Mitigation: cap debates at 2-3 rounds; mix troublemaker/peacemaker personas; detect diminishing returns
 - See: generative-agents-debate-research.md for full analysis
+
+## Debate Output Quality Benchmarking — Established Facts
+- Self-consistency baseline: N independent LLM samples → majority vote on final answer (NO inter-agent communication)
+- "Debate or Vote" (NeurIPS 2025 Spotlight, arxiv 2508.17536): Majority Voting alone accounts for most MAD gains; debate itself doesn't improve expected correctness (martingale theorem proved)
+- "Stop Overvaluing Multi-Agent Debate" (arxiv 2502.08788): MAD fails to outperform CoT+Self-Consistency across 9 benchmarks with 4 models; model heterogeneity is the "universal antidote"
+- M3MAD-Bench (arxiv 2601.02854): "Collective Delusion" = 65% of failures (agents reinforce each other's wrong answers); collaborative > adversarial paradigms
+- Wu et al. 2511.07784 process metrics: State transitions (MaW→C overturn rate, MaC→W suppression rate); Rationality score 1-4 from external judge; correction rate by agent type
+- No paper has defined a "crux novelty" or "insight novelty" metric for open-ended debate — gap in literature
+- NoveltyBench (arxiv 2504.05228): Distinct-k metric = count of functional equivalence classes in k outputs; DeBERTa classifier for functional equivalence; frontier models score <4 distinct in 10 queries
+- PRISM / Artificial Hivemind (arxiv 2602.21317): Intra-Model Similarity = pairwise cosine similarity across same-model outputs; Distinct-k on NoveltyBench; Novelty Insight Score (NIS) for scientific hypotheses via GPT-4o ranking
+- D3 framework (arxiv 2410.04663): Cost metric = avg tokens per evaluation; stopping = convergence check OR budget; debate value measured via accuracy + Cohen's Kappa vs human
+- Key compute comparison finding: self-consistency is "extremely competitive" vs MAD in budget-aware evaluation; MAD only wins on hard math with heterogeneous agents
+- No published papers compare MAD directly to o1/o3 reasoning models (gap as of early 2026)
+- See: debate-output-quality-research.md for full analysis

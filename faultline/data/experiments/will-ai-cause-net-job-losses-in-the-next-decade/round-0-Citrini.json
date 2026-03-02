@@ -1,0 +1,315 @@
+{
+  "personaId": "Citrini",
+  "topic": "Will AI cause net job losses in the next decade?",
+  "rootClaim": "Citrini-root",
+  "nodes": [
+    {
+      "id": "Citrini-root",
+      "claim": "AI will cause significant net job losses in the next decade, particularly in white-collar sectors, driven by a self-reinforcing cycle of automation that will outpace job creation and trigger cascading economic disruption.",
+      "type": "root",
+      "baseScore": 0.6213333333333332,
+      "dialecticalStrength": 0.9999718732826904,
+      "grounding": [
+        "article-citrini-2028gic-ghost-gdp_seg0",
+        "substack-0_seg1",
+        "article-citrini-2028gic-saas-disruption",
+        "article-citrini-2028gic-reflexivity",
+        "article-citrini-2028gic-systemic-risk",
+        "article-citrini-2028gic-mortgage-crisis",
+        "article-citrini-2028gic-intelligence-premium",
+        "substack-10_seg0"
+      ],
+      "personaId": "Citrini",
+      "depth": 0
+    },
+    {
+      "id": "Citrini-d1-0",
+      "claim": "layoffs due to human obsolescence causes/supports margin expansion and earnings beats",
+      "type": "pro",
+      "baseScore": 0.7,
+      "dialecticalStrength": 0.9957298257969145,
+      "grounding": [
+        "article-citrini-2028gic-ghost-gdp_seg0",
+        "substack-0_seg1"
+      ],
+      "personaId": "Citrini",
+      "depth": 1
+    },
+    {
+      "id": "Citrini-d1-1",
+      "claim": "labor cost reduction from AI causes/supports wealth explosion for compute owners",
+      "type": "pro",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.83313,
+      "grounding": [
+        "article-citrini-2028gic-ghost-gdp_seg0"
+      ],
+      "personaId": "Citrini",
+      "depth": 1
+    },
+    {
+      "id": "Citrini-d1-2",
+      "claim": "labor cost reduction from AI undermines/reduces real wage growth collapse",
+      "type": "pro",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.83313,
+      "grounding": [
+        "article-citrini-2028gic-ghost-gdp_seg0"
+      ],
+      "personaId": "Citrini",
+      "depth": 1
+    },
+    {
+      "id": "Citrini-d1-3",
+      "claim": "agentic coding tools capability jump in late 2025 causes/supports competent developers can replicate mid-market SaaS core functionality in weeks",
+      "type": "pro",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.969783764445,
+      "grounding": [
+        "article-citrini-2028gic-saas-disruption"
+      ],
+      "personaId": "Citrini",
+      "depth": 1
+    },
+    {
+      "id": "Citrini-d1-4",
+      "claim": "AI threat to companies causes/supports aggressive AI adoption by incumbents",
+      "type": "pro",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.63,
+      "grounding": [
+        "article-citrini-2028gic-reflexivity"
+      ],
+      "personaId": "Citrini",
+      "depth": 1
+    },
+    {
+      "id": "Citrini-d2-0",
+      "claim": "white-collar workers representing 50% of employment causes/supports white-collar sector being central to US economy",
+      "type": "pro",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.63,
+      "grounding": [
+        "article-citrini-2028gic-systemic-risk"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-1",
+      "claim": "AI capability in white-collar services undermines/reduces job displacement in US economy",
+      "type": "pro",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.63,
+      "grounding": [
+        "article-citrini-2028gic-systemic-risk"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-2",
+      "claim": "white-collar employment crisis causes/supports sustained shift in income expectations",
+      "type": "pro",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.63,
+      "grounding": [
+        "article-citrini-2028gic-mortgage-crisis"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-3",
+      "claim": "machine intelligence becoming a competent substitute for human intelligence undermines/reduces unwinding of human intelligence premium",
+      "type": "pro",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.63,
+      "grounding": [
+        "article-citrini-2028gic-intelligence-premium"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-4",
+      "claim": "secular economy capex spending cycle causes/supports equity returns on indices",
+      "type": "pro",
+      "baseScore": 0.61,
+      "dialecticalStrength": 0.61,
+      "grounding": [
+        "substack-10_seg0"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-5",
+      "claim": "AI agents that don't sleep or require benefits causes/supports real output per hour productivity gains",
+      "type": "pro",
+      "baseScore": 0.61,
+      "dialecticalStrength": 0.61,
+      "grounding": [
+        "article-citrini-2028gic-ghost-gdp_seg0"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-6",
+      "claim": "Fortune 500 clients cutting 15% of workforce due to AI causes/supports cancellation of 15% of SaaS licenses",
+      "type": "pro",
+      "baseScore": 0.61,
+      "dialecticalStrength": 0.61,
+      "grounding": [
+        "article-citrini-2028gic-saas-disruption"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-7",
+      "claim": "savings from headcount reduction causes/supports increased AI capability",
+      "type": "pro",
+      "baseScore": 0.61,
+      "dialecticalStrength": 0.61,
+      "grounding": [
+        "article-citrini-2028gic-reflexivity"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-8",
+      "claim": "increased AI capability causes/supports subsequent rounds of job cuts",
+      "type": "pro",
+      "baseScore": 0.61,
+      "dialecticalStrength": 0.61,
+      "grounding": [
+        "article-citrini-2028gic-reflexivity"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-9",
+      "claim": "AI being general intelligence improving at human tasks undermines/reduces traditional technological job displacement/redeployment pattern breaking down",
+      "type": "pro",
+      "baseScore": 0.53,
+      "dialecticalStrength": 0.53,
+      "grounding": [
+        "article-citrini-2028gic-systemic-risk"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    }
+  ],
+  "edges": [
+    {
+      "id": "Citrini-d1-0->Citrini-root",
+      "from": "Citrini-d1-0",
+      "to": "Citrini-root",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d1-1->Citrini-root",
+      "from": "Citrini-d1-1",
+      "to": "Citrini-root",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d1-2->Citrini-root",
+      "from": "Citrini-d1-2",
+      "to": "Citrini-root",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d1-3->Citrini-root",
+      "from": "Citrini-d1-3",
+      "to": "Citrini-root",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d1-4->Citrini-root",
+      "from": "Citrini-d1-4",
+      "to": "Citrini-root",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-0->Citrini-d1-0",
+      "from": "Citrini-d2-0",
+      "to": "Citrini-d1-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-1->Citrini-d1-3",
+      "from": "Citrini-d2-1",
+      "to": "Citrini-d1-3",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-2->Citrini-d1-0",
+      "from": "Citrini-d2-2",
+      "to": "Citrini-d1-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-3->Citrini-d1-0",
+      "from": "Citrini-d2-3",
+      "to": "Citrini-d1-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-4->Citrini-d1-0",
+      "from": "Citrini-d2-4",
+      "to": "Citrini-d1-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-5->Citrini-d1-2",
+      "from": "Citrini-d2-5",
+      "to": "Citrini-d1-2",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citrini-d2-6->Citrini-d1-3",
+      "from": "Citrini-d2-6",
+      "to": "Citrini-d1-3",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citrini-d2-7->Citrini-d1-1",
+      "from": "Citrini-d2-7",
+      "to": "Citrini-d1-1",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citrini-d2-8->Citrini-d1-3",
+      "from": "Citrini-d2-8",
+      "to": "Citrini-d1-3",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citrini-d2-9->Citrini-d1-0",
+      "from": "Citrini-d2-9",
+      "to": "Citrini-d1-0",
+      "type": "support",
+      "weight": 0.9
+    }
+  ],
+  "round": 0
+}

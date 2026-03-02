@@ -1,0 +1,806 @@
+{
+  "personaId": "Citadel",
+  "personaName": "Citadel",
+  "nodes": [
+    {
+      "id": "n_0",
+      "concept": "current displacement narrative about AI",
+      "type": "inference",
+      "grounding": [
+        "article-citadel-2026-global-intelligence-crisis"
+      ]
+    },
+    {
+      "id": "n_1",
+      "concept": "certainty about future labor destruction",
+      "type": "inference",
+      "grounding": [
+        "article-citadel-2026-global-intelligence-crisis"
+      ]
+    },
+    {
+      "id": "n_2",
+      "concept": "rising software engineer job postings (up 11% YoY)",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-2026-global-intelligence-crisis"
+      ]
+    },
+    {
+      "id": "n_3",
+      "concept": "undermines displacement narrative",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-2026-global-intelligence-crisis"
+      ]
+    },
+    {
+      "id": "n_4",
+      "concept": "costs falling",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-recursive-adoption"
+      ]
+    },
+    {
+      "id": "n_5",
+      "concept": "acceleration of technological adoption growth",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-recursive-adoption"
+      ]
+    },
+    {
+      "id": "n_6",
+      "concept": "complementary infrastructure development",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-recursive-adoption"
+      ]
+    },
+    {
+      "id": "n_7",
+      "concept": "marginal adopter lower productivity or profitability",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-recursive-adoption"
+      ]
+    },
+    {
+      "id": "n_8",
+      "concept": "deceleration of adoption growth",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-recursive-adoption"
+      ]
+    },
+    {
+      "id": "n_9",
+      "concept": "automation expansion",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "id": "n_10",
+      "concept": "compute demand",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "id": "n_11",
+      "concept": "increased compute demand",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "id": "n_12",
+      "concept": "marginal cost of compute",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "id": "n_13",
+      "concept": "marginal cost of compute rises above marginal cost of human labor",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "id": "n_14",
+      "concept": "labor substitution by automation",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "id": "n_15",
+      "concept": "physical capital constraints",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "id": "n_16",
+      "concept": "economic deployment of automation",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "id": "n_17",
+      "concept": "energy availability constraints",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "id": "n_18",
+      "concept": "regulatory approvals constraints",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "id": "n_19",
+      "concept": "organizational change constraints",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "id": "n_20",
+      "concept": "AI-driven automation",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "id": "n_21",
+      "concept": "productivity shock",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "id": "n_22",
+      "concept": "productivity shocks",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "id": "n_23",
+      "concept": "marginal costs",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "id": "n_24",
+      "concept": "potential output",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "id": "n_25",
+      "concept": "real income",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "id": "n_26",
+      "concept": "inflation",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "id": "n_27",
+      "concept": "economic growth",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "id": "n_28",
+      "concept": "major technological advances",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "id": "n_29",
+      "concept": "productivity shocks pattern",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "id": "n_30",
+      "concept": "extremely high elasticity of substitution between AI capital and labor",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "id": "n_31",
+      "concept": "labor's share of income collapse",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "id": "n_32",
+      "concept": "AI displacement of labor",
+      "type": "inference",
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "id": "n_33",
+      "concept": "aggregate demand implosion",
+      "type": "inference",
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "id": "n_34",
+      "concept": "capital income having lower marginal propensity to consume than wage income",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "id": "n_35",
+      "concept": "capital income having non-zero spending velocity",
+      "type": "inference",
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "id": "n_36",
+      "concept": "persistent failure of redistribution mechanisms and simultaneous drying up of investment opportunities",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "id": "n_37",
+      "concept": "structural fall in aggregate demand",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "id": "n_38",
+      "concept": "AI as complement to labor",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "id": "n_39",
+      "concept": "labor demand reduction",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "id": "n_40",
+      "concept": "technological revolutions",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "id": "n_41",
+      "concept": "task composition alteration",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "id": "n_42",
+      "concept": "labor elimination",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "id": "n_43",
+      "concept": "near-total automation of economically relevant labor",
+      "type": "assumption",
+      "grounding": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "id": "n_44",
+      "concept": "negative demand shock large enough to overwhelm output expansion",
+      "type": "assumption",
+      "grounding": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "id": "n_45",
+      "concept": "weak redistributive responses",
+      "type": "assumption",
+      "grounding": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "id": "n_46",
+      "concept": "Microsoft Office advent",
+      "type": "inference",
+      "grounding": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "id": "n_47",
+      "concept": "office worker labor demand",
+      "type": "inference",
+      "grounding": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "id": "n_48",
+      "concept": "productivity growth",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "id": "n_49",
+      "concept": "workweek reduction",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "id": "n_50",
+      "concept": "productivity gains",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "id": "n_51",
+      "concept": "labor withdrawal",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "id": "n_52",
+      "concept": "demand collapse",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "id": "n_53",
+      "concept": "composition of demand alteration",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "id": "n_54",
+      "concept": "real income expansion",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "id": "n_55",
+      "concept": "new industry generation",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "id": "n_56",
+      "concept": "elasticity of human wants",
+      "type": "inference",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "id": "n_57",
+      "concept": "labor market implications of productivity",
+      "type": "inference",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_0",
+      "to": "n_1",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-2026-global-intelligence-crisis"
+      ]
+    },
+    {
+      "from": "n_2",
+      "to": "n_3",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-2026-global-intelligence-crisis"
+      ]
+    },
+    {
+      "from": "n_4",
+      "to": "n_5",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "article-citadel-recursive-adoption"
+      ]
+    },
+    {
+      "from": "n_6",
+      "to": "n_5",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "article-citadel-recursive-adoption"
+      ]
+    },
+    {
+      "from": "n_7",
+      "to": "n_8",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "article-citadel-recursive-adoption"
+      ]
+    },
+    {
+      "from": "n_9",
+      "to": "n_10",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "from": "n_11",
+      "to": "n_12",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "from": "n_13",
+      "to": "n_14",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "from": "n_15",
+      "to": "n_16",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "from": "n_17",
+      "to": "n_16",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "from": "n_18",
+      "to": "n_16",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "from": "n_19",
+      "to": "n_16",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-compute-constraints"
+      ]
+    },
+    {
+      "from": "n_20",
+      "to": "n_21",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "from": "n_22",
+      "to": "n_23",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "from": "n_22",
+      "to": "n_24",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "from": "n_22",
+      "to": "n_25",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "from": "n_22",
+      "to": "n_26",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "from": "n_22",
+      "to": "n_27",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "from": "n_28",
+      "to": "n_29",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-productivity-shocks"
+      ]
+    },
+    {
+      "from": "n_30",
+      "to": "n_31",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "from": "n_32",
+      "to": "n_33",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "from": "n_34",
+      "to": "n_33",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "from": "n_35",
+      "to": "n_33",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "from": "n_36",
+      "to": "n_37",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "from": "n_38",
+      "to": "n_39",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "from": "n_40",
+      "to": "n_41",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "from": "n_40",
+      "to": "n_42",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "from": "n_43",
+      "to": "n_44",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "from": "n_45",
+      "to": "n_44",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "from": "n_46",
+      "to": "n_47",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "from": "n_48",
+      "to": "n_49",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "from": "n_50",
+      "to": "n_51",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "from": "n_50",
+      "to": "n_52",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "from": "n_50",
+      "to": "n_53",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "from": "n_50",
+      "to": "n_54",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "from": "n_50",
+      "to": "n_55",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "from": "n_56",
+      "to": "n_57",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-keynes-15-hour"
+      ]
+    }
+  ],
+  "extractedAt": "2026-03-02T06:43:12.821Z"
+}

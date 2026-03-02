@@ -1,0 +1,107 @@
+[
+  {
+    "id": "hbm-pricing",
+    "topic": "Is HBM pricing power sustainable through 2028?",
+    "category": "semiconductor",
+    "roles": [
+      { "id": "demand", "label": "Demand Analyst", "brief": "AI training/inference demand trajectories, hyperscaler capex cycles, workload mix evolution" },
+      { "id": "supply", "label": "Supply & Yield Analyst", "brief": "HBM manufacturing yields, capacity additions, fab economics, supplier capex discipline" },
+      { "id": "architecture", "label": "Architecture Analyst", "brief": "Memory hierarchy design, HBM alternatives (GDDR7, system DRAM), inference optimization, compute-memory ratios" },
+      { "id": "competition", "label": "Competition & Packaging Analyst", "brief": "Chinese HBM entrants, advanced packaging bottlenecks (CoWoS), substrate supply, market structure" }
+    ],
+    "decisiveAssumptions": [
+      "Whether the training-vs-inference mix shift reduces total HBM demand growth rate as inference workloads scale",
+      "Whether hyperscaler capex growth sustains at 25%+ annually through 2028 or moderates on ROI pressure",
+      "Whether inference workloads architect around HBM via system DRAM substitution (e.g. Microsoft Maia 200 approach)",
+      "Whether MoE, sparsity, and quantization decouple model parameter scaling from proportional HBM consumption",
+      "Whether HBM4 yield rates at Samsung close the gap with SK Hynix, adding effective capacity without new fabs",
+      "Whether memory suppliers maintain capex discipline or overbuild into a classic DRAM cycle bust",
+      "Whether CoWoS and advanced packaging capacity scales faster than HBM supply, removing the co-bottleneck",
+      "Whether Chinese HBM producers (CXMT) reach production quality and meaningful market share by 2027"
+    ]
+  },
+  {
+    "id": "btc-treasury",
+    "topic": "Should public companies adopt Bitcoin as a treasury reserve asset?",
+    "category": "crypto",
+    "roles": [
+      { "id": "market", "label": "Market Dynamics Analyst", "brief": "Bitcoin volatility regime, liquidity depth, correlation to risk assets, price floor mechanisms" },
+      { "id": "regulatory", "label": "Regulatory & Accounting Analyst", "brief": "FASB fair-value rules, crypto custody regulation, tax treatment of unrealized gains, SEC guidance" },
+      { "id": "institutional", "label": "Institutional Adoption Analyst", "brief": "CFO risk tolerance, board governance, corporate bond market repricing, insurance/pension fund mandates" },
+      { "id": "macro", "label": "Macro & Sovereign Analyst", "brief": "Nation-state reserve adoption, dollar debasement thesis, geopolitical hedging, monetary policy interaction" }
+    ],
+    "decisiveAssumptions": [
+      "Whether Bitcoin 90-day realized volatility drops below 40% sustained, making balance sheet exposure tolerable for CFOs",
+      "Whether FASB fair-value accounting creates earnings volatility that punishes BTC-holding companies in equity markets",
+      "Whether sovereign adoption by 3+ nation-states creates a credible price floor and legitimization dynamic",
+      "Whether corporate bond markets reprice credit risk upward for companies with >10% BTC treasury allocation",
+      "Whether regulatory clarity on qualified crypto custody removes the operational barrier for institutional treasurers",
+      "Whether BTC correlation to risk assets stays high during drawdowns, negating the diversification thesis",
+      "Whether shareholder activism forces companies to mark-to-market BTC holdings quarterly, creating forced selling pressure",
+      "Whether stablecoin/CBDC adoption undercuts Bitcoin's monetary premium by offering regulated digital dollar alternatives"
+    ]
+  },
+  {
+    "id": "ai-scaling-laws",
+    "topic": "Will transformer scaling laws continue to hold for the next 3 orders of magnitude?",
+    "category": "ai",
+    "roles": [
+      { "id": "data", "label": "Data & Training Analyst", "brief": "Training data quality/quantity limits, synthetic data viability, data curation economics" },
+      { "id": "compute", "label": "Compute Economics Analyst", "brief": "Training run costs, energy constraints, cluster economics, chip roadmaps" },
+      { "id": "architecture", "label": "Architecture & Research Analyst", "brief": "MoE, SSMs, test-time compute, alternative paradigms that change the scaling curve" },
+      { "id": "capability", "label": "Capability & Evaluation Analyst", "brief": "Emergent capability trajectories, benchmark saturation, real-world task performance plateaus" }
+    ],
+    "decisiveAssumptions": [
+      "Whether high-quality training data runs out before compute scaling hits diminishing returns",
+      "Whether synthetic data generation produces genuine capability gains or creates circular training artifacts",
+      "Whether MoE and state-space models change the scaling curve slope rather than just shifting the intercept",
+      "Whether test-time compute (chain-of-thought, search) substitutes for parameter scaling at lower cost",
+      "Whether single training run costs exceeding $10B remain economically viable for more than 3 organizations",
+      "Whether energy and power delivery constraints cap cluster sizes before algorithmic limits are reached",
+      "Whether emergent capabilities plateau at a specific parameter regime or continue appearing unpredictably",
+      "Whether benchmarks saturate before real-world task performance plateaus, masking continued scaling gains"
+    ]
+  },
+  {
+    "id": "energy-transition",
+    "topic": "Can the US grid handle 3x electricity demand from AI data centers by 2030?",
+    "category": "climate-energy",
+    "roles": [
+      { "id": "generation", "label": "Generation & Supply Analyst", "brief": "Natural gas peakers, SMRs, renewable buildout rates, generation technology timelines" },
+      { "id": "grid", "label": "Grid Infrastructure Analyst", "brief": "Transmission capacity, interconnection queues, distribution constraints, grid modernization" },
+      { "id": "demand", "label": "Demand Trajectory Analyst", "brief": "AI workload efficiency, data center power density trends, behind-the-meter generation, demand-side management" },
+      { "id": "regulatory", "label": "Regulatory & Permitting Analyst", "brief": "NEPA reform, state utility commissions, rate structures, siting and permitting timelines" }
+    ],
+    "decisiveAssumptions": [
+      "Whether natural gas peaker plants can be permitted and built fast enough to bridge the generation gap",
+      "Whether small modular reactors achieve commercial deployment and NRC licensing before 2030",
+      "Whether grid interconnection queues (currently 5+ year backlogs) clear through regulatory reform in time",
+      "Whether transmission buildout keeps pace with generation additions or becomes the binding constraint",
+      "Whether AI workload efficiency gains (sparsity, distillation) reduce the demand growth trajectory by >30%",
+      "Whether behind-the-meter generation at data centers bypasses grid constraints at meaningful scale",
+      "Whether NEPA/permitting reform passes at federal level by 2027, unlocking stalled projects",
+      "Whether state utility commissions approve rate structures that make serving AI load profitable for utilities"
+    ]
+  },
+  {
+    "id": "ai-job-displacement",
+    "topic": "Will AI automate more than 30% of white-collar knowledge work within 5 years?",
+    "category": "ai-economics",
+    "roles": [
+      { "id": "capability", "label": "AI Capability Analyst", "brief": "Hallucination rates, reliability thresholds, edge case handling, task complexity limits" },
+      { "id": "adoption", "label": "Enterprise Adoption Analyst", "brief": "Deployment cycles, integration costs, mid-market penetration, change management friction" },
+      { "id": "labor", "label": "Labor Market Analyst", "brief": "Retraining timelines, union responses, regulatory intervention, wage dynamics" },
+      { "id": "economics", "label": "Economic Structure Analyst", "brief": "Productivity paradox, augmentation vs replacement, task redefinition, measurement methodology" }
+    ],
+    "decisiveAssumptions": [
+      "Whether AI reliability (hallucination rates) reaches thresholds acceptable for regulated industries (legal, medical, financial)",
+      "Whether AI handles judgment calls and edge cases, not just routine pattern-matched tasks",
+      "Whether enterprise adoption cycles compress from typical 3-5 years to under 2 years for AI tools",
+      "Whether mid-market firms (not just tech giants) adopt AI tools at meaningful scale within the window",
+      "Whether labor market friction (retraining programs, union contracts, regulation) slows deployment regardless of capability",
+      "Whether AI augmentation increases per-worker productivity enough that firms hire more rather than fewer workers",
+      "Whether the definition of 'knowledge work' shifts to exclude newly automated tasks, making 30% a moving target",
+      "Whether displacement is measured by tasks eliminated vs. roles eliminated, as these produce very different numbers"
+    ]
+  }
+]

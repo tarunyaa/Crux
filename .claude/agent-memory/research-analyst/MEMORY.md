@@ -98,6 +98,17 @@
 - Claude Code memory hierarchy: managed policy > project CLAUDE.md > .claude/rules/*.md > user CLAUDE.md > CLAUDE.local.md > auto memory; MEMORY.md first 200 lines loaded into system prompt
 - Faultline current approach: raw DialogueMessage[] array passed as context text to each agent turn (no retrieval, no compression) — scales poorly past ~40 messages
 
+## Latent Belief States Research (March 2026 session)
+- True latent-space debate (Coconut arXiv:2412.06769, LatentMAS arXiv:2511.20639) requires HF model weight access — INCOMPATIBLE with Claude API
+- ECON (arXiv:2506.08292, ICML 2025): LLMs stay black-box API; belief states in separate trainable BeliefNetwork (DQN Q-values + QMIX + BeliefEncoder); 11.2% improvement math tasks; BNE may converge to sycophancy in opinion debate
+- CoBel-World (arXiv:2509.21981): PDDL-inspired symbolic belief world; Bayesian collaboration protocol; fully API-compatible; 64-79% comms reduction; zero fine-tuning
+- API-compatible "latent belief space" = proposition confidence vectors c(P_i) ∈ [0,1] per persona; debate trajectory in R^n; crux = argmax |c_A(P) - c_B(P)|
+- No clean universal scaling law for multi-agent debate exists. Best framing: debate scales with agent diversity and topic difficulty, not raw count
+- MacNet (arXiv:2406.07155, ICLR 2025): logistic scaling with 1000+ agents; irregular topologies win
+- Law of Multi-Model Collaboration (arXiv:2512.23340): power law over total parameters; diversity is primary driver
+- MAD as Test-Time Scaling (arXiv:2505.22960): conditional — harder tasks + weaker models benefit most
+- DEBATE benchmark (arXiv:2510.25110): LLMs over-converge vs humans — anti-conformity is required
+
 ## Generative Agents Deep Dive (Park et al. 2023) — Key Technical Facts
 - Citation key: `generative_agents_2023` — Park et al., UIST 2023, arXiv:2304.03442
 - Codebase: github.com/joonspk-research/generative_agents (public)
@@ -147,6 +158,56 @@
 - `dung_1995` — Dung 1995, Artificial Intelligence 77:321-357; foundational abstract argumentation framework; AF = (A, R) directed graph; grounded/preferred/stable semantics
 - `aspic_plus` — Modgil & Prakken 2014, Argument & Computation 5(1):31-62; "The ASPIC+ Framework for Structured Argumentation"; structured arguments with strict/defeasible rules over Dung AFs
 - `thinking_with_kg_2024` — Wu & Tsioutsiouliklis 2024, arXiv:2412.10654; "Thinking with Knowledge Graphs: Enhancing LLM Reasoning Through Structured Data"; KG represented as programming language; fine-tuned LLMs on KG structures
+
+## Benchmark Research Session (March 1, 2026) — Key Findings
+- Moltbook formal metrics: Birth Rate `R_birth^(n)(t) = |ℬ_t^(n)| / |𝒜_t^(n)|`; Individual drift `D_a = 1 - cos(𝐜_a^(early), 𝐜_a^(late))`; Interaction influence `Δ_interact = S(𝒲_post, 𝐯*) - S(𝒲_pre, 𝐯*)`; dataset ~290K posts, ~1.8M comments, ~39K agents
+- DEBATE benchmark (arXiv:2510.25110): ΔSD = `SD_final - SD_init` over 6-point Likert stances; humans ΔSD≈0, LLMs strongly negative (over-convergence proven)
+- NoveltyBench (arXiv:2504.05228): `distinct_k = |{c_i | i ∈ [k]}|`; frontier models: <4 distinct outputs per 10 queries; larger models = less diverse
+- RECAP/GenMinds (arXiv:2506.06958): POSITION PAPER ONLY — no code, no data, no computable formulas; do not implement; useful only as vocabulary
+- LaMP (arXiv:2304.11406): tests stylistic personalization, NOT epistemic reasoning — low priority for Faultline core claims
+- ToM benchmarks: deferred until belief graph + belief state tracking is implemented
+- Proposed benchmark suite: Tier 1 = ΔSD + homogenization score + CCR + H; Tier 2 = CRR + argument centrality + drift magnitude; Tier 3 = interaction influence + traceability + counterfactual
+- Scaling law framing: crux rooms should achieve high CCR without sacrificing ΔSD (diversity-resolution frontier)
+- Full analysis: `docs/research_benchmarks.md`
+
+## Belief Graph + Argumentation Research Session (March 1, 2026)
+- `argllms_aaai2025` — Freedman, Dejl, Gorur, Yin, Rago, Toni; AAAI 2025; arXiv:2405.02079; "Argumentative LLMs for Explainable and Contestable Claim Verification"; QBAF + DF-QuAD pipeline; public code: github.com/CLArg-group/argumentative-llms
+- `genminds` — Li et al., MIT Media Lab, NeurIPS 2025 position paper; arXiv:2506.06958; "Simulating Society Requires Simulating Thought"; NO CODE, NO DATA — manifesto only; CBN schema usable, do-calculus unimplementable
+- `prism_pluralistic` — arXiv:2602.21317, Feb 2026; "Shared Nature, Unique Nurture: PRISM for Pluralistic Reasoning"; on-the-fly epistemic graphs via stochastic seeds + cognitive operators; designed for diversity NOT persona fidelity
+- `causalrag` — Wang et al., ACL Findings 2025; arXiv:2503.19878; "CausalRAG: Integrating Causal Graphs into Retrieval-Augmented Generation"; validates text→causal graph extraction for retrieval
+- `kggen` — arXiv:2502.09956; "KGGen: Extracting Knowledge Graphs from Plain Text"; entity clustering reduces sparsity in LLM-extracted KGs
+
+## Key Architectural Conclusions (Belief Graphs)
+- GenMinds is unimplementable: no code, no RECAP data, no CPDs for do-calculus; take the schema only
+- PRISM's stochastic seeds break persona consistency — adaptation needed: replace random seeds with belief graph nodes
+- ArgLLMs QBAF pipeline maps directly to Faultline crux card extraction — best actionable paper in this domain
+- LLM-ASPIC+ too brittle for open-ended debate text (rule extraction fails); good for structured domains
+- Offline corpus belief graph extraction is the right MVP path: ~$0.20/persona, runs once, clearly scoped
+- QBAF cycle problem (A attacks B attacks A): Belief Graphs with Reasoning Zones (2510.10042) addresses via parity-based coloring
+- text→graph extraction is validated (CausalRAG, KGGen); graph→text→graph UPDATE loop is NOT validated by any paper — Faultline must build its own update logic
+- Dung AF too coarse for crux extraction: labels IN/OUT/UNDEC but doesn't explain WHY; QBAF is better fit
+
+## QBAF + ArgLLM Technical Keys (March 1, 2026 session)
+- `argllms_aaai2025` — already in memory (AAAI 2025, arXiv:2405.02079)
+- `argora` — arXiv:2601.21533, Jan 2026; "ARGORA: Orchestrated Argumentation for Causally Grounded LLM Reasoning"; uses counterfactual edge-impact Δ_edge(x;m) = σ(m) - σ^⊖x(m); parallel expert trees, NO merge
+- `marge_2025` — arXiv:2508.02584, 2025; "MArgE: Meshing Argumentative Evidence from Multiple LLMs"; semantic merge via sentence-transformer cosine ρ=0.85; 77.4% MedClaim accuracy
+- `argrag_2025` — already in memory (arXiv:2508.20131); uses QE semantics (handles cycles); ArgRAG outperforms all RAG baselines PubHealth 0.838-0.898
+- `ce_qarg_kr2024` — arXiv:2407.08497, KR 2024; "CE-QArg: Counterfactual Explanations for QBAF"; polarity analysis (path parity) + priority (1/min_path_length) + iterative ε-step update; cost = L_p(τ, τ*)
+- `qbaf_change_explanations` — arXiv:2509.18215; "Change in QBAF: Sufficient, Necessary, Counterfactual Explanations"; strength inconsistency = change in partial order over strengths
+- `contestability_qarg` — arXiv:2507.11323; "Contestability in Quantitative Argumentation"; framework for stakeholder challenges to QBAF verdicts
+- `dynamic_collective_arg_2024` — IJAR vol.173 (2024), ScienceDirect; revision+contraction operators for collective AFs; satisfies AGM postulates
+- `mpaq_acl2025` — ACL 2025 Long Paper; "A Multi-persona Framework for Argument Quality Assessment"; coarse-to-fine scoring; outperforms on IBM-Rank-30k and IBM-ArgQ-5.3k
+- `perspectivist_aq_naacl2025` — NAACL 2025 Long, ACL Anthology 2025.naacl-long.382; "Towards a Perspectivist Turn in Argument Quality Assessment"; non-aggregated annotations for diversity
+
+## QBAF Technical Details (confirmed formulas)
+- DF-QuAD aggregation: F(v₁,...,vₙ) = 1 - ∏(1-vᵢ) for n≥1, else 0
+- DF-QuAD combination: if vₐ>vₛ → σ=v₀-v₀|vₛ-vₐ|; if vₐ<vₛ → σ=v₀+(1-v₀)|vₛ-vₐ|; if equal → σ=v₀
+- QE update: σ(a) ← β(a) + (1-β(a))·h(E(a)) - β(a)·h(-E(a)) where E(a)=Σσ(supporters)-Σσ(attackers), h(x)=max(x,0)²/(1+max(x,0)²)
+- CE-QArg: polarity via path-parity DFS; priority=1/min_path_length; step ε≈0.01; perturbation h≈0.001
+- Crux localization: crux_score(α) = |τ_A(α)·Δ_edge_A(α;root) - τ_B(α)·Δ_edge_B(α;root)|
+- ArgLLMs 4 variants: depth×{1,2} × base_score×{neutral(0.5),estimated}; depth=2+estimated = best
+- MArgE pipeline: K BAFs → semantic merge (cosine>0.85) → score nodes → DF-QuAD → verdict
+- ARGORA does NOT merge QBAFs — maintains parallel expert trees, uses orchestrator judgment
 
 ## High-Authority Sources for This Domain
 - arXiv cs.AI / cs.CL / cs.MA for preprints

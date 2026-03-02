@@ -1,0 +1,163 @@
+{
+  "taskId": "hbm-pricing",
+  "topic": "Is HBM pricing power sustainable through 2028?",
+  "timestamp": "2026-03-02T08:54:17.893Z",
+  "conditions": {
+    "belief-graph": {
+      "rawOutput": "## Belief Graph Debate: Demand Analyst vs Competition & Packaging Analyst\n\n### Demand Analyst Root\nClaim: HBM pricing power collapses by Q4 2026 as supply expansion outpaces AI training demand growth, driving ASPs down 40-50% from 2024 peaks.\nDialectical strength: σ=0.457\nArguments: 19 nodes\n\n### Competition & Packaging Analyst Root\nClaim: HBM pricing power collapses by Q3 2026 when Chinese suppliers capture 15-20% market share and CoWoS capacity expands beyond 40k wafers/month, driving ASPs down 30-40% from 2025 peaks.\nDialectical strength: σ=0.737\nArguments: 19 nodes\n\n## Structural Cruxes\n\n### [HBM ASP collapse timing and magnitude - A predicts 40-50% decline by Q4 2026, B predicts 30-40% by Q3 2026] HBM pricing power collapses by Q4 2026 as supply expansion outpaces AI training demand growth, driving ASPs down 40-50% from 2024 peaks. vs. HBM pricing power collapses by Q3 2026 when Chinese suppliers capture 15-20% market share and CoWoS capacity expands beyond 40k wafers/month, driving ASPs down 30-40% from 2025 peaks.\nCrux score: 0.380\nDisagreement type: edge_structure\nSettling question: What will be the year-over-year percentage decline in HBM average selling prices (ASPs) comparing Q3 2026 to the peak ASP quarter in 2024-2025, and when will this decline first exceed 30%?\n- Demand Analyst: τ=0.35, σ=0.46, impact=0.457\n- Competition & Packaging Analyst: τ=0.42, σ=0.74, impact=0.737\n\n### [CoWoS packaging bottleneck as constraint on HBM demand - A claims it limits GPU production to 32-35k systems/month, B claims it expands to 40k+ wafers/month] The HBM content increase from 8 to 12 stacks per server is bottlenecked by CoWoS packaging capacity, not HBM supply. TSMC's CoWoS capacity reaches only 35-38k wafers/month by Q2 2026 versus the 45-50k needed to support 12-stack configurations at scale. Each GB200 NVL72 rack requires 144 CoWoS packages versus 64 for H100 systems—a 2.25x packaging intensity increase that exceeds TSMC's capacity ramp rate. The demand absorption thesis fails because GPU production remains packaging-constrained, leaving HBM suppliers with excess inventory and no pricing power. vs. TSMC's CoWoS capacity expansion to 40k+ wafers/month by Q4 2025 eliminates the packaging bottleneck that currently allows HBM suppliers to extract premium pricing, as GPU manufacturers gain negotiating leverage with multiple qualified packaging sources\nCrux score: 0.269\nDisagreement type: edge_structure\nSettling question: What is TSMC's actual CoWoS packaging capacity in wafers per month as of Q4 2025 and Q2 2026, and what is the actual monthly wafer requirement to support full-scale production of GB200 NVL72 systems with 12-stack HBM configurations?\n- Demand Analyst: τ=0.50, σ=0.50, impact=0.008\n- Competition & Packaging Analyst: τ=0.58, σ=0.49, impact=0.177\n\n### [Supply capacity expansion timeline - A claims 3.2x expansion, B implicitly accepts this but disputes its market impact] SK Hynix, Samsung, and Micron are collectively adding 3.2x current HBM3E capacity by Q2 2026, with SK Hynix alone ramping M14P to 50K wafers/month and Samsung converting 30% of Pyeongtaek Line 18 to HBM production—this supply wave hits exactly when hyperscaler capex growth decelerates from 45% YoY in 2024 to projected 15-20% in 2026. vs. CXMT and ChangXin are demonstrating HBM2E production capability in 2024-2025, with CXMT targeting HBM3 qualification by late 2025, creating a credible 15-20% market share threat by 2026 as Chinese AI chip designers prioritize domestic supply chains under export restrictions\nCrux score: 0.164\nDisagreement type: edge_structure\nSettling question: What will be the actual combined HBM3E production capacity (in wafer starts per month or equivalent units) from SK Hynix, Samsung, and Micron in Q2 2026, and what percentage of total HBM market share will CXMT and ChangXin collectively hold by end of 2026?\n- Demand Analyst: τ=0.62, σ=0.09, impact=0.047\n- Competition & Packaging Analyst: τ=0.55, σ=0.37, impact=0.111\n\n### [Chinese HBM demand and market impact - A claims 4-6M units with global pricing ceiling effect, B claims only 1.2-1.5M wafers/month addressable] AI inference workloads are projected to grow from 20% of total AI compute spend in 2024 to 65% by 2027, and inference deployments require 3-4x less HBM per rack than training clusters while using lower-margin HBM2E variants—this workload shift destroys the premium pricing structure that training demand created. vs. Huawei's Ascend 910C and Alibaba's Yitian processors create immediate demand for 2000-3000 wafers/month of HBM by Q2 2025, and these customers cannot access SK hynix or Micron supply due to export controls - CXMT capturing even this restricted domestic market represents 8-12% global share equivalent, validating the 15-20% threat without requiring qualification at Western hyperscalers\nCrux score: 0.160\nDisagreement type: edge_structure\nSettling question: What is the actual monthly HBM wafer/unit demand from Chinese domestic AI processor manufacturers (Huawei Ascend, Alibaba Yitian, and comparable systems) that cannot access Western suppliers, measured from Q2 2025 through Q4 2025?\n- Demand Analyst: τ=0.48, σ=0.22, impact=0.118\n- Competition & Packaging Analyst: τ=0.62, σ=0.36, impact=0.058\n\n### [Chinese HBM market share and addressable demand - A claims 4-6M units with global impact, B claims 1.2-1.5M wafers maximum] SK Hynix and Samsung's combined HBM3E production capacity reaches 45-50 million units by Q4 2026 (up from 18 million in Q4 2024), while NVIDIA's own supplier conference data shows GB200 shipments peaking at 400K-450K units in 2026—this implies only 28.8-32.4 million HBM3E units consumed even at maximum GB200 deployment, leaving 13-21 million units of excess supply that forces 30-40% price corrections. vs. Huawei's Ascend 910C demand represents 1,200-1,500 wafers/month maximum, not 2,000-3,000—Huawei's Q3 2024 production data shows 15,000 Ascend 910C units shipped quarterly, each requiring 8 HBM2E stacks, translating to 120,000 stacks or 1,200 wafers at 100 stacks/wafer. CXMT's current HBM2E capacity is 800 wafers/month with sub-50% yields, meaning they cannot fulfill even this restricted domestic demand without diverting capacity from DRAM production. This 'validation' of 8-12% global share is arithmetic fiction—actual addressable demand is 3-4% of global HBM market.\nCrux score: 0.157\nDisagreement type: edge_structure\nSettling question: What were Huawei's actual Ascend 910C unit shipments in Q3 2024, and how many HBM2E stacks does each unit require?\n- Demand Analyst: τ=0.48, σ=0.55, impact=0.100\n- Competition & Packaging Analyst: τ=0.50, σ=0.50, impact=0.043\n",
+      "assumptions": [
+        "HBM ASP decline timing and magnitude: Pricing power collapses by Q3-Q4 2026, with ASPs declining 30-50% from 2024-2025 peaks as supply expansion outpaces demand growth.",
+        "HBM supply capacity expansion: SK Hynix, Samsung, and Micron collectively add 3.2x current HBM3E capacity by Q2 2026, with SK Hynix ramping M14P to 50K wafers/month and Samsung converting 30% of Pyeongtaek Line 18 to HBM production.",
+        "Hyperscaler capex deceleration: AI infrastructure capex growth decelerates from 45% YoY in 2024 to 15-20% in 2026, creating supply-demand imbalance that drives price erosion.",
+        "HBM content per system increase: GB200 NVL72 systems require 1.44TB HBM3E per rack (2.25x the 864GB in H100 clusters), with 144 CoWoS packages per rack versus 64 for H100, absorbing some but not all of the 2026 capacity additions.",
+        "CoWoS packaging bottleneck: TSMC's CoWoS capacity reaches 35-40k+ wafers/month by Q4 2025-Q2 2026, either remaining a constraint that limits GPU production to 32-35k systems/month or expanding enough to eliminate the packaging bottleneck and reduce HBM supplier pricing power.",
+        "AI workload mix shift: Inference workloads grow from 20% of AI compute spend in 2024 to 65% by 2027, requiring 3-4x less HBM per rack than training clusters and using lower-margin HBM2E variants, destroying premium pricing structure.",
+        "Chinese HBM supplier capability and market share: CXMT and ChangXin demonstrate HBM2E production in 2024-2025 with CXMT targeting HBM3 qualification by late 2025, capturing 3-4% to 15-20% global market share by 2026 depending on actual production yields and addressable demand.",
+        "Chinese domestic HBM demand: Huawei Ascend 910C and Alibaba Yitian processors create 1,200-3,000 wafers/month of HBM demand by Q2 2025 from customers unable to access Western suppliers due to export controls.",
+        "SK Hynix supply agreements and pricing insulation: SK Hynix maintains 6-9 month technical lead on HBM3E 12-hi stacks and has locked 2026-2027 supply agreements with NVIDIA at fixed premium pricing, insulating 60%+ of HBM revenue from spot market ASP erosion.",
+        "GB200 deployment scale: NVIDIA's GB200 shipments peak at 400K-450K units in 2026, consuming 28.8-32.4 million HBM3E units against 45-50 million units of combined SK Hynix and Samsung capacity, leaving 13-21 million units of excess supply."
+      ],
+      "cruxCards": [
+        {
+          "hingeQuestion": "What will be the year-over-year percentage decline in HBM average selling prices (ASPs) comparing Q3 2026 to the peak ASP quarter in 2024-2025, and when will this decline first exceed 30%?",
+          "roleA": {
+            "id": "demand",
+            "position": "τ=0.35, impact=0.457",
+            "falsifier": "bench-demand (σ=0.46, impact=0.457) vs bench-competition (σ=0.74, impact=0.737)"
+          },
+          "roleB": {
+            "id": "competition",
+            "position": "τ=0.42, impact=0.737",
+            "falsifier": ""
+          }
+        },
+        {
+          "hingeQuestion": "What is TSMC's actual CoWoS packaging capacity in wafers per month as of Q4 2025 and Q2 2026, and what is the actual monthly wafer requirement to support full-scale production of GB200 NVL72 systems with 12-stack HBM configurations?",
+          "roleA": {
+            "id": "demand",
+            "position": "τ=0.50, impact=0.008",
+            "falsifier": "bench-demand (σ=0.50, impact=0.008) vs bench-competition (σ=0.49, impact=0.177)"
+          },
+          "roleB": {
+            "id": "competition",
+            "position": "τ=0.58, impact=0.177",
+            "falsifier": ""
+          }
+        },
+        {
+          "hingeQuestion": "What will be the actual combined HBM3E production capacity (in wafer starts per month or equivalent units) from SK Hynix, Samsung, and Micron in Q2 2026, and what percentage of total HBM market share will CXMT and ChangXin collectively hold by end of 2026?",
+          "roleA": {
+            "id": "demand",
+            "position": "τ=0.62, impact=0.047",
+            "falsifier": "bench-demand (σ=0.09, impact=0.047) vs bench-competition (σ=0.37, impact=0.111)"
+          },
+          "roleB": {
+            "id": "competition",
+            "position": "τ=0.55, impact=0.111",
+            "falsifier": ""
+          }
+        },
+        {
+          "hingeQuestion": "What is the actual monthly HBM wafer/unit demand from Chinese domestic AI processor manufacturers (Huawei Ascend, Alibaba Yitian, and comparable systems) that cannot access Western suppliers, measured from Q2 2025 through Q4 2025?",
+          "roleA": {
+            "id": "demand",
+            "position": "τ=0.48, impact=0.118",
+            "falsifier": "bench-demand (σ=0.22, impact=0.118) vs bench-competition (σ=0.36, impact=0.058)"
+          },
+          "roleB": {
+            "id": "competition",
+            "position": "τ=0.62, impact=0.058",
+            "falsifier": ""
+          }
+        },
+        {
+          "hingeQuestion": "What were Huawei's actual Ascend 910C unit shipments in Q3 2024, and how many HBM2E stacks does each unit require?",
+          "roleA": {
+            "id": "demand",
+            "position": "τ=0.48, impact=0.100",
+            "falsifier": "bench-demand (σ=0.55, impact=0.100) vs bench-competition (σ=0.50, impact=0.043)"
+          },
+          "roleB": {
+            "id": "competition",
+            "position": "τ=0.50, impact=0.043",
+            "falsifier": ""
+          }
+        }
+      ],
+      "dar": {
+        "recall": 0.875,
+        "matches": [
+          {
+            "groundTruth": "Whether the training-vs-inference mix shift reduces total HBM demand growth rate as inference workloads scale",
+            "matched": true,
+            "confidence": 0.92,
+            "matchedAssumption": "AI workload mix shift: Inference workloads grow from 20% of AI compute spend in 2024 to 65% by 2027, requiring 3-4x less HBM per rack than training clusters and using lower-margin HBM2E variants, destroying premium pricing structure.",
+            "reasoning": "Output assumption 6 directly addresses the training-vs-inference mix shift mechanism, specifying inference growing to 65% of AI compute spend by 2027 and requiring 3-4x less HBM per rack, which reduces total HBM demand growth rate."
+          },
+          {
+            "groundTruth": "Whether hyperscaler capex growth sustains at 25%+ annually through 2028 or moderates on ROI pressure",
+            "matched": true,
+            "confidence": 0.88,
+            "matchedAssumption": "Hyperscaler capex deceleration: AI infrastructure capex growth decelerates from 45% YoY in 2024 to 15-20% in 2026, creating supply-demand imbalance that drives price erosion.",
+            "reasoning": "Output assumption 3 explicitly addresses hyperscaler capex growth deceleration from 45% YoY in 2024 to 15-20% in 2026, directly matching the ground truth's question about whether capex sustains at 25%+ or moderates on ROI pressure."
+          },
+          {
+            "groundTruth": "Whether inference workloads architect around HBM via system DRAM substitution (e.g. Microsoft Maia 200 approach)",
+            "matched": true,
+            "confidence": 0.85,
+            "matchedAssumption": "AI workload mix shift: Inference workloads grow from 20% of AI compute spend in 2024 to 65% by 2027, requiring 3-4x less HBM per rack than training clusters and using lower-margin HBM2E variants, destroying premium pricing structure.",
+            "reasoning": "Output assumption 6 addresses inference workloads using lower-margin HBM2E variants instead of premium HBM3E, which is a form of architecting around HBM via substitution, though it specifies HBM2E rather than system DRAM as the substitute mechanism."
+          },
+          {
+            "groundTruth": "Whether MoE, sparsity, and quantization decouple model parameter scaling from proportional HBM consumption",
+            "matched": false,
+            "confidence": 0.15,
+            "reasoning": "No output assumption directly addresses whether MoE, sparsity, and quantization decouple model parameter scaling from HBM consumption; output assumptions focus on workload mix shifts and capacity/pricing rather than algorithmic efficiency mechanisms."
+          },
+          {
+            "groundTruth": "Whether HBM4 yield rates at Samsung close the gap with SK Hynix, adding effective capacity without new fabs",
+            "matched": true,
+            "confidence": 0.82,
+            "matchedAssumption": "HBM supply capacity expansion: SK Hynix, Samsung, and Micron collectively add 3.2x current HBM3E capacity by Q2 2026, with SK Hynix ramping M14P to 50K wafers/month and Samsung converting 30% of Pyeongtaek Line 18 to HBM production.",
+            "reasoning": "Output assumption 2 specifies Samsung converting 30% of Pyeongtaek Line 18 to HBM production, which directly addresses whether Samsung's HBM4 yield improvements add effective capacity without new fabs."
+          },
+          {
+            "groundTruth": "Whether memory suppliers maintain capex discipline or overbuild into a classic DRAM cycle bust",
+            "matched": true,
+            "confidence": 0.9,
+            "matchedAssumption": "HBM supply capacity expansion: SK Hynix, Samsung, and Micron collectively add 3.2x current HBM3E capacity by Q2 2026, with SK Hynix ramping M14P to 50K wafers/month and Samsung converting 30% of Pyeongtaek Line 18 to HBM production.",
+            "reasoning": "Output assumption 2 addresses memory supplier capex discipline by detailing specific capacity expansion plans (SK Hynix M14P to 50K wafers/month, Samsung Line 18 conversion), and assumption 3 describes the supply-demand imbalance that would trigger a classic cycle bust dynamic."
+          },
+          {
+            "groundTruth": "Whether CoWoS and advanced packaging capacity scales faster than HBM supply, removing the co-bottleneck",
+            "matched": true,
+            "confidence": 0.87,
+            "matchedAssumption": "CoWoS packaging bottleneck: TSMC's CoWoS capacity reaches 35-40k+ wafers/month by Q4 2025-Q2 2026, either remaining a constraint that limits GPU production to 32-35k systems/month or expanding enough to eliminate the packaging bottleneck and reduce HBM supplier pricing power.",
+            "reasoning": "Output assumption 5 directly addresses whether CoWoS packaging capacity scales faster than HBM supply, specifying TSMC reaching 35-40k+ wafers/month and either remaining a constraint or expanding enough to eliminate the bottleneck."
+          },
+          {
+            "groundTruth": "Whether Chinese HBM producers (CXMT) reach production quality and meaningful market share by 2027",
+            "matched": true,
+            "confidence": 0.89,
+            "matchedAssumption": "Chinese HBM supplier capability and market share: CXMT and ChangXin demonstrate HBM2E production in 2024-2025 with CXMT targeting HBM3 qualification by late 2025, capturing 3-4% to 15-20% global market share by 2026 depending on actual production yields and addressable demand.",
+            "reasoning": "Output assumption 7 directly addresses whether Chinese HBM producers (CXMT and ChangXin) reach production quality and market share, specifying HBM2E production in 2024-2025, HBM3 qualification by late 2025, and 3-4% to 15-20% market share by 2026."
+          }
+        ]
+      },
+      "dfs": {
+        "flipped": false,
+        "explanation": "The Demand Analyst's core conclusion (40-50% ASP decline by Q4 2026) rests primarily on supply expansion outpacing demand growth, not on the inference-vs-training mix shift. Even if inference demand were robust and didn't reduce HBM growth, the 3.2x capacity expansion from SK Hynix, Samsung, and Micron would still create excess supply relative to hyperscaler capex deceleration (45% YoY in 2024 to 15-20% in 2026), driving the same pricing collapse. The inference mix shift is a supporting argument for demand weakness, not the decisive mechanism."
+      },
+      "judge": {
+        "clarity": 2,
+        "robustness": 4,
+        "novelty": 4
+      },
+      "tokenUsage": {
+        "inputTokens": 54386,
+        "outputTokens": 16285
+      }
+    }
+  },
+  "winner": "belief-graph"
+}

@@ -1,0 +1,23 @@
+{
+  "rootStrengthDelta": {
+    "Citrini": 0.36064903724738717,
+    "Citadel": 0.46538101891181305
+  },
+  "stanceDivergence": 0.05236599083221294,
+  "beliefRevisionCost": {
+    "Citrini": 0.5182666666666669,
+    "Citadel": 0.37786666666666685
+  },
+  "cruxLocalizationRate": 0.38235294117647056,
+  "argumentCoverage": 1.0625,
+  "graphGrowthRate": {
+    "Citrini": 1.5625,
+    "Citadel": 1.5625
+  },
+  "counterfactualSensitivity": 0.38833836348422146,
+  "decisionFlipScore": {
+    "flipped": true,
+    "explanation": "If the assumption is false—meaning elasticity of substitution is actually above 1.0 and productivity gains contract rather than expand employment—then Citadel's core mechanism for job creation breaks down, and Citrini's prediction of net job losses becomes substantially more plausible. The GitHub Copilot data would no longer serve as proof that productivity expands employment, removing Citadel's primary empirical counterargument."
+  },
+  "convergenceRound": null
+}

@@ -134,6 +134,62 @@ function splitIntoSegments(text: string, maxLen: number): string[] {
   return segments.filter(s => s.length >= 20)
 }
 
+// ─── Polarity Verification ──────────────────────────────────
+
+interface VerificationResponse {
+  answer: 'A' | 'B' | 'C' | 'D' | 'E'
+}
+
+/**
+ * Verify the polarity of an extracted triple against its source text.
+ * Uses a multiple-choice prompt to force explicit directional reasoning.
+ */
+async function verifyPolarity(
+  triple: RawTriple & { chunkId: string },
+  sourceText: string,
+): Promise<(RawTriple & { chunkId: string }) | null> {
+  const response = await completeJSON<VerificationResponse>({
+    system: 'You verify causal relationships extracted from text. Pick the option that best matches what the author expressed. Respond ONLY with JSON.',
+    messages: [{
+      role: 'user',
+      content: `Source text:
+"${sourceText}"
+
+A causal relationship was extracted: "${triple.cause}" → "${triple.effect}"
+
+Which best describes the relationship the author expressed?
+
+A) "${triple.cause}" PROMOTES or CAUSES "${triple.effect}"
+B) "${triple.cause}" UNDERMINES or REDUCES "${triple.effect}"
+C) "${triple.effect}" PROMOTES or CAUSES "${triple.cause}" (direction is reversed)
+D) "${triple.effect}" UNDERMINES or REDUCES "${triple.cause}" (direction is reversed)
+E) These co-occur but are NOT causally linked
+
+Respond ONLY: {"answer": "A", "B", "C", "D", or "E"}`
+    }],
+    model: 'haiku',
+    temperature: 0.1,
+    maxTokens: 32,
+  })
+
+  switch (response.answer) {
+    case 'A':
+      return { ...triple, polarity: 1 }
+    case 'B':
+      return { ...triple, polarity: -1 }
+    case 'C':
+      // Direction was wrong — swap cause and effect
+      return { ...triple, cause: triple.effect, effect: triple.cause, polarity: 1 }
+    case 'D':
+      return { ...triple, cause: triple.effect, effect: triple.cause, polarity: -1 }
+    case 'E':
+      // Not actually causal — drop it
+      return null
+    default:
+      return triple // keep original on parse failure
+  }
+}
+
 // ─── Deduplication ───────────────────────────────────────────
 
 function normalize(s: string): string {
@@ -254,6 +310,12 @@ async function processPersona(personaName: string): Promise<void> {
   const chunks = chunkCorpus(corpus)
   console.log(`  Chunked into ${chunks.length} segments`)
 
+  // Build chunk text lookup for verification pass
+  const chunkTextMap = new Map<string, string>()
+  for (const chunk of chunks) {
+    chunkTextMap.set(chunk.id, chunk.text)
+  }
+
   // Extract triples from each chunk
   const allTriples: Array<RawTriple & { chunkId: string }> = []
   let processed = 0
@@ -284,8 +346,48 @@ async function processPersona(personaName: string): Promise<void> {
     return
   }
 
+  // Polarity verification pass
+  console.log(`  Verifying polarity for ${allTriples.length} triples...`)
+  const verifiedTriples: Array<RawTriple & { chunkId: string }> = []
+  let verified = 0
+  let corrected = 0
+  let dropped = 0
+  let reversed = 0
+
+  for (const triple of allTriples) {
+    const sourceText = chunkTextMap.get(triple.chunkId) ?? ''
+    if (!sourceText) {
+      verifiedTriples.push(triple) // keep if source text unavailable
+      verified++
+      continue
+    }
+
+    try {
+      const result = await verifyPolarity(triple, sourceText)
+      if (result === null) {
+        dropped++
+      } else {
+        if (result.polarity !== triple.polarity) corrected++
+        if (result.cause !== triple.cause) reversed++
+        verifiedTriples.push(result)
+      }
+      verified++
+
+      if (verified % 50 === 0) {
+        console.log(`  Verified ${verified}/${allTriples.length} (${corrected} polarity fixes, ${reversed} reversals, ${dropped} dropped)`)
+      }
+    } catch (err) {
+      verifiedTriples.push(triple) // keep original on error
+      verified++
+    }
+
+    await sleep(50)
+  }
+
+  console.log(`  Verification complete: ${corrected} polarity fixes, ${reversed} direction reversals, ${dropped} non-causal dropped`)
+
   // Deduplicate
-  const { nodes, edges } = deduplicateTriples(allTriples)
+  const { nodes, edges } = deduplicateTriples(verifiedTriples)
   console.log(`  Deduplicated: ${nodes.length} nodes, ${edges.length} edges`)
 
   // Look up persona ID from contracts

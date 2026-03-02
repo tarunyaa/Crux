@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: '/cards', label: 'Decks' },
   { href: '/setup', label: 'Debate' },
   { href: '/debates', label: 'Past Debates' },
+  { href: '/belief-graph', label: 'Belief Graph' },
   { href: '/about', label: 'About' },
 ]
 

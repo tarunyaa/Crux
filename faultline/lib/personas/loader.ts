@@ -1,6 +1,6 @@
 import fs from 'fs/promises'
 import path from 'path'
-import type { Persona, PersonaContract, Deck, BeliefGraph } from '@/lib/types'
+import type { Persona, PersonaContract, Deck, BeliefGraph, CorpusExcerpt } from '@/lib/types'
 import { getVoiceProfile } from '@/lib/dialogue/speech-roles'
 
 const SEED_DIR = path.join(process.cwd(), 'data/seed')
@@ -52,6 +52,16 @@ export async function loadContract(personaId: string): Promise<PersonaContract> 
   return JSON.parse(raw) as PersonaContract
 }
 
+export async function hasBeliefGraph(personaId: string): Promise<boolean> {
+  const filePath = path.join(SEED_DIR, 'beliefs', `${personaId}.json`)
+  try {
+    await fs.access(filePath)
+    return true
+  } catch {
+    return false
+  }
+}
+
 export async function loadBeliefGraph(personaId: string): Promise<BeliefGraph | null> {
   const filePath = path.join(SEED_DIR, 'beliefs', `${personaId}.json`)
   try {
@@ -59,6 +69,23 @@ export async function loadBeliefGraph(personaId: string): Promise<BeliefGraph | 
     return JSON.parse(raw) as BeliefGraph
   } catch {
     return null
+  }
+}
+
+export async function loadCorpus(personaId: string): Promise<CorpusExcerpt[]> {
+  const filePath = path.join(SEED_DIR, 'corpus', `${personaId}.json`)
+  try {
+    const raw = await fs.readFile(filePath, 'utf-8')
+    const entries = JSON.parse(raw) as Array<{ id: string; content: string; source: string; date?: string; platform: string }>
+    return entries.map(e => ({
+      id: e.id,
+      content: e.content,
+      source: e.source,
+      date: e.date,
+      platform: e.platform as 'twitter' | 'substack',
+    }))
+  } catch {
+    return []
   }
 }
 

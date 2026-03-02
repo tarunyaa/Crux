@@ -1,0 +1,371 @@
+{
+  "personaId": "Citrini",
+  "topic": "Will AI cause net job losses in the next decade?",
+  "rootClaim": "Citrini-root",
+  "nodes": [
+    {
+      "id": "Citrini-root",
+      "claim": "AI will cause significant net job losses in the next decade, particularly in white-collar work, triggering a self-reinforcing cycle of displacement, wage compression, reduced consumer spending, and systemic economic instability.",
+      "type": "root",
+      "baseScore": 0.6393333333333333,
+      "dialecticalStrength": 0.9656847749820456,
+      "grounding": [
+        "article-citrini-2028gic-feedback-loop",
+        "article-citrini-2028gic-reflexivity",
+        "article-citrini-2028gic-no-natural-brake",
+        "article-citrini-2028gic-systemic-risk",
+        "article-citrini-2028gic-displacement-spiral",
+        "article-citrini-2028gic-mortgage-crisis"
+      ],
+      "personaId": "Citrini",
+      "depth": 0
+    },
+    {
+      "id": "Citrini-d1-0",
+      "claim": "single GPU cluster replacing 10,000 white-collar workers causes/supports economic disruption",
+      "type": "pro",
+      "baseScore": 0.12999999999999956,
+      "dialecticalStrength": 0.11710028919169072,
+      "grounding": [
+        "article-citrini-2028gic-feedback-loop"
+      ],
+      "personaId": "Citrini",
+      "depth": 1
+    },
+    {
+      "id": "Citrini-d1-1",
+      "claim": "AI capabilities improvement undermines/reduces company demand for workers",
+      "type": "pro",
+      "baseScore": 0.12999999999999956,
+      "dialecticalStrength": 0.37519499999999933,
+      "grounding": [
+        "article-citrini-2028gic-feedback-loop"
+      ],
+      "personaId": "Citrini",
+      "depth": 1
+    },
+    {
+      "id": "Citrini-d1-2",
+      "claim": "AI-driven displacement spiral causes/supports structural impairment of white-collar earnings power",
+      "type": "pro",
+      "baseScore": 0.12999999999999956,
+      "dialecticalStrength": 0.37519499999999933,
+      "grounding": [
+        "article-citrini-2028gic-feedback-loop"
+      ],
+      "personaId": "Citrini",
+      "depth": 1
+    },
+    {
+      "id": "Citrini-d1-3",
+      "claim": "AI threatens company market position causes/supports aggressive AI adoption by incumbents",
+      "type": "pro",
+      "baseScore": 0.12999999999999956,
+      "dialecticalStrength": 0.12999999999999956,
+      "grounding": [
+        "article-citrini-2028gic-reflexivity"
+      ],
+      "personaId": "Citrini",
+      "depth": 1
+    },
+    {
+      "id": "Citrini-d1-4",
+      "claim": "dollars saved from headcount cuts causes/supports increased AI capability development",
+      "type": "pro",
+      "baseScore": 0.12999999999999956,
+      "dialecticalStrength": 0.7422192947356762,
+      "grounding": [
+        "article-citrini-2028gic-reflexivity"
+      ],
+      "personaId": "Citrini",
+      "depth": 1
+    },
+    {
+      "id": "Citrini-d2-0",
+      "claim": "increased AI capability causes/supports enabling next round of job cuts",
+      "type": "pro",
+      "baseScore": 0.36666666666666564,
+      "dialecticalStrength": 0.12466666666666623,
+      "grounding": [
+        "article-citrini-2028gic-reflexivity",
+        "article-citrini-2028gic-no-natural-brake"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-1",
+      "claim": "AI capabilities in white-collar work causes/supports job displacement in US economy",
+      "type": "pro",
+      "baseScore": 0.29666666666666625,
+      "dialecticalStrength": 0.29666666666666625,
+      "grounding": [
+        "article-citrini-2028gic-systemic-risk"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-2",
+      "claim": "new AI-created roles paying fraction of old job wages causes/supports worker economic welfare decline",
+      "type": "pro",
+      "baseScore": 0.29666666666666625,
+      "dialecticalStrength": 0.10754166666666645,
+      "grounding": [
+        "article-citrini-2028gic-systemic-risk"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-3",
+      "claim": "displaced white-collar workers taking lower-paying service/gig jobs causes/supports increased labor supply in service and gig sectors",
+      "type": "pro",
+      "baseScore": 0.29666666666666625,
+      "dialecticalStrength": 0.29666666666666625,
+      "grounding": [
+        "article-citrini-2028gic-displacement-spiral"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-4",
+      "claim": "increased labor supply in service and gig sectors causes/supports wage compression in those sectors",
+      "type": "pro",
+      "baseScore": 0.29666666666666625,
+      "dialecticalStrength": 0.29666666666666625,
+      "grounding": [
+        "article-citrini-2028gic-displacement-spiral"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-5",
+      "claim": "white-collar job losses and pay cuts among top 10% earners undermines/reduces discretionary consumer spending",
+      "type": "pro",
+      "baseScore": 0.29666666666666625,
+      "dialecticalStrength": 0.29666666666666625,
+      "grounding": [
+        "article-citrini-2028gic-displacement-spiral"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-6",
+      "claim": "AI improvement and cost reduction causes/supports company worker layoffs",
+      "type": "pro",
+      "baseScore": 0.29666666666666625,
+      "dialecticalStrength": 0.29666666666666625,
+      "grounding": [
+        "article-citrini-2028gic-no-natural-brake"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-7",
+      "claim": "cost savings from layoffs causes/supports increased AI capability purchases",
+      "type": "pro",
+      "baseScore": 0.29666666666666625,
+      "dialecticalStrength": 0.29666666666666625,
+      "grounding": [
+        "article-citrini-2028gic-no-natural-brake"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-8",
+      "claim": "increased AI capability causes/supports further worker layoffs",
+      "type": "pro",
+      "baseScore": 0.36666666666666564,
+      "dialecticalStrength": 0.36666666666666564,
+      "grounding": [
+        "article-citrini-2028gic-reflexivity",
+        "article-citrini-2028gic-no-natural-brake"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-9",
+      "claim": "white-collar employment crisis causes/supports sustained shift in income expectations",
+      "type": "pro",
+      "baseScore": 0.29666666666666625,
+      "dialecticalStrength": 0.29666666666666625,
+      "grounding": [
+        "article-citrini-2028gic-mortgage-crisis"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-r1-0",
+      "claim": "The 'single GPU cluster replacing 10,000 workers' scenario violates national income accounting identities—if productivity surges while measured output rises, aggregate demand cannot simultaneously collapse without violating Y=C+I+G+NX, and current data shows software engineer job postings up 11% YoY with unemployment at 4.28%, directly contradicting the displacement premise",
+      "type": "con",
+      "baseScore": 0.8333333333333355,
+      "dialecticalStrength": 0.8333333333333355,
+      "grounding": [
+        "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-r1-1",
+      "claim": "Recursive capability does not imply recursive adoption—the feedback loop from 'increased AI capability enables next round of job cuts' assumes zero deployment friction, but physical capital constraints (GPU availability), energy infrastructure bottlenecks, and regulatory approval timelines create natural economic boundaries that prevent the exponential adoption curve this thesis requires",
+      "type": "con",
+      "baseScore": 0.7500000000000002,
+      "dialecticalStrength": 0.7500000000000002,
+      "grounding": [
+        "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/"
+      ],
+      "personaId": "Citadel",
+      "depth": 3
+    },
+    {
+      "id": "Citadel-r1-2",
+      "claim": "Historical precedent from steam power, electrification, and computing shows productivity shocks systematically expand the consumption frontier rather than compress wages—Keynes predicted 15-hour workweeks by 2030 from productivity gains, but societies consumed dramatically more instead, and the same substitution-to-complement pattern occurred with Microsoft Office, which ex-ante appeared substitutive but ex-post proved complementary to office workers",
+      "type": "con",
+      "baseScore": 0.7500000000000002,
+      "dialecticalStrength": 0.7500000000000002,
+      "grounding": [
+        "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/"
+      ],
+      "personaId": "Citadel",
+      "depth": 3
+    }
+  ],
+  "edges": [
+    {
+      "id": "Citrini-d1-0->Citrini-root",
+      "from": "Citrini-d1-0",
+      "to": "Citrini-root",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d1-1->Citrini-root",
+      "from": "Citrini-d1-1",
+      "to": "Citrini-root",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d1-2->Citrini-root",
+      "from": "Citrini-d1-2",
+      "to": "Citrini-root",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d1-3->Citrini-root",
+      "from": "Citrini-d1-3",
+      "to": "Citrini-root",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d1-4->Citrini-root",
+      "from": "Citrini-d1-4",
+      "to": "Citrini-root",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-0->Citrini-d1-4",
+      "from": "Citrini-d2-0",
+      "to": "Citrini-d1-4",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-1->Citrini-d1-2",
+      "from": "Citrini-d2-1",
+      "to": "Citrini-d1-2",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-2->Citrini-d1-0",
+      "from": "Citrini-d2-2",
+      "to": "Citrini-d1-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-3->Citrini-d1-0",
+      "from": "Citrini-d2-3",
+      "to": "Citrini-d1-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-4->Citrini-d1-4",
+      "from": "Citrini-d2-4",
+      "to": "Citrini-d1-4",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-5->Citrini-d1-0",
+      "from": "Citrini-d2-5",
+      "to": "Citrini-d1-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-6->Citrini-d1-1",
+      "from": "Citrini-d2-6",
+      "to": "Citrini-d1-1",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-7->Citrini-d1-4",
+      "from": "Citrini-d2-7",
+      "to": "Citrini-d1-4",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-8->Citrini-d1-4",
+      "from": "Citrini-d2-8",
+      "to": "Citrini-d1-4",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-9->Citrini-d1-0",
+      "from": "Citrini-d2-9",
+      "to": "Citrini-d1-0",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citadel-r1-0->Citrini-d1-0",
+      "from": "Citadel-r1-0",
+      "to": "Citrini-d1-0",
+      "type": "attack",
+      "weight": 0.92
+    },
+    {
+      "id": "Citadel-r1-1->Citrini-d2-0",
+      "from": "Citadel-r1-1",
+      "to": "Citrini-d2-0",
+      "type": "attack",
+      "weight": 0.88
+    },
+    {
+      "id": "Citadel-r1-2->Citrini-d2-2",
+      "from": "Citadel-r1-2",
+      "to": "Citrini-d2-2",
+      "type": "attack",
+      "weight": 0.85
+    }
+  ],
+  "round": 1
+}

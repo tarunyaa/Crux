@@ -1,0 +1,46 @@
+{
+  "topic": "Is Bitcoin a good store of value?",
+  "personas": [
+    "Michael Saylor",
+    "Arthur Hayes"
+  ],
+  "runs": 1,
+  "timestamp": "2026-03-02T01:08:45.928Z",
+  "aggregate": {
+    "stanceDiversity": {
+      "haiku_delta_sd": {
+        "mean": 0.125,
+        "std": 0
+      },
+      "embed_delta": {
+        "mean": 0,
+        "std": 0
+      }
+    },
+    "semanticSpread": {
+      "slope": {
+        "mean": 0,
+        "std": 0
+      }
+    },
+    "cruxGrounding": {
+      "mean": {
+        "mean": 0,
+        "std": 0
+      }
+    },
+    "cruxRecurrence": null,
+    "totalMessages": {
+      "mean": 22,
+      "std": 0
+    },
+    "cruxCards": {
+      "mean": 3,
+      "std": 0
+    },
+    "totalTokens": {
+      "input": 194118,
+      "output": 10764
+    }
+  }
+}

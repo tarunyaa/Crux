@@ -1,0 +1,107 @@
+[
+  {
+    "id": "crux-c-8",
+    "nodeId": "c-8",
+    "claim": "[Elasticity of substitution between AI and labor and whether productivity expands or contracts employment] AI improvement driving layoffs requires substitution elasticity above 1.0, but Microsoft's GitHub Copilot deployment data shows 55% of code written by AI yet programmer headcount grew 8% YoY — proving elasticity remains below unity where productivity gains expand output rather than contract employment, consistent with every prior general-purpose technology from steam to computing vs. extremely high elasticity of substitution between AI capital and labor causes/supports labor's share of income collapse",
+    "cruxScore": 0.48833836348422144,
+    "disagreementType": "edge_structure",
+    "personaPositions": {
+      "Citrini": {
+        "baseScore": 0.7500000000000002,
+        "dialecticalStrength": 0.7500000000000002,
+        "contribution": 0
+      },
+      "Citadel": {
+        "baseScore": 1,
+        "dialecticalStrength": 0.871,
+        "contribution": 0.38833836348422146
+      }
+    },
+    "counterfactual": "Citrini (σ=0.75, impact=0.000) vs Citadel (σ=0.87, impact=0.388)",
+    "settlingQuestion": "What is the empirical elasticity of substitution between AI and labor across the economy (or in software development specifically), and has it changed measurably since the deployment of tools like GitHub Copilot?"
+  },
+  {
+    "id": "crux-c-0",
+    "nodeId": "c-0",
+    "claim": "[Net job losses vs. gains from AI in the next decade and economic stability] AI will cause significant net job losses in the next decade, particularly in white-collar work, triggering a self-reinforcing cycle of displacement, wage compression, reduced consumer spending, and systemic economic instability. vs. AI will not cause net job losses in the next decade because productivity gains will drive economic growth, new job creation, and demand shifts that offset displacement, while practical constraints on automation deployment limit near-term labor substitution.",
+    "cruxScore": 0.3113891264655241,
+    "disagreementType": "edge_structure",
+    "personaPositions": {
+      "Citrini": {
+        "baseScore": 0.6393333333333333,
+        "dialecticalStrength": 0.6393333333333333,
+        "contribution": 0.6393333333333333
+      },
+      "Citadel": {
+        "baseScore": 0.6086666666666667,
+        "dialecticalStrength": 0.4279442068678092,
+        "contribution": 0.4279442068678092
+      }
+    },
+    "counterfactual": "Citrini (σ=0.64, impact=0.639) vs Citadel (σ=0.43, impact=0.428)",
+    "settlingQuestion": "What will be the net change in total employment (jobs created minus jobs displaced by AI) across all sectors in developed economies during 2024-2034, and will real wages for workers in the bottom 50% of the income distribution increase, decrease, or remain relatively stable during this same period?"
+  },
+  {
+    "id": "crux-c-6",
+    "nodeId": "c-6",
+    "claim": "[Labor substitutability across skill categories and displaced worker reallocation] Wage compression in service sectors from displaced white-collar workers assumes labor is perfectly substitutable across skill categories, but empirical elasticity of substitution between cognitive and manual labor is demonstrably low—a displaced software engineer cannot costlessly become a competitive barista, and historical data from manufacturing displacement in the 1980s-2000s shows displaced workers either exited the labor force or remained in similar cognitive work at lower firms, not mass migration to service work that would compress those wages vs. productivity gains causes/supports composition of demand alteration",
+    "cruxScore": 0.13833682572221875,
+    "disagreementType": "both",
+    "personaPositions": {
+      "Citrini": {
+        "baseScore": 0.8100000000000003,
+        "dialecticalStrength": 0.8100000000000003,
+        "contribution": 0
+      },
+      "Citadel": {
+        "baseScore": 0.1433333333333333,
+        "dialecticalStrength": 0.1433333333333333,
+        "contribution": 0.03833682572221875
+      }
+    },
+    "counterfactual": "Citrini (σ=0.81, impact=0.000) vs Citadel (σ=0.14, impact=0.038)",
+    "settlingQuestion": "What percentage of displaced white-collar workers (defined as those earning above median wage in cognitive occupations) who experienced job loss between 1980-2010 subsequently transitioned to service sector employment (occupations classified as manual labor with below-median cognitive skill requirements) within 5 years, and how does this compare to the counterfactual rate of service sector employment for similar workers without displacement?"
+  },
+  {
+    "id": "crux-c-7",
+    "nodeId": "c-7",
+    "claim": "[Capital allocation from productivity gains and whether reinvestment drives recursive job cuts] The feedback loop from headcount savings to AI capability development breaks empirically because capital allocation follows return on invested capital, not mechanical reinvestment—firms that achieve productivity gains from AI face the same capital allocation decision as any other efficiency improvement (return cash to shareholders, invest in core business expansion, or fund further R&D), and aggregate corporate behavior shows productivity windfalls historically split roughly 60% shareholder returns, 30% business expansion, 10% technology reinvestment, preventing the exponential spiral this thesis requires vs. productivity shocks causes/supports potential output",
+    "cruxScore": 0.13753290009350297,
+    "disagreementType": "both",
+    "personaPositions": {
+      "Citrini": {
+        "baseScore": 0.913333333333336,
+        "dialecticalStrength": 0.913333333333336,
+        "contribution": 0
+      },
+      "Citadel": {
+        "baseScore": 0,
+        "dialecticalStrength": 0.129,
+        "contribution": 0.03753290009350296
+      }
+    },
+    "counterfactual": "Citrini (σ=0.91, impact=0.000) vs Citadel (σ=0.13, impact=0.038)",
+    "settlingQuestion": "What percentage of capital gains from AI-driven productivity improvements have corporations actually allocated to R&D and AI capability development versus shareholder returns and business expansion over the past 3-5 years, and does this allocation pattern match the historical 60/30/10 split cited or differ significantly?"
+  },
+  {
+    "id": "crux-c-14",
+    "nodeId": "c-14",
+    "claim": "[Whether increased AI capability causes further worker layoffs or expands output/employment] increased AI capability causes/supports further worker layoffs vs. productivity shocks causes/supports real income",
+    "cruxScore": 0.13753290009350297,
+    "disagreementType": "edge_structure",
+    "personaPositions": {
+      "Citrini": {
+        "baseScore": 0,
+        "dialecticalStrength": 0,
+        "contribution": 0
+      },
+      "Citadel": {
+        "baseScore": 0.1433333333333333,
+        "dialecticalStrength": 0.1433333333333333,
+        "contribution": 0.03753290009350296
+      }
+    },
+    "counterfactual": "Citrini (σ=0.00, impact=0.000) vs Citadel (σ=0.14, impact=0.038)",
+    "settlingQuestion": "What percentage change in total employment occurs in industries that adopt new AI capabilities compared to industries that do not adopt them, measured over a 2-5 year period following adoption?"
+  }
+]

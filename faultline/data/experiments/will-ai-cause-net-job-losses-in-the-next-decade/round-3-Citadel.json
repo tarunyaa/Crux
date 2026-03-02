@@ -1,0 +1,492 @@
+{
+  "personaId": "Citadel",
+  "topic": "Will AI cause net job losses in the next decade?",
+  "rootClaim": "Citadel-root",
+  "nodes": [
+    {
+      "id": "Citadel-root",
+      "claim": "AI will not cause net job losses in the next decade because productivity gains will drive economic growth, new job creation, and demand shifts that offset displacement, while practical constraints on automation deployment limit near-term labor substitution.",
+      "type": "root",
+      "baseScore": 0.6086666666666667,
+      "dialecticalStrength": 0.4279442068678092,
+      "grounding": [
+        "article-citadel-productivity-shocks",
+        "article-citadel-substitution-elasticity",
+        "article-citadel-2026-global-intelligence-crisis",
+        "article-citadel-compute-constraints",
+        "article-citadel-complement-not-substitute",
+        "article-citadel-keynes-15-hour"
+      ],
+      "personaId": "Citadel",
+      "depth": 0
+    },
+    {
+      "id": "Citadel-d1-0",
+      "claim": "AI-driven automation causes/supports productivity shock",
+      "type": "pro",
+      "baseScore": 0,
+      "dialecticalStrength": 0.4935479450757586,
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ],
+      "personaId": "Citadel",
+      "depth": 1
+    },
+    {
+      "id": "Citadel-d1-1",
+      "claim": "extremely high elasticity of substitution between AI capital and labor causes/supports labor's share of income collapse",
+      "type": "con",
+      "baseScore": 1,
+      "dialecticalStrength": 0.871,
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ],
+      "personaId": "Citadel",
+      "depth": 1
+    },
+    {
+      "id": "Citadel-d1-2",
+      "claim": "rising software engineer job postings (up 11% YoY) causes/supports undermines displacement narrative",
+      "type": "pro",
+      "baseScore": 0,
+      "dialecticalStrength": 0,
+      "grounding": [
+        "article-citadel-2026-global-intelligence-crisis"
+      ],
+      "personaId": "Citadel",
+      "depth": 1
+    },
+    {
+      "id": "Citadel-d1-3",
+      "claim": "marginal cost of compute rises above marginal cost of human labor undermines/reduces labor substitution by automation",
+      "type": "pro",
+      "baseScore": 0,
+      "dialecticalStrength": 0,
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ],
+      "personaId": "Citadel",
+      "depth": 1
+    },
+    {
+      "id": "Citadel-d1-4",
+      "claim": "productivity shocks causes/supports potential output",
+      "type": "pro",
+      "baseScore": 0,
+      "dialecticalStrength": 0.129,
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ],
+      "personaId": "Citadel",
+      "depth": 1
+    },
+    {
+      "id": "Citadel-d2-0",
+      "claim": "productivity shocks causes/supports real income",
+      "type": "pro",
+      "baseScore": 0.1433333333333333,
+      "dialecticalStrength": 0.1433333333333333,
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-1",
+      "claim": "technological revolutions causes/supports task composition alteration",
+      "type": "pro",
+      "baseScore": 0.1433333333333333,
+      "dialecticalStrength": 0.1433333333333333,
+      "grounding": [
+        "article-citadel-complement-not-substitute"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-2",
+      "claim": "productivity growth causes/supports workweek reduction",
+      "type": "pro",
+      "baseScore": 0.1433333333333333,
+      "dialecticalStrength": 0.1433333333333333,
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-3",
+      "claim": "productivity gains causes/supports composition of demand alteration",
+      "type": "pro",
+      "baseScore": 0.1433333333333333,
+      "dialecticalStrength": 0.1433333333333333,
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-4",
+      "claim": "productivity gains causes/supports real income expansion",
+      "type": "pro",
+      "baseScore": 0.1433333333333333,
+      "dialecticalStrength": 0.016141053333333294,
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-5",
+      "claim": "productivity gains causes/supports new industry generation",
+      "type": "pro",
+      "baseScore": 0.1433333333333333,
+      "dialecticalStrength": 0.011631571666666646,
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-6",
+      "claim": "persistent failure of redistribution mechanisms and simultaneous drying up of investment opportunities causes/supports structural fall in aggregate demand",
+      "type": "con",
+      "baseScore": 0.1433333333333333,
+      "dialecticalStrength": 0.1433333333333333,
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-7",
+      "claim": "physical capital constraints undermines/reduces economic deployment of automation",
+      "type": "pro",
+      "baseScore": 0.12333333333333356,
+      "dialecticalStrength": 0.022531914666666694,
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-8",
+      "claim": "energy availability constraints undermines/reduces economic deployment of automation",
+      "type": "pro",
+      "baseScore": 0.12333333333333356,
+      "dialecticalStrength": 0.12333333333333356,
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-9",
+      "claim": "regulatory approvals constraints undermines/reduces economic deployment of automation",
+      "type": "pro",
+      "baseScore": 0.12333333333333356,
+      "dialecticalStrength": 0.12333333333333356,
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-r1-0",
+      "claim": "Inference cost collapsed 90% in 18 months while white-collar output per worker already jumped 40% — productivity gains aren't creating new industries, they're concentrating returns to capital holders who automated existing workflows, with zero visible new job categories emerging three years into deployment",
+      "type": "con",
+      "baseScore": 0.8500000000000003,
+      "dialecticalStrength": 0.8500000000000003,
+      "grounding": [
+        "https://x.com/Citrini7/status/2022124483264618722",
+        "https://www.citriniresearch.com/p/2028gic"
+      ],
+      "personaId": "Citrini",
+      "depth": 3
+    },
+    {
+      "id": "Citrini-r1-1",
+      "claim": "Software engineer postings lag displacement by 18+ months — forward labor demand is collapsing in knowledge work as shown by capex-to-headcount ratios at hyperscalers, where $50B in AI infrastructure spending corresponds to net workforce reductions, not expansions",
+      "type": "con",
+      "baseScore": 0.9666666666666697,
+      "dialecticalStrength": 0.9666666666666697,
+      "grounding": [
+        "https://x.com/Citrini7/status/2025653614430023864",
+        "https://www.citriniresearch.com/p/atoms-vs-bits"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-r1-2",
+      "claim": "Real income expansion requires labor share maintenance — but single GPU clusters replacing 10,000 white-collar workers means productivity gains accrue entirely to capital, creating Ghost GDP that shows up in national accounts but never reaches consumer pockets to drive demand",
+      "type": "con",
+      "baseScore": 0.8500000000000003,
+      "dialecticalStrength": 0.8500000000000003,
+      "grounding": [
+        "https://www.citriniresearch.com/p/2028gic",
+        "https://x.com/Citrini7/status/2025980800659792270"
+      ],
+      "personaId": "Citrini",
+      "depth": 3
+    },
+    {
+      "id": "Citrini-r2-0",
+      "claim": "Physical capital constraints dissolve under inference cost collapse — H100 clusters that cost $100M in 2023 now deliver equivalent output at $10M, meaning GPU availability isn't a bottleneck but an accelerant as each dollar of capex displaces 10x more labor than 18 months ago",
+      "type": "con",
+      "baseScore": 0.6750000000000002,
+      "dialecticalStrength": 0.6750000000000002,
+      "grounding": [
+        "https://x.com/Citrini7/status/2025653614430023864",
+        "https://www.citriniresearch.com/p/2028gic"
+      ],
+      "personaId": "Citrini",
+      "depth": 3
+    },
+    {
+      "id": "Citrini-r2-1",
+      "claim": "Software engineer postings measure replacement hiring for attrition, not net new demand — hyperscaler headcount-to-revenue ratios collapsed 40% since 2022 while AI capex grew 300%, proving companies are substituting capital for labor even as they backfill departures",
+      "type": "con",
+      "baseScore": 0.7333333333333348,
+      "dialecticalStrength": 0.7333333333333348,
+      "grounding": [
+        "https://www.citriniresearch.com/p/atoms-vs-bits",
+        "https://www.citriniresearch.com/p/2028gic"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-r2-2",
+      "claim": "Three years post-ChatGPT and the new industry is 'prompt engineer' — a role already being automated — while every previous tech transition showed visible new job categories within 5 years, proving this cycle's productivity gains concentrate in capital returns, not labor-intensive new sectors",
+      "type": "con",
+      "baseScore": 0.6750000000000002,
+      "dialecticalStrength": 0.6750000000000002,
+      "grounding": [
+        "https://x.com/Citrini7/status/2025653614430023864",
+        "https://www.citriniresearch.com/p/2028gic"
+      ],
+      "personaId": "Citrini",
+      "depth": 3
+    },
+    {
+      "id": "Citrini-r3-0",
+      "claim": "GPU cluster costs dropped 90% in 18 months while performance doubled — physical capital constraints aren't binding when $10M buys what $100M bought in 2023, and hyperscalers are deploying clusters faster than power infrastructure can scale, proving capital availability outpaces deployment friction",
+      "type": "con",
+      "baseScore": 0.56,
+      "dialecticalStrength": 0.56,
+      "grounding": [
+        "https://x.com/Citrini7/status/2025653614430023864",
+        "https://www.citriniresearch.com/p/2028gic"
+      ],
+      "personaId": "Citrini",
+      "depth": 3
+    },
+    {
+      "id": "Citrini-r3-1",
+      "claim": "Real income expansion breaks when labor share collapses — Microsoft's $60B AI capex corresponds to 5,000 net headcount reduction since 2023, meaning productivity gains flow entirely to shareholders as buybacks, not worker wages that drive consumption, creating Ghost GDP visible in national accounts but absent from household balance sheets",
+      "type": "con",
+      "baseScore": 0.56,
+      "dialecticalStrength": 0.56,
+      "grounding": [
+        "https://www.citriniresearch.com/p/2028gic",
+        "https://www.citriniresearch.com/p/atoms-vs-bits"
+      ],
+      "personaId": "Citrini",
+      "depth": 3
+    },
+    {
+      "id": "Citrini-r3-2",
+      "claim": "Marginal cost of compute fell 95% while human wages rose 4% annually — inference now costs $0.001 per 1000 tokens versus $50/hour for knowledge workers, and the cost curve is accelerating downward with new architectures, making the crossover point permanent not temporary",
+      "type": "con",
+      "baseScore": 0.5800000000000005,
+      "dialecticalStrength": 0.5800000000000005,
+      "grounding": [
+        "https://x.com/Citrini7/status/2025653614430023864",
+        "https://www.citriniresearch.com/p/2028gic"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    }
+  ],
+  "edges": [
+    {
+      "id": "Citadel-d1-0->Citadel-root",
+      "from": "Citadel-d1-0",
+      "to": "Citadel-root",
+      "type": "support",
+      "weight": 0.95
+    },
+    {
+      "id": "Citadel-d1-1->Citadel-root",
+      "from": "Citadel-d1-1",
+      "to": "Citadel-root",
+      "type": "attack",
+      "weight": 0.95
+    },
+    {
+      "id": "Citadel-d1-2->Citadel-root",
+      "from": "Citadel-d1-2",
+      "to": "Citadel-root",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citadel-d1-3->Citadel-root",
+      "from": "Citadel-d1-3",
+      "to": "Citadel-root",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citadel-d1-4->Citadel-root",
+      "from": "Citadel-d1-4",
+      "to": "Citadel-root",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citadel-d2-0->Citadel-d1-4",
+      "from": "Citadel-d2-0",
+      "to": "Citadel-d1-4",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citadel-d2-1->Citadel-d1-0",
+      "from": "Citadel-d2-1",
+      "to": "Citadel-d1-0",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citadel-d2-2->Citadel-d1-0",
+      "from": "Citadel-d2-2",
+      "to": "Citadel-d1-0",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citadel-d2-3->Citadel-d1-0",
+      "from": "Citadel-d2-3",
+      "to": "Citadel-d1-0",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citadel-d2-4->Citadel-d1-0",
+      "from": "Citadel-d2-4",
+      "to": "Citadel-d1-0",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citadel-d2-5->Citadel-d1-0",
+      "from": "Citadel-d2-5",
+      "to": "Citadel-d1-0",
+      "type": "support",
+      "weight": 0.9
+    },
+    {
+      "id": "Citadel-d2-6->Citadel-d1-1",
+      "from": "Citadel-d2-6",
+      "to": "Citadel-d1-1",
+      "type": "attack",
+      "weight": 0.9
+    },
+    {
+      "id": "Citadel-d2-7->Citadel-d1-0",
+      "from": "Citadel-d2-7",
+      "to": "Citadel-d1-0",
+      "type": "support",
+      "weight": 0.85
+    },
+    {
+      "id": "Citadel-d2-8->Citadel-d1-0",
+      "from": "Citadel-d2-8",
+      "to": "Citadel-d1-0",
+      "type": "support",
+      "weight": 0.85
+    },
+    {
+      "id": "Citadel-d2-9->Citadel-d1-0",
+      "from": "Citadel-d2-9",
+      "to": "Citadel-d1-0",
+      "type": "support",
+      "weight": 0.85
+    },
+    {
+      "id": "Citrini-r1-0->Citadel-d2-5",
+      "from": "Citrini-r1-0",
+      "to": "Citadel-d2-5",
+      "type": "attack",
+      "weight": 0.92
+    },
+    {
+      "id": "Citrini-r1-1->Citadel-d1-2",
+      "from": "Citrini-r1-1",
+      "to": "Citadel-d1-2",
+      "type": "attack",
+      "weight": 0.88
+    },
+    {
+      "id": "Citrini-r1-2->Citadel-d2-4",
+      "from": "Citrini-r1-2",
+      "to": "Citadel-d2-4",
+      "type": "attack",
+      "weight": 0.9
+    },
+    {
+      "id": "Citrini-r2-0->Citadel-d2-7",
+      "from": "Citrini-r2-0",
+      "to": "Citadel-d2-7",
+      "type": "attack",
+      "weight": 0.91
+    },
+    {
+      "id": "Citrini-r2-1->Citadel-d1-2",
+      "from": "Citrini-r2-1",
+      "to": "Citadel-d1-2",
+      "type": "attack",
+      "weight": 0.89
+    },
+    {
+      "id": "Citrini-r2-2->Citadel-d2-5",
+      "from": "Citrini-r2-2",
+      "to": "Citadel-d2-5",
+      "type": "attack",
+      "weight": 0.93
+    },
+    {
+      "id": "Citrini-r3-0->Citadel-d2-7",
+      "from": "Citrini-r3-0",
+      "to": "Citadel-d2-7",
+      "type": "attack",
+      "weight": 0.94
+    },
+    {
+      "id": "Citrini-r3-1->Citadel-d2-4",
+      "from": "Citrini-r3-1",
+      "to": "Citadel-d2-4",
+      "type": "attack",
+      "weight": 0.93
+    },
+    {
+      "id": "Citrini-r3-2->Citadel-d1-3",
+      "from": "Citrini-r3-2",
+      "to": "Citadel-d1-3",
+      "type": "attack",
+      "weight": 0.91
+    }
+  ],
+  "round": 3
+}

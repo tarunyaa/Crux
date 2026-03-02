@@ -9,6 +9,8 @@
  *   npx tsx scripts/build-personas.ts --deck crypto          # build one deck
  *   npx tsx scripts/build-personas.ts --deck crypto --only "Michael Saylor"  # one persona in one deck
  *   npx tsx scripts/build-personas.ts --only "Elon Musk"     # one persona across all decks
+ *   npx tsx scripts/build-personas.ts --corpus-only          # fetch corpus only, skip contract generation
+ *   npx tsx scripts/build-personas.ts --corpus-only --deck crypto  # corpus only for one deck
  */
 
 import dotenv from 'dotenv'
@@ -514,11 +516,24 @@ async function buildPersona(
   config: DeckConfig,
   persona: DeckConfig['personas'][number],
   twitter: TwitterApi | null,
-  claude: Anthropic
+  claude: Anthropic,
+  corpusOnly: boolean = false
 ) {
   console.log(`\n${'='.repeat(60)}`)
-  console.log(`Building persona: ${persona.id}`)
+  console.log(`Building persona: ${persona.id}${corpusOnly ? ' (corpus only)' : ''}`)
   console.log(`${'='.repeat(60)}`)
+
+  // ─── Skip if corpus already exists (corpus-only mode) ───
+  if (corpusOnly) {
+    const corpusPath = path.join(SEED_DIR, 'corpus', `${persona.id}.json`)
+    try {
+      await fs.access(corpusPath)
+      console.log(`  SKIP: corpus already exists at ${corpusPath}`)
+      return null
+    } catch {
+      // File doesn't exist, proceed with fetching
+    }
+  }
 
   // ─── Fetch content ───
   let tweets: RawTweet[] = []
@@ -568,6 +583,50 @@ async function buildPersona(
 
   if (tweets.length === 0 && substackPosts.length === 0) {
     console.error(`  ERROR: No content fetched for ${persona.id}. Skipping.`)
+    return null
+  }
+
+  // ─── Build corpus ───
+  const corpus: CorpusExcerpt[] = []
+
+  tweets.forEach(t => {
+    corpus.push({
+      id: `tweet-${t.id}`,
+      content: t.text,
+      source: persona.twitterHandle
+        ? `https://x.com/${persona.twitterHandle}/status/${t.id}`
+        : `Tweet ${t.id}`,
+      date: t.created_at,
+      platform: 'twitter',
+      metrics: t.public_metrics
+        ? {
+            likes: t.public_metrics.like_count,
+            retweets: t.public_metrics.retweet_count,
+            replies: t.public_metrics.reply_count,
+          }
+        : undefined,
+    })
+  })
+
+  substackPosts.forEach((p, i) => {
+    corpus.push({
+      id: `substack-${i}`,
+      content: p.content,
+      source: p.url,
+      date: p.date,
+      platform: 'substack',
+    })
+  })
+
+  // ─── Write corpus file ───
+  const corpusPath = path.join(SEED_DIR, 'corpus', `${persona.id}.json`)
+  await fs.mkdir(path.dirname(corpusPath), { recursive: true })
+  await fs.writeFile(corpusPath, JSON.stringify(corpus, null, 2))
+  console.log(`  Wrote: ${corpusPath}`)
+
+  // ─── Corpus-only mode: skip contract generation ───
+  if (corpusOnly) {
+    console.log(`  Corpus-only mode: skipping contract generation`)
     return null
   }
 
@@ -651,50 +710,11 @@ async function buildPersona(
     anchorExcerpts,
   }
 
-  // ─── Build corpus ───
-  const corpus: CorpusExcerpt[] = []
-
-  tweets.forEach(t => {
-    corpus.push({
-      id: `tweet-${t.id}`,
-      content: t.text,
-      source: persona.twitterHandle
-        ? `https://x.com/${persona.twitterHandle}/status/${t.id}`
-        : `Tweet ${t.id}`,
-      date: t.created_at,
-      platform: 'twitter',
-      metrics: t.public_metrics
-        ? {
-            likes: t.public_metrics.like_count,
-            retweets: t.public_metrics.retweet_count,
-            replies: t.public_metrics.reply_count,
-          }
-        : undefined,
-    })
-  })
-
-  substackPosts.forEach((p, i) => {
-    corpus.push({
-      id: `substack-${i}`,
-      content: p.content,
-      source: p.url,
-      date: p.date,
-      platform: 'substack',
-    })
-  })
-
-  // ─── Write files ───
+  // ─── Write contract file ───
   const contractPath = path.join(SEED_DIR, 'contracts', `${persona.id}.json`)
-  const corpusPath = path.join(SEED_DIR, 'corpus', `${persona.id}.json`)
-
   await fs.mkdir(path.dirname(contractPath), { recursive: true })
-  await fs.mkdir(path.dirname(corpusPath), { recursive: true })
-
   await fs.writeFile(contractPath, JSON.stringify(contract, null, 2))
   console.log(`  Wrote: ${contractPath}`)
-
-  await fs.writeFile(corpusPath, JSON.stringify(corpus, null, 2))
-  console.log(`  Wrote: ${corpusPath}`)
 
   // Return metadata for personas.json
   return {
@@ -717,6 +737,7 @@ async function main() {
   const onlyId = onlyIndex !== -1 ? args[onlyIndex + 1] : null
   const deckIndex = args.indexOf('--deck')
   const deckId = deckIndex !== -1 ? args[deckIndex + 1] : null
+  const corpusOnly = args.includes('--corpus-only')
 
   // Load configs
   const allConfigs = await loadConfigs()
@@ -732,11 +753,13 @@ async function main() {
     process.exit(1)
   }
 
-  console.log(`Decks to build: ${configs.map(c => c.deck.id).join(', ')}\n`)
+  console.log(`Decks to build: ${configs.map(c => c.deck.id).join(', ')}`)
+  if (corpusOnly) console.log(`Mode: corpus-only (skipping contract generation)`)
+  console.log()
 
   // Init clients
   const twitter = getTwitterClient()
-  const claude = getAnthropicClient()
+  const claude = corpusOnly ? null : getAnthropicClient()
 
   if (!twitter) {
     console.warn('WARNING: X_BEARER_TOKEN not set. Twitter fetching disabled.')
@@ -767,7 +790,7 @@ async function main() {
     const personaMetadata: NonNullable<Awaited<ReturnType<typeof buildPersona>>>[] = []
 
     for (const persona of personasToBuild) {
-      const result = await buildPersona(config, persona, twitter, claude)
+      const result = await buildPersona(config, persona, twitter, claude!, corpusOnly)
       if (result) personaMetadata.push(result)
     }
 
@@ -783,46 +806,52 @@ async function main() {
     })
   }
 
-  // ─── Write personas.json ───
-  let existingPersonas: typeof allPersonaMetadata = []
-  let existingDecks: Array<Record<string, unknown>> = []
+  // ─── Write personas.json (skip in corpus-only mode) ───
+  if (!corpusOnly) {
+    let existingPersonas: typeof allPersonaMetadata = []
+    let existingDecks: Array<Record<string, unknown>> = []
 
-  const personasPath = path.join(SEED_DIR, 'personas.json')
-  try {
-    const existing = JSON.parse(await fs.readFile(personasPath, 'utf-8'))
-    existingPersonas = existing.personas ?? []
-    existingDecks = existing.decks ?? []
-  } catch {
-    // File doesn't exist or is invalid, start fresh
+    const personasPath = path.join(SEED_DIR, 'personas.json')
+    try {
+      const existing = JSON.parse(await fs.readFile(personasPath, 'utf-8'))
+      existingPersonas = existing.personas ?? []
+      existingDecks = existing.decks ?? []
+    } catch {
+      // File doesn't exist or is invalid, start fresh
+    }
+
+    // Merge personas (replace by id)
+    const personaMap = new Map(existingPersonas.map(p => [p.id, p]))
+    for (const p of allPersonaMetadata) {
+      personaMap.set(p.id, p)
+    }
+
+    // Merge decks (replace by id)
+    const deckMap = new Map(existingDecks.map(d => [d.id as string, d]))
+    for (const d of allDeckEntries) {
+      deckMap.set(d.id as string, d)
+    }
+
+    const personasFile = {
+      decks: Array.from(deckMap.values()),
+      personas: Array.from(personaMap.values()),
+    }
+
+    await fs.writeFile(personasPath, JSON.stringify(personasFile, null, 2))
+    console.log(`\nWrote: ${personasPath}`)
   }
 
-  // Merge personas (replace by id)
-  const personaMap = new Map(existingPersonas.map(p => [p.id, p]))
-  for (const p of allPersonaMetadata) {
-    personaMap.set(p.id, p)
+  console.log(`\nDone! Processed ${configs.reduce((sum, c) => sum + c.personas.length, 0)} persona(s) across ${allDeckEntries.length} deck(s).`)
+  if (corpusOnly) {
+    console.log('Mode: corpus-only (contracts and personas.json were not modified)')
+  } else {
+    console.log('Generated files:')
+    for (const p of allPersonaMetadata) {
+      console.log(`  - data/seed/contracts/${p.id}.json`)
+      console.log(`  - data/seed/corpus/${p.id}.json`)
+    }
+    console.log('  - data/seed/personas.json')
   }
-
-  // Merge decks (replace by id)
-  const deckMap = new Map(existingDecks.map(d => [d.id as string, d]))
-  for (const d of allDeckEntries) {
-    deckMap.set(d.id as string, d)
-  }
-
-  const personasFile = {
-    decks: Array.from(deckMap.values()),
-    personas: Array.from(personaMap.values()),
-  }
-
-  await fs.writeFile(personasPath, JSON.stringify(personasFile, null, 2))
-  console.log(`\nWrote: ${personasPath}`)
-
-  console.log(`\nDone! Built ${allPersonaMetadata.length} persona(s) across ${allDeckEntries.length} deck(s).`)
-  console.log('Generated files:')
-  for (const p of allPersonaMetadata) {
-    console.log(`  - data/seed/contracts/${p.id}.json`)
-    console.log(`  - data/seed/corpus/${p.id}.json`)
-  }
-  console.log('  - data/seed/personas.json')
 }
 
 main().catch(err => {

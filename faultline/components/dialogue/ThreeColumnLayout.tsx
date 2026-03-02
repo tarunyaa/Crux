@@ -446,7 +446,7 @@ export function ThreeColumnLayout({
 
       {/* ── Header ── */}
       <div>
-        <h1 className="text-2xl font-bold text-foreground truncate">{topic}</h1>
+        <h1 className="text-2xl font-bold text-foreground">{topic}</h1>
         <div className="flex items-center gap-3 mt-1">
           {/* Status dot */}
           {isRunning && (

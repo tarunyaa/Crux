@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-03-02T08:36:38.651Z",
+  "taskCount": 1,
+  "meanDAR": {
+    "single": 0.625,
+    "cot": 0.75,
+    "crux": 0.75
+  },
+  "winRates": {
+    "single": 0,
+    "cot": 1,
+    "crux": 0
+  },
+  "totalTokens": {
+    "single": {
+      "inputTokens": 5392,
+      "outputTokens": 2849
+    },
+    "cot": {
+      "inputTokens": 11602,
+      "outputTokens": 4872
+    },
+    "crux": {
+      "inputTokens": 14423,
+      "outputTokens": 9154
+    }
+  }
+}
