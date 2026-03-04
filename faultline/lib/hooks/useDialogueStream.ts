@@ -35,6 +35,7 @@ export interface DialogueStreamState {
   currentPhase: 'opening' | 'take' | 'clash' | 'closing' | null
   shifts: PositionShift[]
   summary: DebateSummary | null
+  collectedEvents: DialogueEvent[]
 }
 
 export function useDialogueStream(
@@ -55,14 +56,17 @@ export function useDialogueStream(
     currentPhase: null,
     shifts: [],
     summary: null,
+    collectedEvents: [],
   })
 
   // useRef guard prevents double-invocation from React StrictMode
   const startedRef = useRef(false)
+  const eventsRef = useRef<DialogueEvent[]>([])
 
   const start = useCallback(() => {
     if (startedRef.current) return
     startedRef.current = true
+    eventsRef.current = []
 
     setState({
       messages: [],
@@ -78,6 +82,7 @@ export function useDialogueStream(
       currentPhase: null,
       shifts: [],
       summary: null,
+      collectedEvents: [],
     })
 
     fetch('/api/dialogue', {
@@ -94,6 +99,7 @@ export function useDialogueStream(
 
         const reader = body.getReader()
         const decoder = new TextDecoder()
+        let buffer = ''
 
         function read(): Promise<void> {
           return reader.read().then(({ done, value }) => {
@@ -102,13 +108,17 @@ export function useDialogueStream(
               return
             }
 
-            const text = decoder.decode(value)
-            const lines = text.split('\n')
+            buffer += decoder.decode(value, { stream: true })
+            // Split on double-newline (SSE event boundary), keeping incomplete data in buffer
+            const parts = buffer.split('\n\n')
+            buffer = parts.pop() ?? ''
 
-            for (const line of lines) {
+            for (const part of parts) {
+              const line = part.trim()
               if (!line.startsWith('data: ')) continue
               try {
                 const event = JSON.parse(line.slice(6)) as DialogueEvent
+                eventsRef.current.push(event)
 
                 if (event.type === 'debate_start') {
                   setState(prev => ({ ...prev, aspects: event.aspects }))
@@ -206,6 +216,7 @@ export function useDialogueStream(
                     isComplete: true,
                     shifts: event.shifts ?? [],
                     summary: event.summary ?? null,
+                    collectedEvents: eventsRef.current,
                   }))
 
                 } else if (event.type === 'error') {

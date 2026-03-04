@@ -1,6 +1,7 @@
 import fs from 'fs/promises'
 import path from 'path'
 import type { Persona, PersonaContract, Deck, BeliefGraph, CorpusExcerpt } from '@/lib/types'
+import type { PersonaWorldview } from '@/lib/belief-graph/worldview-types'
 import { getVoiceProfile } from '@/lib/dialogue/speech-roles'
 
 const SEED_DIR = path.join(process.cwd(), 'data/seed')
@@ -67,6 +68,16 @@ export async function loadBeliefGraph(personaId: string): Promise<BeliefGraph | 
   try {
     const raw = await fs.readFile(filePath, 'utf-8')
     return JSON.parse(raw) as BeliefGraph
+  } catch {
+    return null
+  }
+}
+
+export async function loadWorldview(personaId: string): Promise<PersonaWorldview | null> {
+  const filePath = path.join(SEED_DIR, 'worldviews', `${personaId}.json`)
+  try {
+    const raw = await fs.readFile(filePath, 'utf-8')
+    return JSON.parse(raw) as PersonaWorldview
   } catch {
     return null
   }

@@ -8,8 +8,8 @@ import SuitIcon from '@/components/SuitIcon'
 const NAV_LINKS = [
   { href: '/cards', label: 'Decks' },
   { href: '/setup', label: 'Debate' },
-  { href: '/debates', label: 'Past Debates' },
-  { href: '/belief-graph', label: 'Belief Graph' },
+  { href: '/debates', label: 'Archive' },
+  { href: '/benchmarks', label: 'Benchmarks' },
   { href: '/about', label: 'About' },
 ]
 

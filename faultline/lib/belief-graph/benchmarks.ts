@@ -1,13 +1,13 @@
 // ─── Belief Graph Experiment Benchmarks ───────────────────────
 // Graph-native metrics + CIG-compatible metrics adapted for belief graphs.
 //
-// Graph-native: RSD, BRC, CLR, GGR, CS (purely structural)
+// Graph-native: RSD, BRC, CLR, AC, CS (purely structural)
 // CIG-adapted: ΔSD, DFS (uses Haiku judge on crux counterfactuals)
 
 import type {
   BenchmarkMetrics,
   PersonaQBAF,
-  RoundSnapshot,
+  RevisionSnapshot,
   CommunityGraph,
   StructuralCrux,
 } from './types'
@@ -20,7 +20,7 @@ import { scoreDFS } from '@/lib/benchmark/cig-scoring'
 export async function computeBenchmarks(
   initialSnapshots: Record<string, PersonaQBAF>,
   finalSnapshots: Record<string, PersonaQBAF>,
-  rounds: RoundSnapshot[],
+  revisions: RevisionSnapshot[],
   communityGraph: CommunityGraph,
   cruxes: StructuralCrux[],
 ): Promise<BenchmarkMetrics> {
@@ -36,7 +36,7 @@ export async function computeBenchmarks(
     rootStrengthDelta[pid] = Math.abs(σ_final - σ_initial)
   }
 
-  // 2. Stance Divergence (ΔSD): change in |σA - σB|
+  // 2. Stance Divergence (ΔSD): change in spread of root strengths
   const initialRootStrengths = personaIds.map(pid => {
     const q = initialSnapshots[pid]
     return q.nodes.find(n => n.id === q.rootClaim)?.dialecticalStrength ?? 0
@@ -50,7 +50,8 @@ export async function computeBenchmarks(
   // 3. Belief Revision Cost: total Σ|Δτ| / |nodes| per persona
   const beliefRevisionCost: Record<string, number> = {}
   for (const pid of personaIds) {
-    const totalCost = rounds.reduce((sum, r) => sum + (r.revisionCosts[pid] ?? 0), 0)
+    const pidRevisions = revisions.filter(r => r.personaId === pid)
+    const totalCost = pidRevisions.reduce((sum, r) => sum + r.cost, 0)
     const nodeCount = finalSnapshots[pid].nodes.length
     beliefRevisionCost[pid] = nodeCount > 0 ? totalCost / nodeCount : 0
   }
@@ -62,22 +63,15 @@ export async function computeBenchmarks(
     ? cruxNodeCount / totalCommunityNodes
     : 0
 
-  // 5. Argument Coverage: |community_nodes| / (2 × avg |initial_nodes|)
+  // 5. Argument Coverage: |community_nodes| / (N × avg |initial_nodes|)
+  const N = personaIds.length
   const initialNodeCounts = personaIds.map(pid => initialSnapshots[pid].nodes.length)
   const avgInitial = initialNodeCounts.reduce((s, c) => s + c, 0) / initialNodeCounts.length
   const argumentCoverage = avgInitial > 0
-    ? communityGraph.nodes.length / (2 * avgInitial)
+    ? communityGraph.nodes.length / (N * avgInitial)
     : 0
 
-  // 6. Graph Growth Rate: |final_nodes| / |initial_nodes| per persona
-  const graphGrowthRate: Record<string, number> = {}
-  for (const pid of personaIds) {
-    const initialCount = initialSnapshots[pid].nodes.length
-    const finalCount = finalSnapshots[pid].nodes.length
-    graphGrowthRate[pid] = initialCount > 0 ? finalCount / initialCount : 1
-  }
-
-  // 7. Counterfactual Sensitivity: for top crux, |Δσ(root)| when crux node removed
+  // 6. Counterfactual Sensitivity: for top crux, |Δσ(root)| when crux node removed
   let counterfactualSensitivity = 0
   if (cruxes.length > 0) {
     const topCrux = cruxes[0]
@@ -94,11 +88,10 @@ export async function computeBenchmarks(
     }
   }
 
-  // 8. Decision Flip Score (CIG): does flipping the top crux change conclusions?
+  // 7. Decision Flip Score (CIG): does flipping the top crux change conclusions?
   let decisionFlipScore: { flipped: boolean; explanation: string } | null = null
   if (cruxes.length > 0) {
     const topCrux = cruxes[0]
-    // Build a summary of the debate positions for DFS
     const positionSummary = personaIds.map(pid => {
       const qbaf = finalSnapshots[pid]
       const root = qbaf.nodes.find(n => n.id === qbaf.rootClaim)
@@ -107,30 +100,14 @@ export async function computeBenchmarks(
     decisionFlipScore = await scoreDFS(positionSummary, topCrux.claim)
   }
 
-  // 9. Convergence rate: rounds until Δσ < threshold (or max)
-  let convergenceRound: number | null = null
-  for (let i = 1; i < rounds.length; i++) {
-    const prev = rounds[i - 1]
-    const curr = rounds[i]
-    const allSmall = personaIds.every(pid =>
-      Math.abs((curr.rootStrengths[pid] ?? 0) - (prev.rootStrengths[pid] ?? 0)) < 0.02
-    )
-    if (allSmall) {
-      convergenceRound = curr.round
-      break
-    }
-  }
-
   return {
     rootStrengthDelta,
     stanceDivergence,
     beliefRevisionCost,
     cruxLocalizationRate,
     argumentCoverage,
-    graphGrowthRate,
     counterfactualSensitivity,
     decisionFlipScore,
-    convergenceRound,
   }
 }
 

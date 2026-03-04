@@ -74,7 +74,9 @@
       "WebFetch(domain:api.github.com)",
       "Bash(mv:*)",
       "WebFetch(domain:proceedings.kr.org)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "WebFetch(domain:journals.sagepub.com)",
+      "Bash(npm run:*)"
     ]
   }
 }

@@ -7,26 +7,19 @@ import type {
   CommunityGraph,
   StructuralCrux,
   BenchmarkMetrics,
-  RoundSnapshot,
+  PairwiseDiff,
+  RevisionSnapshot,
   ExperimentResult,
 } from '@/lib/belief-graph/types'
-
-export interface RevisionDetail {
-  round: number
-  personaId: string
-  rootStrength: number
-  revisionCost: number
-  R: number
-  reasoning: string
-}
 
 export interface BeliefGraphStreamState {
   // Extraction phase
   qbafs: Record<string, PersonaQBAF>
-  // Round tracking
-  currentRound: number
-  rounds: RoundSnapshot[]
-  revisionDetails: RevisionDetail[]
+  // Diff phase
+  diffs: PairwiseDiff[]
+  // Revision phase
+  revisions: RevisionSnapshot[]
+  revisedNodeIds: Set<string>  // node IDs whose base scores were adjusted
   // Community graph phase
   communityGraph: CommunityGraph | null
   cruxes: StructuralCrux[]
@@ -34,7 +27,7 @@ export interface BeliefGraphStreamState {
   // Final result
   result: ExperimentResult | null
   // Status
-  phase: 'idle' | 'extracting' | 'debating' | 'building-community' | 'complete'
+  phase: 'idle' | 'extracting' | 'diffing' | 'revising' | 'building-community' | 'complete'
   isRunning: boolean
   isComplete: boolean
   error: string | null
@@ -42,14 +35,13 @@ export interface BeliefGraphStreamState {
 
 export function useBeliefGraphStream(
   topic: string,
-  personaIds: [string, string],
-  maxRounds: number = 3,
+  personaIds: string[],
 ) {
   const [state, setState] = useState<BeliefGraphStreamState>({
     qbafs: {},
-    currentRound: 0,
-    rounds: [],
-    revisionDetails: [],
+    diffs: [],
+    revisions: [],
+    revisedNodeIds: new Set(),
     communityGraph: null,
     cruxes: [],
     benchmarks: null,
@@ -68,9 +60,9 @@ export function useBeliefGraphStream(
 
     setState({
       qbafs: {},
-      currentRound: 0,
-      rounds: [],
-      revisionDetails: [],
+      diffs: [],
+      revisions: [],
+      revisedNodeIds: new Set(),
       communityGraph: null,
       cruxes: [],
       benchmarks: null,
@@ -87,7 +79,6 @@ export function useBeliefGraphStream(
       body: JSON.stringify({
         topic,
         personaIds,
-        maxRounds,
         convergenceThreshold: 0.02,
         cruxVarianceThreshold: 0.3,
         consensusVarianceThreshold: 0.1,
@@ -102,6 +93,7 @@ export function useBeliefGraphStream(
 
         const reader = body.getReader()
         const decoder = new TextDecoder()
+        let buffer = ''
 
         function read(): Promise<void> {
           return reader.read().then(({ done, value }) => {
@@ -110,10 +102,12 @@ export function useBeliefGraphStream(
               return
             }
 
-            const text = decoder.decode(value)
-            const lines = text.split('\n')
+            buffer += decoder.decode(value, { stream: true })
+            const parts = buffer.split('\n\n')
+            buffer = parts.pop() ?? ''
 
-            for (const line of lines) {
+            for (const part of parts) {
+              const line = part.trim()
               if (!line.startsWith('data: ')) continue
               try {
                 const event = JSON.parse(line.slice(6)) as BeliefGraphEvent
@@ -146,29 +140,55 @@ export function useBeliefGraphStream(
           qbafs: { ...prev.qbafs, [event.personaId]: event.qbaf },
         }))
         break
-      case 'round_start':
-        setState(prev => ({ ...prev, phase: 'debating', currentRound: event.round }))
+      case 'diff_start':
+        setState(prev => ({ ...prev, phase: 'diffing' }))
         break
-      case 'revision_complete':
+      case 'diff_complete':
         setState(prev => ({
           ...prev,
-          revisionDetails: [...prev.revisionDetails, {
-            round: event.round,
-            personaId: event.personaId,
-            rootStrength: event.rootStrength,
-            revisionCost: event.revisionCost,
-            R: event.R,
-            reasoning: event.reasoning,
-          }],
+          diffs: [...prev.diffs, event.diff],
         }))
         break
-      case 'round_complete':
-        setState(prev => ({
-          ...prev,
-          rounds: [...prev.rounds, event.snapshot],
-          qbafs: { ...prev.qbafs, ...event.snapshot.qbafs },
-        }))
+      case 'revision_complete': {
+        const newRevisedIds = new Set<string>()
+        if (event.adjustedScores) {
+          for (const nodeId of Object.keys(event.adjustedScores)) {
+            newRevisedIds.add(nodeId)
+          }
+        }
+        setState(prev => {
+          // Merge adjusted scores into the QBAF for this persona
+          let updatedQbafs = prev.qbafs
+          if (event.adjustedScores && prev.qbafs[event.personaId]) {
+            const qbaf = prev.qbafs[event.personaId]
+            updatedQbafs = {
+              ...prev.qbafs,
+              [event.personaId]: {
+                ...qbaf,
+                nodes: qbaf.nodes.map(n => {
+                  const newScore = event.adjustedScores![n.id]
+                  return newScore !== undefined ? { ...n, baseScore: newScore } : n
+                }),
+              },
+            }
+          }
+          return {
+            ...prev,
+            qbafs: updatedQbafs,
+            phase: 'revising',
+            revisedNodeIds: new Set([...prev.revisedNodeIds, ...newRevisedIds]),
+            revisions: [...prev.revisions, {
+              personaId: event.personaId,
+              preRootStrength: 0,
+              postRootStrength: event.rootStrength,
+              cost: event.revisionCost,
+              R: event.R,
+              reasoning: event.reasoning,
+            }],
+          }
+        })
         break
+      }
       case 'community_graph_built':
         setState(prev => ({ ...prev, phase: 'building-community', communityGraph: event.graph }))
         break

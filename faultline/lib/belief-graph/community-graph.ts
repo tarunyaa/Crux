@@ -1,5 +1,5 @@
 // ─── Community Graph Construction ─────────────────────────────
-// Merge two persona QBAFs into a single community graph.
+// Merge N persona QBAFs into a single community graph.
 // Identifies: semantic overlaps, opposing claims, and structural cruxes.
 //
 // Key insight: cruxes aren't just nodes with high base score variance.
@@ -13,17 +13,12 @@ import type {
   CommunityGraph,
   StructuralCrux,
   PersonaCruxPosition,
+  ClaimMapping,
+  PairwiseDiff,
 } from './types'
+import type { AssumptionConflict } from './worldview-types'
 import { completeJSON, complete } from '@/lib/llm/client'
-import { counterfactualImpact } from './df-quad'
-
-interface ClaimMapping {
-  nodeIdA: string
-  nodeIdB: string
-  relationship: 'agreement' | 'opposition' | 'related'
-  confidence: number
-  sharedTopic: string  // what phenomena both claims are about
-}
+import { counterfactualImpact, gradientSign } from './df-quad'
 
 interface BatchComparisonResponse {
   mappings: Array<{
@@ -39,7 +34,7 @@ interface BatchComparisonResponse {
  * Batch comparison: send all claims from both QBAFs to a single Haiku call.
  * Returns pairs that are semantically related — including opposing claims.
  */
-async function batchCompareQBAFs(
+export async function batchCompareQBAFs(
   qbafA: PersonaQBAF,
   qbafB: PersonaQBAF,
 ): Promise<ClaimMapping[]> {
@@ -87,109 +82,250 @@ Respond in JSON:
 }
 
 /**
- * Build community graph from two persona QBAFs.
- *
- * Approach:
- * 1. Batch-compare all claims to find agreements, oppositions, and related pairs
- * 2. Merge agreements into single community nodes
- * 3. Mark oppositions as crux candidates (high disagreement signal)
- * 4. Classify by structural role + disagreement type
+ * Compute a pairwise structural diff between two QBAFs.
+ * Wraps batchCompareQBAFs and identifies unmatched nodes.
  */
-export async function buildCommunityGraph(
+export async function structuralDiff(
   qbafA: PersonaQBAF,
   qbafB: PersonaQBAF,
+): Promise<PairwiseDiff> {
+  const mappings = await batchCompareQBAFs(qbafA, qbafB)
+
+  const matchedA = new Set(mappings.map(m => m.nodeIdA))
+  const matchedB = new Set(mappings.map(m => m.nodeIdB))
+
+  const gaps: string[] = [
+    ...qbafA.nodes.filter(n => !matchedA.has(n.id)).map(n => n.id),
+    ...qbafB.nodes.filter(n => !matchedB.has(n.id)).map(n => n.id),
+  ]
+
+  return {
+    personaA: qbafA.personaId,
+    personaB: qbafB.personaId,
+    contradictions: mappings.filter(m => m.relationship === 'opposition'),
+    agreements: mappings.filter(m => m.relationship === 'agreement'),
+    gaps,
+  }
+}
+
+/**
+ * Build community graph from N persona QBAFs.
+ *
+ * Approach:
+ * 1. Run batchCompareQBAFs for all nC2 pairs
+ * 2. Union-find merge: if A1↔B3 and B3↔C2, they become one community node
+ * 3. Add unmatched nodes as persona-specific
+ * 4. Classify by variance across all N personas' base scores
+ */
+export async function buildCommunityGraph(
+  qbafs: PersonaQBAF[],
   cruxThreshold: number = 0.3,
   consensusThreshold: number = 0.1,
 ): Promise<CommunityGraph> {
-  // Step 1: Batch comparison
-  const mappings = await batchCompareQBAFs(qbafA, qbafB)
+  // Step 1: Pairwise comparisons for all nC2 pairs
+  const allMappings: Array<{ mapping: ClaimMapping; pidA: string; pidB: string }> = []
 
-  const merges: Array<{
-    communityId: string
-    sourceIds: string[]
-    claim: string
-    baseScores: Record<string, number>
-    relationship: 'agreement' | 'opposition' | 'related'
-    sharedTopic: string
-    confidence: number
-  }> = []
-
-  const matchedA = new Set<string>()
-  const matchedB = new Set<string>()
-
-  const nodeMapA = new Map(qbafA.nodes.map(n => [n.id, n]))
-  const nodeMapB = new Map(qbafB.nodes.map(n => [n.id, n]))
-
-  // Sort by confidence, process best matches first
-  mappings.sort((a, b) => b.confidence - a.confidence)
-
-  for (const mapping of mappings) {
-    if (matchedA.has(mapping.nodeIdA) || matchedB.has(mapping.nodeIdB)) continue
-
-    const nodeA = nodeMapA.get(mapping.nodeIdA)
-    const nodeB = nodeMapB.get(mapping.nodeIdB)
-    if (!nodeA || !nodeB) continue
-
-    const communityId = `c-${merges.length}`
-
-    // For agreements, merge into one node
-    // For oppositions/related, still merge but mark the relationship
-    merges.push({
-      communityId,
-      sourceIds: [nodeA.id, nodeB.id],
-      claim: mapping.relationship === 'agreement'
-        ? nodeA.claim
-        : `[${mapping.sharedTopic}] ${nodeA.claim} vs. ${nodeB.claim}`,
-      baseScores: {
-        [qbafA.personaId]: nodeA.baseScore,
-        [qbafB.personaId]: nodeB.baseScore,
-      },
-      relationship: mapping.relationship,
-      sharedTopic: mapping.sharedTopic,
-      confidence: mapping.confidence,
-    })
-
-    matchedA.add(mapping.nodeIdA)
-    matchedB.add(mapping.nodeIdB)
-  }
-
-  // Add unmatched nodes as persona-specific
-  for (const nodeA of qbafA.nodes) {
-    if (matchedA.has(nodeA.id)) continue
-    merges.push({
-      communityId: `c-${merges.length}`,
-      sourceIds: [nodeA.id],
-      claim: nodeA.claim,
-      baseScores: { [qbafA.personaId]: nodeA.baseScore },
-      relationship: 'related',
-      sharedTopic: '',
-      confidence: 0,
-    })
-  }
-
-  for (const nodeB of qbafB.nodes) {
-    if (matchedB.has(nodeB.id)) continue
-    merges.push({
-      communityId: `c-${merges.length}`,
-      sourceIds: [nodeB.id],
-      claim: nodeB.claim,
-      baseScores: { [qbafB.personaId]: nodeB.baseScore },
-      relationship: 'related',
-      sharedTopic: '',
-      confidence: 0,
-    })
-  }
-
-  // Build node ID remapping
-  const sourceToComm = new Map<string, string>()
-  for (const merge of merges) {
-    for (const sourceId of merge.sourceIds) {
-      sourceToComm.set(sourceId, merge.communityId)
+  const pairs: Array<[number, number]> = []
+  for (let i = 0; i < qbafs.length; i++) {
+    for (let j = i + 1; j < qbafs.length; j++) {
+      pairs.push([i, j])
     }
   }
 
+  const pairResults = await Promise.all(
+    pairs.map(([i, j]) => batchCompareQBAFs(qbafs[i], qbafs[j]))
+  )
+
+  for (let p = 0; p < pairs.length; p++) {
+    const [i, j] = pairs[p]
+    for (const mapping of pairResults[p]) {
+      allMappings.push({
+        mapping,
+        pidA: qbafs[i].personaId,
+        pidB: qbafs[j].personaId,
+      })
+    }
+  }
+
+  // Step 2: Union-find to merge equivalent nodes across personas
+  const MAX_GROUP_SIZE = 5
+
+  const parent = new Map<string, string>()
+  const size = new Map<string, number>()
+
+  function find(x: string): string {
+    if (!parent.has(x)) {
+      parent.set(x, x)
+      size.set(x, 1)
+    }
+    let root = x
+    while (parent.get(root) !== root) root = parent.get(root)!
+    // Path compression
+    let curr = x
+    while (curr !== root) {
+      const next = parent.get(curr)!
+      parent.set(curr, root)
+      curr = next
+    }
+    return root
+  }
+  function groupSize(x: string): number {
+    return size.get(find(x)) ?? 1
+  }
+  function union(a: string, b: string): void {
+    const ra = find(a)
+    const rb = find(b)
+    if (ra !== rb) {
+      // Merge smaller into larger
+      const sa = size.get(ra) ?? 1
+      const sb = size.get(rb) ?? 1
+      if (sa >= sb) {
+        parent.set(rb, ra)
+        size.set(ra, sa + sb)
+      } else {
+        parent.set(ra, rb)
+        size.set(rb, sa + sb)
+      }
+    }
+  }
+
+  // Sort by confidence, process best matches first
+  allMappings.sort((a, b) => b.mapping.confidence - a.mapping.confidence)
+
+  // Build a depth lookup for root-guard during merging
+  const nodeDepth = new Map<string, number>()
+  for (const qbaf of qbafs) {
+    for (const node of qbaf.nodes) {
+      nodeDepth.set(node.id, node.depth)
+    }
+  }
+
+  // Track relationships between merged groups
+  const groupRelationships = new Map<string, 'agreement' | 'opposition' | 'related'>()
+  // Track best sharedTopic per group root (highest confidence)
+  const groupTopics = new Map<string, { topic: string; confidence: number }>()
+
+  for (const { mapping } of allMappings) {
+    // Never merge root nodes — they are the objects of comparison, not candidates for equivalence
+    // Reference: arxiv 2510.24303 Algorithm 1 — layer-by-layer clustering exempts roots
+    if (nodeDepth.get(mapping.nodeIdA) === 0 || nodeDepth.get(mapping.nodeIdB) === 0) continue
+
+    // Cap group size to prevent mega-groups
+    if (groupSize(mapping.nodeIdA) + groupSize(mapping.nodeIdB) > MAX_GROUP_SIZE) continue
+
+    union(mapping.nodeIdA, mapping.nodeIdB)
+
+    const groupKey = find(mapping.nodeIdA)
+    // Keep the strongest relationship signal (opposition > related > agreement for crux detection)
+    const existing = groupRelationships.get(groupKey)
+    if (!existing || mapping.relationship === 'opposition') {
+      groupRelationships.set(groupKey, mapping.relationship)
+    }
+    // Keep the highest-confidence sharedTopic
+    if (mapping.sharedTopic) {
+      const existingTopic = groupTopics.get(groupKey)
+      if (!existingTopic || mapping.confidence > existingTopic.confidence) {
+        groupTopics.set(groupKey, { topic: mapping.sharedTopic, confidence: mapping.confidence })
+      }
+    }
+  }
+
+  // Build all node IDs
+  const allNodeIds = new Set<string>()
+  const nodeById = new Map<string, { node: import('./types').QBAFNode; personaId: string }>()
+  for (const qbaf of qbafs) {
+    for (const node of qbaf.nodes) {
+      allNodeIds.add(node.id)
+      nodeById.set(node.id, { node, personaId: qbaf.personaId })
+    }
+  }
+
+  // Ensure all nodes are in the union-find
+  for (const nodeId of allNodeIds) find(nodeId)
+
+  // Group by root
+  const groups = new Map<string, string[]>()
+  for (const nodeId of allNodeIds) {
+    const root = find(nodeId)
+    const group = groups.get(root) ?? []
+    group.push(nodeId)
+    groups.set(root, group)
+  }
+
+  // Build community nodes
+  const communityNodes: CommunityNode[] = []
+  const sourceToComm = new Map<string, string>()
+
+  let idx = 0
+  for (const [groupRoot, memberIds] of groups) {
+    const communityId = `c-${idx++}`
+    for (const id of memberIds) sourceToComm.set(id, communityId)
+
+    // Gather base scores per persona
+    const baseScores: Record<string, number> = {}
+    const claims: string[] = []
+    for (const id of memberIds) {
+      const entry = nodeById.get(id)
+      if (entry) {
+        baseScores[entry.personaId] = entry.node.baseScore
+        claims.push(entry.node.claim)
+      }
+    }
+
+    const scores = Object.values(baseScores)
+    const variance = scores.length >= 2 ? computeVariance(scores) : 0
+    const relationship = groupRelationships.get(groupRoot)
+    const topicEntry = groupTopics.get(groupRoot)
+
+    // Build claim text — prefer sharedTopic for multi-member groups
+    let claim: string
+    if (memberIds.length === 1) {
+      claim = claims[0]
+    } else if (relationship === 'agreement') {
+      claim = claims[0]
+    } else if (topicEntry) {
+      // Use the best sharedTopic as the primary claim text
+      claim = topicEntry.topic
+    } else {
+      // No sharedTopic available — use at most 2 claims
+      const uniqueClaims = [...new Set(claims)]
+      claim = uniqueClaims.slice(0, 2).join(' vs. ')
+    }
+
+    // Classify
+    const scoreValues = Object.values(baseScores)
+    const baseScoreSpread = scoreValues.length >= 2
+      ? Math.max(...scoreValues) - Math.min(...scoreValues)
+      : 0
+
+    let classification: 'consensus' | 'crux' | 'neutral' = 'neutral'
+    if (Object.keys(baseScores).length >= 2) {
+      if (relationship === 'opposition') {
+        classification = 'crux'
+      } else if (relationship === 'agreement') {
+        classification = variance < consensusThreshold ? 'consensus' : 'neutral'
+      } else {
+        // For 'related' nodes, also flag as crux when base scores diverge meaningfully
+        if (variance > cruxThreshold || baseScoreSpread > 0.3) classification = 'crux'
+        else if (variance < consensusThreshold) classification = 'consensus'
+      }
+    }
+
+    communityNodes.push({
+      id: communityId,
+      claim,
+      mergedFrom: memberIds,
+      baseScores,
+      communityStrength: 0,
+      variance,
+      classification,
+    })
+  }
+
   // Remap edges
-  const allEdges = [...qbafA.edges, ...qbafB.edges]
+  const allEdges: QBAFEdge[] = []
+  for (const qbaf of qbafs) allEdges.push(...qbaf.edges)
+
   const seenEdges = new Set<string>()
   const communityEdges: QBAFEdge[] = []
 
@@ -212,42 +348,12 @@ export async function buildCommunityGraph(
     })
   }
 
-  // Classify nodes
-  const communityNodes: CommunityNode[] = merges.map(merge => {
-    const scores = Object.values(merge.baseScores)
-    const variance = scores.length >= 2 ? computeVariance(scores) : 0
-
-    let classification: 'consensus' | 'crux' | 'neutral' = 'neutral'
-    if (merge.sourceIds.length >= 2) {
-      if (merge.relationship === 'opposition') {
-        // Opposing claims are always crux candidates
-        classification = 'crux'
-      } else if (merge.relationship === 'agreement') {
-        classification = variance < consensusThreshold ? 'consensus' : 'neutral'
-      } else {
-        // Related: use variance threshold
-        if (variance > cruxThreshold) classification = 'crux'
-        else if (variance < consensusThreshold) classification = 'consensus'
-      }
-    }
-
-    return {
-      id: merge.communityId,
-      claim: merge.claim,
-      mergedFrom: merge.sourceIds,
-      baseScores: merge.baseScores,
-      communityStrength: 0,
-      variance,
-      classification,
-    }
-  })
-
   const cruxNodes = communityNodes.filter(n => n.classification === 'crux').map(n => n.id)
   const consensusNodes = communityNodes.filter(n => n.classification === 'consensus').map(n => n.id)
 
   return {
-    topic: qbafA.topic,
-    personas: [qbafA.personaId, qbafB.personaId],
+    topic: qbafs[0].topic,
+    personas: qbafs.map(q => q.personaId),
     nodes: communityNodes,
     edges: communityEdges,
     cruxNodes,
@@ -257,39 +363,55 @@ export async function buildCommunityGraph(
 
 /**
  * Identify structural cruxes from the community graph.
- * Uses counterfactual impact + opposition detection.
+ * Uses counterfactual impact across all N personas.
+ * When assumption conflicts are available, uses them for richer crux descriptions.
  */
 export async function identifyCruxes(
   communityGraph: CommunityGraph,
-  qbafA: PersonaQBAF,
-  qbafB: PersonaQBAF,
+  qbafs: PersonaQBAF[],
   topK: number = 5,
+  assumptionConflicts?: AssumptionConflict[],
 ): Promise<StructuralCrux[]> {
   const cruxCandidates: StructuralCrux[] = []
+  const qbafMap = new Map(qbafs.map(q => [q.personaId, q]))
 
   for (const node of communityGraph.nodes) {
     if (node.classification !== 'crux') continue
 
     // Compute counterfactual impact on each persona's root
-    const impactA = computePersonaImpact(qbafA, node.mergedFrom)
-    const impactB = computePersonaImpact(qbafB, node.mergedFrom)
-    const cruxScore = Math.abs(impactA - impactB) + (node.mergedFrom.length >= 2 ? 0.1 : 0)
+    const impacts: Record<string, number> = {}
+    const gradients: Record<string, number> = {} // gradient sign per persona
+    for (const qbaf of qbafs) {
+      impacts[qbaf.personaId] = computePersonaImpact(qbaf, node.mergedFrom)
+      gradients[qbaf.personaId] = computePersonaGradient(qbaf, node.mergedFrom)
+    }
+
+    const impactValues = Object.values(impacts)
+    const maxImpact = Math.max(...impactValues)
+    const minImpact = Math.min(...impactValues)
+
+    // Gradient sign disagreement: if personas have opposite structural sensitivity
+    // to this node, it's the strongest crux signal (arxiv 2401.08879)
+    const gradientValues = Object.values(gradients)
+    const hasOppositeGradients = gradientValues.some(g => g > 0) && gradientValues.some(g => g < 0)
+    const gradientBonus = hasOppositeGradients ? 0.3 : 0
+
+    const cruxScore = Math.abs(maxImpact - minImpact) + (node.mergedFrom.length >= 2 ? 0.1 : 0) + gradientBonus
 
     const scores = Object.values(node.baseScores)
     const hasBaseScoreDiff = scores.length >= 2 && computeVariance(scores) > 0.05
-    const hasEdgeDiff = Math.abs(impactA - impactB) > 0.01
+    const hasEdgeDiff = Math.abs(maxImpact - minImpact) > 0.01 || hasOppositeGradients
     const disagreementType: 'base_score' | 'edge_structure' | 'both' =
       hasBaseScoreDiff && hasEdgeDiff ? 'both' :
       hasBaseScoreDiff ? 'base_score' : 'edge_structure'
 
     const personaPositions: Record<string, PersonaCruxPosition> = {}
     for (const personaId of communityGraph.personas) {
-      const qbaf = personaId === qbafA.personaId ? qbafA : qbafB
-      const impact = personaId === qbafA.personaId ? impactA : impactB
+      const qbaf = qbafMap.get(personaId)
       personaPositions[personaId] = {
         baseScore: node.baseScores[personaId] ?? 0.5,
-        dialecticalStrength: findNodeStrength(qbaf, node.mergedFrom),
-        contribution: impact,
+        dialecticalStrength: qbaf ? findNodeStrength(qbaf, node.mergedFrom) : 0,
+        contribution: impacts[personaId] ?? 0,
       }
     }
 
@@ -309,32 +431,113 @@ export async function identifyCruxes(
   cruxCandidates.sort((a, b) => b.cruxScore - a.cruxScore)
   const topCruxes = cruxCandidates.slice(0, topK)
 
-  // Generate settling questions via LLM
+  // Look up actual per-persona claims for each crux node
+  const nodeClaimLookup = new Map<string, { claim: string; personaId: string }>()
+  for (const qbaf of qbafs) {
+    for (const node of qbaf.nodes) {
+      nodeClaimLookup.set(node.id, { claim: node.claim, personaId: qbaf.personaId })
+    }
+  }
+
+  // Generate crux descriptions and settling questions via LLM
   for (const crux of topCruxes) {
     const positions = Object.entries(crux.personaPositions)
-    const [pA, posA] = positions[0]
-    const [pB, posB] = positions[1] ?? [null, null]
 
-    crux.counterfactual = posB
-      ? `${pA} (σ=${posA.dialecticalStrength.toFixed(2)}, impact=${posA.contribution.toFixed(3)}) vs ${pB} (σ=${posB.dialecticalStrength.toFixed(2)}, impact=${posB.contribution.toFixed(3)})`
-      : `Removing this node changes ${pA}'s root by ${posA.contribution.toFixed(3)}`
+    // Gather the actual underlying claims from each persona for this community node
+    const communityNode = communityGraph.nodes.find(n => n.id === crux.nodeId)
+    const underlyingClaims: Array<{ personaId: string; claim: string }> = []
+    if (communityNode) {
+      for (const sourceNodeId of communityNode.mergedFrom) {
+        const entry = nodeClaimLookup.get(sourceNodeId)
+        if (entry) underlyingClaims.push(entry)
+      }
+    }
 
-    const questionResponse = await complete({
-      system: 'Generate a precise, evidence-answerable question that would resolve this disagreement. Respond with just the question.',
-      messages: [{
-        role: 'user',
-        content: `Two debaters disagree about: "${crux.claim}"
+    // Gather the actual underlying claims (no scores — those are shown separately in the UI)
+    const claimLines = underlyingClaims.length > 0
+      ? underlyingClaims.map(c => `- ${c.personaId}: "${c.claim}"`).join('\n')
+      : `- Topic area: "${crux.claim}"`
 
-${positions.map(([pid, pos]) => `${pid}: base score ${pos.baseScore.toFixed(2)}, dialectical strength ${pos.dialecticalStrength.toFixed(2)}`).join('\n')}
+    // Check if we have matching assumption conflicts for the personas in this crux
+    const cruxPersonaIds = new Set(underlyingClaims.map(c => c.personaId))
+    const relevantConflicts = (assumptionConflicts ?? []).filter(
+      ac => cruxPersonaIds.has(ac.personaA) && cruxPersonaIds.has(ac.personaB)
+    )
 
-What specific question would settle this?`
-      }],
-      model: 'haiku',
-      temperature: 0.3,
-      maxTokens: 256,
-    })
+    if (relevantConflicts.length > 0) {
+      // Use assumption conflicts for a deeper crux description
+      const bestConflict = relevantConflicts.sort((a, b) => b.relevance - a.relevance)[0]
 
-    crux.settlingQuestion = questionResponse.trim()
+      const cruxResponse = await complete({
+        system: `State the buried assumption that separates these positions. Not what they disagree ABOUT — but what they each take for granted that the other would challenge. Be specific and falsifiable. Do NOT include numbers, percentages, or persona names. Example: "Whether hyperscaler HBM orders represent real pull-through demand or speculative double-booking."`,
+        messages: [{
+          role: 'user',
+          content: `These debaters hold opposing views. Their claims:
+
+${claimLines}
+
+The buried assumption conflict:
+- One side assumes: "${bestConflict.assumptionA}"
+- The other assumes: "${bestConflict.assumptionB}"
+- Conflict type: ${bestConflict.conflictType}
+
+State the crux — the specific buried assumption that separates these positions — in one sentence.`
+        }],
+        model: 'haiku',
+        temperature: 0.3,
+        maxTokens: 80,
+      })
+
+      crux.claim = cruxResponse.trim().replace(/^["']|["']$/g, '')
+      crux.settlingQuestion = bestConflict.settlingQuestion
+    } else {
+      // Fallback: generate crux description without assumption data
+      const cruxResponse = await complete({
+        system: `State the buried assumption that separates these positions. Not what they disagree ABOUT — but what they each take for granted that the other would challenge. Be specific and falsifiable. Do NOT include numbers, percentages, or persona names. Example: "Whether hyperscaler HBM orders represent real pull-through demand or speculative double-booking."`,
+        messages: [{
+          role: 'user',
+          content: `These debaters hold opposing views on a specific point. Their claims:
+
+${claimLines}
+
+State the crux — the specific buried assumption that separates these positions — in one sentence.`
+        }],
+        model: 'haiku',
+        temperature: 0.3,
+        maxTokens: 80,
+      })
+
+      crux.claim = cruxResponse.trim().replace(/^["']|["']$/g, '')
+
+      // Generate a concise settling question
+      const questionResponse = await complete({
+        system: `Write one short question (under 25 words) that, if answered with evidence, would resolve this disagreement. Be concrete and testable. Do not use jargon. Respond with just the question.`,
+        messages: [{
+          role: 'user',
+          content: `Crux: "${crux.claim}"
+
+Underlying claims:
+${claimLines}
+
+What single question would settle this?`
+        }],
+        model: 'haiku',
+        temperature: 0.3,
+        maxTokens: 80,
+      })
+
+      crux.settlingQuestion = questionResponse.trim()
+    }
+
+    // Build human-readable counterfactual: who relies on this claim and how
+    const highImpact = positions
+      .filter(([, pos]) => pos.contribution > 0.01)
+      .sort((a, b) => b[1].contribution - a[1].contribution)
+    const lowImpact = positions.filter(([, pos]) => pos.contribution <= 0.01)
+
+    crux.counterfactual = highImpact.length > 0
+      ? `Removing this claim would most affect ${highImpact.map(([pid]) => pid).join(', ')}. ${lowImpact.length > 0 ? `${lowImpact.map(([pid]) => pid).join(', ')} would be unaffected.` : ''}`
+      : 'This claim has minimal structural impact on any persona.'
   }
 
   return topCruxes
@@ -348,6 +551,16 @@ function computePersonaImpact(qbaf: PersonaQBAF, nodeIds: string[]): number {
     }
   }
   return totalImpact
+}
+
+function computePersonaGradient(qbaf: PersonaQBAF, nodeIds: string[]): number {
+  let totalGradient = 0
+  for (const nodeId of nodeIds) {
+    if (qbaf.nodes.some(n => n.id === nodeId)) {
+      totalGradient += gradientSign(qbaf, nodeId, qbaf.rootClaim)
+    }
+  }
+  return totalGradient
 }
 
 function findNodeStrength(qbaf: PersonaQBAF, nodeIds: string[]): number {

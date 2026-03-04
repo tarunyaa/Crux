@@ -25,6 +25,7 @@ export async function* runCruxRoom(
   sourceMessages: string[],
   personaNames: Map<PersonaId, string>,
   originalTopic?: string,
+  preloadedPersonas?: Map<PersonaId, { persona: Persona; contract: PersonaContract }>,
 ): AsyncGenerator<CruxEvent> {
   const room: CruxRoom = {
     id: roomId,
@@ -44,11 +45,17 @@ export async function* runCruxRoom(
   const personas = new Map<PersonaId, Persona>()
 
   for (const id of personaIds) {
-    const contract = await loadContract(id)
-    const persona = await getPersona(id)
-    if (persona) {
-      contracts.set(id, contract)
-      personas.set(id, persona)
+    const preloaded = preloadedPersonas?.get(id)
+    if (preloaded) {
+      contracts.set(id, preloaded.contract)
+      personas.set(id, preloaded.persona)
+    } else {
+      const contract = await loadContract(id)
+      const persona = await getPersona(id)
+      if (persona) {
+        contracts.set(id, contract)
+        personas.set(id, persona)
+      }
     }
   }
 

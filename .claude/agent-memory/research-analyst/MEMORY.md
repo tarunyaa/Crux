@@ -159,6 +159,23 @@
 - `aspic_plus` — Modgil & Prakken 2014, Argument & Computation 5(1):31-62; "The ASPIC+ Framework for Structured Argumentation"; structured arguments with strict/defeasible rules over Dung AFs
 - `thinking_with_kg_2024` — Wu & Tsioutsiouliklis 2024, arXiv:2412.10654; "Thinking with Knowledge Graphs: Enhancing LLM Reasoning Through Structured Data"; KG represented as programming language; fine-tuned LLMs on KG structures
 
+## Implicit Assumption Extraction — Established Facts (March 2026 session)
+- `premise_left_unsaid` (Ku et al., ArgMining 2025, aclanthology.org/2025.argmining-1.6): multi-agent debate over competing premise candidates; state-of-the-art binary premise selection; maps to Faultline crux room
+- ACL 2024 Toulmin zero-shot explication (Gupta, Zuckerman, O'Connor): extracts `<claim, reason, warrant>` triples; simply saying "According to Toulmin model" outperforms all other framings; used to build argumentation hypergraph from COVID vaccine comments corpus
+- CQoT (arXiv:2412.15177): 8-question Toulmin checklist as intermediate reasoning step; 5% improvement over CoT across 5 major models; verification loop: iterate if <7/8 questions pass
+- CQs-Gen 2025 shared task winner (ELLIS Alicante, arXiv:2506.14371): Questioner-Judge two-step; Questioner generates 8 candidate critical questions (4 with scheme info, 4 without); Judge selects top 3; 67.6% useful questions (human eval); scheme-aware > open-ended generation
+- Implicit argument mining survey (Sviridova, Cabrio, Villata 2025, Sage): enthymeme = argument with implicit components; detection + reconstruction are separate tasks; LLM survey (2506.16383) confirms neither implicit premise extraction nor cross-document belief synthesis is addressed in current AM literature — research gap confirmed
+- Cross-document worldview synthesis: NO published paper covers this. Not a gap in research — a gap in the field. Faultline's worldview-synthesis.ts is novel.
+
+## Faultline Worldview Synthesis Pipeline — Key Code Facts
+- `faultline/scripts/extract-beliefs.ts`: per-chunk Haiku extraction; Haiku reads each tweet/segment, extracts {cause, effect, polarity, confidence, type} causal triples; polarity verification pass; Jaccard dedup
+- `faultline/scripts/synthesize-worldviews.ts`: loads belief graphs, calls `synthesizeWorldview()`, writes to `data/seed/worldviews/`
+- `faultline/lib/belief-graph/worldview-synthesis.ts`: 3 steps: (1) clusterBeliefNodes() — Jaccard + union-find, NO LLM; (2) extractPositions() — 1 Sonnet call; (3) diffAssumptions() — 1 Haiku call per pair
+- `faultline/lib/belief-graph/worldview-types.ts`: BeliefCluster, WorldviewPosition (has implicitAssumptions: string[]), PersonaWorldview, AssumptionConflict
+- KEY QUALITY PROBLEM: Belief graph nodes contain per-tweet surface artifacts ("rabbit biting cords", "blocking Joey Politano") — Jaccard clustering has no semantic intelligence to filter these; Sonnet synthesis call gets noisy inputs
+- Contract `flipConditions` field contains implicit assumptions in contrapositive form — highest-quality grounded source for worldview assumptions, not currently used in synthesis
+- Ranked fix order: (1) contract counterfactual probing via Haiku, (2) thematic pre-clustering via Haiku, (3) Toulmin warrant slot in extraction prompt, (4) CQoT verification pass, (5) two-agent debate (most expensive)
+
 ## Benchmark Research Session (March 1, 2026) — Key Findings
 - Moltbook formal metrics: Birth Rate `R_birth^(n)(t) = |ℬ_t^(n)| / |𝒜_t^(n)|`; Individual drift `D_a = 1 - cos(𝐜_a^(early), 𝐜_a^(late))`; Interaction influence `Δ_interact = S(𝒲_post, 𝐯*) - S(𝒲_pre, 𝐯*)`; dataset ~290K posts, ~1.8M comments, ~39K agents
 - DEBATE benchmark (arXiv:2510.25110): ΔSD = `SD_final - SD_init` over 6-point Likert stances; humans ΔSD≈0, LLMs strongly negative (over-convergence proven)

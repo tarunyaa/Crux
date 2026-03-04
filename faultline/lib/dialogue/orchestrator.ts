@@ -37,12 +37,19 @@ export async function* runDialogue(
   const personaNames = new Map<PersonaId, string>()
 
   for (const id of personaIds) {
-    const contract = await loadContract(id)
-    const persona = await getPersona(id)
-    if (persona) {
-      contracts.set(id, contract)
-      personas.set(id, persona)
-      personaNames.set(id, persona.name)
+    const preloaded = config.preloadedPersonas?.get(id)
+    if (preloaded) {
+      contracts.set(id, preloaded.contract)
+      personas.set(id, preloaded.persona)
+      personaNames.set(id, preloaded.persona.name)
+    } else {
+      const contract = await loadContract(id)
+      const persona = await getPersona(id)
+      if (persona) {
+        contracts.set(id, contract)
+        personas.set(id, persona)
+        personaNames.set(id, persona.name)
+      }
     }
   }
 
@@ -289,6 +296,7 @@ export async function* runDialogue(
             lastMiniroundTakes.map(m => m.id),
             personaNames,
             topic,
+            config.preloadedPersonas,
           )) {
             if (cruxEvent.type === 'crux_message') {
               yield { type: 'crux_message', roomId: cruxEvent.roomId, message: cruxEvent.message }

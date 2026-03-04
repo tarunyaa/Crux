@@ -15,9 +15,10 @@
     "db:studio": "drizzle-kit studio",
     "debate": "tsx scripts/run-debate.ts",
     "extract-beliefs": "tsx scripts/extract-beliefs.ts",
+    "synthesize-worldviews": "tsx scripts/synthesize-worldviews.ts",
     "benchmark": "tsx scripts/benchmark.ts",
     "belief-experiment": "tsx scripts/run-belief-experiment.ts",
-    "cig": "tsx scripts/run-cig-benchmark.ts"
+    "cig-v2": "tsx scripts/run-cig-benchmark-v2.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.74.0",

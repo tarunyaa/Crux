@@ -5,7 +5,7 @@ import { getPersona } from '@/lib/personas/loader'
 import { redirect } from 'next/navigation'
 
 interface Props {
-  searchParams: Promise<{ personas?: string; topic?: string }>
+  searchParams: Promise<{ personas?: string; topic?: string; mode?: string }>
 }
 
 export default async function DialoguePage({ searchParams }: Props) {
@@ -36,12 +36,15 @@ export default async function DialoguePage({ searchParams }: Props) {
     }
   }
 
+  const mode = params.mode === 'graph' ? 'graph' as const : 'dialogue' as const
+
   return (
     <DialogueClient
       topic={topic}
       personaIds={personaIds}
       personaNames={personaNames}
       personaAvatars={personaAvatars}
+      mode={mode}
     />
   )
 }

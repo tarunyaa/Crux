@@ -116,6 +116,32 @@ export function counterfactualImpact(qbaf: PersonaQBAF, nodeId: string, rootId: 
 }
 
 /**
+ * Gradient sign: does increasing this node's base score increase or decrease the root's strength?
+ * Uses finite-difference approximation: sign(∂σ(root)/∂τ(node))
+ * Reference: Kampik, Potyka et al. 2024 "Contribution Functions for QBAFs" (arxiv 2401.08879)
+ *
+ * Returns: 1 (supportive toward root), -1 (suppressive toward root), 0 (no effect)
+ */
+export function gradientSign(qbaf: PersonaQBAF, nodeId: string, rootId: string): 1 | -1 | 0 {
+  const epsilon = 0.01
+  const nodeIdx = qbaf.nodes.findIndex(n => n.id === nodeId)
+  if (nodeIdx === -1) return 0
+
+  const withBase = computeStrengths(qbaf)
+  const rootBase = withBase.nodes.find(n => n.id === rootId)?.dialecticalStrength ?? 0
+
+  const bumpedNodes = qbaf.nodes.map((n, i) =>
+    i === nodeIdx ? { ...n, baseScore: Math.min(1, n.baseScore + epsilon) } : n
+  )
+  const withBump = computeStrengths({ ...qbaf, nodes: bumpedNodes })
+  const rootBumped = withBump.nodes.find(n => n.id === rootId)?.dialecticalStrength ?? 0
+
+  const delta = rootBumped - rootBase
+  if (Math.abs(delta) < 1e-6) return 0
+  return delta > 0 ? 1 : -1
+}
+
+/**
  * Topological sort for tree-structured QBAF.
  * Returns nodes ordered leaves-first (so parents are processed after children).
  */

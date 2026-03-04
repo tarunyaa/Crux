@@ -1,0 +1,3961 @@
+{
+  "personaId": "Austin Lyons",
+  "personaName": "Austin Lyons",
+  "nodes": [
+    {
+      "id": "n_0",
+      "concept": "friend's suggestion",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_1",
+      "concept": "decision to focus on Broadcom",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_2",
+      "concept": "Broadcom being primary 200G EML supplier",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_3",
+      "concept": "Broadcom's position in Nvidia's 1.6T transceivers",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_4",
+      "concept": "Broadcom owning former Bell Labs InP fab",
+      "type": "inference",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_5",
+      "concept": "capability to make EMLs, VCSELs, and CW lasers",
+      "type": "inference",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_6",
+      "concept": "Broadcom making its own EMLs, VCSELs, CW lasers paired with leading DSPs and switch ASICs",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_7",
+      "concept": "most complete photonics stack in industry",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_8",
+      "concept": "Broadcom not breaking out photonics revenue separately",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_9",
+      "concept": "inability of investors to price Broadcom's laser business",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_10",
+      "concept": "laser business buried inside networking segment within semiconductor solutions within conglomerate",
+      "type": "inference",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_11",
+      "concept": "Street's difficulty in valuing Broadcom's laser business",
+      "type": "inference",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_12",
+      "concept": "visibility/transparency of revenue breakdown",
+      "type": "core_value",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_13",
+      "concept": "investor ability to price a business",
+      "type": "core_value",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_14",
+      "concept": "growth in laser applications for transceivers",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_15",
+      "concept": "CW laser capacity expansion from mid-teens millions in 2025 to 30 million in 2026",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_16",
+      "concept": "Demand outstrips supply by roughly 30%",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_17",
+      "concept": "Lumentum undershipping customer demand",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_18",
+      "concept": "All EML capacity locked under long-term agreements through 2027",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_19",
+      "concept": "customers exceeding LTA allocations must pay premium prices",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_20",
+      "concept": "Refusing to sign long-term agreements",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_21",
+      "concept": "losing supply priority entirely",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_22",
+      "concept": "LTA structure",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_23",
+      "concept": "ability to have incremental pricing discussions around incremental units",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_24",
+      "concept": "pricing power from LTA structure",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_25",
+      "concept": "strong financial results (revenue growth, margin expansion)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_26",
+      "concept": "strong financial performance and winning market position",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_27",
+      "concept": "encouragement of competition",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_28",
+      "concept": "increased competition",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_29",
+      "concept": "duration of temporary competitive advantage",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_30",
+      "concept": "strong financial results and growth metrics",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_31",
+      "concept": "high stock valuation (60x forward earnings)",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_32",
+      "concept": "worsening cost curve of EUV lithography",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_33",
+      "concept": "need for industry solutions",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_34",
+      "concept": "xLight and Substrate startups",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_35",
+      "concept": "bending the EUV lithography cost curve",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_36",
+      "concept": "understanding broader economic problem",
+      "type": "assumption",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_37",
+      "concept": "ability to dive into technical details and improvements",
+      "type": "assumption",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_38",
+      "concept": "high-intensity CO2 laser firing at tin droplets",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_39",
+      "concept": "EUV light generation in LPP scanners",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_40",
+      "concept": "pre-pulse reshaping tin sphere into concave sheet",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_41",
+      "concept": "main CO2 pulse vaporization into dense plasma",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_42",
+      "concept": "vaporization into dense plasma",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_43",
+      "concept": "emission of 13.5nm EUV photons",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_44",
+      "concept": "EUV photons bouncing off collector mirrors and passing through photomask",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_45",
+      "concept": "wafer exposure",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_46",
+      "concept": "synchrotrons lacking sufficient directional light",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_47",
+      "concept": "synchrotrons being unsuitable for EUV generation",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_48",
+      "concept": "xenon gas lasers having fundamental physics ceiling",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_49",
+      "concept": "less than 1% conversion efficiency",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_50",
+      "concept": "xenon gas lasers having less than 1% conversion efficiency",
+      "type": "inference",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_51",
+      "concept": "xenon gas lasers being unsuitable for scaled manufacturing",
+      "type": "inference",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_52",
+      "concept": "market stumbling or execution failures",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_53",
+      "concept": "Arista's current stock valuation being unjustified",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_54",
+      "concept": "Nvidia's vertically integrated stack (NVLink, InfiniBand, CUDA/NCCL)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_55",
+      "concept": "Nvidia's historical dominance in AI cluster networking",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_56",
+      "concept": "two shifts underway in the market",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_57",
+      "concept": "Ethernet TAM expanding in Ethernet's direction",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_58",
+      "concept": "understanding why Ethernet TAM is expanding faster than most investors realize",
+      "type": "assumption",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_59",
+      "concept": "ability to properly evaluate the six specific debates about Arista",
+      "type": "assumption",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_60",
+      "concept": "RoCE (RDMA over Converged Ethernet) and lossless Ethernet fabrics designed for AI",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_61",
+      "concept": "Ethernet closing the gap with InfiniBand in scale-out",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_62",
+      "concept": "Nvidia launching Spectrum-X and hyperscalers adopting Ethernet fabrics",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_63",
+      "concept": "Ethernet making inroads in scale-out computing",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_64",
+      "concept": "adoption of Ethernet fabrics by hyperscalers",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_65",
+      "concept": "Ultra Ethernet Consortium standardizing vendor-neutral Ethernet fabrics",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_66",
+      "concept": "every major XPU vendor now having its own scale-up architecture",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_67",
+      "concept": "scale-up is no longer Nvidia-only",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_68",
+      "concept": "data center infrastructure revenue from automotive OEMs being significantly larger than in-car silicon",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_69",
+      "concept": "Nvidia's actual autonomy business opportunity being $5-10B rather than $1-2B",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_70",
+      "concept": "data center infra revenue from automotive OEMs being hidden within Data Center revenue line",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_71",
+      "concept": "Wall Street models underestimating Nvidia's autonomy business size",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_72",
+      "concept": "Nvidia's reported automotive revenue being #3 only",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_73",
+      "concept": "real automotive business size being understated",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_74",
+      "concept": "data center compute/networking in automotive vertical",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_75",
+      "concept": "significant portion of automotive industry value",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_76",
+      "concept": "$200 billion CapEx spend announcement",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_77",
+      "concept": "stock price decline",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_78",
+      "concept": "uncertainty about AI investment payoff",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_79",
+      "concept": "investor concern",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_80",
+      "concept": "lack of management guardrails on CapEx",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_81",
+      "concept": "investor worry",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_82",
+      "concept": "retail revenue at single-digit margins",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_83",
+      "concept": "structural difficulty in justifying CapEx through overall ROIC",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_84",
+      "concept": "AWS representing less than 20% of total revenue",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_85",
+      "concept": "difficulty justifying largest CapEx in corporate history through cloud margins alone",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_86",
+      "concept": "custom silicon story",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_87",
+      "concept": "potential for market underappreciation of investment returns",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_88",
+      "concept": "Trainium custom silicon",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_89",
+      "concept": "AWS margins",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_90",
+      "concept": "Trainium adoption",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_91",
+      "concept": "non-retail margins improvement",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_92",
+      "concept": "custom silicon narrative shift from defensive to confident",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_93",
+      "concept": "investor perception of AWS chip strategy",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_94",
+      "concept": "$10B chips ARR disclosure",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_95",
+      "concept": "understanding of Trainium's business impact",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_96",
+      "concept": "Amazon's margin structure",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_97",
+      "concept": "ROIC story difficulty relative to Meta/Google",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_98",
+      "concept": "Trainium delivery on margin targets",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_99",
+      "concept": "closing ROIC gap with Meta/Google",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_100",
+      "concept": "CapEx escalation from Q3 to Q4",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_101",
+      "concept": "investor concerns about capital discipline",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_102",
+      "concept": "GEM (Graphics, Efficiency, Machine learning) infrastructure investment",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_103",
+      "concept": "immediate, measurable ROI in core ads business",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_104",
+      "concept": "LLM (Large Language Model) development",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_105",
+      "concept": "incremental core gains today and substantial potential upside later",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_106",
+      "concept": "algorithmic curation of News Feed",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_107",
+      "concept": "determination of what users see in feed and which ads are shown",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_108",
+      "concept": "machine learning driving engagement and advertising",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_109",
+      "concept": "advertising revenue generation",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_110",
+      "concept": "AI infrastructure evolution from CPU to GPU-accelerated systems",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_111",
+      "concept": "Meta's ability to drive engagement and advertising revenue",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_112",
+      "concept": "Meta's consistent CapEx strategy articulation",
+      "type": "inference",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_113",
+      "concept": "Street's struggle to understand Meta's CapEx strategy",
+      "type": "inference",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_114",
+      "concept": "Andromeda, Lattice, and GEM working together as integrated components",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_115",
+      "concept": "system optimization around monetization",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_116",
+      "concept": "GEM (foundation model for ad ranking)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_117",
+      "concept": "Meta's ability to decide which ad to show users at scale",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_118",
+      "concept": "ML recommendation systems",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_119",
+      "concept": "driving Meta's business",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_120",
+      "concept": "MI450 inflection delayed until Q4 2026",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_121",
+      "concept": "investor uncertainty about AMD ownership",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_122",
+      "concept": "long wait until MI450 numbers visible (early 2027)",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_123",
+      "concept": "investor reluctance to own AMD stock",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_124",
+      "concept": "strong Server CPU performance",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_125",
+      "concept": "support for AMD stock valuation",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_126",
+      "concept": "Client TAM softening",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_127",
+      "concept": "AMD revenue growth headwinds",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_128",
+      "concept": "China revenue contribution to beat",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_129",
+      "concept": "sustainability of AMD's financial performance",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_130",
+      "concept": "Nvidia's expanding inference datacenter portfolio with new announcements",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_131",
+      "concept": "competitive pressure on AMD",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_132",
+      "concept": "AMD hitting $10B quarterly revenue with expanding margins",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_133",
+      "concept": "stock price appreciation",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_134",
+      "concept": "MI450 timing to Q4 2026",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_135",
+      "concept": "Q4 2026 perceived as only mattering 2026 quarter",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_136",
+      "concept": "MI308 sales of $390M",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_137",
+      "concept": "AMD's beat appearance",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_138",
+      "concept": "Stripping out MI308 sales",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_139",
+      "concept": "beat looks different",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_140",
+      "concept": "EUV lithography",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_141",
+      "concept": "cost problem",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_142",
+      "concept": "networking power consumption at datacenter scale",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_143",
+      "concept": "compute power availability",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_144",
+      "concept": "LRO/LPO offloading transceiver DSP to switch",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_145",
+      "concept": "power efficiency",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_146",
+      "concept": "modularity",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_147",
+      "concept": "large on-die SRAM and Ethernet scale-up design choices in Maia 200",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_148",
+      "concept": "price-performance improvement",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_149",
+      "concept": "context growth with each iteration in coding agents",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_150",
+      "concept": "KV cache staying hot requirement",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_151",
+      "concept": "frontier AI models migrating from cloud to desk on 4-5 year cadence",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_152",
+      "concept": "TAM expansion (market expansion)",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_153",
+      "concept": "Waymo's momentum in autonomous vehicles",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_154",
+      "concept": "L4 gold rush (increased investment/competition)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_155",
+      "concept": "OEMs decoupling ADAS from stalled EV platform transitions",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_156",
+      "concept": "L3 programs reaccelerating",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_157",
+      "concept": "stock run-up based on vibes (sentiment)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_158",
+      "concept": "correction (stock price decline)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_159",
+      "concept": "Trump's promise of $9 billion and vote of confidence",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_160",
+      "concept": "investor assumption of new orders flowing to Intel",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_161",
+      "concept": "investor assumptions of new orders",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_162",
+      "concept": "stock price increase of 120% in five months",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_163",
+      "concept": "Intel cutting capacity on older production lines",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_164",
+      "concept": "Intel being unprepared for surge in orders",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_165",
+      "concept": "customer demand for Intel's products exploding",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_166",
+      "concept": "surge in orders for AI data center processors",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_167",
+      "concept": "executives revealing Intel's inability to meet demand",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_168",
+      "concept": "stock crash of 17% and $46 billion market value loss",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_169",
+      "concept": "stock price movement driven by 'vibes and tweets'",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_170",
+      "concept": "disconnect between investor expectations and Intel's actual capacity",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_171",
+      "concept": "inference economics optimization",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_172",
+      "concept": "custom silicon development",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_173",
+      "concept": "optimizing for inference rather than training",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_174",
+      "concept": "technical architecture consequences",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_175",
+      "concept": "efficient frontier for inference",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_176",
+      "concept": "large Ethernet-based scale-up domain with custom transport layer",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_177",
+      "concept": "software investment ahead of silicon (compilers, kernel libraries, pre-silicon tooling)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_178",
+      "concept": "successful AI chip deployment",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_179",
+      "concept": "Maia 200 framed as complementary to merchant GPUs rather than replacement",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_180",
+      "concept": "fit within heterogeneous fleet architectures",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_181",
+      "concept": "exposing Maia through Azure services rather than as standalone product",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_182",
+      "concept": "integration with Microsoft's cloud platform strategy",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_183",
+      "concept": "cost and simplicity",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_184",
+      "concept": "copper transmission",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_185",
+      "concept": "power consumption",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_186",
+      "concept": "modern data rates",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_187",
+      "concept": "copper becoming limiting factor",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_188",
+      "concept": "copper no longer working at high data rates",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_189",
+      "concept": "need for fiber communication",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_190",
+      "concept": "fiber communication requirement",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_191",
+      "concept": "need for electrical-to-optical conversion",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_192",
+      "concept": "moving from traditional pluggable optics toward co-packaged optics",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_193",
+      "concept": "trading flexibility for efficiency",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_194",
+      "concept": "pluggable optics cleanly separating switch from optical link",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_195",
+      "concept": "optics being field-replaceable",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_196",
+      "concept": "ability to replace transceiver module instead of switch upon optics failure",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_197",
+      "concept": "modularity of pluggable optics",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_198",
+      "concept": "pluggable optics scaling well across Ethernet generations",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_199",
+      "concept": "modern rates like 50 Gb/s or 100 Gb/s per electrical lane",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_200",
+      "concept": "short copper path being extremely noisy",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_201",
+      "concept": "noise introduced by copper trace",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_202",
+      "concept": "need for digital signal processor (DSP) to equalize and retime signal",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_203",
+      "concept": "Waymo's momentum",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_204",
+      "concept": "focus on Level 4 autonomy at CES 2026",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_205",
+      "concept": "growing robotaxi gold rush",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_206",
+      "concept": "EV delays",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_207",
+      "concept": "Level 3 programs stalling",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_208",
+      "concept": "tight coupling of ADAS timelines to EV platform transitions",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_209",
+      "concept": "EV delays becoming a bottleneck for Level 3",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_210",
+      "concept": "decoupling of ADAS timelines from EV platform transitions",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_211",
+      "concept": "Level 3 programs reaccelerating",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_212",
+      "concept": "market consolidation toward one or two Western suppliers",
+      "type": "inference",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_213",
+      "concept": "Innoviz's competitive positioning",
+      "type": "inference",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_214",
+      "concept": "design constraints",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_215",
+      "concept": "LiDAR adoption",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_216",
+      "concept": "behind-the-windshield form factor",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_217",
+      "concept": "LiDAR market success",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_218",
+      "concept": "Level 4 autonomy requirements",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_219",
+      "concept": "demand for 100 percent availability",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_220",
+      "concept": "automotive-grade reliability",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_221",
+      "concept": "pull in non-automotive markets",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_222",
+      "concept": "portfolio of inference systems each tuned to specific work classes",
+      "type": "core_value",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_223",
+      "concept": "optimal AI infrastructure",
+      "type": "core_value",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_224",
+      "concept": "resilient compute strategy",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_225",
+      "concept": "matching right systems to right workloads",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_226",
+      "concept": "dedicated low-latency inference solution",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_227",
+      "concept": "faster responses and more natural interactions",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_228",
+      "concept": "ability to handle certain workload demands",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_229",
+      "concept": "systems tuned for hyperspeed",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_230",
+      "concept": "meeting hyperspeed workload requirements",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_231",
+      "concept": "adding dedicated SKU to portfolio",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_232",
+      "concept": "real-time coding workflows requiring agentic inference loops with growing context",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_233",
+      "concept": "need for persistent, low-latency access to state in AI accelerators",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_234",
+      "concept": "pre-GPT accelerators lacking HBM (Cerebras and Groq)",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_235",
+      "concept": "ability to support low-latency AI coding agents with growing context",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_236",
+      "concept": "context growing and requiring repeated access",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_237",
+      "concept": "importance of persistent, low-latency state access mattering as much as speed",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_238",
+      "concept": "hyperspeed inference hardware supporting context memory as first-class citizen",
+      "type": "assumption",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_239",
+      "concept": "low-latency AI coding agents becoming a defining use case",
+      "type": "assumption",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_240",
+      "concept": "vision-language models maturing",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_241",
+      "concept": "autonomous vehicles reaching inflection point",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_242",
+      "concept": "Waymo normalizing driverless experience",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_243",
+      "concept": "autonomy set to take off in coming years",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_244",
+      "concept": "now is right time to study supply chain",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_245",
+      "concept": "understanding LiDAR technology",
+      "type": "assumption",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_246",
+      "concept": "understanding LiDAR market dynamics",
+      "type": "assumption",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_247",
+      "concept": "reading formatted transcript",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_248",
+      "concept": "speed of information consumption",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_249",
+      "concept": "understanding how LiDAR works",
+      "type": "assumption",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_250",
+      "concept": "ability to evaluate LiDAR as investment",
+      "type": "assumption",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_251",
+      "concept": "inventing Active Electrical Cables",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_252",
+      "concept": "Credo becoming famous",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_253",
+      "concept": "industry pushing for higher lane speeds",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_254",
+      "concept": "copper's reach shortening",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_255",
+      "concept": "upgrade to 200G/lane",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_256",
+      "concept": "AEC reach reduction to ~5 meters",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_257",
+      "concept": "AEC reach capped and shrinking with speed increases",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_258",
+      "concept": "questions about Credo's strategy beyond AECs",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_259",
+      "concept": "reliability as core value proposition",
+      "type": "core_value",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_260",
+      "concept": "AECs becoming a hit",
+      "type": "core_value",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_261",
+      "concept": "rolling out products that extend reach in both directions while maintaining reliability",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_262",
+      "concept": "Credo avoiding becoming just another crowded market participant",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_263",
+      "concept": "Hyperlume micro-LED technology acquisition",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_264",
+      "concept": "Credo's optical portfolio capabilities",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_265",
+      "concept": "Credo's portfolio expansion into millimeter-to-inch range",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_266",
+      "concept": "OmiConnect targeting die-to-die and system-level interconnects",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_267",
+      "concept": "Broadening portfolio and differentiators",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_268",
+      "concept": "relevance for those tracking Credo closely",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_269",
+      "concept": "low mainstream ChatGPT adoption in 2023",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_270",
+      "concept": "relevance of Intel's AI PC vision",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_271",
+      "concept": "cloud handling most GenAI use cases adequately",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_272",
+      "concept": "value proposition for local AI PC processing",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_273",
+      "concept": "timing of AI PC announcement (December 2023) relative to user adoption",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_274",
+      "concept": "viability of Intel's AI PC strategy",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_275",
+      "concept": "being too far ahead with technology",
+      "type": "core_value",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_276",
+      "concept": "strategic correctness",
+      "type": "core_value",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_277",
+      "concept": "lack of clear value proposition",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_278",
+      "concept": "success of Core Ultra launch messaging",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_279",
+      "concept": "two years passing and changes at Intel",
+      "type": "inference",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_280",
+      "concept": "potential improvement in Intel's AI PC strategy",
+      "type": "inference",
+      "grounding": [
+        "substack-16"
+      ]
+    },
+    {
+      "id": "n_281",
+      "concept": "time passage (roughly five years)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_282",
+      "concept": "GPT-2 era models trickling down from GPU clusters to local machines",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_283",
+      "concept": "distilled reasoning models",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_284",
+      "concept": "useful models arriving at the edge",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_285",
+      "concept": "ability to run up to roughly 70B parameters locally",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_286",
+      "concept": "models being distilled down to 7B parameters",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_287",
+      "concept": "usefulness of models",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_288",
+      "concept": "repeating pattern of cloud systems followed by local laptop chips (three years in a row)",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_289",
+      "concept": "ability to identify emerging trends",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_290",
+      "concept": "two-year trend of model capability improvements",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_291",
+      "concept": "ability to run fast and slow thinking models at the edge",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_292",
+      "concept": "model capability improvements from 2024 to 2026",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_293",
+      "concept": "invalidation of previous assumptions about edge AI ceiling",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_294",
+      "concept": "advances in local AI hardware/software",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_295",
+      "concept": "ability to run capable models on consumer devices like Macbooks",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_296",
+      "concept": "Nvidia DGX Spark and DGX Station technology",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_297",
+      "concept": "GPT-4 class capability accessible on desktop/desk",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_298",
+      "concept": "high cost of DGX Station ($30-100K)",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_299",
+      "concept": "limitation on accessibility of desktop GPT-4 class models",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_300",
+      "concept": "virtual monopoly market structure",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_301",
+      "concept": "price increases",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_302",
+      "concept": "ASML's near-monopoly in EUV machines",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_303",
+      "concept": "cost of EUV machines rising toward $1B per machine in 2030s",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_304",
+      "concept": "high cost of EUV machines ($1B per machine in 2030s)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_305",
+      "concept": "cost of wafers rising toward $100K per wafer in 2030s",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_306",
+      "concept": "underlying economics problem in lithography",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_307",
+      "concept": "need for discussion and attention",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_308",
+      "concept": "adding an ultra-low-latency SKU to Nvidia's portfolio",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19"
+      ]
+    },
+    {
+      "id": "n_309",
+      "concept": "right strategy for Nvidia",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19"
+      ]
+    },
+    {
+      "id": "n_310",
+      "concept": "hyperspeed SKU portfolio coverage",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19"
+      ]
+    },
+    {
+      "id": "n_311",
+      "concept": "importance to Nvidia",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19"
+      ]
+    },
+    {
+      "id": "n_312",
+      "concept": "Groq targeting specific workload shapes",
+      "type": "inference",
+      "grounding": [
+        "substack-19"
+      ]
+    },
+    {
+      "id": "n_313",
+      "concept": "new surface area coverage for Nvidia",
+      "type": "inference",
+      "grounding": [
+        "substack-19"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_0",
+      "to": "n_1",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_2",
+      "to": "n_3",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_4",
+      "to": "n_5",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_6",
+      "to": "n_7",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_8",
+      "to": "n_9",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_10",
+      "to": "n_11",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_12",
+      "to": "n_13",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_14",
+      "to": "n_15",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_16",
+      "to": "n_17",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "from": "n_18",
+      "to": "n_19",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "from": "n_20",
+      "to": "n_21",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "from": "n_22",
+      "to": "n_23",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_24",
+      "to": "n_25",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_26",
+      "to": "n_27",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_28",
+      "to": "n_29",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_30",
+      "to": "n_31",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_32",
+      "to": "n_33",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "from": "n_34",
+      "to": "n_35",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "from": "n_36",
+      "to": "n_37",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "from": "n_38",
+      "to": "n_39",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "from": "n_40",
+      "to": "n_41",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "from": "n_42",
+      "to": "n_43",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "from": "n_44",
+      "to": "n_45",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "from": "n_46",
+      "to": "n_47",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "from": "n_48",
+      "to": "n_49",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "from": "n_50",
+      "to": "n_51",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "from": "n_52",
+      "to": "n_53",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_54",
+      "to": "n_55",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_56",
+      "to": "n_57",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_58",
+      "to": "n_59",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_60",
+      "to": "n_61",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_62",
+      "to": "n_63",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_64",
+      "to": "n_65",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_66",
+      "to": "n_67",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_68",
+      "to": "n_69",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "from": "n_70",
+      "to": "n_71",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "from": "n_72",
+      "to": "n_73",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "from": "n_74",
+      "to": "n_75",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "from": "n_76",
+      "to": "n_77",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_78",
+      "to": "n_79",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_80",
+      "to": "n_81",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_82",
+      "to": "n_83",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_84",
+      "to": "n_85",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_86",
+      "to": "n_87",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_88",
+      "to": "n_89",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_90",
+      "to": "n_91",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_92",
+      "to": "n_93",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_94",
+      "to": "n_95",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_96",
+      "to": "n_97",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_98",
+      "to": "n_99",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_100",
+      "to": "n_101",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_102",
+      "to": "n_103",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_104",
+      "to": "n_105",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_106",
+      "to": "n_107",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_108",
+      "to": "n_109",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_110",
+      "to": "n_111",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_112",
+      "to": "n_113",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_114",
+      "to": "n_115",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "from": "n_116",
+      "to": "n_117",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "from": "n_118",
+      "to": "n_119",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "from": "n_120",
+      "to": "n_121",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_122",
+      "to": "n_123",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_124",
+      "to": "n_125",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_126",
+      "to": "n_127",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_128",
+      "to": "n_129",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_130",
+      "to": "n_131",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_132",
+      "to": "n_133",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_134",
+      "to": "n_135",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "from": "n_136",
+      "to": "n_137",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "from": "n_138",
+      "to": "n_139",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "from": "n_140",
+      "to": "n_141",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_142",
+      "to": "n_143",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_144",
+      "to": "n_145",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_144",
+      "to": "n_146",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_147",
+      "to": "n_148",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_149",
+      "to": "n_150",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_151",
+      "to": "n_152",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_153",
+      "to": "n_154",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_155",
+      "to": "n_156",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_157",
+      "to": "n_158",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_159",
+      "to": "n_160",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "from": "n_161",
+      "to": "n_162",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "from": "n_163",
+      "to": "n_164",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "from": "n_165",
+      "to": "n_166",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "from": "n_167",
+      "to": "n_168",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "from": "n_169",
+      "to": "n_170",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "from": "n_171",
+      "to": "n_172",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "from": "n_173",
+      "to": "n_174",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "from": "n_175",
+      "to": "n_176",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "from": "n_177",
+      "to": "n_178",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "from": "n_179",
+      "to": "n_180",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "from": "n_181",
+      "to": "n_182",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "from": "n_183",
+      "to": "n_184",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_184",
+      "to": "n_185",
+      "polarity": -1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_186",
+      "to": "n_187",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_188",
+      "to": "n_189",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_190",
+      "to": "n_191",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_192",
+      "to": "n_193",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_194",
+      "to": "n_195",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_196",
+      "to": "n_195",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_197",
+      "to": "n_198",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_199",
+      "to": "n_200",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_201",
+      "to": "n_202",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_203",
+      "to": "n_204",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_205",
+      "to": "n_204",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_206",
+      "to": "n_207",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_208",
+      "to": "n_209",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_210",
+      "to": "n_211",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_212",
+      "to": "n_213",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_214",
+      "to": "n_215",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_216",
+      "to": "n_217",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_218",
+      "to": "n_219",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_220",
+      "to": "n_221",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_222",
+      "to": "n_223",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_224",
+      "to": "n_225",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_226",
+      "to": "n_227",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_228",
+      "to": "n_229",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_230",
+      "to": "n_231",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_232",
+      "to": "n_233",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_234",
+      "to": "n_235",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_236",
+      "to": "n_237",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_238",
+      "to": "n_239",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_240",
+      "to": "n_241",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_241",
+      "to": "n_242",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_243",
+      "to": "n_244",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_245",
+      "to": "n_246",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_247",
+      "to": "n_248",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "from": "n_249",
+      "to": "n_250",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "from": "n_251",
+      "to": "n_252",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "from": "n_253",
+      "to": "n_254",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "from": "n_255",
+      "to": "n_256",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "from": "n_257",
+      "to": "n_258",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "from": "n_259",
+      "to": "n_260",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "from": "n_261",
+      "to": "n_262",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "from": "n_263",
+      "to": "n_264",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "from": "n_265",
+      "to": "n_266",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "from": "n_267",
+      "to": "n_268",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "from": "n_269",
+      "to": "n_270",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-16"
+      ]
+    },
+    {
+      "from": "n_271",
+      "to": "n_272",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-16"
+      ]
+    },
+    {
+      "from": "n_273",
+      "to": "n_274",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-16"
+      ]
+    },
+    {
+      "from": "n_275",
+      "to": "n_276",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-16"
+      ]
+    },
+    {
+      "from": "n_277",
+      "to": "n_278",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-16"
+      ]
+    },
+    {
+      "from": "n_279",
+      "to": "n_280",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-16"
+      ]
+    },
+    {
+      "from": "n_281",
+      "to": "n_282",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_283",
+      "to": "n_284",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_285",
+      "to": "n_284",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_286",
+      "to": "n_287",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_288",
+      "to": "n_289",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_290",
+      "to": "n_291",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "from": "n_292",
+      "to": "n_293",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "from": "n_294",
+      "to": "n_295",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "from": "n_296",
+      "to": "n_297",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "from": "n_298",
+      "to": "n_299",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "from": "n_300",
+      "to": "n_301",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_302",
+      "to": "n_303",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_304",
+      "to": "n_305",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_306",
+      "to": "n_307",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_308",
+      "to": "n_309",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-19"
+      ]
+    },
+    {
+      "from": "n_310",
+      "to": "n_311",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-19"
+      ]
+    },
+    {
+      "from": "n_312",
+      "to": "n_313",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-19"
+      ]
+    }
+  ],
+  "extractedAt": "2026-03-04T11:01:04.996Z"
+}

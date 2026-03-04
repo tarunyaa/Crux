@@ -4,7 +4,7 @@
 
 import { ThreeColumnLayout } from './ThreeColumnLayout'
 import { useDialogueStream } from '@/lib/hooks/useDialogueStream'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 
 interface DialogueViewProps {
   topic: string
@@ -28,10 +28,22 @@ export function DialogueView({ topic, personaIds, personaNames, personaAvatars }
     currentPhase,
     shifts,
     summary,
+    collectedEvents,
     start,
   } = useDialogueStream(topic, personaIds)
 
   const hasStartedRef = useRef(false)
+  const [isSaved, setIsSaved] = useState(false)
+
+  const handleSave = useCallback(async () => {
+    const res = await fetch('/api/dialogue/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ topic, personaIds, events: collectedEvents }),
+    })
+    if (!res.ok) throw new Error('Failed to save')
+    setIsSaved(true)
+  }, [topic, personaIds, collectedEvents])
 
   useEffect(() => {
     if (!hasStartedRef.current) {
@@ -72,6 +84,8 @@ export function DialogueView({ topic, personaIds, personaNames, personaAvatars }
         currentPhase={currentPhase}
         shifts={shifts}
         summary={summary}
+        onSave={handleSave}
+        isSaved={isSaved}
       />
     </div>
   )

@@ -36,7 +36,7 @@
     },
     {
       "id": "n_4",
-      "concept": "costs falling",
+      "concept": "costs fall",
       "type": "factual_claim",
       "grounding": [
         "article-citadel-recursive-adoption"
@@ -44,7 +44,7 @@
     },
     {
       "id": "n_5",
-      "concept": "acceleration of technological adoption growth",
+      "concept": "growth acceleration in technology adoption",
       "type": "factual_claim",
       "grounding": [
         "article-citadel-recursive-adoption"
@@ -60,7 +60,7 @@
     },
     {
       "id": "n_7",
-      "concept": "marginal adopter lower productivity or profitability",
+      "concept": "marginal adopter productivity/profitability decline",
       "type": "factual_claim",
       "grounding": [
         "article-citadel-recursive-adoption"
@@ -68,7 +68,7 @@
     },
     {
       "id": "n_8",
-      "concept": "deceleration of adoption growth",
+      "concept": "growth deceleration",
       "type": "factual_claim",
       "grounding": [
         "article-citadel-recursive-adoption"
@@ -76,6 +76,14 @@
     },
     {
       "id": "n_9",
+      "concept": "saturation in technology adoption",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-recursive-adoption"
+      ]
+    },
+    {
+      "id": "n_10",
       "concept": "automation expansion",
       "type": "factual_claim",
       "grounding": [
@@ -83,7 +91,7 @@
       ]
     },
     {
-      "id": "n_10",
+      "id": "n_11",
       "concept": "compute demand",
       "type": "factual_claim",
       "grounding": [
@@ -91,7 +99,7 @@
       ]
     },
     {
-      "id": "n_11",
+      "id": "n_12",
       "concept": "increased compute demand",
       "type": "factual_claim",
       "grounding": [
@@ -99,7 +107,7 @@
       ]
     },
     {
-      "id": "n_12",
+      "id": "n_13",
       "concept": "marginal cost of compute",
       "type": "factual_claim",
       "grounding": [
@@ -107,7 +115,7 @@
       ]
     },
     {
-      "id": "n_13",
+      "id": "n_14",
       "concept": "marginal cost of compute rises above marginal cost of human labor",
       "type": "factual_claim",
       "grounding": [
@@ -115,16 +123,8 @@
       ]
     },
     {
-      "id": "n_14",
-      "concept": "labor substitution by automation",
-      "type": "factual_claim",
-      "grounding": [
-        "article-citadel-compute-constraints"
-      ]
-    },
-    {
       "id": "n_15",
-      "concept": "physical capital constraints",
+      "concept": "substitution of human labor by automation",
       "type": "factual_claim",
       "grounding": [
         "article-citadel-compute-constraints"
@@ -132,23 +132,23 @@
     },
     {
       "id": "n_16",
-      "concept": "economic deployment of automation",
-      "type": "factual_claim",
+      "concept": "natural economic boundary to automation",
+      "type": "inference",
       "grounding": [
         "article-citadel-compute-constraints"
       ]
     },
     {
       "id": "n_17",
-      "concept": "energy availability constraints",
-      "type": "factual_claim",
+      "concept": "lack of substitution occurring",
+      "type": "inference",
       "grounding": [
         "article-citadel-compute-constraints"
       ]
     },
     {
       "id": "n_18",
-      "concept": "regulatory approvals constraints",
+      "concept": "constraints (physical capital, energy availability, regulatory approvals, organizational change)",
       "type": "factual_claim",
       "grounding": [
         "article-citadel-compute-constraints"
@@ -156,7 +156,7 @@
     },
     {
       "id": "n_19",
-      "concept": "organizational change constraints",
+      "concept": "economic deployment of automation",
       "type": "factual_claim",
       "grounding": [
         "article-citadel-compute-constraints"
@@ -228,7 +228,7 @@
     },
     {
       "id": "n_28",
-      "concept": "major technological advances",
+      "concept": "major technological advances (steam power, electrification, internal combustion engine, computing)",
       "type": "factual_claim",
       "grounding": [
         "article-citadel-productivity-shocks"
@@ -236,7 +236,7 @@
     },
     {
       "id": "n_29",
-      "concept": "productivity shocks pattern",
+      "concept": "productivity shock pattern",
       "type": "factual_claim",
       "grounding": [
         "article-citadel-productivity-shocks"
@@ -252,7 +252,7 @@
     },
     {
       "id": "n_31",
-      "concept": "labor's share of income collapse",
+      "concept": "labor's share of income collapses",
       "type": "factual_claim",
       "grounding": [
         "article-citadel-substitution-elasticity"
@@ -260,22 +260,6 @@
     },
     {
       "id": "n_32",
-      "concept": "AI displacement of labor",
-      "type": "inference",
-      "grounding": [
-        "article-citadel-substitution-elasticity"
-      ]
-    },
-    {
-      "id": "n_33",
-      "concept": "aggregate demand implosion",
-      "type": "inference",
-      "grounding": [
-        "article-citadel-substitution-elasticity"
-      ]
-    },
-    {
-      "id": "n_34",
       "concept": "capital income having lower marginal propensity to consume than wage income",
       "type": "factual_claim",
       "grounding": [
@@ -283,8 +267,24 @@
       ]
     },
     {
+      "id": "n_33",
+      "concept": "aggregate demand automatically imploding",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
+      "id": "n_34",
+      "concept": "persistent failure of redistribution mechanisms and simultaneous drying up of investment opportunities",
+      "type": "inference",
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ]
+    },
+    {
       "id": "n_35",
-      "concept": "capital income having non-zero spending velocity",
+      "concept": "structural fall in aggregate demand",
       "type": "inference",
       "grounding": [
         "article-citadel-substitution-elasticity"
@@ -292,22 +292,6 @@
     },
     {
       "id": "n_36",
-      "concept": "persistent failure of redistribution mechanisms and simultaneous drying up of investment opportunities",
-      "type": "factual_claim",
-      "grounding": [
-        "article-citadel-substitution-elasticity"
-      ]
-    },
-    {
-      "id": "n_37",
-      "concept": "structural fall in aggregate demand",
-      "type": "factual_claim",
-      "grounding": [
-        "article-citadel-substitution-elasticity"
-      ]
-    },
-    {
-      "id": "n_38",
       "concept": "AI as complement to labor",
       "type": "factual_claim",
       "grounding": [
@@ -315,7 +299,7 @@
       ]
     },
     {
-      "id": "n_39",
+      "id": "n_37",
       "concept": "labor demand reduction",
       "type": "factual_claim",
       "grounding": [
@@ -323,7 +307,7 @@
       ]
     },
     {
-      "id": "n_40",
+      "id": "n_38",
       "concept": "technological revolutions",
       "type": "factual_claim",
       "grounding": [
@@ -331,7 +315,7 @@
       ]
     },
     {
-      "id": "n_41",
+      "id": "n_39",
       "concept": "task composition alteration",
       "type": "factual_claim",
       "grounding": [
@@ -339,7 +323,7 @@
       ]
     },
     {
-      "id": "n_42",
+      "id": "n_40",
       "concept": "labor elimination",
       "type": "factual_claim",
       "grounding": [
@@ -347,7 +331,7 @@
       ]
     },
     {
-      "id": "n_43",
+      "id": "n_41",
       "concept": "near-total automation of economically relevant labor",
       "type": "assumption",
       "grounding": [
@@ -355,7 +339,7 @@
       ]
     },
     {
-      "id": "n_44",
+      "id": "n_42",
       "concept": "negative demand shock large enough to overwhelm output expansion",
       "type": "assumption",
       "grounding": [
@@ -363,7 +347,7 @@
       ]
     },
     {
-      "id": "n_45",
+      "id": "n_43",
       "concept": "weak redistributive responses",
       "type": "assumption",
       "grounding": [
@@ -371,7 +355,7 @@
       ]
     },
     {
-      "id": "n_46",
+      "id": "n_44",
       "concept": "Microsoft Office advent",
       "type": "inference",
       "grounding": [
@@ -379,7 +363,7 @@
       ]
     },
     {
-      "id": "n_47",
+      "id": "n_45",
       "concept": "office worker labor demand",
       "type": "inference",
       "grounding": [
@@ -387,7 +371,7 @@
       ]
     },
     {
-      "id": "n_48",
+      "id": "n_46",
       "concept": "productivity growth",
       "type": "factual_claim",
       "grounding": [
@@ -395,7 +379,7 @@
       ]
     },
     {
-      "id": "n_49",
+      "id": "n_47",
       "concept": "workweek reduction",
       "type": "factual_claim",
       "grounding": [
@@ -403,7 +387,7 @@
       ]
     },
     {
-      "id": "n_50",
+      "id": "n_48",
       "concept": "productivity gains",
       "type": "factual_claim",
       "grounding": [
@@ -411,7 +395,7 @@
       ]
     },
     {
-      "id": "n_51",
+      "id": "n_49",
       "concept": "labor withdrawal",
       "type": "factual_claim",
       "grounding": [
@@ -419,7 +403,7 @@
       ]
     },
     {
-      "id": "n_52",
+      "id": "n_50",
       "concept": "demand collapse",
       "type": "factual_claim",
       "grounding": [
@@ -427,7 +411,7 @@
       ]
     },
     {
-      "id": "n_53",
+      "id": "n_51",
       "concept": "composition of demand alteration",
       "type": "factual_claim",
       "grounding": [
@@ -435,24 +419,40 @@
       ]
     },
     {
-      "id": "n_54",
-      "concept": "real income expansion",
+      "id": "n_52",
+      "concept": "real incomes expansion",
       "type": "factual_claim",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "id": "n_53",
+      "concept": "new industries generation",
+      "type": "factual_claim",
+      "grounding": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "id": "n_54",
+      "concept": "increased real incomes",
+      "type": "inference",
       "grounding": [
         "article-citadel-keynes-15-hour"
       ]
     },
     {
       "id": "n_55",
-      "concept": "new industry generation",
-      "type": "factual_claim",
+      "concept": "increased consumption",
+      "type": "inference",
       "grounding": [
         "article-citadel-keynes-15-hour"
       ]
     },
     {
       "id": "n_56",
-      "concept": "elasticity of human wants",
+      "concept": "high elasticity of human wants",
       "type": "inference",
       "grounding": [
         "article-citadel-keynes-15-hour"
@@ -460,7 +460,7 @@
     },
     {
       "id": "n_57",
-      "concept": "labor market implications of productivity",
+      "concept": "productivity gains not translating to labor reduction",
       "type": "inference",
       "grounding": [
         "article-citadel-keynes-15-hour"
@@ -499,7 +499,7 @@
       "from": "n_6",
       "to": "n_5",
       "polarity": 1,
-      "confidence": 0.95,
+      "confidence": 0.9,
       "sourceChunks": [
         "article-citadel-recursive-adoption"
       ]
@@ -515,7 +515,16 @@
     },
     {
       "from": "n_9",
-      "to": "n_10",
+      "to": "n_8",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "article-citadel-recursive-adoption"
+      ]
+    },
+    {
+      "from": "n_10",
+      "to": "n_11",
       "polarity": 1,
       "confidence": 0.95,
       "sourceChunks": [
@@ -523,8 +532,8 @@
       ]
     },
     {
-      "from": "n_11",
-      "to": "n_12",
+      "from": "n_12",
+      "to": "n_13",
       "polarity": 1,
       "confidence": 0.95,
       "sourceChunks": [
@@ -532,8 +541,8 @@
       ]
     },
     {
-      "from": "n_13",
-      "to": "n_14",
+      "from": "n_14",
+      "to": "n_15",
       "polarity": -1,
       "confidence": 0.9,
       "sourceChunks": [
@@ -541,18 +550,9 @@
       ]
     },
     {
-      "from": "n_15",
-      "to": "n_16",
-      "polarity": -1,
-      "confidence": 0.85,
-      "sourceChunks": [
-        "article-citadel-compute-constraints"
-      ]
-    },
-    {
-      "from": "n_17",
-      "to": "n_16",
-      "polarity": -1,
+      "from": "n_16",
+      "to": "n_17",
+      "polarity": 1,
       "confidence": 0.85,
       "sourceChunks": [
         "article-citadel-compute-constraints"
@@ -560,18 +560,9 @@
     },
     {
       "from": "n_18",
-      "to": "n_16",
+      "to": "n_19",
       "polarity": -1,
-      "confidence": 0.85,
-      "sourceChunks": [
-        "article-citadel-compute-constraints"
-      ]
-    },
-    {
-      "from": "n_19",
-      "to": "n_16",
-      "polarity": -1,
-      "confidence": 0.85,
+      "confidence": 0.9,
       "sourceChunks": [
         "article-citadel-compute-constraints"
       ]
@@ -652,25 +643,16 @@
       "from": "n_32",
       "to": "n_33",
       "polarity": -1,
-      "confidence": 0.9,
-      "sourceChunks": [
-        "article-citadel-substitution-elasticity"
-      ]
-    },
-    {
-      "from": "n_34",
-      "to": "n_33",
-      "polarity": -1,
       "confidence": 0.85,
       "sourceChunks": [
         "article-citadel-substitution-elasticity"
       ]
     },
     {
-      "from": "n_35",
-      "to": "n_33",
-      "polarity": -1,
-      "confidence": 0.8,
+      "from": "n_34",
+      "to": "n_35",
+      "polarity": 1,
+      "confidence": 0.9,
       "sourceChunks": [
         "article-citadel-substitution-elasticity"
       ]
@@ -678,24 +660,15 @@
     {
       "from": "n_36",
       "to": "n_37",
-      "polarity": 1,
-      "confidence": 0.9,
+      "polarity": -1,
+      "confidence": 0.85,
       "sourceChunks": [
-        "article-citadel-substitution-elasticity"
+        "article-citadel-complement-not-substitute"
       ]
     },
     {
       "from": "n_38",
       "to": "n_39",
-      "polarity": -1,
-      "confidence": 0.85,
-      "sourceChunks": [
-        "article-citadel-complement-not-substitute"
-      ]
-    },
-    {
-      "from": "n_40",
-      "to": "n_41",
       "polarity": 1,
       "confidence": 0.9,
       "sourceChunks": [
@@ -703,8 +676,8 @@
       ]
     },
     {
-      "from": "n_40",
-      "to": "n_42",
+      "from": "n_38",
+      "to": "n_40",
       "polarity": -1,
       "confidence": 0.85,
       "sourceChunks": [
@@ -712,8 +685,8 @@
       ]
     },
     {
-      "from": "n_43",
-      "to": "n_44",
+      "from": "n_41",
+      "to": "n_42",
       "polarity": 1,
       "confidence": 0.8,
       "sourceChunks": [
@@ -721,10 +694,19 @@
       ]
     },
     {
-      "from": "n_45",
-      "to": "n_44",
+      "from": "n_43",
+      "to": "n_42",
       "polarity": 1,
       "confidence": 0.75,
+      "sourceChunks": [
+        "article-citadel-complement-not-substitute"
+      ]
+    },
+    {
+      "from": "n_44",
+      "to": "n_45",
+      "polarity": 1,
+      "confidence": 0.85,
       "sourceChunks": [
         "article-citadel-complement-not-substitute"
       ]
@@ -733,14 +715,32 @@
       "from": "n_46",
       "to": "n_47",
       "polarity": 1,
-      "confidence": 0.85,
+      "confidence": 0.9,
       "sourceChunks": [
-        "article-citadel-complement-not-substitute"
+        "article-citadel-keynes-15-hour"
       ]
     },
     {
       "from": "n_48",
       "to": "n_49",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "from": "n_48",
+      "to": "n_50",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "article-citadel-keynes-15-hour"
+      ]
+    },
+    {
+      "from": "n_48",
+      "to": "n_51",
       "polarity": 1,
       "confidence": 0.9,
       "sourceChunks": [
@@ -748,25 +748,16 @@
       ]
     },
     {
-      "from": "n_50",
-      "to": "n_51",
-      "polarity": -1,
-      "confidence": 0.85,
-      "sourceChunks": [
-        "article-citadel-keynes-15-hour"
-      ]
-    },
-    {
-      "from": "n_50",
+      "from": "n_48",
       "to": "n_52",
-      "polarity": -1,
-      "confidence": 0.85,
+      "polarity": 1,
+      "confidence": 0.9,
       "sourceChunks": [
         "article-citadel-keynes-15-hour"
       ]
     },
     {
-      "from": "n_50",
+      "from": "n_48",
       "to": "n_53",
       "polarity": 1,
       "confidence": 0.9,
@@ -775,19 +766,10 @@
       ]
     },
     {
-      "from": "n_50",
-      "to": "n_54",
-      "polarity": 1,
-      "confidence": 0.9,
-      "sourceChunks": [
-        "article-citadel-keynes-15-hour"
-      ]
-    },
-    {
-      "from": "n_50",
+      "from": "n_54",
       "to": "n_55",
       "polarity": 1,
-      "confidence": 0.9,
+      "confidence": 0.85,
       "sourceChunks": [
         "article-citadel-keynes-15-hour"
       ]
@@ -796,11 +778,11 @@
       "from": "n_56",
       "to": "n_57",
       "polarity": 1,
-      "confidence": 0.85,
+      "confidence": 0.8,
       "sourceChunks": [
         "article-citadel-keynes-15-hour"
       ]
     }
   ],
-  "extractedAt": "2026-03-02T06:43:12.821Z"
+  "extractedAt": "2026-03-04T11:01:47.192Z"
 }

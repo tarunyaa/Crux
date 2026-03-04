@@ -1,7 +1,7 @@
-// ─── Stage 6: Full Belief Graph Experiment ───────────────────
-// Usage: npx tsx scripts/run-belief-experiment.ts --topic "..." --personas "Citrini,Citadel" [--rounds 3]
+// ─── Belief Graph Experiment (Structural Diff Pipeline) ───────
+// Usage: npx tsx scripts/run-belief-experiment.ts --topic "..." --personas "Citrini,Citadel,Austin Lyons"
 //
-// Runs the full pipeline: belief-graph QBAF extraction → debate rounds → revision → community graph → cruxes → benchmarks
+// Runs the full pipeline: belief-graph QBAF extraction → pairwise structural diffs → revision → community graph → cruxes → benchmarks
 
 import dotenv from 'dotenv'
 dotenv.config({ path: '.env.local' })
@@ -11,28 +11,25 @@ import { runBeliefGraphExperiment } from '../lib/belief-graph/orchestrator'
 import type { ExperimentConfig, ExperimentResult } from '../lib/belief-graph/types'
 import { getTotalUsage, resetUsage } from '../lib/llm/client'
 
-function parseArgs(): { topic: string; personas: [string, string]; maxRounds: number } {
+function parseArgs(): { topic: string; personas: string[] } {
   const args = process.argv.slice(2)
   let topic = 'Will AI cause net job losses in the next decade?'
-  let personas: [string, string] = ['Citrini', 'Citadel']
-  let maxRounds = 3
+  let personas: string[] = ['Citrini', 'Citadel']
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--topic' && args[i + 1]) {
       topic = args[++i]
     } else if (args[i] === '--personas' && args[i + 1]) {
       const parts = args[++i].split(',').map(s => s.trim())
-      if (parts.length !== 2) {
-        console.error('Error: --personas requires exactly 2 comma-separated names')
+      if (parts.length < 2) {
+        console.error('Error: --personas requires at least 2 comma-separated names')
         process.exit(1)
       }
-      personas = parts as [string, string]
-    } else if (args[i] === '--rounds' && args[i + 1]) {
-      maxRounds = parseInt(args[++i], 10)
+      personas = parts
     }
   }
 
-  return { topic, personas, maxRounds }
+  return { topic, personas }
 }
 
 function slugify(text: string): string {
@@ -40,14 +37,13 @@ function slugify(text: string): string {
 }
 
 async function main() {
-  const { topic, personas, maxRounds } = parseArgs()
+  const { topic, personas } = parseArgs()
 
   console.log(`\n╔══════════════════════════════════════════════════════╗`)
-  console.log(`║  Stage 6: Full Belief Graph Experiment                ║`)
+  console.log(`║  Belief Graph Experiment (Structural Diff)            ║`)
   console.log(`╚══════════════════════════════════════════════════════╝`)
   console.log(`  Topic: "${topic}"`)
-  console.log(`  Personas: ${personas[0]} vs ${personas[1]}`)
-  console.log(`  Max rounds: ${maxRounds}`)
+  console.log(`  Personas: ${personas.join(', ')}`)
   console.log()
 
   resetUsage()
@@ -56,7 +52,6 @@ async function main() {
   const config: ExperimentConfig = {
     topic,
     personaIds: personas,
-    maxRounds,
     convergenceThreshold: 0.02,
     cruxVarianceThreshold: 0.3,
     consensusVarianceThreshold: 0.1,
@@ -72,7 +67,7 @@ async function main() {
     switch (event.type) {
       case 'experiment_start':
         console.log(`▶ Experiment: ${event.topic}`)
-        console.log(`  Personas: ${event.personas.join(' vs ')}`)
+        console.log(`  Personas: ${event.personas.join(', ')}`)
         break
 
       case 'extraction_start':
@@ -95,35 +90,18 @@ async function main() {
         break
       }
 
-      case 'round_start':
-        console.log(`\n─── Round ${event.round} ──────────────────────────────`)
+      case 'diff_start':
+        console.log(`\n⏳ Structural diff: ${event.personaA} vs ${event.personaB}...`)
         break
 
-      case 'debate_moves':
-        console.log(`  ${event.personaId}: +${event.newNodes} debate moves`)
+      case 'diff_complete':
+        console.log(`  ✓ ${event.diff.personaA} vs ${event.diff.personaB}: ${event.diff.contradictions.length} contradictions, ${event.diff.agreements.length} agreements, ${event.diff.gaps.length} gaps`)
         break
 
       case 'revision_complete':
         console.log(`  ${event.personaId}: σ(root) = ${event.rootStrength.toFixed(4)}, Σ|Δτ| = ${event.revisionCost.toFixed(4)}, R = ${event.R.toFixed(2)}`)
         if (event.reasoning) console.log(`    ${event.reasoning}`)
         break
-
-      case 'round_complete': {
-        // Save per-round QBAFs
-        for (const [pid, qbaf] of Object.entries(event.snapshot.qbafs)) {
-          await fs.writeFile(
-            path.join(outDir, `round-${event.round}-${pid}.json`),
-            JSON.stringify(qbaf, null, 2),
-          )
-        }
-        break
-      }
-
-      case 'convergence_check': {
-        const deltasStr = Object.entries(event.deltas).map(([k, v]) => `${k}: Δ${v.toFixed(4)}`).join(', ')
-        console.log(`  Convergence: ${event.converged ? '✓ YES' : '✗ no'} (${deltasStr})`)
-        break
-      }
 
       case 'community_graph_built': {
         const merged = event.graph.nodes.filter(n => n.mergedFrom.length > 1).length
@@ -160,16 +138,11 @@ async function main() {
         }
         console.log(`  Crux Localization Rate: ${(b.cruxLocalizationRate * 100).toFixed(1)}%`)
         console.log(`  Argument Coverage: ${b.argumentCoverage.toFixed(2)}`)
-        console.log(`  Graph Growth Rate:`)
-        for (const [pid, rate] of Object.entries(b.graphGrowthRate)) {
-          console.log(`    ${pid}: ${rate.toFixed(2)}x`)
-        }
         console.log(`  Counterfactual Sensitivity: ${b.counterfactualSensitivity.toFixed(4)}`)
         if (b.decisionFlipScore) {
           console.log(`  Decision Flip Score: ${b.decisionFlipScore.flipped ? '✓ flipped' : '✗ no flip'}`)
           console.log(`    ${b.decisionFlipScore.explanation}`)
         }
-        console.log(`  Convergence Round: ${b.convergenceRound ?? 'did not converge'}`)
         await fs.writeFile(path.join(outDir, 'benchmarks.json'), JSON.stringify(b, null, 2))
         break
       }
@@ -195,17 +168,11 @@ async function main() {
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1)
   const usage = getTotalUsage()
 
-  // Trajectory summary
-  console.log(`\n─── Trajectory ─────────────────────────────────`)
-  for (const pid of config.personaIds) {
-    const trajectory = result.rounds.map(r => r.rootStrengths[pid]?.toFixed(3) ?? '?')
-    console.log(`  ${pid}: ${trajectory.join(' → ')}`)
-  }
-
   console.log(`\n╔══════════════════════════════════════════════════════╗`)
   console.log(`║  EXPERIMENT COMPLETE                                  ║`)
   console.log(`╠══════════════════════════════════════════════════════╣`)
-  console.log(`║  Rounds: ${result.totalRounds} ${result.converged ? '(converged)' : '(max reached)'}`)
+  console.log(`║  Diffs: ${result.diffs.length} pairwise comparisons`)
+  console.log(`║  Revisions: ${result.revisions.length} persona revisions`)
   console.log(`║  Time: ${elapsed}s`)
   console.log(`║  Tokens: ${usage.inputTokens.toLocaleString()} in / ${usage.outputTokens.toLocaleString()} out`)
   console.log(`║  Output: ${outDir}`)

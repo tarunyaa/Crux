@@ -1,0 +1,5367 @@
+{
+  "personaId": "Trung Phan",
+  "personaName": "Trung Phan",
+  "nodes": [
+    {
+      "id": "n_0",
+      "concept": "AI-generated logos",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027531693201232300"
+      ]
+    },
+    {
+      "id": "n_1",
+      "concept": "cost savings for Paramount",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027531693201232300"
+      ]
+    },
+    {
+      "id": "n_2",
+      "concept": "design agency creating 6 Max logos over 4 years",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027530011700543771"
+      ]
+    },
+    {
+      "id": "n_3",
+      "concept": "receiving $100M in compensation",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027530011700543771"
+      ]
+    },
+    {
+      "id": "n_4",
+      "concept": "Paramount-Warner Bros merger deal",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027530011700543771"
+      ]
+    },
+    {
+      "id": "n_5",
+      "concept": "design agency being a major financial winner",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027530011700543771"
+      ]
+    },
+    {
+      "id": "n_6",
+      "concept": "pulling out a Heat scene",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027513104410808504"
+      ]
+    },
+    {
+      "id": "n_7",
+      "concept": "willingness to try watching it",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027513104410808504"
+      ]
+    },
+    {
+      "id": "n_8",
+      "concept": "using AI tools (helicopter drop analogy)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027474959044645119"
+      ]
+    },
+    {
+      "id": "n_9",
+      "concept": "missing benefits of the journey itself",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027474959044645119"
+      ]
+    },
+    {
+      "id": "n_10",
+      "concept": "skipping the process/journey",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027474959044645119"
+      ]
+    },
+    {
+      "id": "n_11",
+      "concept": "loss of learning or developmental benefits",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027474959044645119"
+      ]
+    },
+    {
+      "id": "n_12",
+      "concept": "AI rating its confidence in answers",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027474663564353630"
+      ]
+    },
+    {
+      "id": "n_13",
+      "concept": "AI utility as junior co-author on technical math papers",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027474663564353630"
+      ]
+    },
+    {
+      "id": "n_14",
+      "concept": "AI reaching trusted junior co-author benchmark",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027474663564353630"
+      ]
+    },
+    {
+      "id": "n_15",
+      "concept": "Terrence Tao's hope for improvements in AI capabilities",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027474663564353630"
+      ]
+    },
+    {
+      "id": "n_16",
+      "concept": "need to hit $1T market cap",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027437205598474336"
+      ]
+    },
+    {
+      "id": "n_17",
+      "concept": "AMD giving warrants to OpenAI and Meta",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027437205598474336"
+      ]
+    },
+    {
+      "id": "n_18",
+      "concept": "Nvidia's growing massive cash pile",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027437205598474336"
+      ]
+    },
+    {
+      "id": "n_19",
+      "concept": "need to deploy capital",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027437205598474336"
+      ]
+    },
+    {
+      "id": "n_20",
+      "concept": "remote work and distributed teams becoming standard",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027417190203547928"
+      ]
+    },
+    {
+      "id": "n_21",
+      "concept": "physical office headquarters and large headcount becoming unnecessary",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027417190203547928"
+      ]
+    },
+    {
+      "id": "n_22",
+      "concept": "technological advancement and automation by 2031",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027417190203547928"
+      ]
+    },
+    {
+      "id": "n_23",
+      "concept": "reduced need for large physical workforce at Fortune 500 companies",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027417190203547928"
+      ]
+    },
+    {
+      "id": "n_24",
+      "concept": "Robert Evans' involvement",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027405173686145215"
+      ]
+    },
+    {
+      "id": "n_25",
+      "concept": "The Godfather getting made",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027405173686145215"
+      ]
+    },
+    {
+      "id": "n_26",
+      "concept": "multiple potential failure points in Godfather's production",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027405173686145215"
+      ]
+    },
+    {
+      "id": "n_27",
+      "concept": "The Godfather could have failed",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027405173686145215"
+      ]
+    },
+    {
+      "id": "n_28",
+      "concept": "Warner Bros tanking to $20B valuation",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027390978173399546"
+      ]
+    },
+    {
+      "id": "n_29",
+      "concept": "enabling a bidding war between Netflix and Paramount",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027390978173399546"
+      ]
+    },
+    {
+      "id": "n_30",
+      "concept": "bidding war between Netflix and Paramount over 4 months with 10+ bids",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027390978173399546"
+      ]
+    },
+    {
+      "id": "n_31",
+      "concept": "increase in company value from $50B to $110B",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027390978173399546"
+      ]
+    },
+    {
+      "id": "n_32",
+      "concept": "David Zaslav's management/actions during the acquisition process",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027390978173399546"
+      ]
+    },
+    {
+      "id": "n_33",
+      "concept": "personal receipt of $567M golden parachute payout",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027390978173399546"
+      ]
+    },
+    {
+      "id": "n_34",
+      "concept": "David Zaslav's bidding war strategy",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027248766567456774"
+      ]
+    },
+    {
+      "id": "n_35",
+      "concept": "Warner Bros. stock price increase",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027248766567456774"
+      ]
+    },
+    {
+      "id": "n_36",
+      "concept": "IP mash-up of Paramount and Warner franchises",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027248766567456774"
+      ]
+    },
+    {
+      "id": "n_37",
+      "concept": "entertainment value/commercial success",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027248766567456774"
+      ]
+    },
+    {
+      "id": "n_38",
+      "concept": "Paramount+ / Max achieving scale",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027238554578063821"
+      ]
+    },
+    {
+      "id": "n_39",
+      "concept": "ability to compete as a streamer",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027238554578063821"
+      ]
+    },
+    {
+      "id": "n_40",
+      "concept": "Chick-fil-A's operational approach",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027237279413231803"
+      ]
+    },
+    {
+      "id": "n_41",
+      "concept": "drive-thru efficiency",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027237279413231803"
+      ]
+    },
+    {
+      "id": "n_42",
+      "concept": "Paramount taking on $60B of debt after outbidding Netflix and buying Warner Bros for $81B",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027211024311717915"
+      ]
+    },
+    {
+      "id": "n_43",
+      "concept": "financial risk/vulnerability",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027211024311717915"
+      ]
+    },
+    {
+      "id": "n_44",
+      "concept": "Citrini's piece functioning as thought experiment",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027210140739641555"
+      ]
+    },
+    {
+      "id": "n_45",
+      "concept": "value/importance of the piece",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027210140739641555"
+      ]
+    },
+    {
+      "id": "n_46",
+      "concept": "AI operating drive-thru windows",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027204516601598374"
+      ]
+    },
+    {
+      "id": "n_47",
+      "concept": "performance quality",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027204516601598374"
+      ]
+    },
+    {
+      "id": "n_48",
+      "concept": "someone ordering 18,000 cups of water through Taco Bell drive-thru AI",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027204516601598374"
+      ]
+    },
+    {
+      "id": "n_49",
+      "concept": "breaking the AI system",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027204516601598374"
+      ]
+    },
+    {
+      "id": "n_50",
+      "concept": "poor performance and exploitability of drive-thru AI",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027204516601598374"
+      ]
+    },
+    {
+      "id": "n_51",
+      "concept": "fast food chains restricting AI to employee-only interactions",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027204516601598374"
+      ]
+    },
+    {
+      "id": "n_52",
+      "concept": "timing being completely unrelated",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027202237991362589"
+      ]
+    },
+    {
+      "id": "n_53",
+      "concept": "lack of anticipation of timing",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027202237991362589"
+      ]
+    },
+    {
+      "id": "n_54",
+      "concept": "valuable contract clause in 1997 TV deal",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027165653799764152"
+      ]
+    },
+    {
+      "id": "n_55",
+      "concept": "South Park creators becoming billionaires",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027165653799764152"
+      ]
+    },
+    {
+      "id": "n_56",
+      "concept": "Netflix (NFLX) not countering criticism",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027163087657394336"
+      ]
+    },
+    {
+      "id": "n_57",
+      "concept": "shareholder dissatisfaction",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027163087657394336"
+      ]
+    },
+    {
+      "id": "n_58",
+      "concept": "craziness of event happening within a week",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027162695510974510"
+      ]
+    },
+    {
+      "id": "n_59",
+      "concept": "uncertainty about how situation will play out",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027162695510974510"
+      ]
+    },
+    {
+      "id": "n_60",
+      "concept": "great auntie's ability to vibe code the product",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027162415213973891"
+      ]
+    },
+    {
+      "id": "n_61",
+      "concept": "whether the product works/is viable",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027162415213973891"
+      ]
+    },
+    {
+      "id": "n_62",
+      "concept": "time passage (couple years without following Block)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027160591803297891"
+      ]
+    },
+    {
+      "id": "n_63",
+      "concept": "uncertainty about Block's current downsizing trajectory",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027160591803297891"
+      ]
+    },
+    {
+      "id": "n_64",
+      "concept": "non-technical workers (grandma) being able to code Doordash or Visa replacements",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027153153058300177"
+      ]
+    },
+    {
+      "id": "n_65",
+      "concept": "mass white-collar unemployment",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027153153058300177"
+      ]
+    },
+    {
+      "id": "n_66",
+      "concept": "Block laying off 40% of its workforce",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027153153058300177"
+      ]
+    },
+    {
+      "id": "n_67",
+      "concept": "evidence supporting prediction of mass white-collar unemployment",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027153153058300177"
+      ]
+    },
+    {
+      "id": "n_68",
+      "concept": "OpenAI data centre orders",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027151379647824252"
+      ]
+    },
+    {
+      "id": "n_69",
+      "concept": "Nvidia stock surge",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027151379647824252"
+      ]
+    },
+    {
+      "id": "n_70",
+      "concept": "corporate consolidation across media/tech companies",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027151379647824252"
+      ]
+    },
+    {
+      "id": "n_71",
+      "concept": "complexity of media ownership structures",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027151379647824252"
+      ]
+    },
+    {
+      "id": "n_72",
+      "concept": "Paramount's $31/share bid ($81B)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027149280818208950"
+      ]
+    },
+    {
+      "id": "n_73",
+      "concept": "Warner Bros board considers bid superior",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027149280818208950"
+      ]
+    },
+    {
+      "id": "n_74",
+      "concept": "Netflix bid being lower ($27.75/share, $72B)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027149280818208950"
+      ]
+    },
+    {
+      "id": "n_75",
+      "concept": "Paramount bid deemed superior to Netflix offer",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027149280818208950"
+      ]
+    },
+    {
+      "id": "n_76",
+      "concept": "Netflix having 4 days to counter",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027149280818208950"
+      ]
+    },
+    {
+      "id": "n_77",
+      "concept": "Netflix can potentially match or exceed Paramount's offer",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027149280818208950"
+      ]
+    },
+    {
+      "id": "n_78",
+      "concept": "home appreciating 10x in past 20 years",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027109801508167728"
+      ]
+    },
+    {
+      "id": "n_79",
+      "concept": "expectation of higher selling price",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027109801508167728"
+      ]
+    },
+    {
+      "id": "n_80",
+      "concept": "receiving bid 1% lower than asking price",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027109801508167728"
+      ]
+    },
+    {
+      "id": "n_81",
+      "concept": "boomers' disappointment/frustration",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027109801508167728"
+      ]
+    },
+    {
+      "id": "n_82",
+      "concept": "AI agent use case adoption",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027100659397677493"
+      ]
+    },
+    {
+      "id": "n_83",
+      "concept": "capital expenditure (CapEx)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027100659397677493"
+      ]
+    },
+    {
+      "id": "n_84",
+      "concept": "DRAM prices",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027100659397677493"
+      ]
+    },
+    {
+      "id": "n_85",
+      "concept": "electricity bills",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027100659397677493"
+      ]
+    },
+    {
+      "id": "n_86",
+      "concept": "multimodal chatbot improvement over existing DIY YouTube videos",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027072063954182511"
+      ]
+    },
+    {
+      "id": "n_87",
+      "concept": "adoption by most people",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027072063954182511"
+      ]
+    },
+    {
+      "id": "n_88",
+      "concept": "human laziness",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027072063954182511"
+      ]
+    },
+    {
+      "id": "n_89",
+      "concept": "willingness to use new tools despite marginal improvements",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027072063954182511"
+      ]
+    },
+    {
+      "id": "n_90",
+      "concept": "ability to make WW quality meme-able dialogue",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027059924841480687"
+      ]
+    },
+    {
+      "id": "n_91",
+      "concept": "AGI arrival/recognition",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027059924841480687"
+      ]
+    },
+    {
+      "id": "n_92",
+      "concept": "having a moment captured on video",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027057124174627156"
+      ]
+    },
+    {
+      "id": "n_93",
+      "concept": "personal gladness/satisfaction",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027057124174627156"
+      ]
+    },
+    {
+      "id": "n_94",
+      "concept": "pursuing software engineering career",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027057057044803922"
+      ]
+    },
+    {
+      "id": "n_95",
+      "concept": "financial/professional success relative to trades",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027057057044803922"
+      ]
+    },
+    {
+      "id": "n_96",
+      "concept": "following advice to 'learn how to code'",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027057057044803922"
+      ]
+    },
+    {
+      "id": "n_97",
+      "concept": "better career outcomes than skilled trades",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027057057044803922"
+      ]
+    },
+    {
+      "id": "n_98",
+      "concept": "unredacting text",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026823937750085867"
+      ]
+    },
+    {
+      "id": "n_99",
+      "concept": "ability to have Claude trade on behalf of author",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026823937750085867"
+      ]
+    },
+    {
+      "id": "n_100",
+      "concept": "having Claude trade on author's behalf",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026823937750085867"
+      ]
+    },
+    {
+      "id": "n_101",
+      "concept": "achieving author's trading goals",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026823937750085867"
+      ]
+    },
+    {
+      "id": "n_102",
+      "concept": "Terraform Labs bankruptcy and $40B implosion",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026805315640111346"
+      ]
+    },
+    {
+      "id": "n_103",
+      "concept": "filing of insider trading lawsuit against Jane Street",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026805315640111346"
+      ]
+    },
+    {
+      "id": "n_104",
+      "concept": "need to protect Jane Street's trading techniques",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026805315640111346"
+      ]
+    },
+    {
+      "id": "n_105",
+      "concept": "redaction of lawsuit documents",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026805315640111346"
+      ]
+    },
+    {
+      "id": "n_106",
+      "concept": "Apple acquiring PA Semi and starting in-house custom chip business",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026802418223296639"
+      ]
+    },
+    {
+      "id": "n_107",
+      "concept": "hardware sales increase",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026802418223296639"
+      ]
+    },
+    {
+      "id": "n_108",
+      "concept": "in-house custom chips",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026802418223296639"
+      ]
+    },
+    {
+      "id": "n_109",
+      "concept": "hardware capabilities/features enabled",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026802418223296639"
+      ]
+    },
+    {
+      "id": "n_110",
+      "concept": "Q4 revenue growth",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026793630443385233"
+      ]
+    },
+    {
+      "id": "n_111",
+      "concept": "revenue performance being remarkable/exceptional",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026793630443385233"
+      ]
+    },
+    {
+      "id": "n_112",
+      "concept": "Nvidia's acquisition of Mellanox for $7B in 2019",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026778783685161370"
+      ]
+    },
+    {
+      "id": "n_113",
+      "concept": "generation of $11B+ quarterly Networking revenue",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026778783685161370"
+      ]
+    },
+    {
+      "id": "n_114",
+      "concept": "Nvidia's acquisition of Mellanox",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026778783685161370"
+      ]
+    },
+    {
+      "id": "n_115",
+      "concept": "ranking among greatest tech acquisitions ever",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026778783685161370"
+      ]
+    },
+    {
+      "id": "n_116",
+      "concept": "Nolan interviewing Mann, Deniro and Pacino",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026745641238659290"
+      ]
+    },
+    {
+      "id": "n_117",
+      "concept": "incredible watch experience",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026745641238659290"
+      ]
+    },
+    {
+      "id": "n_118",
+      "concept": "meeting Gen-Z where they are",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2026740992389558276"
+      ]
+    },
+    {
+      "id": "n_119",
+      "concept": "effective communication/engagement with Gen-Z",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2026740992389558276"
+      ]
+    },
+    {
+      "id": "n_120",
+      "concept": "cutting Godfather films into 30-second clips with mobile game and sensory footage",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026740676797542622"
+      ]
+    },
+    {
+      "id": "n_121",
+      "concept": "Gen-Z learning about Godfather classics",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026740676797542622"
+      ]
+    },
+    {
+      "id": "n_122",
+      "concept": "formatting Godfather scenes for TikTok, Reels and Shorts",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026740676797542622"
+      ]
+    },
+    {
+      "id": "n_123",
+      "concept": "Gen-Z engagement with classic films",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026740676797542622"
+      ]
+    },
+    {
+      "id": "n_124",
+      "concept": "content being in short-form video format optimized for social platforms",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026740676797542622"
+      ]
+    },
+    {
+      "id": "n_125",
+      "concept": "accessibility of classic cinema to Gen-Z",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026740676797542622"
+      ]
+    },
+    {
+      "id": "n_126",
+      "concept": "Claude AI (or similar AI tool)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026728165247430998"
+      ]
+    },
+    {
+      "id": "n_127",
+      "concept": "ability to appear productive/at desk while not actually working",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026728165247430998"
+      ]
+    },
+    {
+      "id": "n_128",
+      "concept": "Claude AI compared to mouse jiggler",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026728165247430998"
+      ]
+    },
+    {
+      "id": "n_129",
+      "concept": "scale/magnitude of deceptive productivity appearance",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026728165247430998"
+      ]
+    },
+    {
+      "id": "n_130",
+      "concept": "using a particular hack/technique",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026719562704789748"
+      ]
+    },
+    {
+      "id": "n_131",
+      "concept": "utility in future posts",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026719562704789748"
+      ]
+    },
+    {
+      "id": "n_132",
+      "concept": "AI-generated content on Pinterest",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "id": "n_133",
+      "concept": "platform vulnerability",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "id": "n_134",
+      "concept": "AI filters flagging false positives",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "id": "n_135",
+      "concept": "power user dissatisfaction",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "id": "n_136",
+      "concept": "inadequate AI filter quality",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "id": "n_137",
+      "concept": "Pinterest's vulnerability to AI slop",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "id": "n_138",
+      "concept": "AI-generated content being problematic for the platform",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "id": "n_139",
+      "concept": "user expectation for human-curated image grids",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "id": "n_140",
+      "concept": "the film being unreal/impressive",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2026704269429321838"
+      ]
+    },
+    {
+      "id": "n_141",
+      "concept": "appreciation/positive regard",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2026704269429321838"
+      ]
+    },
+    {
+      "id": "n_142",
+      "concept": "viral AI doomer write-ups",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026436729046184088"
+      ]
+    },
+    {
+      "id": "n_143",
+      "concept": "control (moderation/reasonableness)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026436729046184088"
+      ]
+    },
+    {
+      "id": "n_144",
+      "concept": "deal closing",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026426619490086981"
+      ]
+    },
+    {
+      "id": "n_145",
+      "concept": "following Jason Levin's timeline closely",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026426619490086981"
+      ]
+    },
+    {
+      "id": "n_146",
+      "concept": "Stripe acquisition by PayPal",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026417742568652912"
+      ]
+    },
+    {
+      "id": "n_147",
+      "concept": "full circle narrative (PayPal founders invested in Stripe, now PayPal acquires it)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026417742568652912"
+      ]
+    },
+    {
+      "id": "n_148",
+      "concept": "Amazon's potential",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026412722905285005"
+      ]
+    },
+    {
+      "id": "n_149",
+      "concept": "regulatory blowback against Amazon",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026412722905285005"
+      ]
+    },
+    {
+      "id": "n_150",
+      "concept": "director noodling on a single idea for decades",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026385303251071219"
+      ]
+    },
+    {
+      "id": "n_151",
+      "concept": "love stories (creative output)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026385303251071219"
+      ]
+    },
+    {
+      "id": "n_152",
+      "concept": "Hayao Miyazaki's entire career",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026385303251071219"
+      ]
+    },
+    {
+      "id": "n_153",
+      "concept": "creative lessons",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026385303251071219"
+      ]
+    },
+    {
+      "id": "n_154",
+      "concept": "Judd Kilmer love story",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2026383921471275489"
+      ]
+    },
+    {
+      "id": "n_155",
+      "concept": "being an all-time great story",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2026383921471275489"
+      ]
+    },
+    {
+      "id": "n_156",
+      "concept": "Mann running it back",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026383201707635157"
+      ]
+    },
+    {
+      "id": "n_157",
+      "concept": "positive outcome/relief",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026383201707635157"
+      ]
+    },
+    {
+      "id": "n_158",
+      "concept": "memes",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026369624762364237"
+      ]
+    },
+    {
+      "id": "n_159",
+      "concept": "being tremendous",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026369624762364237"
+      ]
+    },
+    {
+      "id": "n_160",
+      "concept": "Mann spending 50+ years with this story",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026368849214578867"
+      ]
+    },
+    {
+      "id": "n_161",
+      "concept": "quality/credibility of the work",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026368849214578867"
+      ]
+    },
+    {
+      "id": "n_162",
+      "concept": "no mistakes in coupon redemption",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026368631303811134"
+      ]
+    },
+    {
+      "id": "n_163",
+      "concept": "coupon value/usefulness",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026368631303811134"
+      ]
+    },
+    {
+      "id": "n_164",
+      "concept": "Quentin not directing",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026360066111324526"
+      ]
+    },
+    {
+      "id": "n_165",
+      "concept": "turning down the project",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026360066111324526"
+      ]
+    },
+    {
+      "id": "n_166",
+      "concept": "Quentin directing",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026360066111324526"
+      ]
+    },
+    {
+      "id": "n_167",
+      "concept": "accepting/doing the project",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026360066111324526"
+      ]
+    },
+    {
+      "id": "n_168",
+      "concept": "de-aging technology/effect in film",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026359906715201703"
+      ]
+    },
+    {
+      "id": "n_169",
+      "concept": "quality of viewing experience",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026359906715201703"
+      ]
+    },
+    {
+      "id": "n_170",
+      "concept": "Butler cast as young Kilmer",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026358844612604177"
+      ]
+    },
+    {
+      "id": "n_171",
+      "concept": "casting choice appropriateness",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026358844612604177"
+      ]
+    },
+    {
+      "id": "n_172",
+      "concept": "need to ask permission for a riff on original",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026354687306510574"
+      ]
+    },
+    {
+      "id": "n_173",
+      "concept": "not being an official poster",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026354687306510574"
+      ]
+    },
+    {
+      "id": "n_174",
+      "concept": "absence of em dashes",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026354687306510574"
+      ]
+    },
+    {
+      "id": "n_175",
+      "concept": "positive outcome (implied by 'at least')",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026354687306510574"
+      ]
+    },
+    {
+      "id": "n_176",
+      "concept": "Heat 2 sequel happening",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026352729073852504"
+      ]
+    },
+    {
+      "id": "n_177",
+      "concept": "Michael Mann directing Heat 2",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026352729073852504"
+      ]
+    },
+    {
+      "id": "n_178",
+      "concept": "Heat 2 sequel is confirmed/real",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026352729073852504"
+      ]
+    },
+    {
+      "id": "n_179",
+      "concept": "confirmed casting of Leonardo DiCaprio, Christian Bale, and Adam Driver",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026352729073852504"
+      ]
+    },
+    {
+      "id": "n_180",
+      "concept": "rapid improvements in AI models",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_181",
+      "concept": "chaos in the economy",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_182",
+      "concept": "unemployment levels rise above 10%",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_183",
+      "concept": "S&P 500 sells off ~40% from all-time highs",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_184",
+      "concept": "private market credit tanks",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_185",
+      "concept": "prefacing content with 'this isn't [XYZ]'",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_186",
+      "concept": "people perceiving it as [XYZ]",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_187",
+      "concept": "Citrini article singling out specific stocks",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_188",
+      "concept": "those stocks declining on Monday",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_189",
+      "concept": "deep uncertainty and confusion in markets",
+      "type": "inference",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_190",
+      "concept": "market reacting strongly to economically implausible scenario",
+      "type": "inference",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_191",
+      "concept": "AGI is here",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_192",
+      "concept": "major AI labs pivoting away from Slack",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_193",
+      "concept": "AlphaGo's non-intuitive move 37",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_194",
+      "concept": "demonstration of machine creativity",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_195",
+      "concept": "AlphaGo's move 37 demonstration of creativity",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_196",
+      "concept": "Lee Sedol's shock reaction",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_197",
+      "concept": "definition clarity of AGI",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_198",
+      "concept": "ability to determine when AGI is achieved",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_199",
+      "concept": "high bar for AGI definition",
+      "type": "assumption",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_200",
+      "concept": "lower probability of near-term AGI achievement",
+      "type": "assumption",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_201",
+      "concept": "news about AI plugins replacing professional services work",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_202",
+      "concept": "stock market sell-off ($285B market cap loss)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_203",
+      "concept": "Altruist releasing AI tax-planning tool",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_204",
+      "concept": "multi-billion dollar sell-off in wealth management firms",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_205",
+      "concept": "investor anxiety about AI replacing professional services",
+      "type": "inference",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_206",
+      "concept": "market overreaction/panic selling",
+      "type": "inference",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_207",
+      "concept": "market downturn since start of year",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg2"
+      ]
+    },
+    {
+      "id": "n_208",
+      "concept": "B2B SaaS firm valuations",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg2"
+      ]
+    },
+    {
+      "id": "n_209",
+      "concept": "software tools becoming commoditized/easily codable",
+      "type": "inference",
+      "grounding": [
+        "substack-2_seg2"
+      ]
+    },
+    {
+      "id": "n_210",
+      "concept": "SaaS firm valuations",
+      "type": "inference",
+      "grounding": [
+        "substack-2_seg2"
+      ]
+    },
+    {
+      "id": "n_211",
+      "concept": "NFL's $1.6B deal with Fox in 1993",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_212",
+      "concept": "league's economics and broadcasting standards",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_213",
+      "concept": "Fox becoming America's 4th major TV network",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_214",
+      "concept": "Bearly AI's default no-logging policy and encryption",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_215",
+      "concept": "user privacy protection",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0",
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_216",
+      "concept": "some AI providers keeping chat logs indefinitely",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_217",
+      "concept": "user privacy concerns",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg0",
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_218",
+      "concept": "NFL being a cultural juggernaut",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_219",
+      "concept": "Murdoch's desire to acquire broadcast rights",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_220",
+      "concept": "Fox offering $1.6B for NFC broadcast rights (massive increase from CBS's $265m annually)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_221",
+      "concept": "ability to compete with ABC, NBC, and CBS",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_222",
+      "concept": "securing 49ers vs Cowboys game and marquee matchups",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_223",
+      "concept": "Fox bid viability",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_224",
+      "concept": "app metrics (sleep score, step count, portfolio performance, social followers, prediction payouts)",
+      "type": "core_value",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_225",
+      "concept": "user values and behavior",
+      "type": "core_value",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_226",
+      "concept": "hitting weekly step goal on Apple Watch",
+      "type": "assumption",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_227",
+      "concept": "feeling better",
+      "type": "assumption",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_228",
+      "concept": "stock portfolio down 3%",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_229",
+      "concept": "self-criticism and regret about investment decisions",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_230",
+      "concept": "gaining 478 followers and 10,901 likes on X",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_231",
+      "concept": "belief that people love your takes",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_232",
+      "concept": "correctly predicting weather outcome and earning $17 on Kalshi",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_233",
+      "concept": "belief in personal intelligence",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_234",
+      "concept": "external metrics from tech apps (fantasy rankings, streak notifications)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_235",
+      "concept": "emotional state and central nervous system activation",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_236",
+      "concept": "external metrics triggering emotional responses",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_237",
+      "concept": "daily decision-making and thought patterns",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_238",
+      "concept": "metrics being easily trackable and goal-setting tools",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_239",
+      "concept": "accomplishing tasks deemed important in lives",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_240",
+      "concept": "designing lives around external metrics",
+      "type": "assumption",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_241",
+      "concept": "achieving goals and task completion",
+      "type": "assumption",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_242",
+      "concept": "reading extensively",
+      "type": "core_value",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_243",
+      "concept": "investment success",
+      "type": "core_value",
+      "grounding": [
+        "substack-5_seg0",
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_244",
+      "concept": "Warren Buffett's investment approach over 60 years",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_245",
+      "concept": "19.9% annual compounding at Berkshire Hathaway",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_246",
+      "concept": "Berkshire Hathaway's compounding rate (19.9% vs S&P 500's 10.4%)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_247",
+      "concept": "outperformance of the market",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_248",
+      "concept": "sustained investment performance over multiple decades",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_249",
+      "concept": "status as 'GOAT investor'",
+      "type": "inference",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_250",
+      "concept": "tide going out",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_251",
+      "concept": "revealing who is swimming naked (exposed/unprepared)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_252",
+      "concept": "time in the market",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_253",
+      "concept": "investment returns",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_254",
+      "concept": "others being fearful",
+      "type": "core_value",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_255",
+      "concept": "should be greedy (buy)",
+      "type": "core_value",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_256",
+      "concept": "others being greedy",
+      "type": "core_value",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_257",
+      "concept": "should be fearful (sell/avoid)",
+      "type": "core_value",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_258",
+      "concept": "long holding period (forever)",
+      "type": "core_value",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_259",
+      "concept": "following Rule #1 (never lose money)",
+      "type": "core_value",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_260",
+      "concept": "drinking 3 sugar-free Red Bulls and an Iced Coffee from McDonald's",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_261",
+      "concept": "getting on a writing roll",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_262",
+      "concept": "being told repeatedly that new shows are must-watch",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_263",
+      "concept": "willingness to watch new streaming TV shows",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_264",
+      "concept": "past experience of shows starting strong then declining in quality",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_265",
+      "concept": "refusal to watch new streaming TV shows",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_266",
+      "concept": "storylines becoming circular or lacking narrative sense",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_267",
+      "concept": "show quality deterioration",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_268",
+      "concept": "seeing David Goggins 60-second clips",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_269",
+      "concept": "urge to do a 10km run",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_270",
+      "concept": "seeing Hayao Miyazaki talk about creative work",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_271",
+      "concept": "urge to write",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_272",
+      "concept": "Arakawa being the sole person filming the project",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_273",
+      "concept": "quality/credibility of the documentary artifact",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_274",
+      "concept": "Miyazaki's direction of 20+ animated classics and Studio Ghibli's success",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_275",
+      "concept": "status as one of film's towering giants",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_276",
+      "concept": "ChatGPT image generator launch and AI-generated Ghibli-influenced anime images",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_277",
+      "concept": "internet discourse about Ghibli IP being used without permission",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_278",
+      "concept": "convergence of AI-generated Ghibli images, IP concerns, and 40th anniversary timing",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_279",
+      "concept": "opportune moment to revisit Miyazaki documentaries and books",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_280",
+      "concept": "studying Arakawa's documentary and Alpert's book about Miyazaki",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_281",
+      "concept": "gaining insights on Miyazaki's career and lessons on creativity",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_282",
+      "concept": "high box office revenue",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_283",
+      "concept": "cultural impact",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_284",
+      "concept": "lack of quotable lines and memorable characters",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_285",
+      "concept": "low cultural impact",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_286",
+      "concept": "Cameron's filmography (Terminator, Aliens, The Abyss, T2, True Lies, Titanic)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_287",
+      "concept": "quotability/memorability in everyday contexts",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_288",
+      "concept": "Avatar's focus on Na'vi and Pandora worldbuilding",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_289",
+      "concept": "contrast with rest of Cameron's filmography",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_290",
+      "concept": "Aliens and T2 being among the best action films ever",
+      "type": "core_value",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_291",
+      "concept": "author's appreciation for Cameron's work",
+      "type": "core_value",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_292",
+      "concept": "series of great Avatar sequels/films",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_293",
+      "concept": "author's plan to watch Avatar: Fire and Ash in theatre",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_294",
+      "concept": "gamifying the payment experience",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_295",
+      "concept": "business traction and success",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_296",
+      "concept": "Harvard MBA and Bain consulting background",
+      "type": "assumption",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_297",
+      "concept": "ability to launch successful business",
+      "type": "assumption",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_298",
+      "concept": "Dishoom's food quality and dining experience",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_299",
+      "concept": "L Catterton's investment decision",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_300",
+      "concept": "L Catterton's investment in Dishoom",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_301",
+      "concept": "Dishoom's expansion to New York City in 2026",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_302",
+      "concept": "Dishoom opening in New York City in 2026",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_303",
+      "concept": "Americans experiencing Dishoom",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_304",
+      "concept": "Taylor Sheridan writing Sicario as first script",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_305",
+      "concept": "his success/prominence in TV",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_306",
+      "concept": "Taylor Sheridan being biggest rainmaker in TV",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_307",
+      "concept": "his ability to negotiate $1B deal with NBCUniversal",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_308",
+      "concept": "Bearly AI's no-logging policy and encryption",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_309",
+      "concept": "AI providers keeping chat logs indefinitely",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_310",
+      "concept": "Sheridan's creative output (Yellowstone, 1883, Mayor of Kingstown, etc.)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_311",
+      "concept": "Paramount's financial success and platform growth",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_312",
+      "concept": "Yellowstone's success as largest scripted show",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_313",
+      "concept": "generation of $2.9B revenue and ~$700M profit for Paramount",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_314",
+      "concept": "Paramount+ launch in 2021 with Sheridan's shows",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_315",
+      "concept": "platform growth and subscriber value",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_316",
+      "concept": "J.R. Simplot's understanding of commodity markets",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_317",
+      "concept": "ability to spot opportunity in DRAM semiconductor segment",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_318",
+      "concept": "Simplot's potato farming business pivot to semiconductors",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_319",
+      "concept": "building of $220B+ Micron Technology firm",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_320",
+      "concept": "portfolio misallocation to animal-themed NFTs and parlays during COVID",
+      "type": "inference",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_321",
+      "concept": "missing out on Nvidia gains",
+      "type": "inference",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_322",
+      "concept": "investing $1m into Micron Technology for a 40% stake in 1980",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_323",
+      "concept": "becoming a billionaire from memory chips",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_324",
+      "concept": "Simplot's career pivot into semiconductors",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_325",
+      "concept": "widespread media coverage in the 1990s",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_326",
+      "concept": "watching Paul Thomas Anderson's One Battle After Another",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_327",
+      "concept": "feeling compelled to write a newsletter",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_328",
+      "concept": "suffering from chronic recency bias",
+      "type": "inference",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_329",
+      "concept": "tendency to overvalue recent experiences",
+      "type": "inference",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_330",
+      "concept": "PTA spending two decades working on the idea",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_331",
+      "concept": "One Battle After Another being a true passion project",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_332",
+      "concept": "it being PTA's highest budget film",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_333",
+      "concept": "One Battle After Another receiving $140m budget",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_334",
+      "concept": "Leo and Benicio appearing on the New Heights podcast",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg2"
+      ]
+    },
+    {
+      "id": "n_335",
+      "concept": "author's awareness of the film's Fall release",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg2"
+      ]
+    },
+    {
+      "id": "n_336",
+      "concept": "incredible architecture at Changi Airport",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_337",
+      "concept": "Changi Airport being considered the best airport in the world",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_338",
+      "concept": "abundance of shops and food options at Changi Airport",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_339",
+      "concept": "frequent mentions of Changi Airport in travel blogs",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_340",
+      "concept": "awareness that Changi Airport is cited as the best airport in the world",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_341",
+      "concept": "Changi Airport's reputation improvement",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_342",
+      "concept": "Jewel addition to Changi Airport",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_343",
+      "concept": "Moshe Safdie's design of Jewel",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_344",
+      "concept": "Jewel being an impressive structure",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_345",
+      "concept": "Jewel's extensive greenery (100,000 shrubs, 3,000 trees, world's largest indoor waterfall)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_346",
+      "concept": "Living up to Singapore's green oasis reputation",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_347",
+      "concept": "Overcoming initial wariness about the hype",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_348",
+      "concept": "Actually visiting Jewel",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_349",
+      "concept": "Tarantino appearing on The Church of Tarantino Podcast",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_350",
+      "concept": "podcast episode being meta/notable",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_351",
+      "concept": "Tarantino's 30+ year career",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_352",
+      "concept": "having great insights to share",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_353",
+      "concept": "working at video store job",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_354",
+      "concept": "fire and ambition to make films",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_355",
+      "concept": "getting caught up in video store life",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_356",
+      "concept": "falling asleep on filmmaking ambitions",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_357",
+      "concept": "video store job being dream-adjacent (close to filmmaking dream)",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_358",
+      "concept": "ability to stay engaged despite not pursuing primary dream",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_359",
+      "concept": "getting to watch movies all day at video store",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_360",
+      "concept": "maintaining connection to filmmaking passion",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_361",
+      "concept": "Apple having done enough this year",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_362",
+      "concept": "Apple delivering two new form factors (Foldable in 2026, All-Glass in 2027), new device (AR glasses), and Apple Intelligence",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_363",
+      "concept": "Apple being a leaky ship with past iPhone launches",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_364",
+      "concept": "advance knowledge of iPhone specs and design",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_365",
+      "concept": "A19 Pro chip being a major upgrade",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_366",
+      "concept": "potential to do cool AI stuff",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_367",
+      "concept": "limitation of AI capabilities on iPhone 17",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_368",
+      "concept": "Apple Intelligence sucking",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_369",
+      "concept": "only 17 weekly regular-season games per team",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_370",
+      "concept": "game scarcity",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_371",
+      "concept": "shared event status (everyone knows everyone else is watching)",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_372",
+      "concept": "limited number of games and shared event nature",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_373",
+      "concept": "NFL being a perfect media asset in the age of the internet",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_374",
+      "concept": "NFL's perfect media asset status",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_375",
+      "concept": "high revenue ($23B in 2024)",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_376",
+      "concept": "high average franchise value ($7B)",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_377",
+      "concept": "dominance in most-watched TV broadcasts (90 of top 100)",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_378",
+      "concept": "smaller time commitment relative to other leagues",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_379",
+      "concept": "appeal/watchability of NFL",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_380",
+      "concept": "individual games being higher stakes",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_381",
+      "concept": "game being very strategic",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_382",
+      "concept": "appeal to Madden players",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_383",
+      "concept": "snap-by-snap gameplay structure",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_384",
+      "concept": "time for replays and color commentary",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_385",
+      "concept": "replays and color commentary explaining plays",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_386",
+      "concept": "drawing people into NFL lore",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_387",
+      "concept": "Costco opening new warehouse in Okinawa",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_388",
+      "concept": "extreme customer demand (5-hour car line, 3.5-hour wait)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_389",
+      "concept": "Japan's cultural characteristics",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_390",
+      "concept": "organized pandemonium inside the store",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_391",
+      "concept": "difficulty for foreign grocers to break into Japan",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_392",
+      "concept": "impressiveness of Costco's footprint in Japan",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_393",
+      "concept": "market difficulty in Japan (body slamming other retailers)",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_394",
+      "concept": "Costco's success being noteworthy",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_395",
+      "concept": "Instagram hyper-targeted ads",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_396",
+      "concept": "wife purchasing kitchen products",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_397",
+      "concept": "kitchen product purchases",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_398",
+      "concept": "many delicious meals",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_399",
+      "concept": "Ninja Air Fryer use",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_400",
+      "concept": "reheating leftovers effectively",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_401",
+      "concept": "Air Fryer product performance",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_402",
+      "concept": "meeting consumer hype",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_403",
+      "concept": "Sous Vide cooking method",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_404",
+      "concept": "quality of steaks",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_405",
+      "concept": "SharkNinja operating in 37 categories with brand portfolio (Shark and Ninja)",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_406",
+      "concept": "revenue growth to $6B projected in 2025",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_407",
+      "concept": "entering over 20 categories in past 5 years",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_408",
+      "concept": "revenue growth (24x from $250m to $6B)",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_409",
+      "concept": "revenue growth and market success",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_410",
+      "concept": "$700m annual spending on ads (12% of sales) with influencers on TikTok and Instagram",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_411",
+      "concept": "$400m annual R&D spending (7% of sales)",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_412",
+      "concept": "ability to enter new product categories and drive innovation",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_413",
+      "concept": "Matt Stone and Trey Parker's South Park creation and business success",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "id": "n_414",
+      "concept": "achieving billionaire status ($1.2B each)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "id": "n_415",
+      "concept": "signing development deal with Paramount and exclusive streaming agreement with Paramount+",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "id": "n_416",
+      "concept": "hitting financial milestone",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "id": "n_417",
+      "concept": "South Park's willingness to be equal-opportunity offenders and troll anyone/anything",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "id": "n_418",
+      "concept": "ability to tap into or set cultural zeitgeist",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "id": "n_419",
+      "concept": "Parker and Stone remaining as original creative team writing and producing",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "id": "n_420",
+      "concept": "South Park maintaining relevance unlike other long-running animated shows",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "id": "n_421",
+      "concept": "bottomless supply of creativity",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19_seg2"
+      ]
+    },
+    {
+      "id": "n_422",
+      "concept": "success",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19_seg2"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_0",
+      "to": "n_1",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027531693201232300"
+      ]
+    },
+    {
+      "from": "n_2",
+      "to": "n_3",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027530011700543771"
+      ]
+    },
+    {
+      "from": "n_4",
+      "to": "n_5",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027530011700543771"
+      ]
+    },
+    {
+      "from": "n_6",
+      "to": "n_7",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027513104410808504"
+      ]
+    },
+    {
+      "from": "n_8",
+      "to": "n_9",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027474959044645119"
+      ]
+    },
+    {
+      "from": "n_10",
+      "to": "n_11",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027474959044645119"
+      ]
+    },
+    {
+      "from": "n_12",
+      "to": "n_13",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027474663564353630"
+      ]
+    },
+    {
+      "from": "n_14",
+      "to": "n_15",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027474663564353630"
+      ]
+    },
+    {
+      "from": "n_16",
+      "to": "n_17",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027437205598474336"
+      ]
+    },
+    {
+      "from": "n_18",
+      "to": "n_19",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027437205598474336"
+      ]
+    },
+    {
+      "from": "n_20",
+      "to": "n_21",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027417190203547928"
+      ]
+    },
+    {
+      "from": "n_22",
+      "to": "n_23",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027417190203547928"
+      ]
+    },
+    {
+      "from": "n_24",
+      "to": "n_25",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027405173686145215"
+      ]
+    },
+    {
+      "from": "n_26",
+      "to": "n_27",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027405173686145215"
+      ]
+    },
+    {
+      "from": "n_28",
+      "to": "n_29",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027390978173399546"
+      ]
+    },
+    {
+      "from": "n_30",
+      "to": "n_31",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027390978173399546"
+      ]
+    },
+    {
+      "from": "n_32",
+      "to": "n_33",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027390978173399546"
+      ]
+    },
+    {
+      "from": "n_34",
+      "to": "n_35",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2027248766567456774"
+      ]
+    },
+    {
+      "from": "n_36",
+      "to": "n_37",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2027248766567456774"
+      ]
+    },
+    {
+      "from": "n_38",
+      "to": "n_39",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027238554578063821"
+      ]
+    },
+    {
+      "from": "n_40",
+      "to": "n_41",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027237279413231803"
+      ]
+    },
+    {
+      "from": "n_42",
+      "to": "n_43",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027211024311717915"
+      ]
+    },
+    {
+      "from": "n_44",
+      "to": "n_45",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027210140739641555"
+      ]
+    },
+    {
+      "from": "n_46",
+      "to": "n_47",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027204516601598374"
+      ]
+    },
+    {
+      "from": "n_48",
+      "to": "n_49",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027204516601598374"
+      ]
+    },
+    {
+      "from": "n_50",
+      "to": "n_51",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027204516601598374"
+      ]
+    },
+    {
+      "from": "n_52",
+      "to": "n_53",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2027202237991362589"
+      ]
+    },
+    {
+      "from": "n_54",
+      "to": "n_55",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027165653799764152"
+      ]
+    },
+    {
+      "from": "n_56",
+      "to": "n_57",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027163087657394336"
+      ]
+    },
+    {
+      "from": "n_58",
+      "to": "n_59",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027162695510974510"
+      ]
+    },
+    {
+      "from": "n_60",
+      "to": "n_61",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027162415213973891"
+      ]
+    },
+    {
+      "from": "n_62",
+      "to": "n_63",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027160591803297891"
+      ]
+    },
+    {
+      "from": "n_64",
+      "to": "n_65",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027153153058300177"
+      ]
+    },
+    {
+      "from": "n_66",
+      "to": "n_67",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027153153058300177"
+      ]
+    },
+    {
+      "from": "n_68",
+      "to": "n_69",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027151379647824252"
+      ]
+    },
+    {
+      "from": "n_70",
+      "to": "n_71",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027151379647824252"
+      ]
+    },
+    {
+      "from": "n_72",
+      "to": "n_73",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2027149280818208950"
+      ]
+    },
+    {
+      "from": "n_74",
+      "to": "n_75",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027149280818208950"
+      ]
+    },
+    {
+      "from": "n_76",
+      "to": "n_77",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027149280818208950"
+      ]
+    },
+    {
+      "from": "n_78",
+      "to": "n_79",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027109801508167728"
+      ]
+    },
+    {
+      "from": "n_80",
+      "to": "n_81",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027109801508167728"
+      ]
+    },
+    {
+      "from": "n_82",
+      "to": "n_83",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027100659397677493"
+      ]
+    },
+    {
+      "from": "n_82",
+      "to": "n_84",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027100659397677493"
+      ]
+    },
+    {
+      "from": "n_82",
+      "to": "n_85",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027100659397677493"
+      ]
+    },
+    {
+      "from": "n_86",
+      "to": "n_87",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027072063954182511"
+      ]
+    },
+    {
+      "from": "n_88",
+      "to": "n_89",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2027072063954182511"
+      ]
+    },
+    {
+      "from": "n_90",
+      "to": "n_91",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027059924841480687"
+      ]
+    },
+    {
+      "from": "n_92",
+      "to": "n_93",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027057124174627156"
+      ]
+    },
+    {
+      "from": "n_94",
+      "to": "n_95",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027057057044803922"
+      ]
+    },
+    {
+      "from": "n_96",
+      "to": "n_97",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027057057044803922"
+      ]
+    },
+    {
+      "from": "n_98",
+      "to": "n_99",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026823937750085867"
+      ]
+    },
+    {
+      "from": "n_100",
+      "to": "n_101",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2026823937750085867"
+      ]
+    },
+    {
+      "from": "n_102",
+      "to": "n_103",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026805315640111346"
+      ]
+    },
+    {
+      "from": "n_104",
+      "to": "n_105",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026805315640111346"
+      ]
+    },
+    {
+      "from": "n_106",
+      "to": "n_107",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026802418223296639"
+      ]
+    },
+    {
+      "from": "n_108",
+      "to": "n_109",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026802418223296639"
+      ]
+    },
+    {
+      "from": "n_110",
+      "to": "n_111",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026793630443385233"
+      ]
+    },
+    {
+      "from": "n_112",
+      "to": "n_113",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026778783685161370"
+      ]
+    },
+    {
+      "from": "n_114",
+      "to": "n_115",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026778783685161370"
+      ]
+    },
+    {
+      "from": "n_116",
+      "to": "n_117",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026745641238659290"
+      ]
+    },
+    {
+      "from": "n_118",
+      "to": "n_119",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026740992389558276"
+      ]
+    },
+    {
+      "from": "n_120",
+      "to": "n_121",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026740676797542622"
+      ]
+    },
+    {
+      "from": "n_122",
+      "to": "n_123",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026740676797542622"
+      ]
+    },
+    {
+      "from": "n_124",
+      "to": "n_125",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026740676797542622"
+      ]
+    },
+    {
+      "from": "n_126",
+      "to": "n_127",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026728165247430998"
+      ]
+    },
+    {
+      "from": "n_128",
+      "to": "n_129",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026728165247430998"
+      ]
+    },
+    {
+      "from": "n_130",
+      "to": "n_131",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026719562704789748"
+      ]
+    },
+    {
+      "from": "n_132",
+      "to": "n_133",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "from": "n_134",
+      "to": "n_135",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "from": "n_136",
+      "to": "n_137",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "from": "n_138",
+      "to": "n_139",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026710584549618161"
+      ]
+    },
+    {
+      "from": "n_140",
+      "to": "n_141",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026704269429321838"
+      ]
+    },
+    {
+      "from": "n_142",
+      "to": "n_143",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026436729046184088"
+      ]
+    },
+    {
+      "from": "n_144",
+      "to": "n_145",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026426619490086981"
+      ]
+    },
+    {
+      "from": "n_146",
+      "to": "n_147",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026417742568652912"
+      ]
+    },
+    {
+      "from": "n_148",
+      "to": "n_149",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026412722905285005"
+      ]
+    },
+    {
+      "from": "n_150",
+      "to": "n_151",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026385303251071219"
+      ]
+    },
+    {
+      "from": "n_152",
+      "to": "n_153",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026385303251071219"
+      ]
+    },
+    {
+      "from": "n_154",
+      "to": "n_155",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026383921471275489"
+      ]
+    },
+    {
+      "from": "n_156",
+      "to": "n_157",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026383201707635157"
+      ]
+    },
+    {
+      "from": "n_158",
+      "to": "n_159",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026369624762364237"
+      ]
+    },
+    {
+      "from": "n_160",
+      "to": "n_161",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026368849214578867"
+      ]
+    },
+    {
+      "from": "n_162",
+      "to": "n_163",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2026368631303811134"
+      ]
+    },
+    {
+      "from": "n_164",
+      "to": "n_165",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2026360066111324526"
+      ]
+    },
+    {
+      "from": "n_166",
+      "to": "n_167",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2026360066111324526"
+      ]
+    },
+    {
+      "from": "n_168",
+      "to": "n_169",
+      "polarity": -1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2026359906715201703"
+      ]
+    },
+    {
+      "from": "n_170",
+      "to": "n_171",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026358844612604177"
+      ]
+    },
+    {
+      "from": "n_172",
+      "to": "n_173",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026354687306510574"
+      ]
+    },
+    {
+      "from": "n_174",
+      "to": "n_175",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2026354687306510574"
+      ]
+    },
+    {
+      "from": "n_176",
+      "to": "n_177",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026352729073852504"
+      ]
+    },
+    {
+      "from": "n_178",
+      "to": "n_179",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026352729073852504"
+      ]
+    },
+    {
+      "from": "n_180",
+      "to": "n_181",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_180",
+      "to": "n_182",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_180",
+      "to": "n_183",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_180",
+      "to": "n_184",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_185",
+      "to": "n_186",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_187",
+      "to": "n_188",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_189",
+      "to": "n_190",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_191",
+      "to": "n_192",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "from": "n_193",
+      "to": "n_194",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_195",
+      "to": "n_196",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_197",
+      "to": "n_198",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_199",
+      "to": "n_200",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_201",
+      "to": "n_202",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "from": "n_203",
+      "to": "n_204",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "from": "n_205",
+      "to": "n_206",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "from": "n_207",
+      "to": "n_208",
+      "polarity": -1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-2_seg2"
+      ]
+    },
+    {
+      "from": "n_209",
+      "to": "n_210",
+      "polarity": -1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "substack-2_seg2"
+      ]
+    },
+    {
+      "from": "n_211",
+      "to": "n_212",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_211",
+      "to": "n_213",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_214",
+      "to": "n_215",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_216",
+      "to": "n_217",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_218",
+      "to": "n_219",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_220",
+      "to": "n_221",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_222",
+      "to": "n_223",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_224",
+      "to": "n_225",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "from": "n_226",
+      "to": "n_227",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "from": "n_228",
+      "to": "n_229",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "from": "n_230",
+      "to": "n_231",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "from": "n_232",
+      "to": "n_233",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "from": "n_234",
+      "to": "n_235",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "from": "n_236",
+      "to": "n_237",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "from": "n_238",
+      "to": "n_239",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "from": "n_240",
+      "to": "n_241",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "from": "n_242",
+      "to": "n_243",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_244",
+      "to": "n_245",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_246",
+      "to": "n_247",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_248",
+      "to": "n_249",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_250",
+      "to": "n_251",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_252",
+      "to": "n_253",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_254",
+      "to": "n_255",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_256",
+      "to": "n_257",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_258",
+      "to": "n_243",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_259",
+      "to": "n_243",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_260",
+      "to": "n_261",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_262",
+      "to": "n_263",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "from": "n_264",
+      "to": "n_265",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "from": "n_266",
+      "to": "n_267",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "from": "n_268",
+      "to": "n_269",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_270",
+      "to": "n_271",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_272",
+      "to": "n_273",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_274",
+      "to": "n_275",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_276",
+      "to": "n_277",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "from": "n_278",
+      "to": "n_279",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "from": "n_280",
+      "to": "n_281",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "from": "n_282",
+      "to": "n_283",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_284",
+      "to": "n_285",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_286",
+      "to": "n_287",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_288",
+      "to": "n_289",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_290",
+      "to": "n_291",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_292",
+      "to": "n_293",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_294",
+      "to": "n_295",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "from": "n_296",
+      "to": "n_297",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "from": "n_298",
+      "to": "n_299",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "from": "n_300",
+      "to": "n_301",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "from": "n_302",
+      "to": "n_303",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "from": "n_304",
+      "to": "n_305",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "from": "n_306",
+      "to": "n_307",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "from": "n_308",
+      "to": "n_215",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "from": "n_309",
+      "to": "n_217",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "from": "n_310",
+      "to": "n_311",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "from": "n_312",
+      "to": "n_313",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "from": "n_314",
+      "to": "n_315",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "from": "n_316",
+      "to": "n_317",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_318",
+      "to": "n_319",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_320",
+      "to": "n_321",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_322",
+      "to": "n_323",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_324",
+      "to": "n_325",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_326",
+      "to": "n_327",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_328",
+      "to": "n_329",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_330",
+      "to": "n_331",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_332",
+      "to": "n_333",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_334",
+      "to": "n_335",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-12_seg2"
+      ]
+    },
+    {
+      "from": "n_336",
+      "to": "n_337",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_338",
+      "to": "n_337",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_339",
+      "to": "n_340",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_341",
+      "to": "n_342",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_343",
+      "to": "n_344",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_345",
+      "to": "n_346",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_347",
+      "to": "n_348",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_349",
+      "to": "n_350",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_351",
+      "to": "n_352",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_353",
+      "to": "n_354",
+      "polarity": -1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "from": "n_355",
+      "to": "n_356",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "from": "n_357",
+      "to": "n_358",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "from": "n_359",
+      "to": "n_360",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "from": "n_361",
+      "to": "n_362",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "from": "n_363",
+      "to": "n_364",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "from": "n_365",
+      "to": "n_366",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "from": "n_367",
+      "to": "n_368",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "from": "n_369",
+      "to": "n_370",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "from": "n_370",
+      "to": "n_371",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "from": "n_372",
+      "to": "n_373",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "from": "n_374",
+      "to": "n_375",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "from": "n_374",
+      "to": "n_376",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "from": "n_377",
+      "to": "n_374",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "from": "n_378",
+      "to": "n_379",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "from": "n_380",
+      "to": "n_379",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "from": "n_381",
+      "to": "n_382",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "from": "n_383",
+      "to": "n_384",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "from": "n_385",
+      "to": "n_386",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "from": "n_387",
+      "to": "n_388",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_389",
+      "to": "n_390",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_391",
+      "to": "n_392",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "from": "n_393",
+      "to": "n_394",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "from": "n_395",
+      "to": "n_396",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_397",
+      "to": "n_398",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_399",
+      "to": "n_400",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_401",
+      "to": "n_402",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_403",
+      "to": "n_404",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_405",
+      "to": "n_406",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_407",
+      "to": "n_408",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_409",
+      "to": "n_410",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_411",
+      "to": "n_412",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_413",
+      "to": "n_414",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "from": "n_415",
+      "to": "n_416",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "from": "n_417",
+      "to": "n_418",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "from": "n_419",
+      "to": "n_420",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "from": "n_421",
+      "to": "n_422",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-19_seg2"
+      ]
+    }
+  ],
+  "extractedAt": "2026-03-04T11:47:19.702Z"
+}

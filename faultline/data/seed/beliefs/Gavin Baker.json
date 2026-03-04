@@ -1,0 +1,1677 @@
+{
+  "personaId": "Gavin Baker",
+  "personaName": "Gavin Baker",
+  "nodes": [
+    {
+      "id": "n_0",
+      "concept": "using Grok and asking it questions as if it were an omniscient expert",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026737755703615831"
+      ]
+    },
+    {
+      "id": "n_1",
+      "concept": "getting useful answers/information",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026737755703615831"
+      ]
+    },
+    {
+      "id": "n_2",
+      "concept": "1000x increase in compute",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026734915283193857"
+      ]
+    },
+    {
+      "id": "n_3",
+      "concept": "Citrini doomsday scenario",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026734915283193857"
+      ]
+    },
+    {
+      "id": "n_4",
+      "concept": "various paths or approaches",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026013010502795362"
+      ]
+    },
+    {
+      "id": "n_5",
+      "concept": "convergence on compute",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026013010502795362"
+      ]
+    },
+    {
+      "id": "n_6",
+      "concept": "opinions of people at frontier labs",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2025983189404078116"
+      ]
+    },
+    {
+      "id": "n_7",
+      "concept": "Baker's beliefs about X",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2025983189404078116"
+      ]
+    },
+    {
+      "id": "n_8",
+      "concept": "Baker's own lived experience",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2025983189404078116"
+      ]
+    },
+    {
+      "id": "n_9",
+      "concept": "wafer production and power consumption",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2025981907767284143"
+      ]
+    },
+    {
+      "id": "n_10",
+      "concept": "determining factor in technology/semiconductor performance",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2025981907767284143"
+      ]
+    },
+    {
+      "id": "n_11",
+      "concept": "insufficient compute availability by 2028/early 2030s",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2025980552302518630"
+      ]
+    },
+    {
+      "id": "n_12",
+      "concept": "scenario from thought piece becoming reality",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2025980552302518630"
+      ]
+    },
+    {
+      "id": "n_13",
+      "concept": "distillation, quantization, and Edge AI techniques",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2025980552302518630"
+      ]
+    },
+    {
+      "id": "n_14",
+      "concept": "bridging compute gap for AGI scenarios",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2025980552302518630"
+      ]
+    },
+    {
+      "id": "n_15",
+      "concept": "AGI as event horizon",
+      "type": "inference",
+      "grounding": [
+        "tweet-2025980552302518630"
+      ]
+    },
+    {
+      "id": "n_16",
+      "concept": "compute dependence",
+      "type": "inference",
+      "grounding": [
+        "tweet-2025980552302518630"
+      ]
+    },
+    {
+      "id": "n_17",
+      "concept": "having an unaffiliated, virtual avatar opining on questions",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2025597599533629572"
+      ]
+    },
+    {
+      "id": "n_18",
+      "concept": "feeling strange to the author",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2025597599533629572"
+      ]
+    },
+    {
+      "id": "n_19",
+      "concept": "persona being helpful",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2025597599533629572"
+      ]
+    },
+    {
+      "id": "n_20",
+      "concept": "positive outcome (implied benefit)",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2025597599533629572"
+      ]
+    },
+    {
+      "id": "n_21",
+      "concept": "interaction with @iconnections_io, @AntonioGracias, @Atreidesmgmt, @rbiscardi",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2024567441930829979"
+      ]
+    },
+    {
+      "id": "n_22",
+      "concept": "fun experience",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2024567441930829979"
+      ]
+    },
+    {
+      "id": "n_23",
+      "concept": "Roman Emperors taking care of families of those who returned to the fold",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2023502053209956763"
+      ]
+    },
+    {
+      "id": "n_24",
+      "concept": "incentivizing or rewarding loyalty/reconciliation",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2023502053209956763"
+      ]
+    },
+    {
+      "id": "n_25",
+      "concept": "the Tessio scene at the end of The Godfather",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2023465420943208607"
+      ]
+    },
+    {
+      "id": "n_26",
+      "concept": "quality of the film",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2023465420943208607"
+      ]
+    },
+    {
+      "id": "n_27",
+      "concept": "existence of various NAND cycles",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2021962424140935578"
+      ]
+    },
+    {
+      "id": "n_28",
+      "concept": "ease of analyzing gross margins",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2021962424140935578"
+      ]
+    },
+    {
+      "id": "n_29",
+      "concept": "obvious outcome/expectation",
+      "type": "inference",
+      "grounding": [
+        "tweet-2021961204298850556"
+      ]
+    },
+    {
+      "id": "n_30",
+      "concept": "stocks trading in reverse order",
+      "type": "inference",
+      "grounding": [
+        "tweet-2021961204298850556"
+      ]
+    },
+    {
+      "id": "n_31",
+      "concept": "long-term undersupply in HBM DRAM",
+      "type": "inference",
+      "grounding": [
+        "tweet-2021937035083493667"
+      ]
+    },
+    {
+      "id": "n_32",
+      "concept": "equity price appreciation",
+      "type": "inference",
+      "grounding": [
+        "tweet-2021937035083493667"
+      ]
+    },
+    {
+      "id": "n_33",
+      "concept": "long-term undersupply in NAND",
+      "type": "inference",
+      "grounding": [
+        "tweet-2021937035083493667"
+      ]
+    },
+    {
+      "id": "n_34",
+      "concept": "equities trading opposite to fundamental supply/risk factors",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2021937035083493667"
+      ]
+    },
+    {
+      "id": "n_35",
+      "concept": "market mispricing",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2021937035083493667"
+      ]
+    },
+    {
+      "id": "n_36",
+      "concept": "early stage performance",
+      "type": "inference",
+      "grounding": [
+        "tweet-2019795386085290240"
+      ]
+    },
+    {
+      "id": "n_37",
+      "concept": "positive outlook",
+      "type": "inference",
+      "grounding": [
+        "tweet-2019795386085290240"
+      ]
+    },
+    {
+      "id": "n_38",
+      "concept": "using CPUs as memory controllers/expanders",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2018297954780475712"
+      ]
+    },
+    {
+      "id": "n_39",
+      "concept": "logical efficiency",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2018297954780475712"
+      ]
+    },
+    {
+      "id": "n_40",
+      "concept": "alternative approach (implied: GPU/specialized hardware for memory expansion)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2018297954780475712"
+      ]
+    },
+    {
+      "id": "n_41",
+      "concept": "less than 50% of entities receiving the message",
+      "type": "inference",
+      "grounding": [
+        "tweet-2017308723727786310"
+      ]
+    },
+    {
+      "id": "n_42",
+      "concept": "missed investment opportunities",
+      "type": "inference",
+      "grounding": [
+        "tweet-2017308723727786310"
+      ]
+    },
+    {
+      "id": "n_43",
+      "concept": "entities that have received the message",
+      "type": "inference",
+      "grounding": [
+        "tweet-2017308723727786310"
+      ]
+    },
+    {
+      "id": "n_44",
+      "concept": "epic investment opportunities",
+      "type": "inference",
+      "grounding": [
+        "tweet-2017308723727786310"
+      ]
+    },
+    {
+      "id": "n_45",
+      "concept": "management team quality differences",
+      "type": "inference",
+      "grounding": [
+        "tweet-2017308127234814015"
+      ]
+    },
+    {
+      "id": "n_46",
+      "concept": "stock price movement predictability",
+      "type": "inference",
+      "grounding": [
+        "tweet-2017308127234814015"
+      ]
+    },
+    {
+      "id": "n_47",
+      "concept": "December revolution in AI coding agents",
+      "type": "inference",
+      "grounding": [
+        "tweet-2017231599813722539"
+      ]
+    },
+    {
+      "id": "n_48",
+      "concept": "revenue per employee growth continuing in 2026",
+      "type": "inference",
+      "grounding": [
+        "tweet-2017231599813722539"
+      ]
+    },
+    {
+      "id": "n_49",
+      "concept": "AI coding agents advancement",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2017231599813722539"
+      ]
+    },
+    {
+      "id": "n_50",
+      "concept": "AI productivity evidence",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2017231599813722539"
+      ]
+    },
+    {
+      "id": "n_51",
+      "concept": "Mehul and Navneet building something",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2016985177990320385"
+      ]
+    },
+    {
+      "id": "n_52",
+      "concept": "positive sentiment/gratitude",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2016985177990320385"
+      ]
+    },
+    {
+      "id": "n_53",
+      "concept": "doing more work with Sutter Hill",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2016985177990320385"
+      ]
+    },
+    {
+      "id": "n_54",
+      "concept": "enjoyment/positive experience",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2016985177990320385"
+      ]
+    },
+    {
+      "id": "n_55",
+      "concept": "being on same cap table with Antonio Gracias",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2016985177990320385"
+      ]
+    },
+    {
+      "id": "n_56",
+      "concept": "positive experience",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2016985177990320385"
+      ]
+    },
+    {
+      "id": "n_57",
+      "concept": "seeing the Matic robot in action",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2016985175909961811"
+      ]
+    },
+    {
+      "id": "n_58",
+      "concept": "belief in its value",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2016985175909961811"
+      ]
+    },
+    {
+      "id": "n_59",
+      "concept": "dislike of vacuuming and mopping",
+      "type": "inference",
+      "grounding": [
+        "tweet-2016985175909961811"
+      ]
+    },
+    {
+      "id": "n_60",
+      "concept": "should purchase Matic robot",
+      "type": "inference",
+      "grounding": [
+        "tweet-2016985175909961811"
+      ]
+    },
+    {
+      "id": "n_61",
+      "concept": "customer love for Matic robots",
+      "type": "inference",
+      "grounding": [
+        "tweet-2016985175909961811"
+      ]
+    },
+    {
+      "id": "n_62",
+      "concept": "worthiness of investment and personal purchase",
+      "type": "inference",
+      "grounding": [
+        "tweet-2016985175909961811"
+      ]
+    },
+    {
+      "id": "n_63",
+      "concept": "using the word 'hate'",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2015176218094571920"
+      ]
+    },
+    {
+      "id": "n_64",
+      "concept": "accurately describing the sentiment",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2015176218094571920"
+      ]
+    },
+    {
+      "id": "n_65",
+      "concept": "AI-native approach to software",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2015173495999623608"
+      ]
+    },
+    {
+      "id": "n_66",
+      "concept": "Claude using Excel only as presentation layer",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2015173495999623608"
+      ]
+    },
+    {
+      "id": "n_67",
+      "concept": "traditional software approach (non-AI-native)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2015173495999623608"
+      ]
+    },
+    {
+      "id": "n_68",
+      "concept": "Microsoft implementation using Claude to run Excel functions",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2015173495999623608"
+      ]
+    },
+    {
+      "id": "n_69",
+      "concept": "Continued product challenges at Microsoft",
+      "type": "inference",
+      "grounding": [
+        "tweet-2015173495999623608"
+      ]
+    },
+    {
+      "id": "n_70",
+      "concept": "low organizational morale",
+      "type": "inference",
+      "grounding": [
+        "tweet-2015173495999623608"
+      ]
+    },
+    {
+      "id": "n_71",
+      "concept": "Satya's product management abilities",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2011455562102575603"
+      ]
+    },
+    {
+      "id": "n_72",
+      "concept": "quality of Microsoft's products/decisions",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2011455562102575603"
+      ]
+    },
+    {
+      "id": "n_73",
+      "concept": "Claude Cowork being built in 10 days with Claude Code",
+      "type": "inference",
+      "grounding": [
+        "tweet-2011421526722023889"
+      ]
+    },
+    {
+      "id": "n_74",
+      "concept": "Claude Cowork meeting expectations for what Copilot should be",
+      "type": "inference",
+      "grounding": [
+        "tweet-2011421526722023889"
+      ]
+    },
+    {
+      "id": "n_75",
+      "concept": "Microsoft working on Copilot for years",
+      "type": "inference",
+      "grounding": [
+        "tweet-2011421526722023889"
+      ]
+    },
+    {
+      "id": "n_76",
+      "concept": "Copilot failing to meet expectations that Claude Cowork meets",
+      "type": "inference",
+      "grounding": [
+        "tweet-2011421526722023889"
+      ]
+    },
+    {
+      "id": "n_77",
+      "concept": "optics being misunderstood",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2008579210508726467"
+      ]
+    },
+    {
+      "id": "n_78",
+      "concept": "optics not being properly recognized as important in datacenter design",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2008579210508726467"
+      ]
+    },
+    {
+      "id": "n_79",
+      "concept": "competition",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2008262963749417166"
+      ]
+    },
+    {
+      "id": "n_80",
+      "concept": "benefit to everyone",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2008262963749417166"
+      ]
+    },
+    {
+      "id": "n_81",
+      "concept": "Patriots and Eagles playing at the same time",
+      "type": "inference",
+      "grounding": [
+        "tweet-2007932979767640110"
+      ]
+    },
+    {
+      "id": "n_82",
+      "concept": "scheduling conflict or viewing difficulty",
+      "type": "inference",
+      "grounding": [
+        "tweet-2007932979767640110"
+      ]
+    },
+    {
+      "id": "n_83",
+      "concept": "receiving kind words/positive feedback",
+      "type": "inference",
+      "grounding": [
+        "tweet-2007820458368946649"
+      ]
+    },
+    {
+      "id": "n_84",
+      "concept": "episode being fun",
+      "type": "inference",
+      "grounding": [
+        "tweet-2007820458368946649"
+      ]
+    },
+    {
+      "id": "n_85",
+      "concept": "clarification that Nvidia is licensing (not acquiring) Grok",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004708683490459925"
+      ]
+    },
+    {
+      "id": "n_86",
+      "concept": "accurate understanding of the business arrangement",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004708683490459925"
+      ]
+    },
+    {
+      "id": "n_87",
+      "concept": "non-exclusive licensing agreement structure",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004708683490459925"
+      ]
+    },
+    {
+      "id": "n_88",
+      "concept": "Grok's ability to continue operating independently",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004708683490459925"
+      ]
+    },
+    {
+      "id": "n_89",
+      "concept": "Patrick Moorhead's perspective and shared content",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2004655651537256784"
+      ]
+    },
+    {
+      "id": "n_90",
+      "concept": "Gavin Baker's valuation/appreciation",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2004655651537256784"
+      ]
+    },
+    {
+      "id": "n_91",
+      "concept": "getting more output from flash in every Blackwell rack",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004641913073467876"
+      ]
+    },
+    {
+      "id": "n_92",
+      "concept": "dealing with flash shortage",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004641913073467876"
+      ]
+    },
+    {
+      "id": "n_93",
+      "concept": "using Rubin CPX plus Rubin for certain workloads",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004641337388466574"
+      ]
+    },
+    {
+      "id": "n_94",
+      "concept": "ability to handle those workloads effectively",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004641337388466574"
+      ]
+    },
+    {
+      "id": "n_95",
+      "concept": "mix and match approach to Rubin products",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2004641337388466574"
+      ]
+    },
+    {
+      "id": "n_96",
+      "concept": "flexibility in workload management",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2004641337388466574"
+      ]
+    },
+    {
+      "id": "n_97",
+      "concept": "Jensen's historical track record",
+      "type": "inference",
+      "grounding": [
+        "tweet-2004587764055163249"
+      ]
+    },
+    {
+      "id": "n_98",
+      "concept": "likelihood of Jensen being correct",
+      "type": "inference",
+      "grounding": [
+        "tweet-2004587764055163249"
+      ]
+    },
+    {
+      "id": "n_99",
+      "concept": "past experience with Jensen's predictions",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004587764055163249"
+      ]
+    },
+    {
+      "id": "n_100",
+      "concept": "Baker's decision not to bet against Jensen",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004587764055163249"
+      ]
+    },
+    {
+      "id": "n_101",
+      "concept": "Jonathan Ross's experience at Groq and perseverance through difficult challenges",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004585157198545003"
+      ]
+    },
+    {
+      "id": "n_102",
+      "concept": "Nvidia acquiring a talented team with strong leadership",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004585157198545003"
+      ]
+    },
+    {
+      "id": "n_103",
+      "concept": "Jonathan Ross spending time in the wilderness and enduring hardship at Groq",
+      "type": "inference",
+      "grounding": [
+        "tweet-2004585157198545003"
+      ]
+    },
+    {
+      "id": "n_104",
+      "concept": "his qualification to lead Nvidia's team",
+      "type": "inference",
+      "grounding": [
+        "tweet-2004585157198545003"
+      ]
+    },
+    {
+      "id": "n_105",
+      "concept": "inference disaggregating into prefill and decode",
+      "type": "inference",
+      "grounding": [
+        "tweet-2004562536918598000"
+      ]
+    },
+    {
+      "id": "n_106",
+      "concept": "Nvidia acquiring Groq",
+      "type": "inference",
+      "grounding": [
+        "tweet-2004562536918598000"
+      ]
+    },
+    {
+      "id": "n_107",
+      "concept": "SRAM architectures",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004562536918598000"
+      ]
+    },
+    {
+      "id": "n_108",
+      "concept": "decode performance advantages for memory bandwidth-constrained workloads",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2004562536918598000"
+      ]
+    },
+    {
+      "id": "n_109",
+      "concept": "Starlink v3 power level of 20 kilowatts",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-1998854525609033950"
+      ]
+    },
+    {
+      "id": "n_110",
+      "concept": "thermal dissipation issues",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-1998854525609033950"
+      ]
+    },
+    {
+      "id": "n_111",
+      "concept": "Starship lift capacity of 10-15 megawatts to sun-synchronous orbit per flight",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998854525609033950"
+      ]
+    },
+    {
+      "id": "n_112",
+      "concept": "ability to deploy high-power AI satellites",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998854525609033950"
+      ]
+    },
+    {
+      "id": "n_113",
+      "concept": "having a strong track record",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-1998844150255595763"
+      ]
+    },
+    {
+      "id": "n_114",
+      "concept": "being comparable to Elon Musk",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-1998844150255595763"
+      ]
+    },
+    {
+      "id": "n_115",
+      "concept": "lacking Elon Musk's track record",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998844150255595763"
+      ]
+    },
+    {
+      "id": "n_116",
+      "concept": "not being at Elon's level despite intelligence",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998844150255595763"
+      ]
+    },
+    {
+      "id": "n_117",
+      "concept": "Elon operating two of the largest coherent GPU clusters in the world",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998838018669686931"
+      ]
+    },
+    {
+      "id": "n_118",
+      "concept": "datacenters in space are physically and engineering feasible",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998838018669686931"
+      ]
+    },
+    {
+      "id": "n_119",
+      "concept": "SpaceX being responsible for over 90% of mass to orbit",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998838018669686931"
+      ]
+    },
+    {
+      "id": "n_120",
+      "concept": "those commentators are wrong about physics and engineering feasibility",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998838018669686931"
+      ]
+    },
+    {
+      "id": "n_121",
+      "concept": "confident commentary dismissing space datacenters",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998838018669686931"
+      ]
+    },
+    {
+      "id": "n_122",
+      "concept": "being the low cost producer",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-1998774569407291445"
+      ]
+    },
+    {
+      "id": "n_123",
+      "concept": "competitive advantage in AI",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-1998774569407291445"
+      ]
+    },
+    {
+      "id": "n_124",
+      "concept": "xAI's approach/strategy",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998774569407291445"
+      ]
+    },
+    {
+      "id": "n_125",
+      "concept": "likelihood of being first to market with Blackwell model",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998774569407291445"
+      ]
+    },
+    {
+      "id": "n_126",
+      "concept": "AI as investment focus",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-1998774569407291445"
+      ]
+    },
+    {
+      "id": "n_127",
+      "concept": "relevance of low cost producer advantage",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-1998774569407291445"
+      ]
+    },
+    {
+      "id": "n_128",
+      "concept": "visual summary quality",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998490592742187102"
+      ]
+    },
+    {
+      "id": "n_129",
+      "concept": "credibility of AI potential",
+      "type": "inference",
+      "grounding": [
+        "tweet-1998490592742187102"
+      ]
+    },
+    {
+      "id": "n_130",
+      "concept": "seeing this visual summary",
+      "type": "assumption",
+      "grounding": [
+        "tweet-1998490592742187102"
+      ]
+    },
+    {
+      "id": "n_131",
+      "concept": "belief that AI is worth considering",
+      "type": "assumption",
+      "grounding": [
+        "tweet-1998490592742187102"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_0",
+      "to": "n_1",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026737755703615831"
+      ]
+    },
+    {
+      "from": "n_2",
+      "to": "n_3",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026734915283193857"
+      ]
+    },
+    {
+      "from": "n_4",
+      "to": "n_5",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026013010502795362"
+      ]
+    },
+    {
+      "from": "n_6",
+      "to": "n_7",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2025983189404078116"
+      ]
+    },
+    {
+      "from": "n_8",
+      "to": "n_7",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2025983189404078116"
+      ]
+    },
+    {
+      "from": "n_9",
+      "to": "n_10",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2025981907767284143"
+      ]
+    },
+    {
+      "from": "n_11",
+      "to": "n_12",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2025980552302518630"
+      ]
+    },
+    {
+      "from": "n_13",
+      "to": "n_14",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2025980552302518630"
+      ]
+    },
+    {
+      "from": "n_15",
+      "to": "n_16",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2025980552302518630"
+      ]
+    },
+    {
+      "from": "n_17",
+      "to": "n_18",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2025597599533629572"
+      ]
+    },
+    {
+      "from": "n_19",
+      "to": "n_20",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2025597599533629572"
+      ]
+    },
+    {
+      "from": "n_21",
+      "to": "n_22",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2024567441930829979"
+      ]
+    },
+    {
+      "from": "n_23",
+      "to": "n_24",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2023502053209956763"
+      ]
+    },
+    {
+      "from": "n_25",
+      "to": "n_26",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2023465420943208607"
+      ]
+    },
+    {
+      "from": "n_27",
+      "to": "n_28",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2021962424140935578"
+      ]
+    },
+    {
+      "from": "n_29",
+      "to": "n_30",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2021961204298850556"
+      ]
+    },
+    {
+      "from": "n_31",
+      "to": "n_32",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2021937035083493667"
+      ]
+    },
+    {
+      "from": "n_33",
+      "to": "n_32",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2021937035083493667"
+      ]
+    },
+    {
+      "from": "n_34",
+      "to": "n_35",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2021937035083493667"
+      ]
+    },
+    {
+      "from": "n_36",
+      "to": "n_37",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2019795386085290240"
+      ]
+    },
+    {
+      "from": "n_38",
+      "to": "n_39",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2018297954780475712"
+      ]
+    },
+    {
+      "from": "n_40",
+      "to": "n_39",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2018297954780475712"
+      ]
+    },
+    {
+      "from": "n_41",
+      "to": "n_42",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2017308723727786310"
+      ]
+    },
+    {
+      "from": "n_43",
+      "to": "n_44",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2017308723727786310"
+      ]
+    },
+    {
+      "from": "n_45",
+      "to": "n_46",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2017308127234814015"
+      ]
+    },
+    {
+      "from": "n_47",
+      "to": "n_48",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2017231599813722539"
+      ]
+    },
+    {
+      "from": "n_49",
+      "to": "n_50",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2017231599813722539"
+      ]
+    },
+    {
+      "from": "n_51",
+      "to": "n_52",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2016985177990320385"
+      ]
+    },
+    {
+      "from": "n_53",
+      "to": "n_54",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2016985177990320385"
+      ]
+    },
+    {
+      "from": "n_55",
+      "to": "n_56",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2016985177990320385"
+      ]
+    },
+    {
+      "from": "n_57",
+      "to": "n_58",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2016985175909961811"
+      ]
+    },
+    {
+      "from": "n_59",
+      "to": "n_60",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2016985175909961811"
+      ]
+    },
+    {
+      "from": "n_61",
+      "to": "n_62",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2016985175909961811"
+      ]
+    },
+    {
+      "from": "n_63",
+      "to": "n_64",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2015176218094571920"
+      ]
+    },
+    {
+      "from": "n_65",
+      "to": "n_66",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2015173495999623608"
+      ]
+    },
+    {
+      "from": "n_67",
+      "to": "n_68",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2015173495999623608"
+      ]
+    },
+    {
+      "from": "n_69",
+      "to": "n_70",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2015173495999623608"
+      ]
+    },
+    {
+      "from": "n_71",
+      "to": "n_72",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2011455562102575603"
+      ]
+    },
+    {
+      "from": "n_73",
+      "to": "n_74",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2011421526722023889"
+      ]
+    },
+    {
+      "from": "n_75",
+      "to": "n_76",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2011421526722023889"
+      ]
+    },
+    {
+      "from": "n_77",
+      "to": "n_78",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2008579210508726467"
+      ]
+    },
+    {
+      "from": "n_79",
+      "to": "n_80",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2008262963749417166"
+      ]
+    },
+    {
+      "from": "n_81",
+      "to": "n_82",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2007932979767640110"
+      ]
+    },
+    {
+      "from": "n_83",
+      "to": "n_84",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2007820458368946649"
+      ]
+    },
+    {
+      "from": "n_85",
+      "to": "n_86",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2004708683490459925"
+      ]
+    },
+    {
+      "from": "n_87",
+      "to": "n_88",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2004708683490459925"
+      ]
+    },
+    {
+      "from": "n_89",
+      "to": "n_90",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2004655651537256784"
+      ]
+    },
+    {
+      "from": "n_91",
+      "to": "n_92",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2004641913073467876"
+      ]
+    },
+    {
+      "from": "n_93",
+      "to": "n_94",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2004641337388466574"
+      ]
+    },
+    {
+      "from": "n_95",
+      "to": "n_96",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2004641337388466574"
+      ]
+    },
+    {
+      "from": "n_97",
+      "to": "n_98",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2004587764055163249"
+      ]
+    },
+    {
+      "from": "n_99",
+      "to": "n_100",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2004587764055163249"
+      ]
+    },
+    {
+      "from": "n_101",
+      "to": "n_102",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2004585157198545003"
+      ]
+    },
+    {
+      "from": "n_103",
+      "to": "n_104",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2004585157198545003"
+      ]
+    },
+    {
+      "from": "n_105",
+      "to": "n_106",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2004562536918598000"
+      ]
+    },
+    {
+      "from": "n_107",
+      "to": "n_108",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2004562536918598000"
+      ]
+    },
+    {
+      "from": "n_109",
+      "to": "n_110",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-1998854525609033950"
+      ]
+    },
+    {
+      "from": "n_111",
+      "to": "n_112",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-1998854525609033950"
+      ]
+    },
+    {
+      "from": "n_113",
+      "to": "n_114",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-1998844150255595763"
+      ]
+    },
+    {
+      "from": "n_115",
+      "to": "n_116",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-1998844150255595763"
+      ]
+    },
+    {
+      "from": "n_117",
+      "to": "n_118",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-1998838018669686931"
+      ]
+    },
+    {
+      "from": "n_119",
+      "to": "n_118",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-1998838018669686931"
+      ]
+    },
+    {
+      "from": "n_120",
+      "to": "n_121",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-1998838018669686931"
+      ]
+    },
+    {
+      "from": "n_122",
+      "to": "n_123",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-1998774569407291445"
+      ]
+    },
+    {
+      "from": "n_124",
+      "to": "n_125",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-1998774569407291445"
+      ]
+    },
+    {
+      "from": "n_126",
+      "to": "n_127",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-1998774569407291445"
+      ]
+    },
+    {
+      "from": "n_128",
+      "to": "n_129",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-1998490592742187102"
+      ]
+    },
+    {
+      "from": "n_130",
+      "to": "n_131",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-1998490592742187102"
+      ]
+    }
+  ],
+  "extractedAt": "2026-03-04T11:22:26.787Z"
+}

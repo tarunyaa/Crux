@@ -1,345 +1,153 @@
 [
   {
-    "id": "tweet-2020600669754016236",
-    "content": "Hi @cerebras , can u have cooler models like Kimi K2.5 or DeepSeek? ppl are willing to pay premium if fast agentic coding but looks like your stack is not currently capable of deploying an 1T model yet. https://t.co/WjpZEekBUi https://t.co/DGW2dcMw8H",
-    "source": "https://x.com/SemiAnalysis_/status/2020600669754016236",
-    "date": "2026-02-08T20:48:35.000Z",
+    "id": "tweet-2029029214347833714",
+    "content": "Dinosaurs Died So You Could Render Dinosaurs https://t.co/CfVd71gvrk",
+    "source": "https://x.com/SemiAnalysis_/status/2029029214347833714",
+    "date": "2026-03-04T03:00:36.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 509,
-      "retweets": 8,
-      "replies": 32
-    }
-  },
-  {
-    "id": "tweet-2020286581672681779",
-    "content": "123456️⃣7️⃣ https://t.co/6IKJQZAWGd",
-    "source": "https://x.com/SemiAnalysis_/status/2020286581672681779",
-    "date": "2026-02-08T00:00:30.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 35,
-      "retweets": 0,
-      "replies": 3
-    }
-  },
-  {
-    "id": "tweet-2019903041357668512",
-    "content": "Letem cook https://t.co/VGXh8HDPtK",
-    "source": "https://x.com/SemiAnalysis_/status/2019903041357668512",
-    "date": "2026-02-06T22:36:27.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 51,
+      "likes": 65,
       "retweets": 2,
-      "replies": 2
+      "replies": 6
     }
   },
   {
-    "id": "tweet-2019830692578840808",
-    "content": "Memory Mania: How a Once-in-Four-Decades Shortage Is Fueling a Memory Boom,\nPrices are doubling again, \nSupercycle is bigger, \nand could last longer than you think.\nhttps://t.co/5mIBKY1PBL",
-    "source": "https://x.com/SemiAnalysis_/status/2019830692578840808",
-    "date": "2026-02-06T17:48:58.000Z",
+    "id": "tweet-2028976904561180873",
+    "content": "NVIDIA's first GPU on TSMC 3nm shows an unexpected area increase compared to 4nm Blackwell!\n\nThanks to @Kurnalsalts, the NVIDIA GB10 dieshot shows that GPC (12SM) area increased 12.5%, TPC area increased 16.7%, and SM area increased by 13.5%. NVIDIA has confirmed multiple times https://t.co/97F2pF07wV",
+    "source": "https://x.com/SemiAnalysis_/status/2028976904561180873",
+    "date": "2026-03-03T23:32:45.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 291,
-      "retweets": 48,
-      "replies": 12
+      "likes": 309,
+      "retweets": 27,
+      "replies": 23
     }
   },
   {
-    "id": "tweet-2019773434050301998",
-    "content": "Subscribe to ChipBook and monitor additional production and ASP data. (2/2)\nhttps://t.co/geycIFHBmg",
-    "source": "https://x.com/SemiAnalysis_/status/2019773434050301998",
-    "date": "2026-02-06T14:01:26.000Z",
+    "id": "tweet-2028953697388994787",
+    "content": "Due to optimizations in AMD's MoRI inference communication library &amp; better kernels AMD performance has 1.5x in the span of 30 days. These optimizations for MoE dispatch, MoE combine, kvcache transfer comms have been upstreamed in SGLang for everyone to use in PR 17012, 14626, https://t.co/0Kpwvmtv5X",
+    "source": "https://x.com/SemiAnalysis_/status/2028953697388994787",
+    "date": "2026-03-03T22:00:32.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 6,
+      "likes": 121,
+      "retweets": 11,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2028886238644556103",
+    "content": "@__tinygrad__ @AnushElangovan Great work to king  @anushelangovan ! Next step is AMD needs to open source gemmologist, their gemm SOL modelling code so that developer know how optimized their kernels are",
+    "source": "https://x.com/SemiAnalysis_/status/2028886238644556103",
+    "date": "2026-03-03T17:32:28.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 11,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2028855587568800030",
+    "content": "Are AI Datacenters increasing the electric bill of all American households?\nPower prices misconception,\nPJM's poor market design, \nCapacity prices 9.3x growth,\nERCOT vs PJM grid reliability and expansion\n\n@TradeADMIS  @ash_locked \nhttps://t.co/8rmrx8J9Wu",
+    "source": "https://x.com/SemiAnalysis_/status/2028855587568800030",
+    "date": "2026-03-03T15:30:41.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 93,
+      "retweets": 12,
+      "replies": 6
+    }
+  },
+  {
+    "id": "tweet-2028833183739900009",
+    "content": "Subscribe to ChipBook and monitor your ABF substrate related investments:\nhttps://t.co/geycIFHBmg (2/2)",
+    "source": "https://x.com/SemiAnalysis_/status/2028833183739900009",
+    "date": "2026-03-03T14:01:39.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 3,
       "retweets": 0,
       "replies": 0
     }
   },
   {
-    "id": "tweet-2019773432557142423",
-    "content": "Taiwan server production was stable at historically high levels for much of 2025, but most recently - ASPs on those units skyrocketed +280% YoY and +140% sequentially as new server SKUs continue to ramp. (1/2)🧵 https://t.co/DBCQA7pWEf",
-    "source": "https://x.com/SemiAnalysis_/status/2019773432557142423",
-    "date": "2026-02-06T14:01:26.000Z",
+    "id": "tweet-2028833182619951452",
+    "content": "Everyone is talking about the growth in the ABF substrate market. Taiwan production data offers valuable insight into the durability of this expansion, and importantly, where current demand sits relative to prior substrate cycles. (1/2) 🧵 https://t.co/eu0vlXWrfy",
+    "source": "https://x.com/SemiAnalysis_/status/2028833182619951452",
+    "date": "2026-03-03T14:01:39.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 59,
-      "retweets": 4,
-      "replies": 5
-    }
-  },
-  {
-    "id": "tweet-2019561677369335824",
-    "content": "We put out a Core Research article ~6 weeks ago highlighting the logic behind the imminent ABF bottleneck, while calling out AT&amp;S $ATS and some of the other key beneficiaries.\n\nThose who listened then would be up +66% by now. https://t.co/8MD0qRfVgE https://t.co/ePUDkW7xjt",
-    "source": "https://x.com/SemiAnalysis_/status/2019561677369335824",
-    "date": "2026-02-06T00:00:00.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 69,
-      "retweets": 5,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019487480710303771",
-    "content": "Claude Code is the Inflection Point,\nWhat It Is,\nHow We Use It,\nIndustry Repercussions,\nMicrosoft's Dilemma,\nWhy Anthropic Is Winning. \nhttps://t.co/VIuF5Qohf5",
-    "source": "https://x.com/SemiAnalysis_/status/2019487480710303771",
-    "date": "2026-02-05T19:05:10.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 980,
-      "retweets": 123,
-      "replies": 24
-    }
-  },
-  {
-    "id": "tweet-2019471105682002313",
-    "content": "Due to the Agent Swarm innovation, Kimi K2.5 Agent feels so much better! Instead of trying to increase the interactivity via more memory bandwidth, the 10x cracked Chinese engineers take a different approach by dividing an task into any parallel subtasks such that they can https://t.co/YoTDebmTjz",
-    "source": "https://x.com/SemiAnalysis_/status/2019471105682002313",
-    "date": "2026-02-05T18:00:06.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 354,
-      "retweets": 30,
-      "replies": 12
-    }
-  },
-  {
-    "id": "tweet-2019410942191145216",
-    "content": "Want to track lithography movements monthly? Sign up here to ChipBook. (2/2)\nhttps://t.co/geycIFHBmg",
-    "source": "https://x.com/SemiAnalysis_/status/2019410942191145216",
-    "date": "2026-02-05T14:01:02.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 0,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019410940848931084",
-    "content": "The ChipBook monitors global movements of lithography equipment as a key leading indicator for capacity expansions across geographies, most recently the largest uptick in deliveries has been to China, more so than Taiwan and Korea. (1/2)🧵 https://t.co/opwE6Um8l9",
-    "source": "https://x.com/SemiAnalysis_/status/2019410940848931084",
-    "date": "2026-02-05T14:01:01.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 39,
-      "retweets": 7,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019199331610333267",
-    "content": "In it, we describe four levels of autonomy (intelligent pick and place, autonomous mobility, low-skill manipulation, and force-dependent tasks) for general purpose robots, which we hope provides a more nuanced view for how to categorize recent progress in robotics. (2/2)",
-    "source": "https://x.com/SemiAnalysis_/status/2019199331610333267",
-    "date": "2026-02-05T00:00:10.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 14,
-      "retweets": 1,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019199328011644956",
-    "content": "If you go to the website rentahuman, you can have an AI agent “rent” a person to do tasks in the real world for it. However, if you wanted to instead rent a robot to do those tasks for you, then you should check out our post on “Robotics Levels of Autonomy” below. (1/2)🧵 https://t.co/NlFsYLjAxP",
-    "source": "https://x.com/SemiAnalysis_/status/2019199328011644956",
-    "date": "2026-02-05T00:00:09.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 24,
+      "likes": 45,
       "retweets": 3,
       "replies": 3
     }
   },
   {
-    "id": "tweet-2019109039372726288",
-    "content": "The third year of Jensen’s Annual AI supply chain dinner in Taiwan. The participants are executives and leaders of Nvidia’s supply chain partners, and the list has grown even bigger this year. The media dub the dinner as the “Trillion Dollar Dinner”, teasing the importance of https://t.co/4dwKSY5hLf",
-    "source": "https://x.com/SemiAnalysis_/status/2019109039372726288",
-    "date": "2026-02-04T18:01:22.000Z",
+    "id": "tweet-2028651999600758875",
+    "content": "Full article: (2/2) https://t.co/T4BDey05M8",
+    "source": "https://x.com/SemiAnalysis_/status/2028651999600758875",
+    "date": "2026-03-03T02:01:41.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 173,
-      "retweets": 17,
-      "replies": 5
-    }
-  },
-  {
-    "id": "tweet-2019048569437667817",
-    "content": "Subscribe to ChipBook and stay on top of China capacity expansion developments. (2/2) https://t.co/geycIFHBmg",
-    "source": "https://x.com/SemiAnalysis_/status/2019048569437667817",
-    "date": "2026-02-04T14:01:05.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 2,
+      "likes": 4,
       "retweets": 0,
       "replies": 0
     }
   },
   {
-    "id": "tweet-2019048568024129560",
-    "content": "China experienced a massive surge in ion implanter demand through 2023–2024, fueled by aggressive silicon carbide (SiC) capacity expansion and a broader push for domestic semiconductor self-sufficiency. However, following the SiC market correction and a cooling off of overall fab https://t.co/0PdW2jsfiX",
-    "source": "https://x.com/SemiAnalysis_/status/2019048568024129560",
-    "date": "2026-02-04T14:01:05.000Z",
+    "id": "tweet-2028651998644437183",
+    "content": "Gen Z friendly InferenceX summary. (1/2)🧵 https://t.co/vceGCuCWo9",
+    "source": "https://x.com/SemiAnalysis_/status/2028651998644437183",
+    "date": "2026-03-03T02:01:41.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 33,
-      "retweets": 5,
-      "replies": 3
-    }
-  },
-  {
-    "id": "tweet-2018867125490774067",
-    "content": "The default UI visuals of Kimi K2.5 is much better than Claude Code! Claude Code gives off the infamous purple hue by default that looks ugly while Kimi K2.5 default generates an much more cleaner UI. https://t.co/4SdXdq7Y4q",
-    "source": "https://x.com/SemiAnalysis_/status/2018867125490774067",
-    "date": "2026-02-04T02:00:06.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 54,
-      "retweets": 0,
-      "replies": 4
-    }
-  },
-  {
-    "id": "tweet-2018806826502865334",
-    "content": "Jensen framed a benchmark: about $50B of capex for a 1GW datacenter. That number belongs in the same mental shelf as iconic public works. The Golden Gate Bridge cost roughly $35M in the 1930s and opened in 1937. It still carries daily life nearly a century later. Both types of https://t.co/Z5yeNC7BZy",
-    "source": "https://x.com/SemiAnalysis_/status/2018806826502865334",
-    "date": "2026-02-03T22:00:29.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 89,
-      "retweets": 13,
-      "replies": 8
-    }
-  },
-  {
-    "id": "tweet-2018746605340410293",
-    "content": "Subscribe to ChipBook and stay on top of Inspection equipment imports globally. (2/2)\nhttps://t.co/geycIFHBmg",
-    "source": "https://x.com/SemiAnalysis_/status/2018746605340410293",
-    "date": "2026-02-03T18:01:11.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 1,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2018746604149239892",
-    "content": "China inspection equipment imports reached record levels in mid 2025, but have since begun to normalize. The slowdown in imports is more pronounced in imports from Singapore and the USA (KLA &amp; ONTO) than imports from Israel (Nova &amp; Camtek). (1/2)🧵 https://t.co/B7Nlo0sE8l",
-    "source": "https://x.com/SemiAnalysis_/status/2018746604149239892",
-    "date": "2026-02-03T18:01:11.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 45,
-      "retweets": 7,
+      "likes": 94,
+      "retweets": 6,
       "replies": 6
     }
   },
   {
-    "id": "tweet-2018504812325634317",
-    "content": "Shoutout to @elonmusk's Colossus 2 being more environmentally friendly than @innoutburger!!! CRAZY😭 (Video Credits: @pleometric) https://t.co/WO6IewRSBS",
-    "source": "https://x.com/SemiAnalysis_/status/2018504812325634317",
-    "date": "2026-02-03T02:00:23.000Z",
+    "id": "tweet-2028591299050217709",
+    "content": "SERIOUS &amp; PROFESSIONAL: The extreme register pressure did not let up on Hopper, which motivated Blackwell to include Tensor Memory (TMEM), a new piece of memory specialized for Tensor Core operations. On every SM, TMEM has 128 rows (lanes) and 512 columns of 4-byte cells, https://t.co/7nMO0fBrpG",
+    "source": "https://x.com/SemiAnalysis_/status/2028591299050217709",
+    "date": "2026-03-02T22:00:29.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 223,
-      "retweets": 18,
+      "likes": 148,
+      "retweets": 13,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2028530968655495678",
+    "content": "At the same time, AI appears to follow Jevons’ Paradox. As chips become more efficient and the cost per token declines, usage expands through larger models, longer context windows, more inference queries, and entirely new AI driven applications. The net effect is that chip level https://t.co/4Xe0T7hG6L",
+    "source": "https://x.com/SemiAnalysis_/status/2028530968655495678",
+    "date": "2026-03-02T18:00:45.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 134,
+      "retweets": 12,
+      "replies": 6
+    }
+  },
+  {
+    "id": "tweet-2028530967095152739",
+    "content": "NVIDIA frames each new generation, Hopper, Blackwell, and Rubin, as delivering substantial gains in compute efficiency, and the data supports that characterization. While TDP increases with each generation, peak FLOPs rise much faster. From Hopper to Blackwell, dense FP8 compute https://t.co/2pEsdXEfqj",
+    "source": "https://x.com/SemiAnalysis_/status/2028530967095152739",
+    "date": "2026-03-02T18:00:45.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 465,
+      "retweets": 43,
       "replies": 12
     }
   },
   {
-    "id": "tweet-2018443518436421833",
-    "content": "REUTERS: \"OpenAI is unsatisfied with some Nvidia chips and looking for alternatives, sources say\" https://t.co/cEaSO1mpPS",
-    "source": "https://x.com/SemiAnalysis_/status/2018443518436421833",
-    "date": "2026-02-02T21:56:50.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 614,
-      "retweets": 25,
-      "replies": 42
-    }
-  },
-  {
-    "id": "tweet-2018431091808293255",
-    "content": "Chat, is the same person that put out the reassuring NVIDIA PR telling everyone to keep calm also in charge of Oracle's twitter account? https://t.co/wlmHDhkjDS https://t.co/4G1NOtZGFY",
-    "source": "https://x.com/SemiAnalysis_/status/2018431091808293255",
-    "date": "2026-02-02T21:07:27.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 203,
-      "retweets": 10,
-      "replies": 5
-    }
-  },
-  {
-    "id": "tweet-2018383969599783348",
-    "content": "What are the other hyperscalers up to in the region? What's the next country to blow up? Our Datacenter Model subscribers will find this out before anyone else, come get ahead of the market! (5/5) https://t.co/EeBYF4i2ve",
-    "source": "https://x.com/SemiAnalysis_/status/2018383969599783348",
-    "date": "2026-02-02T18:00:12.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 8,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2018383967943090369",
-    "content": "Neoclouds are now finding a new overseas home too! We've identified over 100MW of near-term capacity, and Firmus is even planning 1.6GW with Nvidia across the region. These neoclouds set the stage for what's to come: massive AI workload demand. (4/5)",
-    "source": "https://x.com/SemiAnalysis_/status/2018383967943090369",
-    "date": "2026-02-02T18:00:12.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 16,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2018383965824987197",
-    "content": "OpenAI announced its first Australian presence: an MoU with NextDC for the S7 facility in Sydney. This is OpenAI changing strategy and going direct to market rather than the typical third-party providers. We expect them to scale up further here too. (3/5) https://t.co/l4efzAAykR",
-    "source": "https://x.com/SemiAnalysis_/status/2018383965824987197",
-    "date": "2026-02-02T18:00:11.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 15,
-      "retweets": 0,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2018383964193374247",
-    "content": "AWS is planning over 1GW, and most of it for Anthropic in Melbourne. This is just one part of Anthropic's international strategy to resolve data locality issues, and they've even deployed Trainium in Australia! Wouldn't you like to know where. 😉 (pic unrelated) (2/5) https://t.co/GHyvqLVTYR",
-    "source": "https://x.com/SemiAnalysis_/status/2018383964193374247",
-    "date": "2026-02-02T18:00:11.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 25,
-      "retweets": 2,
-      "replies": 3
-    }
-  },
-  {
-    "id": "tweet-2018383963056636359",
-    "content": "Australia's datacenter market is blowing up! Major hyperscalers making massive moves, and leased capacity is set to triple over the coming years. Our datacenter model subscribers found out weeks ago, so now twitter gets to learn. (1/5)🧵 https://t.co/nOxOF5CDoV",
-    "source": "https://x.com/SemiAnalysis_/status/2018383963056636359",
-    "date": "2026-02-02T18:00:11.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 89,
-      "retweets": 13,
-      "replies": 4
-    }
-  },
-  {
-    "id": "tweet-2018323735581737338",
-    "content": "Subscribe to ChipBook and stay on top of capacity expansions globally and supply chain winners. (2/2) https://t.co/geycIFHBmg",
-    "source": "https://x.com/SemiAnalysis_/status/2018323735581737338",
-    "date": "2026-02-02T14:00:51.000Z",
+    "id": "tweet-2028470630132122087",
+    "content": "Subscribe to ChipBook and be up do take on the latest Auto Supply chain data:\nhttps://t.co/geycIFHBmg (3/3)",
+    "source": "https://x.com/SemiAnalysis_/status/2028470630132122087",
+    "date": "2026-03-02T14:01:00.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 2,
@@ -348,622 +156,34 @@
     }
   },
   {
-    "id": "tweet-2018323733761380592",
-    "content": "Key equipment Imports to Korea are on the rise, as Korea fabs continue to expand capacity in an attempt to keep up with increasing memory demand. (1/2) 🧵 https://t.co/r6pAmNpmUy",
-    "source": "https://x.com/SemiAnalysis_/status/2018323733761380592",
-    "date": "2026-02-02T14:00:51.000Z",
+    "id": "tweet-2028470628680937580",
+    "content": "At a more granular level, the data allows us to pinpoint where the decline in EV imports is most concentrated, and where Hybrid Vehicle import growth is accelerating most meaningfully. (2/3) https://t.co/IbqAFFli6H",
+    "source": "https://x.com/SemiAnalysis_/status/2028470628680937580",
+    "date": "2026-03-02T14:00:59.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 82,
-      "retweets": 10,
-      "replies": 3
-    }
-  },
-  {
-    "id": "tweet-2018072496117854627",
-    "content": "A couple days ago, Nvidia has accepted AWS's patch for NVIDIA's inference KV Cache transfer library to allow for interop over EFA between NVIDIA GPUs &amp; Trainium Chips. What this means is AWS can do inference prefill on small scale up machines like NVIDIA HGX while doing inference https://t.co/Nzf8rkAXqq",
-    "source": "https://x.com/SemiAnalysis_/status/2018072496117854627",
-    "date": "2026-02-01T21:22:31.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 318,
-      "retweets": 30,
-      "replies": 10
-    }
-  },
-  {
-    "id": "tweet-2017719649815679382",
-    "content": "Finally, there is an option to split CX-8 NICs into 100G lanes for a total of 8-lanes, though such deployments are done only by hyperscalers. While GB200 GPUs are typically paired with CX-7 NICs, some hyperscalers have been able to replace 400G CX-7 NICs with 800G CX-8 NICs. https://t.co/5l13QI7khQ",
-    "source": "https://x.com/SemiAnalysis_/status/2017719649815679382",
-    "date": "2026-01-31T22:00:26.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 10,
-      "retweets": 0,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2017719648142160039",
-    "content": "Newer ethernet clusters introduce network planes into the networking architecture, where each NIC can be split into several lanes. In the case of the average GB300 Spectrum-X reference deployment, each CX-8 NIC is split into 4x200G lanes and each SN5610 switch has 256x 200G https://t.co/CAtfP3dySG",
-    "source": "https://x.com/SemiAnalysis_/status/2017719648142160039",
-    "date": "2026-01-31T22:00:26.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 6,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2017719646292496784",
-    "content": "However, this is likely not the case for the typical GB300 Infiniband deployment because X800-Q3400 (RA) switches with a higher total per switch bandwidth of 115.2T will be used instead of the QM9700. Furthermore, while the GB200 switch deployment consists of underutilized https://t.co/W2EilXXEPA",
-    "source": "https://x.com/SemiAnalysis_/status/2017719646292496784",
-    "date": "2026-01-31T22:00:25.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 4,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2017719644287590834",
-    "content": "A 36,864-GPU Infiniband cluster consisting of 4 rails and 3 layers can support 9.76 GPUs per QM9700 Switch (25.6T per Switch). For the same cluster size and type, assuming that we swap all GB200 chips for GB300 chips, the number GPUs that can be supported per QM9700 Switch https://t.co/Xx4QnsQ7yq",
-    "source": "https://x.com/SemiAnalysis_/status/2017719644287590834",
-    "date": "2026-01-31T22:00:25.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 24,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2017719643012559008",
-    "content": "Before we dive into several examples of how architecture influences networking costs, we define the following terminology used to describe networking clusters: \n\n🟠Network layers: Number of switch layers required to connect all GPUs within the same cluster, typically 2 or 3",
-    "source": "https://x.com/SemiAnalysis_/status/2017719643012559008",
-    "date": "2026-01-31T22:00:24.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 16,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2017719641863258501",
-    "content": "Backend networking architecture is instrumental to networking ownership cost analysis. How does networking architecture matter for networking ownership costs? In general, we observe the following trends: \n\n🟠Hyperscalers typically get preferential terms on networking equipment",
-    "source": "https://x.com/SemiAnalysis_/status/2017719641863258501",
-    "date": "2026-01-31T22:00:24.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 74,
-      "retweets": 11,
-      "replies": 4
-    }
-  },
-  {
-    "id": "tweet-2017417584023306333",
-    "content": "As AI and HPC systems continue to increase rack-level power density, per-rack power demand has grown from the traditional 10–20 kW to 100+ kW. Under conventional AC and 48V DC power architectures, this increase results in extremely high distribution currents, causing significant https://t.co/rPLxB1RRvs",
-    "source": "https://x.com/SemiAnalysis_/status/2017417584023306333",
-    "date": "2026-01-31T02:00:08.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 100,
-      "retweets": 20,
-      "replies": 6
-    }
-  },
-  {
-    "id": "tweet-2017357302970335283",
-    "content": "IMPORTANT: NVIDIA just announced the ability for their new BlueField-4 DPU to control 8 CX-9 backend NICs allowing for unified management of both frontend north-south network &amp; backend high speed east-west networks. The only issue with this is that DPUs are mainly seen as an cost https://t.co/hNhx92r0ix",
-    "source": "https://x.com/SemiAnalysis_/status/2017357302970335283",
-    "date": "2026-01-30T22:00:36.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 174,
-      "retweets": 15,
-      "replies": 11
-    }
-  },
-  {
-    "id": "tweet-2017296973175435374",
-    "content": "Toto has leveraged decades of advanced ceramics expertise to engineer ESCs that maintain tight thermal uniformity, minimize particle generation, withstand harsh plasmas and process gases, and remain ultra-flat across thousands of process cycles. Even small deviations in chuck",
-    "source": "https://x.com/SemiAnalysis_/status/2017296973175435374",
-    "date": "2026-01-30T18:00:52.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 22,
+      "likes": 7,
       "retweets": 1,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2017296971690541488",
-    "content": "Even Toto, the world’s premier toilet manufacturer, has been benefitting from the memory cycle! No, not because procurement teams are cr**ping themselves over their next round of their DRAM contract negotiations. but because Toto is a leading supplier of electrostatic chucks https://t.co/5PWu6bJ1kl",
-    "source": "https://x.com/SemiAnalysis_/status/2017296971690541488",
-    "date": "2026-01-30T18:00:52.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 55,
-      "retweets": 4,
-      "replies": 5
-    }
-  },
-  {
-    "id": "tweet-2017263152535339393",
-    "content": "@rwang07 Lfg",
-    "source": "https://x.com/SemiAnalysis_/status/2017263152535339393",
-    "date": "2026-01-30T15:46:29.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 2,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2017236821076263276",
-    "content": "Want to learn more? Sign up here: https://t.co/geycIFHBmg (3/3)",
-    "source": "https://x.com/SemiAnalysis_/status/2017236821076263276",
-    "date": "2026-01-30T14:01:51.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 8,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2017236819788603853",
-    "content": "Additionally, as Intel ramps advanced packaging production in Malaysia, we can keep an eye on their develops via HBM shipments to that location. (2/3) https://t.co/j7QZFjryG0",
-    "source": "https://x.com/SemiAnalysis_/status/2017236819788603853",
-    "date": "2026-01-30T14:01:50.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 48,
-      "retweets": 4,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2017236818568138903",
-    "content": "With investors running into key memory names like SKHynix, Samsung and Micron, it is vital to track the progress of HBM shipments to watch for early indications of production slowdowns or continued expansions. (1/3) 🧵 https://t.co/q6webHrXYR",
-    "source": "https://x.com/SemiAnalysis_/status/2017236818568138903",
-    "date": "2026-01-30T14:01:50.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 263,
-      "retweets": 25,
-      "replies": 5
-    }
-  },
-  {
-    "id": "tweet-2017055277154025558",
-    "content": "O(100) tok/s/user interactivity is NOT fast enough. groq/cerebras at O(1000) tok/s/user is not fast enough! Claude Code preferably should run at O(10,000) tok/s/user interactivity. The AI enlightenment is near and Claude Code is only running at O(100) tok/s/user?!?! https://t.co/wbgKhhN4VF",
-    "source": "https://x.com/SemiAnalysis_/status/2017055277154025558",
-    "date": "2026-01-30T02:00:27.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 103,
-      "retweets": 6,
-      "replies": 8
-    }
-  },
-  {
-    "id": "tweet-2016994856682356757",
-    "content": "@WalterIsaacson And as the doomsday narrative of AI-driven job displacement accelerates, it is important to recognize that AI is actually fueling an insatiable demand for industrial roles. Consider the HVAC technicians, construction workers, electricians, and - as this post illustrates - https://t.co/ZSM0K32YoF",
-    "source": "https://x.com/SemiAnalysis_/status/2016994856682356757",
-    "date": "2026-01-29T22:00:22.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 30,
-      "retweets": 1,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016994855386230908",
-    "content": "@WalterIsaacson To summarize, as server costs rise alongside the complexities of silicon, networking gear and cooling systems, the price of a transportation miscalculation - whether through scrap costs or deployment delays - can be staggering. This, in turn, is transforming one of the world’s",
-    "source": "https://x.com/SemiAnalysis_/status/2016994855386230908",
-    "date": "2026-01-29T22:00:22.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 17,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016994853674950905",
-    "content": "However – none of this applies if you’re Elon Musk.\n\nIn the @WalterIsaacson biography – he depicts the Christmas eve ‘heist’ that Musk and his cousins carried out where they cut off the Twitter servers in the Sacramento data center with pocket knives and just loaded the servers https://t.co/4FW4SwQpdH",
-    "source": "https://x.com/SemiAnalysis_/status/2016994853674950905",
-    "date": "2026-01-29T22:00:21.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 26,
-      "retweets": 7,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2016994851670183971",
-    "content": "Upon arrival at the data center - The \"white-glove\" premium-care crew takes over the moment the shipment hits the loading dock, initiating a high-stakes maneuvering process for the 'last-mile'. Using precision rigger lifts (like the autonomous one in the video below - credit to https://t.co/EMS2wkvjDv",
-    "source": "https://x.com/SemiAnalysis_/status/2016994851670183971",
-    "date": "2026-01-29T22:00:21.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 16,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016994849883349306",
-    "content": "You won’t see these servers in a standard semi-trailer. Shipping AI hardware requires Air-Ride Suspension trucks and not the traditional leaf spring system.\n\nStandard cars and trucks transmit every road crack directly to the passengers and cargo. Air-ride trailers \"float\" on https://t.co/NK5sWAUAxg",
-    "source": "https://x.com/SemiAnalysis_/status/2016994849883349306",
-    "date": "2026-01-29T22:00:20.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 23,
-      "retweets": 1,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016994848448929975",
-    "content": "For AI servers and components, moisture is a serious foe. That’s why, during transportation, these racks are sealed in crates with industrial-grade desiccant (a fancy word for the substance inside those silica gel packets you never know what to do with) and occasionally lined https://t.co/Tzr77t3Yzr",
-    "source": "https://x.com/SemiAnalysis_/status/2016994848448929975",
-    "date": "2026-01-29T22:00:20.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 19,
-      "retweets": 1,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016994847026979082",
-    "content": "Unlike Ford Explorers that are made for ruggedness and the great outdoors - AI servers are packed with thousands of costly and sensitive components (think accelerator, HBM stacks, liquid cooling loops etc.) that are hyper-sensitive to any sudden movement. A single hard \"thud\" can https://t.co/5hOsnU2pyt",
-    "source": "https://x.com/SemiAnalysis_/status/2016994847026979082",
-    "date": "2026-01-29T22:00:20.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 34,
-      "retweets": 1,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016994845550662004",
-    "content": "A fully loaded AI rack can weigh up to 3,700 lbs. That’s the weight of a Ford Explorer concentrated into a 2x4 foot footprint. Standard pallets would crush instantly. These AI racks require custom-engineered reinforced bases with shock-absorbent foam just to keep them from https://t.co/2bAtqOoano",
-    "source": "https://x.com/SemiAnalysis_/status/2016994845550662004",
-    "date": "2026-01-29T22:00:19.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 28,
-      "retweets": 2,
-      "replies": 3
-    }
-  },
-  {
-    "id": "tweet-2016994844246241458",
-    "content": "Ever wonder how an Nvidia GB200 NVL72 gets from the factory to the data center? You can’t just throw a state-of-the-art 3,000 lb rack (compared to ~500 lb for CPU-based server) on a standard FedEx truck. Moving AI infrastructure is more like transporting a heart for transplant https://t.co/926wwWwqcA",
-    "source": "https://x.com/SemiAnalysis_/status/2016994844246241458",
-    "date": "2026-01-29T22:00:19.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 218,
-      "retweets": 21,
-      "replies": 8
-    }
-  },
-  {
-    "id": "tweet-2016934547644993736",
-    "content": "Can we please get a fact check @fabknowledge @AnthropicAI https://t.co/gC98Bivecj",
-    "source": "https://x.com/SemiAnalysis_/status/2016934547644993736",
-    "date": "2026-01-29T18:00:43.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 30,
-      "retweets": 1,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016874407675728218",
-    "content": "Want to learn more? Sign up here: https://t.co/geycIFHBmg (2/2)",
-    "source": "https://x.com/SemiAnalysis_/status/2016874407675728218",
-    "date": "2026-01-29T14:01:45.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 1,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2016874406430097611",
-    "content": "Over the past three months, there has been a market spike in Logic IC production in Japan. Likely coming from JASM (Japan Advanced Semiconductor Manufacturing) this is an important dataset to monitor for $TSM production in Japan. (1/2) 🧵 https://t.co/IDw0vhWVID",
-    "source": "https://x.com/SemiAnalysis_/status/2016874406430097611",
-    "date": "2026-01-29T14:01:44.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 40,
-      "retweets": 4,
-      "replies": 3
-    }
-  },
-  {
-    "id": "tweet-2016632528983961848",
-    "content": "In the metrology and inspection market, In the metrology and inspection (M&amp;I) market, KLA stands unrivaled at the top, far ahead of all competitors, driven by its comprehensive product portfolio and long‑standing acquisition strategy.However, in recent years we have seen Onto https://t.co/JAalSor6Zr",
-    "source": "https://x.com/SemiAnalysis_/status/2016632528983961848",
-    "date": "2026-01-28T22:00:36.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 35,
-      "retweets": 1,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016632527671210252",
-    "content": "Why have metrology and inspection become so critical in advanced nodes?\n\n1. Shrinking margin for error:In advanced process nodes, the alignment requirements between layers are extraordinarily tight. Even a slight deviation in metrology can cause interconnects to either break or https://t.co/zcPwT99dQu",
-    "source": "https://x.com/SemiAnalysis_/status/2016632527671210252",
-    "date": "2026-01-28T22:00:36.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 25,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016632525993492706",
-    "content": "Although these two terms are often discussed together, they actually refer to two distinct domains.\n\nMetrology:\nThe core of metrology is accuracy and consistency.\nIt involves ultra‑precise measurements of critical dimensions, film thickness, surface topology, and overlay https://t.co/5WtfFF6B6T",
-    "source": "https://x.com/SemiAnalysis_/status/2016632525993492706",
-    "date": "2026-01-28T22:00:36.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 22,
-      "retweets": 2,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016632524609315164",
-    "content": "When people think about semiconductor manufacturing, many picture highly automated robotic arms and overhead transport systems. However, the true unsung heroes behind high‑volume chip production are metrology and inspection. If you cannot see it, you cannot manufacture it; and if https://t.co/AqjHL5ayES",
-    "source": "https://x.com/SemiAnalysis_/status/2016632524609315164",
-    "date": "2026-01-28T22:00:35.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 131,
-      "retweets": 15,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2016572221385318808",
-    "content": "Tokens are the an unit of intelligence! the more tokens you use, the more intelligence u asborb! https://t.co/16NaQzWyw2",
-    "source": "https://x.com/SemiAnalysis_/status/2016572221385318808",
-    "date": "2026-01-28T18:00:58.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 43,
-      "retweets": 1,
-      "replies": 5
-    }
-  },
-  {
-    "id": "tweet-2016511944027422787",
-    "content": "Want to learn more? Sign up here: https://t.co/geycIFHBmg (3/3)",
-    "source": "https://x.com/SemiAnalysis_/status/2016511944027422787",
-    "date": "2026-01-28T14:01:27.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 4,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2016511942483947804",
-    "content": "However, not all PCB’s are created equal. Within each cycle, some PCB suppliers grow faster (think AI accelerators) while others will grow slower if at all (think auto).\n\nThe ChipBook datasets are helpful in providing a birds-eye view of the totality of the semi industry, but can https://t.co/3XprfMTRO0",
-    "source": "https://x.com/SemiAnalysis_/status/2016511942483947804",
-    "date": "2026-01-28T14:01:26.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 47,
-      "retweets": 5,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016511941049549160",
-    "content": "PCB’s are the core building block of any integrated circuit or electronic device. It doesn’t matter if it’s an Nvidia GPU or the Apple A18, they all get mounted on a PCB.\nTracking the state of the PCB industry is simple yet effective way to understand where we are in the cycle. https://t.co/sUifQrZvyE",
-    "source": "https://x.com/SemiAnalysis_/status/2016511941049549160",
-    "date": "2026-01-28T14:01:26.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 100,
-      "retweets": 12,
-      "replies": 3
-    }
-  },
-  {
-    "id": "tweet-2016330426617307507",
-    "content": "IMPORTANT: NVIDIA announced that their compute tray assembly time fell by 36x from 2 hours to 5 minutes due to the new VR200 cableless &amp; hose less design. NVIDIA follows the footsteps of AWS Trainium2/3 cableless design that leds to faster manufacturing time &amp; full automation as https://t.co/o7XAJsnj05",
-    "source": "https://x.com/SemiAnalysis_/status/2016330426617307507",
-    "date": "2026-01-28T02:00:09.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 435,
-      "retweets": 42,
-      "replies": 18
-    }
-  },
-  {
-    "id": "tweet-2016271265670086891",
-    "content": "Even Tech Twitter AI Cultists are not hyping up Claude Code enough! Humans are linear thinkers but AI progresses exponentially. Think about the quality of AI coding agents 6 months ago, 1 year ago and where they are now and then draw an curve of best fit and that is where they https://t.co/MfZwYsMgMg",
-    "source": "https://x.com/SemiAnalysis_/status/2016271265670086891",
-    "date": "2026-01-27T22:05:04.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 117,
-      "retweets": 11,
-      "replies": 9
-    }
-  },
-  {
-    "id": "tweet-2016209829748986352",
-    "content": "Looking ahead, TPU v9 will continue to follow a dual track strategy with both Broadcom and MediaTek each retaining a SKU. While the current market narrative paints an increasingly negative picture for Broadcom, the reality is considerably more nuanced. For our detailed quarterly",
-    "source": "https://x.com/SemiAnalysis_/status/2016209829748986352",
-    "date": "2026-01-27T18:00:57.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 58,
-      "retweets": 9,
-      "replies": 4
-    }
-  },
-  {
-    "id": "tweet-2016209828188750028",
-    "content": "For TPU v8, this strategy is explicitly visible through a dual track approach with one SKU co designed with Broadcom and another with MediaTek. TPU v8AX, codenamed Sunfish, features two compute dies, one IO chiplet, and eight stacks of HBM3E, while TPU v8X, codenamed Zebrafish, https://t.co/ucuFPziOqG",
-    "source": "https://x.com/SemiAnalysis_/status/2016209828188750028",
-    "date": "2026-01-27T18:00:57.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 43,
-      "retweets": 2,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2016209826489987329",
-    "content": "AVGO stock has underperformed over the past few months, driven largely by the market narrative that a growing share of TPU volumes will shift toward the MediaTek designed SKU. This perception has contributed meaningfully to Broadcom’s recent de rating, with MediaTek materially https://t.co/qn0aieDQ24",
-    "source": "https://x.com/SemiAnalysis_/status/2016209826489987329",
-    "date": "2026-01-27T18:00:56.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 158,
-      "retweets": 23,
-      "replies": 5
-    }
-  },
-  {
-    "id": "tweet-2016149531084157223",
-    "content": "Interested in the data from competing geographies? Sign up here: https://t.co/geycIFHBmg (3/3)",
-    "source": "https://x.com/SemiAnalysis_/status/2016149531084157223",
-    "date": "2026-01-27T14:01:21.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 6,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2016149529800655202",
-    "content": "In the ChipBook, we track auto movements on a monthly basis with a split of ICE and NEV, as well as EV, PHEV and Hybrid within NEV in order to help executives and investors understand how the market is developing in real time. (2/3) https://t.co/KdNzDaoAJL",
-    "source": "https://x.com/SemiAnalysis_/status/2016149529800655202",
-    "date": "2026-01-27T14:01:20.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 12,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2016149528647221349",
-    "content": "Auto is one of the main drivers of silicon content. However, as auto’s shift to New Energy Vehicles, there is a material increase of the silicon volume and value within the vehicle. (1/3) 🧵 https://t.co/czmUJswuvA",
-    "source": "https://x.com/SemiAnalysis_/status/2016149528647221349",
-    "date": "2026-01-27T14:01:20.000Z",
+    "id": "tweet-2028470627166761349",
+    "content": "US auto import data clearly highlights the ongoing pivot from full EVs to Hybrid Electric Vehicles (HEVs). This shift has meaningful read-through implications for auto suppliers and broader supply chain partners across the automotive ecosystem. (1/3) 🧵 https://t.co/JjZya0EtdT",
+    "source": "https://x.com/SemiAnalysis_/status/2028470627166761349",
+    "date": "2026-03-02T14:00:59.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 41,
-      "retweets": 5,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2015968033064260077",
-    "content": "In modern AI pipelines, storage choices can significantly impact performance and efficiency. Two primary approaches are direct-attached storage (DAS), which is local to a server, and network-attached storage (NAS), which is accessed over a network by multiple systems. https://t.co/UITbq7e8kx",
-    "source": "https://x.com/SemiAnalysis_/status/2015968033064260077",
-    "date": "2026-01-27T02:00:08.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 113,
-      "retweets": 18,
+      "retweets": 8,
       "replies": 4
     }
   },
   {
-    "id": "tweet-2015907663528251898",
-    "content": "IMPORTANT: Blackwell Ultra solves an attention operation performance issue found in Blackwell. As @tri_dao presented at the SemiAnalysis Hackathon, one of the biggest bottlenecks in the core attention operation is not GEMMs but the softmax (exponential)  part. In Hopper &amp; https://t.co/x3iRUUnAlf",
-    "source": "https://x.com/SemiAnalysis_/status/2015907663528251898",
-    "date": "2026-01-26T22:00:15.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 362,
-      "retweets": 29,
-      "replies": 9
-    }
-  },
-  {
-    "id": "tweet-2015847467846123580",
-    "content": "What is the Arista “Big Boy” Modular Switch? A modular chassis switch effectively physically consolidates at least two layers of leaf and spine switches in one single, large chassis using a fabric that cellifies the traffic between line cards. We have diagrammed the logical https://t.co/W1c1y0gd56",
-    "source": "https://x.com/SemiAnalysis_/status/2015847467846123580",
-    "date": "2026-01-26T18:01:03.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 17,
-      "retweets": 1,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2015847466684309744",
-    "content": "Arista came to dominate the modular chassis switch market as Cisco and Juniper’s go to market was oriented around their internal silicon while Arista worked with Broadcom. Arista’s go to market was also cloud centric while the others built around telecoms, and their high degree",
-    "source": "https://x.com/SemiAnalysis_/status/2015847466684309744",
-    "date": "2026-01-26T18:01:03.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 12,
-      "retweets": 0,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2015847465308614997",
-    "content": "Scale-across is proving to be one of the brightest spots of growth in the broader networking space in 2026. The longer distances over which scale-out networks are extended in order to connect datacenters tens or even hundreds of kilometers apart necessitates the use of deep https://t.co/V77O1JQ2CG",
-    "source": "https://x.com/SemiAnalysis_/status/2015847465308614997",
-    "date": "2026-01-26T18:01:03.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 54,
-      "retweets": 12,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2015786977803567538",
-    "content": "Want to see when the China fab buildout will start to decelerate? Sign up here: https://t.co/geycIFHBmg (3/3)",
-    "source": "https://x.com/SemiAnalysis_/status/2015786977803567538",
-    "date": "2026-01-26T14:00:41.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 5,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2015786976583070115",
-    "content": "Within deposition, we tease out CVD and PVD to determine specific supply chain winners and losers. Globally, CVD adoption is outgrowing PVD, and this is no different in China. (2/3) https://t.co/Y8tKZdK0Ej",
-    "source": "https://x.com/SemiAnalysis_/status/2015786976583070115",
-    "date": "2026-01-26T14:00:41.000Z",
+    "id": "tweet-2027841120391336314",
+    "content": "Much more detailed business case analysis, total cost of ownership details for many other accelerators and a GPU rental price forecast available in our AI TCO Model. (8/8)\nhttps://t.co/wACjpkRjBG",
+    "source": "https://x.com/SemiAnalysis_/status/2027841120391336314",
+    "date": "2026-02-28T20:19:33.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 9,
@@ -972,46 +192,250 @@
     }
   },
   {
-    "id": "tweet-2015786975358259313",
-    "content": "China front-end WFE imports have leveled off after a significant spike in 2023/4, but still remain high relative to historic averages. In particular, lithography imports are on the rise again. (1/3) 🧵 https://t.co/PPUo63r5I9",
-    "source": "https://x.com/SemiAnalysis_/status/2015786975358259313",
-    "date": "2026-01-26T14:00:41.000Z",
+    "id": "tweet-2027841118902292851",
+    "content": "We ourselves prefer to focus on project IRRs as a measure of deal profitability because it focuses only on timing of cash flows and is agnostic to depreciation policies, sidestepping this whole debate. (7/8)",
+    "source": "https://x.com/SemiAnalysis_/status/2027841118902292851",
+    "date": "2026-02-28T20:19:32.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 41,
-      "retweets": 4,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2015182878020178025",
-    "content": "What's strange is that older FT-8 systems had this technology! Mitsubishi Power bought the FT-8 aeroderivative design from Pratt &amp; Whitney in 2013, but the P&amp;W version DID have a Dry Low NOx option. What gives? Without this technology package, Mitsubishi Power will struggle in",
-    "source": "https://x.com/SemiAnalysis_/status/2015182878020178025",
-    "date": "2026-01-24T22:00:13.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 13,
+      "likes": 12,
       "retweets": 0,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2015182876581511375",
-    "content": "The modern Mitsubishi Power FT-8, an aeroderivative turbine that competes with the LM2500, doesn't have DLN. Instead, it relies on older water injection technology to reduce NOx emissions in the combustion stage. This technology can't use normal water, though--it needs https://t.co/w80G1lYxhP",
-    "source": "https://x.com/SemiAnalysis_/status/2015182876581511375",
-    "date": "2026-01-24T22:00:12.000Z",
+    "id": "tweet-2027841117182693753",
+    "content": "Some might argue that using a 6 year depreciation period unfairly overstates profitability in the near term. We don't see this as a major issue as the economics are fairly transparent for anybody that wants to roll up their sleeves and do the homework. (6/8)",
+    "source": "https://x.com/SemiAnalysis_/status/2027841117182693753",
+    "date": "2026-02-28T20:19:32.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 24,
-      "retweets": 2,
+      "likes": 6,
+      "retweets": 0,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2015182875432223115",
-    "content": "A modern GE Vernova LM2500 can do this easily, with a Dry Low NOx (DLN) system in the combustion stage and a Selective Catalytic Reduction (SCR). The DLN system works by finely mixing fuel and air to deliver a lean (low fuel, high air) burn. This reduces combustion temperature: a",
-    "source": "https://x.com/SemiAnalysis_/status/2015182875432223115",
-    "date": "2026-01-24T22:00:12.000Z",
+    "id": "tweet-2027841115559501826",
+    "content": "Our project EBIT margin calculated includes some limited overhead directly related to the cluster operation, but there could be additional SG+A and engineering costs at the respective Hyperscaler or Neocloud that mean that corporate EBIT margins will be a little lower than this.",
+    "source": "https://x.com/SemiAnalysis_/status/2027841115559501826",
+    "date": "2026-02-28T20:19:32.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 5,
+      "retweets": 1,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2027841113692991665",
+    "content": "The actual project EBIT margin over the full six-year lifecycle comes up to a still healthy 30%, but this is lower than the 36% we see if we only focus on the margins during the initial 5y contract period. (4/8)",
+    "source": "https://x.com/SemiAnalysis_/status/2027841113692991665",
+    "date": "2026-02-28T20:19:31.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 7,
+      "retweets": 0,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2027841111524577396",
+    "content": "The below table illustrates the full lifecycle economics for a GB300 NVL72 that will initially be rented out on a 5y contract. A realized rental price of $3.10/hr against typically corresponds to a project EBIT margin in the high 30% yielding. If rental pricing in year 6 resets https://t.co/MfGdBUYgYX",
+    "source": "https://x.com/SemiAnalysis_/status/2027841111524577396",
+    "date": "2026-02-28T20:19:31.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 17,
+      "retweets": 2,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2027841109486145713",
+    "content": "Given that most hyperscalers and Neoclouds adopt a 6 year depreciation schedule, this means that in the 6th year of the business case, revenues will be considerably lower, but depreciation remains the same given it is calculated on a straight-line basis. (2/8)",
+    "source": "https://x.com/SemiAnalysis_/status/2027841109486145713",
+    "date": "2026-02-28T20:19:30.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 15,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2027841107707760676",
+    "content": "Most modeling done for 5 year AI Cluster GPU Rental Economics focuses on the EBIT margins enjoyed for the first few years of the contract. However, unit economics change significantly after the contract rolls off – it is reasonable to expect that after a 5-year contract expires,",
+    "source": "https://x.com/SemiAnalysis_/status/2027841107707760676",
+    "date": "2026-02-28T20:19:30.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 108,
+      "retweets": 12,
+      "replies": 4
+    }
+  },
+  {
+    "id": "tweet-2027564581430718731",
+    "content": "AI Built Entire RTS Game In One Week Using Claude! https://t.co/P2x7ybHQ0p",
+    "source": "https://x.com/SemiAnalysis_/status/2027564581430718731",
+    "date": "2026-02-28T02:00:41.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 37,
+      "retweets": 3,
+      "replies": 6
+    }
+  },
+  {
+    "id": "tweet-2027504070865371589",
+    "content": "Beautiful visualizations of all benchmark results can be found for FREE at inferencex dot com Check it out!\n\nInferenceX is completely open-source with the mission of providing the ML community with the most comprehensive, truthful LLM inference benchmark possible.\n\nIf you find",
+    "source": "https://x.com/SemiAnalysis_/status/2027504070865371589",
+    "date": "2026-02-27T22:00:14.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 12,
+      "retweets": 2,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2027504069519012200",
+    "content": "Since September 2025, InferenceX (formerly InferenceMAX)  has run over 100k inference benchmarks totaling an unbelievable 1,369,711 GPU-minutes of runtime -- that's 2.6 GPU-years! (1/2)🧵 https://t.co/qvxglMw8gy",
+    "source": "https://x.com/SemiAnalysis_/status/2027504069519012200",
+    "date": "2026-02-27T22:00:14.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 54,
+      "retweets": 3,
+      "replies": 7
+    }
+  },
+  {
+    "id": "tweet-2027443723362042308",
+    "content": "4% of GitHub public commits are being authored by Claude Code right now. At the current trajectory, we believe that Claude Code will be 20%+ of all daily commits by the end of 2026. While you blinked, AI consumed all of software development. https://t.co/pFti4r6uR9",
+    "source": "https://x.com/SemiAnalysis_/status/2027443723362042308",
+    "date": "2026-02-27T18:00:26.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 2947,
+      "retweets": 367,
+      "replies": 168
+    }
+  },
+  {
+    "id": "tweet-2027383449875554398",
+    "content": "Sign up now to ChipBook and stay on top of the latest WFE developments: (2/2)\nhttps://t.co/geycIFHBmg",
+    "source": "https://x.com/SemiAnalysis_/status/2027383449875554398",
+    "date": "2026-02-27T14:00:56.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 3,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2027383448692826189",
+    "content": "The dominant narrative this month has been hyperscaler capex. While it’s broadly recognized that WFE suppliers will benefit, the real value lies in granular data that allows investors to track specific trends within the equipment ecosystem. (1/2)🧵 https://t.co/kzw04O54Uc",
+    "source": "https://x.com/SemiAnalysis_/status/2027383448692826189",
+    "date": "2026-02-27T14:00:55.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 46,
+      "retweets": 4,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2027202177677045822",
+    "content": "Disney-OpenAI Deal Gemini's Banana Bump &amp; Image AI Dominance https://t.co/tFv2qAVXqD",
+    "source": "https://x.com/SemiAnalysis_/status/2027202177677045822",
+    "date": "2026-02-27T02:00:37.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 8,
+      "retweets": 1,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2027133412020994175",
+    "content": "But under the hood its a lot of pain on a comparative basis! And the difference between AI / Semis has never been wider. The quick unwind makes a lot of sense if you look a the bigger picture. Semis have ripped, and software has dumped. Some reversion from the \"one in a 1.7 https://t.co/kltd04tGnY",
+    "source": "https://x.com/SemiAnalysis_/status/2027133412020994175",
+    "date": "2026-02-26T21:27:22.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 33,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2027133410062246340",
+    "content": "The divergence in the last few months has been incredible. Under a normal distribution, that's a one-in-1.7 trillion event. Of course markets are fat-tailed — but even by fat-tail standards, this is off the map. Prior peak was 4σ in 2003. (2/3) https://t.co/OvERa4U6yX",
+    "source": "https://x.com/SemiAnalysis_/status/2027133410062246340",
+    "date": "2026-02-26T21:27:21.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 36,
+      "retweets": 1,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2027133408376144009",
+    "content": "NVDA had an amazing print and is down. CRM had a mediocre print and is up. What is really happening is a big unwind.\n\nSemis versus software: 25 years of stock performance is interesting, and semis and software used to keep up together. In the last 2 years it's completely https://t.co/HCoZ1lLVIH",
+    "source": "https://x.com/SemiAnalysis_/status/2027133408376144009",
+    "date": "2026-02-26T21:27:21.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 211,
+      "retweets": 15,
+      "replies": 8
+    }
+  },
+  {
+    "id": "tweet-2027081514865807496",
+    "content": "Even though the weights are the same, Fast mode has increased the intellijence of Opus 4.6. Imagine someone completing the SAT and scoring an 1580 in 20 minutes verus completing the SAT &amp; scoring the 1580 in 2 hours. Clearly the person that can finish the SAT in 20 minutes is https://t.co/WIpVsqrDUx",
+    "source": "https://x.com/SemiAnalysis_/status/2027081514865807496",
+    "date": "2026-02-26T18:01:09.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 248,
+      "retweets": 11,
+      "replies": 16
+    }
+  },
+  {
+    "id": "tweet-2027021128955199525",
+    "content": "Subscribe to the ChipBook to help with idea generation of key enabling supply chain companies: (2/2) https://t.co/geycIFHBmg",
+    "source": "https://x.com/SemiAnalysis_/status/2027021128955199525",
+    "date": "2026-02-26T14:01:12.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 3,
+      "retweets": 1,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2027021127634071875",
+    "content": "As chips migrate to advanced nodes, both the photomask count per design and the cost per mask continue to rise. Identifying the suppliers leveraged to these structural shifts is critical for generating alpha. (1/2)🧵 https://t.co/BuVCjcO2Da",
+    "source": "https://x.com/SemiAnalysis_/status/2027021127634071875",
+    "date": "2026-02-26T14:01:11.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 63,
+      "retweets": 7,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2026839767904555391",
+    "content": "BONUS: If you want to learn more about the science behind ingot manufacturing and the difference between the Czochralski method and the Float Zone method, check out our thread on the topic here:👇️ https://t.co/I0Ega99QqN",
+    "source": "https://x.com/SemiAnalysis_/status/2026839767904555391",
+    "date": "2026-02-26T02:00:32.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 20,
@@ -1020,183 +444,899 @@
     }
   },
   {
-    "id": "tweet-2015182873892942139",
-    "content": "Emissions control is an underrated aspect of onsite gas generation. Modern air permitting typically requires strict emissions controls, which for a continuously-running gas plant requires exhaust limit of 2-5 parts per million (ppm) of nitrogen oxide (NOx). NOx emissions https://t.co/ZD7s9HqhgA",
-    "source": "https://x.com/SemiAnalysis_/status/2015182873892942139",
-    "date": "2026-01-24T22:00:12.000Z",
+    "id": "tweet-2026839766776332331",
+    "content": "Nowadays, these boules weigh hundreds of pounds and are grown with mind-boggling precision. They are the purest substance ever manufactured by humans.\n\nAll thanks to a moment of absentmindedness by a Pole in a German lab over a century ago.\n\nMoral of the story – don’t be afraid https://t.co/0TVDHOdAgY",
+    "source": "https://x.com/SemiAnalysis_/status/2026839766776332331",
+    "date": "2026-02-26T02:00:31.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 88,
-      "retweets": 8,
+      "likes": 31,
+      "retweets": 0,
       "replies": 2
     }
   },
   {
-    "id": "tweet-2015062083201622294",
-    "content": "The SemiAnalysis TCO team builds bottom-up, system-level cost models for current and next-generation AI infrastructure. We model the entire cluster economics, from accelerator and server BOMs to networking fabrics, storage, power distribution, software licensing, installation, https://t.co/svEB6ABgbD",
-    "source": "https://x.com/SemiAnalysis_/status/2015062083201622294",
-    "date": "2026-01-24T14:00:13.000Z",
+    "id": "tweet-2026839765476159707",
+    "content": "Just as Fleming's accidental mold saved millions of lives by stopping bacterial chaos, Czochralski's accidental pen-dip enabled the creation of perfect atomic order, leading to every silicon wafer which is the core material underneath (almost) every chip in the world.\n\nBoth were https://t.co/S6ksUUz6DU",
+    "source": "https://x.com/SemiAnalysis_/status/2026839765476159707",
+    "date": "2026-02-26T02:00:31.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 74,
-      "retweets": 7,
-      "replies": 3
-    }
-  },
-  {
-    "id": "tweet-2014880911804817917",
-    "content": "Can we say something without everyone getting mad? @tbpn @johncoogan @jordihays https://t.co/LxSTN5U4vZ",
-    "source": "https://x.com/SemiAnalysis_/status/2014880911804817917",
-    "date": "2026-01-24T02:00:18.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 101,
-      "retweets": 7,
-      "replies": 4
-    }
-  },
-  {
-    "id": "tweet-2014820586963214805",
-    "content": "NVIDIA is an natural treasure &amp; Jensen says he has access to the @POTUS anytime 🚀 https://t.co/xZNMDqlvTF",
-    "source": "https://x.com/SemiAnalysis_/status/2014820586963214805",
-    "date": "2026-01-23T22:00:36.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 562,
-      "retweets": 22,
-      "replies": 13
-    }
-  },
-  {
-    "id": "tweet-2014760411048870102",
-    "content": "Ever find the loss aggregation order of GRPO-variants confusing? Here's some help!\n\nGRPO treats a token as an action and computes importance sampling ratio at the token level. For loss aggregation, GRPO first averages across tokens in a ample, then averages across the group. https://t.co/zKQeNwfvky",
-    "source": "https://x.com/SemiAnalysis_/status/2014760411048870102",
-    "date": "2026-01-23T18:01:29.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 160,
-      "retweets": 18,
-      "replies": 3
-    }
-  },
-  {
-    "id": "tweet-2014699994557620423",
-    "content": "IMPORTANT: At CES 2026 this week, NVIDIA marketing has renamed VR200 NVL144 back to VR200 NVL72. Gone is NVL's Jensenflation. VR200 only ever had 72 logical GPU within an single scale up domain so the name never made sense &amp; led to customer frustration. Glad to Jensen has stopped https://t.co/Cn8a1mDlt3",
-    "source": "https://x.com/SemiAnalysis_/status/2014699994557620423",
-    "date": "2026-01-23T14:01:24.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 172,
-      "retweets": 13,
-      "replies": 16
-    }
-  },
-  {
-    "id": "tweet-2014518505060597920",
-    "content": "Interested in similar trackers and the underlying data? Find out more at https://t.co/geycIFHBmg or contact sales@semianalysis.com (2/2)",
-    "source": "https://x.com/SemiAnalysis_/status/2014518505060597920",
-    "date": "2026-01-23T02:00:14.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 10,
-      "retweets": 1,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2014518503332560918",
-    "content": "Following $TSM’s $52–$56 billion CapEx guide for 2026, the ChipBook Taiwan WFE tracker serves as a valuable tool for monitoring equipment arrivals and installations as leading indicators of capacity expansion and node ramps. (1/2) 🧵 https://t.co/Ai5ywWnBlD",
-    "source": "https://x.com/SemiAnalysis_/status/2014518503332560918",
-    "date": "2026-01-23T02:00:13.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 46,
-      "retweets": 5,
+      "likes": 18,
+      "retweets": 0,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2014443178338767293",
-    "content": "In other words, if Taiwan keeps growing its semiconductor output, it must proportionally expand its U.S. footprint as well.And that’s exactly why TSMC has been moving so quickly in Arizona. (3/3) https://t.co/IdXYeHkOpf",
-    "source": "https://x.com/SemiAnalysis_/status/2014443178338767293",
-    "date": "2026-01-22T21:00:54.000Z",
+    "id": "tweet-2026839764150649219",
+    "content": "And just like that, the silicon boule is born. By slowly pulling and rotating the seed crystal, the molten silicon solidifies around it, mimicking its perfect atomic structure.\n\nThe result? Ultra-pure cylinders of silicon called boules (or ingots). The “logs” from which https://t.co/mp8pdC7al6",
+    "source": "https://x.com/SemiAnalysis_/status/2026839764150649219",
+    "date": "2026-02-26T02:00:31.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 57,
-      "retweets": 4,
-      "replies": 3
+      "likes": 18,
+      "retweets": 0,
+      "replies": 1
     }
   },
   {
-    "id": "tweet-2014443177168511100",
-    "content": "Furthermore, the Section 232 semiconductor framework establishes two pivotal conditions. First, Taiwanese companies expanding U.S. semiconductor capacity are permitted to import up to 2.5 times their planned output exempt from Section 232 duties during the construction phase. https://t.co/EufL8tCItL",
-    "source": "https://x.com/SemiAnalysis_/status/2014443177168511100",
-    "date": "2026-01-22T21:00:54.000Z",
+    "id": "tweet-2026839762791706972",
+    "content": "Researchers remembered Czochralski's paper on the topic from 1918 (the paper was published 2 years after the 1916 incident). His simple \"pen-dip\" technique was the key.\n\nThey adapted it to germanium, and then silicon. Instead of a pen, they used a \"seed crystal\" - a tiny, perfect https://t.co/QoaXvVmFAO",
+    "source": "https://x.com/SemiAnalysis_/status/2026839762791706972",
+    "date": "2026-02-26T02:00:30.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 34,
+      "likes": 18,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2026839761499889795",
+    "content": "Fast forward to the 1950s and following the growing strategic importance of semiconductors post WWII, scientists at Bell Labs were trying to build transistors. They quickly hit a wall. You couldn't build reliable circuits on jumbled, impure material. Electrons would bounce https://t.co/9D79rnFJiV",
+    "source": "https://x.com/SemiAnalysis_/status/2026839761499889795",
+    "date": "2026-02-26T02:00:30.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 15,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2026839760174489825",
+    "content": "Before Czochralski's \"mistake,\" existing metal crystals were like a bag of marbles – jumbled, chaotic, and full of internal \"fault lines.\" These are called polycrystalline structures.\n\nWhat Czochralski accidentally created was a single crystal. Every atom perfectly aligned, thus https://t.co/nGYO7kEZjG",
+    "source": "https://x.com/SemiAnalysis_/status/2026839760174489825",
+    "date": "2026-02-26T02:00:30.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 26,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2026839758853345407",
+    "content": "It's 1916. Czochralski, a Polish chemist, is focused on understanding how metals crystallize. Labs back then were often cluttered, intense places with random objects and inventions scattered around.\n\nOne day, while writing notes in his Berlin lab, he goes to dip his pen in an https://t.co/niDqP0UGqq",
+    "source": "https://x.com/SemiAnalysis_/status/2026839758853345407",
+    "date": "2026-02-26T02:00:30.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 24,
       "retweets": 2,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2014443175717343341",
-    "content": "Everything makes sense now!\n\nTSMC’s earlier acquisition of a massive land parcel in Arizona provides enough space for an additional 4 to 6 fabs. Meanwhile, a landmark tariff agreement between Taiwan and the U.S. has been finalized. Under this deal, Taiwan will commit a total of https://t.co/e7kATwJzIU",
-    "source": "https://x.com/SemiAnalysis_/status/2014443175717343341",
-    "date": "2026-01-22T21:00:54.000Z",
+    "id": "tweet-2026839757599252968",
+    "content": "Everybody knows Alexander Fleming's accidental discovery of penicillin. A forgotten petri dish, a surprising mold contamination, and suddenly – life-saving modern medicine.\n\nWell, the semiconductor industry actually has its own Alexander Fleming and \"penicillin moment\", and it https://t.co/fYJndDChKB",
+    "source": "https://x.com/SemiAnalysis_/status/2026839757599252968",
+    "date": "2026-02-26T02:00:29.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 115,
-      "retweets": 4,
+      "likes": 129,
+      "retweets": 19,
       "replies": 2
     }
   },
   {
-    "id": "tweet-2014383064596508803",
-    "content": "Despite U.S. policy calling equipment imports “a threat to the national security and economy,” incentives aren’t pulling WFE production onshore. The data shows the opposite. (6/6) https://t.co/nXE0JSXwci",
-    "source": "https://x.com/SemiAnalysis_/status/2014383064596508803",
-    "date": "2026-01-22T17:02:02.000Z",
+    "id": "tweet-2026777768659222899",
+    "content": "The single most interesting thing (so far) was the supply commitments. \n\n&gt; Inventory was $21.4 billion, up from $19.8 billion sequentially, and total supply-related commitments were $95.2 billion. We have strategically secured inventory and capacity to meet demand beyond the next",
+    "source": "https://x.com/SemiAnalysis_/status/2026777768659222899",
+    "date": "2026-02-25T21:54:10.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 97,
+      "likes": 121,
       "retweets": 7,
       "replies": 2
     }
   },
   {
-    "id": "tweet-2014383063732478449",
-    "content": "Onto is aggressively moving offshore. It plans to grow international manufacturing from over 30% last year to more than 60% of shipments by end of 2026. (5/6)",
-    "source": "https://x.com/SemiAnalysis_/status/2014383063732478449",
-    "date": "2026-01-22T17:02:02.000Z",
+    "id": "tweet-2026777525741887761",
+    "content": "Nvidia just reported earnings - and the results were staggering. \n\nFIRST QUARTER FORECAST\n\nSees revenue $76.44 billion to $79.56 billion, estimate $72.78 billion \n\nFOURTH QUARTER RESULTS\n\nRevenue $68.13 billion, +73% y/y, estimate $65.91 billion\nData center revenue $62.3 billion,",
+    "source": "https://x.com/SemiAnalysis_/status/2026777525741887761",
+    "date": "2026-02-25T21:53:12.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 56,
+      "likes": 478,
+      "retweets": 32,
+      "replies": 25
+    }
+  },
+  {
+    "id": "tweet-2026730248939938285",
+    "content": "Vera Rubin – Extreme Co-Design: \nAn Evolution from Grace Blackwell Oberon,\nVera, Rubin, NVLink 6 Switch, \nConnectX-9, BlueField-4, Spectrum-6, \nSeamless Cableless Compute Tray Design, \nPower Rack, VR NVL72 TCO and BoM\n\nhttps://t.co/V4hMuphZ6d",
+    "source": "https://x.com/SemiAnalysis_/status/2026730248939938285",
+    "date": "2026-02-25T18:45:20.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 237,
+      "retweets": 46,
+      "replies": 6
+    }
+  },
+  {
+    "id": "tweet-2026719189864513978",
+    "content": "If the U.S. wants to compete in strategic technologies, like Micron’s project which produces a key ingredient in the AI supply chain, it must reduce frivolous, rent seeking litigation. AI tools will only empower these people as it trivializes nitpicking on complex rules and",
+    "source": "https://x.com/SemiAnalysis_/status/2026719189864513978",
+    "date": "2026-02-25T18:01:24.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 677,
+      "retweets": 42,
+      "replies": 25
+    }
+  },
+  {
+    "id": "tweet-2026719188883001850",
+    "content": "We estimate the lawsuits will cost $100-500M to settle (despite the fact they should be thrown out as frivolous). Ultimately Micron has probably budgeted for it as a small fraction of a $100B project. Still there is a non-zero chance these 6 “concerned citizens” delay the entire",
+    "source": "https://x.com/SemiAnalysis_/status/2026719188883001850",
+    "date": "2026-02-25T18:01:23.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 425,
+      "retweets": 12,
+      "replies": 4
+    }
+  },
+  {
+    "id": "tweet-2026719187960320469",
+    "content": "To be fair, it is legitimate to consider the environmental impacts of a fab. They are large industrial projects that can be harmful if not built and operated safely. But these last-minute injunctions are rent seeking, not legitimate environmental concern (8/10)",
+    "source": "https://x.com/SemiAnalysis_/status/2026719187960320469",
+    "date": "2026-02-25T18:01:23.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 440,
+      "retweets": 12,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2026719187058487314",
+    "content": "One member of the suit, who as a former lawyer you might expect to be smart, says that “Syracuse has the highest child poverty rate in the country. What is Micron doing about that?” Anyone can agree it’s a worthy cause, but do we really think an advanced memory semiconductor",
+    "source": "https://x.com/SemiAnalysis_/status/2026719187058487314",
+    "date": "2026-02-25T18:01:23.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 568,
+      "retweets": 22,
+      "replies": 11
+    }
+  },
+  {
+    "id": "tweet-2026719186093769045",
+    "content": "A Syracuse local news outlet’s excellent reporting on the group behind the lawsuit, Neighbors for a Better Micron,” found that “before the suit was filed, the group had never held a meeting or a vote. Some members didn’t even know who the others were.” (6/10)",
+    "source": "https://x.com/SemiAnalysis_/status/2026719186093769045",
+    "date": "2026-02-25T18:01:23.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 522,
+      "retweets": 28,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2026719184780980266",
+    "content": "The lawsuit itself didn’t come from a ground roots uprising. A CA-based workers rights group went door to door in NY seeking plaintiffs. They eventually found just 6 people willing to sign on. But that’s enough to potentially halt the project. (5/10)",
+    "source": "https://x.com/SemiAnalysis_/status/2026719184780980266",
+    "date": "2026-02-25T18:01:22.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 615,
+      "retweets": 32,
+      "replies": 5
+    }
+  },
+  {
+    "id": "tweet-2026719183816347746",
+    "content": "Comments from locals border on NIMBY parody: “We’re not trying to stop any progress, but we don’t want this just bulldozed into our area.” This is a real quote! (4/10)",
+    "source": "https://x.com/SemiAnalysis_/status/2026719183816347746",
+    "date": "2026-02-25T18:01:22.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 620,
+      "retweets": 18,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2026719182927053273",
+    "content": "Micron spent 612 days on the environmental impact study, including a 45 day public input period. Yet hours before groundbreaking, they were hit with a lawsuit calling the process “unnecessarily rushed.” (3/10)",
+    "source": "https://x.com/SemiAnalysis_/status/2026719182927053273",
+    "date": "2026-02-25T18:01:22.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 716,
+      "retweets": 23,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2026719181568176605",
+    "content": "The project has already taken an absurd 1200 days between announcement and groundbreaking. Competitors overseas who began at the same time now have built and working fabs. (2/10) https://t.co/eWwlueArRa",
+    "source": "https://x.com/SemiAnalysis_/status/2026719181568176605",
+    "date": "2026-02-25T18:01:22.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 815,
+      "retweets": 30,
+      "replies": 10
+    }
+  },
+  {
+    "id": "tweet-2026719180284666046",
+    "content": "Micron’s $100B megafab in NY is at risk of delay due to just 6 “concerned citizens” and their frivolous lawsuit. (1/10) 🧵 https://t.co/tr7Ln5mMIK",
+    "source": "https://x.com/SemiAnalysis_/status/2026719180284666046",
+    "date": "2026-02-25T18:01:21.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 3030,
+      "retweets": 316,
+      "replies": 284
+    }
+  },
+  {
+    "id": "tweet-2026658730096332988",
+    "content": "Subscribe to the ChipBook to help with idea generation of key enabling supply chain companies: (2/2) https://t.co/geycIFHBmg",
+    "source": "https://x.com/SemiAnalysis_/status/2026658730096332988",
+    "date": "2026-02-25T14:01:09.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 5,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2026658728871620679",
+    "content": "As Server capacity continues to expand, suppliers of key components such as liquid cooling systems are seeing historic growth. (1/2)🧵 https://t.co/Tmx1CbzSAu",
+    "source": "https://x.com/SemiAnalysis_/status/2026658728871620679",
+    "date": "2026-02-25T14:01:09.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 48,
+      "retweets": 5,
+      "replies": 4
+    }
+  },
+  {
+    "id": "tweet-2026477443817537728",
+    "content": "Deep dive here: (5/5) https://t.co/T4BDey05M8",
+    "source": "https://x.com/SemiAnalysis_/status/2026477443817537728",
+    "date": "2026-02-25T02:00:47.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 9,
+      "retweets": 1,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2026477441871446402",
+    "content": "Unfortunately, MI355X starts to fall significantly behind B200 in the more SOTA disagg+FP4 configurations. This is a software problem. All AMD needs to do to achieve parity in more production-grade serving setups is move faster on the software front. That's the real moat, not https://t.co/d6vVZfTUJT",
+    "source": "https://x.com/SemiAnalysis_/status/2026477441871446402",
+    "date": "2026-02-25T02:00:46.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 25,
+      "retweets": 2,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2026477439631712307",
+    "content": "On DeepSeek R1 FP8 single node SGLang scenarios, MI355X is also competitive with (or beats) B200 SGLang on both a total throughput and perf/TCO basis. (3/5) https://t.co/oYP1STx9oq",
+    "source": "https://x.com/SemiAnalysis_/status/2026477439631712307",
+    "date": "2026-02-25T02:00:46.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 10,
       "retweets": 0,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2014383062457389230",
-    "content": "KLA is taking a dual-hub approach, anchoring production across the U.S. and Singapore, with big investments in the latter. (4/6) https://t.co/AQhJ2M5b89",
-    "source": "https://x.com/SemiAnalysis_/status/2014383062457389230",
-    "date": "2026-01-22T17:02:02.000Z",
+    "id": "tweet-2026477437446447458",
+    "content": "With respect to perf/TCO, MI355X is able to serve DeepSeek R1 FP8 disagg significantly cheaper than B200 SGLang between ~50-100 TPS. (2/5) https://t.co/LnpP4vWbaD",
+    "source": "https://x.com/SemiAnalysis_/status/2026477437446447458",
+    "date": "2026-02-25T02:00:45.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 68,
+      "likes": 16,
       "retweets": 0,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2014383061253689611",
-    "content": "Applied Materials is following. Its Singapore 2030 plan aims to double manufacturing capacity in the country over this decade. (3/6) https://t.co/bzz488Hrmz",
-    "source": "https://x.com/SemiAnalysis_/status/2014383061253689611",
-    "date": "2026-01-22T17:02:01.000Z",
+    "id": "tweet-2026477435298914341",
+    "content": "New InferenceX (formerly InferenceMAX) results further establish that MI355X is extremely competitive with B200 chip-to-chip. On workloads like DeepSeek R1 FP8 disaggregated inference using SGLang, the MI355X matches or beats the B200 in total throughput, with and without MTP https://t.co/coAqj09s6K",
+    "source": "https://x.com/SemiAnalysis_/status/2026477435298914341",
+    "date": "2026-02-25T02:00:45.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 87,
+      "likes": 100,
+      "retweets": 13,
+      "replies": 6
+    }
+  },
+  {
+    "id": "tweet-2026417620061213081",
+    "content": "Key features of AMD's Helios deal with Meta:\n&gt; 6 Gigawatts of AMD systems over 5 years spanning multiple generations\n&gt; 1st GW starts delivery 2H26\n&gt; \"Strong double digit billions\" of revenue per GW\n&gt; Warrant for up to 160 million shares of AMD stock (10% of the company)\n&gt;",
+    "source": "https://x.com/SemiAnalysis_/status/2026417620061213081",
+    "date": "2026-02-24T22:03:04.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 105,
+      "retweets": 10,
+      "replies": 10
+    }
+  },
+  {
+    "id": "tweet-2026386771429224643",
+    "content": "POV: You are an AMD account executive negotiating MI450X pricing with customers https://t.co/Vv4c07t91O",
+    "source": "https://x.com/SemiAnalysis_/status/2026386771429224643",
+    "date": "2026-02-24T20:00:29.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 202,
+      "retweets": 11,
+      "replies": 38
+    }
+  },
+  {
+    "id": "tweet-2026384282407837877",
+    "content": "Dario’s cortisol meter SPIKED with the Pentagon DPA Maxxing. Imagine a Hegseth Frame Mog so hard you drop your alignment thesis and build WarClaude jfl https://t.co/WbXcnGapiv https://t.co/sUGfK82HMD",
+    "source": "https://x.com/SemiAnalysis_/status/2026384282407837877",
+    "date": "2026-02-24T19:50:35.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 342,
+      "retweets": 15,
+      "replies": 23
+    }
+  },
+  {
+    "id": "tweet-2026296285741936957",
+    "content": "Subscribe to ChipBook here and get timely trackers for the global memory market: (2/2)\nhttps://t.co/geycIFHBmg",
+    "source": "https://x.com/SemiAnalysis_/status/2026296285741936957",
+    "date": "2026-02-24T14:00:55.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 8,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2026296284030677283",
+    "content": "Korean memory manufacturers are currently exercising meaningful pricing power, and Korea-to-China memory shipments serve as a strong real-time proxy for that dynamic. Investors tracking this data monthly are well positioned to identify early inflections in the global memory https://t.co/aHKj9u12lr",
+    "source": "https://x.com/SemiAnalysis_/status/2026296284030677283",
+    "date": "2026-02-24T14:00:55.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 266,
+      "retweets": 41,
+      "replies": 11
+    }
+  },
+  {
+    "id": "tweet-2026160971081777419",
+    "content": "Anthropic &amp; @DarioAmodei should add an land acknowledgment to their website &amp; during the onboarding process of Claude Code. We have an draft land acknowledgment for them to use.\n\"Anthropic's San Francisco headquarters occupies the unceded ancestral homeland of the Ramaytush https://t.co/tA8y8dhPv2 https://t.co/phU3pJdJTt",
+    "source": "https://x.com/SemiAnalysis_/status/2026160971081777419",
+    "date": "2026-02-24T05:03:14.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 268,
+      "retweets": 8,
+      "replies": 8
+    }
+  },
+  {
+    "id": "tweet-2026114966785327315",
+    "content": "AI Demand Sparks, Chip Shortage Fears https://t.co/8B2FGC552Y",
+    "source": "https://x.com/SemiAnalysis_/status/2026114966785327315",
+    "date": "2026-02-24T02:00:26.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 30,
       "retweets": 0,
       "replies": 2
     }
+  },
+  {
+    "id": "tweet-2026054525665092003",
+    "content": "Applied Materials developed:\n\n🟠 Selective Monocrystalline Deposition: The Spectral system can \"selectively\" deposit monocrystalline molybdenum, reducing critical contact resistance by up to 15%\n\n🟠 Advanced ALD Platform Design: Spectral represents a new series of ALD tools https://t.co/LUe5CyKf7V",
+    "source": "https://x.com/SemiAnalysis_/status/2026054525665092003",
+    "date": "2026-02-23T22:00:15.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 22,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2026054524176040239",
+    "content": "This week, AMAT introduced Spectral™ ALD System with Selective Monocrystalline Molybdenum. As process nodes scale below 2nm, the tiny metal contacts linking transistors to the wiring network become increasingly thin, leading to a significant rise in electrical resistance. https://t.co/AQG3pruQs6",
+    "source": "https://x.com/SemiAnalysis_/status/2026054524176040239",
+    "date": "2026-02-23T22:00:15.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 73,
+      "retweets": 15,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2025996357996093706",
+    "content": "GB200 NVL72 (asu frat leader) FRAMEMOGS h100 (Clavicular) so badly that in order to put TCO per million tokens, we had to create log y scale. https://t.co/Y6dIbmbJiN",
+    "source": "https://x.com/SemiAnalysis_/status/2025996357996093706",
+    "date": "2026-02-23T18:09:07.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 225,
+      "retweets": 18,
+      "replies": 6
+    }
+  },
+  {
+    "id": "tweet-2025933778074440047",
+    "content": "Sign up now to ChipBook and stay on top of the latest Advanced Packaging developments: (2/2) https://t.co/geycIFHBmg",
+    "source": "https://x.com/SemiAnalysis_/status/2025933778074440047",
+    "date": "2026-02-23T14:00:27.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 1,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2025933776748990571",
+    "content": "This week $BESI reported details of their Q4 orders book, and it’s clear that Advanced Packaging is the next step in China localization story. At ChipBook we continue to track Chinese capacity expansion across the totality of the supply chain. https://t.co/9a1QacIq6H",
+    "source": "https://x.com/SemiAnalysis_/status/2025933776748990571",
+    "date": "2026-02-23T14:00:27.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 49,
+      "retweets": 7,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2025631831219916840",
+    "content": "But those rules haven't been written yet. ERCOT is trying in their new Batch Study process, and PJM is considering demand response in their Reliability Backstop Auction planning, but both projects are in the workshop stage.\n\nThey're pretty stressful, as conference calls go. (4/4) https://t.co/5lBzAU5Djv",
+    "source": "https://x.com/SemiAnalysis_/status/2025631831219916840",
+    "date": "2026-02-22T18:00:37.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 28,
+      "retweets": 2,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2025631829831692678",
+    "content": "The true utility of demand response to a datacenter would be if they could use such an agreement to secure faster interconnection. After all, if the datacenter drops off the grid during high-stress peak times, then it doesn't need new transmission or generation to power up.\n\nThe",
+    "source": "https://x.com/SemiAnalysis_/status/2025631829831692678",
+    "date": "2026-02-22T18:00:37.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 35,
+      "retweets": 0,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2025631828766249004",
+    "content": "Let's use rule-of-thumb figures: AI clusters make $12M/MW annually in revenue, and have an EBIT margin of around 20%.\n\nAt those numbers, a utility needs to incentivize the cluster at $0.35/kWh - 5-10x the price of electricity for a datacenter - for demand response to be worth the",
+    "source": "https://x.com/SemiAnalysis_/status/2025631828766249004",
+    "date": "2026-02-22T18:00:37.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 72,
+      "retweets": 4,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2025631826925011454",
+    "content": "Occasionally we hear pitches for demand response for AI load, in which AI compute clusters reduce their workloads during \"peak times\" for the electric grid, reducing strain and requiring fewer new generators.\n\nThese programs are not new: typically they're tied to an electric bill https://t.co/o8csqigAbw",
+    "source": "https://x.com/SemiAnalysis_/status/2025631826925011454",
+    "date": "2026-02-22T18:00:36.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 85,
+      "retweets": 9,
+      "replies": 4
+    }
+  },
+  {
+    "id": "tweet-2024978691441184841",
+    "content": "Drill bits, back-drilling machines, and PCB support plates are all in shortage due to high demand. This backdrop directly benefits Taiwanese players such as ToPoint (8021 TT), Ta Liang (3167 TT), Aurona (8074 TT), and KeyWare (5498 TT), as well as global peers including https://t.co/Pmn8Ec0aNI",
+    "source": "https://x.com/SemiAnalysis_/status/2024978691441184841",
+    "date": "2026-02-20T22:45:16.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 147,
+      "retweets": 15,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2024978690514329990",
+    "content": "Boards are becoming thicker and harder, with drilling aspect ratios (hole depth to diameter) moving from 8–10x to 12–14x, materially raising requirements around drill bit rigidity, precision, and wear resistance. The most immediate impact is a collapse in drill bit lifespan from",
+    "source": "https://x.com/SemiAnalysis_/status/2024978690514329990",
+    "date": "2026-02-20T22:45:16.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 74,
+      "retweets": 4,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2024978689369297308",
+    "content": "One of the hidden gems of the secular PCB growth trend is the high-end PCB drilling ecosystem. As PCB layer counts step up from 8–24 layers to 28–46 layers in AI server designs, an increase in layer count does more than simply multiply material usage; it drives an exponential https://t.co/21XJ7gNY0E",
+    "source": "https://x.com/SemiAnalysis_/status/2024978689369297308",
+    "date": "2026-02-20T22:45:16.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 299,
+      "retweets": 41,
+      "replies": 5
+    }
+  },
+  {
+    "id": "tweet-2024908161405026551",
+    "content": "For Frontier MoE models, Wide Expert Parallelism with large scale up world size beat clustering multiple 8-way boxes together with scale outs for mid range interactivity where serving is balances economics &amp; speed. This is why all frontier labs are using wideEP with disaggregated https://t.co/dGshpfsd0B",
+    "source": "https://x.com/SemiAnalysis_/status/2024908161405026551",
+    "date": "2026-02-20T18:05:01.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 95,
+      "retweets": 11,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2024846844187021813",
+    "content": "Subscribe to ChipBook to monitor capacity expansions in 2026 and beyond: (2/2)\nhttps://t.co/geycIFHBmg",
+    "source": "https://x.com/SemiAnalysis_/status/2024846844187021813",
+    "date": "2026-02-20T14:01:22.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 3,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2024846842643534054",
+    "content": "Hyperscaler capex is ramping → WFE moves to center stage. ChipBook tracks equipment imports by Country and tool type. Through 2025, Etch imports were up across all three major manufacturing geographies. (1/2)🧵 https://t.co/5TQ7v3keHN",
+    "source": "https://x.com/SemiAnalysis_/status/2024846842643534054",
+    "date": "2026-02-20T14:01:21.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 48,
+      "retweets": 7,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2024484247487053965",
+    "content": "The Sym3 Z family has already achieved broad adoption, securing Process of Record (POR) status in 2nm logic manufacturing with more than 250 chambers currently deployed in the field.\n\nBy combining PVT2 with advanced source technology, the Sym3 Z Magnum successfully eliminates https://t.co/DjsTbNOvMB",
+    "source": "https://x.com/SemiAnalysis_/status/2024484247487053965",
+    "date": "2026-02-19T14:00:32.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 11,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2024484245809316124",
+    "content": "Beyond leading-edge logic, Sym3 Z Magnum accelerates the development of DRAM such as 4F2 and High-Bandwidth Memory (HBM) by delivering the precise profiles required for denser arrays and taller stacks. (3/4) https://t.co/T3ih8U85ZS",
+    "source": "https://x.com/SemiAnalysis_/status/2024484245809316124",
+    "date": "2026-02-19T14:00:31.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 14,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2024484244320374887",
+    "content": "Applied Materials specifically developed to address high-aspect-ratio challenges:\n\n• Breakthrough PVT2 Technology:\nThe system debuts a breakthrough second generation of Pulsed Voltage Technology (PVT2), representing a generational leap in control. Unlike traditional tools that https://t.co/HmTSOH44yM",
+    "source": "https://x.com/SemiAnalysis_/status/2024484244320374887",
+    "date": "2026-02-19T14:00:31.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 12,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2024484242822979618",
+    "content": "This week, AMAT introduced Centris™ Sym3™ Z Magnum™ Etch System\nAs semiconductor advances toward 2nm and Angstrom eras, the vertical 3D architecture of Gate-All-Around (GAA) transistors demands extreme precision. To ensure transistor speed and power efficiency, manufacturers https://t.co/VJeAFoXyFA",
+    "source": "https://x.com/SemiAnalysis_/status/2024484242822979618",
+    "date": "2026-02-19T14:00:31.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 92,
+      "retweets": 9,
+      "replies": 4
+    }
+  },
+  {
+    "id": "tweet-2024302964697919513",
+    "content": "Faster, Elegant Solutions The Unbeatable Advantage https://t.co/JtoBFJMJ7w",
+    "source": "https://x.com/SemiAnalysis_/status/2024302964697919513",
+    "date": "2026-02-19T02:00:11.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 10,
+      "retweets": 0,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2024242613209960499",
+    "content": "Even at comedy clubs, AI’s catching boos — and we’re just in the opening act. https://t.co/vekOLR3vZZ",
+    "source": "https://x.com/SemiAnalysis_/status/2024242613209960499",
+    "date": "2026-02-18T22:00:22.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 53,
+      "retweets": 1,
+      "replies": 5
+    }
+  },
+  {
+    "id": "tweet-2024211756592353455",
+    "content": "If @AnushElangovan is confidence in mass production tokens being produced in H2 2026 on MI455X racks. why won't he accept the challenge to polar dip if that doesn't happen? As we will accept the challenge &amp; do polar dipping if mass productions MI455 tokens happen in H2 2026. Time https://t.co/v2kYdh7Xf1",
+    "source": "https://x.com/SemiAnalysis_/status/2024211756592353455",
+    "date": "2026-02-18T19:57:45.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 98,
+      "retweets": 3,
+      "replies": 38
+    }
+  },
+  {
+    "id": "tweet-2024210656476745799",
+    "content": "The other significant revelation here is that Intel has badly missed their 18A performance comparisons set out 2 years ago!\nPanther Lake on 18A has new CPU cores with 5-10% higher IPC, yet is barely more efficient vs Lunar Lake on TSMC N3B with the same core counts.\n\nBack in https://t.co/1Jx3MyTP34",
+    "source": "https://x.com/SemiAnalysis_/status/2024210656476745799",
+    "date": "2026-02-18T19:53:23.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 36,
+      "retweets": 2,
+      "replies": 10
+    }
+  },
+  {
+    "id": "tweet-2024210295057760734",
+    "content": "PSA: Do not buy any Panther Lake SKUs that lack the -H suffix as they have half the CPU cores. Choose Lunar Lake instead.\nIndependent testing shows the 16-core models are over 50% faster at the same power!\nLunar Lake is cheaper, offers the same CPU performance and battery life as https://t.co/ru1R24J97A https://t.co/ekJe0gHvhK",
+    "source": "https://x.com/SemiAnalysis_/status/2024210295057760734",
+    "date": "2026-02-18T19:51:57.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 107,
+      "retweets": 8,
+      "replies": 17
+    }
+  },
+  {
+    "id": "tweet-2024182383675650318",
+    "content": "Intel 16\nModified process for external foundry\nOriginal 22FFL node used in 2020 Lakefield (remember that?)\nJul 2022: Announced Mediatek as lead Intel 16 customer for smart edge devices\nApr 2025: Mediatek first product tapeout A0 on Intel 16\nFeb 2026: No updates on what that https://t.co/QvlFRFyss2",
+    "source": "https://x.com/SemiAnalysis_/status/2024182383675650318",
+    "date": "2026-02-18T18:01:02.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 12,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2024182381301690808",
+    "content": "Intel 18A\nJul 2021: Announced Intel 18A as the first node using High-NA EUV, manufacturing ready in early 2025\nFeb 2022: Intel 18A changed to low-NA EUV, manufacturing ready H2 '24, 18A SRAM wafer shown on stage\nAug 2024: Panther Lake and Clearwater Forest on 18A power on https://t.co/lcFA9j1962",
+    "source": "https://x.com/SemiAnalysis_/status/2024182381301690808",
+    "date": "2026-02-18T18:01:01.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 12,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2024182379015770170",
+    "content": "Intel 20A\nJul 2021: Announced Intel 20A with Nanosheet and PowerVia, manufacturing ready H1 '24 as part of Pat Gelsinger's 5 nodes 4 years roadmap\nSep 2023: Arrow Lake wafer shown on stage, back from the fab\nFeb 2024: Arrow Lake on 20A power on achieved\nSep 2024: 20A cancelled https://t.co/fH8wUknFWD",
+    "source": "https://x.com/SemiAnalysis_/status/2024182379015770170",
+    "date": "2026-02-18T18:01:01.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 7,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2024182376834781271",
+    "content": "Intel 7nm\nMay 2019: Announced Intel 7nm with 2x area scaling using EUV for a 2021 lead product launch of a datacenter GP-GPU (later known as Ponte Vecchio)\nJul 2020: Admits 7nm is broken, 1 year behind schedule, moves Ponte Vecchio to TSMC 5nm, lead product now client CPU (later https://t.co/GlHdudIzCU",
+    "source": "https://x.com/SemiAnalysis_/status/2024182376834781271",
+    "date": "2026-02-18T18:01:00.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 7,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "substack-0",
+    "content": "Are AI Datacenters Increasing Electric Bills for American Households? SemiAnalysis x Fluidstack is launching GTC with a 48-hour, full-stack AI infrastructure hackathon on March 15th from Power to Prefill, Dirt to Decode. With speakers from OpenAI, GPU MODE, and Thinking Machines, plus compute grants and GPU cluster access, come build with the best: APPLY HERE . The topic of datacenter load growth and impact on power prices remains broadly misunderstood, akin to the water consumption myth that we debunked recently . It was at the forefront of the 2025 New Jersey elections, after a ~20% jump in residential electricity rates overnight in June 2025. Some even began finger-pointing at the 300MW Nebius AI Datacenter for Microsoft in the state, a laughable claim given &gt;85% of its power is self-generated . Are AI datacenters really causing households to pay electricity 20% more expensive? This report explores the question by analyzing the two biggest energy markets in the US, which are also the largest AI Datacenter hubs: the PJM interconnection area &#8211; the grid operating covering 13 eastern US states (including New Jersey) - and ERCOT, who oversees the electric grid in Texas. In the Lone Star State, prices have been roughly stable for the last three years. On the other hand, the 67 million residents of the PJM area are set to see their bill increase by an average of ~15% in 2026 relative to the &#8220;pre-AI-Datacenter&#8221; era? Why such a divergence? In short, empirically the fault is government policy, not AI. Source: SemiAnalysis Energy Model , PJM, Monitoring Analytics In PJM, we think poor market design is the main culprit. Most of the 15% increase in household electricity bills in PJM is driven by a widely misunderstood and somewhat obscure mechanism: the BRA capacity auction. The 2025/26 auction increased 9.3x over the prior year, as shown below. Worse: this increase is driven by a &#8220;simulation&#8221; and doesn&#8217;t reflect actual conditions. Is is",
+    "source": "https://newsletter.semianalysis.com/p/are-ai-datacenters-increasing-electric",
+    "date": "2026-03-03T14:27:50.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-1",
+    "content": "At CES 2026, Nvidia officially announced in detail all 6 Rubin platform products: the Rubin GPU, Vera CPU, NVLink 6 Switch, ConnectX-9, BlueField-4, and Spectrum-6. VR NVL72 is the second generation of Nvidia&#8217;s rack scale Oberon architecture that takes the stage. With competition catching up on rack scale game, Trainium 3 in the Gen2 UltraServer, AMD MI450X Helios Racks, and Google&#8217;s TPU which was at rack scale even before GB200 , Nvidia answers with &#8220;extreme co-design&#8221; supremacy. With extreme co-design, Nvidia takes rack scale integration to the next level. Rack system becomes a unit of compute, a single distributed accelerator, and Nvidia designs the system. Source: Nvidia For the Vera Rubin platform, Nvidia is asserting even more control over the system and rack level design. Rack scale integration and assembly have become more challenging, as every component is being pushed to the limit, whilst also optimizing for cost efficiency. VR NVL72 has a much more holistic design with a modular approach compared to Grace Blackwell for the purpose of integration efficiency and throughput. Nvidia&#8217;s competitiveness strengthens with its extreme co-design supremacy. It is the only player with the best in class or close to the best in class silicon product offerings for all the major silicon contents in an Nvidia trail-blazed AI server system design. Nvidia offers the best accelerator, a SOTA scale up switch, the best NIC, and one of the best Ethernet networking switch, and a much improved purpose-designed CPU . No other competitors have such a complete suite of integrated silicon products. In the sections below, we will discuss the 6 silicon products of the Vera Rubin platform at the silicon level. Then, we will discuss the rack and compute tray evolution from Grace Blackwell to Vera Rubin from the design perspective and the implication to components: cables, connectors, PCB, thermal, mechanical, and power. Next, we will discuss the major network",
+    "source": "https://newsletter.semianalysis.com/p/vera-rubin-extreme-co-design-an-evolution",
+    "date": "2026-02-25T18:40:00.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-2",
+    "content": "Introduction InferenceXv2 (formerly InferenceMAX) builds on the foundation established by InferenceMAXv1, our open-source, continuously updated inference benchmark that has set a new standard for AI inference performance and economics. InferenceMAXv1 moved beyond static, point-in-time benchmarks by running continuous tests across hundreds of chips and popular open-source frameworks. Free dashboard available here. Our benchmark has been widely reproduced, validated and/or supported by almost every major buyer of compute from Google Cloud to Microsoft Azure to Oracle, OpenAI , and many more. InferenceXv2 builds on this foundation. It expands coverage to include large scale DeepSeek MoE disaggregated inference (disagg prefill, or simply &#8220;disagg&#8221;) with wide expert parallelism (wideEP) optimization to all 6 NVIDIA western GPU SKUs from the past 4 years as well as to every single AMD western GPU SKU released in the past 3 years &#8211; in total InferenceXv2 utilizes close to 1000 frontier GPUs for a full benchmark run across all SKUs. With today&#8217;s release, InferenceXv2 is now the first suite to benchmark the Blackwell Ultra GB300 NVL72 and B300 across the whole pareto frontier curve, and it is the first third party benchmark to test disagg+wideEP multi-node FP4 and FP8 MI355X performance. In future iterations of InferenceX, we will continue to focus heavily on disaggregated serving with wide expert parallelism as that is what is deployed in production at Frontier AI Labs like OpenAI, Anthropic, xAI, Google Deepmind, DeepSeek as well as advanced API providers like TogetherAI, Baseten, and Fireworks. In this article, we will also break down the system engineering principles and economics in play around the latest Claude Code Fast mode feature . Our benchmark is completely open-source under Apache 2.0 &#8211; this means that we are able to move at the same rapid speed at which the AI software ecosystem is advancing. If you like our work and would like to sh",
+    "source": "https://newsletter.semianalysis.com/p/inferencex-v2-nvidia-blackwell-vs",
+    "date": "2026-02-16T17:13:11.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-3",
+    "content": "Since 2023, the datacenter story has been simple. GPUs and networking are king. The arrival and subsequent explosion of AI Training and Inference have shifted compute demands away from the CPU. This meant that Intel, the primary supplier of server CPUs, failed to ride the wave of datacenter buildout and spending. Server CPU revenue remained relatively stagnant as hyperscalers and neoclouds focused on GPUs and datacenter infrastructure. At the same time, the same hyperscalers have been rolling their own ARM-based datacenter CPUs for their cloud computing services, closing off a significant addressable market for Intel. And within their own x86 turf, Intel&#8217;s lackluster execution and uncompetitive performance to rival AMD has further eroded market share. Without a competent AI accelerator offering, Intel was left to tread water while the rest of the industry feasted. Over the last 6 months this has changed massively. We have posted multiple reports to Core Research and the Tokenomics Model about soaring CPU demand. The primary drivers we have shown and modeled are reinforcement learning and vibe coding&#8217;s incredible demand on CPUs. We have also covered major CPU cloud deals by multiple vendors with AI labs. We also have modeling of how many CPUs of what types are being deployed. Intel Q4&#8217;25 DCAI Revenue. Source: Intel However, Intel&#8217;s recent rallies and changing demand signals in the latter part of 2025 have shown that CPUs are now relevant again. In their latest Q4 earnings, Intel saw an unexpected uptick in datacenter CPU demand in late 2025 and are increasing 2026 capex guidance on foundry tools and prioritizing wafers to server from PC to alleviate supply constraints in serving this new demand. This marks an inflection point in the role of CPUs in the datacenter, with AI model training and inference using CPUs more intensively. Datacenter CPU Core Count Trend. Source: SemiAnalysis Estimates 2026 is an exciting year for the datacenter CPU, wit",
+    "source": "https://newsletter.semianalysis.com/p/cpus-are-back-the-datacenter-cpu",
+    "date": "2026-02-09T18:18:04.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-4",
+    "content": "Prices of memory are going crazy. SemiAnalysis has been calling this out for over a year since late 2024. The scariest thing is that we aren't even close to the peak. We go through fab by fab production and expansion versus detailed end market demand by memory type to forecast memory revenue, pricing, and margin better than anyone else. This has all been detailed in the SemiAnalysis memory model for a while, but we will share it more publicly today. First some background. The Inevitability of Memory Cycles: A History of Booms and Busts Since its commercial introduction in the 1970s, DRAM has benefited from the two scaling laws that defined the semiconductor industry: Moore&#8217;s Law and Dennard scaling. The 1T1C DRAM cell, with one access transistor and one storage capacitor, scaled for decades. Shrinking transistors reduced cost per bit, while clever capacitor engineering preserved sufficient charge to maintain signal integrity. For much of the industry&#8217;s history, DRAM density scaled faster than logic, doubling roughly every 18 months instead of 24 months and driving dramatic cost reductions. As a commoditized product, manufacturers needed to sustain cost-per-bit declines to stay competitive. Suppliers who couldn&#8217;t compete on cost fell into a downward spiral: low sales left them short on cash to finance next-generation nodes, which in turn left them further behind on cost-per-bit. Many DRAM producers fell victim and went into bankruptcy, resulting in consolidation to just a few major players today. For more details on the industry and DRAM basics, check out our technical deep dive: Yet DRAM scaling has slowed significantly over the past few decades, and density gains over time have shrunk. Over the past decade, DRAM density has increased by only ~2&#215; in total, versus roughly ~100&#215; per decade during the industry&#8217;s peak scaling era. Capacitors are now extreme three-dimensional structures with aspect ratios approaching 100:1, storing just ",
+    "source": "https://newsletter.semianalysis.com/p/memory-mania-how-a-once-in-four-decades",
+    "date": "2026-02-06T16:10:46.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-5",
+    "content": "4% of GitHub public commits are being authored by Claude Code right now. At the current trajectory, we believe that Claude Code will be 20%+ of all daily commits by the end of 2026. While you blinked, AI consumed all of software development. Our sister publication Fabricated Knowledge described software like linear TV during the rise of the internet and thinks that the rise of Claude Code is going to be a new layer of intelligence on top of software akin to DRAM versus NAND . Today SemiAnalysis is going to dive into the repercussions of Claude Code, what it is, and why Claude is so good. Source: Tokenomics Team , Github, Generated by Claude Code We believe that Claude Code is the inflection point for AI &#8220;Agents&#8221; and is a glimpse into the future of how AI will function. It is set to drive exceptional revenue growth for Anthropic in 2026, enabling the lab to dramatically outgrow OpenAI. We built a detailed economic model of Anthropic and precisely quantified revenue and capex implications for its cloud partners AWS, Google Cloud, Azure, as well as associated supply chains such as Trainium2/3, TPUs and GPUs. This is the core purpose of the Tokenomics model . Anthropic is on track to add as much power as OpenAI in the next three years. Refer to our Datacenter Industry Model for a building-by-building tracker of Anthropic and OpenAI. Sam&#8217;s AI lab is notably suffering from mutliple data center delays, which we&#8217;ve called out months ahead of the headlines, most notably in our Coreweave Q3&#8217;2025 earnings preview where we explicitly called out a large CapEx guidance miss. Source: SemiAnalysis Datacenter Model Since more compute means more revenue, we can forecast ARR growth and compare Anthropic to OpenAI directly. source: SemiAnalysis Tokenomics Model Notably, our forecast shows that Anthropic&#8217;s quarterly ARR additions have overtaken OpenAI&#8217;s. Anthropic is adding more revenue every month than OpenAI. We believe Anthropic&#8217;s growt",
+    "source": "https://newsletter.semianalysis.com/p/claude-code-is-the-inflection-point",
+    "date": "2026-02-05T18:56:39.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-6",
+    "content": "Tokens and burgers are not two ideas you often see paired in the same title. If you&#8217;re wondering what they could possibly have in common, stick with us for this short piece, because today we&#8217;re putting them face to face in a duel over a hot topic - datacenter water usage. If you want a different perspective on what a datacenter actually consumes, plus a couple of new cool metrics to use in your Friday evenings (did you hear about tokens per burger?), stay tuned. This one&#8217;s a meaty post. What the Numbers Overlook Datacenter water usage is under increasing scrutiny, with projects even paused or canceled. See recent discussions in Arizona. We think the debate is overstated, as the numbers are often misleading and key variables are frequently ignored. By this we mean the cooling architecture (one of the main drivers of water usage), power source, location and local water scarcity or water source, among others. In addition, datacenter water consumption is often taken at face value and rarely put in perspective versus other everyday industries. Besides, there&#8217;s no standard for water accounting, which makes comparisons messy. Do you include training runs and embedded supply-chain water, or only onsite evaporation and consumption? A lot of nuances that makes the &#8220;datacenters are choking the world&#8221; headline hard to assess. To contribute a different angle to the debate, we decided to put face to face one of the world&#8217;s biggest datacenters (want to know which place? Watch our latest Youtube video! ) and one of the most loved elements in humanity, burgers. More specifically, we&#8217;ll calculate and compare the overall water footprint of Elon Musk&#8217;s Colossus 2 Memphis datacenter, the Macrohard one, and an average In-N-Out store. Does Macrohard&#8217;s beat an In-N-Out store? Let the duel begin. Round 1: Colossus 2 Let&#8217;s start with Colossus 2, xAI&#8217;s datacenter that will power future generations of Grok. As we covered i",
+    "source": "https://newsletter.semianalysis.com/p/from-tokens-to-burgers-a-water-footprint",
+    "date": "2026-01-15T18:54:49.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-7",
+    "content": "It&#8217;s an odd time in the chipmaking industry. On one hand, we are ramping into the biggest supercycle ever seen. Advanced logic, DRAM, NAND, customers can&#8217;t get enough, chipmakers can&#8217;t build capacity fast enough, and we may soon be limited by fab equipment supply. On the other hand, the rapid technology improvement in scaling, power consumption, chip cost, etc. have slowed to a crawl. Massive research efforts yield small incremental gains. As costs increase but improvements asymptote and scaling runs out of room at the bottom, it sometimes feels like Moore&#8217;s Law has become Moore&#8217;s Wall. The good news is the semiconductor industry has a long history of making naysayers look stupid in the long run. There are plenty of innovations on the bench that are promising for the next decade and beyond. In this report, as with 2022 , 2023 , and 2024 , we&#8217;ll cover highlights from IEDM 2025 to find out what the future of chipmaking might look like. With memory prices exploding, 3D NAND technology is suddenly relevant again. We&#8217;ll look at the technology and competitiveness of SK Hynix&#8217;s latest V9 NAND, Samsung&#8217;s use of Mo to improve its existing V9 products, and a big innovation that we may see in future production from SK Hynix. For advanced logic, we&#8217;ll look at interconnect metals beyond Cu, the potential of 2D materials to replace Si in transistors, and the progress in CFET, the next big inflection after gate-all-around. 3D NAND NAND scaling is critically relevant right now, as demand is spiking but there is no cleanroom space for building out capacity. Memory producers are limited to upgrading existing lines, so their supply is constrained by how dense their upgraded process is. For leading fabs, this is a 3xx-layer 3D NAND process, which yields on the order of 20-30 Gb/mm 2 of memory. That pencils out to 30+ TB of memory on a single 12&#8221; wafer (note the difference between (b)its and (B)ytes in these abbreviations",
+    "source": "https://newsletter.semianalysis.com/p/interconnects-beyond-copper-1000",
+    "date": "2026-01-13T19:03:36.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-8",
+    "content": "In 2013, TSMC made a $10 billion bet on a single customer. Morris Chang committed to building 20nm capacity with uncertain economics on the promise that Apple would fill those fabs. &#8220; I bet the company, but I didn&#8217;t think I would lose ,&#8221; Chang later said. He was right. Apple&#8217;s A8 chip launched in 2014, and TSMC never looked back. Apple&#8217;s annual spend at TSMC grew from $2B in 2014 to $24B in 2025. That is 12x in 12 years. Apple went from 9% of TSMC revenue to 25% at its peak and settled to 20% in 2025. More striking is Apple&#8217;s dominance at node launches: consistently &gt;50% since 20nm and in some cases near 100%. Apple effectively funded the yield learning curve for every major node transition since 20nm. The foundry model is dominant today. IDMs cannot support process development and fab capex with what is effectively a single customer. But even foundries need a &#8220;first and best&#8221; customer with large demand and deep pockets to fund their continued advance. Apple has been that customer for the last decade at TSMC. The juggernaut partnership has propelled both companies to new heights, put competitors in the dust, and fueled the chipmaking industry. This report traces the Apple-TSMC relationship from Intel&#8217;s 2010 rejection through five distinct phases, examining how Apple built its chip empire through acquisitions and 8,000+ engineers across 15 design centers. We analyze why competitors have failed to replicate this vertical integration, map Apple&#8217;s manufacturing footprint across Fab 18 and advanced packaging facilities, and assess the strategic questions facing both companies as Intel 18A and Samsung re-engagement become viable alternatives. We&#8217;ll also discuss the next phase of the relationship. It&#8217;s not just Apple at the leading edge anymore. All of this is quantified with specifics from our proprietary Foundry Industry Model and Apple Wafer Demand Model . Anchor Tenant You can see the Apple effe",
+    "source": "https://newsletter.semianalysis.com/p/apple-tsmc-the-partnership-that-built",
+    "date": "2026-01-08T17:52:16.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-9",
+    "content": "We&#8217;re hiring for AI Analysts and Tokenomics Analyst roles. Apply here or reach out directly. Last June, we argued that scaling RL is the critical path to unlocking further AI capabilities. As we will show, the past several months have affirmed our thesis: major capability gains are coming from ramping RL compute. Pre-training continues to see further optimizations, but the lab&#8217;s are laser focused on scaling compute for RL. The best example of this is demonstrated by OpenAI. The company has used the same base model, GPT-4o, for all their recent flagship models: o1, o3, and GPT-5 series. Gains in the performance of OpenAI&#8217;s models for 18 months were being driven by post-training and scaling up RL compute alone. OpenAI has now fixed their pretraining problems, so with that vector of scaling unlocked, progress will be even more rapid. This is not to say that pre-training is dead: Anthropic, xAI, and especially Google all derived significant gains from scaling up pre-training. But OpenAI&#8217;s progress last year and ability to keep up using an older base model was existence proof of the efficacy of post-training. Scaling up RL is difficult as it requires a steady stream of tasks the model needs to solve and learn from. Pre-training had the entire internet to train on, but equivalent corpus for RL is yet to be fully created. Most RL data and tasks must be constructed from scratch, which can be quite labor intensive. Making the models &#8220;do the homework&#8221; started with math problems, which are easy to grade. Methods have since advanced, including branching out to newer domains like healthcare and financial modelling. To do this, models are placed in increasingly specialized &#8220;environments&#8221; that require the model to do these tasks. Aggregating tasks and data can be done manually, or through the curation of high signal user data. The latter is what gives companies like Windsurf and Cursor the ability to post-train their own competitive ",
+    "source": "https://newsletter.semianalysis.com/p/rl-environments-and-rl-for-science",
+    "date": "2026-01-06T18:47:27.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-10",
+    "content": "Co-Packaged Optics (CPO) has long promised to transform datacenter connectivity, but it has taken a long time for the technology to come to market, with tangible deployment-ready products only arriving in 2025. In the meantime, pluggable transceivers have kept pace with networking requirements and remain the default path thanks to their relative cost-effectiveness, familiarity in deployment, and standards-based interoperability. However the heavy networking demands that come with AI workloads mean that this time is different. The AI networking bandwidth roadmap is such that interconnect speed, range, density and reliability requirements, will soon outpace what transceivers can provide. CPO will provide some benefit and bring more options to scale-out networking, but it will be central to scale-up networking. CPO will be the main driver of bandwidth increases in scale-up networking for the latter part of this decade and beyond. Today&#8217;s copper-based scale-up solutions, such as NVLink, provide tremendous bandwidth of 7.2 Tbit/s per GPU &#8211; soon to be 14.4 Tbit/s per GPU in the Rubin generation, yet copper-based links are limited in range to two meters at most, meaning the scale-up domain world size is limited to one or two racks at most. It is also increasingly difficult to scale bandwidth over copper. In Rubin, Nvidia will deliver another doubling of bandwidth per copper lane through bi-directional SerDes, but doubling bandwidth on copper by developing ever-faster SerDes is a highly challenging vector of scaling that is a slow grind. CPO can deliver the same or better bandwidth density and can provide additional vectors for scaling bandwidth, all while enabling larger scale-up domains. A starting point for understanding the impetus for CPO is to consider the many inefficiencies and trade-offs when using a transceiver for optical communication. Transceivers can be used to achieve greater link range, but the cage on the front panel of a networking switch or co",
+    "source": "https://newsletter.semianalysis.com/p/co-packaged-optics-cpo-book-scaling",
+    "date": "2026-01-01T21:20:36.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-11",
+    "content": "The Grid is Old and Tired Nearly two years ago, we were the first to predict a looming power crunch. In our report AI Datacenter Energy Dilemma - Race for AI Datacenter Space , w e forecasted AI Power Demand in the US to grow from ~3GW in 2023 to over 28GW by 2026 &#8211; a pressure that would overwhelm America&#8217;s supply chains. Our prediction proved very accurate. The chart below tells the story: in Texas alone, tens of gigawatts of datacenter load requests pour in each month . Yet in the past 12 months, barely more than a gigawatt has been approved. The grid is sold out. Source: ERCOT 2024 Large Flexible Load Task Force (LFLTF) However, AI infrastructure cannot wait for the grid&#8217;s multiyear transmission upgrades. An AI cloud can generate revenue of $10-12 billion dollars per gigawatt, annually . Getting a 400 MW datacenter online even six months earlier is worth billions. Economic need dwarfs problems like an overloaded electric grid. The industry is already searching for new solutions. Eighteen months ago, Elon Musk shocked the datacenter industry by building a 100,000-GPU cluster in four months. Multiple innovations enabled this incredible achievement, but the energy strategy was the most impressive. xAI entirely bypassed the grid and generated power onsite, using truck-mounted gas turbines and engines. As shown below, xAI has already deployed over 500MW of turbines near its datacenters. In a world where AI Labs are racing to be first with a Gigawatt datacenter , speed is the moat . Source: SemiAnalysis Datacenter Industry Model One by one, hyperscalers and AI Labs are following suit and temporarily abandoning the grid to build their own onsite power plant. As we discussed months ago in the Datacenter Model , in October 2025, OpenAI and Oracle placed the largest order ever for onsite gas generation, with a 2.3GW plant in Texas. The market for onsite gas generation is entering an era of triple-digit growth annual growth. The beneficiaries extend far be",
+    "source": "https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power",
+    "date": "2025-12-30T21:02:35.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-12",
+    "content": "Trainium3: A New Challenger Approaching! Hot on the heels of our 10K word deep dive on TPUs , Amazon launched Trainium3 (Trn3) general availability and announced Trainium4 (Trn4) at its annual AWS re:Invent. Amazon has had the longest and broadest history of custom silicon in the datacenter. While they were behind in AI for quite some time , they are rapidly progressing to be competitive. Last year we detailed Amazon&#8217;s ramp of its Trainium2 (Trn2) accelerators aimed at internal Bedrock workloads and Anthropic&#8217;s training/inference needs. Since then, through our datacenter model and accelerator model , we detailed the huge ramp that led to our blockbuster call that AWS would accelerate on revenue. Today, we are publishing our next technical bible on the step-function improvement that is the Trainium3 chip, microarchitecture, system and rack architecture, scale up, profilers, software platform, and datacenters ramps. This is the most detailed piece we've written on an accelerator and its hardware/software, on desktop there is a table of contents that makes it possible to review specific sections. Amazon Basics GB200 aka GB200-at-Home With Trainium3, AWS remains laser-focused on optimizing performance per total cost of ownership (perf per TCO). Their hardware North Star is simple: deliver the fastest time to market at the lowest TCO. Rather than committing to any single architectural design, AWS maximizes operational flexibility. This extends from their work with multiple partners on the custom silicon side to the management of their own supply chain to multi-sourcing multiple component vendors. On the systems and networking front, AWS is following an &#8220;Amazon Basics&#8221; approach that optimizes for perf per TCO. Design choices such as whether to use a 12.8T, 25.6T or a 51.2T bandwidth scale-out switch or to select liquid vs air cooling are merely a means to an end to provide the best TCO for the given client and the given datacenter. For the scale-up",
+    "source": "https://newsletter.semianalysis.com/p/aws-trainium3-deep-dive-a-potential",
+    "date": "2025-12-04T19:06:20.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-13",
+    "content": "Earlier this year, U.S. President Donald Trump called TSMC &#8220;one of the most important businesses in the world.&#8221; Although he was incorrect, TSMC is the most important business in the world, his government and others do realize the importance of bringing TSMC into their countries. TSMC CEO C.C. Wei, at the White House in March 2025, at that point &#8220;the most important man in the room&#8221; according to President Trump. Source: AFP This drive to on-shore advanced semiconductor manufacturing has spawned three TSMC overseas ventures: in the United States, Japan, and Germany. Five years on, these projects are all yielding wafers. But at what cost? Have both TSMC (and by extension, Taiwan) and these foreign countries achieved their goals? Are the overseas fabs economically competitive? Dr. Morris Chang, the company&#8217;s legendary founder, has been pessimistic on the U.S. fabs (emphasis added): &#8230;We think that the recent effort of the U.S. to increase onshore manufacturing of semiconductors, right now you&#8217;re talking about spending only tens of billions of dollars of money of subsidy. Well, it&#8217;s not going to be enough. I think it will be a very expensive exercise in futility With the fabs operating in high volume, we can finally answer all of that and more in this report. First, some details on what makes TSMC successful, including their history, culture, and structure. Next a discussion of the &#8220;clustering&#8221; effect that makes Hsinchu Science Park the semiconductor epicenter of the world, and Arizona&#8217;s progress towards replicating it, including a detailed look at the supply chains in both places. Finally, we&#8217;ll detail the economics of the TSMC Arizona fab - is it truly more expensive to make wafers in the U.S.? Taiwanese Roots TSMC operates as a global leader in semiconductor manufacturing, collaborating with hundreds of international clients. Yet, unlike many multinational corporations, it remains deeply Taiwanese a",
+    "source": "https://newsletter.semianalysis.com/p/tsmc-overseas-fabs-a-success",
+    "date": "2025-12-01T01:48:09.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-14",
+    "content": "The two best models in the world, Anthropic&#8217;s Claude 4.5 Opus and Google&#8217;s Gemini 3 have the majority of their training and inference infrastructure on Google&#8217;s TPUs and Amazon&#8217;s Trainium. Now Google is selling TPUs physically to multiple firms. Is this the end of Nvidia&#8217;s dominance? The dawn of the AI era is here, and it is crucial to understand that the cost structure of AI-driven software deviates considerably from traditional software. Chip microarchitecture and system architecture play a vital role in the development and scalability of these innovative new forms of software. The hardware infrastructure on which AI software runs has a notably larger impact on Capex and Opex, and subsequently the gross margins, in contrast to earlier generations of software, where developer costs were relatively larger. Consequently, it is even more crucial to devote considerable attention to optimizing your AI infrastructure to be able to deploy AI software. Firms that have an advantage in infrastructure will also have an advantage in the ability to deploy and scale applications with AI. Google had peddled the idea of building AI-specific infrastructure as far back as 2006, but the problem came to a boiling point in 2013. They realized they needed to double the number of datacenters they had if they wanted to deploy AI at any scale. As such, they started laying the groundwork for their TPU chips which were put into production in 2016. It&#8217;s interesting to compare this to Amazon, who in the same year, realized they needed to build custom silicon too. In 2013, they started the Nitro Program , which was focused on developing silicon to optimize general-purpose CPU computing and storage . Two very different companies optimized their efforts for infrastructure for different eras of computing and software paradigms . We&#8217;ve long believed that the TPU is among the world&#8217;s best systems for AI training and inference, neck and neck with king o",
+    "source": "https://newsletter.semianalysis.com/p/tpuv7-google-takes-a-swing-at-the",
+    "date": "2025-11-28T13:30:32.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-15",
+    "content": "Microsoft was at the top of AI in 2023 and 2024, but then a year ago they changed course drastically. They paused their datacenter construction significantly and slowed down their commitments to OpenAI. We called this out a year ago to datacenter model clients and later wrote a newsletter piece about it . 2025 was the story of OpenAI diversifying away from Microsoft, with Oracle, CoreWeave, Nscale, SB Energy, Amazon, and Google all signing large compute contracts with OpenAI directly. This seems like a dire situation. Today we have a post dissecting Microsoft&#8217;s fumble as well as a public interview with Satya Nadella and our dear friend Dwarkesh Patel where we challenged him on their AI strategy and execution . Now Microsoft&#8217;s investments in AI are back, and the AI giant has never had such high demand for Accelerated Computing. The Redmond titan has woken up to it going down the wrong path and has dramatically shifted course. With the newly announced OpenAI deal, Azure growth is set to Accelerate in the upcoming quarters as forecasted by our Tokenomics model . Source: SemiAnalysis Tokenomics Model Microsoft plays in every single part of the AI Token Economic Stack , is witnessing accelerated growth, and we expect the trend to continue in coming quarters and years. Source: SemiAnalysis Tokenomics Model The firm is actively looking for near-term capacity and pulling the trigger on everything it can get its hands on. Self-build, leasing, Neocloud, middle-of-nowhere locations &#8211; everything is on the table to accelerate near-term capacity growth (exact numbers available to our Datacenter Model subscribers ). Source: SemiAnalysis Tokenomics Model On the hardware side, Microsoft even has access to OpenAI&#8217;s Custom Chip IP, the most exciting custom chip ASICs currently in development. Given the trajectory of OpenAI&#8217;s ASIC developments look much better than that of Microsoft Maia, it may be that Microsoft ends up using the chip to serve OpenAI mode",
+    "source": "https://newsletter.semianalysis.com/p/microsofts-ai-strategy-deconstructed",
+    "date": "2025-11-12T17:18:06.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-16",
+    "content": "Introduction GPU clouds (also known as &#8220;Neoclouds&#8221; since October of last year) are at the center of the AI boom. Neoclouds represent some of the most important transactions in AI, the critical juncture where end users rent GPUs to train models, process data, and build inference endpoints. Our previous research has set the standard for understanding Neoclouds: Since ClusterMAX 1.0 was released 6 months ago, we have seen significant changes in the industry. H200, B200, MI325X, and MI355X GPUs have arrived at scale. GB200 NVL72 has rolled out to hyperscale customers and GB300 NVL72 systems are being brought up. TPU and Trainium are in the arena. And many buyers are turning to the ClusterMAX rating system as the trusted, independent third party with a comprehensive, technical guide to understanding the market. An update is needed! Executive Summary YouTube summary video available here ! ClusterMAX 2.0 debuts with a comprehensive review of 84 providers, up from 26 in ClusterMAX 1.0. We increase our market view to cover 209 total providers, up from 169 in our previous article and 124 in the original AI Neocloud Playbook and Anatomy. We have interviewed over 140 end users of Neoclouds as part of this research. We release an itemized list of all criteria we consider during testing, covering 10 primary categories (security, lifecycle, orchestration, storage, networking, reliability, monitoring, pricing, partnerships, availability). We release five descriptions of our expectations, covering SLURM, Kubernetes, standalone machines, monitoring, and health checks. We encourage providers to use these lists when developing their offerings. We consider the lists as an amalgamation of our interviews with end users, and continue to pursue the quality when developing their offerings. CoreWeave retains top spot as the only member of the Platinum tier. CoreWeave sets the bar for others to follow, and is the only cloud to consistently command premium pricing in our interviews ",
+    "source": "https://newsletter.semianalysis.com/p/clustermax-20-the-industry-standard",
+    "date": "2025-11-06T17:02:53.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-17",
+    "content": "The chipmaking industry is, surprisingly, ripe for disruption. Technical decisions at incumbents are often driven by inertia, &#8220;that&#8217;s what we&#8217;ve always done.&#8221; Regression is feared above all else. Something as simple as fab lighting color cannot be changed: traditional yellow lights are still used in photolithography lines even though fabs will readily tell you it no longer has any risk of affecting the photoresist. A TSMC fab cleanroom. The yellow lighting tint hasn&#8217;t been necessary for decades. Source: TSMC This has worsened in recent years. Chipmakers iterate on existing technology despite slower scaling and rapidly increasing costs. ASML has a tool on their roadmap, hyper-NA, that they openly admit may not be economically viable! But it&#8217;s hard to fault these companies &#8211; the tools and fabs print a lot of money. A single EUV tool, sold for $225M, can produce more than $650M in complete wafers in a year (note that there are many costs beyond that single EUV tool incurred in producing those wafers). There is little incentive for incumbents to change tack. But that leaves an opening for masochistic bold, scrappy innovators&#8230; enter Substrate. X-Ray Lithography Substrate is a recently out-of-stealth Bay Area startup inventing &#8220;technology to power next-generation foundries&#8221; with the mission to substantially reduce the cost of advanced logic wafers. The first major step towards this mission is a new X-ray lithography (XRL) tool that the company has invented. The idea of x-ray lithography has been around for half a century. MIT researchers produced the first functioning devices using XRL in 1972. Most labs doing lithography research at least experimented with it - Bell Labs, IBM, and others. IBM even built chips using XRL in the 90s, but long wavelength (DUV and above) techniques kept scaling, so there was no need to overcome the numerous challenges facing XRL. Chief among them are (a) optics, since just like EUV, ",
+    "source": "https://newsletter.semianalysis.com/p/how-to-kill-2-monopolies-with-1-tool",
+    "date": "2025-10-29T20:59:28.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-18",
+    "content": "Every 6 months or so, we see another round of headlines about nanoimprint lithography disrupting EUV. Source: Bloomberg, Financial Times, The Economist It makes for good clickbait but is just not true. The technology has many interesting and valid applications, but nothing like what EUV can do. Theoretically , NIL could match or even exceed EUV capabilities. Practically , there are serious issues for NIL without any clear way forward. We&#8217;ll explain those differences in theory versus actual in-fab practice in this report. We&#8217;ll also detail the key players in the market and the likely applications where it will work. To start, let&#8217;s cover the basics of what NIL is and what it can do: NIL Basics &amp; History Nanoimprint lithography uses a patterned &#8220;stamp&#8221; to imprint a pattern in resin. In semiconductor production, it achieves the same end goal as photolithography &#224; la ASML &#8211; transfer a pattern from a mask onto a wafer. These patterns are just 1 layer of the chip design. Stacking 50-100 layers, with patterning followed by other techniques like etch and deposition on each, eventually builds up a complete chip. Source: Canon The most promising technique for nanometer-scale NIL was invented in 1996 and spun out from academia to a commercial entity in 2001 as Molecular Imprints Inc. (MII). Canon acquired MII in 2014, positioning it as their alternative at the time ASML was beginning to ship EUV into customer R&amp;D fabs. Source: Canon Nanotechnologies Source: Molecular Imprints Inc. / Canon, SemiAnalysis This is the only advanced commercial venture into NIL technology. A Chinese competitor, Prinano, recently made headlines, but is much less mature, for now. Nanonex, spun out by the inventors of NIL from the University of Minnesota, has fewer than 100 tools worldwide, mostly in academic labs. EV Group has commercial tools but explicitly aims for less advanced applications including metalenses, MEMS, and microfluidics. Canon went al",
+    "source": "https://newsletter.semianalysis.com/p/nanoimprint-lithography-stop-saying",
+    "date": "2025-10-26T16:35:28.000Z",
+    "platform": "substack"
+  },
+  {
+    "id": "substack-19",
+    "content": "Quadrupeds are the most advanced general-purpose robots today. While they don&#8217;t grab as many headlines as their Humanoid counterparts, their Level 2 Autonomy coming online opens up a plethora of new market opportunities previously unavailable to robotics. Understanding the Quadrupeds market and ecosystem is important to glimpse the future of autonomous robotics. Currently, we see two main quadruped hardware providers: the Western pioneer Boston Dynamics and China&#8217;s hardware champion Unitree. ANYbotics/DEEP Robotics being notable players that we mention briefly. Raising all providers is a broader startup ecosystem emerging, leveraging new AI model architectures to augment the hardware, and software enabling multiple applications. We discuss these market dynamics, giving a future outlook, as well as new opportunities being unlocked. We will also analyze detailed Bill of Materials of the Unitree Go2 and B2 including gearboxes, motors, drives, bearings, linkage bar, batteries, LiDAR, foot sensors, optical cameras, SoCs, cameras, and more. The important point here is that their margins are incredible, much higher than most believe. Unitree is not loss leading, they have high volume manufacturing at low cost cracked. We also provide a framework for the Total Addressable Market (TAM) of the following industries: Oil &amp; Gas, Semiconductor Fabs, and Datacenters. As well as component suppliers exposed to quadrupeds. All extremely topical given the rumored upcoming Unitree IPO and their majority revenue share coming from quadrupeds. Our Main Takeaways: Unitree benefits from a substantial cost advantage relative to Western peers. Unitree boasts a much broader product portfolio and faster product release cadence given China&#8217;s manufacturing supremacy. As hardware providers, Boston Dynamics (and to a lesser extent ANYBotics/DEEP Robotics) has seen Western deployments, benefiting from partial vertical integration. Unitree is currently more focused on Chinese in",
+    "source": "https://newsletter.semianalysis.com/p/quadruped-state-of-the-market-unitree",
+    "date": "2025-10-20T10:12:06.000Z",
+    "platform": "substack"
   }
 ]

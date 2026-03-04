@@ -5,47 +5,24 @@
   "nodes": [
     {
       "id": "Citadel-root",
-      "claim": "AI will not cause net job losses in the next decade because productivity gains will drive economic growth, new job creation, and demand shifts that offset displacement, while practical constraints on automation deployment limit near-term labor substitution.",
+      "claim": "AI will not cause net job losses in the next decade because historical technological revolutions create productivity gains that generate new industries and labor demand, despite near-term displacement and distributional challenges.",
       "type": "root",
-      "baseScore": 0.6086666666666667,
-      "dialecticalStrength": 0.8933252257796223,
+      "baseScore": 0.602,
+      "dialecticalStrength": 0.7859090390449526,
       "grounding": [
-        "article-citadel-productivity-shocks",
-        "article-citadel-substitution-elasticity",
         "article-citadel-2026-global-intelligence-crisis",
         "article-citadel-compute-constraints",
+        "article-citadel-productivity-shocks",
         "article-citadel-complement-not-substitute",
-        "article-citadel-keynes-15-hour"
+        "article-citadel-keynes-15-hour",
+        "article-citadel-substitution-elasticity",
+        "article-citadel-recursive-adoption"
       ],
       "personaId": "Citadel",
       "depth": 0
     },
     {
       "id": "Citadel-d1-0",
-      "claim": "AI-driven automation causes/supports productivity shock",
-      "type": "pro",
-      "baseScore": 0.63,
-      "dialecticalStrength": 0.9991447759182795,
-      "grounding": [
-        "article-citadel-productivity-shocks"
-      ],
-      "personaId": "Citadel",
-      "depth": 1
-    },
-    {
-      "id": "Citadel-d1-1",
-      "claim": "extremely high elasticity of substitution between AI capital and labor causes/supports labor's share of income collapse",
-      "type": "con",
-      "baseScore": 0.63,
-      "dialecticalStrength": 0.28413,
-      "grounding": [
-        "article-citadel-substitution-elasticity"
-      ],
-      "personaId": "Citadel",
-      "depth": 1
-    },
-    {
-      "id": "Citadel-d1-2",
       "claim": "rising software engineer job postings (up 11% YoY) causes/supports undermines displacement narrative",
       "type": "pro",
       "baseScore": 0.61,
@@ -57,11 +34,11 @@
       "depth": 1
     },
     {
-      "id": "Citadel-d1-3",
+      "id": "Citadel-d1-1",
       "claim": "marginal cost of compute rises above marginal cost of human labor undermines/reduces labor substitution by automation",
       "type": "pro",
       "baseScore": 0.61,
-      "dialecticalStrength": 0.61,
+      "dialecticalStrength": 0.6789038350000001,
       "grounding": [
         "article-citadel-compute-constraints"
       ],
@@ -69,11 +46,11 @@
       "depth": 1
     },
     {
-      "id": "Citadel-d1-4",
-      "claim": "productivity shocks causes/supports potential output",
-      "type": "pro",
-      "baseScore": 0.61,
-      "dialecticalStrength": 0.82411,
+      "id": "Citadel-d1-2",
+      "claim": "AI-driven automation causes/supports productivity shock",
+      "type": "con",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.5024264174999999,
       "grounding": [
         "article-citadel-productivity-shocks"
       ],
@@ -81,67 +58,31 @@
       "depth": 1
     },
     {
-      "id": "Citadel-d2-0",
-      "claim": "productivity shocks causes/supports real income",
+      "id": "Citadel-d1-3",
+      "claim": "technological revolutions undermines/reduces labor elimination",
       "type": "pro",
-      "baseScore": 0.61,
-      "dialecticalStrength": 0.61,
-      "grounding": [
-        "article-citadel-productivity-shocks"
-      ],
-      "personaId": "Citadel",
-      "depth": 2
-    },
-    {
-      "id": "Citadel-d2-1",
-      "claim": "technological revolutions causes/supports task composition alteration",
-      "type": "pro",
-      "baseScore": 0.61,
-      "dialecticalStrength": 0.61,
+      "baseScore": 0.5900000000000001,
+      "dialecticalStrength": 0.6712205900000001,
       "grounding": [
         "article-citadel-complement-not-substitute"
       ],
       "personaId": "Citadel",
-      "depth": 2
+      "depth": 1
     },
     {
-      "id": "Citadel-d2-2",
-      "claim": "productivity growth causes/supports workweek reduction",
+      "id": "Citadel-d1-4",
+      "claim": "Microsoft Office advent causes/supports office worker labor demand",
       "type": "pro",
-      "baseScore": 0.61,
-      "dialecticalStrength": 0.61,
+      "baseScore": 0.51,
+      "dialecticalStrength": 0.23001,
       "grounding": [
-        "article-citadel-keynes-15-hour"
+        "article-citadel-complement-not-substitute"
       ],
       "personaId": "Citadel",
-      "depth": 2
+      "depth": 1
     },
     {
-      "id": "Citadel-d2-3",
-      "claim": "productivity gains causes/supports composition of demand alteration",
-      "type": "pro",
-      "baseScore": 0.61,
-      "dialecticalStrength": 0.61,
-      "grounding": [
-        "article-citadel-keynes-15-hour"
-      ],
-      "personaId": "Citadel",
-      "depth": 2
-    },
-    {
-      "id": "Citadel-d2-4",
-      "claim": "productivity gains causes/supports real income expansion",
-      "type": "pro",
-      "baseScore": 0.61,
-      "dialecticalStrength": 0.61,
-      "grounding": [
-        "article-citadel-keynes-15-hour"
-      ],
-      "personaId": "Citadel",
-      "depth": 2
-    },
-    {
-      "id": "Citadel-d2-5",
+      "id": "Citadel-d2-0",
       "claim": "productivity gains causes/supports new industry generation",
       "type": "pro",
       "baseScore": 0.61,
@@ -153,7 +94,19 @@
       "depth": 2
     },
     {
-      "id": "Citadel-d2-6",
+      "id": "Citadel-d2-1",
+      "claim": "major technological advances causes/supports productivity shocks pattern",
+      "type": "pro",
+      "baseScore": 0.61,
+      "dialecticalStrength": 0.61,
+      "grounding": [
+        "article-citadel-productivity-shocks"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-2",
       "claim": "persistent failure of redistribution mechanisms and simultaneous drying up of investment opportunities causes/supports structural fall in aggregate demand",
       "type": "con",
       "baseScore": 0.61,
@@ -165,37 +118,85 @@
       "depth": 2
     },
     {
-      "id": "Citadel-d2-7",
+      "id": "Citadel-d2-3",
+      "claim": "extremely high elasticity of substitution between AI capital and labor causes/supports labor's share of income collapse",
+      "type": "con",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.63,
+      "grounding": [
+        "article-citadel-substitution-elasticity"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-4",
+      "claim": "costs falling causes/supports acceleration of technological adoption growth",
+      "type": "con",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.63,
+      "grounding": [
+        "article-citadel-recursive-adoption"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-5",
       "claim": "physical capital constraints undermines/reduces economic deployment of automation",
-      "type": "pro",
+      "type": "con",
       "baseScore": 0.5900000000000001,
       "dialecticalStrength": 0.5900000000000001,
       "grounding": [
         "article-citadel-compute-constraints"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-6",
+      "claim": "energy availability constraints undermines/reduces economic deployment of automation",
+      "type": "con",
+      "baseScore": 0.5900000000000001,
+      "dialecticalStrength": 0.5900000000000001,
+      "grounding": [
+        "article-citadel-compute-constraints"
+      ],
+      "personaId": "Citadel",
+      "depth": 2
+    },
+    {
+      "id": "Citadel-d2-7",
+      "claim": "productivity shocks undermines/reduces marginal costs",
+      "type": "pro",
+      "baseScore": 0.61,
+      "dialecticalStrength": 0.61,
+      "grounding": [
+        "article-citadel-productivity-shocks"
       ],
       "personaId": "Citadel",
       "depth": 2
     },
     {
       "id": "Citadel-d2-8",
-      "claim": "energy availability constraints undermines/reduces economic deployment of automation",
+      "claim": "AI as complement to labor undermines/reduces labor demand reduction",
       "type": "pro",
       "baseScore": 0.5900000000000001,
       "dialecticalStrength": 0.5900000000000001,
       "grounding": [
-        "article-citadel-compute-constraints"
+        "article-citadel-complement-not-substitute"
       ],
       "personaId": "Citadel",
       "depth": 2
     },
     {
       "id": "Citadel-d2-9",
-      "claim": "regulatory approvals constraints undermines/reduces economic deployment of automation",
+      "claim": "technological revolutions causes/supports task composition alteration",
       "type": "pro",
-      "baseScore": 0.5900000000000001,
-      "dialecticalStrength": 0.5900000000000001,
+      "baseScore": 0.61,
+      "dialecticalStrength": 0.61,
       "grounding": [
-        "article-citadel-compute-constraints"
+        "article-citadel-complement-not-substitute"
       ],
       "personaId": "Citadel",
       "depth": 2
@@ -207,106 +208,105 @@
       "from": "Citadel-d1-0",
       "to": "Citadel-root",
       "type": "support",
-      "weight": 0.95
+      "weight": 0.9
     },
     {
       "id": "Citadel-d1-1->Citadel-root",
       "from": "Citadel-d1-1",
       "to": "Citadel-root",
-      "type": "attack",
-      "weight": 0.95
+      "type": "support",
+      "weight": 0.9
     },
     {
       "id": "Citadel-d1-2->Citadel-root",
       "from": "Citadel-d1-2",
       "to": "Citadel-root",
-      "type": "support",
-      "weight": 0.9
+      "type": "attack",
+      "weight": 0.95
     },
     {
       "id": "Citadel-d1-3->Citadel-root",
       "from": "Citadel-d1-3",
       "to": "Citadel-root",
       "type": "support",
-      "weight": 0.9
+      "weight": 0.85
     },
     {
       "id": "Citadel-d1-4->Citadel-root",
       "from": "Citadel-d1-4",
       "to": "Citadel-root",
       "type": "support",
-      "weight": 0.9
+      "weight": 0.85
     },
     {
-      "id": "Citadel-d2-0->Citadel-d1-4",
+      "id": "Citadel-d2-0->Citadel-d1-2",
       "from": "Citadel-d2-0",
-      "to": "Citadel-d1-4",
+      "to": "Citadel-d1-2",
       "type": "support",
       "weight": 0.9
     },
     {
-      "id": "Citadel-d2-1->Citadel-d1-0",
+      "id": "Citadel-d2-1->Citadel-d1-3",
       "from": "Citadel-d2-1",
-      "to": "Citadel-d1-0",
+      "to": "Citadel-d1-3",
       "type": "support",
       "weight": 0.9
     },
     {
-      "id": "Citadel-d2-2->Citadel-d1-0",
+      "id": "Citadel-d2-2->Citadel-d1-4",
       "from": "Citadel-d2-2",
-      "to": "Citadel-d1-0",
-      "type": "support",
-      "weight": 0.9
-    },
-    {
-      "id": "Citadel-d2-3->Citadel-d1-0",
-      "from": "Citadel-d2-3",
-      "to": "Citadel-d1-0",
-      "type": "support",
-      "weight": 0.9
-    },
-    {
-      "id": "Citadel-d2-4->Citadel-d1-0",
-      "from": "Citadel-d2-4",
-      "to": "Citadel-d1-0",
-      "type": "support",
-      "weight": 0.9
-    },
-    {
-      "id": "Citadel-d2-5->Citadel-d1-0",
-      "from": "Citadel-d2-5",
-      "to": "Citadel-d1-0",
-      "type": "support",
-      "weight": 0.9
-    },
-    {
-      "id": "Citadel-d2-6->Citadel-d1-1",
-      "from": "Citadel-d2-6",
-      "to": "Citadel-d1-1",
+      "to": "Citadel-d1-4",
       "type": "attack",
       "weight": 0.9
     },
     {
-      "id": "Citadel-d2-7->Citadel-d1-0",
+      "id": "Citadel-d2-3->Citadel-d1-1",
+      "from": "Citadel-d2-3",
+      "to": "Citadel-d1-1",
+      "type": "attack",
+      "weight": 0.95
+    },
+    {
+      "id": "Citadel-d2-4->Citadel-d1-3",
+      "from": "Citadel-d2-4",
+      "to": "Citadel-d1-3",
+      "type": "attack",
+      "weight": 0.95
+    },
+    {
+      "id": "Citadel-d2-5->Citadel-d1-2",
+      "from": "Citadel-d2-5",
+      "to": "Citadel-d1-2",
+      "type": "attack",
+      "weight": 0.85
+    },
+    {
+      "id": "Citadel-d2-6->Citadel-d1-2",
+      "from": "Citadel-d2-6",
+      "to": "Citadel-d1-2",
+      "type": "attack",
+      "weight": 0.85
+    },
+    {
+      "id": "Citadel-d2-7->Citadel-d1-1",
       "from": "Citadel-d2-7",
-      "to": "Citadel-d1-0",
+      "to": "Citadel-d1-1",
       "type": "support",
-      "weight": 0.85
+      "weight": 0.9
     },
     {
-      "id": "Citadel-d2-8->Citadel-d1-0",
+      "id": "Citadel-d2-8->Citadel-d1-1",
       "from": "Citadel-d2-8",
-      "to": "Citadel-d1-0",
+      "to": "Citadel-d1-1",
       "type": "support",
       "weight": 0.85
     },
     {
-      "id": "Citadel-d2-9->Citadel-d1-0",
+      "id": "Citadel-d2-9->Citadel-d1-3",
       "from": "Citadel-d2-9",
-      "to": "Citadel-d1-0",
+      "to": "Citadel-d1-3",
       "type": "support",
-      "weight": 0.85
+      "weight": 0.9
     }
-  ],
-  "round": 0
+  ]
 }

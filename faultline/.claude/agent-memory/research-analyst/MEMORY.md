@@ -68,3 +68,30 @@
 - Key compute comparison finding: self-consistency is "extremely competitive" vs MAD in budget-aware evaluation; MAD only wins on hard math with heterogeneous agents
 - No published papers compare MAD directly to o1/o3 reasoning models (gap as of early 2026)
 - See: debate-output-quality-research.md for full analysis
+
+## QBAF Multi-Agent Merging — Established Facts
+- Best paper: "Retrieval- and Argumentation-Enhanced Multi-Agent LLMs for Judgmental Forecasting" (arxiv 2510.24303)
+- Multi-Agent QBAF Combinator algorithm (Algorithm 1): layer-by-layer bottom-up clustering, NOT union-find
+  - Similarity metric: Jina-V3 embeddings + cosine similarity, threshold δ=0.5
+  - Hard constraint: only merge arguments with the same parent AND same relation type (support OR attack)
+  - Never merges arguments with different parents or opposite relations to same parent
+  - Avoids transitive merging by design — pairwise constraint before any union step
+- Faultline's `buildCommunityGraph` uses union-find with MAX_GROUP_SIZE=5 cap — this is directionally correct but the paper suggests the parent-relation constraint is more principled
+
+## QBAF Pivotal Argument Identification — Established Facts
+- Three main families: (A) removal-based AAEs, (B) Shapley-based AAEs, (C) gradient-based (partial derivative of σ w.r.t. τ)
+- Removal-based: φ(β→α) = σ(α) - σ_{A\{β}}(α) — simple, fast, local
+- Shapley-based: game-theoretic average across coalitions; approximated via 1000-sample Monte Carlo (Yin et al. 2023)
+- Gradient-based: ∂σ(root)/∂τ(node) under DF-QuAD; captures sensitivity vs. removal-based absolute impact
+- Contribution functions survey: arxiv 2401.08879 (Kampik, Potyka et al. 2024) — no single function satisfies all principles
+- CE-QArg (arxiv 2407.08497, KR 2024): counterfactual explanation algorithm; polarity via path DFS (even/odd attack count); priority = 1/shortest_path_length; batch updates proportional to priority
+- Counterfactual/sufficient/necessary explanations (arxiv 2509.18215): pivotal = argument appearing in all minimal counterfactual explanations
+- Faultline's `counterfactualImpact` in df-quad.ts implements removal-based approach correctly (recomputes without node+edges)
+
+## Claim Normalization — Established Facts
+- No published QBAF-specific claim normalization standard exists
+- ArgRAG (arxiv 2508.20131): nodes are raw natural language text, no preprocessing; LLM handles stylistic variation
+- Relation-based AM papers: entity masking suggested as future work but not implemented — LLM comparison handles variation
+- Cross-agent comparison: use LLM batch comparison (as Faultline does) rather than string matching; this is the consensus approach
+- Edge-type separation from content is handled architecturally (separate Att/Sup sets), not via text preprocessing
+- See: qbaf-research.md for full analysis

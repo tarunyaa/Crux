@@ -1,57 +1,441 @@
 [
   {
-    "id": "tweet-2020770275307159797",
-    "content": "@pandawatch88 lmao",
-    "source": "https://x.com/jukan05/status/2020770275307159797",
-    "date": "2026-02-09T08:02:32.000Z",
+    "id": "tweet-2029053169310023877",
+    "content": "I’m waiting for you, Jensen… https://t.co/pqu2IVcGZS",
+    "source": "https://x.com/jukan05/status/2029053169310023877",
+    "date": "2026-03-04T04:35:48.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 2,
+      "likes": 343,
+      "retweets": 9,
+      "replies": 19
+    }
+  },
+  {
+    "id": "tweet-2029048451842150488",
+    "content": "@insane_analyst 😭",
+    "source": "https://x.com/jukan05/status/2029048451842150488",
+    "date": "2026-03-04T04:17:03.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 36,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2029037424404553906",
+    "content": "https://t.co/WbujAruhVC",
+    "source": "https://x.com/jukan05/status/2029037424404553906",
+    "date": "2026-03-04T03:33:14.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 13,
+      "retweets": 2,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2029037422248702244",
+    "content": "\"Sell KOSPI and watch from the sidelines for a while\"… The global sentiment conveyed by foreign brokerages\n\nForeign investors are aggressively selling domestic equities. Their intention is reportedly to lock in profits first and then stay on the sidelines for the time being. https://t.co/r3Vvfe6yxc",
+    "source": "https://x.com/jukan05/status/2029037422248702244",
+    "date": "2026-03-04T03:33:13.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 150,
+      "retweets": 13,
+      "replies": 11
+    }
+  },
+  {
+    "id": "tweet-2029034821499191446",
+    "content": "SSIBAL\n\nMy unrealized gains on the Nikkei are completely gone.",
+    "source": "https://x.com/jukan05/status/2029034821499191446",
+    "date": "2026-03-04T03:22:53.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 377,
+      "retweets": 13,
+      "replies": 60
+    }
+  },
+  {
+    "id": "tweet-2029013731406168479",
+    "content": "https://t.co/h5ZyAWDQmq",
+    "source": "https://x.com/jukan05/status/2029013731406168479",
+    "date": "2026-03-04T01:59:05.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 8,
+      "retweets": 1,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2029013728654704938",
+    "content": "\"Stand It Vertical, Stack and Bond\" — Samsung Applies Array of New Technologies to Next-Gen DRAM\n\nSamsung Electronics' next-generation DRAM under development was recently unveiled at an academic conference. At ISSCC, one of the three major semiconductor conferences, the company https://t.co/yWDOYuzbiA",
+    "source": "https://x.com/jukan05/status/2029013728654704938",
+    "date": "2026-03-04T01:59:04.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 84,
+      "retweets": 4,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2029012895951143033",
+    "content": "https://t.co/v8WNsEBwJj",
+    "source": "https://x.com/jukan05/status/2029012895951143033",
+    "date": "2026-03-04T01:55:46.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 3,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2029012893560390061",
+    "content": "Samsung Bolsters Back-End Packaging, Initiates Shift to FO-PLP Form Factor\n\nSamsung Electronics is once again accelerating its Fan-Out Panel-Level Package (FO-PLP) business. The company has shifted direction from the existing 600×600mm panel to a 415×510mm form factor — a move https://t.co/XFrfnZe0c4",
+    "source": "https://x.com/jukan05/status/2029012893560390061",
+    "date": "2026-03-04T01:55:45.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 85,
+      "retweets": 6,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2028978212831936589",
+    "content": "TrendForce: Q1 NAND Prices Expected to Surge 90%\n\nhttps://t.co/iXxvsPsAdB",
+    "source": "https://x.com/jukan05/status/2028978212831936589",
+    "date": "2026-03-03T23:37:57.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 124,
+      "retweets": 14,
+      "replies": 8
+    }
+  },
+  {
+    "id": "tweet-2028860095048937498",
+    "content": "@michaeljburry https://t.co/rPHiO4bsxf",
+    "source": "https://x.com/jukan05/status/2028860095048937498",
+    "date": "2026-03-03T15:48:35.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 14,
+      "retweets": 1,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2028834663243169905",
+    "content": "@mweinbach 3D SoIC",
+    "source": "https://x.com/jukan05/status/2028834663243169905",
+    "date": "2026-03-03T14:07:32.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 25,
       "retweets": 0,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2020756841408655476",
-    "content": "@halfblindmonkey Yeah, I wrote that wrong. It was maintained at Neutral.",
-    "source": "https://x.com/jukan05/status/2020756841408655476",
-    "date": "2026-02-09T07:09:09.000Z",
+    "id": "tweet-2028833608749002771",
+    "content": "@stevehou 도박",
+    "source": "https://x.com/jukan05/status/2028833608749002771",
+    "date": "2026-03-03T14:03:20.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 3,
+      "likes": 27,
+      "retweets": 0,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2028803764308873547",
+    "content": "Now, what matters isn’t how much memory prices rise, but whether they can be sustained.",
+    "source": "https://x.com/jukan05/status/2028803764308873547",
+    "date": "2026-03-03T12:04:45.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 85,
+      "retweets": 2,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2028803497630835049",
+    "content": "IMO, memory pricing will cool off. The hyperscalers keep complaining that they’re out of money. https://t.co/SJ2qvuemQI",
+    "source": "https://x.com/jukan05/status/2028803497630835049",
+    "date": "2026-03-03T12:03:41.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 349,
+      "retweets": 13,
+      "replies": 17
+    }
+  },
+  {
+    "id": "tweet-2028803341086863581",
+    "content": "@zephyr_z9 @rwang07 40–50% is reasonable.",
+    "source": "https://x.com/jukan05/status/2028803341086863581",
+    "date": "2026-03-03T12:03:04.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 9,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2028802787925262556",
+    "content": "@zephyr_z9 @rwang07 no",
+    "source": "https://x.com/jukan05/status/2028802787925262556",
+    "date": "2026-03-03T12:00:52.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 7,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2028751921952195038",
+    "content": "@Alweerb yeah 🫡",
+    "source": "https://x.com/jukan05/status/2028751921952195038",
+    "date": "2026-03-03T08:38:45.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 2,
       "retweets": 0,
       "replies": 0
     }
   },
   {
-    "id": "tweet-2020753847971647854",
-    "content": "@EdwardDiGi @SorenCookie https://t.co/0KxVsp19QW",
-    "source": "https://x.com/jukan05/status/2020753847971647854",
-    "date": "2026-02-09T06:57:15.000Z",
+    "id": "tweet-2028731101708173550",
+    "content": "https://t.co/uXyCJNnCAn",
+    "source": "https://x.com/jukan05/status/2028731101708173550",
+    "date": "2026-03-03T07:16:01.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 3,
+      "likes": 7,
+      "retweets": 1,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2028731098755146036",
+    "content": "[Exclusive] Samsung Foundry Targets Over $1.3 Billion in Operating Profit Next Year… Attempting Return to Black After 5 Years\n\nSamsung Electronics' foundry (semiconductor contract manufacturing) division has reportedly established an internal target of surpassing 2 trillion won https://t.co/6TtBag5Ipg",
+    "source": "https://x.com/jukan05/status/2028731098755146036",
+    "date": "2026-03-03T07:16:00.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 200,
+      "retweets": 21,
+      "replies": 5
+    }
+  },
+  {
+    "id": "tweet-2028729123607375960",
+    "content": "@valleyinvesting no info... Lately, leverage had built up excessively—margin balances were piling up to very high levels—so the market was fragile enough to swing hard on any macro headline. At this point, that’s really the only explanation I can come up with.",
+    "source": "https://x.com/jukan05/status/2028729123607375960",
+    "date": "2026-03-03T07:08:09.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 11,
       "retweets": 0,
       "replies": 2
     }
   },
   {
-    "id": "tweet-2020723384481661293",
-    "content": "@IdyllicMonk ? https://t.co/tTxCJTh0Z6",
-    "source": "https://x.com/jukan05/status/2020723384481661293",
-    "date": "2026-02-09T04:56:12.000Z",
+    "id": "tweet-2028728438333616521",
+    "content": "SA: Nvidia lowered its HBM4 required specs due to HBM4 supply issues. https://t.co/Yr2kFPEMaY https://t.co/H2Ol3u8ktf",
+    "source": "https://x.com/jukan05/status/2028728438333616521",
+    "date": "2026-03-03T07:05:26.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 4,
+      "likes": 300,
+      "retweets": 30,
+      "replies": 5
+    }
+  },
+  {
+    "id": "tweet-2028728181860233683",
+    "content": "https://t.co/tWm2o3viZF",
+    "source": "https://x.com/jukan05/status/2028728181860233683",
+    "date": "2026-03-03T07:04:25.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 11,
+      "retweets": 1,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2028728179616292874",
+    "content": "SK Hynix Has a Plan for HBM4 'Performance Jump'… Pursuing New Packaging Technology\n\nSK Hynix is seeking a transformation in packaging technology for High Bandwidth Memory (HBM). The company has devised a technology that can enhance HBM stability and performance without a major https://t.co/WBzyUFemFy",
+    "source": "https://x.com/jukan05/status/2028728179616292874",
+    "date": "2026-03-03T07:04:24.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 187,
+      "retweets": 24,
+      "replies": 5
+    }
+  },
+  {
+    "id": "tweet-2028702179264287025",
+    "content": "Black Tuesday\n\nSamsung and SK Hynix plunge more than 8% https://t.co/kzdNhkwbJ0",
+    "source": "https://x.com/jukan05/status/2028702179264287025",
+    "date": "2026-03-03T05:21:05.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 1265,
+      "retweets": 93,
+      "replies": 62
+    }
+  },
+  {
+    "id": "tweet-2028700960315597165",
+    "content": "@Arronwei3n yup",
+    "source": "https://x.com/jukan05/status/2028700960315597165",
+    "date": "2026-03-03T05:16:15.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 7,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2028633912998863309",
+    "content": "To elaborate a bit more: it’s true that I bought the dip on the day Anritsu crashed, but I bought too small a position. So every time the price went up afterward, I kept adding, and now my average cost basis is quite high. https://t.co/nD4UPZRWBd",
+    "source": "https://x.com/jukan05/status/2028633912998863309",
+    "date": "2026-03-03T00:49:49.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 84,
+      "retweets": 1,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2028633028185178216",
+    "content": "@pre09576802 I bought Hamamatsu Photonics today.",
+    "source": "https://x.com/jukan05/status/2028633028185178216",
+    "date": "2026-03-03T00:46:18.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 3,
+      "retweets": 1,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2028604503390584961",
+    "content": "https://t.co/XzzivXBgz7",
+    "source": "https://x.com/jukan05/status/2028604503390584961",
+    "date": "2026-03-02T22:52:57.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 8,
+      "retweets": 4,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2028604501490589791",
+    "content": "[Exclusive] Samsung Taylor Fab Mass Production of Semiconductors Delayed to Next Year\n\nMass production at Samsung Electronics’ Taylor plant, once expected as early as this year, has been pushed back to early next year, according to multiple sources with knowledge of the matter.",
+    "source": "https://x.com/jukan05/status/2028604501490589791",
+    "date": "2026-03-02T22:52:57.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 155,
+      "retweets": 16,
+      "replies": 10
+    }
+  },
+  {
+    "id": "tweet-2028603504517136589",
+    "content": "@TerryLennox_ Apple has an enormous cash pile. As Ming-Chi Kuo said, Apple has already secured all the memory it needs for this year.",
+    "source": "https://x.com/jukan05/status/2028603504517136589",
+    "date": "2026-03-02T22:48:59.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 5,
       "retweets": 0,
       "replies": 0
     }
   },
   {
-    "id": "tweet-2020702908292149710",
-    "content": "@teortaxesTex no info yet",
-    "source": "https://x.com/jukan05/status/2020702908292149710",
-    "date": "2026-02-09T03:34:50.000Z",
+    "id": "tweet-2028602167561748756",
+    "content": "@Xianbao_QIAN No, revenue will decline because the absolute shipment volume has decreased.",
+    "source": "https://x.com/jukan05/status/2028602167561748756",
+    "date": "2026-03-02T22:43:41.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 3,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2028601976314052639",
+    "content": "https://t.co/0tAg4irzd5",
+    "source": "https://x.com/jukan05/status/2028601976314052639",
+    "date": "2026-03-02T22:42:55.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 7,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2028601973583511736",
+    "content": "SK Hynix Recovers KRW 950 Billion from Kioxia Investment\n\nSK Hynix recovered a portion of the funds it invested in Kioxia Holdings in 2019 last year. Its long-term investment asset disposals surged to KRW 951 billion last year, with the majority stemming from the sale of Kioxia",
+    "source": "https://x.com/jukan05/status/2028601973583511736",
+    "date": "2026-03-02T22:42:54.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 184,
+      "retweets": 13,
+      "replies": 5
+    }
+  },
+  {
+    "id": "tweet-2028601207611425091",
+    "content": "https://t.co/kemTFGaSpt",
+    "source": "https://x.com/jukan05/status/2028601207611425091",
+    "date": "2026-03-02T22:39:52.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 6,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2028601205946306707",
+    "content": "• As memory chip and component costs surge, a sweeping round of price hikes across China's smartphone industry is set to begin in March. New models are expected to be priced 15%–25% higher than comparable models from last year, with multiple rounds of price adjustments projected",
+    "source": "https://x.com/jukan05/status/2028601205946306707",
+    "date": "2026-03-02T22:39:51.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 96,
+      "retweets": 4,
+      "replies": 5
+    }
+  },
+  {
+    "id": "tweet-2028600977008607486",
+    "content": "https://t.co/J7KSicNr41",
+    "source": "https://x.com/jukan05/status/2028600977008607486",
+    "date": "2026-03-02T22:38:57.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 4,
@@ -60,22 +444,22 @@
     }
   },
   {
-    "id": "tweet-2020690749231370337",
-    "content": "@SteveMatthews12 @takaichi_sanae Since Takaichi won a landslide victory in the general election and has secured the political mandate and governing capacity to push through more fiscal and monetary stimulus, the Nikkei has no choice but to go up.",
-    "source": "https://x.com/jukan05/status/2020690749231370337",
-    "date": "2026-02-09T02:46:31.000Z",
+    "id": "tweet-2028600072859201854",
+    "content": "US mulls capping Nvidia H200 sales at 75k per Chinese buyer.\n\nUS chip limit is less than half what china clients have sought.\n\n$NVDA",
+    "source": "https://x.com/jukan05/status/2028600072859201854",
+    "date": "2026-03-02T22:35:21.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 5,
-      "retweets": 0,
-      "replies": 1
+      "likes": 140,
+      "retweets": 3,
+      "replies": 18
     }
   },
   {
-    "id": "tweet-2020690269482647747",
-    "content": "@damnang2 잘 읽었습니다! 🙌",
-    "source": "https://x.com/jukan05/status/2020690269482647747",
-    "date": "2026-02-09T02:44:37.000Z",
+    "id": "tweet-2028458054338183424",
+    "content": "@__bag_h_dad 캬",
+    "source": "https://x.com/jukan05/status/2028458054338183424",
+    "date": "2026-03-02T13:11:01.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 1,
@@ -84,178 +468,178 @@
     }
   },
   {
-    "id": "tweet-2020679746422808711",
-    "content": "@GONOGO_Korea 셰셰",
-    "source": "https://x.com/jukan05/status/2020679746422808711",
-    "date": "2026-02-09T02:02:48.000Z",
+    "id": "tweet-2028455979730485607",
+    "content": "@__bag_h_dad 오...지금 해볼게요",
+    "source": "https://x.com/jukan05/status/2028455979730485607",
+    "date": "2026-03-02T13:02:47.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 3,
+      "likes": 2,
       "retweets": 0,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2020679660053651616",
-    "content": "https://t.co/6J7kOWIgWK",
-    "source": "https://x.com/jukan05/status/2020679660053651616",
-    "date": "2026-02-09T02:02:28.000Z",
+    "id": "tweet-2028455470391074922",
+    "content": "Mitsubishi Gas Chemical to raise CCL prices by 30%. https://t.co/CDXEKtlRgD",
+    "source": "https://x.com/jukan05/status/2028455470391074922",
+    "date": "2026-03-02T13:00:45.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 11,
+      "likes": 540,
+      "retweets": 90,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2028446029671235665",
+    "content": "Morgan Stanley has published an excellent report.\n\nTo quote a few particularly memorable lines:\n\n“There appears to be a cohort of investors who are positioning 2026 as the exit point for memory.”\n\n“The reason we named NVIDIA—not Micron—as our top pick is that investor sentiment https://t.co/4RREJQcDme",
+    "source": "https://x.com/jukan05/status/2028446029671235665",
+    "date": "2026-03-02T12:23:14.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 980,
+      "retweets": 92,
+      "replies": 28
+    }
+  },
+  {
+    "id": "tweet-2028440877413318782",
+    "content": "@_TheJasonC blocked",
+    "source": "https://x.com/jukan05/status/2028440877413318782",
+    "date": "2026-03-02T12:02:46.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 54,
       "retweets": 0,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2020679657792901512",
-    "content": "Why Did Samsung Only Receive 20% of Nvidia's HBM4 Allocation?- Hankyung\n\nSamsung Electronics is set to begin mass production and shipment of HBM4 (6th-generation High Bandwidth Memory) to Nvidia this month — an industry first. However, Samsung's share of Nvidia's total HBM4 https://t.co/FfEMOLuhpI",
-    "source": "https://x.com/jukan05/status/2020679657792901512",
-    "date": "2026-02-09T02:02:27.000Z",
+    "id": "tweet-2028400638686838927",
+    "content": "I believe the market is currently not pricing in the normalization of Samsung Foundry into Samsung's stock price. https://t.co/eYQjaTkAQw https://t.co/FmWs4gx8G4",
+    "source": "https://x.com/jukan05/status/2028400638686838927",
+    "date": "2026-03-02T09:22:52.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 147,
-      "retweets": 17,
-      "replies": 4
-    }
-  },
-  {
-    "id": "tweet-2020678789232218266",
-    "content": "@volcrushed I’m Korean. Why should I watch the Super Bowl?",
-    "source": "https://x.com/jukan05/status/2020678789232218266",
-    "date": "2026-02-09T01:59:00.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 132,
-      "retweets": 0,
+      "likes": 355,
+      "retweets": 18,
       "replies": 5
     }
   },
   {
-    "id": "tweet-2020678431902728440",
-    "content": "* Korea Economic Daily: NVIDIA allocated the HBM4 volume it needs to the three memory makers last December, with the split at mid-to-high 50% for SK hynix, mid-20% for Samsung Electronics, and around 20% for Micron.\n\n** This report runs contrary to SemiAnalysis’s estimates.",
-    "source": "https://x.com/jukan05/status/2020678431902728440",
-    "date": "2026-02-09T01:57:35.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 426,
-      "retweets": 41,
-      "replies": 25
-    }
-  },
-  {
-    "id": "tweet-2020676634517688578",
-    "content": "@paurooteri Yes\n\nhttps://t.co/7NSrxUKje5",
-    "source": "https://x.com/jukan05/status/2020676634517688578",
-    "date": "2026-02-09T01:50:26.000Z",
+    "id": "tweet-2028400251359691251",
+    "content": "https://t.co/xzP3bMC0jH",
+    "source": "https://x.com/jukan05/status/2028400251359691251",
+    "date": "2026-03-02T09:21:20.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 10,
       "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2020654948950970388",
-    "content": "@DaitheHero000 7.7%",
-    "source": "https://x.com/jukan05/status/2020654948950970388",
-    "date": "2026-02-09T00:24:16.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 3,
-      "retweets": 0,
       "replies": 0
     }
   },
   {
-    "id": "tweet-2020654527041675300",
-    "content": "Thank you @takaichi_sanae",
-    "source": "https://x.com/jukan05/status/2020654527041675300",
-    "date": "2026-02-09T00:22:35.000Z",
+    "id": "tweet-2028400248805318924",
+    "content": "Samsung Foundry \"Targeting Profitability This Year\"\n\nSamsung Electronics has set a goal of turning its semiconductor foundry business profitable this year. It has been confirmed that the company moved up the timeline, which was originally scheduled to break even next year. After https://t.co/WgHc13YbSp",
+    "source": "https://x.com/jukan05/status/2028400248805318924",
+    "date": "2026-03-02T09:21:19.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 22,
+      "likes": 161,
+      "retweets": 15,
+      "replies": 4
+    }
+  },
+  {
+    "id": "tweet-2028370709882565022",
+    "content": "https://t.co/hYhgN2TXfR",
+    "source": "https://x.com/jukan05/status/2028370709882565022",
+    "date": "2026-03-02T07:23:57.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 7,
       "retweets": 0,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2020654441901481994",
-    "content": "I would like to express my gratitude to Prime Minister Takaichi. https://t.co/96GtQV6EmZ",
-    "source": "https://x.com/jukan05/status/2020654441901481994",
-    "date": "2026-02-09T00:22:15.000Z",
+    "id": "tweet-2028370707735032214",
+    "content": "Exclusive: Phison shifts to prepayments as NAND prices hike 500%\n\nNAND prices continue to climb, and supply remains tight. NAND controller supplier Phison Electronics has notified customers that it will revise payment terms. The company said rising NAND prices have sharply https://t.co/2qAxRs1Qtq",
+    "source": "https://x.com/jukan05/status/2028370707735032214",
+    "date": "2026-03-02T07:23:56.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 121,
-      "retweets": 4,
-      "replies": 7
-    }
-  },
-  {
-    "id": "tweet-2020645205150666866",
-    "content": "\"A real trader should've seen Takaichi's landslide victory coming from a mile away and already had Nikkei longs loaded up in the portfolio, bro.\" https://t.co/nKvyBbFNqn",
-    "source": "https://x.com/jukan05/status/2020645205150666866",
-    "date": "2026-02-08T23:45:33.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 210,
-      "retweets": 7,
+      "likes": 198,
+      "retweets": 22,
       "replies": 8
     }
   },
   {
-    "id": "tweet-2020493594860380567",
-    "content": "https://t.co/y6qjhZwhUs",
-    "source": "https://x.com/jukan05/status/2020493594860380567",
-    "date": "2026-02-08T13:43:06.000Z",
+    "id": "tweet-2028366919523594590",
+    "content": "NAND companies will record higher profit margins than Nvidia this year!🤯 https://t.co/PVEHxqbFXs https://t.co/X69WPG3sES",
+    "source": "https://x.com/jukan05/status/2028366919523594590",
+    "date": "2026-03-02T07:08:53.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 24,
-      "retweets": 3,
+      "likes": 455,
+      "retweets": 37,
+      "replies": 10
+    }
+  },
+  {
+    "id": "tweet-2028364901576769851",
+    "content": "https://t.co/8XyLSomG8K",
+    "source": "https://x.com/jukan05/status/2028364901576769851",
+    "date": "2026-03-02T07:00:52.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 10,
+      "retweets": 1,
       "replies": 0
     }
   },
   {
-    "id": "tweet-2020493592809316358",
-    "content": "China to Mass-Produce HBM3 Soon... Korea-China Technology Gap Narrows from 4 Years to 3 Years\n\nChina will begin mass production of HBM3, the fourth-generation high-bandwidth memory (HBM) that is a core component of artificial intelligence (AI) semiconductors, this year. This https://t.co/1pLgm0Z3XM",
-    "source": "https://x.com/jukan05/status/2020493592809316358",
-    "date": "2026-02-08T13:43:06.000Z",
+    "id": "tweet-2028364899274084389",
+    "content": "Samsung &amp; SK NAND Operating Margins Forecast at 70%+ … AI-Driven Memory Rally Extends Beyond HBM Across the Board\n\nA surge in AI-driven memory demand is expected to push Samsung Electronics and SK Hynix's NAND operating profit margins (OPM) up to the 70% range this year. While https://t.co/lVXfw1HC1t",
+    "source": "https://x.com/jukan05/status/2028364899274084389",
+    "date": "2026-03-02T07:00:51.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 490,
-      "retweets": 66,
-      "replies": 29
+      "likes": 354,
+      "retweets": 29,
+      "replies": 8
     }
   },
   {
-    "id": "tweet-2020392242121437265",
-    "content": "Is it believable that Apple has already broken out of the “Others” category and climbed to 5th place in the Indian market?\n\nUnlike Samsung, Apple didn’t collapse in China, and it has successfully established itself in India.\n\nAt this point, it feels like Apple only has upside https://t.co/0bXWbz83VE",
-    "source": "https://x.com/jukan05/status/2020392242121437265",
-    "date": "2026-02-08T07:00:22.000Z",
+    "id": "tweet-2028363934726783387",
+    "content": "https://t.co/h4suO4ryY9",
+    "source": "https://x.com/jukan05/status/2028363934726783387",
+    "date": "2026-03-02T06:57:01.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 239,
-      "retweets": 15,
-      "replies": 17
+      "likes": 8,
+      "retweets": 1,
+      "replies": 0
     }
   },
   {
-    "id": "tweet-2020357025851757045",
-    "content": "Lately I’ve been building a thesis I call the “Apple Bull” theory.\n\nVibe coding will boost Apple’s revenue even further.\n\nBy lowering the barrier to entry for programming, vibe coding will lead to more apps being submitted to the App Store, which in turn will generate more App https://t.co/nHKl6Ipf6A",
-    "source": "https://x.com/jukan05/status/2020357025851757045",
-    "date": "2026-02-08T04:40:26.000Z",
+    "id": "tweet-2028363932755452153",
+    "content": "PCB Boom Triggers Drill Bit Shortage.. Topoint &amp; Keyware Begin Capacity Expansion — Once a Consumable, Now a Major AI Business Opportunity\n\n- Rising demand for AI servers is triggering bottlenecks in PCB materials. MLB designs for NVIDIA's GPU and ASIC platforms have expanded to",
+    "source": "https://x.com/jukan05/status/2028363932755452153",
+    "date": "2026-03-02T06:57:01.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 928,
-      "retweets": 48,
-      "replies": 64
+      "likes": 123,
+      "retweets": 10,
+      "replies": 2
     }
   },
   {
-    "id": "tweet-2020326558477787423",
-    "content": "@BarrettYouTube yes",
-    "source": "https://x.com/jukan05/status/2020326558477787423",
-    "date": "2026-02-08T02:39:22.000Z",
+    "id": "tweet-2028332373147062511",
+    "content": "https://t.co/X7FCdTCVon",
+    "source": "https://x.com/jukan05/status/2028332373147062511",
+    "date": "2026-03-02T04:51:37.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 17,
@@ -264,10 +648,214 @@
     }
   },
   {
-    "id": "tweet-2020326308300091481",
-    "content": "@pendulumsinker No, there wasn’t.\n\nAnd for this trip, I’m not going in an official company capacity either.",
-    "source": "https://x.com/jukan05/status/2020326308300091481",
-    "date": "2026-02-08T02:38:22.000Z",
+    "id": "tweet-2028332370999558595",
+    "content": "Memory Prices Rise for 11 Consecutive Months: Peak Likely Near… But SSDs Set to Keep Climbing\n\nWhen it comes to memory and SSDs, DIY PC enthusiasts have surely been frowning lately. Relentless price hikes have already pushed build costs to unbearable levels, and the upward trend",
+    "source": "https://x.com/jukan05/status/2028332370999558595",
+    "date": "2026-03-02T04:51:36.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 251,
+      "retweets": 23,
+      "replies": 8
+    }
+  },
+  {
+    "id": "tweet-2028272769046327362",
+    "content": "Nikkei’s insanely strong lol",
+    "source": "https://x.com/jukan05/status/2028272769046327362",
+    "date": "2026-03-02T00:54:46.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 333,
+      "retweets": 5,
+      "replies": 11
+    }
+  },
+  {
+    "id": "tweet-2028099235309400452",
+    "content": "As Mark Gurman of Bloomberg wrote, the low-cost MacBook is going to attract massive attention. I think so too.\n\nX feeds are probably going to be flooded with this. https://t.co/BHpqQSYJfZ",
+    "source": "https://x.com/jukan05/status/2028099235309400452",
+    "date": "2026-03-01T13:25:12.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 174,
+      "retweets": 11,
+      "replies": 5
+    }
+  },
+  {
+    "id": "tweet-2028065324202115233",
+    "content": "@ChristoRobin2 How can you be so sure it won’t happen? lol",
+    "source": "https://x.com/jukan05/status/2028065324202115233",
+    "date": "2026-03-01T11:10:27.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 33,
+      "retweets": 0,
+      "replies": 4
+    }
+  },
+  {
+    "id": "tweet-2028063361255317885",
+    "content": "https://t.co/NoTL5lpdKr",
+    "source": "https://x.com/jukan05/status/2028063361255317885",
+    "date": "2026-03-01T11:02:39.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 20,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2028063358583537740",
+    "content": "Samsung Electronics Vice President Moon Sung-hoon said the company is aiming to use Exynos chips across the entire Galaxy lineup.\n\nDoes this mean Snapdragon could be phased out?\n\n$QCOM https://t.co/vKxo6HNOfD",
+    "source": "https://x.com/jukan05/status/2028063358583537740",
+    "date": "2026-03-01T11:02:38.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 415,
+      "retweets": 33,
+      "replies": 48
+    }
+  },
+  {
+    "id": "tweet-2028027339423314086",
+    "content": "@itskevin Lmao",
+    "source": "https://x.com/jukan05/status/2028027339423314086",
+    "date": "2026-03-01T08:39:31.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 1,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2027973588440256695",
+    "content": "@ShanghaoJin ???",
+    "source": "https://x.com/jukan05/status/2027973588440256695",
+    "date": "2026-03-01T05:05:56.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 9,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2027950259079680217",
+    "content": "https://t.co/QgP7mTP3K9",
+    "source": "https://x.com/jukan05/status/2027950259079680217",
+    "date": "2026-03-01T03:33:13.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 7,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2027950257200632170",
+    "content": "&gt;&gt; Is Korea to Blame for the Hang Seng Tech Index's Underperformance? (Haitong International Securities Strategy)\n\n- Many investors are now concerned that the Hong Kong market may be re-entering a bear market. Looking at recent trends, however, it's less that Hong Kong has",
+    "source": "https://x.com/jukan05/status/2027950257200632170",
+    "date": "2026-03-01T03:33:13.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 171,
+      "retweets": 16,
+      "replies": 9
+    }
+  },
+  {
+    "id": "tweet-2027920394926362746",
+    "content": "@__bag_h_dad ㅋㅋㅋㅋㅋ",
+    "source": "https://x.com/jukan05/status/2027920394926362746",
+    "date": "2026-03-01T01:34:33.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 1,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2027919248727937093",
+    "content": "👀 https://t.co/Ds4wN20wyb",
+    "source": "https://x.com/jukan05/status/2027919248727937093",
+    "date": "2026-03-01T01:30:00.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 251,
+      "retweets": 6,
+      "replies": 16
+    }
+  },
+  {
+    "id": "tweet-2027722861016977835",
+    "content": "@IntelProMUltra @DanielNenni no",
+    "source": "https://x.com/jukan05/status/2027722861016977835",
+    "date": "2026-02-28T12:29:37.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 1,
+      "retweets": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2027652635873198297",
+    "content": "\"As the customer base grows, IP development costs are distributed and Broadcom's margins improve — a scalable structure.\"\n\nThis is really interesting. I didn’t realize it was structured this way. Broadcom’s margins should improve, then.\n\n$AVGO https://t.co/9qxAw4TBYU https://t.co/SBq3vk1yhY",
+    "source": "https://x.com/jukan05/status/2027652635873198297",
+    "date": "2026-02-28T07:50:35.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 249,
+      "retweets": 23,
+      "replies": 8
+    }
+  },
+  {
+    "id": "tweet-2027652221610152069",
+    "content": "https://t.co/acGkdaRxAP",
+    "source": "https://x.com/jukan05/status/2027652221610152069",
+    "date": "2026-02-28T07:48:56.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 22,
+      "retweets": 2,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2027652218602524906",
+    "content": "The Next Big HBM Customer's Move… Broadcom Ships First AI 3.5D XDSiP\n\nBroadcom has completed development of its system-in-package (SiP) technology for custom artificial intelligence (AI) data centers utilizing hybrid bonding — an industry first — and is beginning initial mass https://t.co/BOJmp3lwTz",
+    "source": "https://x.com/jukan05/status/2027652218602524906",
+    "date": "2026-02-28T07:48:55.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 413,
+      "retweets": 53,
+      "replies": 12
+    }
+  },
+  {
+    "id": "tweet-2027650399587758326",
+    "content": "@superposition_V 전 요즘 미국식 중화요리가 땡기더라고요",
+    "source": "https://x.com/jukan05/status/2027650399587758326",
+    "date": "2026-02-28T07:41:41.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 6,
+      "retweets": 0,
+      "replies": 2
+    }
+  },
+  {
+    "id": "tweet-2027618889803395537",
+    "content": "@zephyr_z9 Bro what?",
+    "source": "https://x.com/jukan05/status/2027618889803395537",
+    "date": "2026-02-28T05:36:29.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 11,
@@ -276,46 +864,118 @@
     }
   },
   {
-    "id": "tweet-2020324266458468710",
-    "content": "I thought flights to Japan would get cheaper if fewer Chinese people traveled there, but they actually got more expensive.\n\nA flight to Shenzhen is about half the price of a flight to Tokyo.\n\nAnyway, I’m planning to visit Shenzhen from March 23 to March 26—I’ve already booked the",
-    "source": "https://x.com/jukan05/status/2020324266458468710",
-    "date": "2026-02-08T02:30:15.000Z",
+    "id": "tweet-2027605719735013756",
+    "content": "@StarAndCompass_ 신의 눈 없으면...NPC행",
+    "source": "https://x.com/jukan05/status/2027605719735013756",
+    "date": "2026-02-28T04:44:09.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 273,
+      "likes": 3,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2027604224209785214",
+    "content": "https://t.co/9AHQrBoLVQ",
+    "source": "https://x.com/jukan05/status/2027604224209785214",
+    "date": "2026-02-28T04:38:12.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 13,
+      "retweets": 1,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2027604221944860698",
+    "content": "[Exclusive] SK Hynix Builds Hybrid Bonding Pilot Line… Evaluating Besi Equipment\n\nSK Hynix has established a pilot line for hybrid bonding, the next-generation HBM packaging process. The company is understood to have introduced Applied Materials' (AMAT) \"Kinex Bonding System\" https://t.co/3XGmwLlKoz",
+    "source": "https://x.com/jukan05/status/2027604221944860698",
+    "date": "2026-02-28T04:38:12.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 195,
+      "retweets": 29,
+      "replies": 6
+    }
+  },
+  {
+    "id": "tweet-2027598835795833323",
+    "content": "\"but some large customers have found that certain agentic AI workloads can be run more efficiently on CPUs alone.\"\n\nAre you still not bullish on CPUs?\n$INTC $AMD https://t.co/K6liobF1Zp https://t.co/l15YUsxEuD",
+    "source": "https://x.com/jukan05/status/2027598835795833323",
+    "date": "2026-02-28T04:16:48.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 540,
+      "retweets": 53,
+      "replies": 26
+    }
+  },
+  {
+    "id": "tweet-2027595106451325106",
+    "content": "https://t.co/7abowIM73t",
+    "source": "https://x.com/jukan05/status/2027595106451325106",
+    "date": "2026-02-28T04:01:58.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 45,
       "retweets": 4,
-      "replies": 49
+      "replies": 0
     }
   },
   {
-    "id": "tweet-2020323628999639041",
-    "content": "@goth600 About space data center",
-    "source": "https://x.com/jukan05/status/2020323628999639041",
-    "date": "2026-02-08T02:27:43.000Z",
+    "id": "tweet-2027595037534777665",
+    "content": "FT: DeepSeek is set to release a new model next week.\n\nFT: DeepSeek is working with Chinese AI chipmakers Huawei and Cambricon to develop V4 optimized for its latest product.\n\nFT: DeepSeek plans to publish a brief technical note alongside V4 next week, followed by a more",
+    "source": "https://x.com/jukan05/status/2027595037534777665",
+    "date": "2026-02-28T04:01:42.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 12,
-      "retweets": 0,
-      "replies": 5
+      "likes": 565,
+      "retweets": 48,
+      "replies": 16
     }
   },
   {
-    "id": "tweet-2020323248140087671",
-    "content": "@goth600 Are there any people who’d like to discuss this topic with me? My friends always end up talking about games.",
-    "source": "https://x.com/jukan05/status/2020323248140087671",
-    "date": "2026-02-08T02:26:12.000Z",
+    "id": "tweet-2027585554762928350",
+    "content": "WSJ: Nvidia is set to unveil a new inference chip that leverages Groq’s technology at GTC.\n\nWSJ: OpenAI is set to become the largest customer for Nvidia’s new inference chip that uses Groq’s technology.\n\n$NVDA\nhttps://t.co/K725BKUDKL",
+    "source": "https://x.com/jukan05/status/2027585554762928350",
+    "date": "2026-02-28T03:24:01.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 125,
-      "retweets": 0,
-      "replies": 21
+      "likes": 946,
+      "retweets": 99,
+      "replies": 32
     }
   },
   {
-    "id": "tweet-2020320942489272751",
-    "content": "@2xpuppet Because demand will surge from companies that don’t have their own in-house controller.",
-    "source": "https://x.com/jukan05/status/2020320942489272751",
-    "date": "2026-02-08T02:17:03.000Z",
+    "id": "tweet-2027551079031058504",
+    "content": "https://t.co/3SPr9omN41",
+    "source": "https://x.com/jukan05/status/2027551079031058504",
+    "date": "2026-02-28T01:07:01.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 9,
+      "retweets": 1,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2027551076694818857",
+    "content": "&gt;&gt; China's Optical Fiber Industry Enters Upcycle Amid Surging AI Computing Demand\n\n- \"Fiber prices are rising by the day these days.\" On February 26, when a reporter contacted Jiangsu Zhongtian Technology posing as an investor, the company indicated that a clear upward pricing",
+    "source": "https://x.com/jukan05/status/2027551076694818857",
+    "date": "2026-02-28T01:07:01.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 134,
+      "retweets": 19,
+      "replies": 3
+    }
+  },
+  {
+    "id": "tweet-2027331559297352027",
+    "content": "Link: https://t.co/vxgmRt8zWp",
+    "source": "https://x.com/jukan05/status/2027331559297352027",
+    "date": "2026-02-27T10:34:44.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 9,
@@ -324,34 +984,154 @@
     }
   },
   {
-    "id": "tweet-2020319029450396023",
-    "content": "@iampengu911 I like pure-play companies.",
-    "source": "https://x.com/jukan05/status/2020319029450396023",
-    "date": "2026-02-08T02:09:26.000Z",
+    "id": "tweet-2027331556516495561",
+    "content": "Macronix Chairman Lu Zhiyuan (盧志遠) recently did an interview with a Taiwanese magazine, and there was a really interesting part.\n\n“At that point, even if we raise the price from $1 to $3, they’ll still accept it.”\n\nHe explained that the component accounts for only about 1% of https://t.co/fpprNOSc15",
+    "source": "https://x.com/jukan05/status/2027331556516495561",
+    "date": "2026-02-27T10:34:43.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 8,
-      "retweets": 0,
+      "likes": 156,
+      "retweets": 14,
+      "replies": 6
+    }
+  },
+  {
+    "id": "tweet-2027315694078210525",
+    "content": "Samsung and SK hynix reportedly proposed price increases of up to around 2x ahead of the Q2 contract renewals—LMAO. https://t.co/8y5zoqy7KB https://t.co/MURDuTcLg5",
+    "source": "https://x.com/jukan05/status/2027315694078210525",
+    "date": "2026-02-27T09:31:41.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 667,
+      "retweets": 67,
+      "replies": 13
+    }
+  },
+  {
+    "id": "tweet-2027314511846457705",
+    "content": "https://t.co/RUVTOu10cX",
+    "source": "https://x.com/jukan05/status/2027314511846457705",
+    "date": "2026-02-27T09:26:59.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 21,
+      "retweets": 2,
       "replies": 0
     }
   },
   {
-    "id": "tweet-2020318791184576762",
-    "content": "@ZanJacquRef 중국 테크주 어떻게 보시는지 알려주세요🙌",
-    "source": "https://x.com/jukan05/status/2020318791184576762",
-    "date": "2026-02-08T02:08:30.000Z",
+    "id": "tweet-2027314509740970335",
+    "content": "Samsung &amp; SK Hynix to Sharply Raise DRAM Prices in Q2… Surge Expected to Continue Through Next Year\n\nThe world's two largest DRAM manufacturers, Samsung Electronics and SK hynix, have informed their customers of plans to significantly raise DRAM prices again in Q2. With DRAM",
+    "source": "https://x.com/jukan05/status/2027314509740970335",
+    "date": "2026-02-27T09:26:59.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 11,
+      "likes": 463,
+      "retweets": 41,
+      "replies": 15
+    }
+  },
+  {
+    "id": "tweet-2027273997537427697",
+    "content": "https://t.co/Xg0smXsK1p",
+    "source": "https://x.com/jukan05/status/2027273997537427697",
+    "date": "2026-02-27T06:46:00.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 54,
+      "retweets": 6,
+      "replies": 0
+    }
+  },
+  {
+    "id": "tweet-2027273995322831085",
+    "content": "Samsung's Source of HBM4 Confidence: '1c DRAM'… Next Goal Is Yield Improvement\n\nSamsung Electronics is showing strong confidence in the competition for the 6th-generation HBM4 (High Bandwidth Memory) market, a core memory component for AI industry infrastructure. The company is https://t.co/Xnwla8sU8C",
+    "source": "https://x.com/jukan05/status/2027273995322831085",
+    "date": "2026-02-27T06:46:00.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 162,
+      "retweets": 19,
+      "replies": 8
+    }
+  },
+  {
+    "id": "tweet-2027195658525081701",
+    "content": "https://t.co/LJVuKIzkyE",
+    "source": "https://x.com/jukan05/status/2027195658525081701",
+    "date": "2026-02-27T01:34:43.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 9,
       "retweets": 0,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2020318023748579817",
-    "content": "@Leino @RobEducated I realized the barriers to entry are higher than I expected. And I’ve heard that in-house development of SSD controllers is harder than people think.",
-    "source": "https://x.com/jukan05/status/2020318023748579817",
-    "date": "2026-02-08T02:05:27.000Z",
+    "id": "tweet-2027195656604094953",
+    "content": "[Exclusive] \"Responding Faster to the Semiconductor Supercycle\"... Samsung Electronics' Pyeongtaek Campus Also in 'Speed Mode'\n\nBuoyed by semiconductor supercycle expectations, target price upgrades, and National Growth Fund support, Samsung Electronics is accelerating its",
+    "source": "https://x.com/jukan05/status/2027195656604094953",
+    "date": "2026-02-27T01:34:42.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 111,
+      "retweets": 8,
+      "replies": 5
+    }
+  },
+  {
+    "id": "tweet-2027164735993684165",
+    "content": "https://t.co/U3dFBTlyfA",
+    "source": "https://x.com/jukan05/status/2027164735993684165",
+    "date": "2026-02-26T23:31:50.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 16,
+      "retweets": 1,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2027164733326123391",
+    "content": "Meta has finally started adopting TPUs at a multi-billion-dollar scale.\n\nIn that case, what happens to MTIA? https://t.co/wQxCwPkbh6",
+    "source": "https://x.com/jukan05/status/2027164733326123391",
+    "date": "2026-02-26T23:31:49.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 259,
+      "retweets": 18,
+      "replies": 23
+    }
+  },
+  {
+    "id": "tweet-2027163847556317385",
+    "content": "Everyone, how do you handle situations where industry research shows the complete opposite of what the executives are claiming?\nMeta’s MTIA is exactly this kind of case… The leadership keeps emphasizing over and over that MTIA is doing fine, but the stories coming out are",
+    "source": "https://x.com/jukan05/status/2027163847556317385",
+    "date": "2026-02-26T23:28:18.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 158,
+      "retweets": 5,
+      "replies": 22
+    }
+  },
+  {
+    "id": "tweet-2027039442457051268",
+    "content": "@MetacriticCap Am I really at that level…? If so, that actually makes me feel pretty good lol.",
+    "source": "https://x.com/jukan05/status/2027039442457051268",
+    "date": "2026-02-26T15:13:58.000Z",
+    "platform": "twitter",
+    "metrics": {
+      "likes": 21,
+      "retweets": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "tweet-2027038629689000197",
+    "content": "@dons_korea 저런건 그냥 무시하시죠....뭐 저런 사람이 다 있지?",
+    "source": "https://x.com/jukan05/status/2027038629689000197",
+    "date": "2026-02-26T15:10:44.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 15,
@@ -360,843 +1140,63 @@
     }
   },
   {
-    "id": "tweet-2020317186779402303",
-    "content": "@RobEducated I didn’t think there were meaningful barriers to entry in the SSD controller business.",
-    "source": "https://x.com/jukan05/status/2020317186779402303",
-    "date": "2026-02-08T02:02:07.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 6,
-      "retweets": 0,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2020316759451218159",
-    "content": "@Incomefinder2 파두는..선뜻 손이 안가네요 ㅠㅠ",
-    "source": "https://x.com/jukan05/status/2020316759451218159",
-    "date": "2026-02-08T02:00:25.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 1,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2020316143618310650",
-    "content": "@chipflare I’m now positive on Silicon Motion as well—excluding Korea’s Fadu.",
-    "source": "https://x.com/jukan05/status/2020316143618310650",
-    "date": "2026-02-08T01:57:58.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 18,
-      "retweets": 1,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2020315678365176319",
-    "content": "I’m reflecting on how I had dismissed NAND controller stocks.\n\nI’m revising my view: these companies could actually benefit more than I expected.",
-    "source": "https://x.com/jukan05/status/2020315678365176319",
-    "date": "2026-02-08T01:56:08.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 434,
-      "retweets": 11,
-      "replies": 30
-    }
-  },
-  {
-    "id": "tweet-2020285658343043382",
-    "content": "https://t.co/22hXlZ79VT",
-    "source": "https://x.com/jukan05/status/2020285658343043382",
-    "date": "2026-02-07T23:56:50.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 13,
-      "retweets": 0,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2020285656401080408",
-    "content": "Samsung Electronics to Begin World's First HBM4 Mass Production After Lunar New Year Holiday…Seizing Initiative in Next-Generation Market\n\nSamsung Electronics will become the world's first to mass-produce and ship the next-generation High Bandwidth Memory (HBM), HBM4—a 'game https://t.co/Fuf6617jCx",
-    "source": "https://x.com/jukan05/status/2020285656401080408",
-    "date": "2026-02-07T23:56:50.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 239,
-      "retweets": 27,
-      "replies": 13
-    }
-  },
-  {
-    "id": "tweet-2019953646558146632",
-    "content": "@skkim3009 I’m not very familiar with SA. I don’t know why they’re saying that now.",
-    "source": "https://x.com/jukan05/status/2019953646558146632",
-    "date": "2026-02-07T01:57:32.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 3,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019942962206240786",
-    "content": "@CapArtichoke The fact that something might be released eventually isn’t a free pass—the real issue is what kind of advantage was created during the non-public window before disclosure.\n\nAnd yes, legitimate research—doing channel checks, gathering information on the ground, analyzing public",
-    "source": "https://x.com/jukan05/status/2019942962206240786",
-    "date": "2026-02-07T01:15:05.000Z",
+    "id": "tweet-2027037693214142757",
+    "content": "@blazingbees https://t.co/wFwkFrW7uf",
+    "source": "https://x.com/jukan05/status/2027037693214142757",
+    "date": "2026-02-26T15:07:01.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 7,
-      "retweets": 0,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2019941424398283103",
-    "content": "@CapArtichoke This information didn’t come from a newsletter—it came from a memo that was distributed to institutions.\n\nWhether it’s illegal or not depends first on how the memo was obtained, and if someone shorted the stock first and then released it to the public, that can be a separate",
-    "source": "https://x.com/jukan05/status/2019941424398283103",
-    "date": "2026-02-07T01:08:58.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 7,
-      "retweets": 0,
-      "replies": 4
-    }
-  },
-  {
-    "id": "tweet-2019922260405215338",
-    "content": "https://t.co/UFZl2ZpPQP",
-    "source": "https://x.com/jukan05/status/2019922260405215338",
-    "date": "2026-02-06T23:52:49.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 14,
       "retweets": 1,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019922258635157705",
-    "content": "&gt;&gt; \"Wavering\" in DDR4 Memory Prices at Shenzhen Huaqiangbei Electronics Market\n\n- Recent reports indicate that DDR4 memory prices have begun to soften slightly or enter an adjustment phase at Huaqiangbei (华强北), China's largest electronics wholesale and retail market.\n\n-",
-    "source": "https://x.com/jukan05/status/2019922258635157705",
-    "date": "2026-02-06T23:52:49.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 103,
-      "retweets": 11,
-      "replies": 6
-    }
-  },
-  {
-    "id": "tweet-2019780476857356380",
-    "content": "@Alisvolatprop12 그러니까요 ㅋㅋ",
-    "source": "https://x.com/jukan05/status/2019780476857356380",
-    "date": "2026-02-06T14:29:26.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 28,
-      "retweets": 1,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2019778369370390747",
-    "content": "Oh… guys, I’ve been talking about Micron’s HBM4 since last September…",
-    "source": "https://x.com/jukan05/status/2019778369370390747",
-    "date": "2026-02-06T14:21:03.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 304,
-      "retweets": 4,
-      "replies": 14
-    }
-  },
-  {
-    "id": "tweet-2019777050727653653",
-    "content": "Wasn’t it already widely known news that Micron wouldn’t be able to supply HBM4? I don’t understand why everyone is making such a big fuss about it.\n\nAnd selling Micron because of this is foolish, too. Micron can earn even higher margins from server DDR5 instead of HBM4.",
-    "source": "https://x.com/jukan05/status/2019777050727653653",
-    "date": "2026-02-06T14:15:49.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 523,
-      "retweets": 38,
-      "replies": 34
-    }
-  },
-  {
-    "id": "tweet-2019748911271887044",
-    "content": "@mindmoon_108 🫡",
-    "source": "https://x.com/jukan05/status/2019748911271887044",
-    "date": "2026-02-06T12:24:00.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 2,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019669613156659258",
-    "content": "Original video (deleted):\nhttps://t.co/7OH9oyVPEl",
-    "source": "https://x.com/jukan05/status/2019669613156659258",
-    "date": "2026-02-06T07:08:54.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 12,
-      "retweets": 0,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2019669611399233595",
-    "content": "Boston Dynamics' Atlas, Hyundai's humanoid robot, got roasted for its awkward backflip less than a month ago, and now it's showing insanely improved moves!🤯 https://t.co/QlwzcpT8By",
-    "source": "https://x.com/jukan05/status/2019669611399233595",
-    "date": "2026-02-06T07:08:53.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 1091,
-      "retweets": 98,
-      "replies": 48
-    }
-  },
-  {
-    "id": "tweet-2019658640077254737",
-    "content": "@insane_analyst lmao",
-    "source": "https://x.com/jukan05/status/2019658640077254737",
-    "date": "2026-02-06T06:25:17.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 7,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019650224340496407",
-    "content": "https://t.co/4anx6GWQsv",
-    "source": "https://x.com/jukan05/status/2019650224340496407",
-    "date": "2026-02-06T05:51:51.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 13,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019650222239150569",
-    "content": "* Reuters: Intel told customers in China that lead times for its server CPUs could be as long as six months.\n\n* Reuters: Intel raised prices for server CPUs sold to China by 10%.\n\n* Reuters: AMD said lead times for some of its products have extended to 8–10 weeks.\n\n$AMD $INTC https://t.co/T0i9NrwXNH",
-    "source": "https://x.com/jukan05/status/2019650222239150569",
-    "date": "2026-02-06T05:51:50.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 253,
-      "retweets": 30,
-      "replies": 10
-    }
-  },
-  {
-    "id": "tweet-2019635381701079514",
-    "content": "UBS raised its price target on Micron to $450 with the following commentary...\n\n\"More importantly, synthesizing industry conversations suggests that memory supply shortages could extend deeper through C2027 — DRAM could remain in a supply deficit through C4Q27, and NAND could be",
-    "source": "https://x.com/jukan05/status/2019635381701079514",
-    "date": "2026-02-06T04:52:52.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 293,
-      "retweets": 36,
-      "replies": 12
-    }
-  },
-  {
-    "id": "tweet-2019630195007975711",
-    "content": "The Big 3 memory companies are basically extorting money at this point. They're refusing to honor the prices from previously signed contracts and are pressuring people to pay according to current market prices lol https://t.co/7ikDqMCuSx https://t.co/bIu8oG1EZj",
-    "source": "https://x.com/jukan05/status/2019630195007975711",
-    "date": "2026-02-06T04:32:16.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 722,
-      "retweets": 61,
-      "replies": 33
-    }
-  },
-  {
-    "id": "tweet-2019629638813945932",
-    "content": "https://t.co/7YeomwLVcG",
-    "source": "https://x.com/jukan05/status/2019629638813945932",
-    "date": "2026-02-06T04:30:03.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 10,
-      "retweets": 1,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019629636293128213",
-    "content": "Memory Big 3 Change Contract Practices… Post-Settlement Pricing Emerges\n\nRising memory prices are now transforming supply contract practices. Contract durations are shifting from long-term to short-term, and a \"post-settlement\" concept reflecting market prices has emerged, https://t.co/goDS6cxTnO",
-    "source": "https://x.com/jukan05/status/2019629636293128213",
-    "date": "2026-02-06T04:30:02.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 205,
-      "retweets": 35,
-      "replies": 9
-    }
-  },
-  {
-    "id": "tweet-2019626728138907922",
-    "content": "https://t.co/ZFzsb8YLPR",
-    "source": "https://x.com/jukan05/status/2019626728138907922",
-    "date": "2026-02-06T04:18:29.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 20,
-      "retweets": 3,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019626726058520801",
-    "content": "Samsung Begins Tesla AI5 Wafer Processing… \"Musk Also Attending Meetings\"\n\nSamsung Electronics will soon begin pilot production of Tesla's AI5 chips. While the AI5 and AI6 chip foundry contracts are loss-making in the short term, the level of interest is high enough that Tesla https://t.co/Ogf4Q50ZUP",
-    "source": "https://x.com/jukan05/status/2019626726058520801",
-    "date": "2026-02-06T04:18:28.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 330,
-      "retweets": 45,
-      "replies": 11
-    }
-  },
-  {
-    "id": "tweet-2019615412175147079",
-    "content": "@StarAndCompass_ 솔직히 일본 애니메이션 회사들 덩치가 너무 작다고 생각합니다. 카도카와도 소니한테 넘어가는 상황인데...",
-    "source": "https://x.com/jukan05/status/2019615412175147079",
-    "date": "2026-02-06T03:33:31.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 3,
-      "retweets": 0,
       "replies": 1
     }
   },
   {
-    "id": "tweet-2019614149391826964",
-    "content": "@__bag_h_dad 헉",
-    "source": "https://x.com/jukan05/status/2019614149391826964",
-    "date": "2026-02-06T03:28:30.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 5,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019568313010122864",
-    "content": "@ambatrades The market still doesn’t seem to know Pure Storage very well.",
-    "source": "https://x.com/jukan05/status/2019568313010122864",
-    "date": "2026-02-06T00:26:22.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 31,
-      "retweets": 0,
-      "replies": 5
-    }
-  },
-  {
-    "id": "tweet-2019567733025960409",
-    "content": "Honestly, lately when I look at the operating profit estimates for Samsung and SK Hynix coming out from sell-side analysts, it feels like they’re not fully reflecting the SSD price increases.\n\nAnyway, it’s basically a done deal that both Samsung and Hynix are going to make an https://t.co/ODSZigkF1T",
-    "source": "https://x.com/jukan05/status/2019567733025960409",
-    "date": "2026-02-06T00:24:03.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 444,
-      "retweets": 33,
-      "replies": 16
-    }
-  },
-  {
-    "id": "tweet-2019564436185596086",
-    "content": "Hot take: By late this year, when Rubin rolls out, memory makers might actually generate more revenue from SSDs than from DRAM. SSDs probably won’t become more important than DRAM, but I think SSD supply could end up tighter than DRAM supply.",
-    "source": "https://x.com/jukan05/status/2019564436185596086",
-    "date": "2026-02-06T00:10:57.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 582,
-      "retweets": 27,
-      "replies": 22
-    }
-  },
-  {
-    "id": "tweet-2019560676793217194",
-    "content": "https://t.co/7mKqLiDJTj",
-    "source": "https://x.com/jukan05/status/2019560676793217194",
-    "date": "2026-02-05T23:56:01.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 14,
-      "retweets": 1,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019560674968662320",
-    "content": "A senior Samsung Electronics official said in an interview with the Korean media, “From the perspective of memory makers as well, it is not desirable in the long run for the surge in memory prices to become excessively severe and for supply shortages to persist for an extended",
-    "source": "https://x.com/jukan05/status/2019560674968662320",
-    "date": "2026-02-05T23:56:01.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 194,
-      "retweets": 18,
-      "replies": 14
-    }
-  },
-  {
-    "id": "tweet-2019550943570980912",
-    "content": "https://t.co/L8MdL2vUAJ",
-    "source": "https://x.com/jukan05/status/2019550943570980912",
-    "date": "2026-02-05T23:17:21.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 43,
-      "retweets": 1,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019550941754847445",
-    "content": "[Exclusive] Samsung receives temporary occupancy approval for $37 billion Taylor fab — Korea JoongAng Daily\n\nSamsung Electronics has received temporary approval for partial sections of its semiconductor fab under construction in Taylor, Texas, ahead of its full completion. This",
-    "source": "https://x.com/jukan05/status/2019550941754847445",
-    "date": "2026-02-05T23:17:20.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 119,
-      "retweets": 10,
-      "replies": 3
-    }
-  },
-  {
-    "id": "tweet-2019539394336874593",
-    "content": "@Alex_Intel_ 😂",
-    "source": "https://x.com/jukan05/status/2019539394336874593",
-    "date": "2026-02-05T22:31:27.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 3,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019538311782756619",
-    "content": "* Official: We’ve entered a bear market. https://t.co/GB8jK5jwYU",
-    "source": "https://x.com/jukan05/status/2019538311782756619",
-    "date": "2026-02-05T22:27:09.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 349,
-      "retweets": 11,
-      "replies": 17
-    }
-  },
-  {
-    "id": "tweet-2019440636961910824",
-    "content": "@StarAndCompass_ 감자칩 추천좀요",
-    "source": "https://x.com/jukan05/status/2019440636961910824",
-    "date": "2026-02-05T15:59:01.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 2,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019437842871812319",
-    "content": "@RihardJarc why MSFT?",
-    "source": "https://x.com/jukan05/status/2019437842871812319",
-    "date": "2026-02-05T15:47:55.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 34,
-      "retweets": 0,
-      "replies": 6
-    }
-  },
-  {
-    "id": "tweet-2019437803277623786",
-    "content": "@tech_signals Korea is red.",
-    "source": "https://x.com/jukan05/status/2019437803277623786",
-    "date": "2026-02-05T15:47:46.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 20,
-      "retweets": 0,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2019436578016489796",
-    "content": "Shouldn’t we view Bitcoin as a high-beta tech stock now, rather than an independent high-risk asset?",
-    "source": "https://x.com/jukan05/status/2019436578016489796",
-    "date": "2026-02-05T15:42:54.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 196,
-      "retweets": 5,
-      "replies": 25
-    }
-  },
-  {
-    "id": "tweet-2019427842946462179",
-    "content": "@insane_analyst 🫡",
-    "source": "https://x.com/jukan05/status/2019427842946462179",
-    "date": "2026-02-05T15:08:11.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 7,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019419776985231660",
-    "content": "@__bag_h_dad @Alisvolatprop12 @elonmusk 스페이스X폰은 구미에서🙌",
-    "source": "https://x.com/jukan05/status/2019419776985231660",
-    "date": "2026-02-05T14:36:08.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 2,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019418892771471442",
-    "content": "@StarAndCompass_ 미국 전인구 ㄷㄷ",
-    "source": "https://x.com/jukan05/status/2019418892771471442",
-    "date": "2026-02-05T14:32:37.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 11,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019414479084351517",
-    "content": "@Alex_Intel_ Can PTL compete with the RTX 5070?",
-    "source": "https://x.com/jukan05/status/2019414479084351517",
-    "date": "2026-02-05T14:15:05.000Z",
+    "id": "tweet-2027037638260363348",
+    "content": "@blazingbees 아뇨 잘 올라왔습니다",
+    "source": "https://x.com/jukan05/status/2027037638260363348",
+    "date": "2026-02-26T15:06:48.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 10,
       "retweets": 0,
-      "replies": 2
+      "replies": 1
     }
   },
   {
-    "id": "tweet-2019413121568502250",
-    "content": "@StarAndCompass_ AI 붐이 꺼질때...\n\n5090이라도 빨리 사십쇼",
-    "source": "https://x.com/jukan05/status/2019413121568502250",
-    "date": "2026-02-05T14:09:41.000Z",
+    "id": "tweet-2027032711018455192",
+    "content": "Still, I can’t bring myself to sell after holding it this long, so I’m just going to keep HOLDing…\n\nIt’s still cheap, and the competitive edge is really strong.",
+    "source": "https://x.com/jukan05/status/2027032711018455192",
+    "date": "2026-02-26T14:47:13.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 6,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019412749219164238",
-    "content": "https://t.co/aWe8LRA5b4",
-    "source": "https://x.com/jukan05/status/2019412749219164238",
-    "date": "2026-02-05T14:08:12.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 25,
+      "likes": 162,
       "retweets": 1,
-      "replies": 0
+      "replies": 14
     }
   },
   {
-    "id": "tweet-2019412746891325494",
-    "content": "* The Information: Nvidia will not release an upgraded version of the RTX 50 series this year.\n\n* The Information: RTX 60 (“Rubin”) was originally slated for late 2027, but has been delayed.\n\n* The Information: Nvidia is cutting production of its gaming GPUs.",
-    "source": "https://x.com/jukan05/status/2019412746891325494",
-    "date": "2026-02-05T14:08:12.000Z",
+    "id": "tweet-2027032116614287439",
+    "content": "My biggest mistake this year was holding Nvidia. I should’ve bought Korean stocks with that money instead!",
+    "source": "https://x.com/jukan05/status/2027032116614287439",
+    "date": "2026-02-26T14:44:51.000Z",
     "platform": "twitter",
     "metrics": {
-      "likes": 384,
-      "retweets": 22,
-      "replies": 22
+      "likes": 921,
+      "retweets": 31,
+      "replies": 76
     }
   },
   {
-    "id": "tweet-2019409865987551250",
-    "content": "@ayz_yzyz What do you think about the Nvidia–Tower Semiconductor collaboration?",
-    "source": "https://x.com/jukan05/status/2019409865987551250",
-    "date": "2026-02-05T13:56:45.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 7,
-      "retweets": 0,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2019409353372270957",
-    "content": "@zephyr_z9 A source familiar with this matter told me that he is actually the successor to Bill Hwang, the 'Nightmare of Wall Street'. https://t.co/WQNyBqeKMt",
-    "source": "https://x.com/jukan05/status/2019409353372270957",
-    "date": "2026-02-05T13:54:43.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 67,
-      "retweets": 2,
-      "replies": 4
-    }
-  },
-  {
-    "id": "tweet-2019406848466776420",
-    "content": "Free link:https://t.co/jSoPUIJPbl",
-    "source": "https://x.com/jukan05/status/2019406848466776420",
-    "date": "2026-02-05T13:44:46.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 23,
-      "retweets": 1,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019406845014864085",
-    "content": "This is an article written by a senior reporter at The Information. Personally, I don’t like The Information, but I thought this was quite worth reading, so I’m sharing it.\n\nBig Tech companies are racing to invest in OpenAI.\n\nNvidia is considering $30 billion, Amazon at least $20 https://t.co/MRUaj4jlwj",
-    "source": "https://x.com/jukan05/status/2019406845014864085",
-    "date": "2026-02-05T13:44:45.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 404,
-      "retweets": 56,
-      "replies": 25
-    }
-  },
-  {
-    "id": "tweet-2019394251520712998",
-    "content": "@zephyr_z9 @RYANHINGSHING Even the coverage you posted was from a report written by Sean Kim lol. https://t.co/pgMGPHIQ5t",
-    "source": "https://x.com/jukan05/status/2019394251520712998",
-    "date": "2026-02-05T12:54:42.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 4,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019393747163967508",
-    "content": "@zephyr_z9 @RYANHINGSHING He wrote a report again today lol.",
-    "source": "https://x.com/jukan05/status/2019393747163967508",
-    "date": "2026-02-05T12:52:42.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 2,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019391140781518934",
-    "content": "@RYANHINGSHING @zephyr_z9 Shawn Kim!!! I haven’t forgotten this!!",
-    "source": "https://x.com/jukan05/status/2019391140781518934",
-    "date": "2026-02-05T12:42:21.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 8,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019384906112241763",
-    "content": "@zephyr_z9 Would it be a major blow to $AAPL?",
-    "source": "https://x.com/jukan05/status/2019384906112241763",
-    "date": "2026-02-05T12:17:34.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 23,
-      "retweets": 0,
-      "replies": 7
-    }
-  },
-  {
-    "id": "tweet-2019384627371339972",
-    "content": "https://t.co/zKqbkUGTqW",
-    "source": "https://x.com/jukan05/status/2019384627371339972",
-    "date": "2026-02-05T12:16:28.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 17,
-      "retweets": 1,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019384504226554267",
-    "content": "If SpaceX were to make a smartphone, which hardware manufacturer or OEM do you think would build it?\n\nPersonally, I think it would be really interesting if Samsung made it. https://t.co/jPTeEONL6V https://t.co/oCCuB5zdKn",
-    "source": "https://x.com/jukan05/status/2019384504226554267",
-    "date": "2026-02-05T12:15:58.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 92,
-      "retweets": 12,
-      "replies": 22
-    }
-  },
-  {
-    "id": "tweet-2019383969138241779",
-    "content": "@ChristoRobin2 yup",
-    "source": "https://x.com/jukan05/status/2019383969138241779",
-    "date": "2026-02-05T12:13:51.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 11,
-      "retweets": 1,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019383603340407012",
-    "content": "* REUTERS: SPACEX IS CONSIDERING MAKING ITS OWN MOBILE DEVICE.",
-    "source": "https://x.com/jukan05/status/2019383603340407012",
-    "date": "2026-02-05T12:12:24.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 535,
-      "retweets": 43,
-      "replies": 45
-    }
-  },
-  {
-    "id": "tweet-2019374768991138061",
-    "content": "\"We're still at the beginning, not the end\" https://t.co/un308dFrd8",
-    "source": "https://x.com/jukan05/status/2019374768991138061",
-    "date": "2026-02-05T11:37:17.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 304,
-      "retweets": 16,
-      "replies": 13
-    }
-  },
-  {
-    "id": "tweet-2019329561926987875",
-    "content": "@theloaner11 @TBU12345678 @KairosPraxis Are you following me just to mock and insult me?",
-    "source": "https://x.com/jukan05/status/2019329561926987875",
-    "date": "2026-02-05T08:37:39.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 0,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019327816421245100",
-    "content": "Just to clarify, my X handle is only @jukan05. My Substack handle is @jukan.",
-    "source": "https://x.com/jukan05/status/2019327816421245100",
-    "date": "2026-02-05T08:30:43.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 22,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019327492457394410",
-    "content": "Why the fuck are these scammers even on Substack of all places?! https://t.co/HXzWuMyuJK",
-    "source": "https://x.com/jukan05/status/2019327492457394410",
-    "date": "2026-02-05T08:29:26.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 52,
-      "retweets": 0,
-      "replies": 9
-    }
-  },
-  {
-    "id": "tweet-2019314286632563123",
-    "content": "@bogusjack 네 더 늘었네요",
-    "source": "https://x.com/jukan05/status/2019314286632563123",
-    "date": "2026-02-05T07:36:57.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 4,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019301572820517184",
-    "content": "@dottomato 2024年まででも、MacBookの基本RAMは8GBでしたよね。 今となっては笑ってしまうくらい、かなり遠い昔のように感じます。",
-    "source": "https://x.com/jukan05/status/2019301572820517184",
-    "date": "2026-02-05T06:46:26.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 1,
-      "retweets": 0,
-      "replies": 1
-    }
-  },
-  {
-    "id": "tweet-2019298486953603231",
-    "content": "https://t.co/B4TxPIwHR0",
-    "source": "https://x.com/jukan05/status/2019298486953603231",
-    "date": "2026-02-05T06:34:10.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 7,
-      "retweets": 0,
-      "replies": 0
-    }
-  },
-  {
-    "id": "tweet-2019298484848062576",
-    "content": "According to a report by Taiwan’s Mirror Daily, rising memory prices are not expected to affect Apple’s plans to launch an entry-level MacBook.\n\nThe report also says that this new entry-level MacBook will be priced around $699–$799, and will feature 8GB of RAM along with the A18 https://t.co/OhEUy7eBa2",
-    "source": "https://x.com/jukan05/status/2019298484848062576",
-    "date": "2026-02-05T06:34:10.000Z",
+    "id": "tweet-2026998357273796711",
+    "content": "@rwang07 scam company",
+    "source": "https://x.com/jukan05/status/2026998357273796711",
+    "date": "2026-02-26T12:30:42.000Z",
     "platform": "twitter",
     "metrics": {
       "likes": 91,
-      "retweets": 9,
-      "replies": 8
-    }
-  },
-  {
-    "id": "tweet-2019290240117289460",
-    "content": "@zephyr_z9 @evrgn11112231 @rwang07 And… I’m also keeping an eye on Chinese cosmetics. Lately they’ve been popping up a lot on Reels.",
-    "source": "https://x.com/jukan05/status/2019290240117289460",
-    "date": "2026-02-05T06:01:24.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 3,
       "retweets": 0,
-      "replies": 2
-    }
-  },
-  {
-    "id": "tweet-2019286923932758084",
-    "content": "https://t.co/Eo1kzeltQg",
-    "source": "https://x.com/jukan05/status/2019286923932758084",
-    "date": "2026-02-05T05:48:13.000Z",
-    "platform": "twitter",
-    "metrics": {
-      "likes": 14,
-      "retweets": 0,
-      "replies": 0
+      "replies": 5
     }
   }
 ]

@@ -1,0 +1,5488 @@
+{
+  "personaId": "Serenity",
+  "personaName": "Serenity",
+  "nodes": [
+    {
+      "id": "n_0",
+      "concept": "lack of explanation for why stock price rises",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029094535289311261"
+      ]
+    },
+    {
+      "id": "n_1",
+      "concept": "credibility of doomposting claims about Korea being a bubble",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029094535289311261"
+      ]
+    },
+    {
+      "id": "n_2",
+      "concept": "failure to discuss actual catalysts, operational income, governance changes, or metrics",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029094535289311261"
+      ]
+    },
+    {
+      "id": "n_3",
+      "concept": "quality of analysis on X regarding Korea stock",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029094535289311261"
+      ]
+    },
+    {
+      "id": "n_4",
+      "concept": "chart going up continuously",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029094535289311261"
+      ]
+    },
+    {
+      "id": "n_5",
+      "concept": "people doomposting that Korea is a bubble",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029094535289311261"
+      ]
+    },
+    {
+      "id": "n_6",
+      "concept": "chart showing continuous upward movement",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029088341258584454"
+      ]
+    },
+    {
+      "id": "n_7",
+      "concept": "sustainability of KOSPI price increases",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029088341258584454"
+      ]
+    },
+    {
+      "id": "n_8",
+      "concept": "memory demand being a black hole (insatiable/growing)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029088341258584454"
+      ]
+    },
+    {
+      "id": "n_9",
+      "concept": "SNDK ability to take multi-year preorders",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029088341258584454"
+      ]
+    },
+    {
+      "id": "n_10",
+      "concept": "EWY concentration in Samsung and SK Hynix",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029088341258584454"
+      ]
+    },
+    {
+      "id": "n_11",
+      "concept": "EWY's representativeness of Korean economy",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029088341258584454"
+      ]
+    },
+    {
+      "id": "n_12",
+      "concept": "fundamentals",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028935994310050041",
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "id": "n_13",
+      "concept": "investment decision quality",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028935994310050041",
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "id": "n_14",
+      "concept": "technical analysis/charting",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028935994310050041"
+      ]
+    },
+    {
+      "id": "n_15",
+      "concept": "seeing the @blondesnmoney post",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028916795881800007"
+      ]
+    },
+    {
+      "id": "n_16",
+      "concept": "spitting out drink in public",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028916795881800007"
+      ]
+    },
+    {
+      "id": "n_17",
+      "concept": "not expecting the post on timeline",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028916795881800007"
+      ]
+    },
+    {
+      "id": "n_18",
+      "concept": "surprised reaction to the post",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028916795881800007"
+      ]
+    },
+    {
+      "id": "n_19",
+      "concept": "$CRCL price performance",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028914473055232328"
+      ]
+    },
+    {
+      "id": "n_20",
+      "concept": "noteworthy comment from narrator",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028914473055232328"
+      ]
+    },
+    {
+      "id": "n_21",
+      "concept": "stock price/charts",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "id": "n_22",
+      "concept": "monitoring USDC supply, interest rates, and Clarity Act",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "id": "n_23",
+      "concept": "understanding $CRCL fundamentals",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "id": "n_24",
+      "concept": "sentiment and technical analysis predictions",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "id": "n_25",
+      "concept": "bad sentiment or negative TA signals",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "id": "n_26",
+      "concept": "asset price near all-time highs",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028902147136602124"
+      ]
+    },
+    {
+      "id": "n_27",
+      "concept": "value of learning cost averaging strategy",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028902147136602124"
+      ]
+    },
+    {
+      "id": "n_28",
+      "concept": "implementing cost averaging (increasing position on 8% drops, further on 15% drops)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028902147136602124"
+      ]
+    },
+    {
+      "id": "n_29",
+      "concept": "better investment outcomes when asset is near ATHs",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028902147136602124"
+      ]
+    },
+    {
+      "id": "n_30",
+      "concept": "high IV on $AEHR leaps",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028898532657381755"
+      ]
+    },
+    {
+      "id": "n_31",
+      "concept": "suitability as leverage strategy",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028898532657381755"
+      ]
+    },
+    {
+      "id": "n_32",
+      "concept": "using shares with slight margin",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028898532657381755"
+      ]
+    },
+    {
+      "id": "n_33",
+      "concept": "achieving desired leverage exposure",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028898532657381755"
+      ]
+    },
+    {
+      "id": "n_34",
+      "concept": "receiving multiple orders ($14M order + follow-up order)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028893030330318868"
+      ]
+    },
+    {
+      "id": "n_35",
+      "concept": "approaching inflection point from speculative small cap to mass order ramp",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028893030330318868"
+      ]
+    },
+    {
+      "id": "n_36",
+      "concept": "customers/hyperscalers placing orders",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028893030330318868"
+      ]
+    },
+    {
+      "id": "n_37",
+      "concept": "mass order ramp and company inflection point",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028893030330318868"
+      ]
+    },
+    {
+      "id": "n_38",
+      "concept": "war",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028855576063799611"
+      ]
+    },
+    {
+      "id": "n_39",
+      "concept": "short term price drop",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028855576063799611"
+      ]
+    },
+    {
+      "id": "n_40",
+      "concept": "using leverage during market downturns",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028855576063799611"
+      ]
+    },
+    {
+      "id": "n_41",
+      "concept": "financial risk/losses",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028855576063799611",
+        "tweet-2028798611069583361"
+      ]
+    },
+    {
+      "id": "n_42",
+      "concept": "stocks going up and down 20% a day",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "id": "n_43",
+      "concept": "adrenaline rush",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "id": "n_44",
+      "concept": "CPO approaching",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "id": "n_45",
+      "concept": "re-rating wait period",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "id": "n_46",
+      "concept": "genuine singular monopoly status",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "id": "n_47",
+      "concept": "investment attractiveness",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "id": "n_48",
+      "concept": "western supply chain presence",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "id": "n_49",
+      "concept": "duopoly market structure (like AXT/Sumitomo)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "id": "n_50",
+      "concept": "$AXTI miles being a current bottleneck",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028811480439943673"
+      ]
+    },
+    {
+      "id": "n_51",
+      "concept": "preference for $AXTI miles",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028811480439943673"
+      ]
+    },
+    {
+      "id": "n_52",
+      "concept": "$AXTI miles remaining a bottleneck for photonics-related applications",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028811480439943673"
+      ]
+    },
+    {
+      "id": "n_53",
+      "concept": "continued value/utility of $AXTI miles",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028811480439943673"
+      ]
+    },
+    {
+      "id": "n_54",
+      "concept": "markets pricing in CPO (Corporate Power Purchase Agreements)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028811288651162043"
+      ]
+    },
+    {
+      "id": "n_55",
+      "concept": "Soitec stock price appreciation / reduced wait pain",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028811288651162043"
+      ]
+    },
+    {
+      "id": "n_56",
+      "concept": "NVDA investing in COHR and LITE",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028811288651162043"
+      ]
+    },
+    {
+      "id": "n_57",
+      "concept": "Soitec stock price movement / market catalyst",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028811288651162043"
+      ]
+    },
+    {
+      "id": "n_58",
+      "concept": "Soitec's monopoly over CPO for substrates",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028810725398053326"
+      ]
+    },
+    {
+      "id": "n_59",
+      "concept": "Soitec stock potential for 2-3x returns",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028810725398053326"
+      ]
+    },
+    {
+      "id": "n_60",
+      "concept": "patience to wait a year",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028810725398053326"
+      ]
+    },
+    {
+      "id": "n_61",
+      "concept": "ability to realize 2-3x returns on Soitec",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028810725398053326"
+      ]
+    },
+    {
+      "id": "n_62",
+      "concept": "Shin-Etsu licensing Soitec's technology",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028810725398053326"
+      ]
+    },
+    {
+      "id": "n_63",
+      "concept": "Shin-Etsu's competitive position relative to Soitec",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028810725398053326"
+      ]
+    },
+    {
+      "id": "n_64",
+      "concept": "3x leveraged instruments",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028798611069583361"
+      ]
+    },
+    {
+      "id": "n_65",
+      "concept": "market makers mispricing IV at 32%",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028798611069583361"
+      ]
+    },
+    {
+      "id": "n_66",
+      "concept": "arbitrage opportunity exists",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028798611069583361"
+      ]
+    },
+    {
+      "id": "n_67",
+      "concept": "stock moving up and down 7-13% daily",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028798611069583361"
+      ]
+    },
+    {
+      "id": "n_68",
+      "concept": "evidence of IV mispricing",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028798611069583361"
+      ]
+    },
+    {
+      "id": "n_69",
+      "concept": "structural memory demand decreasing",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028790889964011644"
+      ]
+    },
+    {
+      "id": "n_70",
+      "concept": "actual crash",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028790889964011644"
+      ]
+    },
+    {
+      "id": "n_71",
+      "concept": "hyperscalers projecting less capex",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028790889964011644"
+      ]
+    },
+    {
+      "id": "n_72",
+      "concept": "increased opex costs that get passed on",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028790889964011644"
+      ]
+    },
+    {
+      "id": "n_73",
+      "concept": "focusing on fundamentals",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028790166081671390"
+      ]
+    },
+    {
+      "id": "n_74",
+      "concept": "trading off emotions",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028790166081671390"
+      ]
+    },
+    {
+      "id": "n_75",
+      "concept": "caring about fundamentals",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028790166081671390"
+      ]
+    },
+    {
+      "id": "n_76",
+      "concept": "emotional decision-making",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028790166081671390"
+      ]
+    },
+    {
+      "id": "n_77",
+      "concept": "market pricing",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028789983432036438"
+      ]
+    },
+    {
+      "id": "n_78",
+      "concept": "increased costs (crude, LNG)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028789983432036438"
+      ]
+    },
+    {
+      "id": "n_79",
+      "concept": "increased costs passed to hyperscalers",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028789983432036438"
+      ]
+    },
+    {
+      "id": "n_80",
+      "concept": "hyperscalers battling for allocation",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028789983432036438"
+      ]
+    },
+    {
+      "id": "n_81",
+      "concept": "markets pricing increased costs",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028789983432036438"
+      ]
+    },
+    {
+      "id": "n_82",
+      "concept": "markets missing cost pass-through to hyperscalers",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028789983432036438"
+      ]
+    },
+    {
+      "id": "n_83",
+      "concept": "investor misunderstanding that 2026 is not 2022 (Ukraine-Russia conflicts)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028786845861990895"
+      ]
+    },
+    {
+      "id": "n_84",
+      "concept": "$EWY / KOSPI crash being a buying opportunity",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028786845861990895"
+      ]
+    },
+    {
+      "id": "n_85",
+      "concept": "AI fundamentally changing demand for semiconductors",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028786845861990895"
+      ]
+    },
+    {
+      "id": "n_86",
+      "concept": "Samsung/SK Hynix being a buying opportunity",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028786845861990895"
+      ]
+    },
+    {
+      "id": "n_87",
+      "concept": "war dragging on",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028770236762304778"
+      ]
+    },
+    {
+      "id": "n_88",
+      "concept": "$LASR stock performance",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028770236762304778"
+      ]
+    },
+    {
+      "id": "n_89",
+      "concept": "Israel's Iron Beam continuing to intercept missiles",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028770236762304778"
+      ]
+    },
+    {
+      "id": "n_90",
+      "concept": "sudden peacetime",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028770236762304778"
+      ]
+    },
+    {
+      "id": "n_91",
+      "concept": "defense sector exposure",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028770236762304778"
+      ]
+    },
+    {
+      "id": "n_92",
+      "concept": "earnings in March",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028769319598096432"
+      ]
+    },
+    {
+      "id": "n_93",
+      "concept": "visibility into actualized demand",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028769319598096432"
+      ]
+    },
+    {
+      "id": "n_94",
+      "concept": "AI agents being popular",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028769319598096432"
+      ]
+    },
+    {
+      "id": "n_95",
+      "concept": "$RPI revenue",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028769319598096432"
+      ]
+    },
+    {
+      "id": "n_96",
+      "concept": "isolated hardware for orchestration being needed",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028769319598096432"
+      ]
+    },
+    {
+      "id": "n_97",
+      "concept": "America's Golden Dome laser defense",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028767576357228608"
+      ]
+    },
+    {
+      "id": "n_98",
+      "concept": "$LASR total addressable market (TAM)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028767576357228608"
+      ]
+    },
+    {
+      "id": "n_99",
+      "concept": "reusable rockets technology",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028767576357228608"
+      ]
+    },
+    {
+      "id": "n_100",
+      "concept": "infinite space TAM",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028767576357228608"
+      ]
+    },
+    {
+      "id": "n_101",
+      "concept": "lack of Energy Directed Weapon exposure",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028767576357228608"
+      ]
+    },
+    {
+      "id": "n_102",
+      "concept": "investment opportunity missed",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028767576357228608"
+      ]
+    },
+    {
+      "id": "n_103",
+      "concept": "optical transceiver boom signaled from $AAOI earnings",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028754498710290457"
+      ]
+    },
+    {
+      "id": "n_104",
+      "concept": "stock price increases for IQE and Landmark",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028754498710290457"
+      ]
+    },
+    {
+      "id": "n_105",
+      "concept": "optical transceiver boom",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028754498710290457"
+      ]
+    },
+    {
+      "id": "n_106",
+      "concept": "photonics epiwafer fab stock performance",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028754498710290457"
+      ]
+    },
+    {
+      "id": "n_107",
+      "concept": "Photonics as new architectural paradigm for AI",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "id": "n_108",
+      "concept": "Photonics stocks price appreciation",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "id": "n_109",
+      "concept": "NVDA's $4B investment in COHR and LITE",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "id": "n_110",
+      "concept": "Scaling up of photonics companies",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "id": "n_111",
+      "concept": "CPO (Coherent Pluggable Optics) expected ramp in 2028",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "id": "n_112",
+      "concept": "Photonics stocks going up 10% a day",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "id": "n_113",
+      "concept": "Photonics becoming new architectural paradigm for AI",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "id": "n_114",
+      "concept": "Long-term investment opportunity (next few years)",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "id": "n_115",
+      "concept": "high volatility (7-10% daily moves)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028742780537991631"
+      ]
+    },
+    {
+      "id": "n_116",
+      "concept": "call option value from vega expansion",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028742780537991631"
+      ]
+    },
+    {
+      "id": "n_117",
+      "concept": "underlying price decline",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028742780537991631"
+      ]
+    },
+    {
+      "id": "n_118",
+      "concept": "high implied volatility (93% IV) relative to comparable stocks",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028742780537991631"
+      ]
+    },
+    {
+      "id": "n_119",
+      "concept": "call options benefit despite price movement",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028742780537991631"
+      ]
+    },
+    {
+      "id": "n_120",
+      "concept": "extreme volatility event in $EWY",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028742780537991631"
+      ]
+    },
+    {
+      "id": "n_121",
+      "concept": "market makers will increase attention/adjust pricing",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028742780537991631"
+      ]
+    },
+    {
+      "id": "n_122",
+      "concept": "new leveraged instruments on $EWY and KOSPI",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028737716544802841"
+      ]
+    },
+    {
+      "id": "n_123",
+      "concept": "extreme volatility",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028737716544802841"
+      ]
+    },
+    {
+      "id": "n_124",
+      "concept": "mispriced volatility in leveraged instruments",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028737716544802841"
+      ]
+    },
+    {
+      "id": "n_125",
+      "concept": "profit opportunity",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028737716544802841"
+      ]
+    },
+    {
+      "id": "n_126",
+      "concept": "market consisting of basically two stocks",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028737716544802841"
+      ]
+    },
+    {
+      "id": "n_127",
+      "concept": "mispriced volatility",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028737716544802841"
+      ]
+    },
+    {
+      "id": "n_128",
+      "concept": "AXTI controls supply chain needed for AI buildout for photonics",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028589072269422944"
+      ]
+    },
+    {
+      "id": "n_129",
+      "concept": "AXTI stock price appreciation to $20B+ market cap",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028589072269422944"
+      ]
+    },
+    {
+      "id": "n_130",
+      "concept": "NVDA demonstrated criticality of photonics for next few years",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028589072269422944"
+      ]
+    },
+    {
+      "id": "n_131",
+      "concept": "AXTI's ability to command significant price increases",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028589072269422944"
+      ]
+    },
+    {
+      "id": "n_132",
+      "concept": "photonics criticality for AI buildout",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028589072269422944"
+      ]
+    },
+    {
+      "id": "n_133",
+      "concept": "AXTI supply chain control value",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028589072269422944"
+      ]
+    },
+    {
+      "id": "n_134",
+      "concept": "Nvidia funneling $4B into photonics players ($LITE and $COHR)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028581366510870627"
+      ]
+    },
+    {
+      "id": "n_135",
+      "concept": "$AXTI stock price increase to $46.7",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028581366510870627"
+      ]
+    },
+    {
+      "id": "n_136",
+      "concept": "controlling materials (in photonics sector)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028581366510870627"
+      ]
+    },
+    {
+      "id": "n_137",
+      "concept": "investment opportunity/profitability",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028581366510870627"
+      ]
+    },
+    {
+      "id": "n_138",
+      "concept": "pepemoonboy's help getting started on X",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028575575984742557"
+      ]
+    },
+    {
+      "id": "n_139",
+      "concept": "Serenity's appreciation",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028575575984742557"
+      ]
+    },
+    {
+      "id": "n_140",
+      "concept": "being humble",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028575575984742557"
+      ]
+    },
+    {
+      "id": "n_141",
+      "concept": "underestimating one's own contributions",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028575575984742557"
+      ]
+    },
+    {
+      "id": "n_142",
+      "concept": "catalyst being far enough in the future",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028537514747912643"
+      ]
+    },
+    {
+      "id": "n_143",
+      "concept": "ability to aim for long term capital gains tax treatment",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028537514747912643"
+      ]
+    },
+    {
+      "id": "n_144",
+      "concept": "Greenland peace deal",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028537514747912643"
+      ]
+    },
+    {
+      "id": "n_145",
+      "concept": "defense stocks like $ONDS performance",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028537514747912643"
+      ]
+    },
+    {
+      "id": "n_146",
+      "concept": "being in top momentum sectors (Photonics, Memory, Power, Defense)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028536305030988011"
+      ]
+    },
+    {
+      "id": "n_147",
+      "concept": "investment returns",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028536305030988011"
+      ]
+    },
+    {
+      "id": "n_148",
+      "concept": "being in sectors like advanced packaging or thermal",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028536305030988011"
+      ]
+    },
+    {
+      "id": "n_149",
+      "concept": "severe bottleneck or returns comparable to top 4 sectors",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028536305030988011"
+      ]
+    },
+    {
+      "id": "n_150",
+      "concept": "$AAOI and $AXTI being top photonic plays",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028536305030988011"
+      ]
+    },
+    {
+      "id": "n_151",
+      "concept": "suitability as investment choices in photonics sector",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028536305030988011"
+      ]
+    },
+    {
+      "id": "n_152",
+      "concept": "finding upstream suppliers in supply chain",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "id": "n_153",
+      "concept": "investment opportunity identification",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "id": "n_154",
+      "concept": "$LITE being large part of $GOOGL TPU BOM",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "id": "n_155",
+      "concept": "stock price increase",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "id": "n_156",
+      "concept": "most people stopping at obvious suppliers",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "id": "n_157",
+      "concept": "missing upstream investment opportunities",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "id": "n_158",
+      "concept": "investigating epiwafer suppliers",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "id": "n_159",
+      "concept": "finding earlier-stage investment opportunities",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "id": "n_160",
+      "concept": "$PL stock price increase to $27.2 (16x from $1.7)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028532170114170991"
+      ]
+    },
+    {
+      "id": "n_161",
+      "concept": "investment returns beating $AXTI",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028532170114170991"
+      ]
+    },
+    {
+      "id": "n_162",
+      "concept": "lack of belief in geospatial intelligence",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028532170114170991"
+      ]
+    },
+    {
+      "id": "n_163",
+      "concept": "not investing in $PL at $1.7",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028532170114170991"
+      ]
+    },
+    {
+      "id": "n_164",
+      "concept": "143.5% YTD return",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028531427202265211"
+      ]
+    },
+    {
+      "id": "n_165",
+      "concept": "achievement worthy of congratulations",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028531427202265211"
+      ]
+    },
+    {
+      "id": "n_166",
+      "concept": "Ren_aramb's interaction with Serenity's posts",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028531427202265211"
+      ]
+    },
+    {
+      "id": "n_167",
+      "concept": "Serenity's gratitude",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028531427202265211"
+      ]
+    },
+    {
+      "id": "n_168",
+      "concept": "transceiver boom",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028530994148766102"
+      ]
+    },
+    {
+      "id": "n_169",
+      "concept": "investment appeal of Innolight and Eoptolink",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028530994148766102"
+      ]
+    },
+    {
+      "id": "n_170",
+      "concept": "being a monopoly like AXTI",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028530994148766102"
+      ]
+    },
+    {
+      "id": "n_171",
+      "concept": "investment preference",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028530994148766102"
+      ]
+    },
+    {
+      "id": "n_172",
+      "concept": "not being monopolies",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028530994148766102"
+      ]
+    },
+    {
+      "id": "n_173",
+      "concept": "Serenity's preference to invest in Western supply instead",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028530994148766102"
+      ]
+    },
+    {
+      "id": "n_174",
+      "concept": "mapping where all the spend goes",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028529465962414375"
+      ]
+    },
+    {
+      "id": "n_175",
+      "concept": "portfolio performance",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028529465962414375"
+      ]
+    },
+    {
+      "id": "n_176",
+      "concept": "Google's $180B capex allocation to TPU program",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028529465962414375"
+      ]
+    },
+    {
+      "id": "n_177",
+      "concept": "demand for Lite Semiconductors ($LITE) components",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028529465962414375"
+      ]
+    },
+    {
+      "id": "n_178",
+      "concept": "TPU program BOM requirements (8-12% allocation)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028529465962414375"
+      ]
+    },
+    {
+      "id": "n_179",
+      "concept": "upstream materials demand from $AXTI or epiwafers from $IQE",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028529465962414375"
+      ]
+    },
+    {
+      "id": "n_180",
+      "concept": "posts being interesting",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028524822570102812"
+      ]
+    },
+    {
+      "id": "n_181",
+      "concept": "people reading the posts",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028524822570102812"
+      ]
+    },
+    {
+      "id": "n_182",
+      "concept": "posting TA drawings and breakdowns",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028524822570102812"
+      ]
+    },
+    {
+      "id": "n_183",
+      "concept": "other people finding content insightful",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028524822570102812"
+      ]
+    },
+    {
+      "id": "n_184",
+      "concept": "$AXTI being bottleneck of AI industry for many years",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028524172121719168"
+      ]
+    },
+    {
+      "id": "n_185",
+      "concept": "investment attractiveness despite small market cap",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028524172121719168"
+      ]
+    },
+    {
+      "id": "n_186",
+      "concept": "$AAOI leapfrogging $LITE's 2026 revenue + growth by mid-2027",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028524172121719168"
+      ]
+    },
+    {
+      "id": "n_187",
+      "concept": "$AAOI having significant upside potential",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028524172121719168"
+      ]
+    },
+    {
+      "id": "n_188",
+      "concept": "$AAOI trading at 1/10th the valuation of $LITE",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028524172121719168"
+      ]
+    },
+    {
+      "id": "n_189",
+      "concept": "$AAOI being undervalued relative to growth",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028524172121719168"
+      ]
+    },
+    {
+      "id": "n_190",
+      "concept": "owning top individual stock performers (AXTI, AAOI, SNDK, SK Hynix, Nittobo, Macronix, Unimicron)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028520248891392461"
+      ]
+    },
+    {
+      "id": "n_191",
+      "concept": "triple digit returns in 2 months",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028520248891392461"
+      ]
+    },
+    {
+      "id": "n_192",
+      "concept": "owning top individual stock performers",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028520248891392461"
+      ]
+    },
+    {
+      "id": "n_193",
+      "concept": "501.38% year-to-date returns",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028520248891392461"
+      ]
+    },
+    {
+      "id": "n_194",
+      "concept": "luck",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028520248891392461"
+      ]
+    },
+    {
+      "id": "n_195",
+      "concept": "owning every single top individual stock performer this year",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028520248891392461"
+      ]
+    },
+    {
+      "id": "n_196",
+      "concept": "$AXTI stock price increase to 4x from intraday low",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028514640976834995"
+      ]
+    },
+    {
+      "id": "n_197",
+      "concept": "Serenity's post about $AXTI",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028514640976834995"
+      ]
+    },
+    {
+      "id": "n_198",
+      "concept": "small bottlenecks in AI industry",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028514640976834995"
+      ]
+    },
+    {
+      "id": "n_199",
+      "concept": "investment opportunity (gold mining)",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028514640976834995"
+      ]
+    },
+    {
+      "id": "n_200",
+      "concept": "discovery of upstream bottlenecks and suppliers to Lumentum",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028511702288085093"
+      ]
+    },
+    {
+      "id": "n_201",
+      "concept": "$LITE stock price/valuation",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028511702288085093"
+      ]
+    },
+    {
+      "id": "n_202",
+      "concept": "$NVDA $2B deal announcement",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028511702288085093"
+      ]
+    },
+    {
+      "id": "n_203",
+      "concept": "rush to buy $LITE at $54B market cap",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028511702288085093"
+      ]
+    },
+    {
+      "id": "n_204",
+      "concept": "companies like $AXTI and $IQE being upstream suppliers with growth potential",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028511702288085093"
+      ]
+    },
+    {
+      "id": "n_205",
+      "concept": "these companies have a long way to go (in terms of growth/upside)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028511702288085093"
+      ]
+    },
+    {
+      "id": "n_206",
+      "concept": "energy directed weapons technology working in Israel",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028508633294864551"
+      ]
+    },
+    {
+      "id": "n_207",
+      "concept": "$LASR becoming a huge part of energy directed weapons in the Golden Dome",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028508633294864551"
+      ]
+    },
+    {
+      "id": "n_208",
+      "concept": "scale of energy directed weapons deployment",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028508633294864551"
+      ]
+    },
+    {
+      "id": "n_209",
+      "concept": "sharing discoveries along the way",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028505755918434597"
+      ]
+    },
+    {
+      "id": "n_210",
+      "concept": "providing value to others",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028505755918434597"
+      ]
+    },
+    {
+      "id": "n_211",
+      "concept": "$LASR having cool features/properties",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028505755918434597"
+      ]
+    },
+    {
+      "id": "n_212",
+      "concept": "worth sharing/recommending",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028505755918434597"
+      ]
+    },
+    {
+      "id": "n_213",
+      "concept": "Nlight being a supplier/subcontractor to Iron Beam",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028505568319791188"
+      ]
+    },
+    {
+      "id": "n_214",
+      "concept": "deep engagement with current and future Iron Beam products",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028505568319791188"
+      ]
+    },
+    {
+      "id": "n_215",
+      "concept": "shipping components toward Iron Beam program in second half of 2024",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028505568319791188"
+      ]
+    },
+    {
+      "id": "n_216",
+      "concept": "acceleration of component shipments",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028505568319791188"
+      ]
+    },
+    {
+      "id": "n_217",
+      "concept": "Iron Beam live demonstration being wildly successful",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028497913979302109"
+      ]
+    },
+    {
+      "id": "n_218",
+      "concept": "$LASR stock value/investment appeal",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028497913979302109"
+      ]
+    },
+    {
+      "id": "n_219",
+      "concept": "$LASR being laser engine for Rafael's Iron Beam",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028497913979302109"
+      ]
+    },
+    {
+      "id": "n_220",
+      "concept": "$LASR investment relevance/value",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028497913979302109"
+      ]
+    },
+    {
+      "id": "n_221",
+      "concept": "Two-hop relation to NLight",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028497913979302109"
+      ]
+    },
+    {
+      "id": "n_222",
+      "concept": "market understanding of $LASR value",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028497913979302109"
+      ]
+    },
+    {
+      "id": "n_223",
+      "concept": "news about reported massive DRAM/NAND price hikes",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028487006708539512"
+      ]
+    },
+    {
+      "id": "n_224",
+      "concept": "Samsung/SK Hynix and $EWY stock price",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028487006708539512"
+      ]
+    },
+    {
+      "id": "n_225",
+      "concept": "positive developments with $IQE",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028479744434651470"
+      ]
+    },
+    {
+      "id": "n_226",
+      "concept": "stock price appreciation",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028479744434651470"
+      ]
+    },
+    {
+      "id": "n_227",
+      "concept": "people spending time to read about my thoughts",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028472879319498942"
+      ]
+    },
+    {
+      "id": "n_228",
+      "concept": "fulfillment",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028472879319498942"
+      ]
+    },
+    {
+      "id": "n_229",
+      "concept": "thesis prediction accuracy",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028472234101334515"
+      ]
+    },
+    {
+      "id": "n_230",
+      "concept": "NVDA investing in LITE and COHR",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028472234101334515"
+      ]
+    },
+    {
+      "id": "n_231",
+      "concept": "AAOI performance this year",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028472234101334515"
+      ]
+    },
+    {
+      "id": "n_232",
+      "concept": "thesis prediction validation",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028472234101334515"
+      ]
+    },
+    {
+      "id": "n_233",
+      "concept": "AAOI stock price increase",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028470130628514077"
+      ]
+    },
+    {
+      "id": "n_234",
+      "concept": "AAOI being on a mega-rally",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028470130628514077"
+      ]
+    },
+    {
+      "id": "n_235",
+      "concept": "institutions receiving leaked news early",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028467833915711710"
+      ]
+    },
+    {
+      "id": "n_236",
+      "concept": "Taiwan photonics stocks rallying 10%+",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028467833915711710"
+      ]
+    },
+    {
+      "id": "n_237",
+      "concept": "NVDA investing $2B into LITE",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028466744642469898"
+      ]
+    },
+    {
+      "id": "n_238",
+      "concept": "IQE benefits (as massive LITE supplier/epiwafer foundry)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028466744642469898"
+      ]
+    },
+    {
+      "id": "n_239",
+      "concept": "IQE stock price up 28%",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028466744642469898"
+      ]
+    },
+    {
+      "id": "n_240",
+      "concept": "20-40% daily gains",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028466487707754904"
+      ]
+    },
+    {
+      "id": "n_241",
+      "concept": "stocks like $AAOI and $IQE being selected as picks",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028466487707754904"
+      ]
+    },
+    {
+      "id": "n_242",
+      "concept": "stocks like $AXTI and $LITE doubling in value",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028466487707754904"
+      ]
+    },
+    {
+      "id": "n_243",
+      "concept": "taking a rest period (price consolidation)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028466487707754904"
+      ]
+    },
+    {
+      "id": "n_244",
+      "concept": "NVDA's $2 billion investment in COHR for advanced laser and optical networking products",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028465538444427584"
+      ]
+    },
+    {
+      "id": "n_245",
+      "concept": "bullish tailwind for AXTI (substrate provider)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028465538444427584"
+      ]
+    },
+    {
+      "id": "n_246",
+      "concept": "bullish tailwind for optical networking companies like AAOI",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028465538444427584"
+      ]
+    },
+    {
+      "id": "n_247",
+      "concept": "bullish tailwind for the entire photonics supply chain",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028465538444427584"
+      ]
+    },
+    {
+      "id": "n_248",
+      "concept": "NVDA's $2 billion investment in Lumentum's R&D and U.S. fabrication facility",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028464631195574674"
+      ]
+    },
+    {
+      "id": "n_249",
+      "concept": "tailwind for photonics stocks",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028464631195574674"
+      ]
+    },
+    {
+      "id": "n_250",
+      "concept": "IQE being a known LITE supplier",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028464631195574674"
+      ]
+    },
+    {
+      "id": "n_251",
+      "concept": "IQE's 28% rise makes sense given NVDA's investment in photonics",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028464631195574674"
+      ]
+    },
+    {
+      "id": "n_252",
+      "concept": "lack of pure play public exposure to energy directed weapons",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028461742783893827"
+      ]
+    },
+    {
+      "id": "n_253",
+      "concept": "LASR being notable/unique investment option",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028461742783893827"
+      ]
+    },
+    {
+      "id": "n_254",
+      "concept": "modern warfare technology advancement (lasers shooting down targets)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028459615214879032"
+      ]
+    },
+    {
+      "id": "n_255",
+      "concept": "timeline expectations for laser weapons deployment",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028459615214879032"
+      ]
+    },
+    {
+      "id": "n_256",
+      "concept": "belief that laser weapons deployment was further in the future",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028459615214879032"
+      ]
+    },
+    {
+      "id": "n_257",
+      "concept": "decision not to invest in $LASR stock",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028459615214879032"
+      ]
+    },
+    {
+      "id": "n_258",
+      "concept": "actual live deployment of laser weapons in modern warfare",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028459615214879032"
+      ]
+    },
+    {
+      "id": "n_259",
+      "concept": "surprise/recalibration of timeline expectations",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028459615214879032"
+      ]
+    },
+    {
+      "id": "n_260",
+      "concept": "LASR's biggest validation for first usage of Laser Weapons shooting down targets",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028458236316381685"
+      ]
+    },
+    {
+      "id": "n_261",
+      "concept": "ton of contracts flowing into LASR",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028458236316381685"
+      ]
+    },
+    {
+      "id": "n_262",
+      "concept": "LASR expansion",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028458236316381685"
+      ]
+    },
+    {
+      "id": "n_263",
+      "concept": "contracts flowing into LASR",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028458236316381685"
+      ]
+    },
+    {
+      "id": "n_264",
+      "concept": "laser weapons being super cool",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028457705095184603"
+      ]
+    },
+    {
+      "id": "n_265",
+      "concept": "decision to invest in $LASR",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028457705095184603"
+      ]
+    },
+    {
+      "id": "n_266",
+      "concept": "stock being up 50%+ since last January",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028457705095184603"
+      ]
+    },
+    {
+      "id": "n_267",
+      "concept": "regret about not taking position earlier",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028457705095184603"
+      ]
+    },
+    {
+      "id": "n_268",
+      "concept": "Serenity posting about $LASR",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028457265263710538"
+      ]
+    },
+    {
+      "id": "n_269",
+      "concept": "$LASR stock price increases",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028457265263710538"
+      ]
+    },
+    {
+      "id": "n_270",
+      "concept": "$LASR shooting down a bunch of stuff",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028457265263710538"
+      ]
+    },
+    {
+      "id": "n_271",
+      "concept": "Serenity taking positions in $LASR",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028457265263710538"
+      ]
+    },
+    {
+      "id": "n_272",
+      "concept": "seeing $LASR in combat action",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028456926644965419"
+      ]
+    },
+    {
+      "id": "n_273",
+      "concept": "finding it wild/impressive",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028456926644965419"
+      ]
+    },
+    {
+      "id": "n_274",
+      "concept": "lack of combat validation",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028456926644965419"
+      ]
+    },
+    {
+      "id": "n_275",
+      "concept": "not really understanding $LASR's capabilities",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028456926644965419"
+      ]
+    },
+    {
+      "id": "n_276",
+      "concept": "Hezbollah fired rockets into Israel",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028455727996752242"
+      ]
+    },
+    {
+      "id": "n_277",
+      "concept": "$LASR (Nlight) laser engine shot down rockets",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028455727996752242"
+      ]
+    },
+    {
+      "id": "n_278",
+      "concept": "US/Israel vs. Iran conflict",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028455727996752242"
+      ]
+    },
+    {
+      "id": "n_279",
+      "concept": "$LASR Energy Directed Weapons validation and beneficiary status",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028455727996752242"
+      ]
+    },
+    {
+      "id": "n_280",
+      "concept": "Iron Beam successfully intercepted Hezbollah rockets",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028455727996752242"
+      ]
+    },
+    {
+      "id": "n_281",
+      "concept": "$LASR becomes largest beneficiary from the conflict",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028455727996752242"
+      ]
+    },
+    {
+      "id": "n_282",
+      "concept": "three to four hyperscaler orders for all capacity they can make a year",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028431595779358963"
+      ]
+    },
+    {
+      "id": "n_283",
+      "concept": "risk of cancellation",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028431595779358963"
+      ]
+    },
+    {
+      "id": "n_284",
+      "concept": "Made in America supply chains",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028431595779358963"
+      ]
+    },
+    {
+      "id": "n_285",
+      "concept": "rarity/competitive differentiation",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028431595779358963"
+      ]
+    },
+    {
+      "id": "n_286",
+      "concept": "diversification across multiple stocks",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028429689946357937"
+      ]
+    },
+    {
+      "id": "n_287",
+      "concept": "better investment strategy",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028429689946357937"
+      ]
+    },
+    {
+      "id": "n_288",
+      "concept": "holding both $AEHR and $AAOI",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028429689946357937"
+      ]
+    },
+    {
+      "id": "n_289",
+      "concept": "portfolio diversification",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028429689946357937"
+      ]
+    },
+    {
+      "id": "n_290",
+      "concept": "hitting ~$4B revenue projection with 40% margins",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028428302718038200"
+      ]
+    },
+    {
+      "id": "n_291",
+      "concept": "significant upside potential",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028428302718038200"
+      ]
+    },
+    {
+      "id": "n_292",
+      "concept": "being early to things on X",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028428302718038200"
+      ]
+    },
+    {
+      "id": "n_293",
+      "concept": "investment opportunity/upside",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028428302718038200"
+      ]
+    },
+    {
+      "id": "n_294",
+      "concept": "wild repricing event in photonics sector stocks",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028426493819506876"
+      ]
+    },
+    {
+      "id": "n_295",
+      "concept": "stock price movements",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028426493819506876"
+      ]
+    },
+    {
+      "id": "n_296",
+      "concept": "restructuring at $IQE",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028425020146672018"
+      ]
+    },
+    {
+      "id": "n_297",
+      "concept": "investment risk",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028425020146672018"
+      ]
+    },
+    {
+      "id": "n_298",
+      "concept": "inherent restructuring risk at $IQE",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028425020146672018"
+      ]
+    },
+    {
+      "id": "n_299",
+      "concept": "suitability for recommendation to others",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028425020146672018"
+      ]
+    },
+    {
+      "id": "n_300",
+      "concept": "$LITE pricing relative to fundamentals",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028425020146672018"
+      ]
+    },
+    {
+      "id": "n_301",
+      "concept": "upside potential",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028425020146672018"
+      ]
+    },
+    {
+      "id": "n_302",
+      "concept": "$COHR pricing relative to fundamentals",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028425020146672018"
+      ]
+    },
+    {
+      "id": "n_303",
+      "concept": "revenue ramp timing until late 2027",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028417664247578749"
+      ]
+    },
+    {
+      "id": "n_304",
+      "concept": "stock price trajectory becoming vertical",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028417664247578749"
+      ]
+    },
+    {
+      "id": "n_305",
+      "concept": "CPO product release",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028417664247578749"
+      ]
+    },
+    {
+      "id": "n_306",
+      "concept": "end of favorable trading window for $AAOI",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028417664247578749"
+      ]
+    },
+    {
+      "id": "n_307",
+      "concept": "investment thesis for $AAOI",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028417664247578749"
+      ]
+    },
+    {
+      "id": "n_308",
+      "concept": "1-year trading timeframe",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028417664247578749"
+      ]
+    },
+    {
+      "id": "n_309",
+      "concept": "market perception of decisive Israeli victory",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028405556944445919"
+      ]
+    },
+    {
+      "id": "n_310",
+      "concept": "stock market gains (8.85% exchange, 4.23% local index)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028405556944445919"
+      ]
+    },
+    {
+      "id": "n_311",
+      "concept": "market perception of long-term risk reduction from Iran",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028405556944445919"
+      ]
+    },
+    {
+      "id": "n_312",
+      "concept": "Iran hitting UAE/Kuwait infrastructure",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028405114076328344"
+      ]
+    },
+    {
+      "id": "n_313",
+      "concept": "total stock market halt in UAE/Kuwait",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028405114076328344"
+      ]
+    },
+    {
+      "id": "n_314",
+      "concept": "geopolitical/military conflict (Iran strikes)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028405114076328344"
+      ]
+    },
+    {
+      "id": "n_315",
+      "concept": "financial market disruption",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028405114076328344"
+      ]
+    },
+    {
+      "id": "n_316",
+      "concept": "being Israel",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028405114076328344"
+      ]
+    },
+    {
+      "id": "n_317",
+      "concept": "resilience to market halts from regional conflict",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028405114076328344"
+      ]
+    },
+    {
+      "id": "n_318",
+      "concept": "Iran war implications",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028404466937159754"
+      ]
+    },
+    {
+      "id": "n_319",
+      "concept": "Israel's existential discount factor on correlated stocks",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028404466937159754"
+      ]
+    },
+    {
+      "id": "n_320",
+      "concept": "removal of existential discount factor",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028404466937159754"
+      ]
+    },
+    {
+      "id": "n_321",
+      "concept": "stock valuations of $NBIS, $ETOR, $VLN",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028404466937159754"
+      ]
+    },
+    {
+      "id": "n_322",
+      "concept": "defense sector's large weighting in Israel stock exchange",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028404466937159754"
+      ]
+    },
+    {
+      "id": "n_323",
+      "concept": "Israeli stock market response to Iran war",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028404466937159754"
+      ]
+    },
+    {
+      "id": "n_324",
+      "concept": "tracking memory hikes and hyperscaler projections",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "id": "n_325",
+      "concept": "better investment analysis",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "id": "n_326",
+      "concept": "macro factors",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "id": "n_327",
+      "concept": "investment analysis quality",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "id": "n_328",
+      "concept": "hyperscaler memory demand",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "id": "n_329",
+      "concept": "energy costs",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "id": "n_330",
+      "concept": "overnight trading",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "id": "n_331",
+      "concept": "price movements magnitude",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "id": "n_332",
+      "concept": "NAND contract price increases (500% over six months)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028392329460253121"
+      ]
+    },
+    {
+      "id": "n_333",
+      "concept": "SNDK macro performance",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028392329460253121"
+      ]
+    },
+    {
+      "id": "n_334",
+      "concept": "three-year prepayment for SNDK",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028392329460253121"
+      ]
+    },
+    {
+      "id": "n_335",
+      "concept": "$4.53B ARR by mid-2027 at ~40% margins",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028380960954413389"
+      ]
+    },
+    {
+      "id": "n_336",
+      "concept": "photonics stock with ~900% revenue growth blowout",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028380960954413389"
+      ]
+    },
+    {
+      "id": "n_337",
+      "concept": "strong financial projections (~900% growth, $4.53B ARR, 40% margins)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028380960954413389"
+      ]
+    },
+    {
+      "id": "n_338",
+      "concept": "may not need double digit directional SI support",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028380960954413389"
+      ]
+    },
+    {
+      "id": "n_339",
+      "concept": "Samsung Electronics and SK Hynix price increases",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028374385544093829"
+      ]
+    },
+    {
+      "id": "n_340",
+      "concept": "DRAM prices",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028374385544093829"
+      ]
+    },
+    {
+      "id": "n_341",
+      "concept": "current timing for Soitec investment",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028317242770014526"
+      ]
+    },
+    {
+      "id": "n_342",
+      "concept": "investment decision appropriateness",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028317242770014526"
+      ]
+    },
+    {
+      "id": "n_343",
+      "concept": "CPO (共同パッケージ光技術) adoption around 2028",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028317242770014526"
+      ]
+    },
+    {
+      "id": "n_344",
+      "concept": "Soitec becoming a critical bottleneck",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028317242770014526"
+      ]
+    },
+    {
+      "id": "n_345",
+      "concept": "event happening 2 years in the future",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028207954584035601"
+      ]
+    },
+    {
+      "id": "n_346",
+      "concept": "justification for not taking positions now",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028207954584035601"
+      ]
+    },
+    {
+      "id": "n_347",
+      "concept": "timing being too early relative to 2028 Bitcoin halving",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028207954584035601"
+      ]
+    },
+    {
+      "id": "n_348",
+      "concept": "decision against front-running the halving now",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028207954584035601"
+      ]
+    },
+    {
+      "id": "n_349",
+      "concept": "6-8 months advance timing before event",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028207954584035601"
+      ]
+    },
+    {
+      "id": "n_350",
+      "concept": "optimal entry point for positioning",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028207954584035601"
+      ]
+    },
+    {
+      "id": "n_351",
+      "concept": "legacy drag from smartphones and other businesses",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "id": "n_352",
+      "concept": "company valuation/profitability in near term",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "id": "n_353",
+      "concept": "massive capex cycle to prepare for late 2027-2028 ramp",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "id": "n_354",
+      "concept": "near-term financial performance",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "id": "n_355",
+      "concept": "markets frontrunning the late 2027-2028 ramp early",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "id": "n_356",
+      "concept": "timing decision to invest now vs wait until early next year",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "id": "n_357",
+      "concept": "1.4B euro market cap valuation",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "id": "n_358",
+      "concept": "investment opportunity attractiveness",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "id": "n_359",
+      "concept": "Soitec ($SLOIF) value/performance",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028203665430057068"
+      ]
+    },
+    {
+      "id": "n_360",
+      "concept": "CPO (Coherent Pluggable Optics) inflection point late 2027-2028",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028203665430057068"
+      ]
+    },
+    {
+      "id": "n_361",
+      "concept": "800g/1.6T and CPO technology requirements",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028203665430057068"
+      ]
+    },
+    {
+      "id": "n_362",
+      "concept": "necessity of $AXTI and Soitec solutions",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028203665430057068"
+      ]
+    },
+    {
+      "id": "n_363",
+      "concept": "Soitec's monopoly position in silicon photonics mirrors",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028203665430057068"
+      ]
+    },
+    {
+      "id": "n_364",
+      "concept": "Soitec being tethered to CPO growth",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028203665430057068"
+      ]
+    },
+    {
+      "id": "n_365",
+      "concept": "rotation from semi bottlenecks into running bottlenecks",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028193274494955709"
+      ]
+    },
+    {
+      "id": "n_366",
+      "concept": "performance improvement or optimization",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028193274494955709"
+      ]
+    },
+    {
+      "id": "n_367",
+      "concept": "Macronix having 30-35% NOR Flash market share with smaller market cap ($6.7B vs $15B+)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028147215206859218"
+      ]
+    },
+    {
+      "id": "n_368",
+      "concept": "being the most pure play in the sector",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028147215206859218"
+      ]
+    },
+    {
+      "id": "n_369",
+      "concept": "modest price hikes so far",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028147215206859218"
+      ]
+    },
+    {
+      "id": "n_370",
+      "concept": "stock not yet performing like SNDK (implied: needs larger hikes to achieve SNDK-like performance)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028147215206859218"
+      ]
+    },
+    {
+      "id": "n_371",
+      "concept": "being scams",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028144874802020510"
+      ]
+    },
+    {
+      "id": "n_372",
+      "concept": "sites or pages claiming to be associated with Serenity that are external or paid",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028144874802020510"
+      ]
+    },
+    {
+      "id": "n_373",
+      "concept": "having an IBKR account",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028144668178038945"
+      ]
+    },
+    {
+      "id": "n_374",
+      "concept": "access to international markets",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028144668178038945"
+      ]
+    },
+    {
+      "id": "n_375",
+      "concept": "Recent price hikes (10-80%) in MCUs, NOR Flash, KGD package storage, and power devices",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028140055425139186"
+      ]
+    },
+    {
+      "id": "n_376",
+      "concept": "Memory supply squeeze concerns",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028140055425139186"
+      ]
+    },
+    {
+      "id": "n_377",
+      "concept": "IV on a strike being around 14-16%",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028114549417844809"
+      ]
+    },
+    {
+      "id": "n_378",
+      "concept": "good entry point for $XLU position",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028114549417844809"
+      ]
+    },
+    {
+      "id": "n_379",
+      "concept": "$XLU price correction occurring",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028114549417844809"
+      ]
+    },
+    {
+      "id": "n_380",
+      "concept": "$XLU price continuing to go up",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028114549417844809"
+      ]
+    },
+    {
+      "id": "n_381",
+      "concept": "not losing money on the position",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028114549417844809"
+      ]
+    },
+    {
+      "id": "n_382",
+      "concept": "NBIS being composed of 5 different companies each scaling triple digits y/y",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028112194949513586"
+      ]
+    },
+    {
+      "id": "n_383",
+      "concept": "NBIS being nuanced and favorable as a Neocloud investment",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028112194949513586"
+      ]
+    },
+    {
+      "id": "n_384",
+      "concept": "robotaxi division working with Uber",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028112194949513586"
+      ]
+    },
+    {
+      "id": "n_385",
+      "concept": "NBIS being a favorable investment",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028112194949513586"
+      ]
+    },
+    {
+      "id": "n_386",
+      "concept": "Clickhouse's capabilities/status",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028112194949513586"
+      ]
+    },
+    {
+      "id": "n_387",
+      "concept": "higher valuations",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028112194949513586"
+      ]
+    },
+    {
+      "id": "n_388",
+      "concept": "continuing GPU offerings without pivoting to pure colo",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028111150613959097"
+      ]
+    },
+    {
+      "id": "n_389",
+      "concept": "endless dilution for investors",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028111150613959097"
+      ]
+    },
+    {
+      "id": "n_390",
+      "concept": "endless dilution to monetize 3GW capacity",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028111150613959097"
+      ]
+    },
+    {
+      "id": "n_391",
+      "concept": "negative investor returns",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028111150613959097"
+      ]
+    },
+    {
+      "id": "n_392",
+      "concept": "superior management at $NBIS",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028111150613959097"
+      ]
+    },
+    {
+      "id": "n_393",
+      "concept": "personal trust in $NBIS over $IREN",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2028111150613959097"
+      ]
+    },
+    {
+      "id": "n_394",
+      "concept": "red flags in Coreweave or $CRCL at $200",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028109409948508531"
+      ]
+    },
+    {
+      "id": "n_395",
+      "concept": "ability to profit by playing the opposite direction",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028109409948508531"
+      ]
+    },
+    {
+      "id": "n_396",
+      "concept": "being a long investor or swing trader",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028109409948508531"
+      ]
+    },
+    {
+      "id": "n_397",
+      "concept": "ability to be a successful bear (profit from downturns)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028109409948508531"
+      ]
+    },
+    {
+      "id": "n_398",
+      "concept": "$CRWV down ~28% in the past month",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028109409948508531"
+      ]
+    },
+    {
+      "id": "n_399",
+      "concept": "past bullish prediction about $CRWV did not age well",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028109409948508531"
+      ]
+    },
+    {
+      "id": "n_400",
+      "concept": "AI inference usage",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028103810615595491"
+      ]
+    },
+    {
+      "id": "n_401",
+      "concept": "long-term directional upward price movement",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028103810615595491"
+      ]
+    },
+    {
+      "id": "n_402",
+      "concept": "rate cuts",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028103810615595491"
+      ]
+    },
+    {
+      "id": "n_403",
+      "concept": "10.42% 1M return already achieved",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028103810615595491"
+      ]
+    },
+    {
+      "id": "n_404",
+      "concept": "waiting for better entry point is prudent",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028103810615595491"
+      ]
+    },
+    {
+      "id": "n_405",
+      "concept": "wide spreads",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "id": "n_406",
+      "concept": "profitability of initial fill",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "id": "n_407",
+      "concept": "entry point timing (buying at intraday dips)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "id": "n_408",
+      "concept": "trading outcomes",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "id": "n_409",
+      "concept": "IV levels",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "id": "n_410",
+      "concept": "market makers elevating strikes at market open",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "id": "n_411",
+      "concept": "Jan 2028 option chain overpricing relative to Dec 2027",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "id": "n_412",
+      "concept": "value proposition of Jan 2028 options",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "id": "n_413",
+      "concept": "3% movement with slight vega expansion",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028099937947541831"
+      ]
+    },
+    {
+      "id": "n_414",
+      "concept": "potential for double (100% return)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028099937947541831"
+      ]
+    },
+    {
+      "id": "n_415",
+      "concept": "ETF only moved 82% since year 2000",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028099937947541831"
+      ]
+    },
+    {
+      "id": "n_416",
+      "concept": "14% IV for $XLU is relatively high/attractive",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028099937947541831"
+      ]
+    },
+    {
+      "id": "n_417",
+      "concept": "OTM calls position",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028099110310748607"
+      ]
+    },
+    {
+      "id": "n_418",
+      "concept": "portfolio gains of 144%+",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028099110310748607"
+      ]
+    },
+    {
+      "id": "n_419",
+      "concept": "$XLU price movement this week",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028099110310748607"
+      ]
+    },
+    {
+      "id": "n_420",
+      "concept": "3% increase in closer to ITM strike value",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028099110310748607"
+      ]
+    },
+    {
+      "id": "n_421",
+      "concept": "forecast dates only extending to September instead of 2028",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028098602661511548"
+      ]
+    },
+    {
+      "id": "n_422",
+      "concept": "reliability/usefulness of projections",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028098602661511548"
+      ]
+    },
+    {
+      "id": "n_423",
+      "concept": "strong power/grid infrastructure",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028097416273293518"
+      ]
+    },
+    {
+      "id": "n_424",
+      "concept": "US dominance in AI",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028097416273293518"
+      ]
+    },
+    {
+      "id": "n_425",
+      "concept": "increased AI demand",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028097416273293518"
+      ]
+    },
+    {
+      "id": "n_426",
+      "concept": "power/grid utilities sector growth",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028097416273293518"
+      ]
+    },
+    {
+      "id": "n_427",
+      "concept": "investment in grid/power utilities ETF ($XLU)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028097416273293518"
+      ]
+    },
+    {
+      "id": "n_428",
+      "concept": "financial returns (up ~100%+ in one week)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028097416273293518"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_0",
+      "to": "n_1",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2029094535289311261"
+      ]
+    },
+    {
+      "from": "n_2",
+      "to": "n_3",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2029094535289311261"
+      ]
+    },
+    {
+      "from": "n_4",
+      "to": "n_5",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2029094535289311261"
+      ]
+    },
+    {
+      "from": "n_6",
+      "to": "n_7",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2029088341258584454"
+      ]
+    },
+    {
+      "from": "n_8",
+      "to": "n_9",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2029088341258584454"
+      ]
+    },
+    {
+      "from": "n_10",
+      "to": "n_11",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2029088341258584454"
+      ]
+    },
+    {
+      "from": "n_12",
+      "to": "n_13",
+      "polarity": 1,
+      "confidence": 0.88,
+      "sourceChunks": [
+        "tweet-2028935994310050041",
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "from": "n_14",
+      "to": "n_13",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028935994310050041"
+      ]
+    },
+    {
+      "from": "n_15",
+      "to": "n_16",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028916795881800007"
+      ]
+    },
+    {
+      "from": "n_17",
+      "to": "n_18",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028916795881800007"
+      ]
+    },
+    {
+      "from": "n_19",
+      "to": "n_20",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2028914473055232328"
+      ]
+    },
+    {
+      "from": "n_21",
+      "to": "n_13",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "from": "n_22",
+      "to": "n_23",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "from": "n_24",
+      "to": "n_23",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "from": "n_25",
+      "to": "n_13",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028912096713511401"
+      ]
+    },
+    {
+      "from": "n_26",
+      "to": "n_27",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028902147136602124"
+      ]
+    },
+    {
+      "from": "n_28",
+      "to": "n_29",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028902147136602124"
+      ]
+    },
+    {
+      "from": "n_30",
+      "to": "n_31",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028898532657381755"
+      ]
+    },
+    {
+      "from": "n_32",
+      "to": "n_33",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028898532657381755"
+      ]
+    },
+    {
+      "from": "n_34",
+      "to": "n_35",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028893030330318868"
+      ]
+    },
+    {
+      "from": "n_36",
+      "to": "n_37",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028893030330318868"
+      ]
+    },
+    {
+      "from": "n_38",
+      "to": "n_39",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028855576063799611"
+      ]
+    },
+    {
+      "from": "n_40",
+      "to": "n_41",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028855576063799611"
+      ]
+    },
+    {
+      "from": "n_42",
+      "to": "n_43",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "from": "n_44",
+      "to": "n_45",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "from": "n_46",
+      "to": "n_47",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "from": "n_48",
+      "to": "n_47",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "from": "n_49",
+      "to": "n_47",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028813150544699902"
+      ]
+    },
+    {
+      "from": "n_50",
+      "to": "n_51",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028811480439943673"
+      ]
+    },
+    {
+      "from": "n_52",
+      "to": "n_53",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028811480439943673"
+      ]
+    },
+    {
+      "from": "n_54",
+      "to": "n_55",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028811288651162043"
+      ]
+    },
+    {
+      "from": "n_56",
+      "to": "n_57",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2028811288651162043"
+      ]
+    },
+    {
+      "from": "n_58",
+      "to": "n_59",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028810725398053326"
+      ]
+    },
+    {
+      "from": "n_60",
+      "to": "n_61",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028810725398053326"
+      ]
+    },
+    {
+      "from": "n_62",
+      "to": "n_63",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028810725398053326"
+      ]
+    },
+    {
+      "from": "n_64",
+      "to": "n_41",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028798611069583361"
+      ]
+    },
+    {
+      "from": "n_65",
+      "to": "n_66",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028798611069583361"
+      ]
+    },
+    {
+      "from": "n_67",
+      "to": "n_68",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028798611069583361"
+      ]
+    },
+    {
+      "from": "n_69",
+      "to": "n_70",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028790889964011644"
+      ]
+    },
+    {
+      "from": "n_71",
+      "to": "n_70",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028790889964011644"
+      ]
+    },
+    {
+      "from": "n_72",
+      "to": "n_70",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028790889964011644"
+      ]
+    },
+    {
+      "from": "n_73",
+      "to": "n_74",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028790166081671390"
+      ]
+    },
+    {
+      "from": "n_75",
+      "to": "n_76",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028790166081671390"
+      ]
+    },
+    {
+      "from": "n_77",
+      "to": "n_78",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028789983432036438"
+      ]
+    },
+    {
+      "from": "n_79",
+      "to": "n_80",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028789983432036438"
+      ]
+    },
+    {
+      "from": "n_81",
+      "to": "n_82",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028789983432036438"
+      ]
+    },
+    {
+      "from": "n_83",
+      "to": "n_84",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028786845861990895"
+      ]
+    },
+    {
+      "from": "n_85",
+      "to": "n_86",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028786845861990895"
+      ]
+    },
+    {
+      "from": "n_87",
+      "to": "n_88",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028770236762304778"
+      ]
+    },
+    {
+      "from": "n_89",
+      "to": "n_88",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028770236762304778"
+      ]
+    },
+    {
+      "from": "n_90",
+      "to": "n_91",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028770236762304778"
+      ]
+    },
+    {
+      "from": "n_90",
+      "to": "n_88",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028770236762304778"
+      ]
+    },
+    {
+      "from": "n_92",
+      "to": "n_93",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028769319598096432"
+      ]
+    },
+    {
+      "from": "n_94",
+      "to": "n_95",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028769319598096432"
+      ]
+    },
+    {
+      "from": "n_96",
+      "to": "n_95",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028769319598096432"
+      ]
+    },
+    {
+      "from": "n_97",
+      "to": "n_98",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028767576357228608"
+      ]
+    },
+    {
+      "from": "n_99",
+      "to": "n_100",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028767576357228608"
+      ]
+    },
+    {
+      "from": "n_101",
+      "to": "n_102",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028767576357228608"
+      ]
+    },
+    {
+      "from": "n_103",
+      "to": "n_104",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028754498710290457"
+      ]
+    },
+    {
+      "from": "n_105",
+      "to": "n_106",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028754498710290457"
+      ]
+    },
+    {
+      "from": "n_107",
+      "to": "n_108",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "from": "n_109",
+      "to": "n_110",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "from": "n_111",
+      "to": "n_112",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "from": "n_113",
+      "to": "n_114",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028746246706319787"
+      ]
+    },
+    {
+      "from": "n_115",
+      "to": "n_116",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028742780537991631"
+      ]
+    },
+    {
+      "from": "n_117",
+      "to": "n_116",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028742780537991631"
+      ]
+    },
+    {
+      "from": "n_118",
+      "to": "n_119",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028742780537991631"
+      ]
+    },
+    {
+      "from": "n_120",
+      "to": "n_121",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028742780537991631"
+      ]
+    },
+    {
+      "from": "n_122",
+      "to": "n_123",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028737716544802841"
+      ]
+    },
+    {
+      "from": "n_124",
+      "to": "n_125",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028737716544802841"
+      ]
+    },
+    {
+      "from": "n_126",
+      "to": "n_127",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028737716544802841"
+      ]
+    },
+    {
+      "from": "n_128",
+      "to": "n_129",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028589072269422944"
+      ]
+    },
+    {
+      "from": "n_130",
+      "to": "n_131",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028589072269422944"
+      ]
+    },
+    {
+      "from": "n_132",
+      "to": "n_133",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028589072269422944"
+      ]
+    },
+    {
+      "from": "n_134",
+      "to": "n_135",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028581366510870627"
+      ]
+    },
+    {
+      "from": "n_136",
+      "to": "n_137",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2028581366510870627"
+      ]
+    },
+    {
+      "from": "n_138",
+      "to": "n_139",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028575575984742557"
+      ]
+    },
+    {
+      "from": "n_140",
+      "to": "n_141",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028575575984742557"
+      ]
+    },
+    {
+      "from": "n_142",
+      "to": "n_143",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028537514747912643"
+      ]
+    },
+    {
+      "from": "n_144",
+      "to": "n_145",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028537514747912643"
+      ]
+    },
+    {
+      "from": "n_146",
+      "to": "n_147",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028536305030988011"
+      ]
+    },
+    {
+      "from": "n_148",
+      "to": "n_149",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028536305030988011"
+      ]
+    },
+    {
+      "from": "n_150",
+      "to": "n_151",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028536305030988011"
+      ]
+    },
+    {
+      "from": "n_152",
+      "to": "n_153",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "from": "n_154",
+      "to": "n_155",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "from": "n_156",
+      "to": "n_157",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "from": "n_158",
+      "to": "n_159",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028534277865103776"
+      ]
+    },
+    {
+      "from": "n_160",
+      "to": "n_161",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028532170114170991"
+      ]
+    },
+    {
+      "from": "n_162",
+      "to": "n_163",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028532170114170991"
+      ]
+    },
+    {
+      "from": "n_164",
+      "to": "n_165",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028531427202265211"
+      ]
+    },
+    {
+      "from": "n_166",
+      "to": "n_167",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028531427202265211"
+      ]
+    },
+    {
+      "from": "n_168",
+      "to": "n_169",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028530994148766102"
+      ]
+    },
+    {
+      "from": "n_170",
+      "to": "n_171",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028530994148766102"
+      ]
+    },
+    {
+      "from": "n_172",
+      "to": "n_173",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028530994148766102"
+      ]
+    },
+    {
+      "from": "n_174",
+      "to": "n_175",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028529465962414375"
+      ]
+    },
+    {
+      "from": "n_176",
+      "to": "n_177",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028529465962414375"
+      ]
+    },
+    {
+      "from": "n_178",
+      "to": "n_179",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028529465962414375"
+      ]
+    },
+    {
+      "from": "n_180",
+      "to": "n_181",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028524822570102812"
+      ]
+    },
+    {
+      "from": "n_182",
+      "to": "n_183",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028524822570102812"
+      ]
+    },
+    {
+      "from": "n_184",
+      "to": "n_185",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028524172121719168"
+      ]
+    },
+    {
+      "from": "n_186",
+      "to": "n_187",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028524172121719168"
+      ]
+    },
+    {
+      "from": "n_188",
+      "to": "n_189",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028524172121719168"
+      ]
+    },
+    {
+      "from": "n_190",
+      "to": "n_191",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028520248891392461"
+      ]
+    },
+    {
+      "from": "n_192",
+      "to": "n_193",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028520248891392461"
+      ]
+    },
+    {
+      "from": "n_194",
+      "to": "n_195",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028520248891392461"
+      ]
+    },
+    {
+      "from": "n_196",
+      "to": "n_197",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028514640976834995"
+      ]
+    },
+    {
+      "from": "n_198",
+      "to": "n_199",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028514640976834995"
+      ]
+    },
+    {
+      "from": "n_200",
+      "to": "n_201",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028511702288085093"
+      ]
+    },
+    {
+      "from": "n_202",
+      "to": "n_203",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028511702288085093"
+      ]
+    },
+    {
+      "from": "n_204",
+      "to": "n_205",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028511702288085093"
+      ]
+    },
+    {
+      "from": "n_206",
+      "to": "n_207",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028508633294864551"
+      ]
+    },
+    {
+      "from": "n_207",
+      "to": "n_208",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028508633294864551"
+      ]
+    },
+    {
+      "from": "n_209",
+      "to": "n_210",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2028505755918434597"
+      ]
+    },
+    {
+      "from": "n_211",
+      "to": "n_212",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028505755918434597"
+      ]
+    },
+    {
+      "from": "n_213",
+      "to": "n_214",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028505568319791188"
+      ]
+    },
+    {
+      "from": "n_215",
+      "to": "n_216",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028505568319791188"
+      ]
+    },
+    {
+      "from": "n_217",
+      "to": "n_218",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028497913979302109"
+      ]
+    },
+    {
+      "from": "n_219",
+      "to": "n_220",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028497913979302109"
+      ]
+    },
+    {
+      "from": "n_221",
+      "to": "n_222",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028497913979302109"
+      ]
+    },
+    {
+      "from": "n_223",
+      "to": "n_224",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028487006708539512"
+      ]
+    },
+    {
+      "from": "n_225",
+      "to": "n_226",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028479744434651470"
+      ]
+    },
+    {
+      "from": "n_227",
+      "to": "n_228",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028472879319498942"
+      ]
+    },
+    {
+      "from": "n_229",
+      "to": "n_230",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028472234101334515"
+      ]
+    },
+    {
+      "from": "n_231",
+      "to": "n_232",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028472234101334515"
+      ]
+    },
+    {
+      "from": "n_233",
+      "to": "n_234",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028470130628514077"
+      ]
+    },
+    {
+      "from": "n_235",
+      "to": "n_236",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2028467833915711710"
+      ]
+    },
+    {
+      "from": "n_237",
+      "to": "n_238",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028466744642469898"
+      ]
+    },
+    {
+      "from": "n_237",
+      "to": "n_239",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028466744642469898"
+      ]
+    },
+    {
+      "from": "n_240",
+      "to": "n_241",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028466487707754904"
+      ]
+    },
+    {
+      "from": "n_242",
+      "to": "n_243",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028466487707754904"
+      ]
+    },
+    {
+      "from": "n_244",
+      "to": "n_245",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028465538444427584"
+      ]
+    },
+    {
+      "from": "n_244",
+      "to": "n_246",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028465538444427584"
+      ]
+    },
+    {
+      "from": "n_244",
+      "to": "n_247",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028465538444427584"
+      ]
+    },
+    {
+      "from": "n_248",
+      "to": "n_249",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028464631195574674"
+      ]
+    },
+    {
+      "from": "n_250",
+      "to": "n_251",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028464631195574674"
+      ]
+    },
+    {
+      "from": "n_252",
+      "to": "n_253",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028461742783893827"
+      ]
+    },
+    {
+      "from": "n_254",
+      "to": "n_255",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028459615214879032"
+      ]
+    },
+    {
+      "from": "n_256",
+      "to": "n_257",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028459615214879032"
+      ]
+    },
+    {
+      "from": "n_258",
+      "to": "n_259",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028459615214879032"
+      ]
+    },
+    {
+      "from": "n_260",
+      "to": "n_261",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028458236316381685"
+      ]
+    },
+    {
+      "from": "n_262",
+      "to": "n_263",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028458236316381685"
+      ]
+    },
+    {
+      "from": "n_264",
+      "to": "n_265",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028457705095184603"
+      ]
+    },
+    {
+      "from": "n_266",
+      "to": "n_267",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028457705095184603"
+      ]
+    },
+    {
+      "from": "n_268",
+      "to": "n_269",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028457265263710538"
+      ]
+    },
+    {
+      "from": "n_270",
+      "to": "n_271",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028457265263710538"
+      ]
+    },
+    {
+      "from": "n_272",
+      "to": "n_273",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028456926644965419"
+      ]
+    },
+    {
+      "from": "n_274",
+      "to": "n_275",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028456926644965419"
+      ]
+    },
+    {
+      "from": "n_276",
+      "to": "n_277",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028455727996752242"
+      ]
+    },
+    {
+      "from": "n_278",
+      "to": "n_279",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028455727996752242"
+      ]
+    },
+    {
+      "from": "n_280",
+      "to": "n_281",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028455727996752242"
+      ]
+    },
+    {
+      "from": "n_282",
+      "to": "n_283",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028431595779358963"
+      ]
+    },
+    {
+      "from": "n_284",
+      "to": "n_285",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028431595779358963"
+      ]
+    },
+    {
+      "from": "n_286",
+      "to": "n_287",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028429689946357937"
+      ]
+    },
+    {
+      "from": "n_288",
+      "to": "n_289",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028429689946357937"
+      ]
+    },
+    {
+      "from": "n_290",
+      "to": "n_291",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028428302718038200"
+      ]
+    },
+    {
+      "from": "n_292",
+      "to": "n_293",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028428302718038200"
+      ]
+    },
+    {
+      "from": "n_294",
+      "to": "n_295",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028426493819506876"
+      ]
+    },
+    {
+      "from": "n_296",
+      "to": "n_297",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028425020146672018"
+      ]
+    },
+    {
+      "from": "n_298",
+      "to": "n_299",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028425020146672018"
+      ]
+    },
+    {
+      "from": "n_300",
+      "to": "n_301",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028425020146672018"
+      ]
+    },
+    {
+      "from": "n_302",
+      "to": "n_301",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028425020146672018"
+      ]
+    },
+    {
+      "from": "n_303",
+      "to": "n_304",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028417664247578749"
+      ]
+    },
+    {
+      "from": "n_305",
+      "to": "n_306",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028417664247578749"
+      ]
+    },
+    {
+      "from": "n_307",
+      "to": "n_308",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028417664247578749"
+      ]
+    },
+    {
+      "from": "n_309",
+      "to": "n_310",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028405556944445919"
+      ]
+    },
+    {
+      "from": "n_311",
+      "to": "n_310",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028405556944445919"
+      ]
+    },
+    {
+      "from": "n_312",
+      "to": "n_313",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028405114076328344"
+      ]
+    },
+    {
+      "from": "n_314",
+      "to": "n_315",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028405114076328344"
+      ]
+    },
+    {
+      "from": "n_316",
+      "to": "n_317",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2028405114076328344"
+      ]
+    },
+    {
+      "from": "n_318",
+      "to": "n_319",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028404466937159754"
+      ]
+    },
+    {
+      "from": "n_320",
+      "to": "n_321",
+      "polarity": -1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2028404466937159754"
+      ]
+    },
+    {
+      "from": "n_322",
+      "to": "n_323",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028404466937159754"
+      ]
+    },
+    {
+      "from": "n_324",
+      "to": "n_325",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "from": "n_326",
+      "to": "n_327",
+      "polarity": -1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "from": "n_328",
+      "to": "n_329",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "from": "n_330",
+      "to": "n_331",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028393757872447758"
+      ]
+    },
+    {
+      "from": "n_332",
+      "to": "n_333",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028392329460253121"
+      ]
+    },
+    {
+      "from": "n_334",
+      "to": "n_333",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2028392329460253121"
+      ]
+    },
+    {
+      "from": "n_335",
+      "to": "n_336",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028380960954413389"
+      ]
+    },
+    {
+      "from": "n_337",
+      "to": "n_338",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028380960954413389"
+      ]
+    },
+    {
+      "from": "n_339",
+      "to": "n_340",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028374385544093829"
+      ]
+    },
+    {
+      "from": "n_341",
+      "to": "n_342",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028317242770014526"
+      ]
+    },
+    {
+      "from": "n_343",
+      "to": "n_344",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028317242770014526"
+      ]
+    },
+    {
+      "from": "n_345",
+      "to": "n_346",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028207954584035601"
+      ]
+    },
+    {
+      "from": "n_347",
+      "to": "n_348",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028207954584035601"
+      ]
+    },
+    {
+      "from": "n_349",
+      "to": "n_350",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028207954584035601"
+      ]
+    },
+    {
+      "from": "n_351",
+      "to": "n_352",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "from": "n_353",
+      "to": "n_354",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "from": "n_355",
+      "to": "n_356",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "from": "n_357",
+      "to": "n_358",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028205384675250373"
+      ]
+    },
+    {
+      "from": "n_359",
+      "to": "n_360",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028203665430057068"
+      ]
+    },
+    {
+      "from": "n_361",
+      "to": "n_362",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028203665430057068"
+      ]
+    },
+    {
+      "from": "n_363",
+      "to": "n_364",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028203665430057068"
+      ]
+    },
+    {
+      "from": "n_365",
+      "to": "n_366",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028193274494955709"
+      ]
+    },
+    {
+      "from": "n_367",
+      "to": "n_368",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028147215206859218"
+      ]
+    },
+    {
+      "from": "n_369",
+      "to": "n_370",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028147215206859218"
+      ]
+    },
+    {
+      "from": "n_371",
+      "to": "n_372",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028144874802020510"
+      ]
+    },
+    {
+      "from": "n_373",
+      "to": "n_374",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028144668178038945"
+      ]
+    },
+    {
+      "from": "n_375",
+      "to": "n_376",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028140055425139186"
+      ]
+    },
+    {
+      "from": "n_377",
+      "to": "n_378",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028114549417844809"
+      ]
+    },
+    {
+      "from": "n_379",
+      "to": "n_378",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028114549417844809"
+      ]
+    },
+    {
+      "from": "n_380",
+      "to": "n_381",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028114549417844809"
+      ]
+    },
+    {
+      "from": "n_382",
+      "to": "n_383",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028112194949513586"
+      ]
+    },
+    {
+      "from": "n_384",
+      "to": "n_385",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028112194949513586"
+      ]
+    },
+    {
+      "from": "n_386",
+      "to": "n_387",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028112194949513586"
+      ]
+    },
+    {
+      "from": "n_388",
+      "to": "n_389",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028111150613959097"
+      ]
+    },
+    {
+      "from": "n_390",
+      "to": "n_391",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028111150613959097"
+      ]
+    },
+    {
+      "from": "n_392",
+      "to": "n_393",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028111150613959097"
+      ]
+    },
+    {
+      "from": "n_394",
+      "to": "n_395",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028109409948508531"
+      ]
+    },
+    {
+      "from": "n_396",
+      "to": "n_397",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028109409948508531"
+      ]
+    },
+    {
+      "from": "n_398",
+      "to": "n_399",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028109409948508531"
+      ]
+    },
+    {
+      "from": "n_400",
+      "to": "n_401",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028103810615595491"
+      ]
+    },
+    {
+      "from": "n_402",
+      "to": "n_401",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028103810615595491"
+      ]
+    },
+    {
+      "from": "n_403",
+      "to": "n_404",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028103810615595491"
+      ]
+    },
+    {
+      "from": "n_405",
+      "to": "n_406",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "from": "n_407",
+      "to": "n_408",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "from": "n_409",
+      "to": "n_408",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "from": "n_410",
+      "to": "n_409",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "from": "n_411",
+      "to": "n_412",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028103094689800264"
+      ]
+    },
+    {
+      "from": "n_413",
+      "to": "n_414",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028099937947541831"
+      ]
+    },
+    {
+      "from": "n_415",
+      "to": "n_416",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2028099937947541831"
+      ]
+    },
+    {
+      "from": "n_417",
+      "to": "n_418",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028099110310748607"
+      ]
+    },
+    {
+      "from": "n_419",
+      "to": "n_420",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028099110310748607"
+      ]
+    },
+    {
+      "from": "n_421",
+      "to": "n_422",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028098602661511548"
+      ]
+    },
+    {
+      "from": "n_423",
+      "to": "n_424",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028097416273293518"
+      ]
+    },
+    {
+      "from": "n_425",
+      "to": "n_426",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028097416273293518"
+      ]
+    },
+    {
+      "from": "n_427",
+      "to": "n_428",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028097416273293518"
+      ]
+    }
+  ],
+  "extractedAt": "2026-03-04T11:41:05.948Z"
+}

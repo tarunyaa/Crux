@@ -63,7 +63,7 @@ async function main() {
   console.log(`  Comparing ${qbafA.nodes.length} × ${qbafB.nodes.length} = ${qbafA.nodes.length * qbafB.nodes.length} node pairs for semantic similarity...`)
 
   const startTime = Date.now()
-  const communityGraph = await buildCommunityGraph(qbafA, qbafB)
+  const communityGraph = await buildCommunityGraph([qbafA, qbafB])
   const cgElapsed = ((Date.now() - startTime) / 1000).toFixed(1)
   console.log(`  Done in ${cgElapsed}s`)
 
@@ -72,7 +72,7 @@ async function main() {
   // Identify cruxes
   console.log(`\n─── Identifying Cruxes ───`)
   const cruxStart = Date.now()
-  const cruxes = await identifyCruxes(communityGraph, qbafA, qbafB)
+  const cruxes = await identifyCruxes(communityGraph, [qbafA, qbafB])
   const cruxElapsed = ((Date.now() - cruxStart) / 1000).toFixed(1)
   console.log(`  Done in ${cruxElapsed}s`)
 

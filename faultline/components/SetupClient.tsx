@@ -10,6 +10,7 @@ interface PersonaInfo {
   handle: string
   picture: string
   hasContract: boolean
+  hasBeliefGraph: boolean
 }
 
 interface DeckInfo {
@@ -28,6 +29,7 @@ export default function SetupClient({ decks, personas }: SetupClientProps) {
   const [selectedDeckId, setSelectedDeckId] = useState(decks[0]?.id ?? '')
   const [selectedPersonas, setSelectedPersonas] = useState<Set<string>>(new Set())
   const [topic, setTopic] = useState('')
+  const [mode, setMode] = useState<'dialogue' | 'graph'>('dialogue')
 
   const deck = decks.find(d => d.id === selectedDeckId)
   const deckPersonaIds = deck?.personaIds ?? []
@@ -52,7 +54,8 @@ export default function SetupClient({ decks, personas }: SetupClientProps) {
       .map(id => encodeURIComponent(id))
       .join(',')
     const topicParam = encodeURIComponent(topic.trim())
-    router.push(`/dialogue?personas=${personaParam}&topic=${topicParam}`)
+    const modeParam = mode === 'graph' ? '&mode=graph' : ''
+    router.push(`/dialogue?personas=${personaParam}&topic=${topicParam}${modeParam}`)
   }
 
   return (
@@ -111,6 +114,7 @@ export default function SetupClient({ decks, personas }: SetupClientProps) {
               selected={selectedPersonas.has(persona.id)}
               disabled={!persona.hasContract}
               selectable
+              hasBeliefGraph={persona.hasBeliefGraph}
               onToggle={persona.hasContract ? togglePersona : undefined}
             />
           )
@@ -123,6 +127,47 @@ export default function SetupClient({ decks, personas }: SetupClientProps) {
         {' '}persona{selectedPersonas.size !== 1 ? 's' : ''} selected
         {selectedPersonas.size < 2 && ' (need at least 2)'}
       </p>
+
+      {/* Mode selector */}
+      <div className="space-y-2">
+        <label className="text-xs font-semibold uppercase tracking-wider text-muted">Mode</label>
+        <div className="flex gap-3">
+          <button
+            onClick={() => setMode('dialogue')}
+            className={`flex-1 rounded-lg border px-4 py-3 text-left transition-colors ${
+              mode === 'dialogue'
+                ? 'border-accent bg-accent/10'
+                : 'border-card-border bg-card-bg hover:border-muted'
+            }`}
+          >
+            <span className="text-sm font-medium text-foreground">Dialogue</span>
+            <p className="text-[11px] text-muted mt-0.5">
+              Free-flowing debate that spawns focused side rooms when real disagreements surface
+            </p>
+          </button>
+          <button
+            onClick={() => setMode('graph')}
+            className={`flex-1 rounded-lg border px-4 py-3 text-left transition-colors ${
+              mode === 'graph'
+                ? 'border-accent bg-accent/10'
+                : 'border-card-border bg-card-bg hover:border-muted'
+            }`}
+          >
+            <span className="text-sm font-medium text-foreground">Belief Graph</span>
+            <p className="text-[11px] text-muted mt-0.5">
+              Maps each persona's beliefs into a graph, finds contradictions, and revises positions
+            </p>
+          </button>
+          <div
+            className="flex-1 rounded-lg border border-card-border bg-card-bg px-4 py-3 text-left opacity-50 cursor-not-allowed"
+          >
+            <span className="text-sm font-medium text-foreground">Latent</span>
+            <p className="text-[11px] text-muted mt-0.5">
+              Coming soon
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Topic input */}
       <div className="space-y-2">

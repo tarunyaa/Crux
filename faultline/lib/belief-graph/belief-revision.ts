@@ -106,7 +106,7 @@ export function computePriority(
  */
 export async function computeRevisionResistance(
   contract: PersonaContract,
-  newAttacks: string[],
+  discoveredContradictions: string[],
 ): Promise<{ R: number; reasoning: string }> {
   const response = await completeJSON<{
     epistemicOpenness: number  // 0-1: how open to changing mind
@@ -126,8 +126,8 @@ Stakes: ${contract.stakes.slice(0, 800)}
 
 Flip Conditions: ${contract.flipConditions.slice(0, 800)}
 
-ATTACKS RECEIVED:
-${newAttacks.map((a, i) => `${i + 1}. ${a}`).join('\n')}
+OPPOSING CLAIMS DISCOVERED IN OTHER PERSONAS' BELIEF GRAPHS:
+${discoveredContradictions.map((a, i) => `${i + 1}. ${a}`).join('\n')}
 
 Assess this persona's revision resistance:
 
@@ -168,7 +168,7 @@ Output JSON: {"epistemicOpenness": N, "stakesRigidity": N, "flipTriggered": bool
  */
 export async function determineTargetStrength(
   qbaf: PersonaQBAF,
-  newAttacks: string[],
+  discoveredContradictions: string[],
   personaName: string,
   contract?: PersonaContract,
 ): Promise<{ target: number; R: number; rawTarget: number; reasoning: string }> {
@@ -182,8 +182,8 @@ export async function determineTargetStrength(
       content: `${personaName}'s thesis: "${qbaf.nodes.find(n => n.id === qbaf.rootClaim)?.claim}"
 Current strength: ${currentStrength.toFixed(3)}
 
-Counter-arguments received:
-${newAttacks.map((a, i) => `${i + 1}. ${a}`).join('\n')}
+Opposing claims discovered in other personas' belief graphs:
+${discoveredContradictions.map((a, i) => `${i + 1}. ${a}`).join('\n')}
 
 What should the updated confidence be? Most counter-arguments cause small shifts (0.02-0.10). Only devastating arguments cause shifts > 0.15.
 
@@ -198,7 +198,7 @@ Respond ONLY: {"targetStrength": <number between 0 and 1>}`
 
   // Step 2: Apply revision resistance if contract provided
   if (contract) {
-    const { R, reasoning } = await computeRevisionResistance(contract, newAttacks)
+    const { R, reasoning } = await computeRevisionResistance(contract, discoveredContradictions)
 
     // σ_target = σ_current + (1 - R) × (σ_raw - σ_current)
     const modulatedTarget = currentStrength + (1 - R) * (rawTarget - currentStrength)

@@ -1,23 +1,18 @@
 {
   "rootStrengthDelta": {
-    "Citrini": 0.36064903724738717,
-    "Citadel": 0.46538101891181305
+    "Citrini": 0.019034342795097525,
+    "Citadel": 0.04225731842791269
   },
-  "stanceDivergence": 0.05236599083221294,
+  "stanceDivergence": 0.011611487816407584,
   "beliefRevisionCost": {
-    "Citrini": 0.5182666666666669,
-    "Citadel": 0.37786666666666685
+    "Citrini": 0.35958333333333364,
+    "Citadel": 0.03645833333333348
   },
-  "cruxLocalizationRate": 0.38235294117647056,
-  "argumentCoverage": 1.0625,
-  "graphGrowthRate": {
-    "Citrini": 1.5625,
-    "Citadel": 1.5625
-  },
-  "counterfactualSensitivity": 0.38833836348422146,
+  "cruxLocalizationRate": 0.25,
+  "argumentCoverage": 0.375,
+  "counterfactualSensitivity": 0.9809163739667535,
   "decisionFlipScore": {
     "flipped": true,
-    "explanation": "If the assumption is false—meaning elasticity of substitution is actually above 1.0 and productivity gains contract rather than expand employment—then Citadel's core mechanism for job creation breaks down, and Citrini's prediction of net job losses becomes substantially more plausible. The GitHub Copilot data would no longer serve as proof that productivity expands employment, removing Citadel's primary empirical counterargument."
-  },
-  "convergenceRound": null
+    "explanation": "If historical technological revolutions do NOT follow patterns of job creation and productivity gains, then Citadel's entire argument collapses, and Citrini's prediction of net job losses becomes the coherent conclusion. Conversely, if the assumption holds true, it directly supports Citadel's position that new industries and labor demand will emerge despite displacement."
+  }
 }

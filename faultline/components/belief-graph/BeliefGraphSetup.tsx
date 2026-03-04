@@ -25,13 +25,13 @@ export function BeliefGraphSetup({ personas }: BeliefGraphSetupProps) {
   function handlePersonaClick(id: string) {
     setSelected(prev => {
       if (prev.includes(id)) return prev.filter(p => p !== id)
-      if (prev.length >= 2) return [prev[1], id]
+      if (prev.length >= 6) return [...prev.slice(1), id]
       return [...prev, id]
     })
   }
 
   function handleRun() {
-    if (selected.length !== 2 || !topic.trim()) return
+    if (selected.length < 2 || !topic.trim()) return
     const params = new URLSearchParams({
       personas: selected.join(','),
       topic,
@@ -52,7 +52,7 @@ export function BeliefGraphSetup({ personas }: BeliefGraphSetupProps) {
           </span>
           <h1 className="text-lg text-foreground font-medium mt-1">Setup</h1>
           <p className="text-xs text-muted mt-1">
-            Select 2 personas and a topic to run a belief graph experiment.
+            Select 2-6 personas and a topic to run a belief graph experiment.
           </p>
         </div>
       </header>
@@ -61,9 +61,9 @@ export function BeliefGraphSetup({ personas }: BeliefGraphSetupProps) {
         {/* Persona grid */}
         <div>
           <h2 className="text-xs font-mono text-muted uppercase tracking-wider mb-3">
-            Select 2 Personas
+            Select 2-6 Personas
             {selected.length > 0 && (
-              <span className="text-accent ml-2">{selected.length}/2</span>
+              <span className="text-accent ml-2">{selected.length}/6</span>
             )}
           </h2>
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
@@ -145,7 +145,7 @@ export function BeliefGraphSetup({ personas }: BeliefGraphSetupProps) {
         {/* Run button */}
         <button
           onClick={handleRun}
-          disabled={selected.length !== 2 || !topic.trim()}
+          disabled={selected.length < 2 || !topic.trim()}
           className="w-full py-3 rounded-lg font-mono text-sm transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-accent text-white hover:bg-accent/90"
         >
           Run Experiment

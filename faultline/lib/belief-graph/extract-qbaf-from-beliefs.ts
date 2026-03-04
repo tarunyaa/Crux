@@ -11,6 +11,7 @@
 
 import type { PersonaQBAF, QBAFNode, QBAFEdge } from './types'
 import type { BeliefGraph, BeliefNode, BeliefEdge } from '@/lib/types'
+import type { PersonaWorldview, WorldviewPosition } from './worldview-types'
 import { completeJSON } from '@/lib/llm/client'
 import { computeStrengths } from './df-quad'
 
@@ -73,15 +74,24 @@ function computeBaseScore(
 }
 
 /**
- * Format a belief edge as a readable claim for the LLM.
+ * Format a belief edge as a standalone claim.
+ * Uses the target concept as the primary assertion — the "to" node
+ * is what's being claimed, and the "from" node provides context.
+ * Avoids relationship verbs like "causes/supports" or "undermines/reduces"
+ * which make claims read as edge descriptions rather than assertions.
  */
 function edgeToClaim(
   edge: BeliefEdge,
   fromNode: BeliefNode,
   toNode: BeliefNode,
 ): string {
-  const verb = edge.polarity === 1 ? 'causes/supports' : 'undermines/reduces'
-  return `${fromNode.concept} ${verb} ${toNode.concept}`
+  // If concepts are short enough, combine them into a standalone assertion.
+  // The polarity determines the framing.
+  if (edge.polarity === 1) {
+    return `${toNode.concept}, driven by ${fromNode.concept}`
+  } else {
+    return `${toNode.concept} is limited despite ${fromNode.concept}`
+  }
 }
 
 /**
@@ -293,14 +303,60 @@ Respond in JSON:
 }
 
 /**
+ * Match a classified edge to the closest WorldviewPosition.
+ * Uses simple word overlap between the edge concepts and the position claim.
+ */
+function matchEdgeToPosition(
+  fromNode: BeliefNode,
+  toNode: BeliefNode,
+  positions: WorldviewPosition[],
+): WorldviewPosition | null {
+  if (positions.length === 0) return null
+
+  const edgeWords = new Set(
+    `${fromNode.concept} ${toNode.concept}`.toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter(w => w.length > 3)
+  )
+
+  let bestPos: WorldviewPosition | null = null
+  let bestOverlap = 0
+
+  for (const pos of positions) {
+    const posWords = pos.claim.toLowerCase()
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter(w => w.length > 3)
+
+    let overlap = 0
+    for (const word of posWords) {
+      if (edgeWords.has(word)) overlap++
+    }
+    // Normalize by position word count to avoid bias toward longer claims
+    const score = posWords.length > 0 ? overlap / posWords.length : 0
+    if (score > bestOverlap) {
+      bestOverlap = score
+      bestPos = pos
+    }
+  }
+
+  // Require at least 20% word overlap
+  return bestOverlap >= 0.2 ? bestPos : null
+}
+
+/**
  * Build a QBAF tree from classified belief edges.
  *
  * Structure:
  * - Root: synthesized stance on the topic
  * - Depth-1: top 3-5 most relevant belief edges, as direct arguments
  * - Depth-2: remaining belief edges grouped under the depth-1 node they best relate to
+ *            + implicit assumptions from worldview positions (when available)
  *
  * Every node traces back to a real belief edge extracted from the persona's corpus.
+ * When a worldview is available, depth-1 claims use synthesized position text
+ * instead of raw edge concatenation.
  */
 function buildQBAFTree(
   personaId: string,
@@ -314,6 +370,7 @@ function buildQBAFTree(
     strength: number
     aspect: string
   }>,
+  worldview?: PersonaWorldview | null,
 ): PersonaQBAF {
   if (classified.length === 0) {
     // Degenerate case: no relevant edges found
@@ -332,7 +389,6 @@ function buildQBAFTree(
         depth: 0,
       }],
       edges: [],
-      round: 0,
     }
   }
 
@@ -369,12 +425,31 @@ function buildQBAFTree(
   const depth2Items = classified.slice(depth1Count)
 
   // Depth-1 nodes
+  // Track which worldview positions have been used (avoid duplicates)
+  const usedPositionIds = new Set<string>()
+
   for (let i = 0; i < depth1Items.length; i++) {
     const item = depth1Items[i]
     const nodeId = `${personaId}-d1-${i}`
-    const claim = edgeToClaim(item.edge, item.fromNode, item.toNode)
-    const baseScore = computeBaseScore(item.edge, item.fromNode, item.toNode)
     const edgeType: 'attack' | 'support' = item.relation === 'undermines' ? 'attack' : 'support'
+
+    // Try to match this edge to a worldview position for a better claim
+    let claim: string
+    let matchedPosition: WorldviewPosition | null = null
+    if (worldview) {
+      const match = matchEdgeToPosition(item.fromNode, item.toNode, worldview.positions)
+      if (match && !usedPositionIds.has(match.id)) {
+        claim = match.claim
+        matchedPosition = match
+        usedPositionIds.add(match.id)
+      } else {
+        claim = edgeToClaim(item.edge, item.fromNode, item.toNode)
+      }
+    } else {
+      claim = edgeToClaim(item.edge, item.fromNode, item.toNode)
+    }
+
+    const baseScore = computeBaseScore(item.edge, item.fromNode, item.toNode)
 
     const grounding = [
       ...item.fromNode.grounding,
@@ -400,6 +475,30 @@ function buildQBAFTree(
       type: edgeType,
       weight: item.strength,
     })
+
+    // Add implicit assumptions as depth-2 evidence nodes
+    if (matchedPosition && matchedPosition.implicitAssumptions.length > 0) {
+      for (let k = 0; k < matchedPosition.implicitAssumptions.length; k++) {
+        const assumptionId = `${personaId}-assumption-${i}-${k}`
+        qbafNodes.push({
+          id: assumptionId,
+          claim: matchedPosition.implicitAssumptions[k],
+          type: 'pro', // assumptions support the parent position
+          baseScore: matchedPosition.confidence * 0.8, // slightly lower than parent
+          dialecticalStrength: 0,
+          grounding: grounding.slice(0, 3), // share parent's grounding
+          personaId,
+          depth: 2,
+        })
+        qbafEdges.push({
+          id: `${assumptionId}->${nodeId}`,
+          from: assumptionId,
+          to: nodeId,
+          type: 'support',
+          weight: 0.7,
+        })
+      }
+    }
   }
 
   // Depth-2: assign remaining edges to the depth-1 node they're most semantically related to
@@ -475,7 +574,6 @@ function buildQBAFTree(
     rootClaim: rootId,
     nodes: qbafNodes,
     edges: qbafEdges,
-    round: 0,
   }
 }
 
@@ -499,6 +597,7 @@ export async function extractQBAFFromBeliefGraph(
   personaId: string,
   beliefGraph: BeliefGraph,
   topic: string,
+  worldview?: PersonaWorldview | null,
 ): Promise<PersonaQBAF> {
   // Step 1: Aspect-based filtering + classification
   const { rootClaim, aspects, classified } = await filterAndClassifyEdges(beliefGraph, topic)
@@ -509,7 +608,14 @@ export async function extractQBAFFromBeliefGraph(
   console.log(`  [${personaId}] ${classified.length} edges selected (${supports} support, ${undermines} undermine) across ${aspectsCovered}/${aspects.length} aspects`)
 
   // Step 2: Build QBAF tree with evidence-density base scores
-  const rawQbaf = buildQBAFTree(personaId, topic, rootClaim, classified)
+  // When worldview is available, depth-1 claims use synthesized positions
+  // and implicit assumptions are added as depth-2 evidence nodes
+  const rawQbaf = buildQBAFTree(personaId, topic, rootClaim, classified, worldview)
+
+  if (worldview) {
+    const assumptionCount = rawQbaf.nodes.filter(n => n.id.includes('-assumption-')).length
+    console.log(`  [${personaId}] Worldview-enhanced: ${assumptionCount} assumption nodes added`)
+  }
 
   // Step 3: Compute dialectical strengths via DF-QuAD
   return computeStrengths(rawQbaf)

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getDecks, getPersonas, loadContract } from "@/lib/personas/loader";
+import { getDecks, getPersonas, loadContract, hasBeliefGraph } from "@/lib/personas/loader";
 import SetupClient from "@/components/SetupClient";
 import SuitIcon from "@/components/SuitIcon";
 
@@ -15,12 +15,14 @@ export default async function SetupPage() {
       } catch {
         // no contract
       }
+      const hasBG = await hasBeliefGraph(p.id);
       return {
         id: p.id,
         name: p.name,
         handle: p.twitterHandle,
         picture: p.twitterPicture,
         hasContract,
+        hasBeliefGraph: hasBG,
       };
     })
   );

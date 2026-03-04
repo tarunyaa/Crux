@@ -296,7 +296,6 @@ Respond in JSON:
     rootClaim: rootId,
     nodes: allNodes,
     edges: [...depthOneEdges, ...depthTwoEdges],
-    round: 0,
   }
 
   return computeStrengths(rawQbaf)

@@ -15,6 +15,7 @@ interface PersonaCardProps {
   disabled?: boolean
   selectable?: boolean
   compact?: boolean
+  hasBeliefGraph?: boolean
   onToggle?: (id: string) => void
 }
 
@@ -33,6 +34,7 @@ export default function PersonaCard({
   disabled,
   selectable,
   compact,
+  hasBeliefGraph,
   onToggle,
 }: PersonaCardProps) {
   const suit = getSuit(name)
@@ -77,6 +79,9 @@ export default function PersonaCard({
             </p>
             {handle && !locked && (
               <p className="text-muted text-[10px] truncate">{handle}</p>
+            )}
+            {hasBeliefGraph && !locked && (
+              <p className="text-accent text-[9px] font-mono">graph ready</p>
             )}
           </div>
           {selectable && !locked && (
@@ -163,6 +168,9 @@ export default function PersonaCard({
               )}
               {locked && (
                 <p className="text-muted text-[10px] mt-0.5">Unavailable</p>
+              )}
+              {hasBeliefGraph && !locked && (
+                <p className="text-accent text-[9px] font-mono mt-0.5">graph ready</p>
               )}
             </div>
           </div>

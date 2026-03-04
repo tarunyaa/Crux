@@ -2,8 +2,7 @@
 
 import { NextRequest } from 'next/server'
 import { runDialogue } from '@/lib/dialogue/orchestrator'
-import { saveDebate } from '@/lib/db/debates'
-import type { DialogueConfig, DialogueEvent } from '@/lib/dialogue/types'
+import type { DialogueConfig } from '@/lib/dialogue/types'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -22,9 +21,6 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const debateId = `dialogue-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
-    const collectedEvents: DialogueEvent[] = []
-
     // Create SSE stream
     const stream = new ReadableStream({
       async start(controller) {
@@ -39,38 +35,18 @@ export async function POST(req: NextRequest) {
           closed = true
         }
 
-        let status: 'completed' | 'error' = 'completed'
-
         try {
           for await (const event of runDialogue(body)) {
-            collectedEvents.push(event)
             const data = `data: ${JSON.stringify(event)}\n\n`
             safeEnqueue(encoder.encode(data))
           }
         } catch (error) {
           console.error('Dialogue error:', error)
-          status = 'error'
           const errorEvent = {
             type: 'error' as const,
             error: error instanceof Error ? error.message : 'Unknown error',
           }
-          collectedEvents.push(errorEvent)
           safeEnqueue(encoder.encode(`data: ${JSON.stringify(errorEvent)}\n\n`))
-        }
-
-        // Save to DB after stream completes
-        try {
-          await saveDebate({
-            id: debateId,
-            topic: body.topic,
-            mode: 'dialogue',
-            personaIds: body.personaIds,
-            events: collectedEvents as unknown[],
-            output: null,
-            status,
-          })
-        } catch (err) {
-          console.error('Failed to save debate:', err)
         }
 
         safeClose()

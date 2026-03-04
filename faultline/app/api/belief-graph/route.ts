@@ -14,9 +14,9 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json() as ExperimentConfig
 
-    if (!body.topic || !body.personaIds || body.personaIds.length !== 2) {
+    if (!body.topic || !body.personaIds || body.personaIds.length < 2) {
       return new Response(
-        JSON.stringify({ error: 'Invalid request. Need topic and exactly 2 personaIds' }),
+        JSON.stringify({ error: 'Invalid request. Need topic and at least 2 personaIds' }),
         { status: 400 }
       )
     }
@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     const config: ExperimentConfig = {
       topic: body.topic,
       personaIds: body.personaIds,
-      maxRounds: body.maxRounds ?? 5,
+      revisionEnabled: body.revisionEnabled ?? true,
       convergenceThreshold: body.convergenceThreshold ?? 0.02,
       cruxVarianceThreshold: body.cruxVarianceThreshold ?? 0.3,
       consensusVarianceThreshold: body.consensusVarianceThreshold ?? 0.1,

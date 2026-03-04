@@ -1,0 +1,1929 @@
+{
+  "personaId": "Jukan",
+  "personaName": "Jukan",
+  "nodes": [
+    {
+      "id": "n_0",
+      "concept": "foreign investors locking in profits",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029037422248702244"
+      ]
+    },
+    {
+      "id": "n_1",
+      "concept": "aggressive selling of domestic equities",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029037422248702244"
+      ]
+    },
+    {
+      "id": "n_2",
+      "concept": "reduced market participation by foreign investors",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029037422248702244"
+      ]
+    },
+    {
+      "id": "n_3",
+      "concept": "staying on the sidelines",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029037422248702244"
+      ]
+    },
+    {
+      "id": "n_4",
+      "concept": "Nikkei index decline",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029034821499191446"
+      ]
+    },
+    {
+      "id": "n_5",
+      "concept": "unrealized gains disappearance",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029034821499191446"
+      ]
+    },
+    {
+      "id": "n_6",
+      "concept": "applying array of new technologies (Stand It Vertical, Stack and Bond)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029013728654704938"
+      ]
+    },
+    {
+      "id": "n_7",
+      "concept": "next-generation DRAM development",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2029013728654704938"
+      ]
+    },
+    {
+      "id": "n_8",
+      "concept": "Samsung unveiling next-generation DRAM at ISSCC conference",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029013728654704938"
+      ]
+    },
+    {
+      "id": "n_9",
+      "concept": "public awareness of Samsung's DRAM advancement",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029013728654704938"
+      ]
+    },
+    {
+      "id": "n_10",
+      "concept": "acceleration of FO-PLP business",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029012893560390061"
+      ]
+    },
+    {
+      "id": "n_11",
+      "concept": "shift to 415×510mm form factor",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029012893560390061"
+      ]
+    },
+    {
+      "id": "n_12",
+      "concept": "Samsung bolstering back-end packaging capabilities",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029012893560390061"
+      ]
+    },
+    {
+      "id": "n_13",
+      "concept": "ability to shift to new FO-PLP form factor",
+      "type": "inference",
+      "grounding": [
+        "tweet-2029012893560390061"
+      ]
+    },
+    {
+      "id": "n_14",
+      "concept": "hyperscalers complaining about being out of money",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028803497630835049"
+      ]
+    },
+    {
+      "id": "n_15",
+      "concept": "memory pricing cooling off",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028803497630835049"
+      ]
+    },
+    {
+      "id": "n_16",
+      "concept": "Samsung Foundry achieving over $1.3 billion operating profit target",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028731098755146036"
+      ]
+    },
+    {
+      "id": "n_17",
+      "concept": "return to profitability after 5 years",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028731098755146036"
+      ]
+    },
+    {
+      "id": "n_18",
+      "concept": "excessive leverage buildup and high margin balances",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028729123607375960"
+      ]
+    },
+    {
+      "id": "n_19",
+      "concept": "market fragility",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028729123607375960"
+      ]
+    },
+    {
+      "id": "n_20",
+      "concept": "hard market swings on macro headlines",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028729123607375960"
+      ]
+    },
+    {
+      "id": "n_21",
+      "concept": "macro headlines",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028729123607375960"
+      ]
+    },
+    {
+      "id": "n_22",
+      "concept": "hard market swings",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028729123607375960"
+      ]
+    },
+    {
+      "id": "n_23",
+      "concept": "HBM4 supply issues",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028728438333616521"
+      ]
+    },
+    {
+      "id": "n_24",
+      "concept": "Nvidia lowering HBM4 required specs",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028728438333616521"
+      ]
+    },
+    {
+      "id": "n_25",
+      "concept": "new packaging technology for HBM",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028728179616292874"
+      ]
+    },
+    {
+      "id": "n_26",
+      "concept": "HBM stability and performance",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028728179616292874"
+      ]
+    },
+    {
+      "id": "n_27",
+      "concept": "transformation in packaging technology",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028728179616292874"
+      ]
+    },
+    {
+      "id": "n_28",
+      "concept": "performance jump in HBM4",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028728179616292874"
+      ]
+    },
+    {
+      "id": "n_29",
+      "concept": "buying too small a position on the dip",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028633912998863309"
+      ]
+    },
+    {
+      "id": "n_30",
+      "concept": "high average cost basis",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028633912998863309"
+      ]
+    },
+    {
+      "id": "n_31",
+      "concept": "price going up after initial purchase",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028633912998863309"
+      ]
+    },
+    {
+      "id": "n_32",
+      "concept": "continued adding to position",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028633912998863309"
+      ]
+    },
+    {
+      "id": "n_33",
+      "concept": "repeatedly adding to position at higher prices",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028633912998863309"
+      ]
+    },
+    {
+      "id": "n_34",
+      "concept": "unspecified delays or challenges at Samsung Taylor plant",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028604501490589791"
+      ]
+    },
+    {
+      "id": "n_35",
+      "concept": "mass production timeline pushed to early next year",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028604501490589791"
+      ]
+    },
+    {
+      "id": "n_36",
+      "concept": "Apple securing all needed memory for the year",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028603504517136589"
+      ]
+    },
+    {
+      "id": "n_37",
+      "concept": "Apple's operational readiness",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028603504517136589"
+      ]
+    },
+    {
+      "id": "n_38",
+      "concept": "absolute shipment volume has decreased",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028602167561748756"
+      ]
+    },
+    {
+      "id": "n_39",
+      "concept": "revenue will decline",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028602167561748756"
+      ]
+    },
+    {
+      "id": "n_40",
+      "concept": "sale of Kioxia investment",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028601973583511736"
+      ]
+    },
+    {
+      "id": "n_41",
+      "concept": "SK Hynix long-term investment asset disposals surge to KRW 951 billion",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028601973583511736"
+      ]
+    },
+    {
+      "id": "n_42",
+      "concept": "SK Hynix investment in Kioxia Holdings in 2019",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028601973583511736"
+      ]
+    },
+    {
+      "id": "n_43",
+      "concept": "recovery of KRW 950 billion in funds",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028601973583511736"
+      ]
+    },
+    {
+      "id": "n_44",
+      "concept": "memory chip and component costs surge",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028601205946306707"
+      ]
+    },
+    {
+      "id": "n_45",
+      "concept": "price hikes across China's smartphone industry",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028601205946306707"
+      ]
+    },
+    {
+      "id": "n_46",
+      "concept": "new smartphone models priced 15%-25% higher than comparable models from last year",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028601205946306707"
+      ]
+    },
+    {
+      "id": "n_47",
+      "concept": "Nvidia H200 sales to China",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028600072859201854"
+      ]
+    },
+    {
+      "id": "n_48",
+      "concept": "US chip sales cap at 75k per Chinese buyer",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028600072859201854"
+      ]
+    },
+    {
+      "id": "n_49",
+      "concept": "US limit being less than half of what Chinese clients sought",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028600072859201854"
+      ]
+    },
+    {
+      "id": "n_50",
+      "concept": "gap between US policy and market demand from China",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028600072859201854"
+      ]
+    },
+    {
+      "id": "n_51",
+      "concept": "investor sentiment regarding NVIDIA vs Micron",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028446029671235665"
+      ]
+    },
+    {
+      "id": "n_52",
+      "concept": "Morgan Stanley's top pick selection (NVIDIA over Micron)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028446029671235665"
+      ]
+    },
+    {
+      "id": "n_53",
+      "concept": "Samsung Foundry normalization",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028400638686838927"
+      ]
+    },
+    {
+      "id": "n_54",
+      "concept": "Samsung stock price",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028400638686838927"
+      ]
+    },
+    {
+      "id": "n_55",
+      "concept": "market not pricing in Samsung Foundry normalization",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028400638686838927"
+      ]
+    },
+    {
+      "id": "n_56",
+      "concept": "Samsung stock undervaluation",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028400638686838927"
+      ]
+    },
+    {
+      "id": "n_57",
+      "concept": "Samsung Foundry achieving profitability this year",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028400248805318924"
+      ]
+    },
+    {
+      "id": "n_58",
+      "concept": "moving up profitability timeline",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028400248805318924"
+      ]
+    },
+    {
+      "id": "n_59",
+      "concept": "NAND prices hiking 500%",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028370707735032214"
+      ]
+    },
+    {
+      "id": "n_60",
+      "concept": "Phison revising payment terms to prepayments",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028370707735032214"
+      ]
+    },
+    {
+      "id": "n_61",
+      "concept": "tight supply conditions",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028370707735032214"
+      ]
+    },
+    {
+      "id": "n_62",
+      "concept": "rising NAND prices",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028370707735032214"
+      ]
+    },
+    {
+      "id": "n_63",
+      "concept": "AI-driven memory demand surge",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028364899274084389"
+      ]
+    },
+    {
+      "id": "n_64",
+      "concept": "Samsung Electronics and SK Hynix NAND operating profit margins",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028364899274084389"
+      ]
+    },
+    {
+      "id": "n_65",
+      "concept": "AI-driven memory demand",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028364899274084389"
+      ]
+    },
+    {
+      "id": "n_66",
+      "concept": "memory demand extension beyond HBM across the board",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028364899274084389"
+      ]
+    },
+    {
+      "id": "n_67",
+      "concept": "rising demand for AI servers",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028363932755452153"
+      ]
+    },
+    {
+      "id": "n_68",
+      "concept": "bottlenecks in PCB materials",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028363932755452153"
+      ]
+    },
+    {
+      "id": "n_69",
+      "concept": "PCB demand surge",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028363932755452153"
+      ]
+    },
+    {
+      "id": "n_70",
+      "concept": "drill bit shortage",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028363932755452153"
+      ]
+    },
+    {
+      "id": "n_71",
+      "concept": "increased PCB demand",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028363932755452153"
+      ]
+    },
+    {
+      "id": "n_72",
+      "concept": "capacity expansion by Topoint & Keyware",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028363932755452153"
+      ]
+    },
+    {
+      "id": "n_73",
+      "concept": "memory price increases over 11 consecutive months",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028332370999558595"
+      ]
+    },
+    {
+      "id": "n_74",
+      "concept": "DIY PC enthusiast dissatisfaction",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028332370999558595"
+      ]
+    },
+    {
+      "id": "n_75",
+      "concept": "relentless price hikes in memory/SSDs",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028332370999558595"
+      ]
+    },
+    {
+      "id": "n_76",
+      "concept": "PC build costs",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028332370999558595"
+      ]
+    },
+    {
+      "id": "n_77",
+      "concept": "high PC build costs",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028332370999558595"
+      ]
+    },
+    {
+      "id": "n_78",
+      "concept": "build affordability/feasibility",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028332370999558595"
+      ]
+    },
+    {
+      "id": "n_79",
+      "concept": "Nikkei's strength",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028272769046327362"
+      ]
+    },
+    {
+      "id": "n_80",
+      "concept": "impressiveness/noteworthiness",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028272769046327362"
+      ]
+    },
+    {
+      "id": "n_81",
+      "concept": "low-cost MacBook release",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028099235309400452"
+      ]
+    },
+    {
+      "id": "n_82",
+      "concept": "massive attention",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2028099235309400452"
+      ]
+    },
+    {
+      "id": "n_83",
+      "concept": "X feeds being flooded with posts",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028099235309400452"
+      ]
+    },
+    {
+      "id": "n_84",
+      "concept": "certainty about a future event not happening",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028065324202115233"
+      ]
+    },
+    {
+      "id": "n_85",
+      "concept": "validity of prediction",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2028065324202115233"
+      ]
+    },
+    {
+      "id": "n_86",
+      "concept": "Samsung aiming to use Exynos chips across entire Galaxy lineup",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028063358583537740"
+      ]
+    },
+    {
+      "id": "n_87",
+      "concept": "Snapdragon being phased out",
+      "type": "inference",
+      "grounding": [
+        "tweet-2028063358583537740"
+      ]
+    },
+    {
+      "id": "n_88",
+      "concept": "customer base growth",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027652635873198297"
+      ]
+    },
+    {
+      "id": "n_89",
+      "concept": "IP development costs distribution",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027652635873198297"
+      ]
+    },
+    {
+      "id": "n_90",
+      "concept": "Broadcom's margins",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027652635873198297"
+      ]
+    },
+    {
+      "id": "n_91",
+      "concept": "scalable structure",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027652635873198297"
+      ]
+    },
+    {
+      "id": "n_92",
+      "concept": "margin improvement with customer growth",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027652635873198297"
+      ]
+    },
+    {
+      "id": "n_93",
+      "concept": "Broadcom's completion of SiP technology development with hybrid bonding",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027652218602524906"
+      ]
+    },
+    {
+      "id": "n_94",
+      "concept": "Broadcom becoming a next big HBM customer",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027652218602524906"
+      ]
+    },
+    {
+      "id": "n_95",
+      "concept": "Broadcom's SiP technology for AI data centers",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027652218602524906"
+      ]
+    },
+    {
+      "id": "n_96",
+      "concept": "industry advancement (first of its kind)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027652218602524906"
+      ]
+    },
+    {
+      "id": "n_97",
+      "concept": "lack of 신의 눈 (divine/god's eye)",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027605719735013756"
+      ]
+    },
+    {
+      "id": "n_98",
+      "concept": "becoming NPC (non-player character)",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027605719735013756"
+      ]
+    },
+    {
+      "id": "n_99",
+      "concept": "introduction of Applied Materials' Kinex Bonding System",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027604221944860698"
+      ]
+    },
+    {
+      "id": "n_100",
+      "concept": "SK Hynix's hybrid bonding pilot line capability",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027604221944860698"
+      ]
+    },
+    {
+      "id": "n_101",
+      "concept": "certain agentic AI workloads running efficiently on CPUs alone",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027598835795833323"
+      ]
+    },
+    {
+      "id": "n_102",
+      "concept": "bullishness on CPUs",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027598835795833323"
+      ]
+    },
+    {
+      "id": "n_103",
+      "concept": "collaboration with Huawei and Cambricon chipmakers",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027595037534777665"
+      ]
+    },
+    {
+      "id": "n_104",
+      "concept": "V4 optimization for latest product",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027595037534777665"
+      ]
+    },
+    {
+      "id": "n_105",
+      "concept": "publishing technical note alongside V4",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027595037534777665"
+      ]
+    },
+    {
+      "id": "n_106",
+      "concept": "documentation of V4 capabilities",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027595037534777665"
+      ]
+    },
+    {
+      "id": "n_107",
+      "concept": "Nvidia unveiling new inference chip leveraging Groq's technology",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027585554762928350"
+      ]
+    },
+    {
+      "id": "n_108",
+      "concept": "Nvidia's market position/product portfolio",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027585554762928350"
+      ]
+    },
+    {
+      "id": "n_109",
+      "concept": "surging AI computing demand",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027551076694818857"
+      ]
+    },
+    {
+      "id": "n_110",
+      "concept": "China's optical fiber industry entering upcycle",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027551076694818857"
+      ]
+    },
+    {
+      "id": "n_111",
+      "concept": "fiber prices rising",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027551076694818857"
+      ]
+    },
+    {
+      "id": "n_112",
+      "concept": "component accounting for only ~1% of final product cost",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027331556516495561"
+      ]
+    },
+    {
+      "id": "n_113",
+      "concept": "customer acceptance of price increase from $1 to $3",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027331556516495561"
+      ]
+    },
+    {
+      "id": "n_114",
+      "concept": "Q2 contract renewals",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027315694078210525"
+      ]
+    },
+    {
+      "id": "n_115",
+      "concept": "Samsung and SK hynix proposing 2x price increases",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027315694078210525"
+      ]
+    },
+    {
+      "id": "n_116",
+      "concept": "Samsung and SK Hynix raising DRAM prices in Q2",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027314509740970335"
+      ]
+    },
+    {
+      "id": "n_117",
+      "concept": "DRAM price surge",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027314509740970335"
+      ]
+    },
+    {
+      "id": "n_118",
+      "concept": "1c DRAM technology",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027273995322831085"
+      ]
+    },
+    {
+      "id": "n_119",
+      "concept": "Samsung's confidence in HBM4 competition",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027273995322831085"
+      ]
+    },
+    {
+      "id": "n_120",
+      "concept": "yield improvement",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027273995322831085"
+      ]
+    },
+    {
+      "id": "n_121",
+      "concept": "Samsung's HBM4 market competitiveness",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027273995322831085"
+      ]
+    },
+    {
+      "id": "n_122",
+      "concept": "semiconductor supercycle expectations",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027195656604094953"
+      ]
+    },
+    {
+      "id": "n_123",
+      "concept": "Samsung Electronics acceleration",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027195656604094953"
+      ]
+    },
+    {
+      "id": "n_124",
+      "concept": "target price upgrades",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027195656604094953"
+      ]
+    },
+    {
+      "id": "n_125",
+      "concept": "National Growth Fund support",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027195656604094953"
+      ]
+    },
+    {
+      "id": "n_126",
+      "concept": "Meta adopting TPUs at multi-billion-dollar scale",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027164733326123391"
+      ]
+    },
+    {
+      "id": "n_127",
+      "concept": "viability/future of MTIA",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027164733326123391"
+      ]
+    },
+    {
+      "id": "n_128",
+      "concept": "industry research showing opposite of executive claims",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027163847556317385"
+      ]
+    },
+    {
+      "id": "n_129",
+      "concept": "difficulty/problem in handling the situation",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027163847556317385"
+      ]
+    },
+    {
+      "id": "n_130",
+      "concept": "leadership repeatedly emphasizing MTIA is doing fine",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027163847556317385"
+      ]
+    },
+    {
+      "id": "n_131",
+      "concept": "credibility gap with emerging negative stories",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027163847556317385"
+      ]
+    },
+    {
+      "id": "n_132",
+      "concept": "being at a high skill/rating level",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027039442457051268"
+      ]
+    },
+    {
+      "id": "n_133",
+      "concept": "feeling good",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027039442457051268"
+      ]
+    },
+    {
+      "id": "n_134",
+      "concept": "ignoring certain people/comments",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027038629689000197"
+      ]
+    },
+    {
+      "id": "n_135",
+      "concept": "avoiding negative impact or disturbance",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027038629689000197"
+      ]
+    },
+    {
+      "id": "n_136",
+      "concept": "existence of certain types of people",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027038629689000197"
+      ]
+    },
+    {
+      "id": "n_137",
+      "concept": "need to ignore them",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027038629689000197"
+      ]
+    },
+    {
+      "id": "n_138",
+      "concept": "reluctance to sell",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027032711018455192"
+      ]
+    },
+    {
+      "id": "n_139",
+      "concept": "long holding period",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027032711018455192"
+      ]
+    },
+    {
+      "id": "n_140",
+      "concept": "cheap price",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027032711018455192"
+      ]
+    },
+    {
+      "id": "n_141",
+      "concept": "decision to hold",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027032711018455192"
+      ]
+    },
+    {
+      "id": "n_142",
+      "concept": "strong competitive edge",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027032711018455192"
+      ]
+    },
+    {
+      "id": "n_143",
+      "concept": "holding Nvidia stock",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027032116614287439"
+      ]
+    },
+    {
+      "id": "n_144",
+      "concept": "financial returns/portfolio performance",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027032116614287439"
+      ]
+    },
+    {
+      "id": "n_145",
+      "concept": "buying Korean stocks instead",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027032116614287439"
+      ]
+    },
+    {
+      "id": "n_146",
+      "concept": "not holding Nvidia and buying Korean stocks",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027032116614287439"
+      ]
+    },
+    {
+      "id": "n_147",
+      "concept": "avoiding a mistake",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027032116614287439"
+      ]
+    },
+    {
+      "id": "n_148",
+      "concept": "being a scam company",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026998357273796711"
+      ]
+    },
+    {
+      "id": "n_149",
+      "concept": "negative reputation/untrustworthiness",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026998357273796711"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_0",
+      "to": "n_1",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2029037422248702244"
+      ]
+    },
+    {
+      "from": "n_2",
+      "to": "n_3",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2029037422248702244"
+      ]
+    },
+    {
+      "from": "n_4",
+      "to": "n_5",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2029034821499191446"
+      ]
+    },
+    {
+      "from": "n_6",
+      "to": "n_7",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2029013728654704938"
+      ]
+    },
+    {
+      "from": "n_8",
+      "to": "n_9",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2029013728654704938"
+      ]
+    },
+    {
+      "from": "n_10",
+      "to": "n_11",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2029012893560390061"
+      ]
+    },
+    {
+      "from": "n_12",
+      "to": "n_13",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2029012893560390061"
+      ]
+    },
+    {
+      "from": "n_14",
+      "to": "n_15",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028803497630835049"
+      ]
+    },
+    {
+      "from": "n_16",
+      "to": "n_17",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028731098755146036"
+      ]
+    },
+    {
+      "from": "n_18",
+      "to": "n_19",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028729123607375960"
+      ]
+    },
+    {
+      "from": "n_19",
+      "to": "n_20",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028729123607375960"
+      ]
+    },
+    {
+      "from": "n_21",
+      "to": "n_22",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028729123607375960"
+      ]
+    },
+    {
+      "from": "n_23",
+      "to": "n_24",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028728438333616521"
+      ]
+    },
+    {
+      "from": "n_25",
+      "to": "n_26",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028728179616292874"
+      ]
+    },
+    {
+      "from": "n_27",
+      "to": "n_28",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028728179616292874"
+      ]
+    },
+    {
+      "from": "n_29",
+      "to": "n_30",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028633912998863309"
+      ]
+    },
+    {
+      "from": "n_31",
+      "to": "n_32",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028633912998863309"
+      ]
+    },
+    {
+      "from": "n_33",
+      "to": "n_30",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028633912998863309"
+      ]
+    },
+    {
+      "from": "n_34",
+      "to": "n_35",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028604501490589791"
+      ]
+    },
+    {
+      "from": "n_36",
+      "to": "n_37",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2028603504517136589"
+      ]
+    },
+    {
+      "from": "n_38",
+      "to": "n_39",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028602167561748756"
+      ]
+    },
+    {
+      "from": "n_40",
+      "to": "n_41",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028601973583511736"
+      ]
+    },
+    {
+      "from": "n_42",
+      "to": "n_43",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028601973583511736"
+      ]
+    },
+    {
+      "from": "n_44",
+      "to": "n_45",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028601205946306707"
+      ]
+    },
+    {
+      "from": "n_46",
+      "to": "n_45",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028601205946306707"
+      ]
+    },
+    {
+      "from": "n_47",
+      "to": "n_48",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028600072859201854"
+      ]
+    },
+    {
+      "from": "n_49",
+      "to": "n_50",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028600072859201854"
+      ]
+    },
+    {
+      "from": "n_51",
+      "to": "n_52",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028446029671235665"
+      ]
+    },
+    {
+      "from": "n_53",
+      "to": "n_54",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028400638686838927"
+      ]
+    },
+    {
+      "from": "n_55",
+      "to": "n_56",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2028400638686838927"
+      ]
+    },
+    {
+      "from": "n_57",
+      "to": "n_58",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028400248805318924"
+      ]
+    },
+    {
+      "from": "n_59",
+      "to": "n_60",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028370707735032214"
+      ]
+    },
+    {
+      "from": "n_61",
+      "to": "n_62",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2028370707735032214"
+      ]
+    },
+    {
+      "from": "n_63",
+      "to": "n_64",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028364899274084389"
+      ]
+    },
+    {
+      "from": "n_65",
+      "to": "n_66",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028364899274084389"
+      ]
+    },
+    {
+      "from": "n_67",
+      "to": "n_68",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028363932755452153"
+      ]
+    },
+    {
+      "from": "n_69",
+      "to": "n_70",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028363932755452153"
+      ]
+    },
+    {
+      "from": "n_71",
+      "to": "n_72",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028363932755452153"
+      ]
+    },
+    {
+      "from": "n_73",
+      "to": "n_74",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2028332370999558595"
+      ]
+    },
+    {
+      "from": "n_75",
+      "to": "n_76",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028332370999558595"
+      ]
+    },
+    {
+      "from": "n_77",
+      "to": "n_78",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028332370999558595"
+      ]
+    },
+    {
+      "from": "n_79",
+      "to": "n_80",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028272769046327362"
+      ]
+    },
+    {
+      "from": "n_81",
+      "to": "n_82",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2028099235309400452"
+      ]
+    },
+    {
+      "from": "n_81",
+      "to": "n_83",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2028099235309400452"
+      ]
+    },
+    {
+      "from": "n_84",
+      "to": "n_85",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2028065324202115233"
+      ]
+    },
+    {
+      "from": "n_86",
+      "to": "n_87",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2028063358583537740"
+      ]
+    },
+    {
+      "from": "n_88",
+      "to": "n_89",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027652635873198297"
+      ]
+    },
+    {
+      "from": "n_89",
+      "to": "n_90",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2027652635873198297"
+      ]
+    },
+    {
+      "from": "n_91",
+      "to": "n_92",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027652635873198297"
+      ]
+    },
+    {
+      "from": "n_93",
+      "to": "n_94",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027652218602524906"
+      ]
+    },
+    {
+      "from": "n_95",
+      "to": "n_96",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027652218602524906"
+      ]
+    },
+    {
+      "from": "n_97",
+      "to": "n_98",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027605719735013756"
+      ]
+    },
+    {
+      "from": "n_99",
+      "to": "n_100",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027604221944860698"
+      ]
+    },
+    {
+      "from": "n_101",
+      "to": "n_102",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027598835795833323"
+      ]
+    },
+    {
+      "from": "n_103",
+      "to": "n_104",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027595037534777665"
+      ]
+    },
+    {
+      "from": "n_105",
+      "to": "n_106",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027595037534777665"
+      ]
+    },
+    {
+      "from": "n_107",
+      "to": "n_108",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2027585554762928350"
+      ]
+    },
+    {
+      "from": "n_109",
+      "to": "n_110",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027551076694818857"
+      ]
+    },
+    {
+      "from": "n_109",
+      "to": "n_111",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2027551076694818857"
+      ]
+    },
+    {
+      "from": "n_112",
+      "to": "n_113",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027331556516495561"
+      ]
+    },
+    {
+      "from": "n_114",
+      "to": "n_115",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027315694078210525"
+      ]
+    },
+    {
+      "from": "n_116",
+      "to": "n_117",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2027314509740970335"
+      ]
+    },
+    {
+      "from": "n_118",
+      "to": "n_119",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027273995322831085"
+      ]
+    },
+    {
+      "from": "n_120",
+      "to": "n_121",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027273995322831085"
+      ]
+    },
+    {
+      "from": "n_122",
+      "to": "n_123",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027195656604094953"
+      ]
+    },
+    {
+      "from": "n_124",
+      "to": "n_123",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027195656604094953"
+      ]
+    },
+    {
+      "from": "n_125",
+      "to": "n_123",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027195656604094953"
+      ]
+    },
+    {
+      "from": "n_126",
+      "to": "n_127",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027164733326123391"
+      ]
+    },
+    {
+      "from": "n_128",
+      "to": "n_129",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027163847556317385"
+      ]
+    },
+    {
+      "from": "n_130",
+      "to": "n_131",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2027163847556317385"
+      ]
+    },
+    {
+      "from": "n_132",
+      "to": "n_133",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027039442457051268"
+      ]
+    },
+    {
+      "from": "n_134",
+      "to": "n_135",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027038629689000197"
+      ]
+    },
+    {
+      "from": "n_136",
+      "to": "n_137",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027038629689000197"
+      ]
+    },
+    {
+      "from": "n_138",
+      "to": "n_139",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027032711018455192"
+      ]
+    },
+    {
+      "from": "n_140",
+      "to": "n_141",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027032711018455192"
+      ]
+    },
+    {
+      "from": "n_142",
+      "to": "n_141",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027032711018455192"
+      ]
+    },
+    {
+      "from": "n_143",
+      "to": "n_144",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027032116614287439"
+      ]
+    },
+    {
+      "from": "n_145",
+      "to": "n_144",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027032116614287439"
+      ]
+    },
+    {
+      "from": "n_146",
+      "to": "n_147",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027032116614287439"
+      ]
+    },
+    {
+      "from": "n_148",
+      "to": "n_149",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026998357273796711"
+      ]
+    }
+  ],
+  "extractedAt": "2026-03-04T11:28:51.952Z"
+}

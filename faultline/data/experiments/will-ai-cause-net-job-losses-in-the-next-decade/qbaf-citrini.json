@@ -5,27 +5,39 @@
   "nodes": [
     {
       "id": "Citrini-root",
-      "claim": "AI will cause significant net job losses in the next decade, particularly in white-collar work, triggering a self-reinforcing cycle of displacement, wage compression, reduced consumer spending, and systemic economic instability.",
+      "claim": "AI will cause net job losses in the next decade, particularly in white-collar work, with displaced workers unable to transition to new roles and experiencing wage decline.",
       "type": "root",
-      "baseScore": 0.6393333333333333,
-      "dialecticalStrength": 0.9999823705807205,
+      "baseScore": 0.5980000000000001,
+      "dialecticalStrength": 0.999950716761851,
       "grounding": [
+        "article-citrini-2028gic-intro",
         "article-citrini-2028gic-feedback-loop",
         "article-citrini-2028gic-reflexivity",
         "article-citrini-2028gic-no-natural-brake",
         "article-citrini-2028gic-systemic-risk",
-        "article-citrini-2028gic-displacement-spiral",
-        "article-citrini-2028gic-mortgage-crisis"
+        "article-citrini-2028gic-displacement-spiral"
       ],
       "personaId": "Citrini",
       "depth": 0
     },
     {
       "id": "Citrini-d1-0",
+      "claim": "AI advancement/proliferation causes/supports unemployment rate increase",
+      "type": "pro",
+      "baseScore": 0.42000000000000004,
+      "dialecticalStrength": 0.8782089900000001,
+      "grounding": [
+        "article-citrini-2028gic-intro"
+      ],
+      "personaId": "Citrini",
+      "depth": 1
+    },
+    {
+      "id": "Citrini-d1-1",
       "claim": "single GPU cluster replacing 10,000 white-collar workers causes/supports economic disruption",
       "type": "pro",
       "baseScore": 0.63,
-      "dialecticalStrength": 0.9903851188001269,
+      "dialecticalStrength": 0.9823284588493162,
       "grounding": [
         "article-citrini-2028gic-feedback-loop"
       ],
@@ -33,7 +45,7 @@
       "depth": 1
     },
     {
-      "id": "Citrini-d1-1",
+      "id": "Citrini-d1-2",
       "claim": "AI capabilities improvement undermines/reduces company demand for workers",
       "type": "pro",
       "baseScore": 0.63,
@@ -45,7 +57,7 @@
       "depth": 1
     },
     {
-      "id": "Citrini-d1-2",
+      "id": "Citrini-d1-3",
       "claim": "AI-driven displacement spiral causes/supports structural impairment of white-collar earnings power",
       "type": "pro",
       "baseScore": 0.63,
@@ -57,23 +69,11 @@
       "depth": 1
     },
     {
-      "id": "Citrini-d1-3",
-      "claim": "AI threatens company market position causes/supports aggressive AI adoption by incumbents",
-      "type": "pro",
-      "baseScore": 0.63,
-      "dialecticalStrength": 0.63,
-      "grounding": [
-        "article-citrini-2028gic-reflexivity"
-      ],
-      "personaId": "Citrini",
-      "depth": 1
-    },
-    {
       "id": "Citrini-d1-4",
-      "claim": "dollars saved from headcount cuts causes/supports increased AI capability development",
+      "claim": "headcount cuts and AI tool investment causes/supports maintaining output with lower costs",
       "type": "pro",
-      "baseScore": 0.63,
-      "dialecticalStrength": 0.9933063586726876,
+      "baseScore": 0.61,
+      "dialecticalStrength": 0.947544025,
       "grounding": [
         "article-citrini-2028gic-reflexivity"
       ],
@@ -82,6 +82,18 @@
     },
     {
       "id": "Citrini-d2-0",
+      "claim": "dollars saved from headcount cuts causes/supports increased AI capability development",
+      "type": "pro",
+      "baseScore": 0.63,
+      "dialecticalStrength": 0.63,
+      "grounding": [
+        "article-citrini-2028gic-reflexivity"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-1",
       "claim": "increased AI capability causes/supports enabling next round of job cuts",
       "type": "pro",
       "baseScore": 0.7,
@@ -94,7 +106,7 @@
       "depth": 2
     },
     {
-      "id": "Citrini-d2-1",
+      "id": "Citrini-d2-2",
       "claim": "AI capabilities in white-collar work causes/supports job displacement in US economy",
       "type": "pro",
       "baseScore": 0.63,
@@ -106,7 +118,43 @@
       "depth": 2
     },
     {
-      "id": "Citrini-d2-2",
+      "id": "Citrini-d2-3",
+      "claim": "AI being general intelligence improving at human tasks causes/supports traditional job redeployment strategy failing",
+      "type": "pro",
+      "baseScore": 0.53,
+      "dialecticalStrength": 0.53,
+      "grounding": [
+        "article-citrini-2028gic-systemic-risk"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-4",
+      "claim": "AI capability in management and oversight tasks causes/supports displaced workers unable to move to AI management roles",
+      "type": "pro",
+      "baseScore": 0.53,
+      "dialecticalStrength": 0.53,
+      "grounding": [
+        "article-citrini-2028gic-systemic-risk"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-5",
+      "claim": "AI creating new roles while rendering dozens obsolete causes/supports net negative economic outcome for workers",
+      "type": "pro",
+      "baseScore": 0.51,
+      "dialecticalStrength": 0.51,
+      "grounding": [
+        "article-citrini-2028gic-systemic-risk"
+      ],
+      "personaId": "Citrini",
+      "depth": 2
+    },
+    {
+      "id": "Citrini-d2-6",
       "claim": "new AI-created roles paying fraction of old job wages causes/supports worker economic welfare decline",
       "type": "pro",
       "baseScore": 0.63,
@@ -118,7 +166,7 @@
       "depth": 2
     },
     {
-      "id": "Citrini-d2-3",
+      "id": "Citrini-d2-7",
       "claim": "displaced white-collar workers taking lower-paying service/gig jobs causes/supports increased labor supply in service and gig sectors",
       "type": "pro",
       "baseScore": 0.63,
@@ -130,7 +178,7 @@
       "depth": 2
     },
     {
-      "id": "Citrini-d2-4",
+      "id": "Citrini-d2-8",
       "claim": "increased labor supply in service and gig sectors causes/supports wage compression in those sectors",
       "type": "pro",
       "baseScore": 0.63,
@@ -142,62 +190,13 @@
       "depth": 2
     },
     {
-      "id": "Citrini-d2-5",
-      "claim": "white-collar job losses and pay cuts among top 10% earners undermines/reduces discretionary consumer spending",
-      "type": "pro",
-      "baseScore": 0.63,
-      "dialecticalStrength": 0.63,
-      "grounding": [
-        "article-citrini-2028gic-displacement-spiral"
-      ],
-      "personaId": "Citrini",
-      "depth": 2
-    },
-    {
-      "id": "Citrini-d2-6",
+      "id": "Citrini-d2-9",
       "claim": "AI improvement and cost reduction causes/supports company worker layoffs",
       "type": "pro",
       "baseScore": 0.63,
       "dialecticalStrength": 0.63,
       "grounding": [
         "article-citrini-2028gic-no-natural-brake"
-      ],
-      "personaId": "Citrini",
-      "depth": 2
-    },
-    {
-      "id": "Citrini-d2-7",
-      "claim": "cost savings from layoffs causes/supports increased AI capability purchases",
-      "type": "pro",
-      "baseScore": 0.63,
-      "dialecticalStrength": 0.63,
-      "grounding": [
-        "article-citrini-2028gic-no-natural-brake"
-      ],
-      "personaId": "Citrini",
-      "depth": 2
-    },
-    {
-      "id": "Citrini-d2-8",
-      "claim": "increased AI capability causes/supports further worker layoffs",
-      "type": "pro",
-      "baseScore": 0.7,
-      "dialecticalStrength": 0.7,
-      "grounding": [
-        "article-citrini-2028gic-reflexivity",
-        "article-citrini-2028gic-no-natural-brake"
-      ],
-      "personaId": "Citrini",
-      "depth": 2
-    },
-    {
-      "id": "Citrini-d2-9",
-      "claim": "white-collar employment crisis causes/supports sustained shift in income expectations",
-      "type": "pro",
-      "baseScore": 0.63,
-      "dialecticalStrength": 0.63,
-      "grounding": [
-        "article-citrini-2028gic-mortgage-crisis"
       ],
       "personaId": "Citrini",
       "depth": 2
@@ -209,7 +208,7 @@
       "from": "Citrini-d1-0",
       "to": "Citrini-root",
       "type": "support",
-      "weight": 0.95
+      "weight": 0.75
     },
     {
       "id": "Citrini-d1-1->Citrini-root",
@@ -237,7 +236,7 @@
       "from": "Citrini-d1-4",
       "to": "Citrini-root",
       "type": "support",
-      "weight": 0.95
+      "weight": 0.9
     },
     {
       "id": "Citrini-d2-0->Citrini-d1-4",
@@ -247,16 +246,16 @@
       "weight": 0.95
     },
     {
-      "id": "Citrini-d2-1->Citrini-d1-2",
+      "id": "Citrini-d2-1->Citrini-d1-4",
       "from": "Citrini-d2-1",
-      "to": "Citrini-d1-2",
+      "to": "Citrini-d1-4",
       "type": "support",
       "weight": 0.95
     },
     {
-      "id": "Citrini-d2-2->Citrini-d1-0",
+      "id": "Citrini-d2-2->Citrini-d1-3",
       "from": "Citrini-d2-2",
-      "to": "Citrini-d1-0",
+      "to": "Citrini-d1-3",
       "type": "support",
       "weight": 0.95
     },
@@ -265,21 +264,21 @@
       "from": "Citrini-d2-3",
       "to": "Citrini-d1-0",
       "type": "support",
-      "weight": 0.95
+      "weight": 0.9
     },
     {
-      "id": "Citrini-d2-4->Citrini-d1-4",
+      "id": "Citrini-d2-4->Citrini-d1-1",
       "from": "Citrini-d2-4",
-      "to": "Citrini-d1-4",
+      "to": "Citrini-d1-1",
       "type": "support",
-      "weight": 0.95
+      "weight": 0.9
     },
     {
-      "id": "Citrini-d2-5->Citrini-d1-0",
+      "id": "Citrini-d2-5->Citrini-d1-1",
       "from": "Citrini-d2-5",
-      "to": "Citrini-d1-0",
+      "to": "Citrini-d1-1",
       "type": "support",
-      "weight": 0.95
+      "weight": 0.85
     },
     {
       "id": "Citrini-d2-6->Citrini-d1-1",
@@ -289,26 +288,25 @@
       "weight": 0.95
     },
     {
-      "id": "Citrini-d2-7->Citrini-d1-4",
+      "id": "Citrini-d2-7->Citrini-d1-1",
       "from": "Citrini-d2-7",
-      "to": "Citrini-d1-4",
+      "to": "Citrini-d1-1",
       "type": "support",
       "weight": 0.95
     },
     {
-      "id": "Citrini-d2-8->Citrini-d1-4",
+      "id": "Citrini-d2-8->Citrini-d1-0",
       "from": "Citrini-d2-8",
-      "to": "Citrini-d1-4",
-      "type": "support",
-      "weight": 0.95
-    },
-    {
-      "id": "Citrini-d2-9->Citrini-d1-0",
-      "from": "Citrini-d2-9",
       "to": "Citrini-d1-0",
       "type": "support",
       "weight": 0.95
+    },
+    {
+      "id": "Citrini-d2-9->Citrini-d1-2",
+      "from": "Citrini-d2-9",
+      "to": "Citrini-d1-2",
+      "type": "support",
+      "weight": 0.95
     }
-  ],
-  "round": 0
+  ]
 }

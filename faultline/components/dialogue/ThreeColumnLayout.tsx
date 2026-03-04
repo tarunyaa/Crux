@@ -258,6 +258,8 @@ interface DialogueLayoutProps {
   currentPhase?: 'opening' | 'take' | 'clash' | 'closing' | null
   shifts?: PositionShift[]
   summary?: DebateSummary | null
+  onSave?: () => Promise<void>
+  isSaved?: boolean
 }
 
 export function ThreeColumnLayout({
@@ -277,6 +279,8 @@ export function ThreeColumnLayout({
   currentPhase,
   shifts = [],
   summary,
+  onSave,
+  isSaved = false,
 }: DialogueLayoutProps) {
   // Track which crux room cards are expanded
   const [expandedRooms, setExpandedRooms] = useState<Set<string>>(new Set())
@@ -344,6 +348,13 @@ export function ThreeColumnLayout({
       setExporting(false)
     }
   }, [topic, personaIds, messages, personaNames, personaAvatars, aspects, cruxCards, completedRooms, shifts, summary])
+
+  const [saving, setSaving] = useState(false)
+  const handleSave = useCallback(async () => {
+    if (!onSave) return
+    setSaving(true)
+    try { await onSave() } finally { setSaving(false) }
+  }, [onSave])
 
   const allRooms = new Map([...completedRooms, ...activeCruxRooms])
   const personaNamesList = Array.from(personaNames.values())
@@ -469,10 +480,22 @@ export function ThreeColumnLayout({
               <button
                 onClick={handleExport}
                 disabled={exporting}
-                className="text-xs border border-card-border text-muted hover:text-foreground hover:border-foreground/30 px-2.5 py-1 rounded transition-colors disabled:opacity-50"
+                className="text-xs border border-accent/60 text-accent hover:bg-accent hover:text-white px-2.5 py-1 rounded transition-colors disabled:opacity-50"
               >
                 {exporting ? 'Exporting...' : 'Export PDF'}
               </button>
+              {onSave && !isSaved && (
+                <button
+                  onClick={handleSave}
+                  disabled={saving}
+                  className="text-xs border border-card-border text-muted hover:text-foreground hover:border-foreground/30 px-2.5 py-1 rounded transition-colors disabled:opacity-50"
+                >
+                  {saving ? 'Saving...' : 'Save to Archive'}
+                </button>
+              )}
+              {isSaved && (
+                <span className="text-xs text-muted">Saved</span>
+              )}
             </>
           )}
           {/* Persona name chips */}
@@ -702,37 +725,9 @@ export function ThreeColumnLayout({
               </div>
             </div>
 
-            {/* ── Claims Under Debate ── */}
-            {summary?.claims && summary.claims.length > 0 && (
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2 flex items-center gap-1.5">
-                  <span className="text-foreground/30 text-[9px]">♣</span>
-                  Claims Under Debate
-                </p>
-                <div className="space-y-3">
-                  {summary.claims.map((claim, ci) => (
-                    <div key={ci} className="rounded-lg border border-card-border bg-card-bg p-3">
-                      <p className="text-xs font-semibold text-foreground mb-2">{claim.claim}</p>
-                      <div className="space-y-1.5">
-                        {claim.stances.map((stance, si) => {
-                          const name = (personaNames.get(stance.personaId) ?? stance.personaId).split(' ')[0]
-                          const posColor =
-                            stance.position === 'for' ? 'text-foreground' :
-                            stance.position === 'against' ? 'text-accent' :
-                            'text-muted'
-                          return (
-                            <div key={si} className="flex items-start gap-2">
-                              <span className={`text-[11px] font-semibold flex-shrink-0 w-16 ${posColor}`}>{name}</span>
-                              <span className={`text-[10px] font-bold flex-shrink-0 w-12 uppercase ${posColor}`}>{stance.position}</span>
-                              <span className="text-[11px] text-muted">{stance.reasoning}</span>
-                            </div>
-                          )
-                        })}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            {/* ── Summary unavailable fallback ── */}
+            {!summary && shifts.length === 0 && completedRooms.size === 0 && (
+              <p className="text-xs text-muted italic">Summary generation failed or is still loading. Check server logs for details.</p>
             )}
 
             {/* ── Agreements ── */}

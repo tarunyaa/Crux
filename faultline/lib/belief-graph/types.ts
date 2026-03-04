@@ -27,7 +27,24 @@ export interface PersonaQBAF {
   rootClaim: string           // root node ID
   nodes: QBAFNode[]
   edges: QBAFEdge[]
-  round: number               // which debate round this represents
+}
+
+// ─── Pairwise Structural Diff ───────────────────────────────
+
+export interface ClaimMapping {
+  nodeIdA: string
+  nodeIdB: string
+  relationship: 'agreement' | 'opposition' | 'related'
+  confidence: number
+  sharedTopic: string
+}
+
+export interface PairwiseDiff {
+  personaA: string
+  personaB: string
+  contradictions: ClaimMapping[]
+  agreements: ClaimMapping[]
+  gaps: string[]              // node IDs present in one QBAF but unmatched in the other
 }
 
 // ─── Community Graph ─────────────────────────────────────────
@@ -74,18 +91,20 @@ export interface StructuralCrux {
 
 export interface ExperimentConfig {
   topic: string
-  personaIds: [string, string]           // exactly 2 personas
-  maxRounds: number                      // default 5
+  personaIds: string[]                   // N personas (min 2)
+  revisionEnabled?: boolean              // default true
   convergenceThreshold: number           // default 0.02
   cruxVarianceThreshold: number          // default 0.3
   consensusVarianceThreshold: number     // default 0.1
 }
 
-export interface RoundSnapshot {
-  round: number
-  qbafs: Record<string, PersonaQBAF>    // personaId → QBAF at this round
-  rootStrengths: Record<string, number>  // personaId → σ(root)
-  revisionCosts: Record<string, number>  // personaId → Σ|Δτ| this round
+export interface RevisionSnapshot {
+  personaId: string
+  preRootStrength: number
+  postRootStrength: number
+  cost: number                           // Σ|Δτ|
+  R: number                              // revision resistance
+  reasoning: string
 }
 
 export interface BenchmarkMetrics {
@@ -93,21 +112,18 @@ export interface BenchmarkMetrics {
   stanceDivergence: number                   // ΔSD
   beliefRevisionCost: Record<string, number> // personaId → total Σ|Δτ| / |nodes|
   cruxLocalizationRate: number               // % nodes with crux_score > 0.3
-  argumentCoverage: number                   // |community_nodes| / (2 × |initial_nodes|)
-  graphGrowthRate: Record<string, number>    // personaId → |final_nodes| / |initial_nodes|
+  argumentCoverage: number                   // |community_nodes| / (N × |initial_nodes|)
   counterfactualSensitivity: number          // top crux: |Δσ(root)| when removed
-  decisionFlipScore: { flipped: boolean; explanation: string } | null  // CIG: does top crux flip conclusion?
-  convergenceRound: number | null            // round where Δσ < threshold, or null
+  decisionFlipScore: { flipped: boolean; explanation: string } | null
 }
 
 export interface ExperimentResult {
   config: ExperimentConfig
-  rounds: RoundSnapshot[]
+  diffs: PairwiseDiff[]
+  revisions: RevisionSnapshot[]
   communityGraph: CommunityGraph
   cruxes: StructuralCrux[]
   benchmarks: BenchmarkMetrics
-  totalRounds: number
-  converged: boolean
   timestamp: string
 }
 
@@ -125,11 +141,9 @@ export type BeliefGraphEvent =
   | { type: 'experiment_start'; topic: string; personas: string[] }
   | { type: 'extraction_start'; personaId: string }
   | { type: 'extraction_complete'; personaId: string; qbaf: PersonaQBAF }
-  | { type: 'round_start'; round: number }
-  | { type: 'debate_moves'; round: number; personaId: string; newNodes: number; newEdges: number }
-  | { type: 'revision_complete'; round: number; personaId: string; rootStrength: number; revisionCost: number; R: number; reasoning: string }
-  | { type: 'round_complete'; round: number; snapshot: RoundSnapshot }
-  | { type: 'convergence_check'; round: number; converged: boolean; deltas: Record<string, number> }
+  | { type: 'diff_start'; personaA: string; personaB: string }
+  | { type: 'diff_complete'; diff: PairwiseDiff }
+  | { type: 'revision_complete'; personaId: string; rootStrength: number; revisionCost: number; R: number; reasoning: string; adjustedScores?: Record<string, number> }
   | { type: 'community_graph_built'; graph: CommunityGraph }
   | { type: 'cruxes_identified'; cruxes: StructuralCrux[] }
   | { type: 'benchmarks_computed'; benchmarks: BenchmarkMetrics }

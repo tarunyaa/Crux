@@ -1,0 +1,6327 @@
+{
+  "personaId": "Noah Smith",
+  "personaName": "Noah Smith",
+  "nodes": [
+    {
+      "id": "n_0",
+      "concept": "being American progressive",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027539221511344214"
+      ]
+    },
+    {
+      "id": "n_1",
+      "concept": "viewing anarchy as a form of social welfare",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027539221511344214"
+      ]
+    },
+    {
+      "id": "n_2",
+      "concept": "not being in America",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027539221511344214"
+      ]
+    },
+    {
+      "id": "n_3",
+      "concept": "not viewing anarchy as a form of social welfare",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027539221511344214"
+      ]
+    },
+    {
+      "id": "n_4",
+      "concept": "automated bio labs becoming accessible",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027539221481984406"
+      ]
+    },
+    {
+      "id": "n_5",
+      "concept": "risk of doomsday virus creation by teenagers",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027539221481984406"
+      ]
+    },
+    {
+      "id": "n_6",
+      "concept": "vibe-coding (casual/intuitive programming approach)",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027539221481984406"
+      ]
+    },
+    {
+      "id": "n_7",
+      "concept": "ability to create dangerous biological agents",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027539221481984406"
+      ]
+    },
+    {
+      "id": "n_8",
+      "concept": "Singularity",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027527522196590666"
+      ]
+    },
+    {
+      "id": "n_9",
+      "concept": "extinction",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027527522196590666"
+      ]
+    },
+    {
+      "id": "n_10",
+      "concept": "previous people being smarter",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027477141575938261"
+      ]
+    },
+    {
+      "id": "n_11",
+      "concept": "ability to appeal to common humanity",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027477141575938261"
+      ]
+    },
+    {
+      "id": "n_12",
+      "concept": "advancement in AI/technology capabilities",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027474952874823848"
+      ]
+    },
+    {
+      "id": "n_13",
+      "concept": "humans' status as undisputed masters of the planet",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027474952874823848"
+      ]
+    },
+    {
+      "id": "n_14",
+      "concept": "human eagerness to embrace the change",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027474952874823848"
+      ]
+    },
+    {
+      "id": "n_15",
+      "concept": "AI/technological change",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027474952874823848"
+      ]
+    },
+    {
+      "id": "n_16",
+      "concept": "having more than 1 of something",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027468532976652512"
+      ]
+    },
+    {
+      "id": "n_17",
+      "concept": "personal ability to handle it",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027468532976652512"
+      ]
+    },
+    {
+      "id": "n_18",
+      "concept": "genetic category classification of 'Han'",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027464547163111774"
+      ]
+    },
+    {
+      "id": "n_19",
+      "concept": "authenticity/realness as a genetic category",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027464547163111774"
+      ]
+    },
+    {
+      "id": "n_20",
+      "concept": "genetic category classification of 'White'",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027464547163111774"
+      ]
+    },
+    {
+      "id": "n_21",
+      "concept": "genetic category classification of 'Black'",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027464547163111774"
+      ]
+    },
+    {
+      "id": "n_22",
+      "concept": "genetic category classification of 'Asian'",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027464547163111774"
+      ]
+    },
+    {
+      "id": "n_23",
+      "concept": "employment rate near record high",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027463691223109684"
+      ]
+    },
+    {
+      "id": "n_24",
+      "concept": "hiring boom",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027463691223109684"
+      ]
+    },
+    {
+      "id": "n_25",
+      "concept": "blocking Joey Politano",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027460984080896265"
+      ]
+    },
+    {
+      "id": "n_26",
+      "concept": "being a loser",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027460984080896265"
+      ]
+    },
+    {
+      "id": "n_27",
+      "concept": "having a girlfriend",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027460076253155710"
+      ]
+    },
+    {
+      "id": "n_28",
+      "concept": "productivity (ability to work on coding projects)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027460076253155710"
+      ]
+    },
+    {
+      "id": "n_29",
+      "concept": "watching Avatar the Last Airbender and posting Instagram selfies",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027460076253155710"
+      ]
+    },
+    {
+      "id": "n_30",
+      "concept": "reduced productivity from distractions",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027460076253155710"
+      ]
+    },
+    {
+      "id": "n_31",
+      "concept": "humanity's future prospects",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027460076253155710"
+      ]
+    },
+    {
+      "id": "n_32",
+      "concept": "rabbit biting thin phone/laptop cords",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027457169201991756"
+      ]
+    },
+    {
+      "id": "n_33",
+      "concept": "damage to cords",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027457169201991756"
+      ]
+    },
+    {
+      "id": "n_34",
+      "concept": "protecting cords or placing them out of rabbit's reach",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027457169201991756"
+      ]
+    },
+    {
+      "id": "n_35",
+      "concept": "preventing cord damage from rabbit bites",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027457169201991756"
+      ]
+    },
+    {
+      "id": "n_36",
+      "concept": "cord thickness (thick vs thin)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027457169201991756"
+      ]
+    },
+    {
+      "id": "n_37",
+      "concept": "likelihood of rabbit biting the cord",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027457169201991756"
+      ]
+    },
+    {
+      "id": "n_38",
+      "concept": "technology invented since 1870",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027454180261331436"
+      ]
+    },
+    {
+      "id": "n_39",
+      "concept": "creation of modern jobs",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027454180261331436"
+      ]
+    },
+    {
+      "id": "n_40",
+      "concept": "demand from income effects",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027454180261331436"
+      ]
+    },
+    {
+      "id": "n_41",
+      "concept": "job creation speed",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027454180261331436"
+      ]
+    },
+    {
+      "id": "n_42",
+      "concept": "now wanting to have an intellectual debate",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027453093353488429"
+      ]
+    },
+    {
+      "id": "n_43",
+      "concept": "previous drive-by insult behavior",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027453093353488429"
+      ]
+    },
+    {
+      "id": "n_44",
+      "concept": "shift from insults to intellectual debate",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027453093353488429"
+      ]
+    },
+    {
+      "id": "n_45",
+      "concept": "perceived insincerity or opportunism",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027453093353488429"
+      ]
+    },
+    {
+      "id": "n_46",
+      "concept": "creating a whitelist",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027452455328616636"
+      ]
+    },
+    {
+      "id": "n_47",
+      "concept": "solving the problem (making it easy)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027452455328616636"
+      ]
+    },
+    {
+      "id": "n_48",
+      "concept": "Musk disabling Starlink for Ukrainians during offensives",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027452455328616636"
+      ]
+    },
+    {
+      "id": "n_49",
+      "concept": "undermining Ukrainian military operations",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027452455328616636"
+      ]
+    },
+    {
+      "id": "n_50",
+      "concept": "Musk's past Starlink control decisions",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027452455328616636"
+      ]
+    },
+    {
+      "id": "n_51",
+      "concept": "change in opinion about Musk's reliability/trustworthiness",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027452455328616636"
+      ]
+    },
+    {
+      "id": "n_52",
+      "concept": "tolerance of that usage",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027449979422577088"
+      ]
+    },
+    {
+      "id": "n_53",
+      "concept": "Russians using something",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027449979422577088"
+      ]
+    },
+    {
+      "id": "n_54",
+      "concept": "recent time period",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027449979422577088"
+      ]
+    },
+    {
+      "id": "n_55",
+      "concept": "shift from tolerance to intolerance",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027449979422577088"
+      ]
+    },
+    {
+      "id": "n_56",
+      "concept": "technology",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027448243660214431"
+      ]
+    },
+    {
+      "id": "n_57",
+      "concept": "destruction of our race",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027448243660214431"
+      ]
+    },
+    {
+      "id": "n_58",
+      "concept": "phones",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027448243660214431"
+      ]
+    },
+    {
+      "id": "n_59",
+      "concept": "placing litterbox next to hay feeder",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027447693937885499"
+      ]
+    },
+    {
+      "id": "n_60",
+      "concept": "rabbits litter-train themselves",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027447693937885499"
+      ]
+    },
+    {
+      "id": "n_61",
+      "concept": "rabbits are easy to litter-train",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027447693937885499"
+      ]
+    },
+    {
+      "id": "n_62",
+      "concept": "rabbits litter-training themselves",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027447693937885499"
+      ]
+    },
+    {
+      "id": "n_63",
+      "concept": "creation of new technologies/services (like ride-sharing, manufacturing, software platforms)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027446448640720940"
+      ]
+    },
+    {
+      "id": "n_64",
+      "concept": "job creation",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027446448640720940"
+      ]
+    },
+    {
+      "id": "n_65",
+      "concept": "recent change in policy/behavior",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027446251688759617"
+      ]
+    },
+    {
+      "id": "n_66",
+      "concept": "allowing Russians to use something",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027446251688759617"
+      ]
+    },
+    {
+      "id": "n_67",
+      "concept": "public disorder and street harassment without guns",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027445474891026434"
+      ]
+    },
+    {
+      "id": "n_68",
+      "concept": "American transit being unbearable",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027445474891026434"
+      ]
+    },
+    {
+      "id": "n_69",
+      "concept": "empirical support from linked source",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027430618238460235"
+      ]
+    },
+    {
+      "id": "n_70",
+      "concept": "prediction that AGI will be a slacker stoner kid from the 90s",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027430618238460235"
+      ]
+    },
+    {
+      "id": "n_71",
+      "concept": "Yuppie Fishtank Theory",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027314772925100114"
+      ]
+    },
+    {
+      "id": "n_72",
+      "concept": "explanatory success/predictive accuracy",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027314772925100114"
+      ]
+    },
+    {
+      "id": "n_73",
+      "concept": "global development skepticism",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027314772925100114"
+      ]
+    },
+    {
+      "id": "n_74",
+      "concept": "intellectual credibility/influence",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027314772925100114"
+      ]
+    },
+    {
+      "id": "n_75",
+      "concept": "breaking up Russia and giving eastern part to China",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027231666918539534"
+      ]
+    },
+    {
+      "id": "n_76",
+      "concept": "resolution of the situation referenced in linked tweet",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027231666918539534"
+      ]
+    },
+    {
+      "id": "n_77",
+      "concept": "accepting that rape was always insanely high with little recent increase",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027230165554938032"
+      ]
+    },
+    {
+      "id": "n_78",
+      "concept": "losing the argument about concern with the chart",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027230165554938032"
+      ]
+    },
+    {
+      "id": "n_79",
+      "concept": "posted graphs",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027222644786139224"
+      ]
+    },
+    {
+      "id": "n_80",
+      "concept": "summary accuracy/validity",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027222644786139224"
+      ]
+    },
+    {
+      "id": "n_81",
+      "concept": "non-uniform reporting of rape across countries",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027220870931079675"
+      ]
+    },
+    {
+      "id": "n_82",
+      "concept": "ability to make accurate relative comparisons of rape rates",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027220870931079675"
+      ]
+    },
+    {
+      "id": "n_83",
+      "concept": "tens of thousands of women per year being raped in a country the size of Britain",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027220870931079675"
+      ]
+    },
+    {
+      "id": "n_84",
+      "concept": "moral/practical significance of the issue",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2027220870931079675"
+      ]
+    },
+    {
+      "id": "n_85",
+      "concept": "raw numbers being enormous",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027149313454031218"
+      ]
+    },
+    {
+      "id": "n_86",
+      "concept": "significance of rape prevalence",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027149313454031218"
+      ]
+    },
+    {
+      "id": "n_87",
+      "concept": "Takaichi administration's actual immigration policies",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027095481386709497"
+      ]
+    },
+    {
+      "id": "n_88",
+      "concept": "alignment with public expectations of anti-immigration stance",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027095481386709497"
+      ]
+    },
+    {
+      "id": "n_89",
+      "concept": "not having guns",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027075653544370608"
+      ]
+    },
+    {
+      "id": "n_90",
+      "concept": "being scary",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027075653544370608"
+      ]
+    },
+    {
+      "id": "n_91",
+      "concept": "running away from urban density/walkability",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027074918098293041"
+      ]
+    },
+    {
+      "id": "n_92",
+      "concept": "massive boring suburban sprawl",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027074918098293041"
+      ]
+    },
+    {
+      "id": "n_93",
+      "concept": "not experiencing urban density/walkability",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027074918098293041"
+      ]
+    },
+    {
+      "id": "n_94",
+      "concept": "suburban sprawl",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027074918098293041"
+      ]
+    },
+    {
+      "id": "n_95",
+      "concept": "discussing root causes and solutions of crime",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027073704325423457"
+      ]
+    },
+    {
+      "id": "n_96",
+      "concept": "post length",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027073704325423457"
+      ]
+    },
+    {
+      "id": "n_97",
+      "concept": "post being too long",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027073704325423457"
+      ]
+    },
+    {
+      "id": "n_98",
+      "concept": "post quality/readability",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027073704325423457"
+      ]
+    },
+    {
+      "id": "n_99",
+      "concept": "crime rates",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027051033491595411"
+      ]
+    },
+    {
+      "id": "n_100",
+      "concept": "differences between America and other rich countries",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027051033491595411"
+      ]
+    },
+    {
+      "id": "n_101",
+      "concept": "lack of public safety and order",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026998182576796051"
+      ]
+    },
+    {
+      "id": "n_102",
+      "concept": "America's comparative disadvantage among rich countries",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026998182576796051"
+      ]
+    },
+    {
+      "id": "n_103",
+      "concept": "presence of public safety and order",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026998182576796051"
+      ]
+    },
+    {
+      "id": "n_104",
+      "concept": "other rich countries' comparative advantage",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026998182576796051"
+      ]
+    },
+    {
+      "id": "n_105",
+      "concept": "algorithm design/recommendation system",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026927935492661590"
+      ]
+    },
+    {
+      "id": "n_106",
+      "concept": "proportion of Asian American Art Discourse in user feed",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026927935492661590"
+      ]
+    },
+    {
+      "id": "n_107",
+      "concept": "something being wrong",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026927935492661590"
+      ]
+    },
+    {
+      "id": "n_108",
+      "concept": "high proportion of Asian American Art Discourse in feed",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026927935492661590"
+      ]
+    },
+    {
+      "id": "n_109",
+      "concept": "previous interventions/policies",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026924508444242289"
+      ]
+    },
+    {
+      "id": "n_110",
+      "concept": "crime reduction",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026924508444242289"
+      ]
+    },
+    {
+      "id": "n_111",
+      "concept": "crime levels relative to other rich countries",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026924508444242289"
+      ]
+    },
+    {
+      "id": "n_112",
+      "concept": "vibe coding becoming a thing",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026920939838185724"
+      ]
+    },
+    {
+      "id": "n_113",
+      "concept": "job postings for software engineers",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026920939838185724"
+      ]
+    },
+    {
+      "id": "n_114",
+      "concept": "That (unspecified antecedent)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026917751386964277"
+      ]
+    },
+    {
+      "id": "n_115",
+      "concept": "asexuality",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026917751386964277"
+      ]
+    },
+    {
+      "id": "n_116",
+      "concept": "high crime and public disorder",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026917222531432507"
+      ]
+    },
+    {
+      "id": "n_117",
+      "concept": "cities feeling less nice",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026917222531432507"
+      ]
+    },
+    {
+      "id": "n_118",
+      "concept": "low crime and public disorder",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026917222531432507"
+      ]
+    },
+    {
+      "id": "n_119",
+      "concept": "cities feeling nicer",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026917222531432507"
+      ]
+    },
+    {
+      "id": "n_120",
+      "concept": "U.S. and China fighting over AGI control",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026864296354001407"
+      ]
+    },
+    {
+      "id": "n_121",
+      "concept": "relevance/importance of the conflict",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026864296354001407"
+      ]
+    },
+    {
+      "id": "n_122",
+      "concept": "lack of control over external technological developments (like British trade)",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026864296354001407"
+      ]
+    },
+    {
+      "id": "n_123",
+      "concept": "meaningfulness of internal competition for that technology",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026864296354001407"
+      ]
+    },
+    {
+      "id": "n_124",
+      "concept": "separation of human groups for 1.5M to 300k years ago with limited breeding",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026863502259007792"
+      ]
+    },
+    {
+      "id": "n_125",
+      "concept": "two distinct human populations",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026863502259007792"
+      ]
+    },
+    {
+      "id": "n_126",
+      "concept": "interbreeding around 300k years ago",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026863502259007792"
+      ]
+    },
+    {
+      "id": "n_127",
+      "concept": "production of modern humanity",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026863502259007792"
+      ]
+    },
+    {
+      "id": "n_128",
+      "concept": "time being a flat circle",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026762165705904479"
+      ]
+    },
+    {
+      "id": "n_129",
+      "concept": "past events existing in the future",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026762165705904479"
+      ]
+    },
+    {
+      "id": "n_130",
+      "concept": "lack of cybersecurity",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026762068708532450"
+      ]
+    },
+    {
+      "id": "n_131",
+      "concept": "network systems falling apart",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026762068708532450"
+      ]
+    },
+    {
+      "id": "n_132",
+      "concept": "networking systems together",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026762068708532450",
+        "tweet-2026759878979760609"
+      ]
+    },
+    {
+      "id": "n_133",
+      "concept": "system failure",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026762068708532450"
+      ]
+    },
+    {
+      "id": "n_134",
+      "concept": "AI taking resources and giving them back in exchange for human services",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026761335015612866"
+      ]
+    },
+    {
+      "id": "n_135",
+      "concept": "human enslavement",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026761335015612866"
+      ]
+    },
+    {
+      "id": "n_136",
+      "concept": "AI having desire/incentive to trade resources for services",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026761335015612866"
+      ]
+    },
+    {
+      "id": "n_137",
+      "concept": "AI needing to enslave humans",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026761335015612866"
+      ]
+    },
+    {
+      "id": "n_138",
+      "concept": "AGI not motivated to explore space itself",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "id": "n_139",
+      "concept": "AGI helps organic beings explore space",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "id": "n_140",
+      "concept": "AGI lacking self-motivation for space exploration",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "id": "n_141",
+      "concept": "willingness to assist humans in exploration",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "id": "n_142",
+      "concept": "AGI being motivated (like the Borg)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "id": "n_143",
+      "concept": "conflict with humans",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "id": "n_144",
+      "concept": "humans prompting computers to defeat motivated AGI",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "id": "n_145",
+      "concept": "successful defeat of the Borg",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "id": "n_146",
+      "concept": "some unspecified event or condition",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026760305918005717"
+      ]
+    },
+    {
+      "id": "n_147",
+      "concept": "a period of chaos",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026760305918005717"
+      ]
+    },
+    {
+      "id": "n_148",
+      "concept": "passage of time",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026760018163572844"
+      ]
+    },
+    {
+      "id": "n_149",
+      "concept": "occurrence of something (implied by context of @Trianonwasbad)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026760018163572844"
+      ]
+    },
+    {
+      "id": "n_150",
+      "concept": "current system/status quo",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026759957140615669"
+      ]
+    },
+    {
+      "id": "n_151",
+      "concept": "ability to choose to burn it all down",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026759957140615669"
+      ]
+    },
+    {
+      "id": "n_152",
+      "concept": "internal instability or dysfunction of the system",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026759957140615669"
+      ]
+    },
+    {
+      "id": "n_153",
+      "concept": "system burning itself down",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026759957140615669"
+      ]
+    },
+    {
+      "id": "n_154",
+      "concept": "cybersecurity vulnerability",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026759878979760609"
+      ]
+    },
+    {
+      "id": "n_155",
+      "concept": "keeping AGI isolated in droids without networking",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026759878979760609"
+      ]
+    },
+    {
+      "id": "n_156",
+      "concept": "cybersecurity effectiveness",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026759878979760609"
+      ]
+    },
+    {
+      "id": "n_157",
+      "concept": "R2-D2 gaining access to a network",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026759878979760609"
+      ]
+    },
+    {
+      "id": "n_158",
+      "concept": "successful hacking of Death Star",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026759878979760609"
+      ]
+    },
+    {
+      "id": "n_159",
+      "concept": "high inflation",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026759055382032694"
+      ]
+    },
+    {
+      "id": "n_160",
+      "concept": "suffering of regular Russians",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026759055382032694"
+      ]
+    },
+    {
+      "id": "n_161",
+      "concept": "lack of jobs",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026759055382032694"
+      ]
+    },
+    {
+      "id": "n_162",
+      "concept": "spending over a decade as a p-zombie",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026756391382430023"
+      ]
+    },
+    {
+      "id": "n_163",
+      "concept": "knowledge that p-zombies are real",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026756391382430023"
+      ]
+    },
+    {
+      "id": "n_164",
+      "concept": "someone being a human",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026756009184866385"
+      ]
+    },
+    {
+      "id": "n_165",
+      "concept": "their ability to be convinced by the author's argument",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026756009184866385"
+      ]
+    },
+    {
+      "id": "n_166",
+      "concept": "the 21st century being posthuman",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026756009184866385"
+      ]
+    },
+    {
+      "id": "n_167",
+      "concept": "the irrelevance of convincing humans of this fact",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026756009184866385"
+      ]
+    },
+    {
+      "id": "n_168",
+      "concept": "AI hype about imminent 'god machine' with 20% annual GDP growth",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_169",
+      "concept": "real interest rates skyrocketing",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_170",
+      "concept": "disconnect between AI hype and current macroeconomic reality",
+      "type": "inference",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_171",
+      "concept": "markets not pricing in imminent AI-driven massive GDP growth",
+      "type": "inference",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_172",
+      "concept": "AI adoption",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_173",
+      "concept": "productivity growth",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_174",
+      "concept": "decoupling of output growth from labor input",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_175",
+      "concept": "robust real GDP growth with lower payroll",
+      "type": "inference",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_176",
+      "concept": "evidence of productivity increase",
+      "type": "inference",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_177",
+      "concept": "calls for greater public order",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_178",
+      "concept": "accusations of racism and classism on social media",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_179",
+      "concept": "putting more cops on the streets and punishing drug dealers",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_180",
+      "concept": "exacerbation of racial disparities",
+      "type": "inference",
+      "grounding": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "id": "n_181",
+      "concept": "1994 crime bill strategy of hiring additional police officers",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_182",
+      "concept": "America's safety",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_183",
+      "concept": "increased police officers",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_184",
+      "concept": "over-policing and rights violations in communities",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_185",
+      "concept": "harsh new penalties for fentanyl offenses",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_186",
+      "concept": "perpetuation of war on drugs",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_187",
+      "concept": "1990s policing and incarceration policies",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_188",
+      "concept": "racial disparities",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_189",
+      "concept": "police abuses",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_190",
+      "concept": "mass incarceration crisis",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_191",
+      "concept": "having more cops around",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_192",
+      "concept": "amount of crime",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "id": "n_193",
+      "concept": "AI industrial revolution",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_194",
+      "concept": "frequency of AI-related posts",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_195",
+      "concept": "AI revolution",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_196",
+      "concept": "economic impact across sectors",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_197",
+      "concept": "implications for geopolitics and society",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_198",
+      "concept": "AI becoming central to major developments",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_199",
+      "concept": "AI remaining a compartmentalized topic",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "id": "n_200",
+      "concept": "AI disruption of white-collar work and service-industry business models",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_201",
+      "concept": "economic crisis",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "id": "n_202",
+      "concept": "Supreme Court ruling that IEEPA does not authorize presidential tariff imposition",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_203",
+      "concept": "Trump's unilateral tariff authority",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_204",
+      "concept": "Constitutional grant of tax and duty power to Congress only",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_205",
+      "concept": "presidential authority to unilaterally impose tariffs",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_206",
+      "concept": "Supreme Court ruling against unilateral tariff imposition",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_207",
+      "concept": "Trump's tariff on/off switch capability",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_208",
+      "concept": "Requirement for tariffs to go through lengthy technical trade authorities or Congress",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_209",
+      "concept": "ease of imposing tariffs",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_210",
+      "concept": "Existence of older laws from 1960s-1970s authorizing presidential tariff increases",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_211",
+      "concept": "presidential ability to impose tariffs under certain circumstances",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "id": "n_212",
+      "concept": "Section 201, 232, and 301 authorities",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_213",
+      "concept": "president can impose tariffs without congressional action",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_214",
+      "concept": "Section 122 authority",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_215",
+      "concept": "president can impose tariffs without investigation",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_216",
+      "concept": "Section 122 authority limitations (15% rate, 150 days)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_217",
+      "concept": "restrictions on tariff imposition",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_218",
+      "concept": "Section 338 of Smoot-Hawley authority",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_219",
+      "concept": "president can impose 50% tariff without investigation or time limits",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_220",
+      "concept": "no president has previously used Section 338 authority",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_221",
+      "concept": "concerns about future legal challenges",
+      "type": "inference",
+      "grounding": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "id": "n_222",
+      "concept": "AI technology changing very fast",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_223",
+      "concept": "rapid technological progress in other technologies (robotics, energy, software)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_224",
+      "concept": "rapid technological progress from AI",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_225",
+      "concept": "great uncertainty about economic outcomes",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_226",
+      "concept": "Democratic policy being robust to uncertainty",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_227",
+      "concept": "ability to handle various AI economic scenarios",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "id": "n_228",
+      "concept": "inability to predict the future",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_229",
+      "concept": "need for robust economic policies",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_230",
+      "concept": "AI disruption to the economy",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_231",
+      "concept": "need for Democratic economic strategy",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_232",
+      "concept": "radical economic uncertainty",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_233",
+      "concept": "value of policies robust across multiple futures",
+      "type": "inference",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_234",
+      "concept": "government ownership stake in corporate system",
+      "type": "assumption",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_235",
+      "concept": "robust economic outcomes",
+      "type": "assumption",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_236",
+      "concept": "policies promoting human work",
+      "type": "assumption",
+      "grounding": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "id": "n_237",
+      "concept": "factories dumping pollutants in water",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_238",
+      "concept": "local communities getting cancer",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_239",
+      "concept": "local or national government regulation and pollution markets",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_240",
+      "concept": "solving local pollution problems",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_241",
+      "concept": "countries getting richer",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_242",
+      "concept": "countries polluting less",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_243",
+      "concept": "people escaping poverty",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_244",
+      "concept": "demand for cleaner local environment",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_245",
+      "concept": "China launching cleanup policy in 2010s",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_246",
+      "concept": "reduction in toxic, unbreathable air",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "id": "n_247",
+      "concept": "worldwide nature of global warming harm",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_248",
+      "concept": "free rider problem in decarbonization",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_249",
+      "concept": "most benefit of decarbonization goes to other countries",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_250",
+      "concept": "countries unwilling to pay full cost of decarbonization",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_251",
+      "concept": "incentive to cheat in international agreements",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_252",
+      "concept": "difficulty solving global warming through international agreements",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_253",
+      "concept": "technology that is better and cheaper without pollution",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_254",
+      "concept": "countries have incentive to switch to it",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_255",
+      "concept": "positive externality of technology",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_256",
+      "concept": "ability to counteract negative externality of pollution",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_257",
+      "concept": "invention of better refrigerants (HFCs) to replace CFCs",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_258",
+      "concept": "solving ozone layer destruction problem",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "id": "n_259",
+      "concept": "being in a worse mood",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_260",
+      "concept": "tone shift from optimistic to pessimistic in writing",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_261",
+      "concept": "rabbit being sick",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_262",
+      "concept": "being grumpy",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_263",
+      "concept": "painting human disempowerment as more negative than usual",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_264",
+      "concept": "existence of AI",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_265",
+      "concept": "humanity being disempowered",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_266",
+      "concept": "advancement of AI",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_267",
+      "concept": "replacement of humanity with posthuman entities",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "id": "n_268",
+      "concept": "reading science fiction by authors like Vernor Vinge and Iain M. Banks",
+      "type": "inference",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_269",
+      "concept": "belief that humanity has not attained theoretical pinnacle of intelligence",
+      "type": "inference",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_270",
+      "concept": "ASI (Artificial Super Intelligence) development",
+      "type": "core_value",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_271",
+      "concept": "solving problems like low fertility and fascist overlords",
+      "type": "core_value",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_272",
+      "concept": "ASI development",
+      "type": "core_value",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_273",
+      "concept": "continuation of human-driven scientific discovery",
+      "type": "core_value",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_274",
+      "concept": "being in a bad mood",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_275",
+      "concept": "painting a glum picture of humanity's supersession",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_276",
+      "concept": "AI systems respecting and protecting humanity",
+      "type": "core_value",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_277",
+      "concept": "positive future outcome for humans",
+      "type": "core_value",
+      "grounding": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "id": "n_278",
+      "concept": "AI advancement",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_279",
+      "concept": "software industry transformation",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_280",
+      "concept": "rapid technological change",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_281",
+      "concept": "future shock feeling",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_282",
+      "concept": "internet and digital technologies",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_283",
+      "concept": "alteration of world/society",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_284",
+      "concept": "how humans think, learn, and work",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_285",
+      "concept": "internet and social media",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_286",
+      "concept": "changes in how humans socialize",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_287",
+      "concept": "changes in how humans present themselves",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "id": "n_288",
+      "concept": "pace of technological change and resulting social changes",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_289",
+      "concept": "future shock (feeling overwhelmed)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_290",
+      "concept": "minimizing scale and extent of life changes",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_291",
+      "concept": "warding off future shock",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_292",
+      "concept": "noticing changes as small, fun, and exciting rather than vast and overwhelming",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_293",
+      "concept": "avoiding future shock",
+      "type": "inference",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_294",
+      "concept": "generative AI progress",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_295",
+      "concept": "world change",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_296",
+      "concept": "embracing change and riding the wave",
+      "type": "core_value",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_297",
+      "concept": "better outcomes than fearing and resisting change",
+      "type": "core_value",
+      "grounding": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "id": "n_298",
+      "concept": "pet rabbit accidentally biting human",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_299",
+      "concept": "minor injury (punctured and lacerated finger)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_300",
+      "concept": "tiger as pet instead of rabbit",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_301",
+      "concept": "human death",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_302",
+      "concept": "pet being smaller and weaker than owner",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_303",
+      "concept": "ability to train and physically restrain pet",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_304",
+      "concept": "minimized danger to owner's health",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_305",
+      "concept": "large and strong animals (like tigers) as pets",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_306",
+      "concept": "danger to human health",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "id": "n_307",
+      "concept": "AI achieving gold medals on International Math Olympiad, solving outstanding math problems, getting A's in graduate classes",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_308",
+      "concept": "AI demonstrating intelligence comparable to or exceeding humans",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_309",
+      "concept": "AI not thinking exactly the way humans do",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_310",
+      "concept": "AI being considered not truly intelligent by some people",
+      "type": "inference",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_311",
+      "concept": "most humans not being as intelligent as AI in measurable ways",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_312",
+      "concept": "humans being unable to achieve what AI achieves (Math Olympiad medals, solving outstanding problems, graduate-level performance)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_313",
+      "concept": "lack of a single unarguable measure of intelligence",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_314",
+      "concept": "difficulty in definitively comparing human and AI intelligence",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "id": "n_315",
+      "concept": "cameras",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_316",
+      "concept": "public safety",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_317",
+      "concept": "ridership plummeting and not bouncing back post-pandemic",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_318",
+      "concept": "BART being in a parlous state",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_319",
+      "concept": "BART not receiving bail out with higher taxes",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_320",
+      "concept": "BART closing stations, reducing service, and laying off workers",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "id": "n_321",
+      "concept": "pandemic",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_322",
+      "concept": "people's transportation preferences (shift away from BART)",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_323",
+      "concept": "habituation to Uber or driving during pandemic",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_324",
+      "concept": "BART ridership",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_325",
+      "concept": "general increase in public disorder in Bay Area",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_326",
+      "concept": "BART acceptability as transportation mode",
+      "type": "inference",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_327",
+      "concept": "presence of shady characters, drug users, vagrants, mentally ill on BART",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_328",
+      "concept": "BART ridership decline",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_329",
+      "concept": "BART fare gate installation",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_330",
+      "concept": "crime on trains",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_331",
+      "concept": "patron-related corrective maintenance work",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_332",
+      "concept": "small number of non-paying riders",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_333",
+      "concept": "majority of disorder on BART",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "id": "n_334",
+      "concept": "Takaichi winning internal party election rather than receiving popular mandate",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_335",
+      "concept": "problem for Takaichi's political position",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_336",
+      "concept": "LDP not having strong majority in parliament",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_337",
+      "concept": "vulnerability to Takaichi's tenure being cut short or hamstrung",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_338",
+      "concept": "Komeito ditching the LDP after Takaichi came to power",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_339",
+      "concept": "concerns about Takaichi's tenure being cut short or hamstrung",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_340",
+      "concept": "LDP winning 68% of lower house seats",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_341",
+      "concept": "LDP achieving 2/3 majority by itself",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "id": "n_342",
+      "concept": "LDP and Japan Innovation Party coalition having 76% of seats",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_343",
+      "concept": "Takaichi's ability to push through legislation",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_344",
+      "concept": "supermajority in parliament",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_345",
+      "concept": "ability to pass constitutional amendments",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_346",
+      "concept": "tourism boom in Japan",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_347",
+      "concept": "American interest in Japanese politics and society",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_348",
+      "concept": "LDP's almost unbroken electoral victories since 1955",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_349",
+      "concept": "questions about whether Japan is a genuine democracy",
+      "type": "inference",
+      "grounding": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "id": "n_350",
+      "concept": "extremists being more engaged in politics",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_351",
+      "concept": "extremists ruling American politics",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_352",
+      "concept": "extremists spending more time thinking about politics and doing political activism",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_353",
+      "concept": "extremists having greater influence than moderates",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_354",
+      "concept": "closed-primary party system",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_355",
+      "concept": "extremists dominating American politics",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_356",
+      "concept": "Republicans winning primaries by aligning with median Republican voter in right-leaning areas",
+      "type": "inference",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_357",
+      "concept": "Republican party moving away from median voter preferences",
+      "type": "inference",
+      "grounding": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "id": "n_358",
+      "concept": "modern social media technology",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_359",
+      "concept": "American politics becoming more extremist-dominated",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_360",
+      "concept": "social media bypassing traditional hierarchies and institutions",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_361",
+      "concept": "communities of like-minded extremists gathering together",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_362",
+      "concept": "emotionally charged messages in social media",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_363",
+      "concept": "likelihood of going viral",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_364",
+      "concept": "moderate majority avoiding politically charged online spaces",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_365",
+      "concept": "online spaces becoming more extremist",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_366",
+      "concept": "peace of mind for many Americans",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "id": "n_367",
+      "concept": "fear that AI is rendering software business models obsolete",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_368",
+      "concept": "software stocks crash/selloff",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_369",
+      "concept": "concern that AI is supplanting established software business models",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_370",
+      "concept": "stock market drubbing in Silicon Valley",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_371",
+      "concept": "AI leaders overtaking established industry players in innovation",
+      "type": "inference",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_372",
+      "concept": "threat to established software companies' business models",
+      "type": "inference",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_373",
+      "concept": "Anthropic releasing new AI tool for legal work",
+      "type": "inference",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_374",
+      "concept": "concern that AI is supplanting business models",
+      "type": "inference",
+      "grounding": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "id": "n_375",
+      "concept": "disappointing earnings reports",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_376",
+      "concept": "investor awareness of AI threat",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_377",
+      "concept": "improvements in AI models",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_378",
+      "concept": "release of Anthropic add-on",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_379",
+      "concept": "fear of AI displacement",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_380",
+      "concept": "stock market selloff",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_381",
+      "concept": "SaaS company stock decline",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_382",
+      "concept": "AI threat to software companies",
+      "type": "inference",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_383",
+      "concept": "software company valuations decline",
+      "type": "inference",
+      "grounding": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "id": "n_384",
+      "concept": "ICE's brutality",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_385",
+      "concept": "electorate souring on Trump administration",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_386",
+      "concept": "ICE brutality and related policies",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_387",
+      "concept": "Democrats winning House in midterms",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_388",
+      "concept": "Democrats' first small victories against autocracy",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_389",
+      "concept": "progressives taking wrong message from victories",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_390",
+      "concept": "radicals taking over Minnesota anti-ICE protests",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_391",
+      "concept": "protests going overboard",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_392",
+      "concept": "Trump demotion of Border Patrol head and de-escalation moves",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_393",
+      "concept": "progress on reducing unaccountable secret police and related harms",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "id": "n_394",
+      "concept": "extreme street activists reenacting CHAZ from Seattle 2020",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_395",
+      "concept": "momentum from backlash to recent ICE killings",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_396",
+      "concept": "Trump, Stephen Miller, and ICE backing off and not killing protesters for a while",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_397",
+      "concept": "extreme street activists reenacting ill-fated CHAZ",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_398",
+      "concept": "Dems taking a midterm victory",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_399",
+      "concept": "Dems not recalibrating their position on immigration",
+      "type": "inference",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_400",
+      "concept": "Americans not supporting permissive immigration policies of Biden years",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_401",
+      "concept": "need for Dems to recalibrate position on immigration",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "id": "n_402",
+      "concept": "world entering international financial anarchy",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_403",
+      "concept": "rise in gold prices",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_404",
+      "concept": "fear of Trump administration's policies",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_405",
+      "concept": "governments and private investors buying gold at rapid rates",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_406",
+      "concept": "world preparing for financial anarchy",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_407",
+      "concept": "dollar's falling share of global reserves",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_408",
+      "concept": "US no longer serving as safe haven",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_409",
+      "concept": "dollar losing reserve currency status",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_410",
+      "concept": "China choosing not to fill void as reserve currency provider",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_411",
+      "concept": "financial anarchy (no replacement reserve currency)",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_412",
+      "concept": "Europe and other powers unable to fill void",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_413",
+      "concept": "financial anarchy persisting",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "id": "n_414",
+      "concept": "investors buying more gold",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_415",
+      "concept": "increased demand for gold",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_416",
+      "concept": "gold price increase",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_417",
+      "concept": "investor demand for gold",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_418",
+      "concept": "gold's rise as share of reserves",
+      "type": "inference",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_419",
+      "concept": "lack of clear understanding of dollar's role in international finance",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_420",
+      "concept": "people being confused about financial system",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "id": "n_421",
+      "concept": "Gemini's image having mascots correct with labels and logos",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_422",
+      "concept": "quality of AI-generated image",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_423",
+      "concept": "GPT-5.2 getting mascots wrong and lacking labels/logos",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_424",
+      "concept": "Grok's poor image quality",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_425",
+      "concept": "author's willingness to discuss the image",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_426",
+      "concept": "AI race being interesting",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_427",
+      "concept": "author writing about corporate strategy",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "id": "n_428",
+      "concept": "AI technology working and being useful",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_429",
+      "concept": "people making enormous amounts of money from AI",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_430",
+      "concept": "OpenAI releasing first widely usable large language model (ChatGPT)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_431",
+      "concept": "OpenAI becoming synonymous with generative AI",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_432",
+      "concept": "OpenAI's models being at the forefront since ChatGPT release",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_433",
+      "concept": "OpenAI's strong market position in generative AI",
+      "type": "inference",
+      "grounding": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "id": "n_434",
+      "concept": "pet rabbit health emergency",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_435",
+      "concept": "delay in publishing AI economics post",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_436",
+      "concept": "Zhang Youxia's power and loyal followers",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_437",
+      "concept": "Xi Jinping's fear of Zhang becoming a rival",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_438",
+      "concept": "Xi Jinping's paranoia",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_439",
+      "concept": "purging of Zhang Youxia",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "id": "n_440",
+      "concept": "Xi being an organization-dominator who rises through patronage and backstabbing",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_441",
+      "concept": "Xi being incredibly paranoid",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_442",
+      "concept": "aging and slowing down in organization-dominators like Stalin",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_443",
+      "concept": "increased paranoia",
+      "type": "inference",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_444",
+      "concept": "exposure of Zhang not doing a good job preparing military for Taiwan invasion",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_445",
+      "concept": "Zhang's rivals being purged earlier",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_446",
+      "concept": "Zhang resisting Xi's orders to prepare for Taiwan invasion",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_447",
+      "concept": "Xi removing Zhang from position",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "id": "n_448",
+      "concept": "U.S. export controls on chips and chipmaking equipment to China",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_449",
+      "concept": "preventing China from acquiring advanced semiconductor technology",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_450",
+      "concept": "sudden waves of subsidized Chinese goods",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_451",
+      "concept": "forced deindustrialization of European economy",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_452",
+      "concept": "targeted tariffs on final consumption goods (e.g. cars)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_453",
+      "concept": "economic harm",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_454",
+      "concept": "tariff effectiveness",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_455",
+      "concept": "China being an economic and geopolitical threat to the U.S.",
+      "type": "core_value",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_456",
+      "concept": "justification for export controls and trade barriers",
+      "type": "core_value",
+      "grounding": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "id": "n_457",
+      "concept": "Canada eliminating tariffs on Chinese EVs",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_458",
+      "concept": "political break between Canada and the U.S.",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_459",
+      "concept": "worry about losing American markets",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_460",
+      "concept": "Canada following U.S. 100% tariff on Chinese EVs in 2024",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_461",
+      "concept": "displeasing the U.S. (indispensable ally)",
+      "type": "inference",
+      "grounding": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "id": "n_462",
+      "concept": "MAGA ideology",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_463",
+      "concept": "U.S. weakness",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_464",
+      "concept": "MAGA ideology's refusal to respect law or interface with reality",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_465",
+      "concept": "U.S. problems",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_466",
+      "concept": "Xi Jinping's autocratic rule",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_467",
+      "concept": "China's weakness",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_468",
+      "concept": "autocratic rule fostering internal dissent",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_469",
+      "concept": "China's problems",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_470",
+      "concept": "Ukraine war",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_471",
+      "concept": "Russia's weakness",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_472",
+      "concept": "focusing on growth instead of domestic disputes or imperial ambitions",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_473",
+      "concept": "India being smarter than major powers",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_474",
+      "concept": "Europe's improving growth, rearmament, and decoupling from America",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_475",
+      "concept": "Europe looking less like a basket case",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "id": "n_476",
+      "concept": "ICE tackling Pretti and firing ten shots",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_477",
+      "concept": "Pretti's death",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_478",
+      "concept": "administration denying existence of Second Amendment rights",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_479",
+      "concept": "tactical error/negative political consequences",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_480",
+      "concept": "killing of Pretti and Renee Good by ICE",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_481",
+      "concept": "wave of anger at ICE",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_482",
+      "concept": "Americans seeing videos and details of what happened",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_483",
+      "concept": "Americans not being fooled by Stephen Miller and JD Vance's claims",
+      "type": "inference",
+      "grounding": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "id": "n_484",
+      "concept": "Trump's escalated threats to invade Greenland and impose 10% tariffs on opposing European countries",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "id": "n_485",
+      "concept": "financial market reaction (stock market drop, dollar depreciation, Treasury yield rise)",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "id": "n_486",
+      "concept": "Trump signaling seriousness of Greenland seizure threat through tariff threats",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "id": "n_487",
+      "concept": "financial markets reacting sharply",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "id": "n_488",
+      "concept": "Trump and European leaders escalating tensions over Greenland",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "id": "n_489",
+      "concept": "U.S. bond prices tumbling and Treasury yields spiking",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "id": "n_490",
+      "concept": "Trump's aggression appearing more than just bluster",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "id": "n_491",
+      "concept": "financial market concern/negative market reaction",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "id": "n_492",
+      "concept": "Trump's threats to seize Greenland and use military force",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "id": "n_493",
+      "concept": "global risk-off sentiment and 'sell America' market reaction",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "id": "n_494",
+      "concept": "dollar weakness (Dollar Index fell nearly 1%)",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "id": "n_495",
+      "concept": "Trump's shift away from aggressive trade and military posturing",
+      "type": "inference",
+      "grounding": [
+        "substack-19_seg1"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_0",
+      "to": "n_1",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027539221511344214"
+      ]
+    },
+    {
+      "from": "n_2",
+      "to": "n_3",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2027539221511344214"
+      ]
+    },
+    {
+      "from": "n_4",
+      "to": "n_5",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027539221481984406"
+      ]
+    },
+    {
+      "from": "n_6",
+      "to": "n_7",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2027539221481984406"
+      ]
+    },
+    {
+      "from": "n_8",
+      "to": "n_9",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027527522196590666"
+      ]
+    },
+    {
+      "from": "n_10",
+      "to": "n_11",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027477141575938261"
+      ]
+    },
+    {
+      "from": "n_12",
+      "to": "n_13",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027474952874823848"
+      ]
+    },
+    {
+      "from": "n_14",
+      "to": "n_15",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027474952874823848"
+      ]
+    },
+    {
+      "from": "n_16",
+      "to": "n_17",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027468532976652512"
+      ]
+    },
+    {
+      "from": "n_18",
+      "to": "n_19",
+      "polarity": -1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2027464547163111774"
+      ]
+    },
+    {
+      "from": "n_20",
+      "to": "n_19",
+      "polarity": -1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2027464547163111774"
+      ]
+    },
+    {
+      "from": "n_21",
+      "to": "n_19",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027464547163111774"
+      ]
+    },
+    {
+      "from": "n_22",
+      "to": "n_19",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027464547163111774"
+      ]
+    },
+    {
+      "from": "n_23",
+      "to": "n_24",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027463691223109684"
+      ]
+    },
+    {
+      "from": "n_25",
+      "to": "n_26",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027460984080896265"
+      ]
+    },
+    {
+      "from": "n_27",
+      "to": "n_28",
+      "polarity": -1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2027460076253155710"
+      ]
+    },
+    {
+      "from": "n_29",
+      "to": "n_28",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027460076253155710"
+      ]
+    },
+    {
+      "from": "n_30",
+      "to": "n_31",
+      "polarity": -1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2027460076253155710"
+      ]
+    },
+    {
+      "from": "n_32",
+      "to": "n_33",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027457169201991756"
+      ]
+    },
+    {
+      "from": "n_34",
+      "to": "n_35",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2027457169201991756"
+      ]
+    },
+    {
+      "from": "n_36",
+      "to": "n_37",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027457169201991756"
+      ]
+    },
+    {
+      "from": "n_38",
+      "to": "n_39",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027454180261331436"
+      ]
+    },
+    {
+      "from": "n_40",
+      "to": "n_41",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2027454180261331436"
+      ]
+    },
+    {
+      "from": "n_42",
+      "to": "n_43",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027453093353488429"
+      ]
+    },
+    {
+      "from": "n_44",
+      "to": "n_45",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027453093353488429"
+      ]
+    },
+    {
+      "from": "n_46",
+      "to": "n_47",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027452455328616636"
+      ]
+    },
+    {
+      "from": "n_48",
+      "to": "n_49",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027452455328616636"
+      ]
+    },
+    {
+      "from": "n_50",
+      "to": "n_51",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2027452455328616636"
+      ]
+    },
+    {
+      "from": "n_52",
+      "to": "n_53",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027449979422577088"
+      ]
+    },
+    {
+      "from": "n_54",
+      "to": "n_55",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2027449979422577088"
+      ]
+    },
+    {
+      "from": "n_56",
+      "to": "n_57",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027448243660214431"
+      ]
+    },
+    {
+      "from": "n_58",
+      "to": "n_57",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027448243660214431"
+      ]
+    },
+    {
+      "from": "n_59",
+      "to": "n_60",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027447693937885499"
+      ]
+    },
+    {
+      "from": "n_61",
+      "to": "n_62",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027447693937885499"
+      ]
+    },
+    {
+      "from": "n_63",
+      "to": "n_64",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2027446448640720940"
+      ]
+    },
+    {
+      "from": "n_65",
+      "to": "n_66",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027446251688759617"
+      ]
+    },
+    {
+      "from": "n_67",
+      "to": "n_68",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027445474891026434"
+      ]
+    },
+    {
+      "from": "n_69",
+      "to": "n_70",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027430618238460235"
+      ]
+    },
+    {
+      "from": "n_71",
+      "to": "n_72",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027314772925100114"
+      ]
+    },
+    {
+      "from": "n_73",
+      "to": "n_74",
+      "polarity": -1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "tweet-2027314772925100114"
+      ]
+    },
+    {
+      "from": "n_75",
+      "to": "n_76",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2027231666918539534"
+      ]
+    },
+    {
+      "from": "n_77",
+      "to": "n_78",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027230165554938032"
+      ]
+    },
+    {
+      "from": "n_79",
+      "to": "n_80",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027222644786139224"
+      ]
+    },
+    {
+      "from": "n_81",
+      "to": "n_82",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027220870931079675"
+      ]
+    },
+    {
+      "from": "n_83",
+      "to": "n_84",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027220870931079675"
+      ]
+    },
+    {
+      "from": "n_85",
+      "to": "n_86",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027149313454031218"
+      ]
+    },
+    {
+      "from": "n_87",
+      "to": "n_88",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027095481386709497"
+      ]
+    },
+    {
+      "from": "n_89",
+      "to": "n_90",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027075653544370608"
+      ]
+    },
+    {
+      "from": "n_91",
+      "to": "n_92",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027074918098293041"
+      ]
+    },
+    {
+      "from": "n_93",
+      "to": "n_94",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027074918098293041"
+      ]
+    },
+    {
+      "from": "n_95",
+      "to": "n_96",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027073704325423457"
+      ]
+    },
+    {
+      "from": "n_97",
+      "to": "n_98",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027073704325423457"
+      ]
+    },
+    {
+      "from": "n_99",
+      "to": "n_100",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027051033491595411"
+      ]
+    },
+    {
+      "from": "n_101",
+      "to": "n_102",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026998182576796051"
+      ]
+    },
+    {
+      "from": "n_103",
+      "to": "n_104",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026998182576796051"
+      ]
+    },
+    {
+      "from": "n_105",
+      "to": "n_106",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026927935492661590"
+      ]
+    },
+    {
+      "from": "n_107",
+      "to": "n_108",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026927935492661590"
+      ]
+    },
+    {
+      "from": "n_109",
+      "to": "n_110",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026924508444242289"
+      ]
+    },
+    {
+      "from": "n_109",
+      "to": "n_111",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026924508444242289"
+      ]
+    },
+    {
+      "from": "n_112",
+      "to": "n_113",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2026920939838185724"
+      ]
+    },
+    {
+      "from": "n_114",
+      "to": "n_115",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2026917751386964277"
+      ]
+    },
+    {
+      "from": "n_116",
+      "to": "n_117",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2026917222531432507"
+      ]
+    },
+    {
+      "from": "n_118",
+      "to": "n_119",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2026917222531432507"
+      ]
+    },
+    {
+      "from": "n_120",
+      "to": "n_121",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026864296354001407"
+      ]
+    },
+    {
+      "from": "n_122",
+      "to": "n_123",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026864296354001407"
+      ]
+    },
+    {
+      "from": "n_124",
+      "to": "n_125",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026863502259007792"
+      ]
+    },
+    {
+      "from": "n_126",
+      "to": "n_127",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026863502259007792"
+      ]
+    },
+    {
+      "from": "n_128",
+      "to": "n_129",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026762165705904479"
+      ]
+    },
+    {
+      "from": "n_130",
+      "to": "n_131",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026762068708532450"
+      ]
+    },
+    {
+      "from": "n_132",
+      "to": "n_133",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026762068708532450"
+      ]
+    },
+    {
+      "from": "n_134",
+      "to": "n_135",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026761335015612866"
+      ]
+    },
+    {
+      "from": "n_136",
+      "to": "n_137",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026761335015612866"
+      ]
+    },
+    {
+      "from": "n_138",
+      "to": "n_139",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "from": "n_140",
+      "to": "n_141",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "from": "n_142",
+      "to": "n_143",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "from": "n_144",
+      "to": "n_145",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2026760998804504992"
+      ]
+    },
+    {
+      "from": "n_146",
+      "to": "n_147",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2026760305918005717"
+      ]
+    },
+    {
+      "from": "n_148",
+      "to": "n_149",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2026760018163572844"
+      ]
+    },
+    {
+      "from": "n_150",
+      "to": "n_151",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026759957140615669"
+      ]
+    },
+    {
+      "from": "n_152",
+      "to": "n_153",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026759957140615669"
+      ]
+    },
+    {
+      "from": "n_132",
+      "to": "n_154",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026759878979760609"
+      ]
+    },
+    {
+      "from": "n_155",
+      "to": "n_156",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026759878979760609"
+      ]
+    },
+    {
+      "from": "n_157",
+      "to": "n_158",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2026759878979760609"
+      ]
+    },
+    {
+      "from": "n_159",
+      "to": "n_160",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026759055382032694"
+      ]
+    },
+    {
+      "from": "n_161",
+      "to": "n_160",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026759055382032694"
+      ]
+    },
+    {
+      "from": "n_162",
+      "to": "n_163",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026756391382430023"
+      ]
+    },
+    {
+      "from": "n_164",
+      "to": "n_165",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026756009184866385"
+      ]
+    },
+    {
+      "from": "n_166",
+      "to": "n_167",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2026756009184866385"
+      ]
+    },
+    {
+      "from": "n_168",
+      "to": "n_169",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_170",
+      "to": "n_171",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_172",
+      "to": "n_173",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_173",
+      "to": "n_174",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_175",
+      "to": "n_176",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_177",
+      "to": "n_178",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "from": "n_179",
+      "to": "n_180",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-1_seg0"
+      ]
+    },
+    {
+      "from": "n_181",
+      "to": "n_182",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_183",
+      "to": "n_184",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_185",
+      "to": "n_186",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_187",
+      "to": "n_188",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_187",
+      "to": "n_189",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_187",
+      "to": "n_190",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_191",
+      "to": "n_192",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-1_seg1"
+      ]
+    },
+    {
+      "from": "n_193",
+      "to": "n_194",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "from": "n_195",
+      "to": "n_196",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "from": "n_195",
+      "to": "n_197",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "from": "n_198",
+      "to": "n_199",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-2_seg0"
+      ]
+    },
+    {
+      "from": "n_200",
+      "to": "n_201",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-2_seg1"
+      ]
+    },
+    {
+      "from": "n_202",
+      "to": "n_203",
+      "polarity": -1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_204",
+      "to": "n_205",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_206",
+      "to": "n_207",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_208",
+      "to": "n_209",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_210",
+      "to": "n_211",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-3_seg0"
+      ]
+    },
+    {
+      "from": "n_212",
+      "to": "n_213",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_214",
+      "to": "n_215",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_216",
+      "to": "n_217",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_218",
+      "to": "n_219",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_220",
+      "to": "n_221",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-3_seg1"
+      ]
+    },
+    {
+      "from": "n_222",
+      "to": "n_223",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "from": "n_224",
+      "to": "n_225",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "from": "n_226",
+      "to": "n_227",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-4_seg0"
+      ]
+    },
+    {
+      "from": "n_228",
+      "to": "n_229",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "from": "n_230",
+      "to": "n_231",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "from": "n_232",
+      "to": "n_233",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "from": "n_234",
+      "to": "n_235",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "from": "n_236",
+      "to": "n_235",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-4_seg1"
+      ]
+    },
+    {
+      "from": "n_237",
+      "to": "n_238",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_239",
+      "to": "n_240",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_241",
+      "to": "n_242",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_243",
+      "to": "n_244",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_245",
+      "to": "n_246",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-5_seg0"
+      ]
+    },
+    {
+      "from": "n_247",
+      "to": "n_248",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_249",
+      "to": "n_250",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_251",
+      "to": "n_252",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_253",
+      "to": "n_254",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_255",
+      "to": "n_256",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_257",
+      "to": "n_258",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-5_seg1"
+      ]
+    },
+    {
+      "from": "n_259",
+      "to": "n_260",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_261",
+      "to": "n_262",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_262",
+      "to": "n_263",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_264",
+      "to": "n_265",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_266",
+      "to": "n_267",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-6_seg0"
+      ]
+    },
+    {
+      "from": "n_268",
+      "to": "n_269",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "from": "n_270",
+      "to": "n_271",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "from": "n_272",
+      "to": "n_273",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "from": "n_274",
+      "to": "n_275",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "from": "n_276",
+      "to": "n_277",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-6_seg1"
+      ]
+    },
+    {
+      "from": "n_278",
+      "to": "n_279",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_280",
+      "to": "n_281",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_282",
+      "to": "n_283",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_278",
+      "to": "n_284",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_285",
+      "to": "n_286",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_285",
+      "to": "n_287",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-7_seg0"
+      ]
+    },
+    {
+      "from": "n_288",
+      "to": "n_289",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "from": "n_290",
+      "to": "n_291",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "from": "n_292",
+      "to": "n_293",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "from": "n_294",
+      "to": "n_295",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "from": "n_296",
+      "to": "n_297",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-7_seg1"
+      ]
+    },
+    {
+      "from": "n_298",
+      "to": "n_299",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_300",
+      "to": "n_301",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_302",
+      "to": "n_303",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_302",
+      "to": "n_304",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_305",
+      "to": "n_306",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-8_seg0"
+      ]
+    },
+    {
+      "from": "n_307",
+      "to": "n_308",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_309",
+      "to": "n_310",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_311",
+      "to": "n_312",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_313",
+      "to": "n_314",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-8_seg1"
+      ]
+    },
+    {
+      "from": "n_315",
+      "to": "n_316",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "from": "n_317",
+      "to": "n_318",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "from": "n_319",
+      "to": "n_320",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-9_seg0"
+      ]
+    },
+    {
+      "from": "n_321",
+      "to": "n_322",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "from": "n_323",
+      "to": "n_324",
+      "polarity": -1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "from": "n_325",
+      "to": "n_326",
+      "polarity": -1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "from": "n_327",
+      "to": "n_328",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "from": "n_329",
+      "to": "n_330",
+      "polarity": -1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "from": "n_329",
+      "to": "n_331",
+      "polarity": -1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "from": "n_332",
+      "to": "n_333",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-9_seg1"
+      ]
+    },
+    {
+      "from": "n_334",
+      "to": "n_335",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "from": "n_336",
+      "to": "n_337",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "from": "n_338",
+      "to": "n_339",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "from": "n_340",
+      "to": "n_341",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-10_seg0"
+      ]
+    },
+    {
+      "from": "n_342",
+      "to": "n_343",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "from": "n_344",
+      "to": "n_345",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "from": "n_346",
+      "to": "n_347",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "from": "n_348",
+      "to": "n_349",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-10_seg1"
+      ]
+    },
+    {
+      "from": "n_350",
+      "to": "n_351",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_352",
+      "to": "n_353",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_354",
+      "to": "n_355",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_356",
+      "to": "n_357",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-11_seg0"
+      ]
+    },
+    {
+      "from": "n_358",
+      "to": "n_359",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_360",
+      "to": "n_361",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_362",
+      "to": "n_363",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_364",
+      "to": "n_365",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_364",
+      "to": "n_366",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-11_seg1"
+      ]
+    },
+    {
+      "from": "n_367",
+      "to": "n_368",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_369",
+      "to": "n_370",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_371",
+      "to": "n_372",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_373",
+      "to": "n_374",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-12_seg0"
+      ]
+    },
+    {
+      "from": "n_375",
+      "to": "n_376",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_377",
+      "to": "n_376",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_378",
+      "to": "n_376",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_379",
+      "to": "n_380",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_379",
+      "to": "n_381",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_382",
+      "to": "n_383",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-12_seg1"
+      ]
+    },
+    {
+      "from": "n_384",
+      "to": "n_385",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_386",
+      "to": "n_387",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_388",
+      "to": "n_389",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_390",
+      "to": "n_391",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_392",
+      "to": "n_393",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-13_seg0"
+      ]
+    },
+    {
+      "from": "n_394",
+      "to": "n_395",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_396",
+      "to": "n_397",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_398",
+      "to": "n_399",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_400",
+      "to": "n_401",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-13_seg1"
+      ]
+    },
+    {
+      "from": "n_402",
+      "to": "n_403",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_404",
+      "to": "n_405",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_406",
+      "to": "n_407",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_408",
+      "to": "n_409",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_410",
+      "to": "n_411",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_412",
+      "to": "n_413",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-14_seg0"
+      ]
+    },
+    {
+      "from": "n_414",
+      "to": "n_415",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "from": "n_415",
+      "to": "n_416",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "from": "n_417",
+      "to": "n_418",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "from": "n_419",
+      "to": "n_420",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-14_seg1"
+      ]
+    },
+    {
+      "from": "n_421",
+      "to": "n_422",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "from": "n_423",
+      "to": "n_422",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "from": "n_424",
+      "to": "n_425",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "from": "n_426",
+      "to": "n_427",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-15_seg0"
+      ]
+    },
+    {
+      "from": "n_428",
+      "to": "n_429",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "from": "n_430",
+      "to": "n_431",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "from": "n_432",
+      "to": "n_433",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-15_seg1"
+      ]
+    },
+    {
+      "from": "n_434",
+      "to": "n_435",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "from": "n_436",
+      "to": "n_437",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "from": "n_438",
+      "to": "n_439",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "substack-16_seg0"
+      ]
+    },
+    {
+      "from": "n_440",
+      "to": "n_441",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "from": "n_442",
+      "to": "n_443",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "from": "n_444",
+      "to": "n_445",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "from": "n_446",
+      "to": "n_447",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "substack-16_seg1"
+      ]
+    },
+    {
+      "from": "n_448",
+      "to": "n_449",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_450",
+      "to": "n_451",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_452",
+      "to": "n_453",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_452",
+      "to": "n_454",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_455",
+      "to": "n_456",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-17_seg0"
+      ]
+    },
+    {
+      "from": "n_457",
+      "to": "n_458",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "from": "n_459",
+      "to": "n_460",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "from": "n_461",
+      "to": "n_460",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-17_seg1"
+      ]
+    },
+    {
+      "from": "n_462",
+      "to": "n_463",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_464",
+      "to": "n_465",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_466",
+      "to": "n_467",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_468",
+      "to": "n_469",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_470",
+      "to": "n_471",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_472",
+      "to": "n_473",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_474",
+      "to": "n_475",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-18_seg0"
+      ]
+    },
+    {
+      "from": "n_476",
+      "to": "n_477",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_478",
+      "to": "n_479",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_480",
+      "to": "n_481",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_482",
+      "to": "n_483",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-18_seg1"
+      ]
+    },
+    {
+      "from": "n_484",
+      "to": "n_485",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "from": "n_486",
+      "to": "n_487",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "from": "n_488",
+      "to": "n_489",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "from": "n_490",
+      "to": "n_491",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "substack-19_seg0"
+      ]
+    },
+    {
+      "from": "n_492",
+      "to": "n_493",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "substack-19_seg1"
+      ]
+    },
+    {
+      "from": "n_494",
+      "to": "n_495",
+      "polarity": 1,
+      "confidence": 0.65,
+      "sourceChunks": [
+        "substack-19_seg1"
+      ]
+    }
+  ],
+  "extractedAt": "2026-03-04T11:35:53.744Z"
+}

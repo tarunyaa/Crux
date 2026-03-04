@@ -1,6 +1,7 @@
 // ─── Core Types for Dialogue Layer ───────────────────────────
 
 import type { DisagreementCandidate, CruxCard, CruxMessage } from '@/lib/crux/types'
+import type { Persona, PersonaContract } from '@/lib/types'
 
 export type PersonaId = string
 
@@ -27,6 +28,8 @@ export interface DialogueConfig {
   personaIds: PersonaId[]
   maxMessages?: number         // Default: 50
   maxDurationMs?: number       // Default: 5 minutes
+  // Pre-loaded persona data for benchmark use (skips file-based loading)
+  preloadedPersonas?: Map<PersonaId, { persona: Persona; contract: PersonaContract }>
 }
 
 // ─── Panel Debate Types ──────────────────────────────────────

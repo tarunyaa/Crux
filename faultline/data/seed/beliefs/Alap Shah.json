@@ -1,0 +1,1752 @@
+{
+  "personaId": "Alap Shah",
+  "personaName": "Alap Shah",
+  "nodes": [
+    {
+      "id": "n_0",
+      "concept": "companies being late to a realization",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027151367572173121"
+      ]
+    },
+    {
+      "id": "n_1",
+      "concept": "need for structural changes",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027151367572173121"
+      ]
+    },
+    {
+      "id": "n_2",
+      "concept": "passage of time (within next year)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027151367572173121"
+      ]
+    },
+    {
+      "id": "n_3",
+      "concept": "majority of companies reaching the same conclusion",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027151367572173121"
+      ]
+    },
+    {
+      "id": "n_4",
+      "concept": "companies reaching the same conclusion",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027151367572173121"
+      ]
+    },
+    {
+      "id": "n_5",
+      "concept": "companies making similar structural changes",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027151367572173121"
+      ]
+    },
+    {
+      "id": "n_6",
+      "concept": "Block's ability to lower prices through drastic layoffs",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027150758458585509"
+      ]
+    },
+    {
+      "id": "n_7",
+      "concept": "Block's competitive positioning",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027150758458585509"
+      ]
+    },
+    {
+      "id": "n_8",
+      "concept": "competitors not following Block's drastic layoffs",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027150758458585509"
+      ]
+    },
+    {
+      "id": "n_9",
+      "concept": "competitors' competitive position becoming impaired",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027150758458585509"
+      ]
+    },
+    {
+      "id": "n_10",
+      "concept": "competitive dynamics",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027150758458585509"
+      ]
+    },
+    {
+      "id": "n_11",
+      "concept": "competitors forced to match drastic layoffs or face competitive disadvantage",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2027150758458585509"
+      ]
+    },
+    {
+      "id": "n_12",
+      "concept": "AI's progress",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027141316526665869"
+      ]
+    },
+    {
+      "id": "n_13",
+      "concept": "large-scale workforce layoffs (40% cuts)",
+      "type": "inference",
+      "grounding": [
+        "tweet-2027141316526665869"
+      ]
+    },
+    {
+      "id": "n_14",
+      "concept": "changes related to AI progress",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027141316526665869"
+      ]
+    },
+    {
+      "id": "n_15",
+      "concept": "global intelligence crisis",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2027141316526665869"
+      ]
+    },
+    {
+      "id": "n_16",
+      "concept": "agent use requiring data access restrictions/upcharges",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026748392152682940"
+      ]
+    },
+    {
+      "id": "n_17",
+      "concept": "customer incentive to keep local copy of SOR data",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026748392152682940"
+      ]
+    },
+    {
+      "id": "n_18",
+      "concept": "gap between signup promise (data ownership/portability) and agent use reality (access restrictions/upcharges)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026748392152682940"
+      ]
+    },
+    {
+      "id": "n_19",
+      "concept": "bear case for SOR incumbents",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026748392152682940"
+      ]
+    },
+    {
+      "id": "n_20",
+      "concept": "restaurants paying DoorDash commission fees",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026723752759722396"
+      ]
+    },
+    {
+      "id": "n_21",
+      "concept": "restaurants' dissatisfaction with aggregators",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026723752759722396"
+      ]
+    },
+    {
+      "id": "n_22",
+      "concept": "agent to restaurant direct transactions",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026723752759722396"
+      ]
+    },
+    {
+      "id": "n_23",
+      "concept": "threat to aggregator business models",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026723752759722396"
+      ]
+    },
+    {
+      "id": "n_24",
+      "concept": "restaurants having direct transaction option",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026723752759722396"
+      ]
+    },
+    {
+      "id": "n_25",
+      "concept": "restaurants' willingness to reduce aggregator dependence",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026723752759722396"
+      ]
+    },
+    {
+      "id": "n_26",
+      "concept": "getting policy right",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026422942180008077"
+      ]
+    },
+    {
+      "id": "n_27",
+      "concept": "new businesses and business models blooming",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026422942180008077"
+      ]
+    },
+    {
+      "id": "n_28",
+      "concept": "owning the demand relationship (when user tells ChatGPT to order food)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026421032802988526"
+      ]
+    },
+    {
+      "id": "n_29",
+      "concept": "ability to auction fulfillment across multiple platforms",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026421032802988526"
+      ]
+    },
+    {
+      "id": "n_30",
+      "concept": "auctioning fulfillment across multiple platforms",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026421032802988526"
+      ]
+    },
+    {
+      "id": "n_31",
+      "concept": "competitive fulfillment options for users",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026421032802988526"
+      ]
+    },
+    {
+      "id": "n_32",
+      "concept": "ChatGPT, Gemini, or Claude aggregating sufficient demand",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026418392337625497"
+      ]
+    },
+    {
+      "id": "n_33",
+      "concept": "creation of demand auctions",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026418392337625497"
+      ]
+    },
+    {
+      "id": "n_34",
+      "concept": "seamless lowest cost agentic transactions",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026418392337625497"
+      ]
+    },
+    {
+      "id": "n_35",
+      "concept": "demand creation",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026418392337625497"
+      ]
+    },
+    {
+      "id": "n_36",
+      "concept": "demand auctions being created by AI systems",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026418392337625497"
+      ]
+    },
+    {
+      "id": "n_37",
+      "concept": "building of products/services",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026418392337625497"
+      ]
+    },
+    {
+      "id": "n_38",
+      "concept": "transition from phone app UI ordering to agentic AI ordering",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026379925721329679"
+      ]
+    },
+    {
+      "id": "n_39",
+      "concept": "changes in marketplace dynamics and ordering behavior",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026379925721329679"
+      ]
+    },
+    {
+      "id": "n_40",
+      "concept": "reading part 1 of The Global Intelligence Crisis",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026334638721909069"
+      ]
+    },
+    {
+      "id": "n_41",
+      "concept": "understanding the authors' articulation",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026334638721909069"
+      ]
+    },
+    {
+      "id": "n_42",
+      "concept": "linking micro losses in specific contexts",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026334638721909069"
+      ]
+    },
+    {
+      "id": "n_43",
+      "concept": "originality of the piece",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026334638721909069"
+      ]
+    },
+    {
+      "id": "n_44",
+      "concept": "AI platforms (ChatGPT, Gemini) controlling demand via auctions",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026093838406746413"
+      ]
+    },
+    {
+      "id": "n_45",
+      "concept": "new startups owning direct customer relationships",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026093838406746413"
+      ]
+    },
+    {
+      "id": "n_46",
+      "concept": "restaurants and drivers working directly with AI platforms for orders",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026093838406746413"
+      ]
+    },
+    {
+      "id": "n_47",
+      "concept": "restaurants becoming among the biggest winners",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026093838406746413"
+      ]
+    },
+    {
+      "id": "n_48",
+      "concept": "shift to AI-mediated demand auctions model",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026093838406746413"
+      ]
+    },
+    {
+      "id": "n_49",
+      "concept": "restaurants gaining increased value/power",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026093838406746413"
+      ]
+    },
+    {
+      "id": "n_50",
+      "concept": "sufficient liquidity on both sides of demand marketplace",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026084420847804746"
+      ]
+    },
+    {
+      "id": "n_51",
+      "concept": "lowest cost bidder becomes fulfiller",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026084420847804746"
+      ]
+    },
+    {
+      "id": "n_52",
+      "concept": "lowest cost bidder fulfilling orders",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026084420847804746"
+      ]
+    },
+    {
+      "id": "n_53",
+      "concept": "Joe's Pizza remains the fulfiller for Joe's Pizza slices",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026084420847804746"
+      ]
+    },
+    {
+      "id": "n_54",
+      "concept": "relying on Gemini and ChatGPT with third-party pizza joints",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026084420847804746"
+      ]
+    },
+    {
+      "id": "n_55",
+      "concept": "quality execution",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026084420847804746"
+      ]
+    },
+    {
+      "id": "n_56",
+      "concept": "ChatGPT and Gemini allowing users to prompt 'order me a pepperoni pie from Joe's'",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026080266788245668"
+      ]
+    },
+    {
+      "id": "n_57",
+      "concept": "DoorDash's business viability",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026080266788245668"
+      ]
+    },
+    {
+      "id": "n_58",
+      "concept": "AI assistants integrating direct ordering capabilities",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026080266788245668"
+      ]
+    },
+    {
+      "id": "n_59",
+      "concept": "disruption to DoorDash's current business model",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026080266788245668"
+      ]
+    },
+    {
+      "id": "n_60",
+      "concept": "agentic AI",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026079098934587580"
+      ]
+    },
+    {
+      "id": "n_61",
+      "concept": "white-collar job loss",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026079098934587580"
+      ]
+    },
+    {
+      "id": "n_62",
+      "concept": "labor market weakness",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026079098934587580"
+      ]
+    },
+    {
+      "id": "n_63",
+      "concept": "5% of white-collar jobs disappearing",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026078154519916711"
+      ]
+    },
+    {
+      "id": "n_64",
+      "concept": "remaining workers retrench spending",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026078154519916711"
+      ]
+    },
+    {
+      "id": "n_65",
+      "concept": "worker spending retrenchment from job loss fears",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026078154519916711"
+      ]
+    },
+    {
+      "id": "n_66",
+      "concept": "effectiveness of fed policy alone in managing aggregate demand",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026078154519916711"
+      ]
+    },
+    {
+      "id": "n_67",
+      "concept": "fiscal and monetary policy coordination",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026078154519916711"
+      ]
+    },
+    {
+      "id": "n_68",
+      "concept": "control over aggregate demand",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026078154519916711"
+      ]
+    },
+    {
+      "id": "n_69",
+      "concept": "AI apps receiving agentic demand from users to order services",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026072310277706152"
+      ]
+    },
+    {
+      "id": "n_70",
+      "concept": "creation of demand auction marketplaces",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026072310277706152"
+      ]
+    },
+    {
+      "id": "n_71",
+      "concept": "creation of demand auction marketplaces by AI platforms",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026072310277706152"
+      ]
+    },
+    {
+      "id": "n_72",
+      "concept": "restaurants signing up to transact directly with platforms",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026072310277706152"
+      ]
+    },
+    {
+      "id": "n_73",
+      "concept": "better economics on a platform",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026071486490915196"
+      ]
+    },
+    {
+      "id": "n_74",
+      "concept": "Uber/Lyft drivers gravitating to that platform",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026071486490915196"
+      ]
+    },
+    {
+      "id": "n_75",
+      "concept": "AI apps executing transactions for users",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026071486490915196"
+      ]
+    },
+    {
+      "id": "n_76",
+      "concept": "AI apps building their own demand auction marketplaces",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026071486490915196"
+      ]
+    },
+    {
+      "id": "n_77",
+      "concept": "drivers signing up to those marketplaces",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026071486490915196"
+      ]
+    },
+    {
+      "id": "n_78",
+      "concept": "drivers of potential job losses",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026068780313350521"
+      ]
+    },
+    {
+      "id": "n_79",
+      "concept": "job losses",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026068780313350521"
+      ]
+    },
+    {
+      "id": "n_80",
+      "concept": "AI productivity",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026068409721798878"
+      ]
+    },
+    {
+      "id": "n_81",
+      "concept": "having the wherewithal (resources/capability)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026068409721798878"
+      ]
+    },
+    {
+      "id": "n_82",
+      "concept": "strong technology/ability",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026068409721798878"
+      ]
+    },
+    {
+      "id": "n_83",
+      "concept": "ability to nail policy response",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026068409721798878"
+      ]
+    },
+    {
+      "id": "n_84",
+      "concept": "policy response success during Covid",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026068409721798878"
+      ]
+    },
+    {
+      "id": "n_85",
+      "concept": "excessive stimulus spending",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026068409721798878"
+      ]
+    },
+    {
+      "id": "n_86",
+      "concept": "AI apps handling demand side work",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "id": "n_87",
+      "concept": "reduced barrier to compete with DoorDash",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "id": "n_88",
+      "concept": "need to replicate demand and supply sides",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "id": "n_89",
+      "concept": "ability to replicate marketplaces like DoorDash or Amex",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "id": "n_90",
+      "concept": "direct restaurant entry into delivery market",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "id": "n_91",
+      "concept": "competitive threat to DoorDash",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "id": "n_92",
+      "concept": "building driver and restaurant network",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "id": "n_93",
+      "concept": "ability to compete with DoorDash",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "id": "n_94",
+      "concept": "5% displacement of white-collar workers",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026052287789994220"
+      ]
+    },
+    {
+      "id": "n_95",
+      "concept": "huge knock-on effect",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026052287789994220"
+      ]
+    },
+    {
+      "id": "n_96",
+      "concept": "uncertainty about where labor can reallocate to",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026052057363333133"
+      ]
+    },
+    {
+      "id": "n_97",
+      "concept": "risk to collective economic strategy",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026052057363333133"
+      ]
+    },
+    {
+      "id": "n_98",
+      "concept": "use of agents",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026042646288814230"
+      ]
+    },
+    {
+      "id": "n_99",
+      "concept": "overall labor market impact",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026042646288814230"
+      ]
+    },
+    {
+      "id": "n_100",
+      "concept": "AI agents (Gemini/ChatGPT) capable of ordering services",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026027388446896213"
+      ]
+    },
+    {
+      "id": "n_101",
+      "concept": "orders routed to lowest-cost provider",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026027388446896213"
+      ]
+    },
+    {
+      "id": "n_102",
+      "concept": "high percentage of orders via AI agents (40% by 2028)",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026027388446896213"
+      ]
+    },
+    {
+      "id": "n_103",
+      "concept": "price competition/cost-driven selection among service providers",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2026027388446896213"
+      ]
+    },
+    {
+      "id": "n_104",
+      "concept": "corporates catching up in agent technology",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026016122307223822"
+      ]
+    },
+    {
+      "id": "n_105",
+      "concept": "economic impact/change",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026016122307223822"
+      ]
+    },
+    {
+      "id": "n_106",
+      "concept": "AI causes worker displacement (even 5%)",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026010298109608382"
+      ]
+    },
+    {
+      "id": "n_107",
+      "concept": "workers forced into shrinking job pool",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026010298109608382"
+      ]
+    },
+    {
+      "id": "n_108",
+      "concept": "marginal wages driven down",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2026010298109608382"
+      ]
+    },
+    {
+      "id": "n_109",
+      "concept": "AI-caused worker displacement",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026010298109608382"
+      ]
+    },
+    {
+      "id": "n_110",
+      "concept": "downward wage pressure across economy",
+      "type": "inference",
+      "grounding": [
+        "tweet-2026010298109608382"
+      ]
+    },
+    {
+      "id": "n_111",
+      "concept": "AI advancement",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "id": "n_112",
+      "concept": "job displacement",
+      "type": "factual_claim",
+      "grounding": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "id": "n_113",
+      "concept": "job displacement from AI",
+      "type": "inference",
+      "grounding": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "id": "n_114",
+      "concept": "financial crisis/conflagration",
+      "type": "inference",
+      "grounding": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "id": "n_115",
+      "concept": "society-wide policy dialogue on AI",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "id": "n_116",
+      "concept": "ability to manage AI risks",
+      "type": "assumption",
+      "grounding": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "id": "n_117",
+      "concept": "swift collective action on AI policy",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "id": "n_118",
+      "concept": "preventing financial/social harm from AI",
+      "type": "core_value",
+      "grounding": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "id": "n_119",
+      "concept": "agentic AI capability jump",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_120",
+      "concept": "economic and social disruption",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_121",
+      "concept": "AI as direct substitute for human cognitive labor",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_122",
+      "concept": "displacement of white-collar workers",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_123",
+      "concept": "white-collar worker displacement",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_124",
+      "concept": "absorption by new markets",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_125",
+      "concept": "human intelligence scarcity and expense",
+      "type": "assumption",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_126",
+      "concept": "economic system foundation",
+      "type": "assumption",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_127",
+      "concept": "agentic AI maturation in 2026",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_128",
+      "concept": "collapse of human intelligence scarcity assumption",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_129",
+      "concept": "devaluation of white-collar work",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "id": "n_130",
+      "concept": "surging AI progress and capital",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_131",
+      "concept": "economic displacement acceleration",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_132",
+      "concept": "economic displacement from AI",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_133",
+      "concept": "economic shock exceeding Industrial Revolution/Financial Crisis/pandemic",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_134",
+      "concept": "lack of urgent policy action",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_135",
+      "concept": "significant financial crisis in next two years",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_136",
+      "concept": "agentic AI advancement",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "id": "n_137",
+      "concept": "fundamental threat to jobs and current economic model",
+      "type": "factual_claim",
+      "grounding": [
+        "substack-0_seg1"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "n_0",
+      "to": "n_1",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027151367572173121"
+      ]
+    },
+    {
+      "from": "n_2",
+      "to": "n_3",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2027151367572173121"
+      ]
+    },
+    {
+      "from": "n_4",
+      "to": "n_5",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027151367572173121"
+      ]
+    },
+    {
+      "from": "n_6",
+      "to": "n_7",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2027150758458585509"
+      ]
+    },
+    {
+      "from": "n_8",
+      "to": "n_9",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2027150758458585509"
+      ]
+    },
+    {
+      "from": "n_10",
+      "to": "n_11",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2027150758458585509"
+      ]
+    },
+    {
+      "from": "n_12",
+      "to": "n_13",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2027141316526665869"
+      ]
+    },
+    {
+      "from": "n_14",
+      "to": "n_15",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2027141316526665869"
+      ]
+    },
+    {
+      "from": "n_16",
+      "to": "n_17",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026748392152682940"
+      ]
+    },
+    {
+      "from": "n_18",
+      "to": "n_19",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026748392152682940"
+      ]
+    },
+    {
+      "from": "n_20",
+      "to": "n_21",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026723752759722396"
+      ]
+    },
+    {
+      "from": "n_22",
+      "to": "n_23",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026723752759722396"
+      ]
+    },
+    {
+      "from": "n_24",
+      "to": "n_25",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026723752759722396"
+      ]
+    },
+    {
+      "from": "n_26",
+      "to": "n_27",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026422942180008077"
+      ]
+    },
+    {
+      "from": "n_28",
+      "to": "n_29",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2026421032802988526"
+      ]
+    },
+    {
+      "from": "n_30",
+      "to": "n_31",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026421032802988526"
+      ]
+    },
+    {
+      "from": "n_32",
+      "to": "n_33",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026418392337625497"
+      ]
+    },
+    {
+      "from": "n_34",
+      "to": "n_35",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026418392337625497"
+      ]
+    },
+    {
+      "from": "n_36",
+      "to": "n_37",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026418392337625497"
+      ]
+    },
+    {
+      "from": "n_38",
+      "to": "n_39",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026379925721329679"
+      ]
+    },
+    {
+      "from": "n_40",
+      "to": "n_41",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026334638721909069"
+      ]
+    },
+    {
+      "from": "n_42",
+      "to": "n_43",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026334638721909069"
+      ]
+    },
+    {
+      "from": "n_44",
+      "to": "n_45",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026093838406746413"
+      ]
+    },
+    {
+      "from": "n_46",
+      "to": "n_47",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026093838406746413"
+      ]
+    },
+    {
+      "from": "n_48",
+      "to": "n_49",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026093838406746413"
+      ]
+    },
+    {
+      "from": "n_50",
+      "to": "n_51",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026084420847804746"
+      ]
+    },
+    {
+      "from": "n_52",
+      "to": "n_53",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026084420847804746"
+      ]
+    },
+    {
+      "from": "n_54",
+      "to": "n_55",
+      "polarity": -1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026084420847804746"
+      ]
+    },
+    {
+      "from": "n_56",
+      "to": "n_57",
+      "polarity": -1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026080266788245668"
+      ]
+    },
+    {
+      "from": "n_58",
+      "to": "n_59",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026080266788245668"
+      ]
+    },
+    {
+      "from": "n_60",
+      "to": "n_61",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2026079098934587580"
+      ]
+    },
+    {
+      "from": "n_62",
+      "to": "n_61",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026079098934587580"
+      ]
+    },
+    {
+      "from": "n_63",
+      "to": "n_64",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026078154519916711"
+      ]
+    },
+    {
+      "from": "n_65",
+      "to": "n_66",
+      "polarity": -1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026078154519916711"
+      ]
+    },
+    {
+      "from": "n_67",
+      "to": "n_68",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026078154519916711"
+      ]
+    },
+    {
+      "from": "n_69",
+      "to": "n_70",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026072310277706152"
+      ]
+    },
+    {
+      "from": "n_71",
+      "to": "n_72",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026072310277706152"
+      ]
+    },
+    {
+      "from": "n_73",
+      "to": "n_74",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026071486490915196"
+      ]
+    },
+    {
+      "from": "n_75",
+      "to": "n_76",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026071486490915196"
+      ]
+    },
+    {
+      "from": "n_76",
+      "to": "n_77",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026071486490915196"
+      ]
+    },
+    {
+      "from": "n_78",
+      "to": "n_79",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026068780313350521"
+      ]
+    },
+    {
+      "from": "n_80",
+      "to": "n_81",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026068409721798878"
+      ]
+    },
+    {
+      "from": "n_82",
+      "to": "n_83",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026068409721798878"
+      ]
+    },
+    {
+      "from": "n_84",
+      "to": "n_85",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026068409721798878"
+      ]
+    },
+    {
+      "from": "n_86",
+      "to": "n_87",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "from": "n_88",
+      "to": "n_89",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "from": "n_90",
+      "to": "n_91",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "from": "n_92",
+      "to": "n_93",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026065792719061214"
+      ]
+    },
+    {
+      "from": "n_94",
+      "to": "n_95",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026052287789994220"
+      ]
+    },
+    {
+      "from": "n_96",
+      "to": "n_97",
+      "polarity": 1,
+      "confidence": 0.7,
+      "sourceChunks": [
+        "tweet-2026052057363333133"
+      ]
+    },
+    {
+      "from": "n_98",
+      "to": "n_99",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2026042646288814230"
+      ]
+    },
+    {
+      "from": "n_100",
+      "to": "n_101",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026027388446896213"
+      ]
+    },
+    {
+      "from": "n_102",
+      "to": "n_103",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2026027388446896213"
+      ]
+    },
+    {
+      "from": "n_104",
+      "to": "n_105",
+      "polarity": 1,
+      "confidence": 0.6,
+      "sourceChunks": [
+        "tweet-2026016122307223822"
+      ]
+    },
+    {
+      "from": "n_106",
+      "to": "n_107",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "tweet-2026010298109608382"
+      ]
+    },
+    {
+      "from": "n_107",
+      "to": "n_108",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2026010298109608382"
+      ]
+    },
+    {
+      "from": "n_109",
+      "to": "n_110",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2026010298109608382"
+      ]
+    },
+    {
+      "from": "n_111",
+      "to": "n_112",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "from": "n_113",
+      "to": "n_114",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "from": "n_115",
+      "to": "n_116",
+      "polarity": 1,
+      "confidence": 0.8,
+      "sourceChunks": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "from": "n_117",
+      "to": "n_118",
+      "polarity": 1,
+      "confidence": 0.75,
+      "sourceChunks": [
+        "tweet-2025781039449219440"
+      ]
+    },
+    {
+      "from": "n_119",
+      "to": "n_120",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_121",
+      "to": "n_122",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_123",
+      "to": "n_124",
+      "polarity": -1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_125",
+      "to": "n_126",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_127",
+      "to": "n_128",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_121",
+      "to": "n_129",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-0_seg0"
+      ]
+    },
+    {
+      "from": "n_130",
+      "to": "n_131",
+      "polarity": 1,
+      "confidence": 0.95,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_132",
+      "to": "n_133",
+      "polarity": 1,
+      "confidence": 0.85,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_134",
+      "to": "n_135",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    },
+    {
+      "from": "n_136",
+      "to": "n_137",
+      "polarity": 1,
+      "confidence": 0.9,
+      "sourceChunks": [
+        "substack-0_seg1"
+      ]
+    }
+  ],
+  "extractedAt": "2026-03-04T10:57:39.849Z"
+}
