@@ -171,12 +171,17 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
   const activeSpeakerDisplay = activeSpeaker ? (expertNames.get(activeSpeaker) ?? activeSpeaker) : null
 
   const runComparison = async () => {
-    setBaselinesRunning(true)
+    if (!state.arenaDebateId) return
+    setComparisonRunning(true)
     try {
-      const res = await fetch('/api/argument/baselines', {
+      const res = await fetch('/api/arena/run', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: config.topic }),
+        body: JSON.stringify({
+          topic: config.topic,
+          existingDebateId: state.arenaDebateId,
+          methods: ['direct_crux', 'cot_crux', 'multiagent_crux'],
+        }),
       })
       if (!res.ok) return
       const reader = res.body?.getReader()
@@ -193,24 +198,31 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
           if (!line.startsWith('data: ')) continue
           try {
             const event = JSON.parse(line.slice(6))
-            if (event.type === 'baseline_result') {
-              const d = event.data
-              setLocalBaselineResults(prev => [...prev, {
+            if (event.type === 'method_complete') {
+              const d = event.data as {
+                method: ArenaMethod
+                crux_cards: ArenaOutput['cruxCards']
+                model: string
+                runtime_ms: number
+                token_usage: Record<string, number>
+              }
+              setArenaOutputs(prev => [...prev, {
+                id: crypto.randomUUID(),
+                debateId: state.arenaDebateId ?? '',
                 method: d.method,
-                label: d.label,
-                answer: d.answer,
-                reasoning: d.reasoning,
-                mainTask: d.main_task,
-                tokenUsage: d.token_usage,
-                error: d.error,
+                cruxCards: d.crux_cards ?? [],
+                tokenUsage: d.token_usage ?? {},
+                runtimeMs: d.runtime_ms ?? 0,
+                model: d.model,
+                costUsd: null,
               }])
             }
           } catch { /* skip */ }
         }
       }
-      setBaselinesRan(true)
+      setComparisonRan(true)
     } finally {
-      setBaselinesRunning(false)
+      setComparisonRunning(false)
     }
   }
 
@@ -516,34 +528,57 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
                 <div className="rounded-xl border border-card-border bg-surface overflow-hidden">
                   <div className="px-4 py-3 flex items-center gap-2 border-b border-card-border">
                     <span className="text-foreground/20 text-[10px]">♦</span>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-foreground flex-1">Baseline Benchmarks</span>
-                    {localBaselineResults.length > 0 && (
-                      <span className="text-[10px] text-muted">{localBaselineResults.length} methods</span>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-foreground flex-1">Baseline Crux Methods</span>
+                    {arenaOutputs.length > 0 && state.arenaDebateId && (
+                      <a
+                        href={`/arena?debate=${state.arenaDebateId}`}
+                        className="text-[10px] text-accent hover:text-foreground transition-colors"
+                      >
+                        View in CruxBench &rarr;
+                      </a>
                     )}
                   </div>
                   <div className="px-4 pb-4">
-                    {localBaselineResults.length > 0 ? (
-                      <MethodComparison
-                        results={localBaselineResults}
-                        consensus={state.consensus}
-                        topic={config.topic}
-                      />
+                    {arenaOutputs.length > 0 ? (
+                      <div className="space-y-6 pt-4">
+                        {arenaOutputs.map(output => (
+                          <div key={output.method} className="space-y-3">
+                            <div className="flex items-center gap-2 pb-1 border-b border-card-border">
+                              <span className="text-xs font-semibold text-foreground">
+                                {ARENA_METHOD_LABELS[output.method] ?? output.method}
+                              </span>
+                              <span className="text-[10px] font-mono text-muted">{output.model}</span>
+                              <span className="text-[10px] text-muted ml-auto">
+                                {output.runtimeMs >= 60000
+                                  ? `${(output.runtimeMs / 60000).toFixed(1)}m`
+                                  : `${(output.runtimeMs / 1000).toFixed(1)}s`}
+                                {' · '}{output.cruxCards.length} cards
+                              </span>
+                            </div>
+                            <div className="space-y-2">
+                              {output.cruxCards.map((card, i) => (
+                                <CruxCardDisplay key={i} card={card} index={i} showImportance={false} />
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     ) : (
                       <div className="py-6 text-center space-y-3">
                         <p className="text-xs text-muted">
-                          Compare ARGORA against direct prompting and chain-of-thought baselines.
+                          Run Direct, CoT, and Multi-Agent crux extraction on this debate and compare with ARGORA in CruxBench.
                         </p>
-                        {!baselinesRan && (
+                        {!comparisonRan && (
                           <button
                             onClick={runComparison}
-                            disabled={baselinesRunning}
+                            disabled={comparisonRunning || !state.arenaDebateId}
                             className="text-xs border border-accent/60 text-accent hover:bg-accent hover:text-white px-4 py-2 rounded transition-colors disabled:opacity-50"
                           >
-                            {baselinesRunning ? 'Running...' : 'Run Comparison'}
+                            {comparisonRunning ? 'Running...' : 'Run Comparison'}
                           </button>
                         )}
-                        {baselinesRunning && (
-                          <p className="text-[10px] text-muted animate-pulse">Running baseline methods...</p>
+                        {comparisonRunning && (
+                          <p className="text-[10px] text-muted animate-pulse">Extracting cruxes with baseline methods...</p>
                         )}
                       </div>
                     )}

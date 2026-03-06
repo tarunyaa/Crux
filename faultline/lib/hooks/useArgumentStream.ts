@@ -31,8 +31,12 @@ function flattenHierarchy(
   depth: number = 0,
 ): ArgumentMessage[] {
   const messages: ArgumentMessage[] = []
+  const seenStatements = new Set<string>() // deduplicate siblings with identical text
   for (const node of nodes) {
     if (!node.statement) continue
+    const key = node.statement.trim()
+    if (seenStatements.has(key)) continue
+    seenStatements.add(key)
     const expertIndex = experts.indexOf(node.expert)
     const msgType = depth === 0 ? 'main_argument' as const
       : node.relation === 'attack' ? 'attack' as const
