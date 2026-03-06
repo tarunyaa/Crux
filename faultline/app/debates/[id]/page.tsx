@@ -5,8 +5,10 @@ import { hydrateDebateState } from '@/lib/hooks/hydrateDebateState'
 import { hydrateDialogueState } from '@/lib/hooks/hydrateDialogueState'
 import DebateReplay from '@/components/DebateReplay'
 import { DialogueReplay } from '@/components/dialogue/DialogueReplay'
+import { ArgumentReplay } from '@/components/argument/ArgumentReplay'
 import type { SSEEvent, DebateMode } from '@/lib/types'
 import type { DialogueEvent } from '@/lib/dialogue/types'
+import type { ArgumentCompleteData, ArgumentCruxCard } from '@/lib/argument/types'
 
 export const dynamic = 'force-dynamic'
 
@@ -47,6 +49,36 @@ export default async function DebateDetailPage({ params }: PageProps) {
             personaNames={personaNames}
             personaAvatars={personaAvatars}
             state={state}
+            createdAt={row.createdAt.toISOString()}
+          />
+        </div>
+      </div>
+    )
+  }
+
+  // Argument mode
+  if (row.mode === 'argument') {
+    const output = row.output as ArgumentCompleteData & { crux_cards?: ArgumentCruxCard[] }
+
+    const personaNames = new Map<string, string>()
+    const personaAvatars = new Map<string, string>()
+    for (const pid of personaIds) {
+      const p = personaMap.get(pid)
+      if (p) {
+        personaNames.set(pid, p.name)
+        personaAvatars.set(pid, p.twitterPicture ?? '')
+      }
+    }
+
+    return (
+      <div className="min-h-screen px-6 py-12">
+        <div className="mx-auto max-w-4xl">
+          <ArgumentReplay
+            topic={row.topic}
+            personaIds={personaIds}
+            personaNames={personaNames}
+            personaAvatars={personaAvatars}
+            output={output ?? {} as ArgumentCompleteData}
             createdAt={row.createdAt.toISOString()}
           />
         </div>

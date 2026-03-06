@@ -2,6 +2,7 @@
 
 import HexAvatar from '@/components/HexAvatar'
 import type { Stance } from '@/lib/types'
+import type { DivergenceMap } from '@/lib/argument/types'
 
 interface AgentMeta {
   id: string
@@ -19,6 +20,8 @@ interface AgentPolygonProps {
   agents: AgentMeta[]
   messages: AgentMessage[]
   activeSpeakerId: string | null
+  divergenceMap?: DivergenceMap
+  expertNameToPersonaId?: Record<string, string>
 }
 
 interface Point {
@@ -90,7 +93,7 @@ function edgeStyle(score: number): { stroke: string; opacity: number } {
 
 // ─── Component ───────────────────────────────────────────────
 
-export default function AgentPolygon({ agents, messages, activeSpeakerId }: AgentPolygonProps) {
+export default function AgentPolygon({ agents, messages, activeSpeakerId, divergenceMap, expertNameToPersonaId }: AgentPolygonProps) {
   const n = agents.length
   if (n < 2) return null
 
@@ -101,10 +104,24 @@ export default function AgentPolygon({ agents, messages, activeSpeakerId }: Agen
   const vertices = getVertexPositions(n, cx, cy, outerRadius)
   const latestStances = getLatestStances(agents, messages)
 
-  // Radar inner polygon — confidence values
+  // Build reverse map: personaId → expertName
+  const personaIdToExpert: Record<string, string> = {}
+  if (expertNameToPersonaId) {
+    for (const [expertName, personaId] of Object.entries(expertNameToPersonaId)) {
+      personaIdToExpert[personaId] = expertName
+    }
+  }
+
+  // Radar inner polygon — use divergenceMap root_strength when available, else confidence
   const radarPoints = agents.map((agent, i) => {
-    const stance = latestStances.get(agent.id)!
-    const r = stance.confidence * outerRadius
+    let r: number
+    if (divergenceMap) {
+      const expertName = personaIdToExpert[agent.id]
+      r = (expertName ? (divergenceMap.per_expert?.[expertName]?.root_strength ?? 0.5) : 0.5) * outerRadius
+    } else {
+      const stance = latestStances.get(agent.id)!
+      r = stance.confidence * outerRadius
+    }
     const angle = -Math.PI / 2 + (2 * Math.PI * i) / n
     return {
       x: cx + r * Math.cos(angle),
@@ -124,6 +141,22 @@ export default function AgentPolygon({ agents, messages, activeSpeakerId }: Agen
 
   // Last speaker highlight — brighten edges from active speaker
   const lastSpeakerId = activeSpeakerId ?? (messages.length > 0 ? messages[messages.length - 1].personaId : null)
+
+  // Edge style override when divergenceMap is provided
+  function getDivergenceEdgeStyle(i: number, j: number): { stroke: string; opacity: number; strokeWidth: number; dashArray?: string } | null {
+    if (!divergenceMap) return null
+    const expertA = personaIdToExpert[agents[i].id]
+    const expertB = personaIdToExpert[agents[j].id]
+    if (!expertA || !expertB) return null
+    const pair = divergenceMap.pairwise?.find(p =>
+      (p.expert_a === expertA || p.expert_b === expertA) &&
+      (p.expert_a === expertB || p.expert_b === expertB)
+    )
+    if (!pair) return { stroke: 'var(--card-border)', opacity: 0.15, strokeWidth: 1 }
+    if (pair.is_crux) return { stroke: 'var(--accent)', opacity: 0.8, strokeWidth: 2 }
+    if (pair.gap > 0.2) return { stroke: 'var(--muted)', opacity: 0.4, strokeWidth: 1, dashArray: '4 4' }
+    return { stroke: 'var(--card-border)', opacity: 0.15, strokeWidth: 1 }
+  }
 
   return (
     <div className="space-y-3">
@@ -150,6 +183,24 @@ export default function AgentPolygon({ agents, messages, activeSpeakerId }: Agen
 
         {/* Pairwise edges */}
         {edges.map(({ i, j, score }) => {
+          const divStyle = getDivergenceEdgeStyle(i, j)
+          if (divStyle) {
+            const isActive = lastSpeakerId === agents[i].id || lastSpeakerId === agents[j].id
+            return (
+              <line
+                key={`edge-${i}-${j}`}
+                x1={vertices[i].x}
+                y1={vertices[i].y}
+                x2={vertices[j].x}
+                y2={vertices[j].y}
+                stroke={divStyle.stroke}
+                strokeWidth={isActive ? divStyle.strokeWidth + 1 : divStyle.strokeWidth}
+                opacity={isActive ? Math.min(divStyle.opacity + 0.2, 1) : divStyle.opacity}
+                strokeDasharray={divStyle.dashArray}
+                strokeLinecap="round"
+              />
+            )
+          }
           const style = edgeStyle(score)
           // Brighten if last speaker is one of the endpoints
           const isActive = lastSpeakerId === agents[i].id || lastSpeakerId === agents[j].id
@@ -168,7 +219,7 @@ export default function AgentPolygon({ agents, messages, activeSpeakerId }: Agen
           )
         })}
 
-        {/* Inner radar polygon (confidence) */}
+        {/* Inner radar polygon (confidence / root_strength) */}
         {radarPoints.length >= 2 && (
           <path
             d={pointsToSvgPath(radarPoints)}
@@ -181,7 +232,7 @@ export default function AgentPolygon({ agents, messages, activeSpeakerId }: Agen
           />
         )}
 
-        {/* Confidence dots on radar */}
+        {/* Radar dots */}
         {radarPoints.map((p, i) => (
           <circle
             key={`radar-dot-${i}`}
@@ -235,26 +286,47 @@ export default function AgentPolygon({ agents, messages, activeSpeakerId }: Agen
       </div>
 
       {/* Legend */}
-      <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-[10px] text-muted px-1">
-        <div className="flex items-center gap-1.5">
-          <span className="inline-block w-4 h-0.5 rounded-full" style={{ background: 'var(--accent)' }} />
-          <span>Aligned</span>
+      {divergenceMap ? (
+        <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-[10px] text-muted px-1">
+          <div className="flex items-center gap-1.5">
+            <span className="inline-block w-4 h-0.5 rounded-full" style={{ background: 'var(--accent)' }} />
+            <span>Disagreement drivers</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <svg width="16" height="4" viewBox="0 0 16 4">
+              <line x1="0" y1="2" x2="16" y2="2" stroke="var(--muted)" strokeWidth="1" strokeDasharray="4 4" />
+            </svg>
+            <span>Some divergence</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <svg width="14" height="10" viewBox="0 0 14 10">
+              <polygon points="2,1 12,1 12,9 2,9" fill="var(--accent)" fillOpacity={0.15} stroke="var(--accent)" strokeWidth={1} strokeOpacity={0.6} />
+            </svg>
+            <span>Argument strength (&sigma;)</span>
+          </div>
         </div>
-        <div className="flex items-center gap-1.5">
-          <span className="inline-block w-4 h-0.5 rounded-full" style={{ background: 'var(--danger)' }} />
-          <span>Opposed</span>
+      ) : (
+        <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-[10px] text-muted px-1">
+          <div className="flex items-center gap-1.5">
+            <span className="inline-block w-4 h-0.5 rounded-full" style={{ background: 'var(--accent)' }} />
+            <span>Aligned</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="inline-block w-4 h-0.5 rounded-full" style={{ background: 'var(--danger)' }} />
+            <span>Opposed</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <svg width="14" height="10" viewBox="0 0 14 10">
+              <polygon points="2,1 12,1 12,9 2,9" fill="var(--accent)" fillOpacity={0.15} stroke="var(--accent)" strokeWidth={1} strokeOpacity={0.6} />
+            </svg>
+            <span>Confidence</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="inline-block w-2.5 h-2.5 rounded-full" style={{ background: 'var(--accent)', boxShadow: '0 0 6px var(--accent)' }} />
+            <span>Speaking</span>
+          </div>
         </div>
-        <div className="flex items-center gap-1.5">
-          <svg width="14" height="10" viewBox="0 0 14 10">
-            <polygon points="2,1 12,1 12,9 2,9" fill="var(--accent)" fillOpacity={0.15} stroke="var(--accent)" strokeWidth={1} strokeOpacity={0.6} />
-          </svg>
-          <span>Confidence</span>
-        </div>
-        <div className="flex items-center gap-1.5">
-          <span className="inline-block w-2.5 h-2.5 rounded-full" style={{ background: 'var(--accent)', boxShadow: '0 0 6px var(--accent)' }} />
-          <span>Speaking</span>
-        </div>
-      </div>
+      )}
     </div>
   )
 }

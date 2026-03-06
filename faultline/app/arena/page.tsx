@@ -25,12 +25,14 @@ export default async function ArenaPage({ searchParams }: Props) {
   // If linking to a specific debate, load its outputs for voting
   let initialDebateId: string | undefined
   let initialOutputs = undefined
+  let initialTopic: string | undefined
 
   if (debateId) {
     const result = await getArenaDebate(debateId)
     if (result) {
       initialDebateId = debateId
       initialOutputs = result.outputs
+      initialTopic = result.debate.topic
     }
   }
 
@@ -40,6 +42,7 @@ export default async function ArenaPage({ searchParams }: Props) {
       initialDebates={debates}
       initialDebateId={initialDebateId}
       initialOutputs={initialOutputs}
+      initialTopic={initialTopic}
     />
   )
 }

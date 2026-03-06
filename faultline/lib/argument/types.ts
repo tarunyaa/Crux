@@ -8,6 +8,7 @@ export interface ArgumentEvent {
 export type ArgumentEventType =
   | 'argument_start'
   | 'experts_generated'
+  | 'argument_posted'
   | 'progress_argument_posted'
   | 'main_arguments_generated'
   | 'level1_complete'
@@ -31,6 +32,15 @@ export type ArgumentEventType =
   | 'progress_graph_debate_complete'
   | 'progress_scoring_complete'
   | 'progress_counterfactual_complete'
+  | 'flip_conditions'
+  | 'crux_cards_extracted'
+  | 'divergence_computed'
+  | 'cross_facet_analysis'
+  | 'facets_decomposed'
+  | 'facet_start'
+  | 'facet_complete'
+  | 'saved'
+  | 'arena_saved'
   | 'error';
 
 export interface TaskInfo {
@@ -151,17 +161,77 @@ export interface ReportData {
   argument_count?: number;
 }
 
+export interface ArgumentCruxCard {
+  question: string;
+  crux_type: 'evidence' | 'values' | 'definition' | 'horizon' | 'claim' | 'premise';
+  importance: number;
+  winner_critical: boolean;
+  flip_mechanism: string;
+  expert: string;
+  delta: number;
+}
+
+export interface FlipCondition {
+  statement: string;
+  expert: string;
+  delta: number;
+  winner_critical: boolean;
+  main_argument: string;
+}
+
+export interface CrossFacetTableRow {
+  facet: string;
+  winner_expert: string | null;
+  winner_score: number | null;
+  margin: number | null;
+  attack_count: number;
+  top_flip_condition: string;
+  top_flip_delta: number | null;
+  top_flip_winner_critical: boolean;
+}
+
+export interface CrossFacetSynthesis {
+  convergence_facets: string[];
+  divergence_facets: string[];
+  cross_cutting_fault_lines: string[];
+  most_contested_facet: string;
+  most_fragile_position: string;
+  error?: string;
+}
+
+export interface CrossFacetAnalysis {
+  table: CrossFacetTableRow[];
+  synthesis: CrossFacetSynthesis;
+}
+
+export interface DivergenceMap {
+  consensus_facets: string[];
+  crux_facets: string[];
+  per_expert: Record<string, { root_strength: number; support_count: number; attack_count: number }>;
+  pairwise: Array<{ expert_a: string; expert_b: string; gap: number; is_crux: boolean }>;
+}
+
+export interface FacetInfo {
+  questions: string[];
+  active_index: number;
+  completed: number[];
+}
+
 export interface ArgumentCompleteData {
   topic: string;
   experts: string[];
-  task: TaskInfo;
-  main_arguments: MainArgument[];
-  qbaf_strengths: QBAFStrength[];
-  counterfactual: CounterfactualData;
-  consensus: ConsensusData;
-  report: ReportData;
-  token_usage: Record<string, unknown>;
-  runtime: Record<string, unknown>;
+  task?: TaskInfo;
+  main_arguments?: MainArgument[];
+  qbaf_strengths?: QBAFStrength[];
+  flip_conditions?: FlipCondition[];
+  consensus?: ConsensusData;
+  token_usage?: Record<string, unknown>;
+  runtime?: Record<string, unknown>;
+  crux_cards?: ArgumentCruxCard[];
+  mode?: 'single' | 'faceted';
+  facets?: string[];
+  facet_count?: number;
+  total_crux_cards?: number;
 }
 
 // Baseline comparison types
@@ -212,7 +282,7 @@ export interface PositionInfo {
 }
 
 export interface ArgumentState {
-  phase: 'idle' | 'starting' | 'experts' | 'arguments' | 'building' | 'scoring' | 'evaluating' | 'analyzing' | 'baselines' | 'complete' | 'error';
+  phase: 'idle' | 'starting' | 'experts' | 'arguments' | 'building' | 'scoring' | 'evaluating' | 'analyzing' | 'crux_extraction' | 'baselines' | 'complete' | 'error';
   topic: string;
   experts: string[];
   task: TaskInfo | null;
@@ -229,6 +299,13 @@ export interface ArgumentState {
   framedTopic: string | null;
   positions: PositionInfo[];
   streamingArgs: StreamingArg[];
+  cruxCards: ArgumentCruxCard[];
+  divergenceMap: DivergenceMap | null;
+  flipConditions: FlipCondition[];
+  crossFacetAnalysis: CrossFacetAnalysis | null;
+  facets: FacetInfo | null;
+  savedDebateId: string | null;
+  arenaDebateId: string | null;
   error: string | null;
 }
 
@@ -251,6 +328,13 @@ export function createInitialState(): ArgumentState {
     framedTopic: null,
     positions: [],
     streamingArgs: [],
+    cruxCards: [],
+    divergenceMap: null,
+    flipConditions: [],
+    crossFacetAnalysis: null,
+    facets: null,
+    savedDebateId: null,
+    arenaDebateId: null,
     error: null,
   };
 }

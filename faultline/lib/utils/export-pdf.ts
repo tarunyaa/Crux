@@ -4,6 +4,7 @@
 import type { DialogueMessage, DebateAspect, PositionShift, DebateSummary } from '@/lib/dialogue/types'
 import type { CruxCard } from '@/lib/crux/types'
 import type { ActiveCruxRoom } from '@/lib/hooks/useDialogueStream'
+import type { ConsensusData, ArgumentCruxCard, DivergenceMap, ArgumentMessage } from '@/lib/argument/types'
 
 interface ExportDebatePDFParams {
   topic: string
@@ -371,6 +372,183 @@ export async function exportDebatePDF({
 
   const sanitized = topic.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').slice(0, 50).toLowerCase()
   const filename = `debate-${sanitized || 'export'}.pdf`
+
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    await (html2pdf() as any)
+      .set({
+        margin: [10, 12, 10, 12],
+        filename,
+        image: { type: 'jpeg', quality: 0.95 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
+      })
+      .from(container)
+      .save()
+  } finally {
+    document.body.removeChild(container)
+  }
+}
+
+// ─── PDF Export for Argument Debates ──────────────────────────
+
+interface ExportArgumentPDFParams {
+  topic: string
+  personaNames: Map<string, string>
+  personaAvatars: Map<string, string>
+  consensus: ConsensusData | null
+  cruxCards: ArgumentCruxCard[]
+  divergenceMap: DivergenceMap | null
+  messages: ArgumentMessage[]
+}
+
+function stripMd(text: string): string {
+  return text.replace(/\*\*/g, '').replace(/^#+\s*/gm, '').trim()
+}
+
+export async function exportArgumentPDF({
+  topic,
+  personaNames,
+  personaAvatars,
+  consensus,
+  cruxCards,
+  divergenceMap,
+  messages,
+}: ExportArgumentPDFParams): Promise<void> {
+  const html2pdf = (await import('html2pdf.js')).default
+
+  const sections: string[] = []
+
+  function argRenderSectionHeader(label: string): string {
+    return `
+      <div style="margin:20px 0 10px 0;border-bottom:1px solid #ccc;padding-bottom:4px;">
+        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#333;margin:0;">${esc(label)}</p>
+      </div>
+    `
+  }
+
+  // ── Header ──
+  const personaChips = Array.from(personaNames.entries()).map(([id, name]) => {
+    const avatar = personaAvatars.get(id)
+    return `<span style="display:inline-flex;align-items:center;gap:4px;">${renderAvatar(avatar, name, 16)}<span>${esc(name)}</span></span>`
+  }).join(' <span style="color:#ccc;">·</span> ')
+
+  sections.push(`
+    <div style="margin-bottom:24px;">
+      <h1 style="font-size:22px;font-weight:700;margin:0 0 6px 0;">${esc(topic)}</h1>
+      <p style="font-size:11px;color:#666;margin:0 0 8px 0;">${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      <div style="display:inline-block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#999;border:1px solid #ddd;border-radius:3px;padding:2px 6px;margin-bottom:8px;">Argument Debate</div>
+      <div style="font-size:11px;color:#666;display:flex;align-items:center;gap:6px;flex-wrap:wrap;">${personaChips}</div>
+    </div>
+  `)
+
+  // ── Verdict ──
+  if (consensus) {
+    sections.push(argRenderSectionHeader('Verdict'))
+    const winnerText = stripMd(consensus.winner)
+    const scoreText = consensus.winner_score != null
+      ? ` &nbsp;<span style="font-size:10px;color:#888;">&sigma; = ${consensus.winner_score.toFixed(3)} (final argument strength)</span>`
+      : ''
+    const consensusParagraphs = consensus.consensus_text
+      .split(/\n+/)
+      .map(p => stripMd(p))
+      .filter(p => p.length > 0)
+      .map(p => `<p style="font-size:11px;color:#222;margin:4px 0;line-height:1.5;">${esc(p)}</p>`)
+      .join('')
+
+    sections.push(`
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px;">
+        <div style="border:1px solid #ddd;border-radius:6px;padding:10px 14px;">
+          <p style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#999;margin:0 0 4px 0;">Winner</p>
+          <p style="font-size:13px;font-weight:700;color:#222;margin:0 0 4px 0;">${esc(winnerText)}${scoreText}</p>
+        </div>
+        <div style="border:1px solid #ddd;border-radius:6px;padding:10px 14px;">
+          <p style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#999;margin:0 0 4px 0;">Consensus</p>
+          ${consensusParagraphs}
+        </div>
+      </div>
+    `)
+  }
+
+  // ── Crux Cards ──
+  if (cruxCards.length > 0) {
+    const sorted = [...cruxCards].sort((a, b) => b.importance - a.importance)
+    sections.push(argRenderSectionHeader('Crux Cards'))
+    for (const card of sorted) {
+      sections.push(`
+        <div style="margin-bottom:14px;padding:10px 14px;border:1px solid #ddd;border-radius:6px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+            <span style="font-size:9px;text-transform:uppercase;color:#999;border:1px solid #ddd;border-radius:3px;padding:1px 5px;">${esc(card.crux_type)}</span>
+            ${card.winner_critical ? `<span style="font-size:8px;font-weight:700;text-transform:uppercase;background:#c00;color:#fff;border-radius:3px;padding:2px 6px;">Outcome-Critical</span>` : ''}
+          </div>
+          <p style="font-size:11px;color:#222;margin:4px 0;line-height:1.5;">${esc(stripMd(card.question))}</p>
+          <p style="font-size:10px;color:#888;margin:2px 0;">Shifts outcome by &plusmn;${card.importance.toFixed(3)} <span style="font-size:9px;">(&sigma; = argument strength score)</span></p>
+          <p style="font-size:10px;color:#666;font-style:italic;margin:4px 0;border-left:2px solid #ddd;padding-left:8px;">${esc(stripMd(card.flip_mechanism))}</p>
+          ${card.expert ? `<p style="font-size:9px;color:#999;margin:4px 0;text-transform:uppercase;">via ${esc(card.expert)}</p>` : ''}
+        </div>
+      `)
+    }
+  }
+
+  // ── Expert Contributions ──
+  if (divergenceMap && Object.keys(divergenceMap.per_expert).length > 0) {
+    sections.push(argRenderSectionHeader('Expert Contributions'))
+    const rows = Object.entries(divergenceMap.per_expert).map(([expert, data]) => {
+      const isCruxDriver = divergenceMap.pairwise?.some(p =>
+        (p.expert_a === expert || p.expert_b === expert) && p.is_crux,
+      )
+      return `
+        <tr>
+          <td style="padding:4px 8px 4px 0;font-size:11px;color:#222;">
+            ${esc(expert)}
+            ${isCruxDriver ? `<span style="font-size:8px;font-weight:700;text-transform:uppercase;background:#c00;color:#fff;border-radius:3px;padding:1px 5px;margin-left:4px;">Crux Driver</span>` : ''}
+          </td>
+          <td style="padding:4px 8px 4px 0;font-size:11px;color:#222;font-family:monospace;">${data.root_strength.toFixed(3)}</td>
+          <td style="padding:4px 8px 4px 0;font-size:11px;color:#222;">${data.support_count}</td>
+          <td style="padding:4px 8px 4px 0;font-size:11px;color:#222;">${data.attack_count}</td>
+        </tr>
+      `
+    }).join('')
+
+    sections.push(`
+      <table style="width:100%;border-collapse:collapse;margin-bottom:8px;">
+        <thead>
+          <tr style="border-bottom:1px solid #ddd;">
+            <th style="padding:4px 8px 4px 0;font-size:9px;font-weight:700;text-transform:uppercase;color:#999;text-align:left;">Expert</th>
+            <th style="padding:4px 8px 4px 0;font-size:9px;font-weight:700;text-transform:uppercase;color:#999;text-align:left;">&sigma; Score</th>
+            <th style="padding:4px 8px 4px 0;font-size:9px;font-weight:700;text-transform:uppercase;color:#999;text-align:left;">Supports</th>
+            <th style="padding:4px 8px 4px 0;font-size:9px;font-weight:700;text-transform:uppercase;color:#999;text-align:left;">Attacks</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `)
+  }
+
+  // ── Debate Thread ──
+  if (messages.length > 0) {
+    sections.push(argRenderSectionHeader('Debate Thread'))
+    for (const msg of messages) {
+      const indent = msg.depth * 16
+      const color = msg.type === 'attack' ? '#c00' : '#222'
+      sections.push(`
+        <div style="margin-bottom:8px;margin-left:${indent}px;padding-left:${msg.depth > 0 ? '10px' : '0'};${msg.depth > 0 ? 'border-left:2px solid #eee;' : ''}">
+          <span style="font-size:10px;font-weight:700;color:${color};">${esc(msg.expertName)}</span>
+          <p style="font-size:11px;color:#222;margin:2px 0;line-height:1.5;">${esc(stripMd(msg.content))}</p>
+        </div>
+      `)
+    }
+  }
+
+  // ── Create container and render ──
+  const container = document.createElement('div')
+  container.style.cssText = 'font-family:Georgia,serif;color:#222;background:#fff;padding:20px;max-width:700px;'
+  container.innerHTML = sections.join('')
+  document.body.appendChild(container)
+
+  const sanitized = topic.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-').slice(0, 50).toLowerCase()
+  const filename = `debate-argument-${sanitized || 'export'}.pdf`
 
   try {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

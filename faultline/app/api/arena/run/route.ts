@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
   const encoder = new TextEncoder()
 
   try {
-    const body = await req.json() as { topic?: string; methods?: ArenaMethod[] }
+    const body = await req.json() as { topic?: string; methods?: ArenaMethod[]; existingDebateId?: string }
 
     if (!body.topic?.trim()) {
       return new Response(JSON.stringify({ error: 'Topic is required' }), { status: 400 })
@@ -19,9 +19,13 @@ export async function POST(req: NextRequest) {
 
     const topic = body.topic.trim()
     const methods = body.methods ?? ['direct_crux', 'cot_crux', 'multiagent_crux']
-    const debateId = crypto.randomUUID()
+    const existingDebateId = body.existingDebateId?.trim() || undefined
 
-    await createArenaDebate(debateId, topic, methods)
+    // Use existing debate ID if provided; otherwise create a new debate record
+    const debateId = existingDebateId ?? crypto.randomUUID()
+    if (!existingDebateId) {
+      await createArenaDebate(debateId, topic, methods)
+    }
 
     const stream = new ReadableStream({
       async start(controller) {
@@ -67,7 +71,7 @@ export async function POST(req: NextRequest) {
             }
           }
 
-          send({ type: 'saved', data: { debateId } })
+          send({ type: 'saved', data: { debateId: existingDebateId ?? debateId } })
         } catch (err) {
           send({
             type: 'error',

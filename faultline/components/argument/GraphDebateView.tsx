@@ -9,6 +9,8 @@ import HexAvatar from '@/components/HexAvatar'
 import { ResultsSection } from './ResultsSection'
 import { TechnicalAnalysis } from './TechnicalAnalysis'
 import { MethodComparison } from './MethodComparison'
+import { ArgumentCruxCard } from './ArgumentCruxCard'
+import AgentPolygon from '@/components/AgentPolygon'
 
 interface GraphDebateViewProps {
   config: BridgeConfig
@@ -25,8 +27,109 @@ const PHASE_LABEL: Record<string, string> = {
   scoring: 'Scoring',
   evaluating: 'Evaluating',
   analyzing: 'Analyzing',
+  crux_extraction: 'Extracting Cruxes',
   baselines: 'Running Baselines',
   complete: 'Complete',
+}
+
+function stripMarkdown(text: string): string {
+  return text.replace(/\*\*/g, '').replace(/\*/g, '').replace(/^#+\s*/gm, '').trim()
+}
+
+type RichBlock =
+  | { kind: 'h2'; text: string }
+  | { kind: 'h3'; text: string }
+  | { kind: 'bullets'; items: string[] }
+  | { kind: 'numbered'; items: string[] }
+  | { kind: 'para'; text: string }
+  | { kind: 'divider' }
+
+function parseRichBlocks(raw: string): RichBlock[] {
+  const clean = raw.replace(/\*\*/g, '').replace(/\*/g, '')
+  const lines = clean.split('\n')
+  const blocks: RichBlock[] = []
+  let bullets: string[] = []
+  let numbered: string[] = []
+
+  const flushBullets = () => {
+    if (bullets.length) { blocks.push({ kind: 'bullets', items: [...bullets] }); bullets = [] }
+  }
+  const flushNumbered = () => {
+    if (numbered.length) { blocks.push({ kind: 'numbered', items: [...numbered] }); numbered = [] }
+  }
+
+  for (const line of lines) {
+    const t = line.trim()
+    if (!t) { flushBullets(); flushNumbered(); continue }
+    if (t === '---' || t === '***' || t === '___') {
+      flushBullets(); flushNumbered(); blocks.push({ kind: 'divider' }); continue
+    }
+    if (t.startsWith('### ')) {
+      flushBullets(); flushNumbered()
+      blocks.push({ kind: 'h3', text: t.slice(4) })
+    } else if (/^#{1,2}\s/.test(t)) {
+      flushBullets(); flushNumbered()
+      blocks.push({ kind: 'h2', text: t.replace(/^#+\s*/, '') })
+    } else if (/^[-*]\s+/.test(t)) {
+      flushNumbered()
+      bullets.push(t.replace(/^[-*]\s+/, ''))
+    } else if (/^\d+\.\s+/.test(t)) {
+      flushBullets()
+      numbered.push(t.replace(/^\d+\.\s+/, ''))
+    } else {
+      flushBullets(); flushNumbered()
+      const last = blocks[blocks.length - 1]
+      if (last?.kind === 'para') {
+        last.text += ' ' + t
+      } else {
+        blocks.push({ kind: 'para', text: t })
+      }
+    }
+  }
+  flushBullets(); flushNumbered()
+  return blocks
+}
+
+function RichText({ text, className }: { text: string; className?: string }) {
+  const blocks = parseRichBlocks(text)
+  return (
+    <div className={`space-y-2 ${className ?? ''}`}>
+      {blocks.map((block, i) => {
+        if (block.kind === 'h2') return (
+          <p key={i} className="text-[10px] font-semibold uppercase tracking-wider text-muted pt-2 first:pt-0">{block.text}</p>
+        )
+        if (block.kind === 'h3') return (
+          <p key={i} className="text-[11px] font-medium text-muted">{block.text}</p>
+        )
+        if (block.kind === 'bullets') return (
+          <div key={i} className="space-y-1">
+            {block.items.map((item, j) => (
+              <div key={j} className="flex items-start gap-2 text-xs">
+                <span className="text-foreground/40 flex-shrink-0 mt-px">—</span>
+                <span className="text-foreground">{item}</span>
+              </div>
+            ))}
+          </div>
+        )
+        if (block.kind === 'numbered') return (
+          <div key={i} className="space-y-1">
+            {block.items.map((item, j) => (
+              <div key={j} className="flex items-start gap-2 text-xs">
+                <span className="text-accent flex-shrink-0 font-mono mt-px">{j + 1}.</span>
+                <span className="text-foreground">{item}</span>
+              </div>
+            ))}
+          </div>
+        )
+        if (block.kind === 'divider') return (
+          <div key={i} className="h-px bg-card-border my-1" />
+        )
+        return (
+          <p key={i} className="text-xs text-foreground leading-relaxed">{block.text}</p>
+        )
+      })}
+    </div>
+  )
 }
 
 export function GraphDebateView({ config, personaNames, personaAvatars }: GraphDebateViewProps) {
@@ -35,9 +138,7 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
   const [localBaselineResults, setLocalBaselineResults] = useState<BaselineResult[]>([])
   const [baselinesRunning, setBaselinesRunning] = useState(false)
   const [baselinesRan, setBaselinesRan] = useState(false)
-  const [verdictOpen, setVerdictOpen] = useState(true)
-  const [technicalOpen, setTechnicalOpen] = useState(false)
-  const [baselinesOpen, setBaselinesOpen] = useState(false)
+  const [activeResultTab, setActiveResultTab] = useState<'results' | 'analysis' | 'thread'>('results')
 
   useEffect(() => {
     if (!startedRef.current) {
@@ -138,6 +239,12 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
         expert,
       }))
 
+  // Build expertNameToPersonaId for AgentPolygon
+  const expertNameToPersonaId: Record<string, string> = {}
+  sidebarPersonas.forEach(p => {
+    if (p.expert) expertNameToPersonaId[p.expert] = p.id
+  })
+
   return (
     <div className="min-h-screen bg-background">
       {/* Top bar */}
@@ -168,7 +275,6 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
 
         {/* Topic card */}
         <div className="rounded-xl border border-card-border bg-surface overflow-hidden">
-          {/* Header row */}
           <div className="flex items-center gap-3 px-5 pt-4 pb-3">
             <span className="text-foreground/20 text-sm">♠</span>
             <div className="flex-1 h-px bg-card-border opacity-40" />
@@ -176,55 +282,11 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
             <div className="flex-1 h-px bg-card-border opacity-40" />
             <span className="text-foreground/20 text-sm">♠</span>
           </div>
-
-          {/* Topic text */}
           <div className="px-5 pb-4">
             <p className="text-base font-semibold text-foreground leading-snug">
               {config.topic}
             </p>
           </div>
-
-          {/* Positions — only when available */}
-          {state.positions.length > 0 && (
-            <>
-              <div className="h-px bg-card-border opacity-40 mx-5" />
-              <div className="px-5 py-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {state.positions.map((pos, i) => {
-                  const suits = ['♠', '♥', '♦', '♣'] as const
-                  const suit = suits[i % 4]
-                  const isRed = suit === '♥' || suit === '♦'
-                  // Match persona to this position by index
-                  const personaId = config.personaIds?.[i]
-                  const personaName = personaId ? personaNames.get(personaId) : null
-                  const personaAvatar = personaId ? personaAvatars.get(personaId) : null
-
-                  return (
-                    <div key={i} className="flex items-start gap-2.5">
-                      <span className={`text-sm flex-shrink-0 mt-0.5 ${isRed ? 'text-accent' : 'text-foreground/30'}`}>
-                        {suit}
-                      </span>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-1.5 mb-0.5">
-                          {personaAvatar && (
-                            <HexAvatar src={personaAvatar} alt={personaName ?? ''} size={16} fallbackInitial={(personaName ?? '?').charAt(0)} />
-                          )}
-                          <span className="text-[10px] font-semibold text-foreground/60 uppercase tracking-wider">
-                            {pos.shortName || pos.label || `Position ${String.fromCharCode(65 + i)}`}
-                          </span>
-                          {personaName && (
-                            <span className={`text-[10px] font-medium ${isRed ? 'text-accent' : 'text-foreground/40'}`}>
-                              · {personaName.split(' ')[0]}
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-[11px] text-muted leading-snug">{pos.description}</p>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
-            </>
-          )}
         </div>
 
         {/* Main grid: debate thread + persona sidebar */}
@@ -303,114 +365,285 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
                 </p>
               </div>
             )}
+
+            {/* Alignment graph — shown after divergence is computed */}
+            {state.divergenceMap && isComplete && (
+              <div className="mt-4 pt-3 border-t border-card-border">
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2 flex items-center gap-1">
+                  <span className="text-foreground/20 text-[9px]">◈</span>
+                  Alignment
+                </p>
+                <AgentPolygon
+                  agents={sidebarPersonas.map(p => ({ id: p.id, name: p.name, picture: p.avatar ?? '' }))}
+                  messages={[]}
+                  activeSpeakerId={null}
+                  divergenceMap={state.divergenceMap}
+                  expertNameToPersonaId={expertNameToPersonaId}
+                />
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Results — shown when complete, collapsible sections */}
+        {/* Results — shown when complete, tabbed */}
         {isComplete && (
           <div className="space-y-2 pt-2">
-            {/* Verdict */}
-            {state.consensus && (
-              <div className="rounded-xl border border-card-border bg-surface overflow-hidden">
+            {/* Tab switcher + Export PDF */}
+            <div className="flex items-center gap-1 px-1">
+              <button
+                onClick={async () => {
+                  const { exportArgumentPDF } = await import('@/lib/utils/export-pdf')
+                  exportArgumentPDF({
+                  topic: config.topic,
+                  personaNames,
+                  personaAvatars,
+                  consensus: state.consensus,
+                  cruxCards: state.cruxCards,
+                  divergenceMap: state.divergenceMap,
+                    messages,
+                  })
+                }}
+                className="text-[10px] px-3 py-1.5 rounded border border-card-border text-muted hover:text-foreground hover:border-foreground/30 transition-colors ml-auto order-last"
+              >
+                Export PDF
+              </button>
+              {(['results', 'analysis', 'thread'] as const).map(tab => (
                 <button
-                  onClick={() => setVerdictOpen(v => !v)}
-                  className="w-full px-4 py-3 flex items-center gap-2 text-left hover:bg-card-bg/50 transition-colors"
+                  key={tab}
+                  onClick={() => setActiveResultTab(tab)}
+                  className={`text-[10px] px-3 py-1.5 rounded uppercase tracking-wider font-medium transition-colors ${
+                    activeResultTab === tab ? 'bg-accent/10 text-accent' : 'text-muted hover:text-foreground'
+                  }`}
                 >
-                  <span className="text-accent text-[10px]">♥</span>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-foreground flex-1">Verdict</span>
-                  {state.consensus.winner_score != null && (
-                    <span className="text-[10px] font-mono text-accent mr-2">
-                      &sigma; = {state.consensus.winner_score.toFixed(4)}
-                    </span>
-                  )}
-                  <span className="text-muted text-xs">{verdictOpen ? '▴' : '▾'}</span>
+                  {tab === 'results' ? '♥ Results' : tab === 'analysis' ? '♣ Analysis' : '♦ Thread'}
                 </button>
-                {verdictOpen && (
-                  <div className="px-4 pb-4 space-y-3 border-t border-card-border">
-                    <ResultsSection
-                      consensus={state.consensus}
-                      counterfactual={state.counterfactual}
-                      report={state.report}
-                      hierarchy={state.qbafHierarchy}
-                      strengths={state.qbafStrengths}
-                      expertNames={expertNames}
-                      expertAvatars={expertAvatars}
-                    />
+              ))}
+            </div>
+
+            {activeResultTab === 'results' && (
+              <div className="space-y-4">
+                {/* Verdict */}
+                {state.consensus && (
+                  <div className="rounded-xl border border-card-border bg-surface overflow-hidden">
+                    {/* Winner bar */}
+                    <div className="px-5 py-4 border-b border-card-border">
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="space-y-0.5 flex-1">
+                          <p className="text-[10px] text-muted uppercase tracking-wider">Winning Argument</p>
+                          <p className="text-base font-semibold text-foreground leading-snug">
+                            {stripMarkdown(state.consensus.winner || '')}
+                          </p>
+                        </div>
+                        {state.consensus.winner_score != null && (
+                          <div className="text-right flex-shrink-0">
+                            <p className="text-[10px] text-muted uppercase tracking-wider">Strength</p>
+                            <p className="text-lg font-mono font-bold text-foreground">
+                              {state.consensus.winner_score.toFixed(3)}
+                            </p>
+                            <p className="text-[9px] text-muted/50">&sigma; score</p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Consensus summary */}
+                    <div className="px-5 py-4 space-y-3">
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted">Consensus</p>
+                      <RichText text={state.consensus.consensus_text || ''} />
+                    </div>
+
+                    {/* Graph consensus summary (if different/present) */}
+                    {state.consensus.graph_consensus_summary && (
+                      <div className="px-5 py-4 border-t border-card-border bg-card-bg space-y-2">
+                        <p className="text-[10px] font-semibold uppercase tracking-wider text-muted">Graph Analysis</p>
+                        <RichText text={state.consensus.graph_consensus_summary} />
+                      </div>
+                    )}
                   </div>
                 )}
+
+                {/* Argument strength cards */}
+                <ResultsSection
+                  consensus={state.consensus}
+                  counterfactual={state.counterfactual}
+                  report={state.report}
+                  hierarchy={state.qbafHierarchy}
+                  strengths={state.qbafStrengths}
+                  expertNames={expertNames}
+                  expertAvatars={expertAvatars}
+                />
+
+                {/* Crux cards */}
+                {state.cruxCards.length > 0 && (
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 px-1">
+                      <span className="text-accent text-[10px]">♠</span>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-muted">Crux Cards</span>
+                      <span className="text-[10px] text-muted">({state.cruxCards.length})</span>
+                    </div>
+                    <div className="space-y-3">
+                      {[...state.cruxCards]
+                        .sort((a, b) => b.importance - a.importance)
+                        .map((card, i) => (
+                          <ArgumentCruxCard key={i} card={card} />
+                        ))}
+                    </div>
+                  </div>
+                )}
+                {state.cruxCards.length === 0 && (
+                  <div className="rounded-xl border border-card-border bg-surface p-6 text-center">
+                    <p className="text-xs text-muted">No significant disagreements detected — experts converged on this topic.</p>
+                  </div>
+                )}
+
+                {/* Baseline benchmarks */}
+                <div className="rounded-xl border border-card-border bg-surface overflow-hidden">
+                  <div className="px-4 py-3 flex items-center gap-2 border-b border-card-border">
+                    <span className="text-foreground/20 text-[10px]">♦</span>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-foreground flex-1">Baseline Benchmarks</span>
+                    {localBaselineResults.length > 0 && (
+                      <span className="text-[10px] text-muted">{localBaselineResults.length} methods</span>
+                    )}
+                  </div>
+                  <div className="px-4 pb-4">
+                    {localBaselineResults.length > 0 ? (
+                      <MethodComparison
+                        results={localBaselineResults}
+                        consensus={state.consensus}
+                        topic={config.topic}
+                      />
+                    ) : (
+                      <div className="py-6 text-center space-y-3">
+                        <p className="text-xs text-muted">
+                          Compare ARGORA against direct prompting and chain-of-thought baselines.
+                        </p>
+                        {!baselinesRan && (
+                          <button
+                            onClick={runComparison}
+                            disabled={baselinesRunning}
+                            className="text-xs border border-accent/60 text-accent hover:bg-accent hover:text-white px-4 py-2 rounded transition-colors disabled:opacity-50"
+                          >
+                            {baselinesRunning ? 'Running...' : 'Run Comparison'}
+                          </button>
+                        )}
+                        {baselinesRunning && (
+                          <p className="text-[10px] text-muted animate-pulse">Running baseline methods...</p>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             )}
 
-            {/* Technical Analysis */}
-            <div className="rounded-xl border border-card-border bg-surface overflow-hidden">
-              <button
-                onClick={() => setTechnicalOpen(v => !v)}
-                className="w-full px-4 py-3 flex items-center gap-2 text-left hover:bg-card-bg/50 transition-colors"
-              >
-                <span className="text-foreground/30 text-[10px]">♣</span>
-                <span className="text-xs font-semibold uppercase tracking-wider text-foreground flex-1">Technical Analysis</span>
-                <span className="text-muted text-xs">{technicalOpen ? '▴' : '▾'}</span>
-              </button>
-              {technicalOpen && (
-                <div className="px-4 pb-4 border-t border-card-border">
-                  <TechnicalAnalysis
-                    baseScores={state.baseScores}
-                    consensus={state.consensus}
-                    report={state.report}
-                    hierarchy={state.qbafHierarchy}
-                    strengths={state.qbafStrengths}
-                    counterfactual={state.counterfactual}
-                    experts={state.experts}
-                    expertNames={expertNames}
-                    fullResult={state.fullResult}
-                  />
+            {activeResultTab === 'analysis' && (
+              <div className="space-y-4">
+                {/* Score legend */}
+                <div className="rounded-xl border border-card-border bg-surface p-4">
+                  <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-2">Score Legend</p>
+                  <div className="space-y-1 text-[11px] text-muted">
+                    <p><span className="font-mono text-foreground">&tau;</span> &mdash; Initial score before attacks and supports are considered</p>
+                    <p><span className="font-mono text-foreground">&sigma;</span> &mdash; Final score after the full debate (higher = stronger argument)</p>
+                    <p><span className="font-mono text-foreground">&Delta;</span> &mdash; Lift: how much the debate changed each argument&apos;s standing</p>
+                  </div>
                 </div>
-              )}
-            </div>
 
-            {/* Baselines — opt-in */}
-            <div className="rounded-xl border border-card-border bg-surface overflow-hidden">
-              <button
-                onClick={() => setBaselinesOpen(v => !v)}
-                className="w-full px-4 py-3 flex items-center gap-2 text-left hover:bg-card-bg/50 transition-colors"
-              >
-                <span className="text-accent text-[10px]">♦</span>
-                <span className="text-xs font-semibold uppercase tracking-wider text-foreground flex-1">Baseline Comparison</span>
-                {localBaselineResults.length > 0 && (
-                  <span className="text-[10px] text-muted mr-2">{localBaselineResults.length} baselines</span>
-                )}
-                <span className="text-muted text-xs">{baselinesOpen ? '▴' : '▾'}</span>
-              </button>
-              {baselinesOpen && (
-                <div className="px-4 pb-4 border-t border-card-border">
-                  {localBaselineResults.length > 0 ? (
-                    <MethodComparison
-                      results={localBaselineResults}
-                      consensus={state.consensus}
-                      topic={config.topic}
-                    />
-                  ) : (
-                    <div className="py-6 text-center space-y-3">
-                      <p className="text-xs text-muted">
-                        Compare ARGORA against direct prompting and CoT baselines.
-                      </p>
-                      {!baselinesRan && (
-                        <button
-                          onClick={runComparison}
-                          disabled={baselinesRunning}
-                          className="text-xs border border-accent/60 text-accent hover:bg-accent hover:text-white px-4 py-2 rounded transition-colors disabled:opacity-50"
-                        >
-                          {baselinesRunning ? 'Running...' : 'Run Comparison'}
-                        </button>
-                      )}
-                      {baselinesRunning && (
-                        <p className="text-[10px] text-muted animate-pulse">Comparing against baselines...</p>
-                      )}
+                {/* Expert divergence */}
+                {state.divergenceMap && (
+                  <div className="rounded-xl border border-card-border bg-surface p-4">
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-3">Expert Contributions</p>
+                    <div className="space-y-2">
+                      {Object.entries(state.divergenceMap.per_expert).map(([expert, data]) => {
+                        const displayName = expertNames.get(expert) ?? expert
+                        const isCruxDriver = state.divergenceMap!.crux_facets.includes(expert) ||
+                          state.divergenceMap!.pairwise.some(p => (p.expert_a === expert || p.expert_b === expert) && p.is_crux)
+                        return (
+                          <div key={expert} className="flex items-center gap-3 p-2 rounded border border-card-border bg-card-bg">
+                            <span className="text-xs text-foreground font-medium flex-1">{displayName}</span>
+                            <span className="text-[10px] font-mono text-foreground">&sigma; {data.root_strength.toFixed(3)}</span>
+                            <span className="text-[10px] text-foreground/40">{data.support_count}+ {data.attack_count}&minus;</span>
+                            {isCruxDriver && (
+                              <span className="text-[9px] px-1.5 py-px rounded bg-accent/10 text-accent font-medium uppercase">crux driver</span>
+                            )}
+                          </div>
+                        )
+                      })}
                     </div>
-                  )}
-                </div>
-              )}
-            </div>
+                  </div>
+                )}
+
+                {/* Top 3 argument strengths table */}
+                {state.qbafHierarchy.filter(n => n.type === 'main_argument').length > 0 && (
+                  <div className="rounded-xl border border-card-border bg-surface p-4">
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-3">Argument Strengths</p>
+                    <div className="space-y-2">
+                      {state.qbafHierarchy
+                        .filter(n => n.type === 'main_argument')
+                        .sort((a, b) => (b.final_score ?? 0) - (a.final_score ?? 0))
+                        .slice(0, 3)
+                        .map((node, i) => {
+                          const lift = (node.final_score ?? 0) - (node.initial_score ?? 0)
+                          return (
+                            <div key={i} className="flex items-center gap-3 p-2 rounded border border-card-border bg-card-bg">
+                              <span className="text-[10px] text-muted font-mono w-4">{i + 1}</span>
+                              <span className="text-[11px] text-foreground flex-1 line-clamp-1">{stripMarkdown(node.statement)}</span>
+                              <span className="text-[10px] font-mono text-muted">&tau; {node.initial_score?.toFixed(2) ?? '—'}</span>
+                              <span className="text-[10px] font-mono text-foreground">&sigma; {node.final_score?.toFixed(2) ?? '—'}</span>
+                              <span className={`text-[10px] font-mono ${lift >= 0 ? 'text-foreground/50' : 'text-accent'}`}>
+                                {lift >= 0 ? '+' : ''}{lift.toFixed(2)}
+                              </span>
+                            </div>
+                          )
+                        })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Full technical analysis */}
+                <TechnicalAnalysis
+                  baseScores={state.baseScores}
+                  consensus={state.consensus}
+                  report={state.report}
+                  hierarchy={state.qbafHierarchy}
+                  strengths={state.qbafStrengths}
+                  counterfactual={state.counterfactual}
+                  experts={state.experts}
+                  expertNames={expertNames}
+                  fullResult={state.fullResult}
+                />
+
+                {/* CruxBench link */}
+                {state.arenaDebateId && (
+                  <div className="rounded-xl border border-card-border bg-surface p-4 flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-semibold text-foreground">Compare in CruxBench</p>
+                      <p className="text-[10px] text-muted mt-0.5">Run blind comparison against other crux methods</p>
+                    </div>
+                    <a
+                      href={`/arena?debate=${state.arenaDebateId}`}
+                      className="text-xs border border-accent/60 text-accent hover:bg-accent hover:text-white px-4 py-2 rounded transition-colors"
+                    >
+                      View in CruxBench &rarr;
+                    </a>
+                  </div>
+                )}
+
+              </div>
+            )}
+
+            {activeResultTab === 'thread' && (
+              <div className="rounded-xl border border-card-border bg-surface p-4">
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-3">Full Debate Thread</p>
+                <ArgumentTimeline
+                  messages={messages}
+                  experts={state.experts}
+                  expertNames={expertNames}
+                  expertAvatars={expertAvatars}
+                  phase="complete"
+                  consensus={null}
+                />
+              </div>
+            )}
           </div>
         )}
       </div>

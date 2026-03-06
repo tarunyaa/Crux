@@ -8,6 +8,7 @@ import { ArgumentTimeline } from './ArgumentTimeline'
 import { ResultsSection } from './ResultsSection'
 import { MethodComparison } from './MethodComparison'
 import { TechnicalAnalysis } from './TechnicalAnalysis'
+import { ArgumentCruxCard } from './ArgumentCruxCard'
 
 interface ArgumentViewProps {
   config: BridgeConfig
@@ -16,6 +17,14 @@ interface ArgumentViewProps {
 }
 
 type ResultTab = 'results' | 'benchmarks' | 'technical'
+
+function stripMarkdown(text: string): string {
+  return text.replace(/\*\*/g, '').replace(/^#+\s*/gm, '').trim()
+}
+
+function splitIntoParagraphs(text: string): string[] {
+  return text.split(/\n\n+/).map(p => p.trim()).filter(Boolean)
+}
 
 export function ArgumentView({ config, personaNames, personaAvatars }: ArgumentViewProps) {
   const { state, messages, start } = useArgumentStream(config)
@@ -135,7 +144,7 @@ export function ArgumentView({ config, personaNames, personaAvatars }: ArgumentV
   const tabs: { id: ResultTab; label: string; suit: string }[] = [
     { id: 'results', label: 'Debate Results', suit: '♥' },
     { id: 'benchmarks', label: 'Benchmarks', suit: '♦' },
-    { id: 'technical', label: 'Technical Analysis', suit: '♣' },
+    { id: 'technical', label: 'Analysis', suit: '♣' },
   ]
 
   return (
@@ -222,15 +231,165 @@ export function ArgumentView({ config, personaNames, personaAvatars }: ArgumentV
 
             {/* Tab Content */}
             {activeTab === 'results' && (
-              <ResultsSection
-                consensus={state.consensus}
-                counterfactual={state.counterfactual}
-                report={state.report}
-                hierarchy={state.qbafHierarchy}
-                strengths={state.qbafStrengths}
-                expertNames={expertNames}
-                expertAvatars={expertAvatars}
-              />
+              <div className="space-y-4">
+                {/* 2-column verdict */}
+                {state.consensus && (
+                  <div className="rounded-xl border border-card-border bg-surface p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-accent text-[10px]">♥</span>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-muted">Verdict</span>
+                    </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
+                      <div className="lg:col-span-3 space-y-1">
+                        <p className="text-[10px] text-muted uppercase tracking-wider">Winning Argument</p>
+                        <p className="text-sm text-foreground leading-snug">
+                          {stripMarkdown(state.consensus.winner || '')}
+                        </p>
+                        {state.consensus.winner_score != null && (
+                          <p className="text-[10px] text-muted mt-1">
+                            <span className="font-mono text-foreground">&sigma; = {state.consensus.winner_score.toFixed(4)}</span>
+                            <span className="ml-2 text-muted/60">(final argument strength after debate)</span>
+                          </p>
+                        )}
+                      </div>
+                      <div className="lg:col-span-2 space-y-1">
+                        <p className="text-[10px] text-muted uppercase tracking-wider">Consensus</p>
+                        <div className="text-[11px] text-foreground leading-relaxed space-y-1">
+                          {splitIntoParagraphs(stripMarkdown(state.consensus.consensus_text || '')).map((para, i) => (
+                            <p key={i}>{para}</p>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <ResultsSection
+                  consensus={state.consensus}
+                  counterfactual={state.counterfactual}
+                  report={state.report}
+                  hierarchy={state.qbafHierarchy}
+                  strengths={state.qbafStrengths}
+                  expertNames={expertNames}
+                  expertAvatars={expertAvatars}
+                />
+
+                {/* Crux cards */}
+                {state.cruxCards.length > 0 && (
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 px-1">
+                      <span className="text-accent text-[10px]">♠</span>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-muted">Crux Cards</span>
+                      <span className="text-[10px] text-muted">({state.cruxCards.length})</span>
+                    </div>
+                    <div className="space-y-3">
+                      {[...state.cruxCards]
+                        .sort((a, b) => b.importance - a.importance)
+                        .map((card, i) => (
+                          <ArgumentCruxCard key={i} card={card} />
+                        ))}
+                    </div>
+                  </div>
+                )}
+                {state.cruxCards.length === 0 && (
+                  <div className="rounded-xl border border-card-border bg-surface p-6 text-center">
+                    <p className="text-xs text-muted">No significant disagreements detected — experts converged on this topic.</p>
+                  </div>
+                )}
+
+                {/* Cross-facet analysis (faceted mode only) */}
+                {state.crossFacetAnalysis && (
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 px-1">
+                      <span className="text-accent text-[10px]">♦</span>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-muted">Cross-Facet Analysis</span>
+                    </div>
+                    <div className="rounded-xl border border-card-border bg-surface p-4 space-y-4">
+                      {/* Per-facet table */}
+                      {state.crossFacetAnalysis.table.length > 0 && (
+                        <div className="space-y-2">
+                          {state.crossFacetAnalysis.table.map((row, i) => (
+                            <div key={i} className="border border-card-border rounded-lg p-3 space-y-1">
+                              <p className="text-[10px] text-muted leading-snug line-clamp-2">{row.facet}</p>
+                              <div className="flex items-center gap-3 flex-wrap">
+                                {row.winner_expert && (
+                                  <span className="text-[10px] text-foreground">
+                                    Winner: <span className="text-accent">{row.winner_expert}</span>
+                                  </span>
+                                )}
+                                {row.winner_score != null && (
+                                  <span className="text-[10px] font-mono text-muted">&sigma;={row.winner_score.toFixed(3)}</span>
+                                )}
+                                {row.top_flip_delta != null && (
+                                  <span className="text-[10px] font-mono text-muted">
+                                    top &delta;={row.top_flip_delta.toFixed(3)}
+                                    {row.top_flip_winner_critical && (
+                                      <span className="ml-1 text-accent">critical</span>
+                                    )}
+                                  </span>
+                                )}
+                              </div>
+                              {row.top_flip_condition && (
+                                <p className="text-[10px] text-muted/70 leading-snug line-clamp-2 italic">
+                                  Fault line: {row.top_flip_condition}
+                                </p>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Synthesis */}
+                      {state.crossFacetAnalysis.synthesis && !state.crossFacetAnalysis.synthesis.error && (
+                        <div className="space-y-3 pt-2 border-t border-card-border">
+                          {state.crossFacetAnalysis.synthesis.convergence_facets?.length > 0 && (
+                            <div>
+                              <p className="text-[10px] text-muted uppercase tracking-wider mb-1">Convergence</p>
+                              <ul className="space-y-1">
+                                {state.crossFacetAnalysis.synthesis.convergence_facets.map((f, i) => (
+                                  <li key={i} className="text-[11px] text-foreground leading-snug">{f}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          {state.crossFacetAnalysis.synthesis.divergence_facets?.length > 0 && (
+                            <div>
+                              <p className="text-[10px] text-muted uppercase tracking-wider mb-1">Divergence</p>
+                              <ul className="space-y-1">
+                                {state.crossFacetAnalysis.synthesis.divergence_facets.map((f, i) => (
+                                  <li key={i} className="text-[11px] text-foreground leading-snug">{f}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          {state.crossFacetAnalysis.synthesis.cross_cutting_fault_lines?.length > 0 && (
+                            <div>
+                              <p className="text-[10px] text-muted uppercase tracking-wider mb-1">Cross-Cutting Fault Lines</p>
+                              <ul className="space-y-1">
+                                {state.crossFacetAnalysis.synthesis.cross_cutting_fault_lines.map((f, i) => (
+                                  <li key={i} className="text-[11px] text-foreground leading-snug border-l-2 border-accent/40 pl-2">{f}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          {state.crossFacetAnalysis.synthesis.most_contested_facet && (
+                            <div>
+                              <p className="text-[10px] text-muted uppercase tracking-wider mb-1">Most Contested</p>
+                              <p className="text-[11px] text-foreground leading-snug">{state.crossFacetAnalysis.synthesis.most_contested_facet}</p>
+                            </div>
+                          )}
+                          {state.crossFacetAnalysis.synthesis.most_fragile_position && (
+                            <div>
+                              <p className="text-[10px] text-muted uppercase tracking-wider mb-1">Most Fragile Position</p>
+                              <p className="text-[11px] text-foreground leading-snug">{state.crossFacetAnalysis.synthesis.most_fragile_position}</p>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
             )}
 
             {activeTab === 'benchmarks' && (

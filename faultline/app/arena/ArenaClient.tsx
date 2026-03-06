@@ -31,6 +31,7 @@ interface Props {
   initialDebates: ArenaDebate[]
   initialDebateId?: string
   initialOutputs?: ArenaOutput[]
+  initialTopic?: string
 }
 
 export function ArenaClient({
@@ -38,11 +39,12 @@ export function ArenaClient({
   initialDebates,
   initialDebateId,
   initialOutputs,
+  initialTopic,
 }: Props) {
   const [phase, setPhase] = useState<Phase>(
-    initialDebateId && initialOutputs && initialOutputs.length > 0 ? 'voting' : 'idle',
+    initialDebateId && initialOutputs && initialOutputs.length >= 2 ? 'voting' : 'idle',
   )
-  const [topic, setTopic] = useState('')
+  const [topic, setTopic] = useState(initialTopic ?? '')
   const [progress, setProgress] = useState<MethodProgress[]>([])
   const [outputs, setOutputs] = useState<ArenaOutput[]>(initialOutputs ?? [])
   const [debateId, setDebateId] = useState<string>(initialDebateId ?? '')
@@ -65,7 +67,11 @@ export function ArenaClient({
       const res = await fetch('/api/arena/run', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: topic.trim(), methods: METHODS }),
+        body: JSON.stringify({
+          topic: topic.trim(),
+          methods: METHODS,
+          ...(initialDebateId ? { existingDebateId: initialDebateId } : {}),
+        }),
       })
 
       if (!res.ok) {
@@ -100,6 +106,13 @@ export function ArenaClient({
 
       if (savedDebateId) setDebateId(savedDebateId)
       setPhase('voting')
+      // If we pre-loaded argora_crux outputs, merge them in for voting
+      if (initialOutputs && initialOutputs.length > 0) {
+        setOutputs(prev => {
+          const existing = initialOutputs.filter(o => !prev.some(p => p.method === o.method))
+          return [...existing, ...prev]
+        })
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Unknown error')
       setPhase('idle')
@@ -213,6 +226,23 @@ export function ArenaClient({
             Runs 3 methods: Direct Crux (gpt-4o-mini), CoT Crux (o3), Multi-Agent (gpt-4o-mini).
             Takes 1–3 minutes.
           </p>
+        </div>
+      )}
+
+      {phase === 'idle' && initialDebateId && initialOutputs && initialOutputs.length === 1 && (
+        <div className="rounded-xl border border-card-border bg-surface p-4 space-y-2">
+          <p className="text-xs font-semibold text-foreground">ARGORA Crux output loaded</p>
+          <p className="text-xs text-muted">
+            {initialOutputs[0].cruxCards.length} crux cards from ARGORA. Run comparison methods to enable voting.
+          </p>
+          <button
+            onClick={runArena}
+            disabled={!topic.trim()}
+            className="text-xs border border-accent/60 text-accent hover:bg-accent hover:text-white px-4 py-2 rounded transition-colors disabled:opacity-40"
+          >
+            Run Comparison Methods
+          </button>
+          <p className="text-[10px] text-muted">This will run Direct Crux, CoT Crux, and Multi-Agent Crux on the same topic.</p>
         </div>
       )}
 

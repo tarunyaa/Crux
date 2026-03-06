@@ -16,6 +16,10 @@ import type {
   BaselineResult,
   PositionInfo,
   StreamingArg,
+  ArgumentCruxCard,
+  DivergenceMap,
+  FlipCondition,
+  CrossFacetAnalysis,
 } from '@/lib/argument/types'
 import { createInitialState } from '@/lib/argument/types'
 import type { BridgeConfig } from '@/lib/argument/bridge'
@@ -139,6 +143,18 @@ export function useArgumentStream(config: BridgeConfig) {
     }
 
     const handleEvent = (event: ArgumentEvent) => {
+      // Handle all argument_posted variants: bare, progress-prefixed, facet-prefixed
+      // e.g. 'argument_posted', 'progress_argument_posted', 'facet0_argument_posted'
+      if (
+        event.type === 'argument_posted' ||
+        event.type === 'progress_argument_posted' ||
+        /^facet\d+_argument_posted$/.test(event.type)
+      ) {
+        const d = event.data as StreamingArg
+        setState(s => ({ ...s, streamingArgs: [...s.streamingArgs, d] }))
+        return
+      }
+
       switch (event.type) {
         case 'argument_start':
           setState(s => ({ ...s, phase: 'starting' }))
@@ -220,12 +236,85 @@ export function useArgumentStream(config: BridgeConfig) {
           break
         }
 
+        case 'flip_conditions': {
+          const data = event.data as { flip_conditions: FlipCondition[] }
+          setState(s => ({ ...s, flipConditions: data.flip_conditions ?? [] }))
+          break
+        }
+
+        case 'crux_cards_extracted': {
+          const data = event.data as { cards: ArgumentCruxCard[]; count: number; faceted?: boolean }
+          setState(s => ({
+            ...s,
+            phase: 'crux_extraction',
+            cruxCards: data.cards ?? [],
+          }))
+          break
+        }
+
+        case 'cross_facet_analysis': {
+          const data = event.data as CrossFacetAnalysis
+          setState(s => ({ ...s, crossFacetAnalysis: data }))
+          break
+        }
+
+        case 'divergence_computed': {
+          const data = event.data as DivergenceMap
+          setState(s => ({ ...s, divergenceMap: data }))
+          break
+        }
+
+        case 'facets_decomposed': {
+          const data = event.data as { facets: string[] }
+          setState(s => ({
+            ...s,
+            facets: { questions: data.facets ?? [], active_index: 0, completed: [] },
+          }))
+          break
+        }
+
+        case 'facet_start': {
+          const data = event.data as { index: number }
+          setState(s => ({
+            ...s,
+            facets: s.facets ? { ...s.facets, active_index: data.index } : s.facets,
+          }))
+          break
+        }
+
+        case 'facet_complete': {
+          const data = event.data as { index: number }
+          setState(s => ({
+            ...s,
+            facets: s.facets ? {
+              ...s.facets,
+              completed: [...s.facets.completed, data.index],
+            } : s.facets,
+          }))
+          break
+        }
+
+        case 'saved': {
+          const data = event.data as { debateId: string }
+          setState(s => ({ ...s, savedDebateId: data.debateId }))
+          break
+        }
+
+        case 'arena_saved': {
+          const data = event.data as { arenaDebateId: string }
+          setState(s => ({ ...s, arenaDebateId: data.arenaDebateId }))
+          break
+        }
+
         case 'argument_complete': {
-          const data = event.data as ArgumentCompleteData
+          const data = event.data as ArgumentCompleteData & { divergence_map?: DivergenceMap }
           setState(s => ({
             ...s,
             phase: 'complete',
             fullResult: data,
+            cruxCards: s.cruxCards.length > 0 ? s.cruxCards : (data.crux_cards ?? []),
+            divergenceMap: s.divergenceMap ?? data.divergence_map ?? null,
+            streamingArgs: [],
           }))
           break
         }
@@ -276,12 +365,9 @@ export function useArgumentStream(config: BridgeConfig) {
           break
         }
         case 'progress_main_arguments_ready': {
-          const d = event.data as MainArgumentsData
-          setState(s => ({
-            ...s,
-            phase: 'arguments',
-            mainArguments: d?.main_arguments?.length ? d.main_arguments : s.mainArguments,
-          }))
+          // The main_arguments in this event have malformed expert fields (Python dict keys).
+          // Don't store them — real argument data arrives via streamingArgs and qbafHierarchy.
+          setState(s => ({ ...s, phase: 'arguments' }))
           break
         }
         case 'progress_first_level_complete':
@@ -296,12 +382,6 @@ export function useArgumentStream(config: BridgeConfig) {
         case 'progress_counterfactual_complete':
           setState(s => ({ ...s, phase: 'analyzing' }))
           break
-
-        case 'progress_argument_posted': {
-          const d = event.data as StreamingArg
-          setState(s => ({ ...s, streamingArgs: [...s.streamingArgs, d] }))
-          break
-        }
 
         case 'status': {
           const data = event.data as { message?: string; positions?: PositionInfo[]; framedTopic?: string }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, type JSX } from 'react'
 import type { ArgumentMessage, ConsensusData } from '@/lib/argument/types'
 import { formatArgumentText } from '@/lib/utils/format-argument-text'
 
@@ -110,7 +110,7 @@ export function ArgumentTimeline({
   consensus,
 }: ArgumentTimelineProps) {
   const scrollRef = useRef<HTMLDivElement>(null)
-  const isBuilding = !['idle', 'complete', 'error', 'baselines'].includes(phase)
+  const isBuilding = !['idle', 'complete', 'error', 'baselines', 'crux_extraction'].includes(phase)
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -181,30 +181,7 @@ export function ArgumentTimeline({
           </div>
         )}
 
-        {/* Verdict */}
-        {phase === 'complete' && consensus && (
-          <>
-            <PhaseDivider label="Verdict" suit="♥" />
-            <div className="px-3 py-2 mx-2 rounded-lg border border-accent/20 bg-accent/5">
-              {consensus.winner_score !== null && (
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[10px] font-mono text-accent font-bold">
-                    {consensus.winner_score.toFixed(4)}
-                  </span>
-                  {consensus.override_decision && consensus.override_decision !== consensus.original_decision && (
-                    <span className="text-[9px] px-1.5 py-px rounded bg-accent/10 text-accent uppercase tracking-wider">
-                      Override
-                    </span>
-                  )}
-                </div>
-              )}
-              <div className="text-xs text-foreground leading-snug">
-                {formatArgumentText(consensus.consensus_text || consensus.winner || '')}
-              </div>
-            </div>
-          </>
-        )}
-        {phase === 'complete' && !consensus && (
+        {phase === 'complete' && (
           <PhaseDivider label="Complete" suit="♥" />
         )}
       </div>
