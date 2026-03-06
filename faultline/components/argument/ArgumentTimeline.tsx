@@ -136,7 +136,7 @@ export function ArgumentTimeline({
       const suit = depth > 0 ? DEPTH_SUITS[Math.min(depth - 1, DEPTH_SUITS.length - 1)] : null
       const isRed = suit === '♥' || suit === '♦'
       result.push(
-        <div key={msg.id} style={{ marginLeft: `${depth * 20}px` }}>
+        <div key={msg.id} style={{ marginLeft: `${Math.min(depth, 2) * 14}px` }}>
           {suit && (
             <div className="flex items-center gap-1.5 px-1 mt-2 mb-0.5">
               <span className={`text-[9px] ${isRed ? 'text-accent' : 'text-foreground/30'}`}>{suit}</span>

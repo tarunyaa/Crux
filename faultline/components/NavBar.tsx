@@ -9,7 +9,8 @@ const NAV_LINKS = [
   { href: '/cards', label: 'Decks' },
   { href: '/setup', label: 'Debate' },
   { href: '/debates', label: 'Archive' },
-  { href: '/arena', label: 'Arena' },
+  { href: '/arena', label: 'CruxArena' },
+  { href: '/personabench', label: 'PersonaBench' },
   { href: '/about', label: 'About' },
 ]
 

@@ -138,7 +138,7 @@ export default function SetupClient({ decks, personas }: SetupClientProps) {
       {/* Mode selector */}
       <div className="space-y-2">
         <label className="text-xs font-semibold uppercase tracking-wider text-muted">Mode</label>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           <button
             onClick={() => setMode('dialogue')}
             className={`rounded-lg border px-4 py-3 text-left transition-colors ${
@@ -163,19 +163,6 @@ export default function SetupClient({ decks, personas }: SetupClientProps) {
             <span className="text-sm font-medium text-foreground">Graph</span>
             <p className="text-[11px] text-muted mt-0.5">
               Argument-framework based decision engine
-            </p>
-          </button>
-          <button
-            onClick={() => setMode('argument_crux')}
-            className={`rounded-lg border px-4 py-3 text-left transition-colors ${
-              mode === 'argument_crux'
-                ? 'border-accent bg-accent/10'
-                : 'border-card-border bg-card-bg hover:border-muted'
-            }`}
-          >
-            <span className="text-sm font-medium text-foreground">Graph 2.0</span>
-            <p className="text-[11px] text-muted mt-0.5">
-              QBAF + crux cards + counterfactual analysis
             </p>
           </button>
         </div>

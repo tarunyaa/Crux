@@ -264,6 +264,15 @@ export function ArgumentView({ config, personaNames, personaAvatars }: ArgumentV
                   </div>
                 )}
 
+                {/* Score legend */}
+                <div className="rounded-xl border border-card-border bg-surface p-3">
+                  <div className="flex flex-wrap gap-4 text-[11px] text-muted">
+                    <span><span className="font-mono text-foreground">&tau;</span> &mdash; base strength before debate</span>
+                    <span><span className="font-mono text-foreground">&sigma;</span> &mdash; final strength after graph propagation</span>
+                    <span><span className="font-mono text-foreground">&delta;</span> &mdash; counterfactual impact of removing a node</span>
+                  </div>
+                </div>
+
                 <ResultsSection
                   consensus={state.consensus}
                   counterfactual={state.counterfactual}
@@ -279,7 +288,7 @@ export function ArgumentView({ config, personaNames, personaAvatars }: ArgumentV
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 px-1">
                       <span className="text-accent text-[10px]">♠</span>
-                      <span className="text-xs font-semibold uppercase tracking-wider text-muted">Crux Cards</span>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-muted">Flip Conditions</span>
                       <span className="text-[10px] text-muted">({state.cruxCards.length})</span>
                     </div>
                     <div className="space-y-3">
@@ -293,7 +302,7 @@ export function ArgumentView({ config, personaNames, personaAvatars }: ArgumentV
                 )}
                 {state.cruxCards.length === 0 && (
                   <div className="rounded-xl border border-card-border bg-surface p-6 text-center">
-                    <p className="text-xs text-muted">No significant disagreements detected — experts converged on this topic.</p>
+                    <p className="text-xs text-muted">No high-impact flip conditions found — argument strengths are robust.</p>
                   </div>
                 )}
 

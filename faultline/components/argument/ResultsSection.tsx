@@ -148,7 +148,7 @@ function CounterfactualCard({
           <span className="text-[10px] text-muted">collapse</span>
         </div>
 
-        <p className="text-xs font-semibold text-foreground leading-snug mb-2 line-clamp-3">{statement}</p>
+        <p className="text-xs font-semibold text-foreground leading-snug mb-2">{statement}</p>
 
         <div className="bg-surface rounded p-2 mb-2 border border-card-border">
           <div className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-0.5">Baseline Strength</div>
@@ -162,7 +162,7 @@ function CounterfactualCard({
               <DeltaBadge delta={data.most_influential_direct_child.delta} />
             </div>
             {data.most_influential_direct_child.statement && (
-              <p className="text-[11px] text-muted leading-snug line-clamp-2">{data.most_influential_direct_child.statement}</p>
+              <p className="text-[11px] text-muted leading-snug">{data.most_influential_direct_child.statement}</p>
             )}
             <span className="text-[9px] text-muted uppercase">{data.most_influential_direct_child.edge_type}</span>
           </div>
@@ -175,21 +175,22 @@ function CounterfactualCard({
               <DeltaBadge delta={data.most_decisive_chain.delta_chain} />
             </div>
             {data.most_decisive_chain.chain_statements.length > 0 && (
-              <p className="text-[11px] text-muted leading-snug line-clamp-2">
+              <p className="text-[11px] text-muted leading-snug">
                 {data.most_decisive_chain.chain_statements[0]}
               </p>
             )}
           </div>
         )}
 
-        {data.most_influential_node && (
+        {data.most_influential_node &&
+          data.most_influential_node.statement !== data.most_influential_direct_child?.statement && (
           <div className="rounded p-2 border-l-2 border-l-card-border bg-surface">
             <div className="flex items-center justify-between mb-0.5">
               <span className="text-[10px] font-semibold text-foreground">Most Influential Node</span>
               <DeltaBadge delta={data.most_influential_node.delta} />
             </div>
             {data.most_influential_node.statement && (
-              <p className="text-[11px] text-muted leading-snug line-clamp-2">{data.most_influential_node.statement}</p>
+              <p className="text-[11px] text-muted leading-snug">{data.most_influential_node.statement}</p>
             )}
           </div>
         )}
@@ -328,7 +329,7 @@ export function ResultsSection({
         <div>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-accent text-xs">♣</span>
-            <span className="text-xs font-semibold uppercase tracking-wider text-muted">Counterfactual Analysis</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-muted">Crux Cards</span>
             <div className="flex-1 h-px bg-card-border opacity-60" />
             <span className="text-accent text-xs">♣</span>
           </div>

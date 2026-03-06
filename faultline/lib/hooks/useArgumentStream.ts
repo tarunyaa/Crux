@@ -62,21 +62,34 @@ function buildMessagesFromStreaming(
   args: StreamingArg[],
   experts: string[],
 ): ArgumentMessage[] {
-  const depthById = new Map<number, number>()
+  // ARGORA builds graphs concurrently (thread pool), so events from different
+  // graphs interleave. Each event includes graph_id to scope node IDs correctly.
+  // Key format: g{graph_id}-n{node_id} — guaranteed unique across graphs.
+  const graphMaps = new Map<number, Map<number, string>>() // graph_id → (node_id → key)
+  const result: ArgumentMessage[] = []
+
   for (const arg of args) {
-    depthById.set(arg.id, arg.parent_id === null ? 0 : (depthById.get(arg.parent_id) ?? 0) + 1)
+    const gid = arg.graph_id ?? 0
+    if (!graphMaps.has(gid)) graphMaps.set(gid, new Map())
+    const nodeMap = graphMaps.get(gid)!
+
+    const key = `g${gid}-n${arg.id}`
+    nodeMap.set(arg.id, key)
+
+    result.push({
+      id: key,
+      expertName: arg.expert,
+      expertIndex: experts.indexOf(arg.expert),
+      content: arg.statement,
+      type: arg.type === 'main_argument' ? 'main_argument' as const
+        : arg.type === 'attacking_argument' ? 'attack' as const
+        : 'support' as const,
+      parentId: arg.parent_id !== null ? nodeMap.get(arg.parent_id) : undefined,
+      depth: 0,
+    })
   }
-  return args.map(arg => ({
-    id: `node-${arg.id}`,
-    expertName: arg.expert,
-    expertIndex: experts.indexOf(arg.expert),
-    content: arg.statement,
-    type: arg.type === 'main_argument' ? 'main_argument' as const
-      : arg.type === 'attacking_argument' ? 'attack' as const
-      : 'support' as const,
-    parentId: arg.parent_id !== null ? `node-${arg.parent_id}` : undefined,
-    depth: depthById.get(arg.id) ?? 0,
-  }))
+
+  return result
 }
 
 export function useArgumentStream(config: BridgeConfig) {

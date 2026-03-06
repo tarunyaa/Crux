@@ -138,7 +138,7 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
   const [localBaselineResults, setLocalBaselineResults] = useState<BaselineResult[]>([])
   const [baselinesRunning, setBaselinesRunning] = useState(false)
   const [baselinesRan, setBaselinesRan] = useState(false)
-  const [activeResultTab, setActiveResultTab] = useState<'results' | 'analysis' | 'thread'>('results')
+  const [activeResultTab, setActiveResultTab] = useState<'results' | 'analysis'>('results')
 
   useEffect(() => {
     if (!startedRef.current) {
@@ -407,7 +407,7 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
               >
                 Export PDF
               </button>
-              {(['results', 'analysis', 'thread'] as const).map(tab => (
+              {(['results', 'analysis'] as const).map(tab => (
                 <button
                   key={tab}
                   onClick={() => setActiveResultTab(tab)}
@@ -415,7 +415,7 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
                     activeResultTab === tab ? 'bg-accent/10 text-accent' : 'text-muted hover:text-foreground'
                   }`}
                 >
-                  {tab === 'results' ? '♥ Results' : tab === 'analysis' ? '♣ Analysis' : '♦ Thread'}
+                  {tab === 'results' ? '♥ Results' : '♣ Analysis'}
                 </button>
               ))}
             </div>
@@ -433,6 +433,21 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
                           <p className="text-base font-semibold text-foreground leading-snug">
                             {stripMarkdown(state.consensus.winner || '')}
                           </p>
+                          {/* Observer LLM agreement badge */}
+                          {typeof (state.consensus.agnostic_consensus as Record<string, unknown>)?.override_recommended === 'boolean' && (
+                            (() => {
+                              const overrideRecommended = (state.consensus!.agnostic_consensus as Record<string, unknown>).override_recommended as boolean
+                              return (
+                                <span className={`inline-flex items-center gap-1 text-[10px] px-2 py-0.5 rounded mt-1.5 ${
+                                  overrideRecommended
+                                    ? 'bg-accent/10 text-accent border border-accent/30'
+                                    : 'bg-foreground/5 text-muted border border-card-border'
+                                }`}>
+                                  {overrideRecommended ? '⚠ Observer disagrees' : '✓ Observer confirms'}
+                                </span>
+                              )
+                            })()
+                          )}
                         </div>
                         {state.consensus.winner_score != null && (
                           <div className="text-right flex-shrink-0">
@@ -478,7 +493,7 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 px-1">
                       <span className="text-accent text-[10px]">♠</span>
-                      <span className="text-xs font-semibold uppercase tracking-wider text-muted">Crux Cards</span>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-muted">Flip Conditions</span>
                       <span className="text-[10px] text-muted">({state.cruxCards.length})</span>
                     </div>
                     <div className="space-y-3">
@@ -492,7 +507,7 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
                 )}
                 {state.cruxCards.length === 0 && (
                   <div className="rounded-xl border border-card-border bg-surface p-6 text-center">
-                    <p className="text-xs text-muted">No significant disagreements detected — experts converged on this topic.</p>
+                    <p className="text-xs text-muted">No high-impact flip conditions found — argument strengths are robust.</p>
                   </div>
                 )}
 
@@ -631,19 +646,6 @@ export function GraphDebateView({ config, personaNames, personaAvatars }: GraphD
               </div>
             )}
 
-            {activeResultTab === 'thread' && (
-              <div className="rounded-xl border border-card-border bg-surface p-4">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted mb-3">Full Debate Thread</p>
-                <ArgumentTimeline
-                  messages={messages}
-                  experts={state.experts}
-                  expertNames={expertNames}
-                  expertAvatars={expertAvatars}
-                  phase="complete"
-                  consensus={null}
-                />
-              </div>
-            )}
           </div>
         )}
       </div>

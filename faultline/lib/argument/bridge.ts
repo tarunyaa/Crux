@@ -5,7 +5,6 @@ import path from 'path';
 import { ArgumentEvent } from './types';
 import { runBaselines } from './baseline-bridge';
 import { loadContract, getPersona, buildConsolidatedPrompt } from '@/lib/personas/loader';
-import { frameTopicAsCompetingPositions } from './topic-framer';
 
 const REPO_ROOT = path.resolve(process.cwd(), '..');
 const ARGORA_DIR = path.join(REPO_ROOT, 'argora');
@@ -41,15 +40,9 @@ export async function* runArgora(config: BridgeConfig): AsyncGenerator<ArgumentE
   let framedTopic = config.topic;
 
   if (usePersonas && config.personaIds) {
-    // Frame the open topic as competing positions
-    yield { type: 'status' as ArgumentEvent['type'], data: { message: 'Framing topic as competing positions...' } };
-    const framed = await frameTopicAsCompetingPositions(config.topic, Math.min(config.personaIds.length, 4));
-    framedTopic = framed.framedTopic;
-    yield { type: 'status' as ArgumentEvent['type'], data: {
-      message: 'Topic framed',
-      positions: framed.positions,
-      framedTopic: framed.framedTopic,
-    }};
+    // Persona mode: skip position framing — personas argue from their own worldviews.
+    // The Position A/B/C structure produces essay-style evaluations, not natural debate.
+    yield { type: 'status' as ArgumentEvent['type'], data: { message: 'Loading personas...' } };
 
     // Build persona configs with consolidated prompts
     const personaConfigs: Array<{ name: string; system_prompt: string }> = [];
@@ -84,7 +77,7 @@ export async function* runArgora(config: BridgeConfig): AsyncGenerator<ArgumentE
 
   const proc = spawn(pythonPath, args, {
     cwd: argoraDir,
-    env: { ...process.env, ARGORA_SKIP_EMBEDDINGS: '1' },
+    env: { ...process.env, ARGORA_SKIP_EMBEDDINGS: '1', PYTHONUNBUFFERED: '1' },
     stdio: ['pipe', 'pipe', 'pipe'],
   });
 

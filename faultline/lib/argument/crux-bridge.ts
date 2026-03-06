@@ -65,7 +65,7 @@ export async function* runArgoraCrux(config: BridgeConfig): AsyncGenerator<Argum
 
   const proc = spawn(pythonPath, args, {
     cwd: CRUX_PERSONAS_DIR,
-    env: { ...process.env, ARGORA_SKIP_EMBEDDINGS: '1' },
+    env: { ...process.env, ARGORA_SKIP_EMBEDDINGS: '1', PYTHONUNBUFFERED: '1' },
     stdio: ['pipe', 'pipe', 'pipe'],
   });
 

@@ -255,6 +255,7 @@ export interface BaselineComparisonData {
 
 export interface StreamingArg {
   id: number;
+  graph_id?: number;
   statement: string;
   expert: string;
   type: 'main_argument' | 'supporting_argument' | 'attacking_argument';

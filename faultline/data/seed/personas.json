@@ -121,6 +121,18 @@
       ],
       "locked": false,
       "createdAt": "2026-02-28T01:34:44.097Z"
+    },
+    {
+      "id": "ai-industrial-complex",
+      "name": "AI Industrial Complex",
+      "slug": "ai-industrial-complex",
+      "personaIds": [
+        "Jensen Huang",
+        "Alexander Karp",
+        "Michael Burry"
+      ],
+      "locked": false,
+      "createdAt": "2026-03-06T00:00:00.000Z"
     }
   ],
   "personas": [
@@ -196,7 +208,8 @@
       "twitterHandle": "@michaeljburry",
       "twitterPicture": "https://pbs.twimg.com/profile_images/2006801568948191232/0vJBWEyL_400x400.jpg",
       "deckIds": [
-        "macroeconomic-trends"
+        "macroeconomic-trends",
+        "ai-industrial-complex"
       ],
       "suite": null,
       "locked": false
@@ -565,10 +578,32 @@
       "locked": false
     },
     {
+      "id": "Jensen Huang",
+      "name": "Jensen Huang",
+      "twitterHandle": "@jenhsunhuang",
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1598748030435262464/wkxqEIK5_400x400.jpg",
+      "deckIds": [
+        "ai-industrial-complex"
+      ],
+      "suite": null,
+      "locked": false
+    },
+    {
+      "id": "Alexander Karp",
+      "name": "Alexander Karp",
+      "twitterHandle": "@AlexKarp",
+      "twitterPicture": "https://pbs.twimg.com/profile_images/1594368963964506114/XyKJ-KYS_400x400.jpg",
+      "deckIds": [
+        "ai-industrial-complex"
+      ],
+      "suite": null,
+      "locked": false
+    },
+    {
       "id": "Citadel",
       "name": "Citadel Securities",
       "twitterHandle": "",
-      "twitterPicture": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://citadelsecurities.com&size=256",
+      "twitterPicture": "",
       "deckIds": [
         "ai-economics"
       ],
