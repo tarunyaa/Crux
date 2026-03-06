@@ -8,6 +8,7 @@ export interface ArgumentEvent {
 export type ArgumentEventType =
   | 'argument_start'
   | 'experts_generated'
+  | 'progress_argument_posted'
   | 'main_arguments_generated'
   | 'level1_complete'
   | 'level2_complete'
@@ -182,6 +183,14 @@ export interface BaselineComparisonData {
   baselines: BaselineResult[];
 }
 
+export interface StreamingArg {
+  id: number;
+  statement: string;
+  expert: string;
+  type: 'main_argument' | 'supporting_argument' | 'attacking_argument';
+  parent_id: number | null;
+}
+
 export interface ArgumentMessage {
   id: string;
   expertName: string;
@@ -219,6 +228,7 @@ export interface ArgumentState {
   baselineResults: BaselineResult[];
   framedTopic: string | null;
   positions: PositionInfo[];
+  streamingArgs: StreamingArg[];
   error: string | null;
 }
 
@@ -240,6 +250,7 @@ export function createInitialState(): ArgumentState {
     baselineResults: [],
     framedTopic: null,
     positions: [],
+    streamingArgs: [],
     error: null,
   };
 }

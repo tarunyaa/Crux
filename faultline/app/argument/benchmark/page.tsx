@@ -7,7 +7,7 @@ import { DATASETS, type Dataset, type BatchResult, type BatchMetrics, type Quest
 
 export default function BenchmarkPage() {
   const [dataset, setDataset] = useState<Dataset>('mmlu');
-  const [questionCount, setQuestionCount] = useState(50);
+  const [questionCount, setQuestionCount] = useState(10);
   const [running, setRunning] = useState(false);
   const [metrics, setMetrics] = useState<BatchMetrics | null>(null);
   const [questions, setQuestions] = useState<QuestionResult[]>([]);

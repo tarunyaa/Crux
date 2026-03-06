@@ -8,8 +8,7 @@
         "Serenity",
         "Jukan",
         "Dylan Patel",
-        "Austin Lyons",
-        "Global Semi Research"
+        "Austin Lyons"
       ],
       "locked": false,
       "createdAt": "2026-02-09T09:36:10.121Z"
@@ -58,7 +57,7 @@
     },
     {
       "id": "ai",
-      "name": "AI",
+      "name": "AI Research",
       "slug": "ai",
       "personaIds": [
         "Jim Fan",
@@ -163,17 +162,6 @@
       "name": "Austin Lyons",
       "twitterHandle": "@chipstrat",
       "twitterPicture": "https://substack-post-media.s3.amazonaws.com/public/images/c180a750-7572-4aff-88e4-317aa435d533_1203x902.jpeg",
-      "deckIds": [
-        "memory-supercycle"
-      ],
-      "suite": null,
-      "locked": false
-    },
-    {
-      "id": "Global Semi Research",
-      "name": "Global Semi Research",
-      "twitterHandle": "",
-      "twitterPicture": "",
       "deckIds": [
         "memory-supercycle"
       ],

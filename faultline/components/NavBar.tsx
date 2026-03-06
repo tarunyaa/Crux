@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { href: '/cards', label: 'Decks' },
   { href: '/setup', label: 'Debate' },
   { href: '/debates', label: 'Archive' },
-  { href: '/benchmarks', label: 'Benchmarks' },
+  { href: '/arena', label: 'Arena' },
   { href: '/about', label: 'About' },
 ]
 

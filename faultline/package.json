@@ -18,7 +18,8 @@
     "synthesize-worldviews": "tsx scripts/synthesize-worldviews.ts",
     "benchmark": "tsx scripts/benchmark.ts",
     "belief-experiment": "tsx scripts/run-belief-experiment.ts",
-    "cig-v2": "tsx scripts/run-cig-benchmark-v2.ts"
+    "cig-v2": "tsx scripts/run-cig-benchmark-v2.ts",
+    "embed-corpus": "tsx scripts/embed-corpus.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.74.0",

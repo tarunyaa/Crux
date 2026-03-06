@@ -5,6 +5,7 @@ import {
   timestamp,
   jsonb,
   integer,
+  real,
   primaryKey,
   vector,
 } from 'drizzle-orm/pg-core'
@@ -71,6 +72,42 @@ export const personaContracts = pgTable('persona_contracts', {
     .references(() => personas.id, { onDelete: 'cascade' }),
   version: text('version').notNull(), // ISO timestamp of corpus build
   contractJson: jsonb('contract_json').notNull(), // full PersonaContract object
+  createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+})
+
+// ─── Debates ─────────────────────────────────────────────────
+
+// ─── CruxArena ───────────────────────────────────────────────
+
+export const arenaDebates = pgTable('arena_debates', {
+  id: text('id').primaryKey(),
+  topic: text('topic').notNull(),
+  methodsRun: jsonb('methods_run').notNull().$type<string[]>(),
+  createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+})
+
+export const arenaOutputs = pgTable('arena_outputs', {
+  id: text('id').primaryKey(),
+  debateId: text('debate_id')
+    .notNull()
+    .references(() => arenaDebates.id, { onDelete: 'cascade' }),
+  method: text('method').notNull(), // 'direct_crux' | 'cot_crux' | 'multiagent_crux' | 'argora_crux'
+  cruxCards: jsonb('crux_cards').notNull().$type<unknown[]>(),
+  tokenUsage: jsonb('token_usage').notNull().$type<Record<string, number>>(),
+  runtimeMs: integer('runtime_ms').notNull(),
+  model: text('model').notNull(),
+  costUsd: real('cost_usd'),
+})
+
+export const arenaVotes = pgTable('arena_votes', {
+  id: text('id').primaryKey(),
+  debateId: text('debate_id')
+    .notNull()
+    .references(() => arenaDebates.id, { onDelete: 'cascade' }),
+  methodA: text('method_a').notNull(),
+  methodB: text('method_b').notNull(),
+  winner: text('winner').notNull(), // 'a' | 'b' | 'tie'
+  sessionId: text('session_id').notNull(),
   createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
 })
 

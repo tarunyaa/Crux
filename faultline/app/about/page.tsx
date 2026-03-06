@@ -186,9 +186,9 @@ export default function AboutPage() {
         <Eyebrow>Output</Eyebrow>
         <Headline>What you <span className="text-accent">get</span></Headline>
 
-        <div className="grid md:grid-cols-3 gap-4 mt-6">
-          <div className="card-3d w-full">
-            <div className="card-inner card-face rounded-xl p-5 card-shadow border border-card-border">
+        <div className="grid md:grid-cols-3 gap-4 mt-6 items-stretch">
+          <div className="card-3d w-full h-full">
+            <div className="card-inner card-face rounded-xl p-5 card-shadow border border-card-border h-full flex flex-col justify-between">
               <div className="flex justify-between text-xs font-bold mb-4">
                 <span className="text-accent">&#9830;</span>
                 <span className="text-[10px] uppercase tracking-widest text-muted">Crux Card</span>
@@ -215,8 +215,8 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="card-3d w-full">
-            <div className="card-inner card-face rounded-xl p-5 card-shadow border border-card-border">
+          <div className="card-3d w-full h-full">
+            <div className="card-inner card-face rounded-xl p-5 card-shadow border border-card-border h-full flex flex-col justify-between">
               <div className="flex justify-between text-xs font-bold mb-4">
                 <span className="text-accent">&#9824;</span>
                 <span className="text-[10px] uppercase tracking-widest text-muted">Crux Card</span>
@@ -243,8 +243,8 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="card-3d w-full">
-            <div className="card-inner card-face rounded-xl p-5 card-shadow border border-card-border">
+          <div className="card-3d w-full h-full">
+            <div className="card-inner card-face rounded-xl p-5 card-shadow border border-card-border h-full flex flex-col justify-between">
               <div className="flex justify-between text-xs font-bold mb-4">
                 <span className="text-accent">&#9829;</span>
                 <span className="text-[10px] uppercase tracking-widest text-muted">Crux Card</span>

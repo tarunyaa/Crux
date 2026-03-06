@@ -11,9 +11,11 @@ export default async function DebatesPage() {
   const [allRows, personas] = await Promise.all([listDebates(50), getPersonas()])
   const personaMap = new Map(personas.map(p => [p.id, p]))
 
-  // Keep only the most recent debate per topic (allRows is already sorted by created_at DESC)
+  // Filter out belief graph debates; keep only the most recent per topic
+  const VISIBLE_MODES = new Set(['blitz', 'classical', 'graph', 'dialogue'])
   const seen = new Set<string>()
   const rows = allRows.filter(row => {
+    if (!VISIBLE_MODES.has(row.mode)) return false
     if (seen.has(row.topic)) return false
     seen.add(row.topic)
     return true

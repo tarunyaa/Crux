@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useEffect } from 'react'
-import type { ArgumentMessage, TaskInfo, ConsensusData, PositionInfo } from '@/lib/argument/types'
+import type { ArgumentMessage, ConsensusData } from '@/lib/argument/types'
 import { formatArgumentText } from '@/lib/utils/format-argument-text'
 
 interface ArgumentTimelineProps {
@@ -9,11 +9,8 @@ interface ArgumentTimelineProps {
   experts: string[]
   expertNames: Map<string, string>
   expertAvatars: Map<string, string>
-  task: TaskInfo | null
   phase: string
   consensus: ConsensusData | null
-  framedTopic: string | null
-  positions: PositionInfo[]
 }
 
 function HexAvatarSmall({ name, avatarUrl }: { name: string; avatarUrl?: string }) {
@@ -62,13 +59,12 @@ function MessageRow({ message, expertNames, expertAvatars, isWinner }: MessageRo
             ? 'border-l-2 border-l-card-border/40 hover:bg-surface'
             : 'hover:bg-surface'
       }`}
-      style={{ marginLeft: `${Math.min(message.depth, 3) * 16}px` }}
     >
       <div className="flex-shrink-0 mt-0.5">
         <HexAvatarSmall name={displayName} avatarUrl={avatarUrl} />
       </div>
 
-      <div className="flex-1 min-w-0 max-w-xl">
+      <div className="flex-1 min-w-0">
         <div className="flex items-baseline gap-1.5">
           <span className="text-xs font-semibold text-accent leading-none">{displayName}</span>
           <TypeIndicator type={message.type} />
@@ -103,16 +99,15 @@ function PhaseDivider({ label, suit }: { label: string; suit?: string }) {
   )
 }
 
+const ROUND_SUITS = ['♠', '♥', '♦', '♣'] as const
+
 export function ArgumentTimeline({
   messages,
   experts,
   expertNames,
   expertAvatars,
-  task,
   phase,
   consensus,
-  framedTopic,
-  positions,
 }: ArgumentTimelineProps) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const isBuilding = !['idle', 'complete', 'error', 'baselines'].includes(phase)
@@ -123,84 +118,104 @@ export function ArgumentTimeline({
     }
   }, [messages.length])
 
-  const mainArgs = messages.filter(m => m.depth === 0)
-  const subArgs = messages.filter(m => m.depth > 0)
+  const msgById = new Map(messages.map(m => [m.id, m]))
+  const maxDepth = messages.reduce((acc, m) => Math.max(acc, m.depth), -1)
 
-  const childrenByParent = new Map<string, ArgumentMessage[]>()
-  for (const msg of subArgs) {
-    if (!msg.parentId) continue
-    const children = childrenByParent.get(msg.parentId) ?? []
-    children.push(msg)
-    childrenByParent.set(msg.parentId, children)
+  // Group messages by depth level
+  const byDepth = new Map<number, ArgumentMessage[]>()
+  for (const msg of messages) {
+    const arr = byDepth.get(msg.depth) ?? []
+    arr.push(msg)
+    byDepth.set(msg.depth, arr)
+  }
+
+  // Group depth-N messages by their parentId
+  function groupByParent(msgs: ArgumentMessage[]): Map<string | undefined, ArgumentMessage[]> {
+    const map = new Map<string | undefined, ArgumentMessage[]>()
+    for (const msg of msgs) {
+      const arr = map.get(msg.parentId) ?? []
+      arr.push(msg)
+      map.set(msg.parentId, arr)
+    }
+    return map
   }
 
   const winnerStatement = consensus?.winner
-
-  function renderThread(msg: ArgumentMessage) {
-    const children = childrenByParent.get(msg.id) ?? []
-    const isWinner = winnerStatement ? msg.content === winnerStatement : false
-    return (
-      <div key={msg.id}>
-        <MessageRow
-          message={msg}
-          expertNames={expertNames}
-          expertAvatars={expertAvatars}
-          isWinner={isWinner}
-        />
-        {children.map(child => renderThread(child))}
-      </div>
-    )
-  }
+  const mainArgs = byDepth.get(0) ?? []
+  const hasSubArgs = maxDepth > 0
 
   return (
     <div className="bg-card-bg border border-card-border rounded-xl flex flex-col h-full">
       <div ref={scrollRef} className="flex-1 overflow-y-auto px-2 py-3 space-y-0.5 max-h-[75vh]">
-
-        {/* Task framing with positions */}
-        {(framedTopic || task) && (
-          <>
-            <PhaseDivider label="Task" suit="♣" />
-            <div className="px-3 py-1 space-y-1">
-              {task && (
-                <p className="text-xs text-foreground leading-snug max-w-xl">{task.main_task}</p>
-              )}
-              {positions.length > 0 && (
-                <div className="space-y-0.5">
-                  {positions.map((pos, i) => (
-                    <div key={i} className="flex items-start gap-1.5">
-                      <span className="text-[10px] font-bold text-accent flex-shrink-0 mt-px">
-                        {pos.label || String.fromCharCode(65 + i)}
-                      </span>
-                      <span className="text-[11px] text-muted leading-snug max-w-lg">
-                        {pos.shortName ? <strong className="text-foreground">{pos.shortName}: </strong> : null}
-                        {pos.description}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </>
-        )}
 
         {/* Opening positions */}
         {mainArgs.length > 0 && (
           <>
             <PhaseDivider label="Opening Positions" suit="♠" />
             <div className="space-y-0.5">
-              {mainArgs.map(msg => renderThread(msg))}
+              {mainArgs.map(msg => (
+                <MessageRow
+                  key={msg.id}
+                  message={msg}
+                  expertNames={expertNames}
+                  expertAvatars={expertAvatars}
+                  isWinner={winnerStatement ? msg.content === winnerStatement : false}
+                />
+              ))}
             </div>
           </>
         )}
 
+        {/* Rounds 1, 2, 3... */}
+        {Array.from({ length: Math.max(0, maxDepth) }, (_, i) => i + 1).map(depth => {
+          const roundMsgs = byDepth.get(depth) ?? []
+          if (roundMsgs.length === 0) return null
+          const byParent = groupByParent(roundMsgs)
+          const suit = ROUND_SUITS[(depth - 1) % 4]
+          return (
+            <div key={`round-${depth}`}>
+              <PhaseDivider label={`Round ${depth}`} suit={suit} />
+              <div className="space-y-2">
+                {Array.from(byParent.entries()).map(([parentId, children]) => {
+                  const parent = parentId ? msgById.get(parentId) : undefined
+                  const parentDisplayName = parent ? (expertNames.get(parent.expertName) ?? parent.expertName) : null
+                  return (
+                    <div key={parentId ?? 'root'}>
+                      {parent && parentDisplayName && (
+                        <div className="flex items-center gap-1.5 px-3 py-0.5">
+                          <span className="text-[10px] text-muted/60">↩</span>
+                          <span className="text-[10px] text-accent/70 font-medium">{parentDisplayName}:</span>
+                          <span className="text-[10px] text-muted italic truncate">
+                            {parent.content.length > 60 ? parent.content.slice(0, 60) + '…' : parent.content}
+                          </span>
+                        </div>
+                      )}
+                      <div className="border-l-2 border-l-card-border/30 ml-3 space-y-0.5">
+                        {children.map(child => (
+                          <MessageRow
+                            key={child.id}
+                            message={child}
+                            expertNames={expertNames}
+                            expertAvatars={expertAvatars}
+                            isWinner={winnerStatement ? child.content === winnerStatement : false}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )
+        })}
+
         {/* Loading states */}
         {mainArgs.length === 0 && isBuilding && (
           <div className="py-8 text-center">
-            <p className="text-xs text-muted animate-pulse">Personas are forming positions...</p>
+            <p className="text-xs text-muted animate-pulse">Experts are forming positions...</p>
           </div>
         )}
-
-        {isBuilding && mainArgs.length > 0 && subArgs.length === 0 && (
+        {isBuilding && mainArgs.length > 0 && !hasSubArgs && (
           <div className="py-3 text-center">
             <p className="text-xs text-muted animate-pulse">Debate in progress...</p>
           </div>
@@ -223,7 +238,7 @@ export function ArgumentTimeline({
                   )}
                 </div>
               )}
-              <div className="text-xs text-foreground leading-snug max-w-xl">
+              <div className="text-xs text-foreground leading-snug">
                 {formatArgumentText(consensus.consensus_text || consensus.winner || '')}
               </div>
             </div>

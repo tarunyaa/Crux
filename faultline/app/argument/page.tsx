@@ -1,5 +1,6 @@
 import { ArgumentSetup } from '@/components/argument/ArgumentSetup'
 import { ArgumentView } from '@/components/argument/ArgumentView'
+import { GraphDebateView } from '@/components/argument/GraphDebateView'
 import { getPersona } from '@/lib/personas/loader'
 
 interface Props {
@@ -34,12 +35,27 @@ export default async function ArgumentPage({ searchParams }: Props) {
     }
   }
 
+  if (personaIds && personaIds.length > 0) {
+    return (
+      <GraphDebateView
+        config={{
+          topic,
+          numExperts: personaIds.length,
+          personaIds,
+          skipBaselines: true,
+        }}
+        personaNames={personaNames}
+        personaAvatars={personaAvatars}
+      />
+    )
+  }
+
   return (
     <ArgumentView
       config={{
         topic,
-        numExperts: personaIds ? personaIds.length : numExperts,
-        personaIds,
+        numExperts,
+        skipBaselines: true,
       }}
       personaNames={personaNames}
       personaAvatars={personaAvatars}

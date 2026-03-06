@@ -3,11 +3,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { useArgumentStream } from '@/lib/hooks/useArgumentStream'
 import type { BridgeConfig } from '@/lib/argument/bridge'
+import type { BaselineResult } from '@/lib/argument/types'
 import { ArgumentTimeline } from './ArgumentTimeline'
-import { PersonasSidebar } from './PersonasSidebar'
 import { ResultsSection } from './ResultsSection'
 import { MethodComparison } from './MethodComparison'
-import { FrameworkConfig } from './FrameworkConfig'
 import { TechnicalAnalysis } from './TechnicalAnalysis'
 
 interface ArgumentViewProps {
@@ -23,6 +22,61 @@ export function ArgumentView({ config, personaNames, personaAvatars }: ArgumentV
   const startedRef = useRef(false)
   const [showResults, setShowResults] = useState(false)
   const [activeTab, setActiveTab] = useState<ResultTab>('results')
+  const [localBaselineResults, setLocalBaselineResults] = useState<BaselineResult[]>([])
+  const [baselinesRunning, setBaselinesRunning] = useState(false)
+  const [baselinesRan, setBaselinesRan] = useState(false)
+
+  const runComparison = async () => {
+    setBaselinesRunning(true)
+    try {
+      const res = await fetch('/api/argument/baselines', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ topic: config.topic }),
+      })
+      if (!res.ok) return
+      const reader = res.body?.getReader()
+      if (!reader) return
+      const decoder = new TextDecoder()
+      let buf = ''
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+        buf += decoder.decode(value, { stream: true })
+        const lines = buf.split('\n')
+        buf = lines.pop() ?? ''
+        for (const line of lines) {
+          if (!line.startsWith('data: ')) continue
+          try {
+            const event = JSON.parse(line.slice(6))
+            if (event.type === 'baseline_result') {
+              const d = event.data as {
+                method: BaselineResult['method']
+                label: string
+                answer: string | null
+                reasoning: string | null
+                main_task?: string
+                token_usage?: Record<string, number>
+                error?: string
+              }
+              setLocalBaselineResults(prev => [...prev, {
+                method: d.method,
+                label: d.label,
+                answer: d.answer,
+                reasoning: d.reasoning,
+                mainTask: d.main_task,
+                tokenUsage: d.token_usage,
+                error: d.error,
+              }])
+            }
+          } catch { /* skip malformed lines */ }
+        }
+      }
+      setBaselinesRan(true)
+    } finally {
+      setBaselinesRunning(false)
+    }
+  }
 
   useEffect(() => {
     if (!startedRef.current) {
@@ -88,14 +142,9 @@ export function ArgumentView({ config, personaNames, personaAvatars }: ArgumentV
     <div className="min-h-screen bg-background">
       {/* ─── Top Bar ─── */}
       <div className="border-b border-card-border bg-surface/50">
-        <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center gap-4">
-          {/* Topic */}
-          <p className="text-foreground text-sm font-medium leading-snug line-clamp-1 flex-1 min-w-0">
-            {config.topic}
-          </p>
-
+        <div className="max-w-4xl mx-auto px-6 py-2.5 flex items-center gap-4">
           {/* Status */}
-          <div className="flex-shrink-0 flex items-center gap-3">
+          <div className="flex items-center gap-3">
             {isRunning && (
               <div className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
@@ -109,69 +158,40 @@ export function ArgumentView({ config, personaNames, personaAvatars }: ArgumentV
                 Complete
               </span>
             )}
-
-            {/* Results toggle */}
-            {isComplete && (
-              <button
-                onClick={() => setShowResults(!showResults)}
-                className="text-[10px] text-accent hover:text-foreground transition-colors uppercase tracking-wider"
-              >
-                {showResults ? 'Hide Results' : 'Show Results'}
-              </button>
-            )}
           </div>
+
+          <div className="flex-1" />
+
+          {/* Results toggle */}
+          {isComplete && (
+            <button
+              onClick={() => setShowResults(!showResults)}
+              className="text-[10px] text-accent hover:text-foreground transition-colors uppercase tracking-wider"
+            >
+              {showResults ? 'Hide Results' : 'Show Results'}
+            </button>
+          )}
         </div>
       </div>
 
       {/* ─── Main Layout ─── */}
-      <div className="max-w-7xl mx-auto px-6 py-5">
-        <div className="flex flex-col lg:flex-row gap-5">
+      <div className="max-w-4xl mx-auto px-6 py-5">
 
-          {/* Left: Debate Timeline */}
-          <div className="flex-1 min-w-0">
-            <ArgumentTimeline
-              messages={messages}
-              experts={state.experts}
-              expertNames={expertNames}
-              expertAvatars={expertAvatars}
-              task={state.task}
-              phase={state.phase}
-              consensus={state.consensus}
-              framedTopic={state.framedTopic}
-              positions={state.positions}
-            />
-          </div>
-
-          {/* Right: Sidebar — Alignment Graph + Config */}
-          <div className="lg:w-72 flex-shrink-0 space-y-4">
-            {state.experts.length > 0 && (
-              <PersonasSidebar
-                experts={state.experts}
-                expertNames={expertNames}
-                expertAvatars={expertAvatars}
-                strengths={state.qbafStrengths}
-                phase={state.phase}
-              />
-            )}
-
-            {state.experts.length === 0 && isRunning && (
-              <div className="rounded-xl border border-card-border bg-surface p-4">
-                <p className="text-xs text-muted animate-pulse">Setting up debate...</p>
-              </div>
-            )}
-
-            {/* Framework Config */}
-            {(state.experts.length > 0 || isComplete) && (
-              <FrameworkConfig
-                config={config}
-                experts={state.experts}
-                expertNames={expertNames}
-                levelInfo={state.levelInfo}
-                fullResult={state.fullResult}
-              />
-            )}
-          </div>
+        {/* Debate Topic card */}
+        <div className="rounded-xl border border-card-border bg-surface px-4 py-3 mb-4">
+          <p className="text-[10px] text-muted uppercase tracking-widest mb-1">Debate Topic</p>
+          <p className="text-sm text-foreground font-medium leading-snug">{config.topic}</p>
         </div>
+
+        {/* Debate Timeline — full width */}
+        <ArgumentTimeline
+          messages={messages}
+          experts={state.experts}
+          expertNames={expertNames}
+          expertAvatars={expertAvatars}
+          phase={state.phase}
+          consensus={state.consensus}
+        />
 
         {/* ─── Results Sections (Tabbed) ─── */}
         {showResults && isComplete && (
@@ -215,15 +235,29 @@ export function ArgumentView({ config, personaNames, personaAvatars }: ArgumentV
 
             {activeTab === 'benchmarks' && (
               <div className="max-w-5xl">
-                {state.baselineResults.length > 0 ? (
+                {localBaselineResults.length > 0 ? (
                   <MethodComparison
-                    results={state.baselineResults}
+                    results={localBaselineResults}
                     consensus={state.consensus}
                     topic={config.topic}
                   />
                 ) : (
-                  <div className="rounded-xl border border-card-border bg-surface p-8 text-center">
-                    <p className="text-xs text-muted">No benchmark baselines were run for this debate.</p>
+                  <div className="rounded-xl border border-card-border bg-surface p-8 text-center space-y-4">
+                    <p className="text-xs text-muted">
+                      Run a comparison against direct prompting baselines to see how ARGORA&apos;s structured argumentation performs.
+                    </p>
+                    {!baselinesRan && (
+                      <button
+                        onClick={runComparison}
+                        disabled={baselinesRunning}
+                        className="text-xs border border-accent/60 text-accent hover:bg-accent hover:text-white px-4 py-2 rounded transition-colors disabled:opacity-50"
+                      >
+                        {baselinesRunning ? 'Running Comparison...' : 'Run Comparison'}
+                      </button>
+                    )}
+                    {baselinesRunning && (
+                      <p className="text-[10px] text-muted animate-pulse">Comparing against direct and CoT baselines&hellip;</p>
+                    )}
                   </div>
                 )}
               </div>

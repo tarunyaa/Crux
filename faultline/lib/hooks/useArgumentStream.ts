@@ -15,6 +15,7 @@ import type {
   ArgumentCompleteData,
   BaselineResult,
   PositionInfo,
+  StreamingArg,
 } from '@/lib/argument/types'
 import { createInitialState } from '@/lib/argument/types'
 import type { BridgeConfig } from '@/lib/argument/bridge'
@@ -51,6 +52,27 @@ function flattenHierarchy(
     }
   }
   return messages
+}
+
+function buildMessagesFromStreaming(
+  args: StreamingArg[],
+  experts: string[],
+): ArgumentMessage[] {
+  const depthById = new Map<number, number>()
+  for (const arg of args) {
+    depthById.set(arg.id, arg.parent_id === null ? 0 : (depthById.get(arg.parent_id) ?? 0) + 1)
+  }
+  return args.map(arg => ({
+    id: `node-${arg.id}`,
+    expertName: arg.expert,
+    expertIndex: experts.indexOf(arg.expert),
+    content: arg.statement,
+    type: arg.type === 'main_argument' ? 'main_argument' as const
+      : arg.type === 'attacking_argument' ? 'attack' as const
+      : 'support' as const,
+    parentId: arg.parent_id !== null ? `node-${arg.parent_id}` : undefined,
+    depth: depthById.get(arg.id) ?? 0,
+  }))
 }
 
 export function useArgumentStream(config: BridgeConfig) {
@@ -275,6 +297,12 @@ export function useArgumentStream(config: BridgeConfig) {
           setState(s => ({ ...s, phase: 'analyzing' }))
           break
 
+        case 'progress_argument_posted': {
+          const d = event.data as StreamingArg
+          setState(s => ({ ...s, streamingArgs: [...s.streamingArgs, d] }))
+          break
+        }
+
         case 'status': {
           const data = event.data as { message?: string; positions?: PositionInfo[]; framedTopic?: string }
           if (data.positions || data.framedTopic) {
@@ -306,7 +334,9 @@ export function useArgumentStream(config: BridgeConfig) {
     if (state.qbafHierarchy.length > 0) {
       return flattenHierarchy(state.qbafHierarchy, state.experts)
     }
-    // Before hierarchy arrives, show main arguments as flat messages
+    if (state.streamingArgs.length > 0) {
+      return buildMessagesFromStreaming(state.streamingArgs, state.experts)
+    }
     return state.mainArguments.map((arg, i): ArgumentMessage => {
       const expert = arg.expert || (Array.isArray(arg.experts) ? (arg.experts as string[])[0] : '') || 'Expert'
       return {
@@ -318,7 +348,7 @@ export function useArgumentStream(config: BridgeConfig) {
         depth: 0,
       }
     })
-  }, [state.qbafHierarchy, state.mainArguments, state.experts])
+  }, [state.qbafHierarchy, state.streamingArgs, state.mainArguments, state.experts])
 
   return { state, messages, start }
 }
